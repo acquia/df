@@ -118,8 +118,8 @@ function drupal_ti_install_drupal() {
   if [[ "$SCENARIO" != none ]]
   then
     df_header Enabling scenario
-    drush --yes en $SCENARIO
-    #drush df-es $SCENARIO
+    drush -yv en $SCENARIO
+    #drush df-es $SCENARIO --verbose
   fi
 
 	# Switch to the Demo Framework platform built from Git (if we aren't there already).
