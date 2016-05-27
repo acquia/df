@@ -65,7 +65,6 @@ function df_build_distribution() {
     df_header Prepare files directories
     mkdir -p sites/default/private/files
     mkdir -p sites/default/private/temp
-    ls -la
 
     # Install third-party libraries.
     df_header Installing third-party libraries
