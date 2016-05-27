@@ -83,7 +83,7 @@
         "drupal/libraries": "8.3.x-dev",
         "drupal/lite": "8.1.x-dev",
         "drupal/moderate_mmenu": "8.1.x-dev",
-        "drupal/migrate_plus": "8.2.x-dev",
+        "drupal/migrate_plus": "8.2.0-beta1",
         "drupal/migrate_source_csv": "8.2.x-dev",
         "drupal/migrate_tools": "8.2.0-beta1",
         "drupal/oauth": "8.1.x-dev",
@@ -145,6 +145,10 @@
             "drupal/lite": {
                 "Lite uses the wrong path | https://www.drupal.org/node/2718189":
                 "https://www.drupal.org/files/issues/2718189-3.patch"
+            },
+            "drupal/migrate_plus": {
+                "Update migrate plus migrate URL plugin and SourcePluginExtension to work with 8.1.0 | https://www.drupal.org/node/2714357":
+                "https://www.drupal.org/files/issues/migrate_url_sourcepluginextension-2714357-1.patch"
             },
             "drupal/page_manager": {
                 "Rename the core 'Page with blocks' admin_label... | https://www.drupal.org/node/2503947":
