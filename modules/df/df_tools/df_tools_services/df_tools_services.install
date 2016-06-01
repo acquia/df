@@ -9,7 +9,13 @@ use Drupal\user\RoleInterface;
 /**
  * Implements hook_install().
  */
-function df_tools_services_install() {
-  // Enable default permissions for system roles.
-  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array('restful get entity:node'));
+function df_tools_services_install()
+{
+    // Enable default permissions for system roles.
+    user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array(
+        'restful get entity:node'
+    ));
+    
+    // Change Contact mail rate limit to avoid breaking demos
+    \Drupal::configFactory()->getEditable('contact.settings')->set('flood.limit', '20')->save();
 }

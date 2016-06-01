@@ -23,9 +23,9 @@ projects[better_formats][type] = "module"
 projects[better_formats][subdir] = "contrib"
 projects[better_formats][download][type] = "git"
 projects[better_formats][download][branch] = "8.x-1.x"
-; Fix field validation.
-; http://drupal.org/node/2709313
-projects[better_formats][patch][2709313] = "http://drupal.org/files/issues/bef_field_is_not-2709313-2.patch"
+; [meta] Utilize multiple Better Formats patches in DF without conflict
+; http://drupal.org/node/2737757
+projects[better_formats][patch][2737757] = "http://drupal.org/files/issues/2737757-2.patch"
 
 projects[block_class][version] = "1.x-dev"
 projects[block_class][type] = "module"
@@ -40,11 +40,9 @@ projects[dropzonejs][type] = "module"
 projects[dropzonejs][subdir] = "contrib"
 projects[dropzonejs][version] = "1.0-alpha1"
 
-projects[composer_manager][version] = "1.x-dev"
 projects[composer_manager][type] = "module"
 projects[composer_manager][subdir] = "contrib"
-projects[composer_manager][download][type] = "git"
-projects[composer_manager][download][branch] = "8.x-1.x"
+projects[composer_manager][version] = "1.0-rc2"
 
 projects[config_devel][version] = "1.x-dev"
 projects[config_devel][type] = "module"
@@ -70,11 +68,11 @@ projects[content_browser][download][branch] = "8.x-1.x"
 
 projects[crop][type] = "module"
 projects[crop][subdir] = "contrib"
-projects[crop][version] = "1.0-alpha2"
+projects[crop][version] = "1.0-rc1"
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "3.0-alpha25"
+projects[ctools][version] = "3.0-alpha26"
 
 projects[embed][type] = "module"
 projects[embed][subdir] = "contrib"
@@ -136,6 +134,10 @@ projects[google_analytics][type] = "module"
 projects[google_analytics][subdir] = "contrib"
 projects[google_analytics][version] = "2.0"
 
+projects[image_widget_crop][type] = "module"
+projects[image_widget_crop][subdir] = "contrib"
+projects[image_widget_crop][version] = "1.0"
+
 projects[import][version] = "2.x-dev"
 projects[import][type] = "module"
 projects[import][subdir] = "contrib"
@@ -173,24 +175,18 @@ projects[lite][download][branch] = "8.x-1.x"
 ; https://www.drupal.org/node/2718189
 projects[lite][patch][2718189] = "https://www.drupal.org/files/issues/2718189-3.patch"
 
-projects[manualcrop][version] = "x-1.x-dev"
-projects[manualcrop][type] = "module"
-projects[manualcrop][subdir] = "contrib"
-projects[manualcrop][download][type] = "git"
-projects[manualcrop][download][branch] = "8.x-1.x"
-projects[manualcrop][download][url] = "http://git.drupal.org/sandbox/DevinCarlson/2572651.git"
-
 projects[moderate_mmenu][version] = "1.x-dev"
 projects[moderate_mmenu][type] = "module"
 projects[moderate_mmenu][subdir] = "contrib"
 projects[moderate_mmenu][download][type] = "git"
 projects[moderate_mmenu][download][branch] = "8.x-1.x"
 
-projects[migrate_plus][version] = "2.x-dev"
 projects[migrate_plus][type] = "module"
 projects[migrate_plus][subdir] = "contrib"
-projects[migrate_plus][download][type] = "git"
-projects[migrate_plus][download][branch] = "8.x-2.x"
+projects[migrate_plus][version] = "2.0-beta1"
+; Update migrate plus migrate URL plugin and SourcePluginExtension to work with 8.1.0
+; https://www.drupal.org/node/2714357
+projects[migrate_plus][patch][2714357] = "https://www.drupal.org/files/issues/migrate_url_sourcepluginextension-2714357-1.patch"
 
 projects[migrate_source_csv][version] = "2.x-dev"
 projects[migrate_source_csv][type] = "module"
@@ -257,11 +253,9 @@ projects[scenarios][subdir] = "contrib"
 projects[scenarios][download][type] = "git"
 projects[scenarios][download][branch] = "8.x-2.x"
 
-projects[scheduler][version] = "1.x-dev"
 projects[scheduler][type] = "module"
 projects[scheduler][subdir] = "contrib"
-projects[scheduler][download][type] = "git"
-projects[scheduler][download][branch] = "8.x-1.x"
+projects[scheduler][version] = "1.0-alpha1"
 
 projects[token][type] = "module"
 projects[token][subdir] = "contrib"
@@ -289,6 +283,10 @@ projects[workbench_moderation][patch][2668006] = "https://www.drupal.org/files/i
 ; Replace the workbench moderation form with a block
 ; https://www.drupal.org/node/2685163
 projects[workbench_moderation][patch][2685163] = "https://www.drupal.org/files/issues/2685163-19.patch"
+;allow for latest revision to be used in a views_infinite_scroll
+;https://www.drupal.org/node/2702041
+projects[workbench_moderation][patch][2702041] = "https://www.drupal.org/files/issues/2702041-20.patch"
+
 
 ; Libraries
 libraries[dropzone][destination] = "../../libraries"
@@ -324,7 +322,7 @@ projects[adminimal_theme][type] = "theme"
 projects[adminimal_theme][subdir] = "contrib"
 projects[adminimal_theme][download][type] = "git"
 projects[adminimal_theme][download][branch] = "8.x-1.x"
-projects[adminimal_theme][patch][2680689] = "https://www.drupal.org/files/issues/adminimal_theme-fix-styles-for-admin-toolbar-2680689-7.patch"
+projects[adminimal_theme][patch][2733651] = "https://www.drupal.org/files/issues/adminimal-merged-patch-from-2680689-and-2733517.patch"
 
 projects[zurb-foundation][version] = "6.x-dev"
 projects[zurb-foundation][type] = "theme"

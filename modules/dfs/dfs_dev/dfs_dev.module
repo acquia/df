@@ -5,31 +5,6 @@
  * Contains dfs_dev.module.
  */
 
-use Drupal\Core\Routing\RouteMatchInterface;
-
-/**
- * Implements hook_help().
- */
-function dfs_dev_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the dfs_dev module.
-    case 'help.page.dfs_dev':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Demo Framework Scenario for Development Testing.') . '</p>';
-      return $output;
-    default:
-  }
-}
-
-/**
- * Implements hook_theme().
- */
-function dfs_dev_theme() {
-  $theme = [];
-  return $theme;
-}
-
 /**
  * Implements hook_scenario_import().
  */

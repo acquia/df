@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
 
 /**
  * Helper function to copy a migration.
@@ -33,7 +34,7 @@ function _df_migration_copy($base_migration, $prefix, $type, $entity_type, $path
   $migration['id'] = "import_{$prefix}_{$type}";
 
   // Point source path to local CSV file.
-  if ($local_csv == TRUE) {
+  if ($local_csv === TRUE) {
     $migration['source']['path'] = $path . $prefix . "." . $entity_type  . "." . $type . '.csv';
   }
 

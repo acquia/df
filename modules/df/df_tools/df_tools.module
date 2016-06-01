@@ -5,29 +5,3 @@
  * Contains df_tools.module.
  */
 
-use Drupal\Core\Routing\RouteMatchInterface;
-
-/**
- * Implements hook_help().
- */
-function df_tools_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the df_tools module.
-    case 'help.page.df_tools':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Wrapper for enabling all DF tools.') . '</p>';
-      return $output;
-
-    default:
-  }
-}
-
-/**
- * Implements hook_theme().
- */
-function df_tools_theme() {
-  $theme = [];
-
-  return $theme;
-}
