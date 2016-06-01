@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains df_tools_moderation.module.
+ */
+
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function df_tools_moderation_form_workbench_moderation_entity_moderation_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#submit'][] = 'df_tools_moderation_workbench_moderation_entity_moderation_form_submit';
+}
+
+/**
+ * Form submission callback for workbench_moderation_entity_moderation_form.
+ */
+function df_tools_moderation_workbench_moderation_entity_moderation_form_submit($form, FormStateInterface $form_state) {
+  /** @var ContentEntityInterface $entity */
+  $entity = $form_state->get('entity');
+
+  $new_state = $form_state->getValue('new_state');
+
+  // When creating a new draft, redirect the user to the latest version of the
+  // content.
+  if ($new_state == 'draft') {
+    $form_state->setRedirectUrl($entity->toUrl('latest-version'));
+  }
+}

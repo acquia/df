@@ -1,4 +1,3 @@
-uuid: 06e4adbb-9028-4daa-8200-ad6afb17080d
 langcode: en
 status: true
 dependencies:
@@ -7,13 +6,16 @@ dependencies:
     - field.field.block_content.hero.field_first_line
     - field.field.block_content.hero.field_hero_image
     - field.field.block_content.hero.field_hero_link
+    - field.field.block_content.hero.field_icon
     - field.field.block_content.hero.field_nested_block
     - field.field.block_content.hero.field_second_line
   module:
+    - df_tools_icons
     - file_browser
     - link
+    - workbench_moderation
 _core:
-  default_config_hash: P_KETYyefc-0UsimorS3A46ujY6ueSkKYRY80T0LNFY
+  default_config_hash: gs9OzB1vvfF5SyjFuUKp6_N7MgeyVSs94FrzylEdKsM
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
@@ -45,6 +47,13 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_icon:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: fontawesome_textfield
   field_nested_block:
     weight: 11
     settings:

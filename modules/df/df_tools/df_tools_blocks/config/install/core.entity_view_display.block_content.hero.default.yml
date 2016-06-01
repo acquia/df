@@ -6,13 +6,14 @@ dependencies:
     - field.field.block_content.hero.field_first_line
     - field.field.block_content.hero.field_hero_image
     - field.field.block_content.hero.field_hero_link
+    - field.field.block_content.hero.field_icon
     - field.field.block_content.hero.field_nested_block
     - field.field.block_content.hero.field_second_line
   module:
     - link
     - responsive_image
 _core:
-  default_config_hash: 6UONBsqe9oAGnhUGNTn4S3PRZjgz6ohXmkTkw-asEgk
+  default_config_hash: MIgjD8AeLo3PpuKfzTz6kctew-wHcKxGwsglVW4HmGA
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
@@ -44,6 +45,13 @@ content:
       url_plain: false
     third_party_settings: {  }
     label: hidden
+  field_icon:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_nested_block:
     weight: 4
     label: hidden

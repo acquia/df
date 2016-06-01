@@ -6,6 +6,7 @@
  */
 
 use Drupal\migrate_source_csv\CSVFileObject;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
  * Implements hook_scenarios_migration_finished().
@@ -109,13 +110,9 @@ function df_tools_panelizer_layout_alter(&$layout_info) {
     'Foundation: 3' => 'Three Columns',
     'Foundation: 4' => 'Four Columns',
     'Foundation: 6' => 'Six Columns',
-  ];
-
-  // Remove Panels layouts, which are not compatible with Zurb Foundation.
-  $category_hidden = [
-    'Columns: 1',
-    'Columns: 2',
-    'Columns: 3',
+    'Columns: 1' => 'Other',
+    'Columns: 2' => 'Other',
+    'Columns: 3' => 'Other',
   ];
 
   foreach ($layout_info as $key => $info) {
@@ -124,10 +121,7 @@ function df_tools_panelizer_layout_alter(&$layout_info) {
       $category = $category->getUntranslatedString();
     }
 
-    if (in_array($category, $category_hidden)) {
-      unset($layout_info[$key]['category']);
-    }
-    else if (isset($category_map[$category])) {
+    if (isset($category_map[$category])) {
       $layout_info[$key]['category'] = t($category_map[$category]);
     }
   }

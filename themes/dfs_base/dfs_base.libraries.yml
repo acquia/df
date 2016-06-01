@@ -1,0 +1,13 @@
+global:
+  version: VERSION
+  css:
+    base:
+      css/dfs_base.css: {}
+  js:
+    js/dfs_base.js: {}
+    js/safari-shim.js: {}
+    //cdn.rawgit.com/CliffCloud/Leaflet.Sleep/master/Leaflet.Sleep.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - leaflet/leaflet

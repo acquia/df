@@ -90,18 +90,8 @@ $row-width: rem-calc(1200);
 
 // We use these to define default font stacks
 
-@font-face { font-family: merriweather; font-weight: normal; src: url('../fonts/merriweather/Merriweather-Regular.ttf'); }
-@font-face { font-family: merriweather; font-weight: normal; font-style:italic; src: url('../fonts/merriweather/Merriweather-Italic.ttf'); }
-@font-face { font-family: merriweather; font-weight: bold; font-style:normal; src: url('../fonts/merriweather/Merriweather-Bold.ttf'); }
-@font-face { font-family: merriweather; font-weight: bold; font-style:italic; src: url('../fonts/merriweather/Merriweather-BoldItalic.ttf'); }
-
-@font-face { font-family: lato; font-weight: normal; src: url('../fonts/lato/Lato-Regular.ttf'); }
-@font-face { font-family: lato; font-weight: normal; font-style:italic; src: url('../fonts/lato/Lato-Italic.ttf'); }
-@font-face { font-family: lato; font-weight: bold; font-style:normal; src: url('../fonts/lato/Lato-Bold.ttf'); }
-@font-face { font-family: lato; font-weight: bold; font-style:italic; src: url('../fonts/lato/Lato-BoldItalic.ttf'); }
-
-$font-family-sans-serif: "merriweather", sans-serif;
-$font-header:"lato", sans-serif;
+$font-family-sans-serif: 'Merriweather Sans', sans-serif;
+$font-header: "Lato", sans-serif;
 
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;

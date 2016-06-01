@@ -9,7 +9,7 @@ Feature: DFS TEC: Homepage
     Given I am on the homepage
     Then I should see "Insight that makes sense of it all" in the "top" region
     And I should see "Strong providers in innovation." in the "top" region
-    And I should see "The perspective that effects your bottom line." in the "top" region
+    And I should see "The perspective that affects your bottom line." in the "top" region
 
   @api
   Scenario: Block: Services Promo

@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Template for a 1 column tabbed layout
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   $content['middle']: The only panel in the layout.
+ */
+#}
+<div class="panel-display panel-1col clearfix" {% if css_id %}{{ css_id }}{% endif %}>
+ <div class="row">
+  <div class="panel-panel large-12 columns panel-col">
+    <div>{{ content.top }}</div>
+  </div>
+ </div>
+  <div class="row">
+  	<div class="large-12 columns">
+  <div class="tabs-content" data-tabs-content="layout-tabs">
+  	{{ content.tabs }}
+  </div>
+  </div>
+</div>
+</div>

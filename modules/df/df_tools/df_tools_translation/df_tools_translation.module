@@ -197,6 +197,7 @@ function df_tools_translation_update_config_translation() {
   batch_set($batch);
   // Set a batch to update configuration as well.
   if ($batch = locale_config_batch_update_components($options, $langcodes)) {
+    $batch['file'] = drupal_get_path('module', 'df_tools_translation') . '/df_tools_translation.batch.inc';
     batch_set($batch);
   }
 }

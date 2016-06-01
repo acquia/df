@@ -24,3 +24,6 @@ if [[ ! -z "$@" ]]; then
 else
   drush make $CALLPATH/$MAKEFILE $TARGET --concurrency=5
 fi
+
+# Rename zurb-foundation to zurb_foundation (d.o. packaging does not allow this via make)
+mv $TARGET/profiles/df/themes/contrib/zurb-foundation $TARGET/profiles/df/themes/contrib/zurb_foundation

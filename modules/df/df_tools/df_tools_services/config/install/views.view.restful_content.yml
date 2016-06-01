@@ -3,17 +3,14 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - field.storage.node.field_publish_on
-    - field.storage.node.field_unpublish_on
   module:
-    - datetime
     - file
     - node
     - rest
     - text
     - user
 _core:
-  default_config_hash: VKVLE6GiYk6PyHK2se_j2kuhw3SwYnhjAfRV68GAdhk
+  default_config_hash: ctMiRrMe-fqnKmyjuMr7E8CRuUOc69AC_bGAs-K1K7o
 id: restful_content
 label: 'Restful Content'
 module: views
@@ -474,14 +471,14 @@ display:
           entity_type: node
           entity_field: status
           plugin_id: field
-        field_publish_on:
-          id: field_publish_on
-          table: node__field_publish_on
-          field: field_publish_on
+        publish_on:
+          id: publish_on
+          table: node_field_data
+          field: publish_on
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: publish_on
           exclude: false
           alter:
             alter_text: false
@@ -514,7 +511,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -523,10 +520,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_custom
+          type: timestamp
           settings:
-            timezone_override: UTC
-            date_format: 'M j, Y'
+            date_format: custom
+            custom_date_format: 'M j, Y'
+            timezone: UTC
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -537,15 +535,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: publish_on
           plugin_id: field
-        field_unpublish_on:
-          id: field_unpublish_on
-          table: node__field_unpublish_on
-          field: field_unpublish_on
+        unpublish_on:
+          id: unpublish_on
+          table: node_field_data
+          field: unpublish_on
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: unpublish_on
           exclude: false
           alter:
             alter_text: false
@@ -578,7 +578,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -587,10 +587,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_custom
+          type: timestamp
           settings:
-            timezone_override: UTC
-            date_format: 'M j, Y'
+            date_format: custom
+            custom_date_format: 'M j, Y'
+            timezone: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -601,6 +602,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: unpublish_on
           plugin_id: field
       filters:
         langcode:
@@ -728,8 +731,6 @@ display:
       max-age: -1
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_publish_on'
-        - 'config:field.storage.node.field_unpublish_on'
   restful_content_api:
     display_plugin: rest_export
     id: restful_content_api
@@ -785,5 +786,3 @@ display:
       max-age: -1
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_publish_on'
-        - 'config:field.storage.node.field_unpublish_on'

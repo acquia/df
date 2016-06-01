@@ -9,7 +9,7 @@ drupal_ti_ensure_php_for_drush_webserver
 
 # Ensure that drush and addons are installed.
 df_header Installing Drush
-export DRUPAL_TI_DRUSH_VERSION="drush/drush:dev-master"
+export DRUPAL_TI_DRUSH_VERSION="drush/drush:8.1.2"
 df_ensure_drush
 
 # Ensure the distribution is linked into the code base.

@@ -11,6 +11,7 @@
 function df_tools_theme_install() {
   // Enable Zurb Foundation and Adminimal for use as initial themes.
   \Drupal::service('theme_installer')->install(array('zurb_foundation'), TRUE);
+  \Drupal::service('theme_installer')->install(array('dfs_base'), TRUE);
   \Drupal::service('theme_installer')->install(array('adminimal_theme'), TRUE);
   
   // Set the admin theme and the base theme.
@@ -19,4 +20,17 @@ function df_tools_theme_install() {
 
   // Enable the admin theme for editing content.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', '1')->save();
+
+  // Add infinite scroll to the two entity browsers (content and files)
+  $config = \Drupal::configFactory()->getEditable('views.view.content_browser_grid');
+  $data = $config->getRawData();
+  $data['display']['default']['display_options']['pager']['type'] = 'infinite_scroll';
+  $data['display']['default']['display_options']['pager']['options']['views_infinite_scroll']['automatically_load_content'] = true;
+  $config->setData($data)->save();
+
+  $config = \Drupal::configFactory()->getEditable('views.view.files_entity_browser');
+  $data = $config->getRawData();
+  $data['display']['default']['display_options']['pager']['type'] = 'infinite_scroll';
+  $data['display']['default']['display_options']['pager']['options']['views_infinite_scroll']['automatically_load_content'] = true;
+  $config->setData($data)->save();
 }
