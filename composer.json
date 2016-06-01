@@ -7,6 +7,7 @@
     "prefer-stable": true,
     "repositories": [
         { "type": "composer", "url": "https://packagist.drupal-composer.org" },
+        { "type": "vcs", "url": "https://git.drupal.org/project/zurb-foundation.git" },
         {
             "type": "package",
             "package": {
@@ -169,10 +170,6 @@
             "drupal/panelizer": {
                 "Explicitly set the Panels IPE URL root when saving in Panelizer | https://www.drupal.org/node/2700597":
                 "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch"
-            },
-            "drupal/scheduled_updates": {
-                "Issue saving Schedule Update Type form | https://www.drupal.org/node/2674874":
-                "https://www.drupal.org/files/issues/schedule_updates-save_type-2674874-2.patch"
             },
             "drupal/url_embed": {
                 "Explicitly set the Panels IPE URL root when saving in Panelizer | https://www.drupal.org/node/2700597":
