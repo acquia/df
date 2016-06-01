@@ -57,6 +57,7 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
    * {@inheritdoc}
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
+    $elements = [];
     $elements['view_mode'] = array(
       '#type' => 'select',
       '#options' => \Drupal::entityManager()->getViewModeOptions($this->getFieldSetting('target_type')),

@@ -5,8 +5,8 @@
  * Contains df_tools_blocks.module.
  */
 
-use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Render\Element;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_preprocess_block().
@@ -60,7 +60,7 @@ function df_tools_blocks_theme_suggestions_block_alter(array &$suggestions, arra
 /**
  * Implements hook_form_alter().
  */
-function df_tools_blocks_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function df_tools_blocks_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (preg_match('/^block_content.*panels_ipe_form$/', $form_id)) {
     // Wrap the revision information and any other vertical tabs in a fieldset.
     // This breaks vertical tab styling, but we don't want this open most of
@@ -78,90 +78,95 @@ function df_tools_blocks_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
     $form['info']['widget'][0]['value']['#title'] = t('Description');
     $form['info']['widget'][0]['value']['#description'] = [];
   }
+}
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function df_tools_blocks_form_panels_ipe_block_plugin_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Modify the block placement form.
-  if ($form_id == 'panels_ipe_block_plugin_form') {
-    if (isset($form['flipper']['front']['settings']['admin_label'])) {
-      $form['flipper']['front']['settings']['admin_label']['#weight'] = -2;
-    }
-
-    if (isset($form['flipper']['front']['settings']['label_display'])) {
-      $form['flipper']['front']['settings']['label_display']['#default_value'] = FALSE;
-      $form['flipper']['front']['settings']['label_display']['#weight'] = -1;
-    }
-
-    if (isset($form['flipper']['front']['settings']['label'])) {
-      $form['flipper']['front']['settings']['label']['#weight'] = 0;
-      $form['flipper']['front']['settings']['label']['#states'] = [
-        'visible' => [
-          ':input[name="settings[label_display]"]' => ['checked' => TRUE],
-        ],
-      ];
-    }
+  if (isset($form['flipper']['front']['settings']['admin_label'])) {
+    $form['flipper']['front']['settings']['admin_label']['#weight'] = -2;
   }
 
-  if ($form_id == 'block_content_hero_panels_ipe_form') {
-    // Group the form into multiple fieldsets.
-    $grouping = [
-      'Hero Text' => ['field_first_line', 'field_second_line'],
-      'Hero Link' => ['field_hero_link'],
-      'Hero Icon' => ['field_icon'],
-      'Nested Block' => ['field_nested_block'],
+  if (isset($form['flipper']['front']['settings']['label_display'])) {
+    $form['flipper']['front']['settings']['label_display']['#default_value'] = FALSE;
+    $form['flipper']['front']['settings']['label_display']['#weight'] = -1;
+  }
+
+  if (isset($form['flipper']['front']['settings']['label'])) {
+    $form['flipper']['front']['settings']['label']['#weight'] = 0;
+    $form['flipper']['front']['settings']['label']['#states'] = [
+      'visible' => [
+      ':input[name="settings[label_display]"]' => ['checked' => TRUE],
+      ],
     ];
-    foreach ($grouping as $label => $fields) {
-      $fieldset_key = strtolower(str_replace(' ', '_', $label));
-      $form[$fieldset_key] = [
-        '#type' => 'details',
-        '#title' => t($label),
-        '#attributes' => ['class' => ['fieldset']],
-        '#collapsed' => TRUE,
-        '#weight' => 99,
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Group the form into multiple fieldsets.
+  $grouping = [
+    'Hero Text' => ['field_first_line', 'field_second_line'],
+    'Hero Link' => ['field_hero_link'],
+    'Hero Icon' => ['field_icon'],
+    'Nested Block' => ['field_nested_block'],
+    ];
+  foreach ($grouping as $label => $fields) {
+    $fieldset_key = strtolower(str_replace(' ', '_', $label));
+    $form[$fieldset_key] = [
+      '#type' => 'details',
+      '#title' => t($label),
+      '#attributes' => ['class' => ['fieldset']],
+      '#collapsed' => TRUE,
+      '#weight' => 99,
       ];
-      foreach ($fields as $field) {
-        $form[$fieldset_key][$field] = $form[$field];
-        unset($form[$field]);
-      }
+    foreach ($fields as $field) {
+      $form[$fieldset_key][$field] = $form[$field];
+      unset($form[$field]);
     }
   }
+}
 
-  // Group slideshow actions into containers.
-  if ($form_id == 'block_content_slideshow_panels_ipe_form') {
-    // Remove unneeded title added to field.
-    $form['field_block']['widget']['#title'] = '';
-
-    // Add default styling to the inline form.
-    if (isset($form['field_block']['widget']['form'])) {
-      if (!isset($form['field_block']['widget']['form']['#title'])) {
-        $form['field_block']['widget']['form']['#title'] = t('Add new custom block');
-      }
-      $form['field_block']['widget']['form']['#attributes'] = ['class' => ['fieldset']];
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function df_tools_blocks_block_content_slideshow_panels_ipe_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Remove unneeded title added to field.
+  $form['field_block']['widget']['#title'] = '';
+  // Add default styling to the inline form.
+  if (isset($form['field_block']['widget']['form'])) {
+    if (!isset($form['field_block']['widget']['form']['#title'])) {
+      $form['field_block']['widget']['form']['#title'] = t('Add new custom block');
     }
-
-    // Wrap the edit/add actions in fieldsets to improve the look/feel of the
-    // form.
-    if (isset($form['field_block']['widget']['actions']['ief_add'])) {
-      $form['field_block']['widget']['actions_add'] = [
-        '#type' => 'fieldset',
-        '#title' => t('Add new custom block'),
-        '#attributes' => ['class' => ['fieldset']],
-        '#weight' => 100,
-        0 => $form['field_block']['widget']['actions']['bundle'],
-        1 => $form['field_block']['widget']['actions']['ief_add'],
+    $form['field_block']['widget']['form']['#attributes'] = ['class' => ['fieldset']];
+  }
+  // Wrap the edit/add actions in fieldsets to improve the look/feel of the
+  // form.
+  if (isset($form['field_block']['widget']['actions']['ief_add'])) {
+    $form['field_block']['widget']['actions_add'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Add new custom block'),
+      '#attributes' => ['class' => ['fieldset']],
+      '#weight' => 100,
+      0 => $form['field_block']['widget']['actions']['bundle'],
+      1 => $form['field_block']['widget']['actions']['ief_add'],
       ];
-      unset($form['field_block']['widget']['actions']['ief_add']);
-      unset($form['field_block']['widget']['actions']['bundle']);
-    }
-
-    if (isset($form['field_block']['widget']['actions']['ief_add_existing'])) {
-      $form['field_block']['widget']['actions_existing'] = [
-        '#type' => 'fieldset',
-        '#title' => t('Add existing custom block'),
-        '#attributes' => ['class' => ['fieldset']],
-        '#weight' => 101,
-        0 => $form['field_block']['widget']['actions']['ief_add_existing'],
+    unset($form['field_block']['widget']['actions']['ief_add']);
+    unset($form['field_block']['widget']['actions']['bundle']);
+  }
+  if (isset($form['field_block']['widget']['actions']['ief_add_existing'])) {
+    $form['field_block']['widget']['actions_existing'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Add existing custom block'),
+      '#attributes' => ['class' => ['fieldset']],
+      '#weight' => 101,
+      0 => $form['field_block']['widget']['actions']['ief_add_existing'],
       ];
-      unset($form['field_block']['widget']['actions']['ief_add_existing']);
-    }
+    unset($form['field_block']['widget']['actions']['ief_add_existing']);
   }
 }
 

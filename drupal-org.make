@@ -23,9 +23,9 @@ projects[better_formats][type] = "module"
 projects[better_formats][subdir] = "contrib"
 projects[better_formats][download][type] = "git"
 projects[better_formats][download][branch] = "8.x-1.x"
-; Fix field validation.
-; http://drupal.org/node/2709313
-projects[better_formats][patch][2709313] = "http://drupal.org/files/issues/bef_field_is_not-2709313-2.patch"
+; [meta] Utilize multiple Better Formats patches in DF without conflict
+; http://drupal.org/node/2737757
+projects[better_formats][patch][2737757] = "http://drupal.org/files/issues/2737757-2.patch"
 
 projects[block_class][version] = "1.x-dev"
 projects[block_class][type] = "module"
@@ -40,11 +40,9 @@ projects[dropzonejs][type] = "module"
 projects[dropzonejs][subdir] = "contrib"
 projects[dropzonejs][version] = "1.0-alpha1"
 
-projects[composer_manager][version] = "1.x-dev"
 projects[composer_manager][type] = "module"
 projects[composer_manager][subdir] = "contrib"
-projects[composer_manager][download][type] = "git"
-projects[composer_manager][download][branch] = "8.x-1.x"
+projects[composer_manager][version] = "1.0-rc2"
 
 projects[config_devel][version] = "1.x-dev"
 projects[config_devel][type] = "module"
@@ -70,7 +68,7 @@ projects[content_browser][download][branch] = "8.x-1.x"
 
 projects[crop][type] = "module"
 projects[crop][subdir] = "contrib"
-projects[crop][version] = "1.0-alpha2"
+projects[crop][version] = "1.0-rc1"
 
 projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
@@ -284,6 +282,10 @@ projects[workbench_moderation][patch][2668006] = "https://www.drupal.org/files/i
 ; Replace the workbench moderation form with a block
 ; https://www.drupal.org/node/2685163
 projects[workbench_moderation][patch][2685163] = "https://www.drupal.org/files/issues/2685163-19.patch"
+;allow for latest revision to be used in a views_infinite_scroll
+;https://www.drupal.org/node/2702041
+projects[workbench_moderation][patch][2702041] = "https://www.drupal.org/files/issues/2702041-20.patch"
+
 
 ; Libraries
 libraries[dropzone][destination] = "../../libraries"
@@ -319,7 +321,7 @@ projects[adminimal_theme][type] = "theme"
 projects[adminimal_theme][subdir] = "contrib"
 projects[adminimal_theme][download][type] = "git"
 projects[adminimal_theme][download][branch] = "8.x-1.x"
-projects[adminimal_theme][patch][2680689] = "https://www.drupal.org/files/issues/adminimal_theme-fix-styles-for-admin-toolbar-2680689-7.patch"
+projects[adminimal_theme][patch][2733651] = "https://www.drupal.org/files/issues/adminimal-merged-patch-from-2680689-and-2733517.patch"
 
 projects[zurb-foundation][version] = "6.x-dev"
 projects[zurb-foundation][type] = "theme"

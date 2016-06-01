@@ -24,3 +24,7 @@ projects[drupal][patch][2695717] = "https://www.drupal.org/files/issues/refreshl
 ; Make inherited install profiles load base profile modules/themes in correct order
 ; https://www.drupal.org/node/1356276
 projects[drupal][patch][1356276] = "https://www.drupal.org/files/issues/make_inherited_install-1356276-133.patch"
+
+; Views which load the same entity type as entity and non default revision cause fatal error
+; https://www.drupal.org/node/2714989
+projects[drupal][patch][2714989] = "https://www.drupal.org/files/issues/2714989-19.patch"
