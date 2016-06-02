@@ -1,7 +1,11 @@
 uuid: 4c75abe6-763a-478b-bd53-83016c959eed
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
+_core:
+  default_config_hash: 6a5syzmdTkDU6jkHbvS9VzVbZ6LNMZ6OuZassp_U580
 name: hero_square
 label: 'Hero Square'
 effects:
@@ -12,3 +16,14 @@ effects:
     data:
       width: 700
       height: 400
+  c0050c1d-5bc5-49da-ab6f-57600b1bbcdf:
+    uuid: c0050c1d-5bc5-49da-ab6f-57600b1bbcdf
+    id: image_effects_watermark
+    weight: 2
+    data:
+      placement: center-top
+      x_offset: 0
+      y_offset: 0
+      opacity: 100
+      watermark_image: profiles/demo_framework/modules/df/df_tools/df_tools_blocks/images/overlay.png
+      watermark_scale: null

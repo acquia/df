@@ -1,9 +1,11 @@
 uuid: 77a65b76-c298-419b-9302-2ed72f5e4960
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 _core:
-  default_config_hash: 3BesD_9w4_dzI61uqQhcVBjxA6YvaFlbWSvGnXlmItE
+  default_config_hash: HzFqy-FSoFkg16fRiQeqoPDomU_c-YcW6XvRAIfuGhw
 name: hero_image
 label: 'Hero Image'
 effects:
@@ -12,5 +14,16 @@ effects:
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 1450
+      width: 1440
       height: 600
+  a1c69a63-221b-4c06-893d-cfcc13676af7:
+    uuid: a1c69a63-221b-4c06-893d-cfcc13676af7
+    id: image_effects_watermark
+    weight: 2
+    data:
+      placement: center-top
+      x_offset: 0
+      y_offset: 0
+      opacity: 100
+      watermark_image: profiles/demo_framework/modules/df/df_tools/df_tools_blocks/images/overlay.png
+      watermark_scale: null

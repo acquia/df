@@ -1,3 +1,4 @@
+uuid: f7646ef2-0b3a-483d-b542-c67a9153ddcf
 langcode: en
 status: true
 dependencies:
@@ -6,7 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.hero_image
+    - image.style.article
     - node.type.article
   module:
     - comment
@@ -64,7 +65,7 @@ third_party_settings:
               label: hidden
               type: image
               settings:
-                image_style: hero_image
+                image_style: article
                 image_link: ''
               third_party_settings: {  }
               weight: 0
@@ -128,7 +129,7 @@ third_party_settings:
         storage_id: 'node:article:full:default'
         builder: ipe
 _core:
-  default_config_hash: XwYGleLVzxOOoBbMipxNbZ_aXVIlT2qOVZv2dfW6A3o
+  default_config_hash: 1G8lSs-JnUsOtu2X0zy4tQqPTRNsNKm6v1c1b-srdKc
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -151,7 +152,7 @@ content:
     type: image
     weight: -1
     settings:
-      image_style: hero_image
+      image_style: article
       image_link: ''
     third_party_settings: {  }
     label: hidden

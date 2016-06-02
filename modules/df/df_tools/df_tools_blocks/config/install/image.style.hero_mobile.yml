@@ -1,7 +1,11 @@
 uuid: 5896937b-bb22-4750-9e00-c427fb295513
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
+_core:
+  default_config_hash: Fx9fj4yZtXL0swleJyn9D9CHuAN-pVcqjHdro0p4OYA
 name: hero_mobile
 label: 'Hero mobile'
 effects:
@@ -12,3 +16,14 @@ effects:
     data:
       width: 600
       height: 700
+  2a93bf7d-68fb-4590-87e9-fbf29d2adb9b:
+    uuid: 2a93bf7d-68fb-4590-87e9-fbf29d2adb9b
+    id: image_effects_watermark
+    weight: 2
+    data:
+      placement: center-top
+      x_offset: 0
+      y_offset: 0
+      opacity: 100
+      watermark_image: sites/default/files/overlay.png
+      watermark_scale: null

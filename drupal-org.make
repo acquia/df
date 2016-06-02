@@ -138,6 +138,10 @@ projects[google_analytics][type] = "module"
 projects[google_analytics][subdir] = "contrib"
 projects[google_analytics][version] = "2.0"
 
+projects[image_effects][type] = "module"
+projects[image_effects][subdir] = "contrib"
+projects[image_effects][version] = "1.0-alpha2"
+
 projects[image_widget_crop][type] = "module"
 projects[image_widget_crop][subdir] = "contrib"
 projects[image_widget_crop][version] = "1.0"
@@ -282,7 +286,7 @@ projects[workbench_moderation][patch][2668006] = "https://www.drupal.org/files/i
 ; Replace the workbench moderation form with a block
 ; https://www.drupal.org/node/2685163
 projects[workbench_moderation][patch][2685163] = "https://www.drupal.org/files/issues/2685163-19.patch"
-;allow for latest revision to be used in a views_infinite_scroll
+;allow for latest revision to be used in views
 ;https://www.drupal.org/node/2702041
 projects[workbench_moderation][patch][2702041] = "https://www.drupal.org/files/issues/2702041-20.patch"
 
