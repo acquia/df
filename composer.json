@@ -10,6 +10,18 @@
         {
             "type": "package",
             "package": {
+                "name": "drupal/zurb_foundation",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://git.drupal.org/project/zurb-foundation.git",
+                    "type": "git",
+                    "reference": "origin/8.x-6.x"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "mjolnic/fontawesome-iconpicker",
                 "version": "1.2.0",
                 "source": {
@@ -101,7 +113,7 @@
         "drupal/views_infinite_scroll": "8.1.0",
         "drupal/workbench_moderation": "8.1.0",
         "drupal/adminimal_theme": "8.1.1",
-        "drupal/zurb_foundation": "8.6.x-dev",
+        "drupal/zurb_foundation": "dev-master",
         "enyo/dropzone": "4.2.0",
         "mjolnic/fontawesome-iconpicker": "1.2.0",
         "desandro/masonry": "dev-master",
