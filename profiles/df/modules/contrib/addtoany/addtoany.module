@@ -1,0 +1,231 @@
+<?php
+
+/**
+ * @file
+ * Handle AddToAny integration
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Url;
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\UrlHelper;
+
+/**
+ * Implements hook_permission().
+ */
+function addtoany_permission() {
+  return array(
+    'administer addtoany' => array(
+      'title' => t('Administer addtoany'),
+      'description' => t('Perform administration tasks for the AddToAny module.'),
+    ),
+  );
+}
+
+/**
+* Implements hook_theme().
+*/
+function addtoany_theme() {
+  return array(
+    'addtoany_standard' => array(
+      'variables' => array(
+        'addtoany_html' => FALSE,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function addtoany_node_view(array &$build, EntityInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+  $config = \Drupal::config('addtoany.settings');
+  $types = $config->get('nodetypes');
+  $type = $node->getType();
+  $published = $node->isPublished();
+  $teaser = ($view_mode == 'teaser') ? TRUE : FALSE;
+
+  // Display in content section?
+  $show = (!empty($type) && in_array($type, $types, TRUE) && ($published) && ($config->get('display_in_nodecont'))
+     && (
+       (!$teaser) || ($teaser && $config->get('display_in_teasers'))
+    )
+  );
+  $weight = $config->get('display_weight');
+
+  if ($show) {
+    $build['addtoany'] = array(
+      // Not using #markup because data attribute name gets mangled
+      // @see https://www.drupal.org/node/2609928
+      // '#markup' => addtoany_create_node_buttons($node),
+      '#addtoany_html' => addtoany_create_node_buttons($node),
+      '#theme' => 'addtoany_standard',
+      '#weight' => $weight,
+    );
+  }
+
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function addtoany_page_attachments(&$page) {
+	global $_addtoany_init, $_addtoany_targets;
+
+	$config = \Drupal::config('addtoany.settings');
+
+  /**
+   * Initial JS.
+   */
+	$javascript_header = 'window.a2a_config=window.a2a_config||{};'
+	  . 'a2a_config.callbacks=a2a_config.callbacks||[];'
+	  . 'a2a_config.templates=a2a_config.templates||{};'
+		. (($config->get('no_3p')) ? 'a2a_config.no_3p=1;' : '')
+		. $config->get('additional_js');
+
+  // Add AddToAny initial JS config.
+  $page['#attached']['html_head'][] = [
+    // The data.
+    [
+      // Add a <script> tag.
+      '#tag' => 'script',
+      // Add JavaScript to the <script> tag.
+      '#value' => \Drupal\Core\Render\Markup::create($javascript_header),
+      // Give weight so it appears after meta tags, etc.
+      '#weight' => 10,
+    ],
+    // A key, to make it possible to recognize this HTML <HEAD> element when altering.
+    'addtoany-js'
+  ];
+
+  /**
+   * Custom CSS.
+   */
+  $css = $config->get('additional_css');
+  if (!empty($css)) {
+    // Add AddToAny custom CSS.
+    $page['#attached']['html_head'][] = [
+      // The data.
+      [
+        // Add a <style> tag.
+        '#tag' => 'style',
+        // Add CSS to the <style> tag.
+        '#value' => $css,
+        // Give weight so it appears after meta tags, etc.
+        '#weight' => 10,
+      ],
+      // A key, to make it possible to recognize this HTML <HEAD> element when altering.
+      'addtoany-css'
+    ];
+  }
+
+  /**
+   * Add module's main library, which includes external AddToAny core JS, and the module's CSS.
+   */
+	$page['#attached']['library'][] = 'addtoany/addtoany';
+}
+
+/**
+ * Generate code for AddToAny buttons for a node.
+ *
+ * @param object $node
+ *   The node object to create the buttons for.
+ *
+ * @return string
+ *   The HTML code for the buttons.
+ */
+function addtoany_create_node_buttons($node) {
+  $url = isset($node) ? $node->url('canonical', array('absolute' => true)) : NULL;
+  $title = isset($node) ? $node->label() : NULL;
+  return addtoany_create_buttons($url, $title);
+}
+
+/**
+ * Generate code for AddToAny buttons.
+ *
+ * @param array $url
+ *   If present this will be used as the URL.
+ *
+ * @param string $title
+ *   If present this will be used as the title. Use an empty string for no title
+ *   or NULL to use the current page title.
+ *
+ * @return string
+ *   The HTML code for the buttons.
+ */
+function addtoany_create_buttons($url = NULL, $title = NULL) {
+	global $base_path;
+
+	$config = \Drupal::config('addtoany.settings');
+
+	$additional_html = rtrim($config->get('additional_html'));
+	$universal_button_placement = $config->get('universal_button_placement');
+
+	$is_front = \Drupal::service('path.matcher')->isFrontPage();
+
+  // Default to <front> or the current path.
+  if (!isset($url)) {
+    // Use <front> for the front page to avoid '/node' as the final URL,
+    // otherwise use current path.
+    $url = ($is_front) ? Url::fromRoute('<front>')->setAbsolute()->toString() : Url::fromRoute('<current>')->setAbsolute()->toString();
+  }
+  else {
+    // Sanitize and encode URL for HTML output.
+    $url = UrlHelper::stripDangerousProtocols($url);
+  }
+
+  // Default to the current title, using the site name for the home page.
+  if (!isset($title)) {
+    if ($is_front) {
+      $title  = \Drupal::config('system.site')->get('name');
+    }
+    else {
+      $request = \Drupal::request();
+      $route_match = \Drupal::routeMatch();
+      $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    }
+  }
+
+  // Set the link name.
+  $link_name = Html::escape($title);
+  // Set the link URL
+  $link_url = Html::escape($url);
+
+	//$javascript = _addtoany_create_script($_addtoany_num, $link_name, $link_url);
+
+	$buttons_size = $config->get('buttons_size');
+  // Must be a 3 digit positive integer.
+  $buttons_size = (
+      $buttons_size !== '32' && strlen($buttons_size) <= 3 && $buttons_size !== ''
+      && is_numeric($buttons_size) && intval($buttons_size) == $buttons_size && $buttons_size > 0
+    ) ? $buttons_size : '32';
+
+	$button_setting = $config->get('universal_button');
+
+	if ($button_setting == "custom") {
+		$button_image = Html::escape(UrlHelper::stripDangerousProtocols($config->get('custom_universal_button')));
+	}
+
+  $button_innerHTML = (isset($button_image)) ? '<img src="' . $button_image . '">' : '';
+
+  if ($button_setting != 'none') {
+    $universal_button = sprintf('<a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=%s&amp;title=%s">%s</a>',
+      rawurlencode($link_url),
+      rawurlencode($link_name),
+      $button_innerHTML
+    );
+	}
+	else {
+  	$universal_button = '';
+	}
+
+  return ( sprintf('<span class="a2a_kit%s addtoany_list" data-a2a-url="%s" data-a2a-title="%s">%s%s%s</span>',
+    ($buttons_size != '16') ? ' a2a_kit_size_' . $buttons_size : '',
+    $link_url,
+    $link_name,
+    ($universal_button_placement == 'after') ? $additional_html : '',
+    $universal_button,
+    ($universal_button_placement == 'before') ? $additional_html : ''
+  ));
+}

@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.crop_file_entity_example.body
+    - field.field.node.crop_file_entity_example.field_image_crop_file_entity
+    - node.type.crop_file_entity_example
+  module:
+    - image
+    - text
+    - user
+id: node.crop_file_entity_example.default
+targetEntityType: node
+bundle: crop_file_entity_example
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_image_crop_file_entity:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: small_16_9
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

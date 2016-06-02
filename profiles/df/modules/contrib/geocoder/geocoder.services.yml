@@ -1,0 +1,27 @@
+services:
+  plugin.manager.geocoder.provider:
+    class: Drupal\geocoder\Plugin\GeocoderPluginManager
+    arguments: [provider, '@container.namespaces', '@cache.discovery', '@module_handler']
+  plugin.manager.geocoder.dumper:
+    class: Drupal\geocoder\Plugin\GeocoderPluginManager
+    arguments: [dumper, '@container.namespaces', '@cache.discovery', '@module_handler']
+  plugin.manager.geocoder.data_prepare:
+    class: Drupal\geocoder\Plugin\GeocoderPluginManager
+    arguments: [data_prepare, '@container.namespaces', '@cache.discovery', '@module_handler']
+
+  geocoder.http_adapter:
+    class: \Ivory\HttpAdapter\CurlHttpAdapter
+
+  geocoder.dumper.geojson:
+    class: \Geocoder\Dumper\GeoJson
+  geocoder.dumper.gpx:
+    class: \Geocoder\Dumper\Gpx
+  geocoder.dumper.kml:
+    class: \Geocoder\Dumper\Kml
+  geocoder.dumper.wkb:
+    class: \Geocoder\Dumper\Wkb
+  geocoder.dumper.wkt:
+    class: \Geocoder\Dumper\Wkt
+
+  geocoder.provider.file:
+    class: Drupal\geocoder\Geocoder\Provider\File

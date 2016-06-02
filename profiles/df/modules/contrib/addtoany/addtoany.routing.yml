@@ -1,0 +1,7 @@
+addtoany.admin_settings:
+  path: '/admin/config/system/addtoany'
+  defaults:
+    _form: '\Drupal\addtoany\Form\AddToAnySettingsForm'
+    _title: 'AddToAny'
+  requirements:
+    _permission: 'administer addtoany'

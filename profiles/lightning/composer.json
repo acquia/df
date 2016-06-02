@@ -1,0 +1,100 @@
+{
+    "name": "drupal/lightning",
+    "description": "The best of Drupal, curated by Acquia",
+    "type": "drupal-profile",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "drupal/drupal-extension": "^3.1",
+        "jakoch/phantomjs-installer": "1.9.8",
+        "behat/behat": "^3.0",
+        "drupal/coder": "8.*",
+        "phing/phing": "^2.14"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.drupal-composer.org"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS",
+            "./bin/phing"
+        ],
+        "post-update-cmd": [
+            "./bin/phing push"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    },
+    "extra": {
+        "installer-paths": {
+            "docroot/core": [
+                "drupal/core"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ]
+        },
+        "patches": {
+            "drupal/panelizer": {
+                "Generate new UUIDs for displays when switching from default to field storage":
+                "https://www.drupal.org/files/issues/2701349-2.patch",
+                "Explicitly set the Panels IPE URL root when saving in Panelizer":
+                "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch"
+            },
+            "drupal/panels": {
+                "beta4 to 8eba1a0 - quickedit blocks":
+                "https://www.drupal.org/files/issues/panels--beta4-to-8eba1a0.patch",
+                "2667754 - Allow other modules to disable the IPE based on custom logic":
+                "https://www.drupal.org/files/issues/2667754-3.patch",
+                "Bandaid tempstore patch":
+                "https://www.drupal.org/files/issues/bandaid.patch"
+            },
+            "drupal/scheduled_updates": {
+                "2674874 - Issue saving Schedule Update Type form":
+                "https://www.drupal.org/files/issues/schedule_updates-save_type-2674874-2.patch"
+            },
+            "drupal/workbench_moderation": {
+                "2668006 - Provide logical access control for when IPE should be applied to moderated nodes":
+                "https://www.drupal.org/files/issues/2668006-2.patch"
+            },
+            "drush/drush": {
+                "Adding composer.json support to make-convert command":
+                "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
+            }
+        }
+    },
+    "require": {
+        "cweagans/composer-patches": "dev-master",
+        "composer/installers": "^1.0",
+        "drupal/core": "^8.1.0",
+        "drupal/embed": "8.1.0-rc2",
+        "drupal/entity_embed": "8.1.0-alpha1",
+        "drupal/media_entity": "8.1.0",
+        "drupal/media_entity_instagram": "8.1.0",
+        "drupal/media_entity_twitter": "8.1.0",
+        "drupal/media_entity_image": "8.1.0",
+        "drupal/ctools": "8.3.0-alpha25",
+        "drupal/panels": "8.3.0-beta4",
+        "drupal/page_manager": "8.1.0-alpha23",
+        "drupal/panelizer": "8.3.0-alpha2",
+        "drupal/scheduled_updates": "8.1.0-alpha5",
+        "drupal/workbench_moderation": "8.1.0",
+        "drupal/acquia_connector": "^8.1.1",
+        "drupal/config_update": "^8.1.1",
+        "drupal/features": "^8.3.0",
+        "drupal/inline_entity_form": "8.1.0-alpha6",
+        "drupal/metatag": "^8.1.0",
+        "drupal/token": "^8.1.0",
+        "drupal/services": "8.4.0-alpha3",
+        "drupal-composer/drupal-scaffold": "^1.2",
+        "drush/drush": "^9.0",
+        "drupal/pathauto": "^8.1.0",
+        "drupal/video_embed_field": "8.1.0-rc8"
+    }
+}

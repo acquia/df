@@ -1,0 +1,59 @@
+<?php
+
+use Drupal\node\Entity\NodeType;
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function lightning_layout_install() {
+  // Install permissions.
+  lightning_layout_update_8003();
+}
+
+/**
+ * Installs Panelizer and default configuration for landing page content type.
+ */
+function lightning_layout_update_8001() {
+  \Drupal::service('module_installer')->install(['panelizer']);
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'lightning_layout');
+}
+
+/**
+ * Creates the layout_manager role.
+ */
+function lightning_layout_update_8002() {
+  $values = lightning_read_config('user.role.layout_manager', 'lightning_layout');
+  Role::create($values)->save();
+}
+
+/**
+ * Adds Panelizer permissions to the landing_page_creator and layout_manager
+ * roles.
+ */
+function lightning_layout_update_8003() {
+  user_role_grant_permissions('landing_page_creator', [
+    'access panels in-place editing',
+    'administer panelizer node landing_page content',
+  ]);
+
+  $permissions = [];
+  /** @var \Drupal\node\NodeTypeInterface $node_type */
+  foreach (NodeType::loadMultiple() as $node_type) {
+    $permissions[] = 'administer node ' . $node_type->id() . ' defaults';
+  }
+  user_role_grant_permissions('layout_manager', $permissions);
+}
+
+/**
+ * Implements hook_update_dependencies().
+ */
+function lightning_layout_update_dependencies() {
+  return [
+    'lightning_layout' => [
+      8003 => [
+        'lightning' => 8002,
+      ],
+    ]
+  ];
+}

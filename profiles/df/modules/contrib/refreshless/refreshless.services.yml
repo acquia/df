@@ -1,0 +1,25 @@
+services:
+  refreshless.page_state:
+    class: Drupal\refreshless\RefreshlessPageState
+    arguments: ['@cache_contexts_manager', '@csrf_token']
+
+  # Event subscribers.
+  refreshless.html_response.subscriber:
+    class: Drupal\refreshless\EventSubscriber\HtmlResponseSubscriber
+    arguments: ['@refreshless.page_state']
+    tags:
+      - { name: event_subscriber }
+  refreshless.redirect_response_subscriber:
+    class: Drupal\refreshless\EventSubscriber\RedirectResponseSubscriber
+    tags:
+      - { name: event_subscriber }
+  refreshless.page_display_variant_subscriber.block:
+    class: Drupal\refreshless\EventSubscriber\BlockPageDisplayVariantSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  main_content_renderer.refreshless:
+    class: Drupal\refreshless\Render\MainContent\RefreshlessRenderer
+    arguments: ['@main_content_renderer.html', '@refreshless.page_state', '@html_response.attachments_processor']
+    tags:
+      - { name: render.main_content_renderer, format: drupal_refreshless }

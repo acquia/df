@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_entity_presave().
+ */
+function geocoder_geofield_entity_presave(\Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity instanceof \Drupal\Core\Entity\ContentEntityInterface) {
+    $id = $entity->getEntityTypeId() . '.' . $entity->bundle() . '.default';
+    /** @var \Drupal\Core\Entity\Display\EntityFormDisplayInterface $entityFormDisplay */
+    if ($entityFormDisplay = \Drupal\Core\Entity\Entity\EntityFormDisplay::load($id)) {
+      foreach ($entityFormDisplay->getComponents() as $field_id => $component) {
+        $settings = $component['settings'];
+
+        if (in_array($component['type'], array('geocoder_geofield_geocode_from_widget', 'geocoder_geofield_reverse_geocode_from_widget'))) {
+          // Find the enabled geocoder plugins.
+          $settings['provider_plugins'] = array_keys(
+            array_filter($settings['provider_plugins'], function($v, $k) {
+              return (bool) $v['checked'];
+            }, ARRAY_FILTER_USE_BOTH)
+          );
+
+          $settings['field_from'] = $settings['field'];
+          $settings['field_to'] = $field_id;
+
+          $type = $entity->get($settings['field_from'])->getFieldDefinition()->getType();
+
+          $definitions = array_filter(
+            \Drupal::service('plugin.manager.geocoder.data_prepare')->getDefinitions(),
+            function($definition) use ($type) {
+              return in_array($type, $definition['field_types']);
+            }
+          );
+
+          $values = $entity->get($settings['field_from'])->getValue();
+          $dumper = \Drupal\geocoder\Geocoder::getPlugin('dumper', $settings['dumper_plugin']);
+
+          if (in_array($component['type'], array('geocoder_geofield_geocode_from_widget'))) {
+            foreach ($definitions as $definition) {
+              /** @var \Drupal\geocoder\Plugin\Geocoder\DataPrepareInterface $object */
+              $object = \Drupal::service('plugin.manager.geocoder.data_prepare')->createInstance($definition['id']);
+              $object->setEntity($entity);
+              $object->setWidgetConfiguration($component['settings']);
+              $values = $object->getPreparedGeocodeValues($values);
+            }
+
+            $result = array();
+            foreach ($values as $value) {
+              if ($addressCollection = \Drupal\geocoder\Geocoder::geocode($settings['provider_plugins'], $value['value'])) {
+                $result[] = $dumper->dump($addressCollection->first());
+              }
+            }
+          }
+
+          if (in_array($component['type'], array('geocoder_geofield_reverse_geocode_from_widget'))) {
+            foreach ($definitions as $definition) {
+              /** @var \Drupal\geocoder\Plugin\Geocoder\DataPrepareInterface $object */
+              $object = \Drupal::service('plugin.manager.geocoder.data_prepare')->createInstance($definition['id']);
+              $object->setEntity($entity);
+              $object->setWidgetConfiguration($component['settings']);
+              $values = $object->getPreparedReverseGeocodeValues($values);
+            }
+
+            $result = array();
+            foreach ($values as $value) {
+              if ($addressCollection = \Drupal\geocoder\Geocoder::reverse($settings['provider_plugins'], $value['lat'], $value['lon'])) {
+                $result[] = $dumper->dump($addressCollection->first());
+              }
+            }
+          }
+
+          if (!empty($result)) {
+            $entity->set($entity->get($settings['field_to'])->getName(), $result);
+          }
+        }
+      }
+    }
+  }
+}

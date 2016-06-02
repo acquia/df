@@ -1,0 +1,73 @@
+<?php
+
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\EventSubscriber\MainContentViewSubscriber;
+use Drupal\Core\EventSubscriber\AjaxResponseSubscriber;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function refreshless_page_attachments(array &$page) {
+  $request = \Drupal::request();
+
+  // Refreshless is only sensible when there is an actual session (otherwise the
+  // entire page can be cached by the page_cache module, and be sent more
+  // quickly than Refreshless could).
+  // @see \Drupal\big_pipe\Render\Placeholder\BigPipeStrategy.
+  $session_exists = \Drupal::service('session_configuration')->hasSession($request);
+
+  $page['#cache']['contexts'][] = 'session.exists';
+  if ($session_exists) {
+    $page['#attached']['library'][] = 'refreshless/refreshless';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for region templates.
+ */
+function refreshless_preprocess_region(&$variables) {
+  $variables['attributes']['data-refreshless-region'] = $variables['region'];
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function refreshless_module_implements_alter(&$implementations, $hook) {
+  if ($hook === 'js_settings_alter') {
+    // Move my_module_form_alter() to the end of the list.
+    // \Drupal::moduleHandler()->getImplementations()
+    // iterates through $implementations with a foreach loop which PHP iterates
+    // in the order that the items were added, so to move an item to the end of
+    // the array, we remove it and then add it.
+    $group = $implementations['refreshless'];
+    unset($implementations['refreshless']);
+    $implementations['refreshless'] = $group;
+  }
+}
+
+/**
+ * Implements hook_js_settings_alter().
+ *
+ * @see system_js_settings_alter()
+ * @see \Drupal\Core\Ajax\AjaxResponseAttachmentsProcessor::buildAttachmentsCommands()
+ */
+function refreshless_js_settings_alter(&$settings, AttachedAssetsInterface $assets) {
+  $request = \Drupal::requestStack()->getMasterRequest();
+
+  // Unlike for generic/typical Ajax responses, Refreshless responses in fact do
+  // change the path. But AjaxResponseAttachmentsProcessor removes the path
+  // settings. So we copy the path settings into another subtree of the settings
+  // array, to allow path settings to be sent to the client for Refreshless
+  // responses.
+  // Also do this when there is no wrapper format (i.e. when simply sending a
+  // HTML response) to ensure drupalSettings behaves consistently regardless of
+  // full page loads or Refreshless page loads.
+  if (!$request->query->has(MainContentViewSubscriber::WRAPPER_FORMAT) || $request->query->get(MainContentViewSubscriber::WRAPPER_FORMAT) === 'drupal_refreshless') {
+    $settings['refreshless']['path'] = $settings['path'];
+    // When following redirects, XHR provides no way of knowing the final URL.
+    // This allows the RefreshLess JavaScript to calculate it.
+    // @see \Drupal\refreshless\EventSubscriber\RedirectResponseSubscriber
+    $settings['refreshless']['path']['refreshless_absolute_url'] = $request->getSchemeAndHttpHost() . $request->getBaseUrl() . $request->getPathInfo() . UrlHelper::buildQuery(UrlHelper::filterQueryParameters($request->query->all(), [MainContentViewSubscriber::WRAPPER_FORMAT, AjaxResponseSubscriber::AJAX_REQUEST_PARAMETER, 'js', 'ajax_page_state', 'refreshless_page_state']));
+  }
+}

@@ -1,0 +1,8 @@
+services:
+  scheduler.manager:
+    class: Drupal\scheduler\SchedulerManager
+    arguments: ['@date.formatter', '@logger.channel.scheduler', '@module_handler', '@entity.manager', '@config.factory' ]
+  logger.channel.scheduler:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['scheduler']

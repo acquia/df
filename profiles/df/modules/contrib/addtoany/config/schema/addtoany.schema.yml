@@ -1,0 +1,42 @@
+# Schema file for the configuration files of the addtoany module.
+addtoany.settings:
+  type: config_object
+  label: 'AddToAny Settings'
+  mapping:
+    buttons_size:
+      type: integer
+    additional_html:
+      type: text
+      label: 'Additional HTML'
+    additional_css:
+      type: string
+      label: 'Additional CSS'
+    additional_js:
+      type: string
+      label: 'Additional JS'
+    nodetypes:
+      type: sequence
+      label: 'Node Types'
+      sequence:
+        type: string
+    display_in_teasers:
+      type: boolean
+      label: 'Display in teasers'
+    display_in_nodecont:
+      type: boolean
+      label: 'Display in content section'
+    display_weight:
+      type: integer
+      label: 'Content Weight'
+    universal_button:
+      type: string
+      label: 'Universal Button Type'
+    custom_universal_button:
+      type: uri
+      lable: 'Custom button URL'
+    universal_button_placement:
+      type: string
+      label: 'Universal Button Placement'
+    no_3p:
+      type: boolean
+      label: 'Disable 3rd Party Cookies'

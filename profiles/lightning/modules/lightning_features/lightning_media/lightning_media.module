@@ -1,0 +1,113 @@
+<?php
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\media_entity\MediaBundleInterface;
+use Drupal\services\ServiceEndpointInterface;
+use Drupal\views\ViewEntityInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function lightning_media_media_bundle_insert(MediaBundleInterface $bundle) {
+  /** @var \Drupal\field\Entity\FieldConfig $field */
+  $field = FieldConfig::create([
+    'field_name' => 'field_media_in_library',
+    'entity_type' => 'media',
+    'bundle' => $bundle->id(),
+  ]);
+
+  $t = \Drupal::translation();
+  $field
+    ->setSetting('on_label', $t->translate('Saved to my media library'))
+    ->setSetting('off_label', $t->translate('Not in my media library'))
+    ->setLabel($t->translate('Save to my media library'))
+    ->setDefaultValue(TRUE)
+    ->save();
+
+  $form_display = EntityFormDisplay::load('media.' . $bundle->id() . '.default');
+  if (empty($form_display)) {
+    $form_display = EntityFormDisplay::create([
+      'targetEntityType' => 'media',
+      'bundle' => $bundle->id(),
+      'mode' => 'default',
+      'status' => TRUE,
+    ]);
+  }
+  $form_display->setComponent('field_media_in_library', [
+    'type' => 'boolean_checkbox',
+    'settings' => [
+      'display_label' => TRUE,
+    ],
+  ])->save();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function lightning_media_service_endpoint_access(ServiceEndpointInterface $endpoint, $operation, AccountInterface $account) {
+  // Not even user 1 can edit the lightning_media endpoint. It belongs to us.
+  return $endpoint->id() == 'lightning_media' ? AccessResult::forbidden() : AccessResult::neutral();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function lightning_media_view_access(ViewEntityInterface $view, $operation, AccountInterface $account) {
+  // Not even user 1 can edit the media_library view. It belongs to us.
+  return $view->id() == 'media_library' ? AccessResult::forbidden() : AccessResult::neutral();
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function lightning_media_library_info_alter(array &$libraries, $extension) {
+  if ($extension == 'lightning_media') {
+    $root = '/' . \Drupal::moduleHandler()->getModule('lightning')->getPath();
+
+    foreach ($libraries as $key => $library) {
+      if ($key == 'media_library') {
+        continue;
+      }
+
+      foreach ($library['js'] as $path => $info) {
+        $libraries[$key]['js'][$root . '/' . $path] = $info;
+        unset($libraries[$key]['js'][$path]);
+      }
+
+      foreach ($library['css'] as $group => $files) {
+        foreach ($files as $path => $info) {
+          $libraries[$key]['css'][$group][$root . '/' . $path] = $info;
+          unset($libraries[$key]['css'][$group][$path]);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function lightning_media_form_entity_embed_dialog_alter(array &$form, FormStateInterface $form_state) {
+  list ($editor, $embed_button) = $form_state->getBuildInfo()['args'];
+
+  /** @var \Drupal\embed\EmbedButtonInterface $embed_button */
+  if ($embed_button->id() == 'media_library') {
+    if (isset($form['actions']['back'])) {
+      $form['actions']['back']['#access'] = FALSE;
+    }
+    $form['attributes']['data-entity-embed-display']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_js_settings_alter().
+ */
+function lightning_media_js_settings_alter(array &$settings, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+  if (empty($settings['ajax'])) {
+    $settings['ajax'] = [];
+  }
+}
