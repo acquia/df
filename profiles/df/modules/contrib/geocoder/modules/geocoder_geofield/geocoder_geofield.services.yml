@@ -1,7 +1,0 @@
-services:
-  geocoder.dumper.geometry:
-    class: Drupal\geocoder_geofield\Geocoder\Dumper\Geometry
-    arguments: ['@geocoder.dumper.geojson','@geophp.geophp']
-  geocoder.dumper.geohash:
-    class: Drupal\geocoder_geofield\Geocoder\Dumper\Geohash
-    arguments: ['@geocoder.dumper.geojson', '@geophp.geophp']
