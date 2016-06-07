@@ -2,11 +2,9 @@ api = 2
 core = 8.x
 
 ; Modules
-projects[address][version] = "1.x-dev"
 projects[address][type] = "module"
 projects[address][subdir] = "contrib"
-projects[address][download][type] = "git"
-projects[address][download][branch] = "8.x-1.x"
+projects[address][version] = "1.0-beta3"
 
 projects[addtoany][type] = "module"
 projects[addtoany][subdir] = "contrib"

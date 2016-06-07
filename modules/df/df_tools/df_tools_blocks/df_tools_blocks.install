@@ -5,6 +5,8 @@
  * Set up the DF Tools Blocks base migrations.
  */
 
+use Drupal\shortcut\Entity\Shortcut;
+
 /**
  * Implements hook_install().
  */
@@ -12,13 +14,15 @@ function df_tools_blocks_install() {
   // Enable translation for our block bundles.
   $entities = ['block_content' => ['content', 'hero', 'map', 'media', 'url']];
   df_tools_translation_enable_translation($entities);
-
-  // Add Hero to the default shortcut set.
-  $shortcut = entity_create('shortcut', array(
-    'shortcut_set' => 'default',
-    'title' => t('Add Hero'),
-    'weight' => -1,
-    'link' => array('uri' => 'internal:/block/add/hero'),
-  ));
-  $shortcut->save();
+  
+  if (!\Drupal::service('config.installer')->isSyncing()) {
+    // Add Hero to the default shortcut set.
+    $shortcut = Shortcut::create(array(
+      'shortcut_set' => 'default',
+      'title' => t('Add Hero'),
+      'weight' => -1,
+      'link' => array('uri' => 'internal:/block/add/hero'),
+    ));
+    $shortcut->save();
+  }
 }

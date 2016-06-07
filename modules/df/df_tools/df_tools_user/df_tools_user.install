@@ -5,6 +5,7 @@
  * Set up the Demo user base install routines.
  */
 
+use Drupal\shortcut\Entity\Shortcut;
 use Drupal\user\Entity\User;
 
 function df_tools_user_install() {
@@ -17,9 +18,10 @@ function df_tools_user_install() {
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval', 'search content', 'access user profiles'));
 
   // Assign user 1 the "administrator" role.
-  $user = User::load(1);
-  $user->roles[] = 'administrator';
-  $user->save();
+  if ($user = User::load(1)) {
+    $user->roles[] = 'administrator';
+    $user->save();
+  }
 
   // Enable the Contact link in the footer menu.
   /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
@@ -32,23 +34,24 @@ function df_tools_user_install() {
   // Allow authenticated users to use shortcuts.
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access shortcuts'));
 
-  // Populate the default shortcut set.
-  $shortcut = entity_create('shortcut', array(
-    'shortcut_set' => 'default',
-    'title' => t('All content'),
-    'weight' => -20,
-    'link' => array('uri' => 'internal:/admin/content'),
-  ));
-  $shortcut->save();
+  if (!\Drupal::service('config.installer')->isSyncing()) {
+    // Populate the default shortcut set.
+    $shortcut = Shortcut::create(array(
+      'shortcut_set' => 'default',
+      'title' => t('All content'),
+      'weight' => -20,
+      'link' => array('uri' => 'internal:/admin/content'),
+    ));
+    $shortcut->save();
 
-  $shortcut = entity_create('shortcut', array(
-    'shortcut_set' => 'default',
-    'title' => t('All files'),
-    'weight' => -19,
-    'link' => array('uri' => 'internal:/admin/content/files'),
-  ));
-  $shortcut->save();
-
+    $shortcut = Shortcut::create(array(
+      'shortcut_set' => 'default',
+      'title' => t('All files'),
+      'weight' => -19,
+      'link' => array('uri' => 'internal:/admin/content/files'),
+    ));
+    $shortcut->save();
+  }
 
   // Add the First and Last Name fields to the user entity form display.
   entity_get_form_display('user', 'user', 'default')
@@ -61,8 +64,9 @@ function df_tools_user_install() {
     ->save();
 
   // Add values for the First and Last name fields to the admin user.
-  $user = User::load(1);
-  $user->set('field_first_name', 'Bill');
-  $user->set('field_last_name', 'James');
-  $user->save();
+  if ($user = User::load(1)) {
+    $user->set('field_first_name', 'Bill');
+    $user->set('field_last_name', 'James');
+    $user->save();
+  }
 }
