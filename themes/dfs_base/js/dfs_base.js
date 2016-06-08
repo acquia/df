@@ -64,30 +64,27 @@
     return false;
   });
 
-  Drupal.behaviors.fullWidthEntityBrowserModal = {
-    attach: function(context, settings) {
-      var $child = $(context).children('iframe');
+  $(window).on({
+    'dialog:aftercreate': function (event, dialog, $modal, settings) {
+      var $child = $modal.find('iframe');
       if ($child.length > 0) {
         if ($child.attr('src').indexOf('/entity-browser/modal/browse_content_grid') == 0 ||
           $child.attr('src').indexOf('/entity-browser/modal/browse_files_modal') == 0) {
-          var $modal = $('#drupal-modal');
-          $modal.on('dialogopen', function(event, ui) {
-            // Make the modal full width.
-            $modal.dialog({
-              width: '100%',
-              height: $(window).height(),
-              buttons: [{
-                text: Drupal.t('Select'),
-                click: function(e) {
-                  $child.contents().find('#edit-actions-wrap input').click();
-                  e.preventDefault();
-                  e.stopPropagation();
-                }
-              }]
-            });
-            $modal.parent().addClass('ui-dialog-full-width');
-            $child.css('height', $modal.innerHeight());
+          // Make the modal full width.
+          $modal.dialog({
+            width: '100%',
+            height: $(window).height(),
+            buttons: [{
+              text: Drupal.t('Select'),
+              click: function(e) {
+                $child.contents().find('#edit-actions-wrap input').click();
+                e.preventDefault();
+                e.stopPropagation();
+              }
+            }]
           });
+          $modal.parent().addClass('ui-dialog-full-width');
+          $child.css('height', $modal.innerHeight());
 
           $child.on('load', function() {
             $child.contents().find('#edit-actions-wrap').hide();
@@ -95,9 +92,9 @@
         }
       }
     }
-  };
+  });
 
-   Drupal.behaviors.IPETemplateChanges = {
+  Drupal.behaviors.IPETemplateChanges = {
     attach: function(context) {
       if (typeof Backbone !== 'undefined') {
         Backbone.on('PanelsIPEInitialized', function() {
