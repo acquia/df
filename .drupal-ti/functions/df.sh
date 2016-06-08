@@ -68,6 +68,8 @@ function df_build_distribution() {
 
     # Install third-party libraries.
     df_header Installing third-party libraries
+    
+    ls -la
     php "profiles/df/modules/contrib/composer_manager/scripts/init.php"
     composer drupal-rebuild
     composer update -n --verbose
