@@ -72,6 +72,10 @@ projects[ctools][type] = "module"
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "3.0-alpha26"
 
+projects[diff][type] = "module"
+projects[diff][subdir] = "contrib"
+projects[diff][version] = "1.0-alpha2"
+
 projects[embed][type] = "module"
 projects[embed][subdir] = "contrib"
 projects[embed][version] = "1.0-rc2"
@@ -146,11 +150,9 @@ projects[import][subdir] = "contrib"
 projects[import][download][type] = "git"
 projects[import][download][branch] = "8.x-2.x"
 
-projects[inline_entity_form][version] = "1.x-dev"
 projects[inline_entity_form][type] = "module"
 projects[inline_entity_form][subdir] = "contrib"
-projects[inline_entity_form][download][type] = "git"
-projects[inline_entity_form][download][branch] = "8.x-1.x"
+projects[inline_entity_form][version] = "1.0-alpha6"
 
 projects[layout_plugin][type] = "module"
 projects[layout_plugin][subdir] = "contrib"
@@ -213,20 +215,17 @@ projects[page_manager][version] = "1.0-alpha23"
 ; https://www.drupal.org/node/2503947
 projects[page_manager][patch][2503947] = "https://www.drupal.org/files/issues/page_manager-asort-admin-label-etc-0.patch"
 
-projects[panels][version] = "3.x-dev"
 projects[panels][type] = "module"
 projects[panels][subdir] = "contrib"
-projects[panels][download][type] = "git"
-projects[panels][download][branch] = "8.x-3.x"
+projects[panels][version] = "3.0-beta4"
+; beta4 to 8eba1a0 - quickedit blocks"
+projects[panels][patch][] = "https://www.drupal.org/files/issues/panels--beta4-to-8eba1a0.patch"
 ; Allow other modules to disable the IPE based on custom logic
 ; https://www.drupal.org/node/2667754
 projects[panels][patch][2667754] = "https://www.drupal.org/files/issues/2667754-3.patch"
 ; Editing layouts via IPE affects other users editing content until custom is selected
 ; https://www.drupal.org/node/2701433
 projects[panels][patch][2701433] = "https://www.drupal.org/files/issues/bandaid.patch"
-; IPE's cancel button is easy to mistake for a button to close the tray (rather than throw away all changes).
-; https://www.drupal.org/node/2636490
-projects[panels][patch][2636490] = "https://www.drupal.org/files/issues/panels-ipe-esc-focus-fixes-2636490-9.patch"
 
 projects[panelizer][type] = "module"
 projects[panelizer][subdir] = "contrib"
