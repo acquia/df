@@ -26,7 +26,3 @@ projects[drupal][patch][2695717] = "https://www.drupal.org/files/issues/refreshl
 ; Provide a workaroud to load additional profiles via settings.php
 ; https://www.drupal.org/node/2743197
 projects[drupal][patch][2743197] = "https://www.drupal.org/files/issues/2743197-load_additional_profiles_via_settings-2.patch"
-
-; Views which load the same entity type as entity and non default revision cause fatal error
-; https://www.drupal.org/node/2714989
-projects[drupal][patch][2714989] = "https://www.drupal.org/files/issues/2714989-26.patch"
