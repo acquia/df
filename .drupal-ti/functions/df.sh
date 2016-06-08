@@ -47,31 +47,34 @@ function df_ensure_distribution() {
 # Ensures that the distribution is build.
 #
 function df_build_distribution() {
-	# Ensure we are in the right directory.
-	cd "$DRUPAL_TI_DRUPAL_BASE"
+    # Ensure we are in the right directory.
+    cd "$DRUPAL_TI_DRUPAL_BASE"
 
-	# Build Codebase
-	mkdir -p drupal/profiles
-	mv df drupal/profiles/df
+    # Build Codebase
+    mkdir -p drupal/profiles
+    mv df drupal/profiles/df
+    git clone --branch 8.x-1.x https://github.com/acquia/lightning.git drupal/profiles/lightning
 
-	# Build the current branch.
-	df_header Building Demo Framework from current branch
-	cd drupal
-	drush make --yes profiles/df/drupal-org-core.make --prepare-install
-	drush make --yes profiles/df/drupal-org.make --no-core --contrib-destination=profiles/df
-	drush dl diff
-	mkdir -p sites/default/private/files
-	mkdir -p sites/default/private/temp
+    # Build the current branch.
+    df_header Building Demo Framework from current branch
+    cd drupal
+    drush make --yes profiles/df/drupal-org-core.make --prepare-install
+    drush make --yes profiles/df/drupal-org.make --no-core --contrib-destination=profiles/df
+    drush make --yes profiles/lightning/drupal-org.make --no-core --contrib-destination=profiles/lightning
 
-	# Install third-party libraries.
-	df_header Installing third-party libraries
-	php "profiles/df/modules/contrib/composer_manager/scripts/init.php"
-	composer drupal-rebuild
-	composer update -n --verbose
+    df_header Prepare files directories
+    mkdir -p sites/default/private/files
+    mkdir -p sites/default/private/temp
 
-	# Verify that all the .make files will work on Drupal.org but ignore errors.
-	df_header Verifying .make file
-	drush verify-makefile profiles/df/drupal-org.make || true
+    # Install third-party libraries.
+    df_header Installing third-party libraries
+    php "profiles/df/modules/contrib/composer_manager/scripts/init.php"
+    composer drupal-rebuild
+    composer update -n --verbose
+
+    # Verify that all the .make files will work on Drupal.org but ignore errors.
+    df_header Verifying .make file
+    drush verify-makefile profiles/df/drupal-org.make || true
 }
 
 #
