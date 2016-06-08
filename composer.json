@@ -5,6 +5,9 @@
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "config": {
+        "bin-dir": "bin/"
+    },
     "repositories": [
         {   "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -47,6 +50,14 @@
         }
     ],
     "extra": {
+        "installer-paths": {
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ]
+        },
         "patches": {
             "drupal/drupal": {
                 "Add authentication support for Views | https://www.drupal.org/node/2228141":
@@ -101,7 +112,7 @@
         }
     },
     "require": {
-        "drupal/core": "~8.0",
+        "drupal/core": "8.1.2",
         "drupal/address": "8.1.0-beta3",
         "drupal/addtoany": "8.1.3",
         "drupal/admin_toolbar": "8.1.x-dev",
