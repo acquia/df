@@ -18,18 +18,21 @@ php profiles/df/modules/contrib/composer_manager/scripts/init.php
 composer drupal-update
 composer dumpautoload
 
-# Rename zurb-foundation to zurb_foundation (d.o. packaging does not allow this via make)
-mv profiles/df/themes/contrib/zurb-foundation profiles/df/themes/contrib/zurb_foundation
-
 # Install the profile.
 if [ ! -r sites/default/settings.php ]; then
   echo "No DB connection for docroot: $TARGET. Ensure settings.php is configured before installation."
 else
+  # Add profile discovery for Lightning.
+  chmod 777 sites/default/settings.php
+  cat profiles/df/sub-profile.txt >> sites/default/settings.php
+  # Install Demo Framework.
   drush si df --account-name=admin --account-pass=presales -y
   # Enable optional scenario.
   if [ ! -z "$SCENARIO" ]; then
     drush es $SCENARIO
   fi
+  # Clean our mess up.
+  chmod 544 sites/default/settings.php
 fi
 
 # Create the drushrc.php file and symlink to a writeable location
