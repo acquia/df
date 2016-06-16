@@ -232,6 +232,9 @@ projects[panelizer][version] = "3.0-alpha2"
 ; Explicitly set the Panels IPE URL root when saving in Panelizer
 ; https://www.drupal.org/node/2700597
 projects[panelizer][patch][2700597] = "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch"
+; Quickedit support for fields displayed using the ctools_field block.
+; https://www.drupal.org/node/2693163
+projects[panelizer][patch][2693163] = "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-3.patch"
 
 projects[pathauto][version] = "1.x-dev"
 projects[pathauto][type] = "module"
@@ -285,7 +288,9 @@ projects[workbench_moderation][patch][2685163] = "https://www.drupal.org/files/i
 ;allow for latest revision to be used in views
 ;https://www.drupal.org/node/2702041
 projects[workbench_moderation][patch][2702041] = "https://www.drupal.org/files/issues/2702041-20.patch"
-
+; Add basic support for QuickEdit
+;https://www.drupal.org/node/2749503
+projects[workbench_moderation][patch][2749503] = "https://www.drupal.org/files/issues/workbench_moderation-quickedit-support.patch"
 
 ; Libraries
 libraries[dropzone][destination] = "../../libraries"
