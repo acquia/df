@@ -5,8 +5,8 @@ dependencies:
   config:
     - block_content.type.slideshow
     - field.storage.block_content.field_block
-  module:
-    - entity_reference
+_core:
+  default_config_hash: HUhGAkCiJI_UKuapykzbuc2hBiqXXUeMegIAW0ylJ_Q
 id: block_content.slideshow.field_block
 field_name: field_block
 entity_type: block_content
@@ -21,11 +21,9 @@ settings:
   handler: 'default:block_content'
   handler_settings:
     target_bundles:
-      basic: basic
-      content: content
       hero: hero
-      map: map
-      media: media
     sort:
       field: _none
+    auto_create: false
+    auto_create_bundle: basic
 field_type: entity_reference
