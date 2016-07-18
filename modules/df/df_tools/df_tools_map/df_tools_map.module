@@ -1,0 +1,32 @@
+<?php
+
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function df_tools_map_migration_plugins_alter(&$definitions) {
+  // Set up base path.
+  $path = dirname(__FILE__) . '/data/';
+
+  // Add our block migrations
+  $types = [
+    'map' => [
+      'columns' => [
+        2 => 'Lat',
+        3 => 'Long'
+      ],
+      'fields' => [
+        'field_location' => 'Location'
+      ]
+    ],
+  ];
+  foreach ($types as $type => $info) {
+    $migration = _df_migration_copy($definitions['import_block_base'], 'block', $type, 'block_content', $path);
+    // Add our custom fields.
+    _df_migration_fields($migration, $info['columns'], $info['fields']);
+    // Add our custom plugins.
+    $migration['source']['plugin'] = $type . '_block';
+    // Save the new migration.
+    $definitions[$migration['id']] = $migration;
+  }
+}

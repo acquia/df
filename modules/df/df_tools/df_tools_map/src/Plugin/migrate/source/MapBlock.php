@@ -1,11 +1,6 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\df_tools_blocks\Plugin\migrate\source\MapBlock.
- */
-
-namespace Drupal\df_tools_blocks\Plugin\migrate\source;
+namespace Drupal\df_tools_map\Plugin\migrate\source;
 
 use Drupal\migrate\Row;
 use Drupal\migrate_source_csv\Plugin\migrate\source\CSV;

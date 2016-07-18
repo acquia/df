@@ -1,18 +1,18 @@
-uuid: 7d74f6ab-6d89-40ad-932a-42d690e44f3c
 langcode: en
 status: true
 dependencies:
   module:
+    - address
     - block_content
-    - geolocation
-id: block_content.field_location
-field_name: field_location
+id: block_content.field_map_address
+field_name: field_map_address
 entity_type: block_content
-type: geolocation
+type: address
 settings: {  }
-module: geolocation
+module: address
 locked: false
 cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
+custom_storage: false

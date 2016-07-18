@@ -12,7 +12,7 @@ use Drupal\shortcut\Entity\Shortcut;
  */
 function df_tools_blocks_install() {
   // Enable translation for our block bundles.
-  $entities = ['block_content' => ['content', 'hero', 'map', 'media', 'url']];
+  $entities = ['block_content' => ['content', 'hero', 'media', 'url']];
   df_tools_translation_enable_translation($entities);
   
   if (!\Drupal::service('config.installer')->isSyncing()) {
