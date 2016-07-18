@@ -86,7 +86,7 @@ projects[entity][download][tag] = "8.x-1.0-alpha3"
 projects[entity_browser][type] = "module"
 projects[entity_browser][download][type] = "git"
 projects[entity_browser][download][url] = "https://git.drupal.org/project/entity_browser.git"
-projects[entity_browser][download][tag] = "8.x-1.0-alpha5"
+projects[entity_browser][download][tag] = "8.x-1.0-alpha6"
 projects[entity_browser][patch][0] = "https://www.drupal.org/files/issues/entity_browser-view-selection-render-cache-fix.patch"
 projects[entity_browser][patch][1] = "https://www.drupal.org/files/issues/2738843-4.patch"
 

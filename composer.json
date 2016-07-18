@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "drush/drush": "8.1.2",
+        "drush/drush": "^9.0",
         "drupal/drupal-extension": "^3.1",
         "jakoch/phantomjs-installer": "1.9.8",
         "behat/behat": "^3.0",
@@ -141,6 +141,14 @@
                 "Add support for page manager. | http://drupal.org/node/2509142":
                 "https://www.drupal.org/files/issues/add-page-manager-support-2509142-2.patch"
             },
+            "drupal/dropzonejs": {
+                "Update to support recent WidgetBase.php changes | http://drupal.org/node/2763529":
+                "https://www.drupal.org/files/issues/2763529-21.patch"
+            },
+            "drupal/entity_browser": {
+                "[meta] Utilize multiple Entity Browser patches in DF without conflict | https://www.drupal.org/node/2768835":
+                "https://www.drupal.org/files/issues/alpha6-to-head-2768835-3.patch"
+            },
             "drupal/migrate_plus": {
                 "Update migrate plus migrate URL plugin and SourcePluginExtension to work with 8.1.0 | https://www.drupal.org/node/2714357":
                 "https://www.drupal.org/files/issues/migrate_url_sourcepluginextension-2714357-1.patch"
@@ -181,7 +189,6 @@
     },
     "require": {
         "cweagans/composer-patches": "^1.5.0",
-        "composer/installers": "^1.0.20",
         "desandro/masonry": "3.3.1",
         "desandro/imagesloaded": "3.1.8",
         "drupal/address": "8.1.0-beta3",
@@ -190,7 +197,7 @@
         "drupal/adminimal_theme": "8.1.1",
         "drupal/better_formats": "8.1.x-dev",
         "drupal/block_class": "8.1.x-dev",
-        "drupal/dropzonejs": "8.1.0-alpha1",
+        "drupal/dropzonejs": "8.1.x-dev",
         "drupal/config_devel": "8.1.x-dev",
         "drupal/config_update": "8.1.1",
         "drupal/config_sync": "8.1.x-dev",
@@ -198,7 +205,7 @@
         "drupal/crop": "8.1.0-rc1",
         "drupal/ctools": "8.3.0-alpha26",
         "drupal/embed": "8.1.0-rc3",
-        "drupal/entity_browser": "8.1.0-alpha5",
+        "drupal/entity_browser": "8.1.0-alpha6",
         "drupal/entity_embed": "8.1.0-alpha2",
         "drupal/features": "8.3.0-beta6",
         "drupal/field_group": "8.1.0-rc4",
