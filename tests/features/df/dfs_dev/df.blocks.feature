@@ -1,4 +1,4 @@
-@df @blocks
+@dfs_dev @blocks
 Feature: Demo Framework: Blocks
   In order to demonstrate custom block creation
   As a Solutions Architect
