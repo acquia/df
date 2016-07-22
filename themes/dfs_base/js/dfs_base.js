@@ -68,27 +68,15 @@
     'dialog:aftercreate': function (event, dialog, $modal, settings) {
       var $child = $modal.find('iframe');
       if ($child.length > 0) {
-        if ($child.attr('src').indexOf('/entity-browser/modal/browse_content_grid') == 0 ||
+        if ($child.attr('src').indexOf('/entity-browser/modal/browse_content') == 0 ||
           $child.attr('src').indexOf('/entity-browser/modal/browse_files_modal') == 0) {
           // Make the modal full width.
           $modal.dialog({
             width: '100%',
-            height: $(window).height(),
-            buttons: [{
-              text: Drupal.t('Select'),
-              click: function(e) {
-                $child.contents().find('#edit-actions-wrap input').click();
-                e.preventDefault();
-                e.stopPropagation();
-              }
-            }]
+            height: $(window).height()
           });
           $modal.parent().addClass('ui-dialog-full-width');
           $child.css('height', $modal.innerHeight());
-
-          $child.on('load', function() {
-            $child.contents().find('#edit-actions-wrap').hide();
-          });
         }
       }
     }
