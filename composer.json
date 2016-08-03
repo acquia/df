@@ -145,14 +145,6 @@
                 "EntityFieldDeriver naive about field info, throws PHP warnings | http://drupal.org/node/2672110":
                 "https://www.drupal.org/files/issues/ctools_2672110_16.patch"
             },
-            "drupal/entity_browser": {
-                "[meta] Utilize multiple Entity Browser patches in DF without conflict | https://www.drupal.org/node/2768835":
-                "https://www.drupal.org/files/issues/lightning-to-head-2768835-5.patch"
-            },
-            "drupal/entity_embed": {
-                "[meta] Utilize Entity Embed patches in DF without conflict | https://www.drupal.org/node/2771455":
-                "https://www.drupal.org/files/issues/lightning-to-head-2771455-4.patch"
-            },
             "drupal/lightning": {
                 "Lightning Workflow doesn't check if the 'content' view exists in hook_install | https://www.drupal.org/node/2772949":
                 "https://www.drupal.org/files/issues/add-view-check-2772949-2_0.patch"
@@ -202,19 +194,19 @@
         "drupal/adminimal_theme": "8.1.1",
         "drupal/better_formats": "8.1.x-dev",
         "drupal/block_class": "8.1.x-dev",
-        "drupal/dropzonejs": "8.1.x-dev",
+        "drupal/dropzonejs": "8.1.0-alpha2",
         "drupal/config_devel": "8.1.x-dev",
         "drupal/config_update": "8.1.1",
         "drupal/config_sync": "8.1.x-dev",
-        "drupal/content_browser": "8.1.x-dev",
+        "drupal/content_browser": "8.1.0-alpha1",
         "drupal/crop": "8.1.0",
         "drupal/ctools": "8.3.0-alpha26",
         "drupal/embed": "8.1.0-rc3",
-        "drupal/entity_browser": "8.1.0-alpha6",
-        "drupal/entity_embed": "8.1.0-alpha2",
+        "drupal/entity_browser": "8.1.0-alpha7",
+        "drupal/entity_embed": "8.1.0-alpha3",
         "drupal/features": "8.3.0-beta6",
         "drupal/field_group": "8.1.0-rc4",
-        "drupal/file_browser": "8.1.x-dev",
+        "drupal/file_browser": "8.1.0-alpha1",
         "drupal/file_entity": "8.2.0-beta1",
         "drupal/geocoder": "8.2.0-alpha4",
         "drupal/geofield": "8.1.x-dev",
@@ -228,7 +220,7 @@
         "drupal/layout_plugin": "8.1.0-alpha22",
         "drupal/leaflet": "8.1.x-dev",
         "drupal/libraries": "8.3.x-dev",
-        "drupal/lightning": "dev-8.x-1.x",
+        "drupal/lightning": "^8.1.03",
         "drupal/lite": "8.1.x-dev",
         "drupal/moderate_mmenu": "8.1.x-dev",
         "drupal/migrate_plus": "8.2.0-beta1",
