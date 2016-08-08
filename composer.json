@@ -22,7 +22,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/DevinCarlson/composer-patches"
+            "url": "https://github.com/mortenson/composer-patches"
         },
         {
             "type": "package",
@@ -180,6 +180,14 @@
             "lite": {
                 "CKLite interferes with content insertion | http://drupal.org/node/2482879":
                 "https://www.drupal.org/files/issues/cklite-content-insertion-2482879-4.patch"
+            }
+        },
+        "patches-ignore": {
+            "drupal/lightning": {
+                "drupal/panels": {
+                    "Bandaid patch breaking save after previewing blocks with Panelizer":
+                    "https://www.drupal.org/files/issues/bandaid.patch"
+                }
             }
         }
     },
