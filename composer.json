@@ -99,6 +99,31 @@
                     "reference": "origin/master"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "openannotation/annotator",
+                "version": "1.2.10",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/openannotation/annotator/releases/download/v1.2.10/annotator-full.1.2.10.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/workbench_annotation",
+                "version": "dev-master",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/mortenson/workbench_annotations",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
         }
     ],
     "extra": {
@@ -245,9 +270,11 @@
         "drupal/scheduler": "8.1.0-alpha1",
         "drupal/token": "8.1.0-alpha2",
         "drupal/url_embed": "8.1.x-dev",
+        "drupal/workbench_annotation": "dev-master",
         "drupal/workbench_moderation": "8.1.1",
         "drupal/zurb_foundation": "8.6.x-dev",
         "drupal-composer/drupal-scaffold": "^2.0.1",
+        "openannotation/annotator": "1.2.10",
         "enyo/dropzone": "4.2.0",
         "kenwheeler/slick": "1.5.0",
         "lite": "dev-master#a7df5c6b685385713e8aaf2df3f44c82e3bf823a",
