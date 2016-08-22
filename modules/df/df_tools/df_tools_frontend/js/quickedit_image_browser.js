@@ -54,15 +54,28 @@
                   var data = new FormData();
                   data.append('fid', parts[1]);
 
-                  // Responds to a successful upload..
-                  var handleUploadResponse = function  (response) {
-                    this.handleUploadResponse(response);
-                    // Hide the browse button.
-                    $button.hide();
-                  };
+                  self.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: data,
+                    success: function (response) {
+                      var $el = $(self.fieldModel.get('el'));
+                      // Indicate that the field has changed - this enables the
+                      // "Save" button.
+                      self.fieldModel.set('state', 'changed');
+                      self.fieldModel.get('entity').set('inTempStore', true);
+                      self.removeValidationErrors();
 
-                  // Construct a POST request to our endpoint.
-                  self.ajax('POST', url, data, handleUploadResponse);
+                      // Replace our html with the new image. If we replaced our entire
+                      // element with data.html, we would have to implement complicated logic
+                      // like what's in Drupal.quickedit.AppView.renderUpdatedField.
+                      var $content = $(response.html).closest('[data-quickedit-field-id]').children();
+                      $el.empty().append($content);
+
+                      // Hide the browse button.
+                      $button.hide();
+                    }
+                  });
 
                   // Indicate AJAX.
                   self.renderDropzone('upload loading', Drupal.t('Using new image...'));

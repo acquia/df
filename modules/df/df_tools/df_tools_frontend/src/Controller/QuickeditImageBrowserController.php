@@ -5,7 +5,7 @@ namespace Drupal\df_tools_frontend\Controller;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Render\Element\StatusMessages;
 use Drupal\file\Entity\File;
-use Drupal\quickedit_image\Controller\QuickeditImageController;
+use Drupal\image\Controller\QuickEditImageController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
@@ -13,7 +13,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 /**
  * Returns responses for custom Quickedit Image module routes.
  */
-class QuickeditImageBrowserController extends QuickeditImageController {
+class QuickEditImageBrowserController extends QuickEditImageController {
 
   /**
    * Returns a JSON object representing the existing file, or validation
@@ -76,11 +76,32 @@ class QuickeditImageBrowserController extends QuickeditImageController {
         return new JsonResponse(['errors' => $this->renderer->render($messages), 'main_error' => $this->t('The requested image failed validation.')]);
       }
 
+      $image = $this->imageFactory->get($file->getFileUri());
+
       // Set the value in the Entity to the new file.
-      $this->saveEntity($entity, $field_name, $file);
+      /** @var \Drupal\file\Plugin\Field\FieldType\FileFieldItemList $field_list */
+      $value = $entity->$field_name->getValue();
+      $value[0]['target_id'] = $file->id();
+      $value[0]['width'] = $image->getWidth();
+      $value[0]['height'] = $image->getHeight();
+      $entity->$field_name->setValue($value);
 
       // Render the new image using the correct formatter settings.
-      $output = $this->buildImage($entity, $field_name, $view_mode_id, $langcode);
+      $entity_view_mode_ids = array_keys($this->entityManager()->getViewModes($entity->getEntityTypeId()));
+      if (in_array($view_mode_id, $entity_view_mode_ids)) {
+        $output = $entity->$field_name->view($view_mode_id);
+      }
+      else {
+        // Each part of a custom (non-Entity Display) view mode ID is separated
+        // by a dash; the first part must be the module name.
+        $mode_id_parts = explode('-', $view_mode_id, 2);
+        $module = reset($mode_id_parts);
+        $args = [$entity, $field_name, $view_mode_id, $langcode];
+        $output = $this->moduleHandler()->invoke($module, 'quickedit_render_field', $args);
+      }
+
+      // Save the Entity to tempstore.
+      $this->tempStore->set($entity->uuid(), $entity);
 
       $data = [
         'fid' => $file->id(),

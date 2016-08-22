@@ -24,3 +24,7 @@ projects[drupal][patch][2695717] = "https://www.drupal.org/files/issues/refreshl
 ; Disable body-level scrolling when a dialog is open as a modal
 ; https://www.drupal.org/node/2707291
 projects[drupal][patch][2707291] = "https://www.drupal.org/files/issues/drupal-dialog-modal-disable-scroll-2707291-8.patch"
+
+; Improve the UX of Quick Editing images
+; https://www.drupal.org/node/2421427
+projects[drupal][patch][2421427] = "https://www.drupal.org/files/issues/core-quickeditimage-2421427-102.patch"
