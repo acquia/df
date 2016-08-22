@@ -9,6 +9,4 @@ Feature: DFS TEC: Team page
     Then I should see the heading "Your Team"
     And The element "form.views-exposed-form" should exist
     And I should see "Bob Smith"
-    And I should see "CEO"
     And I should see "bobsmith@tec.com"
-    And I should see "503-687-5309"

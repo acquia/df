@@ -7,12 +7,15 @@ php:
 
 matrix:
   fast_finish: true
+  allow_failures:
+    - env: SCENARIO=none LIGHTNING=HEAD
 
 env:
   matrix:
-    - SCENARIO=none
-    - SCENARIO=dfs_dev
-    - SCENARIO=dfs_tec
+    - SCENARIO=none LIGHTNING=HEAD
+    - SCENARIO=none LIGHTNING=STABLE
+    - SCENARIO=dfs_dev LIGHTNING=STABLE
+    - SCENARIO=dfs_tec LIGHTNING=STABLE
 
 # Cache Composer & Drush directories.
 cache:
@@ -41,6 +44,9 @@ install:
   # our installed versions of Drush, PHPCS, Behat, PhantomJS, etc.
   - export PATH="$TRAVIS_BUILD_DIR/bin:$PATH"
 
+  # Composer install should fail on bad patches.
+  - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
+
   # MySQL Options
   - mysql -e 'SET GLOBAL wait_timeout = 5400;'
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
@@ -50,6 +56,9 @@ install:
   - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
   - phpenv config-add drupal.php.ini
   - phpenv rehash
+
+  # Test Lightning HEAD
+  - if [[ "$LIGHTNING" == HEAD ]]; then composer require "drupal/lightning:dev-8.x-1.x" --no-update; fi
 
   # Let Composer do all the magic!
   - composer install

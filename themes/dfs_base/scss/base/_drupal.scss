@@ -1,1 +1,7 @@
 // Place any Drupal-related quirks here.
+
+// twig is weird and doesnt check to see if regions are empty, so we need to do that here
+
+#sidebar-second:empty, #sidebar-first:empty {
+display:none;
+}

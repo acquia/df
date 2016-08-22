@@ -1,0 +1,25 @@
+uuid: c560158c-e884-4410-9300-c09d90667d46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.employee
+  module:
+    - options
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+id: node.employee.field_location
+field_name: field_location
+entity_type: node
+bundle: employee
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,33 @@
+uuid: 0fe52493-f36e-460a-b500-0dda1f6c5ed5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+id: node.field_location
+field_name: field_location
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: portland
+      label: 'Portland, Oregon'
+    -
+      value: boston
+      label: 'Boston, Massachusetts'
+    -
+      value: sfbay
+      label: 'San Francisco, California'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false

@@ -1,0 +1,93 @@
+uuid: 2a4b4660-f1e9-4920-b854-84c3fa1efcb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.body
+    - field.field.node.employee.field_biography
+    - field.field.node.employee.field_department
+    - field.field.node.employee.field_email
+    - field.field.node.employee.field_employee_name
+    - field.field.node.employee.field_headshot
+    - field.field.node.employee.field_links
+    - field.field.node.employee.field_location
+    - field.field.node.employee.field_phone
+    - field.field.node.employee.field_title
+    - node.type.employee
+  module:
+    - image
+    - link
+    - options
+    - text
+    - user
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  field_biography:
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  field_email:
+    type: email_mailto
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  field_headshot:
+    type: image
+    weight: 5
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+  field_links:
+    type: link
+    weight: 7
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    label: above
+  field_location:
+    type: list_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  field_phone:
+    type: string
+    weight: 4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    label: hidden
+  field_title:
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    label: hidden
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_department: true
+  field_employee_name: true
+  field_job: true
+  langcode: true
+

@@ -1,0 +1,33 @@
+uuid: 0a3cf80c-f48f-4839-a303-3cd93a8bd5ff
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5c8004f5-02f8-4d37-b900-f5c9bffb7c7f'
+  module:
+    - block_class
+    - block_content
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+third_party_settings:
+  block_class:
+    classes: footer-contact
+id: footercontact
+theme: tec
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:5c8004f5-02f8-4d37-b900-f5c9bffb7c7f'
+settings:
+  id: 'block_content:5c8004f5-02f8-4d37-b900-f5c9bffb7c7f'
+  label: 'Footer contact'
+  provider: block_content
+  label_display: '0'
+  cache:
+    max_age: -1
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

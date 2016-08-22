@@ -1,0 +1,23 @@
+uuid: 38f241c3-f4b3-40d4-9300-bc505747bb20
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent_articles
+  content:
+    - 'block_content:basic:62b7b1d3-b8b5-4d4c-8b00-b89bc74b9d95'
+    - 'block_content:slideshow:1381818c-9976-4d7a-804a-74cfc0add2a5'
+  module:
+    - block_content
+    - df_tools_display
+    - views
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+id: dfs_tec_home
+label: 'DFS TEC Home'
+use_admin_theme: null
+path: /dfs-tec-home
+access_logic: and
+access_conditions: {  }

@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "drush/drush": "8.1.2",
+        "drush/drush": "^9.0",
         "drupal/drupal-extension": "^3.1",
         "jakoch/phantomjs-installer": "1.9.8",
         "behat/behat": "^3.0",
@@ -22,7 +22,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/DevinCarlson/composer-patches"
+            "url": "https://github.com/mortenson/composer-patches"
         },
         {
             "type": "package",
@@ -145,6 +145,12 @@
                 "https://www.drupal.org/files/issues/refreshless-alpha3-core-patch-2695717-7.patch",
                 "Disable body-level scrolling when a dialog is open as a modal | https://www.drupal.org/node/2707291":
                 "https://www.drupal.org/files/issues/drupal-dialog-modal-disable-scroll-2707291-8.patch",
+                "Allow profiles to provide a base/parent profile and load them in the correct order | https://www.drupal.org/node/1356276":
+                "https://www.drupal.org/files/issues/make_inherited_install-1356276-157.patch",
+                "ConfigurableLanguageManager::getConfigOverrideLanguage() returns NULL | https://www.drupal.org/node/2684873":
+                "https://www.drupal.org/files/issues/2684873-28.patch",
+                "Random AJAX errors on complicated forms | https://www.drupal.org/node/2750463":
+                "https://gist.githubusercontent.com/mortenson/2dd078b26ba3d13ca5d0c1402537794f/raw/310d9774e35faf3ec221d67cd8797dda8912fe67/emergency-core-hotfix-2750463.patch",
                 "Improve the UX of Quick Editing images | https://www.drupal.org/node/2421427":
                 "https://www.drupal.org/files/issues/core-quickeditimage-2421427-102.patch"
             },
@@ -156,9 +162,13 @@
                 "Add support for page manager. | http://drupal.org/node/2509142":
                 "https://www.drupal.org/files/issues/add-page-manager-support-2509142-2.patch"
             },
-            "drupal/migrate_plus": {
-                "Update migrate plus migrate URL plugin and SourcePluginExtension to work with 8.1.0 | https://www.drupal.org/node/2714357":
-                "https://www.drupal.org/files/issues/migrate_url_sourcepluginextension-2714357-1.patch"
+            "drupal/ctools": {
+                "EntityFieldDeriver naive about field info, throws PHP warnings | http://drupal.org/node/2672110":
+                "https://www.drupal.org/files/issues/ctools_2672110_16.patch"
+            },
+            "drupal/lightning": {
+                "Lightning Workflow doesn't check if the 'content' view exists in hook_install | https://www.drupal.org/node/2772949":
+                "https://www.drupal.org/files/issues/add-view-check-2772949-2_0.patch"
             },
             "drupal/page_manager": {
                 "Rename the core 'Page with blocks' admin_label... | https://www.drupal.org/node/2503947":
@@ -167,10 +177,12 @@
                 "https://www.drupal.org/files/issues/2746149-2.patch"
             },
             "drupal/panelizer": {
-                "Explicitly set the Panels IPE URL root when saving in Panelizer | https://www.drupal.org/node/2700597":
-                "https://www.drupal.org/files/issues/2546204-6.patch",
                 "Quickedit support for fields displayed using the ctools_field block. | https://www.drupal.org/node/2693163":
-                "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-2.patch"
+                "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-2.patch",
+                "Undefined index: #attached | https://www.drupal.org/node/2760051":
+                "https://www.drupal.org/files/issues/check-for-build-array-keys-2760051_1.patch",
+                "Panelizer default patch breaks Quick Edit integration | https://www.drupal.org/node/2664682#comment-11455447":
+                "https://www.drupal.org/files/issues/interdiff-2600634-49-52.txt"
             },
             "drupal/panels": {
                 "IPE's cancel button is easy to mistake for a button to close the tray (rather than throw away all changes). | https://www.drupal.org/node/2636490":
@@ -182,46 +194,54 @@
                 "Add basic support for QuickEdit | https://www.drupal.org/node/2749503":
                 "https://www.drupal.org/files/issues/workbench_moderation-quickedit-support.patch"
             },
-            "drupal/adminimal_theme": {
-                "Fix styling so that admin_toolbar can be used | https://www.drupal.org/node/2680689":
-                "https://www.drupal.org/files/issues/adminimal_theme-fix-styles-for-admin-toolbar-2680689-7.patch"
+            "drupal/content_browser": {
+                "ContentEmbedBlock does not properly protect against recursion | https://www.drupal.org/node/2782217":
+                "https://www.drupal.org/files/issues/content-browser-recursive-embed-protection.patch"
             },
             "lite": {
                 "CKLite interferes with content insertion | http://drupal.org/node/2482879":
                 "https://www.drupal.org/files/issues/cklite-content-insertion-2482879-4.patch"
             }
+        },
+        "patches-ignore": {
+            "drupal/lightning": {
+                "drupal/panels": {
+                    "Bandaid patch breaking save after previewing blocks with Panelizer":
+                    "https://www.drupal.org/files/issues/bandaid.patch"
+                }
+            }
         }
     },
     "require": {
         "cweagans/composer-patches": "^1.5.0",
-        "composer/installers": "^1.0.20",
         "desandro/masonry": "3.3.1",
         "desandro/imagesloaded": "3.1.8",
         "drupal/address": "8.1.0-beta3",
         "drupal/addtoany": "8.1.4",
+        "drupal/adminimal_admin_toolbar": "8.x-1.x-dev",
         "drupal/admin_toolbar": "8.1.x-dev",
         "drupal/adminimal_theme": "8.1.1",
         "drupal/better_formats": "8.1.x-dev",
         "drupal/block_class": "8.1.x-dev",
-        "drupal/dropzonejs": "8.1.0-alpha1",
+        "drupal/dropzonejs": "8.1.0-alpha2",
         "drupal/config_devel": "8.1.x-dev",
         "drupal/config_update": "8.1.1",
         "drupal/config_sync": "8.1.x-dev",
-        "drupal/content_browser": "8.1.x-dev",
-        "drupal/crop": "8.1.0-rc1",
+        "drupal/content_browser": "8.1.0-alpha1",
+        "drupal/crop": "8.1.0",
         "drupal/ctools": "8.3.0-alpha26",
-        "drupal/embed": "8.1.0-rc2",
-        "drupal/entity_browser": "8.1.0-alpha5",
-        "drupal/entity_embed": "8.1.0-alpha1",
-        "drupal/features": "8.3.0-beta5",
+        "drupal/embed": "8.1.0-rc3",
+        "drupal/entity_browser": "8.1.0-alpha7",
+        "drupal/entity_embed": "8.1.0-alpha3",
+        "drupal/features": "8.3.0-beta7",
         "drupal/field_group": "8.1.0-rc4",
-        "drupal/file_browser": "8.1.x-dev",
-        "drupal/file_entity": "8.2.0-beta1",
-        "drupal/geocoder": "8.2.0-alpha3",
+        "drupal/file_browser": "8.1.0-alpha1",
+        "drupal/file_entity": "8.2.0-beta2",
+        "drupal/geocoder": "8.2.0-alpha4",
         "drupal/geofield": "8.1.x-dev",
         "drupal/geophp": "8.1.x-dev",
         "drupal/geolocation": "8.1.x-dev",
-        "drupal/google_analytics": "8.2.0",
+        "drupal/google_analytics": "8.2.1",
         "drupal/image_effects": "8.1.0-alpha2",
         "drupal/image_widget_crop": "8.1.0",
         "drupal/import": "8.2.x-dev",
@@ -229,10 +249,10 @@
         "drupal/layout_plugin": "8.1.0-alpha22",
         "drupal/leaflet": "8.1.x-dev",
         "drupal/libraries": "8.3.x-dev",
-        "drupal/lightning": "dev-8.x-1.x",
+        "drupal/lightning": "8.1.03",
         "drupal/lite": "8.1.x-dev",
         "drupal/moderate_mmenu": "8.1.x-dev",
-        "drupal/migrate_plus": "8.2.0-beta1",
+        "drupal/migrate_plus": "8.2.0-beta2",
         "drupal/migrate_source_csv": "8.2.x-dev",
         "drupal/migrate_tools": "8.2.0-beta1",
         "drupal/oauth": "8.1.x-dev",
@@ -241,12 +261,12 @@
         "drupal/panelizer": "8.3.0-alpha2",
         "drupal/pathauto": "8.1.0-alpha3",
         "drupal/refreshless": "8.1.0-alpha3",
+        "drupal/replicate": "8.1.x-dev",
         "drupal/restui": "8.1.x-dev",
         "drupal/scenarios": "8.2.x-dev",
         "drupal/scheduler": "8.1.0-alpha1",
-        "drupal/token": "8.1.0-alpha2",
+        "drupal/token": "8.1.0-beta1",
         "drupal/url_embed": "8.1.x-dev",
-        "drupal/views_infinite_scroll": "8.1.0",
         "drupal/workbench_moderation": "8.1.1",
         "drupal/zurb_foundation": "8.6.x-dev",
         "drupal-composer/drupal-scaffold": "^2.0.1",

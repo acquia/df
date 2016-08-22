@@ -1,0 +1,39 @@
+uuid: 856de9c4-4226-45ad-b506-6cc8a04273e0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dae3d171-0009-4e45-ad00-feba17b0ccfe'
+  module:
+    - block_class
+    - block_content
+    - system
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+third_party_settings:
+  block_class:
+    classes: 'full-width contact-hero'
+id: contacthero
+theme: tec
+region: header
+weight: 1
+provider: null
+plugin: 'block_content:dae3d171-0009-4e45-ad00-feba17b0ccfe'
+settings:
+  id: 'block_content:dae3d171-0009-4e45-ad00-feba17b0ccfe'
+  label: 'Contact Hero'
+  provider: block_content
+  label_display: '0'
+  cache:
+    max_age: -1
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

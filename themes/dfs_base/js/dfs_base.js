@@ -68,53 +68,18 @@
     'dialog:aftercreate': function (event, dialog, $modal, settings) {
       var $child = $modal.find('iframe');
       if ($child.length > 0) {
-        if ($child.attr('src').indexOf('/entity-browser/modal/browse_content_grid') == 0 ||
+        if ($child.attr('src').indexOf('/entity-browser/modal/browse_content') == 0 ||
           $child.attr('src').indexOf('/entity-browser/modal/browse_files_modal') == 0) {
           // Make the modal full width.
           $modal.dialog({
             width: '100%',
-            height: $(window).height(),
-            buttons: [{
-              text: Drupal.t('Select'),
-              click: function(e) {
-                $child.contents().find('#edit-actions-wrap input').click();
-                e.preventDefault();
-                e.stopPropagation();
-              }
-            }]
+            height: $(window).height()
           });
           $modal.parent().addClass('ui-dialog-full-width');
           $child.css('height', $modal.innerHeight());
-
-          $child.on('load', function() {
-            $child.contents().find('#edit-actions-wrap').hide();
-          });
         }
       }
     }
   });
-
-  Drupal.behaviors.IPETemplateChanges = {
-    attach: function(context) {
-      if (typeof Backbone !== 'undefined') {
-        Backbone.on('PanelsIPEInitialized', function() {
-          Drupal.panels_ipe.app_view.tabsView.tabViews['manage_content'].on('render', function() {
-            var html = $('[data-category="Create Content"]').html();
-            html = html.replace('Create Content', 'Create Display');
-            $('[data-category="Create Content"]').html(html);
-          }, 'fin');
-
-          Drupal.panels_ipe.app_view.tabsView.tabViews['manage_content'].template_form = _.template(
-            '<% if (typeof(plugin_id) !== "undefined") { %>' +
-            '<h4>' + Drupal.t('Configure <strong><%- label %></strong> block') + '</h4>' +
-            '<% } else { %>' +
-            '<h4>' + Drupal.t('Create new <strong><%- label %></strong> display') + '</h4>' +
-            '<% } %>' +
-            '<div class="ipe-block-form ipe-form"><div class="ipe-icon ipe-icon-loading"></div></div>'
-          );
-        });
-      }
-    }
-  };
 
 })(jQuery, Drupal);

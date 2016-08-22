@@ -1,0 +1,59 @@
+uuid: b2e83c89-bb04-4e2c-b300-a31abad23932
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.team_page
+  module:
+    - help
+    - df_tools_display
+    - search
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+id: team_page
+label: 'Team Page Variant'
+variant: landing_display
+variant_settings:
+  selection_conditions: {  }
+  blocks:
+    f8be6e09-8e4e-4d4b-9600-ff2b8090b9f8:
+      id: 'views_block:employees-block_1'
+      label: ''
+      provider: views
+      label_display: 0
+      cache:
+        max_age: '-1'
+      views_label: ''
+      items_per_page: none
+      region: secondary
+      weight: '0'
+      uuid: f8be6e09-8e4e-4d4b-9600-ff2b8090b9f8
+      context_mapping: {  }
+    4826e0c2-497d-4e5f-bc13-19ac16ade09e:
+      id: 'block_content:4b2d068d-8141-4d8d-8b04-4ec78770f9cc'
+      label: 'Employee page text'
+      provider: block_content
+      label_display: 0
+      cache:
+        max_age: '-1'
+      status: true
+      info: ''
+      view_mode: full
+      region: secondary
+      weight: '-10'
+      uuid: 4826e0c2-497d-4e5f-bc13-19ac16ade09e
+      context_mapping: {  }
+  id: landing_display
+  label: ''
+  uuid: b2e83c89-bb04-4e2c-b300-a31abad23932
+  weight: 0
+  selection_logic: and
+  page_title: 'Your Team'
+  page_class: 'team-page'
+page: team_page
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+contexts: {  }

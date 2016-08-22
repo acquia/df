@@ -1,0 +1,27 @@
+uuid: 296994bd-f353-41db-9b00-d7461cf6b68f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.employee
+  module:
+    - text
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+id: node.employee.body
+field_name: body
+entity_type: node
+bundle: employee
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
+

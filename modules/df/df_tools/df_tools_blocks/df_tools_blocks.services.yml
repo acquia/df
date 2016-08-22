@@ -1,0 +1,4 @@
+services:
+  df_tools_blocks.copier:
+    class: Drupal\df_tools_blocks\Copier
+    arguments: ["@replicate.replicator"]

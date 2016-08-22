@@ -4,10 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - block_content.type.content
     - block_content.type.hero
-    - block_content.type.map
-    - block_content.type.media
     - field.storage.block_content.field_nested_block
 id: block_content.hero.field_nested_block
 field_name: field_nested_block
@@ -24,10 +21,8 @@ settings:
   handler_settings:
     target_bundles:
       basic: basic
-      content: content
       hero: hero
       map: map
-      media: media
       slideshow: slideshow
     sort:
       field: _none
