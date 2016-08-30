@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Template for large screen presentation (TV)
+ *
+ */
+#}
+<div {{ attributes.setAttribute('id', settings.css_id).addClass('lf-landscape-layout', settings.css_classes) }}>
+  <div class="row align-center">
+    <div class="columns"> {{ content.meta }} </div>
+  </div>
+  <div class="row lf-landscape-chrome align-center">
+    <div class="large-11 lf-landscape columns">
+      <div class="row align-middle">
+        <div class="small-6 lf-left columns">
+          {{ content.left }}
+        </div>
+        <div class="small-6 lf-right columns">
+          {{ content.right }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /.lf-landscape -->

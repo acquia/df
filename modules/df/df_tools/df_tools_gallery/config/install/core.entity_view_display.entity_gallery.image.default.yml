@@ -1,0 +1,42 @@
+uuid: ba14fa7d-c2e3-49f5-8240-20a7a84a116c
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_gallery.type.image
+    - field.field.entity_gallery.image.entity_gallery_file
+  module:
+    - df_tools_slideshow
+    - user
+id: entity_gallery.image.default
+targetEntityType: entity_gallery
+bundle: image
+mode: default
+content:
+  entity_gallery_file:
+    label: hidden
+    type: entity_reference_slideshow
+    settings:
+      view_mode: default
+      link: false
+      slick:
+        arrows: true
+        draggable: true
+        dots: true
+        accessibility: true
+        adaptiveHeight: false
+        variableWidth: false
+        autoplay: true
+        centerMode: false
+        infinite: true
+        useCSS: true
+        mobileFirst: false
+        rtl: false
+        fade: false
+        pauseOnDotsHover: false
+        vertical: false
+    weight: 101
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true

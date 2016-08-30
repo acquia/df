@@ -79,6 +79,11 @@ projects[entity_browser][version] = "1.0-alpha7"
 projects[entity_embed][type] = "module"
 projects[entity_embed][version] = "1.0-alpha3"
 
+projects[entity_gallery][type] = "module"
+projects[entity_gallery][download][type] = "git"
+projects[entity_gallery][download][branch] = "8.x-1.x"
+projects[entity_gallery][version] = "1.x-dev"
+
 projects[features][type] = "module"
 projects[features][version] = "3.0-beta7"
 
@@ -140,9 +145,7 @@ projects[libraries][download][branch] = "8.x-3.x"
 projects[libraries][version] = "3.x-dev"
 
 projects[lite][type] = "module"
-projects[lite][download][type] = "git"
-projects[lite][download][branch] = "8.x-1.x"
-projects[lite][version] = "1.x-dev"
+projects[lite][version] = "1.1"
 
 projects[media_entity][type] = "module"
 projects[media_entity][version] = "1.3"
