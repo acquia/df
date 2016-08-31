@@ -1,0 +1,12 @@
+quickedit_image.existing:
+  path: '/quickedit_image/{entity_type}/{entity}/{field_name}/{langcode}/{view_mode_id}/existing'
+  defaults:
+    _controller: '\Drupal\df_tools_frontend\Controller\QuickEditImageBrowserController::existing'
+  options:
+    parameters:
+      entity:
+        type: entity:{entity_type}
+  requirements:
+    _permission: 'access in-place editing'
+    _access_quickedit_entity_field: 'TRUE'
+    _method: 'POST'

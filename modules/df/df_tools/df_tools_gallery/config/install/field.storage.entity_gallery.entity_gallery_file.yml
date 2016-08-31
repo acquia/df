@@ -1,0 +1,20 @@
+uuid: 67ea8d0d-8ce7-40c0-86ec-d2c58a5c94cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_gallery
+    - file
+id: entity_gallery.entity_gallery_file
+field_name: entity_gallery_file
+entity_type: entity_gallery
+type: entity_reference
+settings:
+  target_type: file
+module: core
+locked: true
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

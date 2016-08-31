@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function df_tools_frontend_library_info_alter(&$libraries, $extension) {
+  if ($extension == 'image') {
+    $path = drupal_get_path('module', 'df_tools_frontend');
+    $libraries['quickedit.inPlaceEditor.image']['js']['/' . $path . '/js/quickedit_image_browser.js'] = [];
+  }
+}

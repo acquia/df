@@ -7,6 +7,8 @@ php:
 
 matrix:
   fast_finish: true
+  allow_failures:
+    - env: SCENARIO=none LIGHTNING=HEAD
 
 env:
   matrix:
@@ -63,13 +65,13 @@ install:
 
   # Install DF.
   - cd docroot
-  - drush site-install df --yes --account-pass=admin --db-url=mysql://root:@localhost/drupal
+  - travis_wait drush site-install df --yes --account-pass=admin --db-url=mysql://root:@localhost/drupal
   - drush config-set system.performance css.preprocess 0 --yes --format=boolean
   - drush config-set system.performance js.preprocess 0 --yes --format=boolean
   - drush config-set system.logging error_level all --yes
 
   # If a scenario has been specified, enable it.
-  - if [[ "$SCENARIO" != none ]]; then drush es $SCENARIO; fi
+  - if [[ "$SCENARIO" != none ]]; then travis_wait drush es $SCENARIO; fi
   - cd ..
 
 before_script:

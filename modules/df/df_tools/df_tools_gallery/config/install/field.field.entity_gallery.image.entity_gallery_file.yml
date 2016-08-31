@@ -1,0 +1,24 @@
+uuid: 251e002e-f2f8-4d81-9ef0-02459d163e83
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_gallery.type.image
+    - field.storage.entity_gallery.entity_gallery_file
+    - file_entity.type.image
+id: entity_gallery.image.entity_gallery_file
+field_name: entity_gallery_file
+entity_type: entity_gallery
+bundle: image
+label: 'Gallery Items'
+description: 'Reference one or more existing items to add to the gallery.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    target_bundles:
+      image: image
+  handler: 'default:file'
+field_type: entity_reference
