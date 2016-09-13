@@ -107,13 +107,3 @@ function tec_preprocess_page(&$variables) {
     0 => $variables['page']['content']['tabs']
   ];
 }
-
-/**
- * Implements hook_preprocess_html().
- */
-function tec_preprocess_html(&$variables) {
-  if (isset($variables['head_title']['title'])) {
-    $title = $variables['head_title']['title'];
-    $variables['head_title']['title'] = t($title->__toString());
-  }
-}

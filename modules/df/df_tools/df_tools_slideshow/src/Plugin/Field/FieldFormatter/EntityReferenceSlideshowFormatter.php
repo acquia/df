@@ -77,7 +77,6 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
         '#type' => 'checkbox',
         '#title' => $setting,
         '#default_value' => $default_value,
-        '#return_value' => TRUE
       );
     }
 
@@ -107,16 +106,16 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
     // For some reason preprocess_block doesn't get called for entity references to blocks
     foreach (Element::getVisibleChildren($elements) as $i) {
       if (isset ($elements[$i]['#block_content']) && $elements[$i]['#block_content']->bundle() == 'hero') {
-      $wrapper = array(
-        '#prefix' =>'<div class="full-width-inner">',
-        '#suffix' =>'</div>',
-        '#type' => 'container',
-        '#weight' => -1,
-        '#attributes' => array(
-        'class' => array('hero-block-fields row align-center')
-        ),
-        '#children' => array()
-      );
+        $wrapper = array(
+          '#prefix' =>'<div class="full-width-inner">',
+          '#suffix' =>'</div>',
+          '#type' => 'container',
+          '#weight' => -1,
+          '#attributes' => array(
+            'class' => array('hero-block-fields row align-center')
+          ),
+          '#children' => array()
+        );
         foreach (Element::getVisibleChildren($elements[$i]) as $field_name) {
           if ($field_name != 'field_hero_image') {
             $wrapper['#children'][] = $elements[$i][$field_name];
@@ -134,7 +133,7 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
     // Fix slick boolean values so that they're passed to javascript correctly
     $slick = array();
     foreach ($this->getSetting('slick') as $setting => $value) {
-      $slick[$setting] = $value == 0 ? FALSE : TRUE;
+      $slick[$setting] = (bool) $value;
     }
 
     $elements['#attached']['drupalSettings']['DFToolsSlideshow']['slick'] = $slick;

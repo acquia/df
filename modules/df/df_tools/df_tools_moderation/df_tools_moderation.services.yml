@@ -1,0 +1,5 @@
+services:
+  df_tools_moderation.route_subscriber:
+    class: Drupal\df_tools_moderation\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

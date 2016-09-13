@@ -6,9 +6,8 @@ defaults[projects][subdir] = "contrib"
 
 ; Profiles
 projects[lightning][type] = "profile"
-projects[lightning][version] = "1.03"
+projects[lightning][version] = "1.04"
 projects[lightning][subdir] = ""
-projects[lightning][patch][0] = "https://www.drupal.org/files/issues/add-view-check-2772949-2_0.patch"
 
 ; Modules
 projects[acquia_connector][type] = "module"
@@ -73,8 +72,13 @@ projects[embed][version] = "1.0-rc3"
 projects[entity][type] = "module"
 projects[entity][version] = "1.0-alpha3"
 
+projects[entity_block][type] = "module"
+projects[entity_block][download][type] = "git"
+projects[entity_block][download][branch] = "8.x-1.x"
+projects[entity_block][version] = "1.x-dev"
+
 projects[entity_browser][type] = "module"
-projects[entity_browser][version] = "1.0-alpha7"
+projects[entity_browser][version] = "1.0-alpha8"
 
 projects[entity_embed][type] = "module"
 projects[entity_embed][version] = "1.0-alpha3"
@@ -121,7 +125,7 @@ projects[image_effects][type] = "module"
 projects[image_effects][version] = "1.0-alpha2"
 
 projects[image_widget_crop][type] = "module"
-projects[image_widget_crop][version] = "1.0"
+projects[image_widget_crop][version] = "1.3"
 
 projects[import][type] = "module"
 projects[import][download][type] = "git"
@@ -163,7 +167,8 @@ projects[media_entity_twitter][type] = "module"
 projects[media_entity_twitter][version] = "1.2"
 
 projects[metatag][type] = "module"
-projects[metatag][version] = "1.0-beta9"
+projects[metatag][version] = "1.0-beta10"
+projects[metatag][patch][0] = "https://www.drupal.org/files/issues/metatag-deactivate_drupalconsole_services_0.patch"
 
 projects[migrate_plus][type] = "module"
 projects[migrate_plus][version] = "2.0-beta2"
@@ -187,7 +192,7 @@ projects[oauth][download][branch] = "8.x-1.x"
 projects[oauth][version] = "1.x-dev"
 
 projects[page_manager][type] = "module"
-projects[page_manager][version] = "1.0-alpha23"
+projects[page_manager][version] = "1.0-alpha24"
 projects[page_manager][patch][0] = "https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch"
 projects[page_manager][patch][1] = "https://www.drupal.org/files/issues/page_manager-asort-admin-label-etc-0.patch"
 projects[page_manager][patch][2] = "https://www.drupal.org/files/issues/2746149-2.patch"
@@ -197,10 +202,9 @@ projects[panelizer][version] = "3.0-alpha2"
 projects[panelizer][patch][0] = "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch"
 projects[panelizer][patch][1] = "https://www.drupal.org/files/issues/2701349-2.patch"
 projects[panelizer][patch][2] = "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch"
-projects[panelizer][patch][3] = "https://www.drupal.org/files/issues/2664682-49.patch"
-projects[panelizer][patch][4] = "https://www.drupal.org/files/issues/2546204-6.patch"
-projects[panelizer][patch][5] = "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-2.patch"
-projects[panelizer][patch][6] = "https://www.drupal.org/files/issues/check-for-build-array-keys-2760051_1.patch"
+projects[panelizer][patch][3] = "https://www.drupal.org/files/issues/2664682-55.patch"
+projects[panelizer][patch][4] = https://www.drupal.org/files/issues/panelizer-quickedit-2693163-2.patch
+projects[panelizer][patch][5] = https://www.drupal.org/files/issues/check-for-build-array-keys-2760051_1.patch
 
 projects[panels][type] = "module"
 projects[panels][version] = "3.0-beta4"

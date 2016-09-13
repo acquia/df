@@ -22,8 +22,9 @@ cache:
   bundler: true
   apt: true
   directories:
-  - "$HOME/.composer/cache"
-  - "$HOME/.drush/cache"
+    - "$HOME/.composer/cache"
+    - "$HOME/.drush/cache"
+    - "$HOME/.npm"
 
 mysql:
   database: drupal
@@ -42,7 +43,7 @@ before_install:
 install:
   # Add Composer's local bin directory to the PATH so that we will be running
   # our installed versions of Drush, PHPCS, Behat, PhantomJS, etc.
-  - export PATH="$TRAVIS_BUILD_DIR/bin:$PATH"
+  - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
 
   # Composer install should fail on bad patches.
   - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
@@ -60,17 +61,15 @@ install:
   # Test Lightning HEAD
   - if [[ "$LIGHTNING" == HEAD ]]; then composer require "drupal/lightning:dev-8.x-1.x" --no-update; fi
 
-  # Let Composer do all the magic!
-  - composer install
+  # Build the DF code base.
+  - composer global require phing/phing
+  - phing build -Dversion=$VERSION -Dbranch=$TRAVIS_COMMIT
 
   # Install DF.
-  - cd docroot
-  - travis_wait drush site-install df --yes --account-pass=admin --db-url=mysql://root:@localhost/drupal
-  - drush config-set system.performance css.preprocess 0 --yes --format=boolean
-  - drush config-set system.performance js.preprocess 0 --yes --format=boolean
-  - drush config-set system.logging error_level all --yes
+  - phing install -Ddb.database=drupal
 
   # If a scenario has been specified, enable it.
+  - cd docroot
   - if [[ "$SCENARIO" != none ]]; then travis_wait drush es $SCENARIO; fi
   - cd ..
 
@@ -78,14 +77,9 @@ before_script:
   - cd docroot
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - phantomjs --webdriver=4444 > /dev/null &
-  - cd ..
+  - sleep 5
 
 script:
-  - cd docroot/profiles/df
-  - phpcs --standard=$TRAVIS_BUILD_DIR/vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml --ignore=bin,*.css,libraries,modules/contrib . || true
+  - cd ./profiles/df
   - if [[ "$SCENARIO" == none ]]; then behat --strict --tags=df; fi
   - if [[ "$SCENARIO" != none ]]; then behat --strict --tags=$SCENARIO; fi
-
-after_failure:
-  - $TRAVIS_BUILD_DIR/vendor/lakion/mink-debug-extension/travis/tools/upload-textfiles "tests/build/*.log"
-  - $TRAVIS_BUILD_DIR/vendor/lakion/mink-debug-extension/travis/tools/upload-screenshots "tests/build/*.png"
