@@ -15,7 +15,7 @@ Feature: Panelizer
     Then I should see a "views_block:who_s_online-who_s_online_block" block
 
   @javascript
-  Scenario: Quick-editing custom blocks in an IPE layout
+  Scenario: Quick Edit custom blocks in an IPE layout
     Given I am logged in as a user with the administrator role
     And landing_page content:
       | title  | path    | moderation_state |
@@ -28,6 +28,17 @@ Feature: Panelizer
     And I save the layout
     And I reload the page
     Then I should see a "block_content:test--here-be-dragons" block with a "quickedit" contextual link
+
+  @javascript
+  Scenario: Quick Edit a Panelized Node
+    Given I am logged in as a user with the administrator role
+    And landing_page content:
+      | title  | path    | moderation_state |
+      | Foobar | /foobar | draft            |
+    When I visit "/foobar"
+    And I Quick Edit the field title with the text "Foobar!"
+    And I reload the page
+    Then I should see "Foobar!"
 
 # @todo Update when https://github.com/acquia/lightning/pull/145 is closed.
 #  @javascript
