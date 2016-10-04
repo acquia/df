@@ -7,15 +7,12 @@ php:
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - env: SCENARIO=none LIGHTNING=HEAD
 
 env:
   matrix:
     - SCENARIO=none LIGHTNING=HEAD
-    - SCENARIO=none LIGHTNING=STABLE
-    - SCENARIO=dfs_dev LIGHTNING=STABLE
-    - SCENARIO=dfs_tec LIGHTNING=STABLE
+    - SCENARIO=dfs_dev LIGHTNING=HEAD
+    - SCENARIO=dfs_tec LIGHTNING=HEAD
 
 # Cache Composer & Drush directories.
 cache:

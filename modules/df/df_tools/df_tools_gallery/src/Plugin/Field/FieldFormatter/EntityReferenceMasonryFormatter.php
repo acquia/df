@@ -51,6 +51,9 @@ class EntityReferenceMasonryFormatter extends EntityReferenceEntityFormatter {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = parent::viewElements($items, $langcode);
+    foreach ($elements as &$element) {
+      $element['#attributes']['class'][] = 'grid-item';
+    }
     $elements['#attached']['library'][] = 'df_tools_gallery/view';
     $elements['#attributes']['class'][] = 'df-masonry-gallery';
     return $elements;

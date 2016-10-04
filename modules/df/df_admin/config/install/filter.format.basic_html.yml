@@ -15,7 +15,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <del data-changedata data-cid data-last-change-time data-time data-username class="ice-del ice-cts-*"> <ins data-changedata data-cid data-last-change-time data-time data-username class="ice-ins ice-cts-*"> <drupal-entity data-entity-type data-entity-uuid data-view-mode data-entity-embed-display data-entity-embed-settings data-align data-caption data-embed-button> <drupal-url data-embed-url data-url-provider> <p> <h1> <pre>'
+      allowed_html: '<p> <a href hreflang> <em> <strong> <cite> <blockquote cite> <pre> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h1> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <del data-* class="ice-del ice-cts-*"> <ins data-* class="ice-ins ice-cts-*"> <drupal-url data-*> <drupal-entity data-*>'
       filter_html_help: true
       filter_html_nofollow: false
   url_embed:

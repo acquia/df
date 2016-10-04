@@ -145,7 +145,7 @@ projects[libraries][download][branch] = "8.x-3.x"
 projects[libraries][version] = "3.x-dev"
 
 projects[lite][type] = "module"
-projects[lite][version] = "1.2"
+projects[lite][version] = "1.3"
 
 projects[media_entity][type] = "module"
 projects[media_entity][version] = "1.5"
@@ -196,16 +196,15 @@ projects[panelizer][patch][0] = "https://www.drupal.org/files/issues/panelizer--
 projects[panelizer][patch][1] = "https://www.drupal.org/files/issues/2701349-2.patch"
 projects[panelizer][patch][2] = "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch"
 projects[panelizer][patch][3] = "https://www.drupal.org/files/issues/2664682-55.patch"
-projects[panelizer][patch][4] = https://www.drupal.org/files/issues/panelizer-quickedit-2693163-2.patch
-projects[panelizer][patch][5] = https://www.drupal.org/files/issues/check-for-build-array-keys-2760051_1.patch
+projects[panelizer][patch][4] = "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
+projects[panelizer][patch][5] = "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-3_0.patch"
+projects[panelizer][patch][6] = "https://www.drupal.org/files/issues/check-for-build-array-keys-2760051_1.patch"
 
 projects[panels][type] = "module"
 projects[panels][version] = "3.0-beta4"
-projects[panels][patch][0] = "https://www.drupal.org/files/issues/panels--beta4-4c4a3a7--2747739-17--binary.patch"
+projects[panels][patch][0] = "https://www.drupal.org/files/issues/panels-beta4-75131285.patch"
 projects[panels][patch][1] = "https://www.drupal.org/files/issues/2667754-3.patch"
-projects[panels][patch][2] = "https://www.drupal.org/files/issues/bandaid.patch"
-projects[panels][patch][3] = "https://www.drupal.org/files/issues/2697587-48.patch"
-projects[panels][patch][4] = "https://www.drupal.org/files/issues/panels-ipe-esc-focus-fixes-2636490-9.patch"
+projects[panels][patch][2] = "https://www.drupal.org/files/issues/2793801-9.patch"
 
 projects[pathauto][type] = "module"
 projects[pathauto][version] = "1.0-beta1"
@@ -252,8 +251,9 @@ projects[views_infinite_scroll][version] = "1.2"
 projects[workbench_moderation][type] = "module"
 projects[workbench_moderation][version] = "1.1"
 projects[workbench_moderation][patch][0] = "https://www.drupal.org/files/issues/2668006-2.patch"
-projects[workbench_moderation][patch][1] = "https://www.drupal.org/files/issues/2685163-21.patch"
-projects[workbench_moderation][patch][2] = "https://www.drupal.org/files/issues/workbench_moderation-quickedit-support.patch"
+projects[workbench_moderation][patch][1] = "https://www.drupal.org/files/issues/workbench_moderation-invalid_service_definition.patch"
+projects[workbench_moderation][patch][2] = "https://www.drupal.org/files/issues/2685163-21.patch"
+projects[workbench_moderation][patch][3] = "https://www.drupal.org/files/issues/workbench_moderation-quickedit-support-2749503-4.patch"
 
 ; Themes
 projects[adminimal_theme][type] = "theme"

@@ -14,8 +14,10 @@
       var container = $('.df-masonry-gallery');
       container.imagesLoaded(function() {
         container.masonry({
-          columnWidth: 220,
-          itemSelector: '.df-masonry-gallery > .field-items > .field-item'
+          columnWidth: '.df-masonry-gallery .grid-item',
+          itemSelector: '.df-masonry-gallery .grid-item',
+          percentPosition: true,
+          gutter: 20
         });
       });
     }
