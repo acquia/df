@@ -429,7 +429,6 @@ class DFSubContext extends DrupalSubContextBase implements DrupalSubContextInter
     $this->getSession()->switchToIFrame();
     $this->waitForJsCondition("jQuery('.ui-dialog').length == 0");
     $this->minkContext->iWaitForAjaxToFinish();
-    $this->takeScreenshot('test');
 
     // Finish submitting the Block Plugin form.
     $this->getSession()->switchToIFrame();
