@@ -431,7 +431,6 @@ class DFSubContext extends DrupalSubContextBase implements DrupalSubContextInter
     $this->minkContext->iWaitForAjaxToFinish();
 
     // Finish submitting the Block Plugin form.
-    $this->getSession()->switchToIFrame();
     $this->getSession()->getDriver()->selectOption('//*[@name="settings[region]"]', $region);
     $this->clickElementBySelector('[value="Add"]');
     $this->minkContext->iWaitForAjaxToFinish();
