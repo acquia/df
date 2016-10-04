@@ -388,6 +388,57 @@ class DFSubContext extends DrupalSubContextBase implements DrupalSubContextInter
   }
 
   /**
+   * Embeds a piece of Content on the current page using Panels IPE.
+   *
+   * @param string $title
+   *   The exact title of the Content.
+   * @param string $region
+   *   The region to place the Block in.
+   *
+   * @throws \Behat\Mink\Exception\ElementNotFoundException
+   *
+   * @When I embed the content :title in the :region region
+   */
+  public function embedIPEContent($title, $region) {
+    $this->maximize();
+    // Open the Content Embed form.
+    $this->clickElementBySelector('a[title="Manage Content"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->clickElementBySelector('a[data-category="Create Display"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->clickElementBySelector('a[data-plugin-id="content_embed"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+
+    // Wait for the modal to load.
+    $this->waitForJsCondition("jQuery('.ui-dialog .views-exposed-form:visible').length > 0");
+
+    // Switch to the iFrame context.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_browse_content');
+
+    // Search for content matching the passed in title and select the result.
+    $this->getSession()->getDriver()->setValue('//*[@id="edit-title"]', $title);
+    $this->getSession()->getDriver()->click('//*[@id="edit-submit-content-browser"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->getSession()->getDriver()->executeScript('jQuery(".views-field-entity-browser-select").first().click()');
+
+    // Submit the entity browser form.
+    $this->getSession()->getDriver()->executeScript('jQuery(".is-entity-browser-submit").click()');
+    $this->minkContext->iWaitForAjaxToFinish();
+
+    // Wait for the modal to close.
+    $this->getSession()->switchToIFrame();
+    $this->waitForJsCondition("jQuery('.ui-dialog').length == 0");
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->takeScreenshot('test');
+
+    // Finish submitting the Block Plugin form.
+    $this->getSession()->switchToIFrame();
+    $this->getSession()->getDriver()->selectOption('//*[@name="settings[region]"]', $region);
+    $this->clickElementBySelector('[value="Add"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+  }
+
+  /**
    * Waits for an arbitrary Javascript condition to return TRUE.
    *
    * @param string $condition

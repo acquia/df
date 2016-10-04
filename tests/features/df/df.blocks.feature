@@ -1,8 +1,8 @@
 @df @blocks
 Feature: Demo Framework: Blocks
-  In order to demonstrate custom block creation
+  In order to demonstrate block placement and creation
   As a Solutions Architect
-  I need to be able to use Content Block Types in Demo Framework
+  I need to be able to use Content Blocks and Block Plugins in Demo Framework
 
   @api
   Scenario: Hero workflow
@@ -44,3 +44,16 @@ Feature: Demo Framework: Blocks
     Then I should see "Homepage Map"
     And I should see "Address"
     And I should see "1120 SW 5th Ave"
+
+  @api @javascript
+  Scenario: Content Embed
+    Given I am logged in as a user with the "administrator" role
+    And article content:
+      | title      | moderation_state |
+      | My Content | published        |
+    And landing_page content:
+      | title  | path    | moderation_state |
+      | Foobar | /foobar | draft            |
+    When I go to "/foobar"
+    And I embed the content "My Content" in the "middle" region
+    Then I should see "My Content"
