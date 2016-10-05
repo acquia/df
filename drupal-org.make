@@ -6,7 +6,7 @@ defaults[projects][subdir] = "contrib"
 
 ; Profiles
 projects[lightning][type] = "profile"
-projects[lightning][version] = "1.05"
+projects[lightning][version] = "1.06"
 projects[lightning][subdir] = ""
 
 ; Modules
@@ -229,6 +229,7 @@ projects[scenarios][version] = "2.x-dev"
 projects[scheduled_updates][type] = "module"
 projects[scheduled_updates][version] = "1.0-alpha5"
 projects[scheduled_updates][patch][0] = "https://www.drupal.org/files/issues/schedule_updates-save_type-2674874-2.patch"
+projects[scheduled_updates][patch][1] = "https://www.drupal.org/files/issues/scheduled_updates-no-canonical-link-for-update-type.patch"
 
 projects[scheduler][type] = "module"
 projects[scheduler][version] = "1.0-alpha2"
