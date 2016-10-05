@@ -231,6 +231,14 @@
             }
         }
     },
+    "patches-ignore": {
+        "drupal/lightning": {
+            "drupal/panelizer": {
+                "Bandaid patch breaking save after previewing blocks with Panelizer":
+                "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
+            },
+        }
+    },
     "require": {
         "cweagans/composer-patches": "^1.5.0",
         "desandro/masonry": "3.3.1",
