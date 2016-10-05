@@ -197,7 +197,7 @@
             },
             "drupal/panelizer": {
                 "Quickedit support for fields displayed using the ctools_field block. | https://www.drupal.org/node/2693163":
-                "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-3_0.patch",
+                "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-10.patch",
                 "Undefined index: #attached | https://www.drupal.org/node/2760051":
                 "https://www.drupal.org/files/issues/check-for-build-array-keys-2760051_1.patch"
             },
@@ -229,13 +229,13 @@
                 "CKLite interferes with content insertion | http://drupal.org/node/2482879":
                 "https://www.drupal.org/files/issues/cklite-content-insertion-2482879-4.patch"
             }
-        }
-    },
-    "patches-ignore": {
-        "drupal/lightning": {
-            "drupal/panelizer": {
-                "Bandaid patch breaking save after previewing blocks with Panelizer":
-                "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
+        },
+        "patches-ignore": {
+            "drupal/lightning": {
+                "drupal/panelizer": {
+                    "Bandaid patch breaking save after previewing blocks with Panelizer":
+                    "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
+                }
             }
         }
     },
