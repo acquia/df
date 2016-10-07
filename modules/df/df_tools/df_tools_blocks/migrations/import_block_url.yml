@@ -3,7 +3,7 @@ id: import_block_url
 label: 'Import block:block_content:url'
 source:
     plugin: url_block
-    path: /Users/brant.wynn/Sites/demo.local/docroot/profiles/df/modules/df/df_tools/df_tools_blocks/data/block.block_content.url.csv
+    path: ../data/block.block_content.url.csv
     header_row_count: 1
     keys: [UUID]
     csvColumns: { 2: URL }
@@ -14,5 +14,4 @@ process:
     uuid: UUID
     info: Info
     field_url: URL
-_discovered_file_path: /Users/brant.wynn/Sites/demo.local/docroot/profiles/df/modules/contrib/import/migrations/import_block_base.yml
 provider: import
