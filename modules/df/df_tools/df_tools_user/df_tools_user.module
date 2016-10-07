@@ -9,40 +9,11 @@
  * Implements hook_migration_plugins_alter().
  */
 function df_tools_user_migration_plugins_alter(&$definitions) {
-  // Set up base path.
-  $path = dirname(__FILE__) . '/data/';
-
-  // Demo user picture file migration based on import_file_image.
-  $label = 'demo_user_pictures';
-  $migration = $definitions['import_file_image'];
-  $migration['label'] = 'Import file:' . $label;
-  $migration['id'] = 'import_file_' . $label;
-  // Point source path to local CSV file.
-  $migration['source']['path'] = $path . 'df_tools_user.users.csv';
-  // User picture file source plugin.
-  $migration['source']['plugin'] = 'user_picture_file';
-  // Set key for user picture.
-  $migration['source']['keys'] = array('Picture');
-  $migration['source']['columns'] = array(4 => 'Picture');
-  // Set user picture filepath for processing.
-  $migration['process']['filepath'] = 'Picture';
-  $definitions[$migration['id']] = $migration;
-
-  // Add a demo users import using based on import_user_user.
-  $label = 'demo_users';
-  $migration = $definitions['import_user_user'];
-  $migration['label'] = 'Import user:' . $label;
-  $migration['id'] = 'import_user_' . $label;
-  // Point source path to local CSV file.
-  $migration['source']['plugin'] = 'user_with_roles';
-  $migration['source']['path'] = $path . 'df_tools_user.users.csv';
-  // Set user pictures.
-  $migration['process']['user_picture']['migration'] = 'import_file_demo_user_pictures';
-  $migration['process']['field_first_name'] = 'First';
-  $migration['process']['field_last_name'] = 'Last';
-  // Set up proper dependencies for image files.
-  $dependencies = array('import_file_demo_user_pictures');
-  $migration['migration_dependencies'] = ['required' => $dependencies];
-  // Save the new migration.
-  $definitions[$migration['id']] = $migration;
+  $migrations = [
+    'import_file_demo_user_pictures',
+    'import_user_demo_users'
+  ];
+  foreach ($migrations as $id) {
+    $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
+  }
 }

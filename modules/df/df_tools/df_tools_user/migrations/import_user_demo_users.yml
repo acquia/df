@@ -1,0 +1,13 @@
+class: \Drupal\migrate\Plugin\Migration
+label: 'Import user:demo_users'
+id: import_user_demo_users
+source:
+    plugin: user_with_roles
+    path: ../data/df_tools_user.users.csv
+process:
+    user_picture: { migration: import_file_demo_user_pictures }
+    field_first_name: First
+    field_last_name: Last
+migration_dependencies:
+    required: [import_file_demo_user_pictures]
+    optional: {  }

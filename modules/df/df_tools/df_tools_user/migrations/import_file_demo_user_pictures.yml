@@ -1,0 +1,10 @@
+class: \Drupal\migrate\Plugin\Migration
+label: 'Import file:demo_user_pictures'
+id: import_file_demo_user_pictures
+source:
+    path: ../data/df_tools_user.users.csv
+    plugin: user_picture_file
+    keys: [Picture]
+    columns: { 4: Picture }
+process:
+    filepath: Picture
