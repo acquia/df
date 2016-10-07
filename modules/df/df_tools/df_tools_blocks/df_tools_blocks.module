@@ -178,46 +178,11 @@ function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, F
  * Implements hook_migration_plugins_alter().
  */
 function df_tools_blocks_migration_plugins_alter(&$definitions) {
-  // Set up base path.
-  $path = dirname(__FILE__) . '/data/';
-
-  // Add our block migrations
-  $types = [
-    'hero' => [
-      'columns' => [
-        2 => 'First Line',
-        3 => 'Second Line',
-        4 => 'Link',
-        5 => 'Link Title',
-        6 => 'Image',
-        7 => 'Nested Blocks',
-      ],
-      'fields' => [
-        'field_first_line/value' => 'First Line',
-        'field_second_line/value' => 'Second Line',
-        'field_hero_link/uri' => 'Link',
-        'field_hero_link/title' => 'Link Title',
-        'field_hero_image' => 'Image',
-        'field_nested_block' => 'Nested Blocks',
-      ]
-    ],
-    'url' => [
-      'columns' => [
-        2 => 'URL'
-      ],
-      'fields' => [
-        'field_url' => 'URL'
-      ]
-    ],
-  ];
-  foreach ($types as $type => $info) {
-    $migration = _df_migration_copy($definitions['import_block_base'], 'block', $type, 'block_content', $path);
-    // Add our custom fields.
-    _df_migration_fields($migration, $info['columns'], $info['fields']);
-    // Add our custom plugins.
-    $migration['source']['plugin'] = $type . '_block';
-    // Save the new migration.
-    $definitions[$migration['id']] = $migration;
+  // Set up the correct path for the CSV file in import_block_map.
+  $types = ['hero', 'url'];
+  foreach ($types as $type) {
+    $id = 'import_block_' . $type;
+    $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
   }
 }
 
