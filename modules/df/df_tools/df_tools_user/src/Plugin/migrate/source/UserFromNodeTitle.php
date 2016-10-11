@@ -21,11 +21,12 @@ class UserFromNodeTitle extends CSV {
     if ($value = $row->getSourceProperty('Title')) {
       $strings = explode(' ', $value);
       $first_name = $strings[0];
-      $last_name = $strings[1]; 
+      $last_name = $strings[1];
+      $password = \Drupal::service('password')->hash('password');
       $row->setSourceProperty('Name', $first_name . $last_name);
       $row->setSourceProperty('First', $first_name);
       $row->setSourceProperty('Last', $last_name);
-      $row->setSourceProperty('Pass', 'password');
+      $row->setSourceProperty('Pass', $password);
       $row->setSourceProperty('Status', 1);
       $row->setSourceProperty('Mail', $first_name . $last_name . '@example.com');
     }

@@ -10,7 +10,7 @@ Feature: Demo Framework: Landing page
       When I go to "/node/add/landing_page"
         Then I fill in "edit-title-0-value" with "Test Landing Page"
           And I maximize the window
-          And I press "Save and Create New Draft"
+          And I press "Save"
           Then I should see "Test Landing Page"
           And I should see "Change Layout"
           And I should see "Manage Content"

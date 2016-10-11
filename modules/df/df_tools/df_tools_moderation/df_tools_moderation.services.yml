@@ -1,0 +1,11 @@
+services:
+  df_tools_moderation.route_subscriber:
+    class: Drupal\df_tools_moderation\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  df_tools_moderation.latest_subscriber:
+    class: Drupal\df_tools_moderation\EventSubscriber\LatestCheckSubscriber
+    arguments: ["@cache_tags.invalidator", "@theme.manager"]
+    tags:
+      - { name: event_subscriber }
+

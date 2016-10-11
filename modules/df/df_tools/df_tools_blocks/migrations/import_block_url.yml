@@ -1,0 +1,17 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_block_url
+label: 'Import block:block_content:url'
+source:
+    plugin: url_block
+    path: ../data/block.block_content.url.csv
+    header_row_count: 1
+    keys: [UUID]
+    csvColumns: { 2: URL }
+destination:
+    plugin: 'entity:block_content'
+process:
+    type: { plugin: default_value, default_value: url }
+    uuid: UUID
+    info: Info
+    field_url: URL
+provider: import

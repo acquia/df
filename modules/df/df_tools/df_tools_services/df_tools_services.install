@@ -15,6 +15,10 @@ function df_tools_services_install() {
     'restful get entity:node'
   ));
 
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array(
+    'restful get entity:node'
+  ));
+
   // Change Contact mail rate limit to avoid breaking demos
   \Drupal::configFactory()->getEditable('contact.settings')->set('flood.limit', '20')->save();
 }

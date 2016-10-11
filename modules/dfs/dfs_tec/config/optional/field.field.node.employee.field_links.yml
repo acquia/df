@@ -1,0 +1,27 @@
+uuid: 017af246-1363-4443-9104-4f8b83fe578e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.employee
+  module:
+    - link
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+id: node.employee.field_links
+field_name: field_links
+entity_type: node
+bundle: employee
+label: Links
+description: 'Links related to this employee.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

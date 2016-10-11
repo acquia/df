@@ -1,0 +1,33 @@
+uuid: efe0d5b8-4cab-444a-8400-d709659c78d9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8b162d62-670e-4857-9b02-2c9191e39585'
+  module:
+    - block_class
+    - block_content
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+third_party_settings:
+  block_class:
+    classes: ''
+id: servicestext
+theme: tec
+region: '-1'
+weight: null
+provider: null
+plugin: 'block_content:8b162d62-670e-4857-9b02-2c9191e39585'
+settings:
+  id: 'block_content:8b162d62-670e-4857-9b02-2c9191e39585'
+  label: 'Services Text'
+  provider: block_content
+  label_display: '0'
+  cache:
+    max_age: -1
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }

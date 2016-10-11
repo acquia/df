@@ -93,4 +93,13 @@ class LandingDisplayVariant extends PageBlockDisplayVariant {
         'page_class' => '',
     ];
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function renderPageTitle($page_title) {
+    $markup = parent::renderPageTitle($page_title);
+    return $this->t((string) $markup);
+  }
+
 }

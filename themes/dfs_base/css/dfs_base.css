@@ -1559,7 +1559,7 @@ select {
   .form-error.is-visible {
     display: block; }
 
-.button, .ipe-form input[type="submit"] {
+.button {
   display: inline-block;
   text-align: center;
   line-height: 1;
@@ -1574,97 +1574,97 @@ select {
   font-size: 0.9rem;
   background-color: #2199e8;
   color: #fff; }
-  [data-whatinput='mouse'] .button, [data-whatinput='mouse'] .ipe-form input[type="submit"], .ipe-form [data-whatinput='mouse'] input[type="submit"] {
+  [data-whatinput='mouse'] .button {
     outline: 0; }
-  .button:hover, .ipe-form input[type="submit"]:hover, .button:focus, .ipe-form input[type="submit"]:focus {
+  .button:hover, .button:focus {
     background-color: #1583cc;
     color: #fff; }
-  .button.tiny, .ipe-form input.tiny[type="submit"] {
+  .button.tiny {
     font-size: 0.6rem; }
-  .button.small, .ipe-form input.small[type="submit"] {
+  .button.small {
     font-size: 0.75rem; }
-  .button.large, .ipe-form input.large[type="submit"] {
+  .button.large {
     font-size: 1.25rem; }
-  .button.expanded, .ipe-form input.expanded[type="submit"] {
+  .button.expanded {
     display: block;
     width: 100%;
     margin-left: 0;
     margin-right: 0; }
-  .button.primary, .ipe-form input.primary[type="submit"] {
+  .button.primary {
     background-color: #2199e8;
     color: #fff; }
-    .button.primary:hover, .ipe-form input.primary[type="submit"]:hover, .button.primary:focus, .ipe-form input.primary[type="submit"]:focus {
+    .button.primary:hover, .button.primary:focus {
       background-color: #147cc0;
       color: #fff; }
-  .button.secondary, .ipe-form input.secondary[type="submit"] {
+  .button.secondary {
     background-color: #777;
     color: #fff; }
-    .button.secondary:hover, .ipe-form input.secondary[type="submit"]:hover, .button.secondary:focus, .ipe-form input.secondary[type="submit"]:focus {
+    .button.secondary:hover, .button.secondary:focus {
       background-color: #5f5f5f;
       color: #fff; }
-  .button.success, .ipe-form input.success[type="submit"] {
+  .button.success {
     background-color: #3adb76;
     color: #fff; }
-    .button.success:hover, .ipe-form input.success[type="submit"]:hover, .button.success:focus, .ipe-form input.success[type="submit"]:focus {
+    .button.success:hover, .button.success:focus {
       background-color: #22bb5b;
       color: #fff; }
-  .button.warning, .ipe-form input.warning[type="submit"] {
+  .button.warning {
     background-color: #ffae00;
     color: #fff; }
-    .button.warning:hover, .ipe-form input.warning[type="submit"]:hover, .button.warning:focus, .ipe-form input.warning[type="submit"]:focus {
+    .button.warning:hover, .button.warning:focus {
       background-color: #cc8b00;
       color: #fff; }
-  .button.alert, .ipe-form input.alert[type="submit"] {
+  .button.alert {
     background-color: #ec5840;
     color: #fff; }
-    .button.alert:hover, .ipe-form input.alert[type="submit"]:hover, .button.alert:focus, .ipe-form input.alert[type="submit"]:focus {
+    .button.alert:hover, .button.alert:focus {
       background-color: #da3116;
       color: #fff; }
-  .button.hollow, .ipe-form input.hollow[type="submit"] {
+  .button.hollow {
     border: 1px solid #2199e8;
     color: #2199e8; }
-    .button.hollow, .ipe-form input.hollow[type="submit"], .button.hollow:hover, .ipe-form input.hollow[type="submit"]:hover, .button.hollow:focus, .ipe-form input.hollow[type="submit"]:focus {
+    .button.hollow, .button.hollow:hover, .button.hollow:focus {
       background-color: transparent; }
-    .button.hollow:hover, .ipe-form input.hollow[type="submit"]:hover, .button.hollow:focus, .ipe-form input.hollow[type="submit"]:focus {
+    .button.hollow:hover, .button.hollow:focus {
       border-color: #0c4d78;
       color: #0c4d78; }
-    .button.hollow.primary, .ipe-form input.hollow.primary[type="submit"] {
+    .button.hollow.primary {
       border: 1px solid #2199e8;
       color: #2199e8; }
-      .button.hollow.primary:hover, .ipe-form input.hollow.primary[type="submit"]:hover, .button.hollow.primary:focus, .ipe-form input.hollow.primary[type="submit"]:focus {
+      .button.hollow.primary:hover, .button.hollow.primary:focus {
         border-color: #0c4d78;
         color: #0c4d78; }
-    .button.hollow.secondary, .ipe-form input.hollow.secondary[type="submit"] {
+    .button.hollow.secondary {
       border: 1px solid #777;
       color: #777; }
-      .button.hollow.secondary:hover, .ipe-form input.hollow.secondary[type="submit"]:hover, .button.hollow.secondary:focus, .ipe-form input.hollow.secondary[type="submit"]:focus {
+      .button.hollow.secondary:hover, .button.hollow.secondary:focus {
         border-color: #3c3c3c;
         color: #3c3c3c; }
-    .button.hollow.success, .ipe-form input.hollow.success[type="submit"] {
+    .button.hollow.success {
       border: 1px solid #3adb76;
       color: #3adb76; }
-      .button.hollow.success:hover, .ipe-form input.hollow.success[type="submit"]:hover, .button.hollow.success:focus, .ipe-form input.hollow.success[type="submit"]:focus {
+      .button.hollow.success:hover, .button.hollow.success:focus {
         border-color: #157539;
         color: #157539; }
-    .button.hollow.warning, .ipe-form input.hollow.warning[type="submit"] {
+    .button.hollow.warning {
       border: 1px solid #ffae00;
       color: #ffae00; }
-      .button.hollow.warning:hover, .ipe-form input.hollow.warning[type="submit"]:hover, .button.hollow.warning:focus, .ipe-form input.hollow.warning[type="submit"]:focus {
+      .button.hollow.warning:hover, .button.hollow.warning:focus {
         border-color: #805700;
         color: #805700; }
-    .button.hollow.alert, .ipe-form input.hollow.alert[type="submit"] {
+    .button.hollow.alert {
       border: 1px solid #ec5840;
       color: #ec5840; }
-      .button.hollow.alert:hover, .ipe-form input.hollow.alert[type="submit"]:hover, .button.hollow.alert:focus, .ipe-form input.hollow.alert[type="submit"]:focus {
+      .button.hollow.alert:hover, .button.hollow.alert:focus {
         border-color: #881f0e;
         color: #881f0e; }
-  .button.disabled, .ipe-form input.disabled[type="submit"], .button[disabled], .ipe-form input[disabled][type="submit"] {
+  .button.disabled, .button[disabled] {
     opacity: 0.25;
     cursor: not-allowed; }
-    .button.disabled:hover, .ipe-form input.disabled[type="submit"]:hover, .button.disabled:focus, .ipe-form input.disabled[type="submit"]:focus, .button[disabled]:hover, .ipe-form input[disabled][type="submit"]:hover, .button[disabled]:focus, .ipe-form input[disabled][type="submit"]:focus {
+    .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #2199e8;
       color: #fff; }
-  .button.dropdown::after, .ipe-form input.dropdown[type="submit"]::after {
+  .button.dropdown::after {
     content: '';
     display: block;
     width: 0;
@@ -1678,7 +1678,7 @@ select {
     float: right;
     margin-left: 1em;
     display: inline-block; }
-  .button.arrow-only::after, .ipe-form input.arrow-only[type="submit"]::after {
+  .button.arrow-only::after {
     margin-left: 0;
     float: none;
     top: -0.1em; }
@@ -1821,76 +1821,76 @@ select {
         order: 1; }
   .button-group::after {
     clear: both; }
-  .button-group .button, .button-group .ipe-form input[type="submit"], .ipe-form .button-group input[type="submit"] {
+  .button-group .button {
     margin: 0;
     margin-right: 1px;
     margin-bottom: 1px;
     font-size: 0.9rem;
     -ms-flex: 0 0 auto;
         flex: 0 0 auto; }
-    .button-group .button:last-child, .button-group .ipe-form input[type="submit"]:last-child, .ipe-form .button-group input[type="submit"]:last-child {
+    .button-group .button:last-child {
       margin-right: 0; }
-  .button-group.tiny .button, .button-group.tiny .ipe-form input[type="submit"], .ipe-form .button-group.tiny input[type="submit"] {
+  .button-group.tiny .button {
     font-size: 0.6rem; }
-  .button-group.small .button, .button-group.small .ipe-form input[type="submit"], .ipe-form .button-group.small input[type="submit"] {
+  .button-group.small .button {
     font-size: 0.75rem; }
-  .button-group.large .button, .button-group.large .ipe-form input[type="submit"], .ipe-form .button-group.large input[type="submit"] {
+  .button-group.large .button {
     font-size: 1.25rem; }
-  .button-group.expanded .button, .button-group.expanded .ipe-form input[type="submit"], .ipe-form .button-group.expanded input[type="submit"] {
+  .button-group.expanded .button {
     -ms-flex: 1 1 0px;
         flex: 1 1 0px; }
-  .button-group.primary .button, .button-group.primary .ipe-form input[type="submit"], .ipe-form .button-group.primary input[type="submit"] {
+  .button-group.primary .button {
     background-color: #2199e8;
     color: #fff; }
-    .button-group.primary .button:hover, .button-group.primary .ipe-form input[type="submit"]:hover, .ipe-form .button-group.primary input[type="submit"]:hover, .button-group.primary .button:focus, .button-group.primary .ipe-form input[type="submit"]:focus, .ipe-form .button-group.primary input[type="submit"]:focus {
+    .button-group.primary .button:hover, .button-group.primary .button:focus {
       background-color: #147cc0;
       color: #fff; }
-  .button-group.secondary .button, .button-group.secondary .ipe-form input[type="submit"], .ipe-form .button-group.secondary input[type="submit"] {
+  .button-group.secondary .button {
     background-color: #777;
     color: #fff; }
-    .button-group.secondary .button:hover, .button-group.secondary .ipe-form input[type="submit"]:hover, .ipe-form .button-group.secondary input[type="submit"]:hover, .button-group.secondary .button:focus, .button-group.secondary .ipe-form input[type="submit"]:focus, .ipe-form .button-group.secondary input[type="submit"]:focus {
+    .button-group.secondary .button:hover, .button-group.secondary .button:focus {
       background-color: #5f5f5f;
       color: #fff; }
-  .button-group.success .button, .button-group.success .ipe-form input[type="submit"], .ipe-form .button-group.success input[type="submit"] {
+  .button-group.success .button {
     background-color: #3adb76;
     color: #fff; }
-    .button-group.success .button:hover, .button-group.success .ipe-form input[type="submit"]:hover, .ipe-form .button-group.success input[type="submit"]:hover, .button-group.success .button:focus, .button-group.success .ipe-form input[type="submit"]:focus, .ipe-form .button-group.success input[type="submit"]:focus {
+    .button-group.success .button:hover, .button-group.success .button:focus {
       background-color: #22bb5b;
       color: #fff; }
-  .button-group.warning .button, .button-group.warning .ipe-form input[type="submit"], .ipe-form .button-group.warning input[type="submit"] {
+  .button-group.warning .button {
     background-color: #ffae00;
     color: #fff; }
-    .button-group.warning .button:hover, .button-group.warning .ipe-form input[type="submit"]:hover, .ipe-form .button-group.warning input[type="submit"]:hover, .button-group.warning .button:focus, .button-group.warning .ipe-form input[type="submit"]:focus, .ipe-form .button-group.warning input[type="submit"]:focus {
+    .button-group.warning .button:hover, .button-group.warning .button:focus {
       background-color: #cc8b00;
       color: #fff; }
-  .button-group.alert .button, .button-group.alert .ipe-form input[type="submit"], .ipe-form .button-group.alert input[type="submit"] {
+  .button-group.alert .button {
     background-color: #ec5840;
     color: #fff; }
-    .button-group.alert .button:hover, .button-group.alert .ipe-form input[type="submit"]:hover, .ipe-form .button-group.alert input[type="submit"]:hover, .button-group.alert .button:focus, .button-group.alert .ipe-form input[type="submit"]:focus, .ipe-form .button-group.alert input[type="submit"]:focus {
+    .button-group.alert .button:hover, .button-group.alert .button:focus {
       background-color: #da3116;
       color: #fff; }
   .button-group.stacked, .button-group.stacked-for-small, .button-group.stacked-for-medium {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    .button-group.stacked .button, .button-group.stacked .ipe-form input[type="submit"], .ipe-form .button-group.stacked input[type="submit"], .button-group.stacked-for-small .button, .button-group.stacked-for-small .ipe-form input[type="submit"], .ipe-form .button-group.stacked-for-small input[type="submit"], .button-group.stacked-for-medium .button, .button-group.stacked-for-medium .ipe-form input[type="submit"], .ipe-form .button-group.stacked-for-medium input[type="submit"] {
+    .button-group.stacked .button, .button-group.stacked-for-small .button, .button-group.stacked-for-medium .button {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%; }
-      .button-group.stacked .button:last-child, .button-group.stacked .ipe-form input[type="submit"]:last-child, .ipe-form .button-group.stacked input[type="submit"]:last-child, .button-group.stacked-for-small .button:last-child, .button-group.stacked-for-small .ipe-form input[type="submit"]:last-child, .ipe-form .button-group.stacked-for-small input[type="submit"]:last-child, .button-group.stacked-for-medium .button:last-child, .button-group.stacked-for-medium .ipe-form input[type="submit"]:last-child, .ipe-form .button-group.stacked-for-medium input[type="submit"]:last-child {
+      .button-group.stacked .button:last-child, .button-group.stacked-for-small .button:last-child, .button-group.stacked-for-medium .button:last-child {
         margin-bottom: 0; }
   @media screen and (min-width: 40em) {
-    .button-group.stacked-for-small .button, .button-group.stacked-for-small .ipe-form input[type="submit"], .ipe-form .button-group.stacked-for-small input[type="submit"] {
+    .button-group.stacked-for-small .button {
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
       margin-bottom: 0; } }
   @media screen and (min-width: 64em) {
-    .button-group.stacked-for-medium .button, .button-group.stacked-for-medium .ipe-form input[type="submit"], .ipe-form .button-group.stacked-for-medium input[type="submit"] {
+    .button-group.stacked-for-medium .button {
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
       margin-bottom: 0; } }
   @media screen and (max-width: 39.9375em) {
     .button-group.stacked-for-small.expanded {
       display: block; }
-      .button-group.stacked-for-small.expanded .button, .button-group.stacked-for-small.expanded .ipe-form input[type="submit"], .ipe-form .button-group.stacked-for-small.expanded input[type="submit"] {
+      .button-group.stacked-for-small.expanded .button {
         display: block;
         margin-right: 0; } }
 
@@ -3340,7 +3340,7 @@ table.hover tr:nth-of-type(even):hover {
   .top-bar .input-group-field {
     width: 100%;
     margin-right: 0; }
-  .top-bar input.button, .top-bar .ipe-form input[type="submit"], .ipe-form .top-bar input[type="submit"] {
+  .top-bar input.button {
     width: auto; }
   .top-bar .top-bar-left,
   .top-bar .top-bar-right {
@@ -4099,3 +4099,6 @@ table.hover tr:nth-of-type(even):hover {
 
 .long-delay {
   animation-delay: 700ms !important; }
+
+#sidebar-second:empty, #sidebar-first:empty {
+  display: none; }

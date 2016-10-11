@@ -15,7 +15,7 @@ dependencies:
     - link
     - workbench_moderation
 _core:
-  default_config_hash: gs9OzB1vvfF5SyjFuUKp6_N7MgeyVSs94FrzylEdKsM
+  default_config_hash: KMS6836KpBsVCg1aU6YqSuxs7S0RD3Tu0XAM2bW0QII
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
@@ -35,10 +35,10 @@ content:
       entity_browser: browse_files_modal
       field_widget_edit: '1'
       field_widget_remove: '1'
-      view_mode: default
-      field_widget_display: ''
       open: '1'
-      field_widget_display_settings: {  }
+      selection_mode: selection_append
+      view_mode: gallery_item
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_hero_link:
     type: link_default

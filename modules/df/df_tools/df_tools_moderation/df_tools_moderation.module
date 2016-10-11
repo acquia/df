@@ -5,7 +5,8 @@
  * Contains df_tools_moderation.module.
  */
 
-use \Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -27,5 +28,30 @@ function df_tools_moderation_workbench_moderation_entity_moderation_form_submit(
   // content.
   if ($new_state == 'draft') {
     $form_state->setRedirectUrl($entity->toUrl('latest-version'));
+  }
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter();
+ */
+function df_tools_moderation_menu_local_tasks_alter(&$data, $route_name) {
+  // Runs when cache tag config:block.block.[ActiveTheme]_local_actions is invalidated.
+  if (isset($data['tabs'][0]['moderation_state.entities:node.latest_version_tab'])) {
+    $url = $data['tabs'][0]['moderation_state.entities:node.latest_version_tab']['#link']['url'];
+    $param = $url->getRouteParameters();
+    if (isset($param['node'])) {
+      $node = Node::load($param['node']);
+      $moderation_info = \Drupal::service('workbench_moderation.moderation_information');
+      $latest_node = $moderation_info->getLatestRevision('node', $node->id());
+      // Modify the tabs when the canonical route is the latest revision.
+      if ($latest_node->getRevisionId() == $node->getRevisionId()) {
+        // Highlight the 'View' tab at /node/%/latest.
+        if ($data['tabs'][0]['moderation_state.entities:node.latest_version_tab']['#active']) {
+          $data['tabs'][0]['entity.node.canonical']['#active'] = true;
+        }
+        // Remove the latest version tab.
+        unset($data['tabs'][0]['moderation_state.entities:node.latest_version_tab']);
+      }
+    }
   }
 }

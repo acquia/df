@@ -1,21 +1,25 @@
 # Demo Framework (DF)
 [![Travis build status](https://img.shields.io/travis/acquia/df/8.x-1.x.svg)](https://travis-ci.org/acquia/df) [![Scrutinizer code quality](https://img.shields.io/scrutinizer/g/acquia/df/8.x-1.x.svg)](https://scrutinizer-ci.com/g/acquia/df)
 
-DF is a distribution consisting of modules, themes and libraries. It highlights powerful features created by the Drupal community. It is intended to be used as a starterkit for promoting enterprise-ready solutions.
+Demo Framework is a distribution consisting of modules, themes and libraries. It highlights powerful features created by the Drupal community. It is intended to be used as a starterkit for promoting enterprise-ready solutions.
 
-### Installation
+Demo Framework is powered by [Lightning](https://www.drupal.org/project/lightning).
 
-Although Drush make files are still made available, we recommend using Composer to install DF.
+## Installing Demo Framework
 
-  ``composer install``
+The preferred way to install Demo Framework is using our [Composer-based project template][template]. It's easy!
 
-DF and its dependencies will be downloaded into the current working directory. If nothing fails, you will see a 'docroot' with Drupal in it.
+If you don't want to use Composer, you can install Demo Framework the traditional way by downloading a tarball from our [drupal.org project page](https://www.drupal.org/project/df).
 
-We provide a build script that wraps the composer install command and moves everything into a target directory as well.
+Before installing Demo Framework via drupal.org or after building it from scratch using Drush Make, you must download a small number of PHP libraries that cannot currently be packaged automatically due to limitations with both drupal.org and Drush.
+
+  ``composer require "commerceguys/intl: ~0.7" "commerceguys/addressing: ~0.8" "commerceguys/zone: ~0.7" "embed/embed: ~2.2"``
+
+A build script is also provided that wraps the composer install command and moves everything into a target directory as well.
 
   ``./build.sh ~/Destination``
 
-You can also add in commands for composer here. We suggest using the --no-dev option unless you want to run behat and have DF manage your version of Drush used on the site.
+You can add in commands for composer here. We suggest using the --no-dev option unless you want to run behat and have DF manage your version of Drush used on the site.
 
   ``./build.sh ~/Destination --no-dev``
 
@@ -60,13 +64,15 @@ if you need to update the vendor js, I added in some gulp files that make that e
 Once that is installed, start the gulp file which will watch for scss changes:
 - ``npm start``
 
-### Behat tests
+## Running Tests
 
-When built via Composer, DF includes a copy of Behat, Mink and the Drupal
+These instructions assume you have used Composer to install Demo Framework.
+
+### Behat
+
+Demo Framework includes a copy of Behat, Mink and the Drupal
 Extension to Behat and Mink in the /bin folder located outside of the docroot.
-Alternatively, you may install and use the Drupal Extension globally by
-following the instructions at:
-http://behat-drupal-extension.readthedocs.io/en/3.1/globalinstall.html
+Alternatively, you may [globally install](http://behat-drupal-extension.readthedocs.io/en/3.1/globalinstall.html) and use the Drupal Extension.
 
 Selenium is required to run the JavaScript tests. You can download Selenium from
 http://www.seleniumhq.org and run it with:
@@ -99,3 +105,12 @@ If you're using the copy of Behat included with DF, then substitute "behat" in
 the above examples with:
 
 ``/path/to/MYPROJECT/bin/behat``
+
+## Resources
+
+Please file issues in our [drupal.org issue queue][issue_queue].
+
+[issue_queue]: https://www.drupal.org/project/issues/df "Demo Framework Issue Queue"
+[template]: https://github.com/acquia/df-project "Composer-based project template"
+[d.o_semver]: https://www.drupal.org/node/1612910
+[df_composer_project]: https://github.com/acquia/df-project

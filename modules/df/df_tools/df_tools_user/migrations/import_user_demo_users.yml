@@ -1,0 +1,26 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_user_demo_users
+label: 'Import user:demo_users'
+source:
+    plugin: user_with_roles
+    path: ../data/df_tools_user.users.csv
+    header_row_count: 1
+    keys: [Name]
+destination:
+    plugin: 'entity:user'
+process:
+    type: { plugin: default_value, default_value: user }
+    name: Name
+    pass: Pass
+    mail: Mail
+    status: Status
+    roles: Roles
+    user_picture: { plugin: migration, migration: import_file_demo_user_pictures, source: Picture }
+    access: { plugin: default_value, default_value: 1474668188 }
+    login: { plugin: default_value, default_value: 1474668188 }
+    field_first_name: First
+    field_last_name: Last
+provider: import
+migration_dependencies:
+    required: [import_file_demo_user_pictures]
+    optional: [import_file_demo_user_pictures]

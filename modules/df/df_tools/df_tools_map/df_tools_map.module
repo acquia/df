@@ -1,0 +1,11 @@
+<?php
+
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function df_tools_map_migration_plugins_alter(&$definitions) {
+  // Set up the correct path for the CSV file in import_block_map.
+  $id = 'import_block_map';
+  $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
+}

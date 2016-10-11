@@ -20,3 +20,37 @@ function df_tools_slideshow_migration_plugins_alter(&$definitions) {
   // Save the new migration.
   $definitions[$migration['id']] = $migration;
 }
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function df_tools_slideshow_form_block_content_slideshow_panels_ipe_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#attributes']['class'][] = 'df-tools-slideshow-form';
+  // Remove unneeded title added to field.
+  $form['field_block']['widget']['#title'] = '';
+  // Add default styling to the inline form.
+  $form['field_block']['widget']['#title'] = t('Add slide');
+  $form['field_block']['widget']['#type'] = 'fieldset';
+  $form['field_block']['widget']['#attributes'] = ['class' => ['fieldset']];
+  if (isset($form['field_block']['widget']['form'])) {
+    $widget_form = &$form['field_block']['widget']['form'];
+    // Existing.
+    if (isset($widget_form['entity_id'])) {
+      $widget_form['#title'] = '';
+      $widget_form['entity_id']['#title'] = t('Existing slide');
+      $widget_form['actions']['ief_reference_save']['#value'] = t('Add');
+    }
+    else {
+      $widget_form['inline_entity_form']['#ief_labels']['singular'] = 'slide';
+    }
+  }
+  if (isset($form['field_block']['widget']['actions']['ief_add'])) {
+    $label = t('Add a new slide');
+    $form['field_block']['widget']['actions']['ief_add']['#value'] = $label;
+  }
+  if (isset($form['field_block']['widget']['actions']['ief_add_existing'])) {
+    $label = t('Add existing slide');
+    $form['field_block']['widget']['actions']['ief_add_existing']['#value'] = $label;
+  }
+}

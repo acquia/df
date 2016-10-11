@@ -1,0 +1,25 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_block_map
+label: 'Import block:block_content:map'
+source:
+    plugin: map_block
+    path: ../data/block.block_content.map.csv
+    header_row_count: 1
+    keys: [UUID]
+    csvColumns: { 2: 'Address Line 1', 3: 'Address Line 2', 4: 'Address City', 5: 'Address State', 6: 'Address Zip' }
+destination:
+    plugin: 'entity:block_content'
+process:
+    type: { plugin: default_value, default_value: map }
+    uuid: UUID
+    info: Info
+    field_address/langcode: { plugin: default_value, default_value: en }
+    field_address/country_code: { plugin: default_value, default_value: US }
+    field_map_address/address_line1: 'Address Line 1'
+    field_map_address/address_line2: 'Address Line 2'
+    field_map_address/locality: 'Address City'
+    field_map_address/administrative_area: 'Address State'
+    field_map_address/postal_code: 'Address Zip'
+    field_map_address/recipient: Info
+    field_map_geofield: Geofield
+provider: import

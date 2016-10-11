@@ -6,11 +6,23 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "drush/drush": "8.1.2",
-        "drupal/drupal-extension": "^3.1",
-        "jakoch/phantomjs-installer": "1.9.8",
+        "drush/drush": "^9.0",
+        "drupal/drupal-extension": "^3.2",
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "jakoch/phantomjs-installer": "dev-master as 1.9.8",
         "behat/behat": "^3.0",
         "drupal/coder": "8.*",
+        "drupal/console": "~1.0",
+        "phing/phing": "^2.14",
+        "behat/mink": "~1.7",
+        "behat/mink-goutte-driver": "~1.2",
+        "jcalderonzumba/gastonjs": "~1.0.2",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+        "mikey179/vfsStream": "~1.2",
+        "phpunit/phpunit": "~4.8",
+        "symfony/css-selector": "~2.8",
+        "drupal/devel": "^8.0.0",
+        "squizlabs/php_codesniffer": "2.*",
         "lakion/mink-debug-extension": "^1.0.3"
     },
     "config": {
@@ -64,6 +76,18 @@
         {
             "type": "package",
             "package": {
+                "name": "leaflet/leaflet",
+                "version": "v0.7.7",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/Leaflet/Leaflet/archive/v0.7.7.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "mjolnic/fontawesome-iconpicker",
                 "version": "1.2.0",
                 "type": "drupal-library",
@@ -99,6 +123,31 @@
                     "reference": "origin/master"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "openannotation/annotator",
+                "version": "1.2.10",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/openannotation/annotator/releases/download/v1.2.10/annotator-full.1.2.10.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/workbench_annotation",
+                "version": "dev-master",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/mortenson/workbench_annotations",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
         }
     ],
     "extra": {
@@ -122,28 +171,24 @@
         "enable-patching": true,
         "patches": {
             "drupal/core": {
-                "Add authentication support for Views | https://www.drupal.org/node/2228141":
-                "https://www.drupal.org/files/issues/add_authentication-2228141-54.patch",
                 "ConnectionNotDefinedException thrown... | https://www.drupal.org/node/2703669":
-                "https://www.drupal.org/files/issues/node-migration-traits-database-exception.patch",
+                "https://www.drupal.org/files/issues/node-migration-traits-database-exception-2703669-3.patch",
                 "Quickedit cant edit images | https://www.drupal.org/node/2635712":
                 "https://www.drupal.org/files/issues/2635712-14.patch",
                 "Can we test RefreshLess with simplytest.me? | https://www.drupal.org/node/2695717":
                 "https://www.drupal.org/files/issues/refreshless-alpha3-core-patch-2695717-7.patch",
-                "Disable body-level scrolling when a dialog is open as a modal | https://www.drupal.org/node/2707291":
-                "https://www.drupal.org/files/issues/drupal-dialog-modal-disable-scroll-2707291-8.patch"
-            },
-            "drupal/better_formats": {
-                "[meta] Utilize multiple Better Formats patches in DF without conflict | http://drupal.org/node/2737757":
-                "https://www.drupal.org/files/issues/2737757-2.patch"
+                "Allow profiles to provide a base/parent profile and load them in the correct order | https://www.drupal.org/node/1356276":
+                "https://www.drupal.org/files/issues/make_inherited_install-1356276-157.patch",
+                "ConfigurableLanguageManager::getConfigOverrideLanguage() returns NULL | https://www.drupal.org/node/2684873":
+                "https://www.drupal.org/files/issues/2684873-28.patch",
+                "Improve the UX of Quick Editing images | https://www.drupal.org/node/2421427":
+                "https://www.drupal.org/files/issues/quickedit-image-2421427-125.patch",
+                "Patch Drupal core to fix obscure AJAX form bug | https://www.drupal.org/node/2794457":
+                "https://www.drupal.org/files/issues/core-hotfix-2788277-3.patch"
             },
             "drupal/block_class": {
                 "Add support for page manager. | http://drupal.org/node/2509142":
                 "https://www.drupal.org/files/issues/add-page-manager-support-2509142-2.patch"
-            },
-            "drupal/migrate_plus": {
-                "Update migrate plus migrate URL plugin and SourcePluginExtension to work with 8.1.0 | https://www.drupal.org/node/2714357":
-                "https://www.drupal.org/files/issues/migrate_url_sourcepluginextension-2714357-1.patch"
             },
             "drupal/page_manager": {
                 "Rename the core 'Page with blocks' admin_label... | https://www.drupal.org/node/2503947":
@@ -152,91 +197,98 @@
                 "https://www.drupal.org/files/issues/2746149-2.patch"
             },
             "drupal/panelizer": {
-                "Explicitly set the Panels IPE URL root when saving in Panelizer | https://www.drupal.org/node/2700597":
-                "https://www.drupal.org/files/issues/2546204-6.patch",
                 "Quickedit support for fields displayed using the ctools_field block. | https://www.drupal.org/node/2693163":
-                "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-2.patch",
+                "https://www.drupal.org/files/issues/panelizer-quickedit-2693163-10.patch",
                 "Undefined index: #attached | https://www.drupal.org/node/2760051":
                 "https://www.drupal.org/files/issues/check-for-build-array-keys-2760051_1.patch"
             },
             "drupal/panels": {
-                "IPE's cancel button is easy to mistake for a button to close the tray (rather than throw away all changes). | https://www.drupal.org/node/2636490":
-                "https://www.drupal.org/files/issues/panels-ipe-esc-focus-fixes-2636490-9.patch"
+                "Revert: Title of empty block is rendered | https://www.drupal.org/node/2781897":
+                "https://www.drupal.org/files/issues/0001-Revert-Issue-2781897-by-lauriii-Title-of-empty-block.patch"
             },
             "drupal/workbench_moderation": {
                 "Replace the workbench moderation form with a block | https://www.drupal.org/node/2685163":
-                "https://www.drupal.org/files/issues/2685163-19.patch",
+                "https://www.drupal.org/files/issues/2685163-21.patch",
                 "Add basic support for QuickEdit | https://www.drupal.org/node/2749503":
-                "https://www.drupal.org/files/issues/workbench_moderation-quickedit-support.patch"
+                "https://www.drupal.org/files/issues/workbench_moderation-quickedit-support-2749503-4.patch"
             },
-            "drupal/adminimal_theme": {
-                "Fix styling so that admin_toolbar can be used | https://www.drupal.org/node/2680689":
-                "https://www.drupal.org/files/issues/adminimal_theme-fix-styles-for-admin-toolbar-2680689-7.patch"
+            "drupal/content_browser": {
+                "ContentEmbedBlock does not properly protect against recursion | https://www.drupal.org/node/2782217":
+                "https://www.drupal.org/files/issues/content-browser-recursive-embed-protection.patch",
+                "Simplify the Block Plugin form's table | https://www.drupal.org/node/2799499":
+                "https://www.drupal.org/files/issues/content-browser-simple-block-table.patch",
+                "Fix bug when using Views Infinite Scroll with Content Browser | https://www.drupal.org/node/2808919":
+                "https://www.drupal.org/files/issues/content-browser-views-infinite-scroll.patch"
+            },
+            "drupal/file_browser": {
+              "Current multi-step behaviour is confusing for users | https://www.drupal.org/node/2779451":
+              "https://www.drupal.org/files/issues/file-browser-multi-step-2779451-7.patch",
+              "Fix bug when using Views Infinite Scroll with File Browser | https://www.drupal.org/node/2808913":
+              "https://www.drupal.org/files/issues/file-browser-views-infinite-scroll.patch"
             },
             "lite": {
                 "CKLite interferes with content insertion | http://drupal.org/node/2482879":
                 "https://www.drupal.org/files/issues/cklite-content-insertion-2482879-4.patch"
             }
+        },
+        "patches-ignore": {
+            "drupal/lightning": {
+                "drupal/panelizer": {
+                    "Bandaid patch breaking save after previewing blocks with Panelizer":
+                    "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
+                }
+            }
         }
     },
     "require": {
         "cweagans/composer-patches": "^1.5.0",
-        "composer/installers": "^1.0.20",
         "desandro/masonry": "3.3.1",
         "desandro/imagesloaded": "3.1.8",
         "drupal/address": "8.1.0-beta3",
         "drupal/addtoany": "8.1.4",
-        "drupal/admin_toolbar": "8.1.x-dev",
+        "drupal/admin_toolbar": "8.1.17",
+        "drupal/adminimal_admin_toolbar": "8.1.3",
         "drupal/adminimal_theme": "8.1.1",
         "drupal/better_formats": "8.1.x-dev",
         "drupal/block_class": "8.1.x-dev",
-        "drupal/dropzonejs": "8.1.0-alpha1",
-        "drupal/config_devel": "8.1.x-dev",
-        "drupal/config_update": "8.1.1",
+        "drupal/dropzonejs": "8.1.0-alpha2",
+        "drupal/config_devel": "8.1.0-alpha3",
         "drupal/config_sync": "8.1.x-dev",
-        "drupal/content_browser": "8.1.x-dev",
-        "drupal/crop": "8.1.0-rc1",
-        "drupal/ctools": "8.3.0-alpha26",
-        "drupal/embed": "8.1.0-rc2",
-        "drupal/entity_browser": "8.1.0-alpha5",
-        "drupal/entity_embed": "8.1.0-alpha1",
-        "drupal/features": "8.3.0-beta5",
+        "drupal/content_browser": "8.1.0-alpha1",
+        "drupal/crop": "8.1.0",
+        "drupal/entity_block": "8.1.x-dev",
+        "drupal/entity_gallery": "8.1.x-dev",
         "drupal/field_group": "8.1.0-rc4",
-        "drupal/file_browser": "8.1.x-dev",
-        "drupal/file_entity": "8.2.0-beta1",
-        "drupal/geocoder": "8.2.0-alpha3",
+        "drupal/file_browser": "8.1.0-alpha1",
+        "drupal/file_entity": "8.2.0-beta2",
+        "drupal/geocoder": "8.2.0-alpha4",
         "drupal/geofield": "8.1.x-dev",
         "drupal/geophp": "8.1.x-dev",
         "drupal/geolocation": "8.1.x-dev",
-        "drupal/google_analytics": "8.2.0",
+        "drupal/google_analytics": "8.2.1",
         "drupal/image_effects": "8.1.0-alpha2",
-        "drupal/image_widget_crop": "8.1.0",
+        "drupal/image_widget_crop": "8.1.3",
         "drupal/import": "8.2.x-dev",
-        "drupal/inline_entity_form": "8.1.0-alpha6",
         "drupal/layout_plugin": "8.1.0-alpha22",
         "drupal/leaflet": "8.1.x-dev",
         "drupal/libraries": "8.3.x-dev",
-        "drupal/lightning": "dev-8.x-1.x",
-        "drupal/lite": "8.1.x-dev",
+        "drupal/lightning": "8.1.06",
+        "drupal/lite": "8.1.3",
         "drupal/moderate_mmenu": "8.1.x-dev",
-        "drupal/migrate_plus": "8.2.0-beta1",
-        "drupal/migrate_source_csv": "8.2.x-dev",
+        "drupal/migrate_plus": "8.2.0-beta2",
+        "drupal/migrate_source_csv": "8.2.0-beta1",
         "drupal/migrate_tools": "8.2.0-beta1",
         "drupal/oauth": "8.1.x-dev",
-        "drupal/page_manager": "8.1.0-alpha23",
-        "drupal/panels": "8.3.0-beta4",
-        "drupal/panelizer": "8.3.0-alpha2",
-        "drupal/pathauto": "8.1.0-alpha3",
         "drupal/refreshless": "8.1.0-alpha3",
+        "drupal/replicate": "8.1.x-dev",
         "drupal/restui": "8.1.x-dev",
         "drupal/scenarios": "8.2.x-dev",
-        "drupal/scheduler": "8.1.0-alpha1",
-        "drupal/token": "8.1.0-alpha2",
+        "drupal/scheduler": "8.1.0-alpha2",
         "drupal/url_embed": "8.1.x-dev",
-        "drupal/views_infinite_scroll": "8.1.0",
+        "drupal/workbench_annotation": "dev-master",
         "drupal/workbench_moderation": "8.1.1",
         "drupal/zurb_foundation": "8.6.x-dev",
-        "drupal-composer/drupal-scaffold": "^2.0.1",
+        "openannotation/annotator": "1.2.10",
         "enyo/dropzone": "4.2.0",
         "kenwheeler/slick": "1.5.0",
         "lite": "dev-master#a7df5c6b685385713e8aaf2df3f44c82e3bf823a",
@@ -245,10 +297,11 @@
     "scripts": {
         "post-install-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS",
-            "mkdir -p docroot/profiles/df && rsync -a . docroot/profiles/df --exclude \".idea\" --exclude bin --exclude \".git\" --exclude \".gitignore\" --exclude docroot --exclude \"*.make\" --exclude \".travis.yml\" --exclude vendor && rm -fr modules/contrib themes/contrib"
+            "@composer drupal-scaffold",
+            "./bin/phing push"
         ],
         "post-update-cmd": [
-            "mkdir -p docroot/profiles/df && rsync -a . docroot/profiles/df --exclude \".idea\" --exclude bin --exclude \".git\" --exclude \".gitignore\" --exclude docroot --exclude \"*.make\" --exclude \".travis.yml\" --exclude vendor && rm -fr modules/contrib themes/contrib"
+            "./bin/phing push"
         ],
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     }

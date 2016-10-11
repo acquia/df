@@ -78,6 +78,16 @@ function df_tools_blocks_form_alter(&$form, FormStateInterface $form_state, $for
     $form['info']['widget'][0]['value']['#title'] = t('Description');
     $form['info']['widget'][0]['value']['#description'] = [];
   }
+
+  if (preg_match('/^block_content_\X*_edit_form$/', $form_id)) {
+    // Add a 'copy' button to all custom blocks edit forms.
+    $form['actions']['copy'] = [
+      '#type' => 'submit',
+      '#value' => t('Copy'),
+      '#submit' => ['df_tools_blocks_block_content_replicate'],
+      '#weight' => 9
+    ];
+  }
 }
 
 /**
@@ -98,9 +108,42 @@ function df_tools_blocks_form_panels_ipe_block_plugin_form_alter(&$form, FormSta
     $form['flipper']['front']['settings']['label']['#weight'] = 0;
     $form['flipper']['front']['settings']['label']['#states'] = [
       'visible' => [
-      ':input[name="settings[label_display]"]' => ['checked' => TRUE],
+        ':input[name="settings[label_display]"]' => ['checked' => TRUE],
       ],
     ];
+  }
+
+  // Add special logic for the Entity Browser block plugins.
+  if (isset($form['plugin_id']) && !$form_state->isProcessingInput()) {
+    if ($form['plugin_id']['#value'] == 'content_embed') {
+      $form['#attached']['library'][] = 'df_tools_blocks/auto_open';
+      $form['#attributes']['data-df-tools-blocks-auto-open'] = 'settings_selection_nids_entity_browser';
+
+      // Modify the Content Embed form to guide users to valid View Modes.
+      if (empty($form['flipper']['front']['settings']['view_mode']['#default_value'])) {
+        $form['flipper']['front']['settings']['view_mode']['#default_value'] = 'featured';
+      }
+      $excluded_modes = [
+        'basic_info',
+        'content_browser',
+        'rss',
+        'search_index',
+        'search_result',
+        'token',
+        'full',
+        'df'
+      ];
+      foreach ($excluded_modes as $view_mode) {
+        if (isset($form['flipper']['front']['settings']['view_mode']['#options'][$view_mode])) {
+          unset($form['flipper']['front']['settings']['view_mode']['#options'][$view_mode]);
+        }
+      }
+
+    }
+    else if ($form['plugin_id']['#value'] == 'image_embed') {
+      $form['#attached']['library'][] = 'df_tools_blocks/auto_open';
+      $form['#attributes']['data-df-tools-blocks-auto-open'] = 'settings_selection_fids_entity_browser';
+    }
   }
 }
 
@@ -114,7 +157,7 @@ function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, F
     'Hero Link' => ['field_hero_link'],
     'Hero Icon' => ['field_icon'],
     'Nested Block' => ['field_nested_block'],
-    ];
+  ];
   foreach ($grouping as $label => $fields) {
     $fieldset_key = strtolower(str_replace(' ', '_', $label));
     $form[$fieldset_key] = [
@@ -123,7 +166,7 @@ function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, F
       '#attributes' => ['class' => ['fieldset']],
       '#collapsed' => TRUE,
       '#weight' => 99,
-      ];
+    ];
     foreach ($fields as $field) {
       $form[$fieldset_key][$field] = $form[$field];
       unset($form[$field]);
@@ -132,113 +175,14 @@ function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, F
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function df_tools_blocks_block_content_slideshow_panels_ipe_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Remove unneeded title added to field.
-  $form['field_block']['widget']['#title'] = '';
-  // Add default styling to the inline form.
-  if (isset($form['field_block']['widget']['form'])) {
-    if (!isset($form['field_block']['widget']['form']['#title'])) {
-      $form['field_block']['widget']['form']['#title'] = t('Add new custom block');
-    }
-    $form['field_block']['widget']['form']['#attributes'] = ['class' => ['fieldset']];
-  }
-  // Wrap the edit/add actions in fieldsets to improve the look/feel of the
-  // form.
-  if (isset($form['field_block']['widget']['actions']['ief_add'])) {
-    $form['field_block']['widget']['actions_add'] = [
-      '#type' => 'fieldset',
-      '#title' => t('Add new custom block'),
-      '#attributes' => ['class' => ['fieldset']],
-      '#weight' => 100,
-      0 => $form['field_block']['widget']['actions']['bundle'],
-      1 => $form['field_block']['widget']['actions']['ief_add'],
-      ];
-    unset($form['field_block']['widget']['actions']['ief_add']);
-    unset($form['field_block']['widget']['actions']['bundle']);
-  }
-  if (isset($form['field_block']['widget']['actions']['ief_add_existing'])) {
-    $form['field_block']['widget']['actions_existing'] = [
-      '#type' => 'fieldset',
-      '#title' => t('Add existing custom block'),
-      '#attributes' => ['class' => ['fieldset']],
-      '#weight' => 101,
-      0 => $form['field_block']['widget']['actions']['ief_add_existing'],
-      ];
-    unset($form['field_block']['widget']['actions']['ief_add_existing']);
-  }
-}
-
-/**
  * Implements hook_migration_plugins_alter().
  */
 function df_tools_blocks_migration_plugins_alter(&$definitions) {
-  // Set up base path.
-  $path = dirname(__FILE__) . '/data/';
-
-  // Add our block migrations
-  $types = [
-    'content' => [
-      'columns' => [
-        2 => 'Content'
-      ],
-      'fields' => [
-        'field_content' => 'Content',
-      ]
-    ],
-    'hero' => [
-      'columns' => [
-        2 => 'First Line',
-        3 => 'Second Line',
-        4 => 'Link',
-        5 => 'Link Title',
-        6 => 'Image',
-        7 => 'Nested Blocks',
-      ],
-      'fields' => [
-        'field_first_line/value' => 'First Line',
-        'field_second_line/value' => 'Second Line',
-        'field_hero_link/uri' => 'Link',
-        'field_hero_link/title' => 'Link Title',
-        'field_hero_image' => 'Image',
-        'field_nested_block' => 'Nested Blocks',
-      ]
-    ],
-    'map' => [
-      'columns' => [
-        2 => 'Lat',
-        3 => 'Long'
-      ],
-      'fields' => [
-        'field_location' => 'Location'
-      ]
-    ],
-    'media' => [
-      'columns' => [
-        2 => 'Media'
-      ],
-      'fields' => [
-        'field_media' => 'Media'
-      ]
-    ],
-    'url' => [
-      'columns' => [
-        2 => 'URL'
-      ],
-      'fields' => [
-        'field_url' => 'URL'
-      ]
-    ],
-  ];
-  foreach ($types as $type => $info) {
-    $migration = _df_migration_copy($definitions['import_block_base'], 'block', $type, 'block_content', $path);
-    // Add our custom fields.
-    _df_migration_fields($migration, $info['columns'], $info['fields']);
-    // Add our custom plugins.
-    $migration['source']['plugin'] = $type . '_block';
-    // Save the new migration.
-    $definitions[$migration['id']] = $migration;
+  // Set up the correct path for the CSV file in import_block_map.
+  $types = ['hero', 'url'];
+  foreach ($types as $type) {
+    $id = 'import_block_' . $type;
+    $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
   }
 }
 
@@ -246,7 +190,10 @@ function df_tools_blocks_migration_plugins_alter(&$definitions) {
  * Implements hook_block_alter().
  */
 function df_tools_blocks_block_alter(&$block_info) {
+  // Create an associative array which maps default => custom block categories.
   $category_map = [
+    'Embed' => 'Create Display',
+    'Entity Block' => 'Existing Content',
     'User' => 'System',
     'Chaos tools' => 'System',
     'Help' => 'System',
@@ -256,12 +203,27 @@ function df_tools_blocks_block_alter(&$block_info) {
     'AddToAny' => 'Social',
   ];
 
+  // Create a whitelist of entity types to pare down the list of entity blocks.
+  $entity_block_id_whitelist = [
+    'entity_block:entity_gallery',
+    'entity_block:file',
+    'entity_block:node',
+    'entity_block:taxonomy_term',
+    'entity_block:user'
+  ];
+
   foreach ($block_info as $key => $info) {
+    // Retrieve the name of the block category.
     $category = $info['category'];
+
+    // Retrieve the untranslated name of the category if it has been translated.
     if ($category instanceof \Drupal\Core\StringTranslation\TranslatableMarkup) {
       $category = $category->getUntranslatedString();
     }
 
+    // Move all fields of the currently panelized entity into a
+    // 'Current @Entity_Type' category. If the block is not a field on the
+    // current entity, allow its category to be remapped.
     if ($category == '@entity') {
       $block_info[$key]['category'] = 'Current ' . $info['category']->render();
     }
@@ -270,5 +232,25 @@ function df_tools_blocks_block_alter(&$block_info) {
         $block_info[$key]['category'] = t($category_map[$category]);
       }
     }
+
+    // Restrict entity blocks according to the whitelist.
+    if ($category == 'Entity Block' && !in_array($key, $entity_block_id_whitelist)) {
+      unset($block_info[$key]);
+    }
   }
+}
+
+function df_tools_blocks_block_content_replicate($form, FormStateInterface $form_state) {
+  // Retrieve block content entity from form_state.
+  $entity = $form_state->getFormObject()->getEntity();
+  // Extract a few values from the entity.
+  $block_info = $entity->get('info')->value;
+  $block_id = $entity->id();
+  // Replicate the block content entity.
+  if (\Drupal::service('df_tools_blocks.copier')->makeCopy($entity)) {
+    $message = t('Block Content: copied @info [id:@id]', ['@info' => $block_info, '@id' => $block_id]);
+    \Drupal::logger('df_tools_blocks')->info($message);
+    drupal_set_message($message, 'status');
+  }
+  // Redirect to block list comes free!
 }

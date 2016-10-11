@@ -352,4 +352,100 @@ class DFSubContext extends DrupalSubContextBase implements DrupalSubContextInter
     $this->getSession()->switchToWindow();
   }
 
+  /**
+   * Quick Edits a given text field for the first Node on the current page.
+   *
+   * @param string $field_name
+   *   The machine name of the text field you wish to edit.
+   * @param string $text
+   *   The new text to set on the field.
+   *
+   * @throws \Behat\Mink\Exception\ElementNotFoundException
+   *
+   * @When I Quick Edit the field :field_name with the text :text
+   */
+  public function quickEditText($field_name, $text) {
+    $entity_selector = '[data-quickedit-entity-id*="node"]';
+    $field_selector = '[data-quickedit-field-id*="node"][data-quickedit-field-id*="' . $field_name . '"]';
+
+    // Wait until Quick Edit loads its contextual link Backbone View.
+    $condition = "jQuery('" . $entity_selector . " .quickedit').length > 0";
+    $this->waitForJsCondition($condition, 10000);
+
+    // Initiate Quick Editing.
+    $this->clickElementBySelector('.contextual-toolbar-tab button');
+    $this->clickElementBySelector($entity_selector . ' > [data-contextual-id] > button');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->clickElementBySelector($entity_selector . ' > [data-contextual-id] .quickedit > a');
+    $this->clickElementBySelector($field_selector . '.quickedit-editable');
+
+    // Trigger an edit with Javascript (this is a "contenteditable" element).
+    $this->getSession()->executeScript("jQuery('" . $field_selector . "').text('" . $text . "').trigger('keyup');");
+
+    // Save the change.
+    $this->clickElementBySelector('.quickedit-button.action-save');
+    $this->minkContext->iWaitForAjaxToFinish();
+  }
+
+  /**
+   * Embeds a piece of Content on the current page using Panels IPE.
+   *
+   * @param string $title
+   *   The exact title of the Content.
+   * @param string $region
+   *   The region to place the Block in.
+   *
+   * @throws \Behat\Mink\Exception\ElementNotFoundException
+   *
+   * @When I embed the content :title in the :region region
+   */
+  public function embedIPEContent($title, $region) {
+    $this->maximize();
+    // Open the Content Embed form.
+    $this->clickElementBySelector('a[title="Manage Content"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->clickElementBySelector('a[data-category="Create Display"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->clickElementBySelector('a[data-plugin-id="content_embed"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+
+    // Wait for the modal to load.
+    $this->waitForJsCondition("jQuery('.ui-dialog .views-exposed-form:visible').length > 0");
+
+    // Switch to the iFrame context.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_browse_content');
+
+    // Search for content matching the passed in title and select the result.
+    $this->getSession()->getDriver()->setValue('//*[@id="edit-title"]', $title);
+    $this->getSession()->getDriver()->click('//*[@id="edit-submit-content-browser"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+    $this->getSession()->getDriver()->executeScript('jQuery(".views-field-entity-browser-select").first().click()');
+
+    // Submit the entity browser form.
+    $this->getSession()->getDriver()->executeScript('jQuery(".is-entity-browser-submit").click()');
+    $this->minkContext->iWaitForAjaxToFinish();
+
+    // Wait for the modal to close.
+    $this->getSession()->switchToIFrame();
+    $this->waitForJsCondition("jQuery('.ui-dialog').length == 0");
+    $this->minkContext->iWaitForAjaxToFinish();
+
+    // Finish submitting the Block Plugin form.
+    $this->getSession()->getDriver()->selectOption('//*[@name="settings[region]"]', $region);
+    $this->clickElementBySelector('[value="Add"]');
+    $this->minkContext->iWaitForAjaxToFinish();
+  }
+
+  /**
+   * Waits for an arbitrary Javascript condition to return TRUE.
+   *
+   * @param string $condition
+   *   The Javascript condition.
+   * @param int $timeout
+   *   The amount of time to wait, in milliseconds.
+   */
+  protected function waitForJsCondition($condition, $timeout = 5000) {
+    $this->getSession()->wait($timeout, $condition);
+  }
+
 }

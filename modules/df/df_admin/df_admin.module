@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains df_admin.module.
+ */
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function df_admin_menu_local_tasks_alter(&$data, $route_name) {
+  // Core doesn't currently clean up local tasks created via Views when the View
+  // is disabled/deleted. Remove the core file listing view's local tasks in
+  // order to prevent duplicate 'Files' tabs from appear on admin/content.
+  // @todo: remove this when https://www.drupal.org/node/2027043 is fixed.
+  if (!empty($data['tabs'])) {
+    foreach ($data['tabs'] as $tab_level => $tabs) {
+      foreach ($tabs as $href => $tab_data) {
+        if ($href == 'views_view:view.files.page_1') {
+          $data['tabs'][$tab_level][$href]['#access'] = FALSE;
+        }
+      }
+    }
+  }
+}

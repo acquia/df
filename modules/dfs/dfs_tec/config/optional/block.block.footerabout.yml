@@ -1,0 +1,33 @@
+uuid: d6242570-0867-48ed-a649-739a7a3275ac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b0627432-8487-4844-9434-52c35d3dcbc0'
+  module:
+    - block_class
+    - block_content
+    - dfs_tec
+  enforced:
+    module:
+      - dfs_tec
+third_party_settings:
+  block_class:
+    classes: footer-about
+id: footerabout
+theme: tec
+region: footer
+weight: 1
+provider: null
+plugin: 'block_content:b0627432-8487-4844-9434-52c35d3dcbc0'
+settings:
+  id: 'block_content:b0627432-8487-4844-9434-52c35d3dcbc0'
+  label: 'Footer about'
+  provider: block_content
+  label_display: '0'
+  cache:
+    max_age: -1
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

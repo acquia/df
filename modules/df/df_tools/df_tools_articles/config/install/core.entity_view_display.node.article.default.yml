@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.scheduled_update
     - image.style.article
     - node.type.article
   module:
@@ -166,6 +167,13 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+  scheduled_update:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   workbench_moderation_control:
     weight: -20
     settings: {  }
