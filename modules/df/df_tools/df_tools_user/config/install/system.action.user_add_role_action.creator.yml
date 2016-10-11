@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - user.role.curator
+    - user.role.creator
   module:
     - user
-id: user_add_role_action.curator
+id: user_add_role_action.creator
 label: 'Add the Curator role to the selected users'
 type: user
 plugin: user_add_role_action
 configuration:
-  rid: curator
+  rid: creator

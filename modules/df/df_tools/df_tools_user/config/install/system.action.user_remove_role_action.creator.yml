@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - user.role.curator
+    - user.role.creator
   module:
     - user
-id: user_remove_role_action.curator
+id: user_remove_role_action.creator
 label: 'Remove the Curator role from the selected users'
 type: user
 plugin: user_remove_role_action
 configuration:
-  rid: curator
+  rid: creator
