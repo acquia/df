@@ -5,6 +5,48 @@
  * Contains df_tools_editor.module.
  */
 
+use Drupal\editor\Entity\Editor;
+
+/**
+ * Implements hook_modules_installed().
+ *
+ * Adds Lite module buttons to the rich_text format.
+ */
+function df_tools_editor_modules_installed($modules) {
+  /** @var \Drupal\editor\EditorInterface $editor */
+  $editor = Editor::load('rich_text');
+
+  if ($editor) {
+    // Retrieve the editor settings for the Rich Text format.
+    $settings = $editor->getSettings();
+
+    // If a group of 'Track Changes' buttons is enabled, return.
+    foreach ($settings['toolbar']['rows'] as $row) {
+      foreach ($row as $group) {
+        if ($group['name'] == 'Track Changes') {
+          return;
+        }
+      }
+    }
+
+    // Define a group of 'Track Changes' buttons.
+    $lite = [
+      'name' => 'Track Changes',
+      'items' => [
+        'lite-acceptall',
+        'lite-acceptone',
+        'lite-rejectone',
+        'lite-toggleshow',
+        'lite-rejectall',
+      ],
+    ];
+
+    // Tack the 'Track Changes' group onto the end of the first toolbar row.
+    $settings['toolbar']['rows'][0][] = $lite;
+    $editor->setSettings($settings)->save();
+  }
+}
+
 /**
  * Implements hook_libraries_info_alter().
  *
