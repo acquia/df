@@ -4113,3 +4113,46 @@ table.hover tr:nth-of-type(even):hover {
 
 .full-width-modal-open #toolbar-bar {
   display: none; }
+
+.block-slideshow-form .iconpicker-element {
+  width: calc(100% - 40px);
+  display: inline-block; }
+
+.block-slideshow-form .field--widget-inline-entity-form-complex > div > fieldset {
+  background: #f1f1f1;
+  border: 1px solid black; }
+  .block-slideshow-form .field--widget-inline-entity-form-complex > div > fieldset legend {
+    padding: 0; }
+    .block-slideshow-form .field--widget-inline-entity-form-complex > div > fieldset legend .fieldset-legend {
+      display: none; }
+
+.ipe-block-form input[type="submit"] {
+  border-radius: 0;
+  margin: 0 5px 0 0; }
+
+.ipe-block-form input[name^="ief"][name$="add-existing"],
+.ipe-block-form input[name^="ief"][name$="add"],
+.ipe-block-form input[type="submit"].ief-entity-submit {
+  background: #2199e8;
+  color: white;
+  margin: 0 5px 0 0; }
+
+.ipe-block-form .ief-entity-table th {
+  display: none; }
+
+.ipe-block-form .ief-entity-table td {
+  display: inline-block; }
+
+.ipe-block-form .ief-entity-table td:last-child {
+  float: right; }
+
+.ipe-block-form .ief-entity-table .ief-entity-operations input {
+  font-size: 12px; }
+
+.ipe-block-form a.tabledrag-handle .handle {
+  width: 16px;
+  height: 16px;
+  background-position: left top;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0; }

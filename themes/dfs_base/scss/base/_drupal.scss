@@ -12,3 +12,60 @@
 .full-width-modal-open #toolbar-bar {
   display: none;
 }
+
+// Slideshow block styles.
+
+.block-slideshow-form {
+  .iconpicker-element {
+    width: calc(100% - 40px);
+    display: inline-block;
+  }
+  .field--widget-inline-entity-form-complex > div > fieldset {
+    background: #f1f1f1;
+    border: 1px solid black;
+    legend {
+      padding: 0;
+      .fieldset-legend {
+        display: none;
+      }
+    }
+  }
+}
+
+.ipe-block-form {
+  input[type="submit"] {
+    border-radius: 0;
+    margin: 0 5px 0 0;
+  }
+  input[name^="ief"][name$="add-existing"],
+  input[name^="ief"][name$="add"],
+  input[type="submit"].ief-entity-submit {
+    background: #2199e8;
+    color: white;
+    margin: 0 5px 0 0;
+  }
+  .ief-entity-table {
+    th {
+      display: none;
+    }
+    td {
+      display: inline-block;
+    }
+    td:last-child {
+      float: right;
+    }
+    .ief-entity-operations {
+      input {
+        font-size: 12px;
+      }
+    }
+  }
+  a.tabledrag-handle .handle {
+    width: 16px;
+    height: 16px;
+    background-position: left top;
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+  }
+}
