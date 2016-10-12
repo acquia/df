@@ -20,7 +20,7 @@ process:
     field_employee_name: Name
     field_title: 'Job Title'
     field_biography/value: Biography
-    field_biography/format: { plugin: default_value, default_value: full_html }
+    field_biography/format: { plugin: default_value, default_value: rich_text }
     field_headshot: Headshot
     field_department: Department
     field_email: Email
