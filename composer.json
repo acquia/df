@@ -36,6 +36,19 @@
             "url": "https://github.com/DevinCarlson/composer-patches"
         },
         {
+          "type": "package",
+          "package": {
+            "name": "drupal/config_tools",
+            "version": "dev-config_overrider",
+            "type": "drupal-module",
+            "source": {
+              "type": "git",
+              "url": "https://git.drupal.org/project/config_tools",
+              "reference": "12bc9378736d68cd2f12f5afbfb67b13fd637182"
+            }
+          }
+        },
+        {
             "type": "package",
             "package": {
                 "name": "desandro/masonry",
