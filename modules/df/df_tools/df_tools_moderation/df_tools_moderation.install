@@ -25,4 +25,13 @@ function df_tools_moderation_install() {
     $config->setData($data);
     $config->save();
   }
+
+  // Override the /admin/content view to be more relevant by adding moderation
+  // state and a language filter. Removes publish/unpublish actions.
+  $config = \Drupal::configFactory()->getEditable('df_tools_moderation.view.content');
+  $target = $config->get('target');
+  $settings = \Drupal::configFactory()->getEditable($target);
+  $settings->setData($config->get())->save();
+  $config->delete();
+
 }
