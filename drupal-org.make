@@ -44,6 +44,11 @@ projects[config_devel][version] = "1.x-dev"
 projects[config_sync][type] = "module"
 projects[config_sync][version] = "1.0-alpha3"
 
+projects[config_tools][type] = "module"
+projects[config_tools][download][type] = "git"
+projects[config_tools][download][branch] = "config_overrider"
+projects[config_tools][version] = "1.x-dev"
+
 projects[config_update][type] = "module"
 projects[config_update][version] = "1.1"
 
