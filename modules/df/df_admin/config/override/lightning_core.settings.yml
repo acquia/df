@@ -1,0 +1,17 @@
+content_roles:
+  creator:
+    enabled: false
+    label: '? Creator'
+    permissions:
+      - 'create ? content'
+      - 'edit own ? content'
+      - 'view ? revisions'
+      - 'view own unpublished content'
+      - 'create url aliases'
+  reviewer:
+    enabled: false
+    label: '? Reviewer'
+    permissions:
+      - 'edit any ? content'
+      - 'delete any ? content'
+

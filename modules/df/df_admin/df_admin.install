@@ -9,14 +9,6 @@
  * Implements hook_install().
  */
 function df_admin_install() {
-  // Set defaults for Lightning moderation role auto-generation.
-  $config = \Drupal::configFactory()->getEditable('lightning_core.settings');
-  $data = $config->getRawData();
-  $data['content_roles']['creator']['enabled'] = FALSE;
-  $data['content_roles']['reviewer']['enabled'] = FALSE;
-  $config->setData($data);
-  $config->save();
-
   // Disable new revision creation for page nodes.
   $config = \Drupal::configFactory()->getEditable('node.type.page');
   $data = $config->getRawData();
