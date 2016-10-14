@@ -11,7 +11,7 @@ dependencies:
     - node.type.article
   module:
     - comment
-    - file_browser
+    - entity_browser
     - inline_entity_form
     - path
     - scheduler
@@ -41,12 +41,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: file_browser
+    type: entity_browser_file
     weight: 1
     settings:
-      entity_browser: browse_files_modal
+      entity_browser: image_browser
       field_widget_edit: '1'
       field_widget_remove: '1'
+      selection_mode: selection_append
       view_mode: thumbnail
       open: 0
       preview_image_style: thumbnail
