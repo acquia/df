@@ -179,7 +179,7 @@ function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, F
  */
 function df_tools_blocks_migration_plugins_alter(&$definitions) {
   // Set up the correct path for the CSV file in import_block_map.
-  $types = ['hero', 'media'];
+  $types = ['hero', 'url'];
   foreach ($types as $type) {
     $id = 'import_block_' . $type;
     $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
@@ -207,6 +207,7 @@ function df_tools_blocks_block_alter(&$block_info) {
   $entity_block_id_whitelist = [
     'entity_block:entity_gallery',
     'entity_block:file',
+    'entity_block:media',
     'entity_block:node',
     'entity_block:taxonomy_term',
     'entity_block:user'
