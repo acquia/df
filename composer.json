@@ -36,19 +36,6 @@
             "url": "https://github.com/DevinCarlson/composer-patches"
         },
         {
-          "type": "package",
-          "package": {
-            "name": "drupal/config_tools",
-            "version": "dev-config_overrider",
-            "type": "drupal-module",
-            "source": {
-              "type": "git",
-              "url": "https://git.drupal.org/project/config_tools",
-              "reference": "12bc9378736d68cd2f12f5afbfb67b13fd637182"
-            }
-          }
-        },
-        {
             "type": "package",
             "package": {
                 "name": "desandro/masonry",
@@ -206,7 +193,7 @@
             },
             "drupal/config_tools": {
               "Rewrite ConfigPartialOverrideFactory::loadOverrides | https://www.drupal.org/node/2820086":
-              "https://www.drupal.org/files/issues/config-partial-override-2820086-3.patch"
+              "https://www.drupal.org/files/issues/config_partial_override-8.x-1.x.patch"
             },
             "drupal/page_manager": {
                 "Rename the core 'Page with blocks' admin_label... | https://www.drupal.org/node/2503947":
@@ -273,7 +260,7 @@
         "drupal/config_devel": "8.1.0-alpha3",
         "drupal/config_rewrite": "8.1.x-dev",
         "drupal/config_sync": "8.1.x-dev",
-        "drupal/config_tools": "dev-config_overrider",
+        "drupal/config_tools": "8.1.x-dev",
         "drupal/content_browser": "8.1.0-alpha1",
         "drupal/crop": "8.1.0",
         "drupal/entity_block": "8.1.x-dev",

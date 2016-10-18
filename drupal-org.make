@@ -51,9 +51,9 @@ projects[config_sync][version] = "1.0-alpha3"
 
 projects[config_tools][type] = "module"
 projects[config_tools][download][type] = "git"
-projects[config_tools][download][branch] = "config_overrider"
+projects[config_tools][download][branch] = "8.x-1.x"
 projects[config_tools][version] = "1.x-dev"
-projects[config_tools][patch][0] = "https://www.drupal.org/files/issues/config-partial-override-2820086-3.patch"
+projects[config_tools][patch][0] = "https://www.drupal.org/files/issues/config_partial_override-8.x-1.x.patch"
 
 projects[config_update][type] = "module"
 projects[config_update][version] = "1.1"
