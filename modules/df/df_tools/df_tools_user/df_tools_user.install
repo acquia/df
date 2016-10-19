@@ -9,10 +9,6 @@ use Drupal\shortcut\Entity\Shortcut;
 use Drupal\user\Entity\User;
 
 function df_tools_user_install() {
-  // Allow visitor account creation with administrative approval.
-  $user_settings = \Drupal::configFactory()->getEditable('user.settings');
-  $user_settings->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save();
-
   // Enable default permissions for system roles.
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments', 'use search', 'search content', 'access user profiles'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval', 'search content', 'access user profiles'));
