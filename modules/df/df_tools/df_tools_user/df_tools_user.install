@@ -8,6 +8,9 @@
 use Drupal\shortcut\Entity\Shortcut;
 use Drupal\user\Entity\User;
 
+/**
+ * Implements hook_install().
+ */
 function df_tools_user_install() {
   // Enable default permissions for system roles.
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments', 'use search', 'search content', 'access user profiles'));
