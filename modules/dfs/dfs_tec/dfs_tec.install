@@ -9,15 +9,6 @@
  * Implements hook_install().
  */
 function dfs_tec_install() {
-  // Set front page to "dev-home".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/dfs-tec-home')->save();
-
-  // Set the default theme to Tec.
-  \Drupal::configFactory()->getEditable('system.theme')->set('default', 'tec')->save();
-
-  // Set the default contact form.
-  \Drupal::configFactory()->getEditable('contact.settings')->set('default_form', 'contact_form')->save();
-
   // Enable translation for all of our entities/bundles.
   $entities = [
     'node' => ['employee', 'service']
@@ -26,12 +17,6 @@ function dfs_tec_install() {
 
   // Import our custom .po files
   df_tools_translation_import_translations('module', 'dfs_tec');
-
-  // Change the article display mode.
-  $article_config = \Drupal::configFactory()->getEditable('core.entity_view_display.node.article.default');
-  $data = $article_config->getRawData();
-  $data['content']['field_image']['settings']['image_style'] = '';
-  $article_config->setData($data)->save();
 }
 
 /**
@@ -39,5 +24,5 @@ function dfs_tec_install() {
  */
 function dfs_tec_uninstall() {
   // Set front page to "welcome".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', 'welcome')->save();
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/welcome')->save();
 }
