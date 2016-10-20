@@ -1,0 +1,116 @@
+<?php
+/**
+ * @file
+ * Code for the df_tools_image module.
+ */
+
+
+/**
+ * Seeds image style derivatives.
+ *
+ * @param string $dir The root level of images
+ * @param array $excludes Image styles to exclude
+ * @param array $includes Image styles to include
+ */
+function df_tools_image_seed_derivatives($dir = '/', $excludes = array(), $includes = array()) {
+  if (!\Drupal::moduleHandler()->moduleExists('image')) {
+    drupal_set_message("This script requires the image module to be enabled.", 'error');
+    return;
+  }
+
+  $operations = df_tools_image_seed_derivatives_operations($dir, $excludes, $includes);
+
+  $batch = array(
+    'operations' => $operations,
+    'title' => t('Image styles processing'),
+    'init_message' => t('Starting image style processing'),
+    'progress_message' => t('Processing image styles...'),
+    'error_message' => t('An error occurred. Some or all of the image style processing has failed.'),
+  );
+  batch_set($batch);
+
+  if (PHP_SAPI !== 'cli') {
+    batch_process('');
+  } else {
+    drush_backend_batch_process();
+  }
+}
+
+/**
+ * Returns the operations required to seed image style derivatives.
+ *
+ * @param string $dir The root level of images
+ * @param array $excludes Image styles to exclude
+ * @param array $includes Image styles to include
+ *
+ * @return array Operations required to seed image derivatives
+ */
+function df_tools_image_seed_derivatives_operations($dir = '/', $excludes = array(), $includes = array()) {
+  $operations = array();
+
+  $extensions = array('jpeg', 'jpg', 'gif', 'png');
+  $mimetypes = array('image/jpeg', 'image/jpg', 'image/gif', 'image/png');
+
+  $dir = rtrim($dir, '/');
+  if ($dir == 'public') {
+    $file_pattern = "[^\/]*"; // Finds anything that does not contain "/", should be fine.
+  }
+  else {
+    $file_pattern = $dir ? $dir . ".+" : ".+";
+  }
+
+  $regex = "^public:\/\/(" . $file_pattern . ")\.(" . implode($extensions, '|') . ")$";
+
+  // Query the database for files that match this pattern.
+  $query = db_select('file_managed', 'f')
+      ->condition('filemime', $mimetypes , 'IN')
+      ->condition('uri', $regex, 'REGEXP');
+  $total_count = $query->countQuery()->execute()->fetchField();
+
+  // Select the files to have derivatives created..
+  $files = $query->fields('f', array('fid', 'filename', 'uri'))
+      ->execute()
+      ->fetchAll();
+
+  $message = \Drupal::translation()->formatPlural(
+      $total_count,
+      '1 entry is to have its image derivatives created.',
+      '@count entries are to have their image derivatives created.',
+      array('@count' => $total_count)
+  );
+  $operations[] = array('drush_log', array($message, 'success'));
+
+  foreach (\Drupal\image\Entity\ImageStyle::loadMultiple() as $name => $style) {
+    if (!empty($excludes) && in_array($style->getName(), $excludes)) {
+      $operations[] = array('drush_log', array('Excluding ' . $name, 'success'));
+      continue;
+    }
+
+    if (empty($includes[0]) || in_array($style->getName(), $includes)) {
+      $operations[] = array('drush_log', array('Processing ' . $name, 'success'));
+      $count = 1;
+      $last_progress = 0;
+      foreach ($files as $file) {
+        $derivative_uri = $style->buildUri($file->uri);
+
+        if (!file_exists($derivative_uri)) {
+          $operations[] = array('df_tools_image_batch_process', array($style, $file->uri, $derivative_uri));
+        }
+        $progress = round(($count / $total_count) * 100);
+        if (($progress % 25 === 0 || $progress % 7 === 0) && $progress != $last_progress) {
+          // If we're in the command line, print the percentage, otherwise hide it
+          if (PHP_SAPI === 'cli') {
+            $operations[] = array('drush_print', array('...' . $progress . '%', 0, NULL, ($progress == 100)));
+          }
+        $last_progress = $progress;
+        }
+      $count++;
+      }
+    }
+  }
+  return $operations;
+}
+
+function df_tools_image_batch_process($style, $uri, $derivative_uri) {
+  $style->createDerivative($uri, $derivative_uri);
+}
