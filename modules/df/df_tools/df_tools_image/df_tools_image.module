@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Code for the df_tools_image module.
@@ -20,18 +21,16 @@ function df_tools_image_seed_derivatives($dir = '/', $excludes = array(), $inclu
 
   $operations = df_tools_image_seed_derivatives_operations($dir, $excludes, $includes);
 
-  $batch = array(
+  $batch = [
     'operations' => $operations,
     'title' => t('Image styles processing'),
     'init_message' => t('Starting image style processing'),
     'progress_message' => t('Processing image styles...'),
     'error_message' => t('An error occurred. Some or all of the image style processing has failed.'),
-  );
-  batch_set($batch);
+  ];
 
-  if (PHP_SAPI !== 'cli') {
-    batch_process('');
-  } else {
+  batch_set($batch);
+  if (PHP_SAPI === 'cli') {
     drush_backend_batch_process();
   }
 }
