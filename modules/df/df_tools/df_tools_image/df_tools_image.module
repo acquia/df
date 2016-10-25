@@ -74,8 +74,8 @@ function df_tools_image_seed_derivatives_operations($dir = '/', $excludes = arra
   $message = \Drupal::translation()->formatPlural(
       $total_count,
       '1 entry is to have its image derivatives created.',
-      '@count entries are to have their image derivatives created.',
-      array('@count' => $total_count)
+      '@total_count entries are to have their image derivatives created.',
+      array('@total_count' => $total_count)
   );
   $operations[] = array('drush_log', array($message, 'success'));
 
