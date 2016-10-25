@@ -18,13 +18,25 @@ class CreateDerivativesForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['description'] = array(
+
+    $styles = [];
+
+    foreach (\Drupal\image\Entity\ImageStyle::loadMultiple() as $name => $style) {
+      $styles[$name] = $style->label();
+    }
+
+    $form['description'] = [
       '#markup' => '<p>' . t('Image derivatives can be created in bulk manually to remove the need for Drupal to create them on page load.') . '</p>',
-    );
-    $form['run'] = array(
+    ];
+    $form['image_styles'] = [
+      '#type' => 'checkboxes',
+      '#options' => $styles,
+      '#title' => $this->t('Which derivatives would you like to create?'),
+    ];
+    $form['run'] = [
       '#type' => 'submit',
       '#value' => t('Create derivatives'),
-    );
+    ];
 
     return $form;
   }
@@ -33,7 +45,8 @@ class CreateDerivativesForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    return df_tools_image_seed_derivatives();
+    $styles = array_diff(array_values($form_state->getValue('image_styles')), [0]);
+    return df_tools_image_seed_derivatives('/', array(), $styles);
   }
 }
 
