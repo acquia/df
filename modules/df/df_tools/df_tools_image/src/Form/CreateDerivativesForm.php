@@ -32,6 +32,7 @@ class CreateDerivativesForm extends FormBase {
       '#type' => 'checkboxes',
       '#options' => $styles,
       '#title' => $this->t('Which derivatives would you like to create?'),
+      '#description' => $this->t('Select all image styles that should be created. If none are selected, all image derivatives will be created.'),
     ];
     $form['run'] = [
       '#type' => 'submit',
