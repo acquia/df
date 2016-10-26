@@ -1,0 +1,36 @@
+uuid: 44817103-0f37-4769-9f00-fb53adeeb7ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media
+    - field.storage.block_content.field_media
+    - media_entity.bundle.document
+    - media_entity.bundle.image
+    - media_entity.bundle.instagram
+    - media_entity.bundle.tweet
+    - media_entity.bundle.video
+id: block_content.media.field_media
+field_name: field_media
+entity_type: block_content
+bundle: media
+label: Media
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      image: image
+      instagram: instagram
+      tweet: tweet
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference
