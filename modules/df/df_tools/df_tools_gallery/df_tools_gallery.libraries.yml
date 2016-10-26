@@ -1,3 +1,27 @@
+imagesloaded:
+  remote: https://github.com/desandro/imagesloaded
+  version: VERSION
+  license:
+    name: MIT
+    url: https://github.com/desandro/imagesloaded/
+    gpl-compatible: true
+  js:
+    /libraries/imagesloaded/imagesloaded.pkgd.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+masonry:
+  remote: http://masonry.desandro.com/
+  version: VERSION
+  license:
+    name: MIT
+    url: https://github.com/desandro/masonry/
+    gpl-compatible: true
+  js:
+    /libraries/masonry/dist/masonry.pkgd.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
 view:
   version: VERSION
   js:
@@ -8,5 +32,5 @@ view:
   dependencies:
     - core/jquery
     - core/drupal
-    - file_browser/imagesloaded
-    - file_browser/masonry
+    - df_tools_gallery/imagesloaded
+    - df_tools_gallery/masonry
