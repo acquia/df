@@ -143,8 +143,8 @@ function dfs_tec_migration_plugins_alter(&$definitions) {
       ],
       'fields' => [
         'path' => 'Path',
-        'field_headline' => 'Headline',
-        'field_subheadline' => 'Subheadline',
+        'field_headline/value' => 'Headline',
+        'field_subheadline/value' => 'Subheadline',
         'field_hero_image' => 'Hero Image'
       ],
       'plugin' => 'service_node'
