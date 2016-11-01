@@ -1,0 +1,17 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_page
+label: 'Import dfs_tec:node:page'
+source:
+    plugin: csv
+    path: ../data/dfs_tec.node.page.csv
+    header_row_count: 1
+    keys: [Title]
+destination:
+    plugin: 'entity:node'
+process:
+    type: { plugin: default_value, default_value: page }
+    title: Title
+    body/value: Body
+    body/format: { plugin: default_value, default_value: full_html }
+    moderation_state: { plugin: default_value, default_value: published }
+provider: import

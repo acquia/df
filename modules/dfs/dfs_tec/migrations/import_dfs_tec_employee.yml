@@ -1,0 +1,34 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_employee
+label: 'Import dfs_tec:node:employee'
+source:
+    plugin: employee_node
+    path: ../data/dfs_tec.node.employee.csv
+    header_row_count: 1
+    keys: [Title]
+    csvColumns: { 2: 'Job Title', 3: Biography, 0: Title, 1: Name, 4: Headshot, 5: Department, 6: Email, 7: Location, 8: Phone, 9: Links, 10: Path }
+destination:
+    plugin: 'entity:node'
+process:
+    type: { plugin: default_value, default_value: employee }
+    title: Title
+    body/value: Body
+    field_image: Image
+    field_tags: { plugin: migration, migration: import_dfs_tec_tags, source: Tags }
+    body/format: { plugin: default_value, default_value: full_html }
+    moderation_state: { plugin: default_value, default_value: published }
+    path: Path
+    field_employee_name: Name
+    field_title: 'Job Title'
+    field_biography/value: Biography
+    field_biography/format: { plugin: default_value, default_value: full_html }
+    field_headshot: Headshot
+    field_department: Department
+    field_email: Email
+    field_location: Location
+    field_phone: Phone
+    field_links: Links
+provider: import
+migration_dependencies:
+    required: [import_dfs_tec_tags]
+    optional: [import_dfs_tec_tags]

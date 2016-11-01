@@ -1,0 +1,17 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_slideshow
+label: 'Import dfs_tec:block_content:slideshow'
+source:
+    plugin: slideshow_block
+    path: ../data/dfs_tec.block_content.slideshow.csv
+    header_row_count: 1
+    keys: [UUID]
+    csvColumns: { 2: Slides }
+destination:
+    plugin: 'entity:block_content'
+process:
+    type: { plugin: default_value, default_value: slideshow }
+    uuid: UUID
+    info: Info
+    field_block: Slides
+provider: import

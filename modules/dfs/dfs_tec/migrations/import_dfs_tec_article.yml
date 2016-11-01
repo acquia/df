@@ -1,0 +1,23 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_article
+label: 'Import dfs_tec:node:article'
+source:
+    plugin: article_node
+    path: ../data/dfs_tec.node.article.csv
+    header_row_count: 1
+    keys: [Title]
+    csvColumns: { 2: Image, 3: Tags, 0: Title, 1: Body, 4: Path }
+destination:
+    plugin: 'entity:node'
+process:
+    type: { plugin: default_value, default_value: article }
+    title: Title
+    body/value: Body
+    field_image: Image
+    field_tags: { plugin: migration, migration: import_dfs_tec_tags, source: Tags }
+    body/format: { plugin: default_value, default_value: full_html }
+    moderation_state: { plugin: default_value, default_value: published }
+    path: Path
+provider: import
+migration_dependencies:
+    required: [import_dfs_tec_tags]

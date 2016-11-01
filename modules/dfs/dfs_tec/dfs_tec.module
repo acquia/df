@@ -8,29 +8,6 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
- * Implements hook_help().
- */
-function dfs_tec_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the dfs_dev module.
-    case 'help.page.dfs_tec':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Demo Framework Scenario for Technology Websites.') . '</p>';
-      return $output;
-    default:
-  }
-}
-
-/**
- * Implements hook_theme().
- */
-function dfs_tec_theme() {
-  $theme = [];
-  return $theme;
-}
-
-/**
  * Implements hook_scenario_import().
  */
 function dfs_tec_scenario_import() {
@@ -53,7 +30,7 @@ function dfs_tec_scenario_import() {
  * Implements hook_module_implements_alter().
  */
 function dfs_tec_module_implements_alter(&$implementations, $hook) {
-  // Ensure dynamic migrations get set in the right order.
+  // Ensure migrations get set in the right order.
   if ($hook == 'migration_plugins_alter') {
     $preferred_order = [
       'import',
@@ -75,116 +52,9 @@ function dfs_tec_module_implements_alter(&$implementations, $hook) {
  * Implements hook_migration_plugins_alter().
  */
 function dfs_tec_migration_plugins_alter(&$definitions) {
-  // Set up base path.
-  $path = dirname(__FILE__) . '/data/';
-
-  $dfs = 'dfs_tec';
-
-  // Set up Basic Page Migration.
-  $migration = _df_migration_copy($definitions['import_node_page'], $dfs, 'page', 'node', $path);
-  $definitions[$migration['id']] = $migration;
-
-  // Base extended node types on Article migration.
-  $content_types = [
-    'article' => [
-      'columns' => [
-        'Title',
-        'Body',
-        'Image',
-        'Tags',
-        'Path',
-      ],
-      'fields' => [
-        'path' => 'Path'
-      ],
-      'plugin' => FALSE
-    ],
-    'employee' => [
-      'columns' => [
-        'Title',
-        'Name',
-        'Job Title',
-        'Biography',
-        'Headshot',
-        'Department',
-        'Email',
-        'Location',
-        'Phone',
-        'Links',
-        'Path'
-      ],
-      'fields' => [
-        'path' => 'Path',
-        'field_employee_name' => 'Name',
-        'field_title' => 'Job Title',
-        'field_biography/value' => 'Biography',
-        'field_biography/format' => [
-          'plugin' => 'default_value',
-          'default_value' => 'full_html'
-        ],
-        'field_headshot' => 'Headshot',
-        'field_department' => 'Department',
-        'field_email' => 'Email',
-        'field_location' => 'Location',
-        'field_phone' => 'Phone',
-        'field_links' => 'Links',
-      ],
-      'plugin' => 'employee_node'
-    ],
-    'service' => [
-      'columns' => [
-        'Title',
-        'Headline',
-        'Subheadline',
-        'Body',
-        'Hero Image',
-        'Tags',
-        'Path'
-      ],
-      'fields' => [
-        'path' => 'Path',
-        'field_headline' => 'Headline',
-        'field_subheadline' => 'Subheadline',
-        'field_hero_image' => 'Hero Image'
-      ],
-      'plugin' => 'service_node'
-    ],
-  ];
-  foreach ($content_types as $type => $info) {
-    $migration = _df_migration_copy($definitions['import_node_article'], $dfs, $type, 'node', $path);
-    // Add our custom fields.
-    _df_migration_fields($migration, $info['columns'], $info['fields']);
-
-    // Add our custom plugins.
-    if ($info['plugin']) {
-      $migration['source']['plugin'] = $info['plugin'];
-    }
-
-    // Change the migration source for tags
-    $migration['process']['field_tags'] = array(
-      'plugin' => 'migration',
-      'migration' => 'import_dfs_tec_tags',
-      'source' => 'Tags',
-    );
-
-    // Remove any dependencies that may have been set in the base migration.
-    $migration['migration_dependencies'] = ['required' => ['import_dfs_tec_tags']];
-
-    $definitions[$migration['id']] = $migration;
+  // Update source references in scenario migrations.
+  $import = dfs_tec_scenario_import();
+  foreach ($import['dfs_tec'] as $id) {
+    $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
   }
-
-  // Add our block migrations
-  $block_types = array('slideshow', 'hero', 'basic');
-  foreach ($block_types as $type) {
-    $migration = _df_migration_copy($definitions['import_block_' . $type], $dfs, $type, 'block_content', $path);
-    $definitions[$migration['id']] = $migration;
-  }
-
-  // Copy the base taxonomy term migration to point to our csv
-  $migration = _df_migration_copy($definitions['import_term_tags'], $dfs, 'tags', 'term', $path);
-  $definitions[$migration['id']] = $migration;
-
-  // Copy the base image migration to point to our csv
-  $migration = _df_migration_copy($definitions['import_file_image'], $dfs, 'image', 'file', $path);
-  $definitions[$migration['id']] = $migration;
 }

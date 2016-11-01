@@ -1,0 +1,13 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_image
+label: 'Import dfs_tec:file:image'
+source:
+    plugin: image_file
+    path: ../data/dfs_tec.file.image.csv
+    header_row_count: 1
+    keys: [File]
+destination:
+    plugin: 'entity:file'
+process:
+    filepath: File
+provider: import

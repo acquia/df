@@ -1,0 +1,22 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_hero
+label: 'Import dfs_tec:block_content:hero'
+source:
+    plugin: hero_block
+    path: ../data/dfs_tec.block_content.hero.csv
+    header_row_count: 1
+    keys: [UUID]
+    csvColumns: { 2: 'First Line', 3: 'Second Line', 4: Link, 5: 'Link Title', 6: Image, 7: 'Nested Blocks' }
+destination:
+    plugin: 'entity:block_content'
+process:
+    type: { plugin: default_value, default_value: hero }
+    uuid: UUID
+    info: Info
+    field_first_line/value: 'First Line'
+    field_second_line/value: 'Second Line'
+    field_hero_link/uri: Link
+    field_hero_link/title: 'Link Title'
+    field_hero_image: Image
+    field_nested_block: 'Nested Blocks'
+provider: import

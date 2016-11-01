@@ -1,0 +1,26 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_service
+label: 'Import dfs_tec:node:service'
+source:
+    plugin: service_node
+    path: ../data/dfs_tec.node.service.csv
+    header_row_count: 1
+    keys: [Title]
+    csvColumns: { 2: Subheadline, 3: Body, 0: Title, 1: Headline, 4: 'Hero Image', 5: Tags, 6: Path }
+destination:
+    plugin: 'entity:node'
+process:
+    type: { plugin: default_value, default_value: service }
+    title: Title
+    body/value: Body
+    field_image: Image
+    field_tags: { plugin: migration, migration: import_dfs_tec_tags, source: Tags }
+    body/format: { plugin: default_value, default_value: full_html }
+    moderation_state: { plugin: default_value, default_value: published }
+    path: Path
+    field_headline: Headline
+    field_subheadline: Subheadline
+    field_hero_image: 'Hero Image'
+provider: import
+migration_dependencies:
+    required: [import_dfs_tec_tags]

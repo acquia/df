@@ -1,0 +1,18 @@
+class: \Drupal\migrate\Plugin\Migration
+id: import_dfs_tec_basic
+label: 'Import dfs_tec:block_content:basic'
+source:
+    plugin: csv
+    path: ../data/dfs_tec.block_content.basic.csv
+    header_row_count: 1
+    keys: [UUID]
+    csvColumns: { 2: Body }
+destination:
+    plugin: 'entity:block_content'
+process:
+    type: { plugin: default_value, default_value: basic }
+    uuid: UUID
+    info: Info
+    body/value: Body
+    body/format: { plugin: default_value, default_value: full_html }
+provider: import
