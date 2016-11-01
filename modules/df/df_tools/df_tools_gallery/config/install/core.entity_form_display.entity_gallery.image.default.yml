@@ -22,14 +22,14 @@ content:
     type: entity_browser_entity_reference
     weight: 2
     settings:
-      entity_browser: browse_files_modal
+      entity_browser: image_browser
       field_widget_display: thumbnail
       field_widget_edit: true
       field_widget_remove: true
       open: true
-      selection_mode: append
+      selection_mode: selection_append
       field_widget_display_settings:
-        image_style: file_entity_browser_small
+        image_style: thumbnail
     third_party_settings: {  }
   langcode:
     type: language_select
