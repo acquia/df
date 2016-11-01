@@ -69,7 +69,7 @@
       var $child = $modal.find('iframe');
       if ($child.length > 0) {
         if ($child.attr('src').indexOf('/entity-browser/modal/browse_content') == 0 ||
-          $child.attr('src').indexOf('/entity-browser/modal/browse_files_modal') == 0) {
+          $child.attr('src').indexOf('/entity-browser/iframe/media_browser') == 0) {
           // Make the modal full width.
           $modal.dialog({
             width: '100%',
