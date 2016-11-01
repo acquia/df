@@ -20,7 +20,7 @@
         var self = this;
         $button.on('click', function () {
           // Embed File Browser in an iFrame.
-          var $modal = $('<div><iframe width="100%" height="100%" style="display: none; border: 0;" src="/entity-browser/modal/browse_files_modal" /></div>');
+          var $modal = $('<div><iframe width="100%" height="100%" style="display: none; border: 0;" src="/entity-browser/iframe/media_browser" /></div>');
           var dialog = Drupal.dialog($modal, {});
           dialog.showModal();
           $modal.find('iframe').on('load', function () {
