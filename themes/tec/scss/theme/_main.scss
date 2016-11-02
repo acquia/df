@@ -20,9 +20,7 @@
     .hero-block-fields {
       position: absolute;
       left: 20%;
-      top: 25%;
-      height: rem-calc(350px);
-      width: rem-calc(300px);
+      top: 30%;
       padding: rem-calc(15px);
       background-color: rgba(255, 255, 255, .5);
       @media #{$medium-only},
@@ -44,7 +42,6 @@
       text-transform: uppercase;
     }
     .field-name-field-second-line {
-      padding-top: rem-calc(20px);
       @media #{$medium-only},
       #{$small-only} {
         padding-top: 0;

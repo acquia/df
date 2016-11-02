@@ -68,33 +68,31 @@ function df_tools_translation_scenarios_migration_finished(Drupal\migrate\Plugin
           $id = reset($ids);
           /** @var Drupal\Core\Entity\ContentEntityBase $entity */
           $entity = $entityStorage->load($id);
+          $translation = $entity->addTranslation($langcode, $entity->toArray());
 
           // Parse the process array and find anything that came from a CSV.
           // Then, map the translated CSV value's onto the current field.
           // @todo Add multivalue field support.
-          $values = [];
           foreach ($processes as $field => $process) {
             $untranslatable = ['uuid', 'type'];
-            if (!in_array($field, $untranslatable) && isset($process[0]['source'])) {
-              // Copy the english field value.
+            if (!in_array($field, $untranslatable) && isset($process[0]['source']) && isset($row[$process[0]['source']])) {
               $field_parts = explode('/', $field);
-              if ($entity->hasField($field_parts[0])) {
-                $values[$field_parts[0]] = $entity->get($field_parts[0])
-                  ->getValue();
-
-                // We can't translate immutable fields.
-                if (isset($row[$process[0]['source']])) {
-                  // Set the appropriate value based on the row
-                  $values[$field_parts[0]] = df_tools_translation_process_field($field_parts, $values, $row[$process[0]['source']]);
+              if ($translation->hasField($field_parts[0])) {
+                $field = $translation->get($field_parts[0]);
+                $value = $field->getValue();
+                if (isset($field_parts[1]) && isset($value[0]) && isset($value[0][$field_parts[1]])) {
+                  $value[0][$field_parts[1]] = $row[$process[0]['source']];
                 }
+                else {
+                  $value = $row[$process[0]['source']];
+                }
+                $field->setValue($value);
               }
             }
           }
 
-          // Add a translation with the current values and save.
-          $entity->addTranslation($langcode, $values);
+          // Save the entity and its translation.
           $entity->save();
-          $translation = $entity->getTranslation($langcode);
           $translation->save();
         }
 
@@ -128,28 +126,6 @@ function df_tools_translation_initialize_csv($filename) {
   $file->setColumnNames($column_names);
 
   return $file;
-}
-
-/**
- * Attempts to set a field value based on our translated CSV data.
- *
- * @param array $field_parts The nested field array (ex: [body,value]).
- * @param array $values The current translated values.
- * @param string $new_value A cell value from the translated CSV.
- *
- * @return array
- */
-function df_tools_translation_process_field($field_parts, $values, $new_value) {
-  // Check for nested field values
-  if (isset($values[$field_parts[0]][0][$field_parts[1]])) {
-    $values[$field_parts[0]][0][$field_parts[1]] = $new_value;
-  }
-  // This must be a property
-  else {
-    $values[$field_parts[0]] = [$new_value];
-  }
-
-  return $values[$field_parts[0]];
 }
 
 /**
