@@ -18,8 +18,8 @@ process:
     body/format: { plugin: default_value, default_value: full_html }
     moderation_state: { plugin: default_value, default_value: published }
     path: Path
-    field_headline: Headline
-    field_subheadline: Subheadline
+    field_headline/value: Headline
+    field_subheadline/value: Subheadline
     field_hero_image: 'Hero Image'
 provider: import
 migration_dependencies:
