@@ -6,7 +6,7 @@ source:
     path: ../data/dfs_tec.node.service.csv
     header_row_count: 1
     keys: [Title]
-    csvColumns: { 2: Subheadline, 3: Body, 0: Title, 1: Headline, 4: 'Hero Image', 5: Tags, 6: Path }
+    csvColumns: { 2: Subheadline, 3: Body, 0: Title, 1: Headline, 4: 'Hero Image', 5: Tags }
 destination:
     plugin: 'entity:node'
 process:
@@ -17,7 +17,6 @@ process:
     field_tags: { plugin: migration, migration: import_dfs_tec_tags, source: Tags }
     body/format: { plugin: default_value, default_value: full_html }
     moderation_state: { plugin: default_value, default_value: published }
-    path: Path
     field_headline/value: Headline
     field_subheadline/value: Subheadline
     field_hero_image: 'Hero Image'

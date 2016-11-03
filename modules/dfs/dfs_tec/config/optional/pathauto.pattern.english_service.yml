@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: english_service
+label: 'English and French Service'
+type: 'canonical_entities:node'
+pattern: '/service/[node:title]'
+selection_criteria:
+  e0399057-8563-4618-823a-2bc54e49d927:
+    id: node_type
+    bundles:
+      service: service
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e0399057-8563-4618-823a-2bc54e49d927
+  9bcac4cd-c733-4389-81c2-87a135162b63:
+    id: language
+    langcodes:
+      en: en
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 9bcac4cd-c733-4389-81c2-87a135162b63
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

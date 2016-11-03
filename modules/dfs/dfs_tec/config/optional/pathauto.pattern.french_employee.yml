@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: french_employee
+label: 'French Employee'
+type: 'canonical_entities:node'
+pattern: '/equipe/[node:title]'
+selection_criteria:
+  a6140c9f-ebdc-41b3-9130-7589455bd1c2:
+    id: node_type
+    bundles:
+      employee: employee
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a6140c9f-ebdc-41b3-9130-7589455bd1c2
+  34490421-b547-4e66-bf57-b01350610303:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 34490421-b547-4e66-bf57-b01350610303
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

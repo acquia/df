@@ -6,7 +6,7 @@ defaults[projects][subdir] = "contrib"
 
 ; Profiles
 projects[lightning][type] = "profile"
-projects[lightning][version] = "1.11"
+projects[lightning][version] = "1.12"
 projects[lightning][subdir] = ""
 
 ; Modules
@@ -84,7 +84,7 @@ projects[entity_block][download][branch] = "8.x-1.x"
 projects[entity_block][version] = "1.x-dev"
 
 projects[entity_browser][type] = "module"
-projects[entity_browser][version] = "1.0-alpha9"
+projects[entity_browser][version] = "1.0-alpha10"
 
 projects[entity_embed][type] = "module"
 projects[entity_embed][version] = "1.0-beta2"
@@ -286,6 +286,7 @@ projects[workbench_moderation][patch][3] = "https://www.drupal.org/files/issues/
 ; Themes
 projects[adminimal_theme][type] = "theme"
 projects[adminimal_theme][version] = "1.2"
+projects[adminimal_theme][patch][0] = "https://www.drupal.org/files/issues/2820992-adminial-theme-remove-zoom.patch"
 
 projects[zurb-foundation][type] = "theme"
 projects[zurb-foundation][download][type] = "git"

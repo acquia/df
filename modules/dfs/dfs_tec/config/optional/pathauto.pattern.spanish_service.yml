@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: spanish_service
+label: 'Spanish Service'
+type: 'canonical_entities:node'
+pattern: '/servicio/[node:title]'
+selection_criteria:
+  27ae4a13-bf3a-43b8-926b-4d5c7158863b:
+    id: node_type
+    bundles:
+      service: service
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 27ae4a13-bf3a-43b8-926b-4d5c7158863b
+  6c2f24b8-3ca5-40b3-9d81-47957bed4255:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 6c2f24b8-3ca5-40b3-9d81-47957bed4255
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language
