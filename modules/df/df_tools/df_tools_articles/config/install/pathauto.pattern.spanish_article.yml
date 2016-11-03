@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: spanish_article
+label: 'Spanish Article'
+type: 'canonical_entities:node'
+pattern: '/contenido/[node:title]'
+selection_criteria:
+  dbc61674-b189-4edb-9725-2c76d6668477:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: dbc61674-b189-4edb-9725-2c76d6668477
+  12de2ece-c3ff-416e-a13f-68c3a1fa3861:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 12de2ece-c3ff-416e-a13f-68c3a1fa3861
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

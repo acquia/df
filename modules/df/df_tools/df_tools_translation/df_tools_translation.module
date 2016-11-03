@@ -66,33 +66,39 @@ function df_tools_translation_scenarios_migration_finished(Drupal\migrate\Plugin
         if (!empty($ids)) {
           // Load the Entity, so we can grab field values and add a translation.
           $id = reset($ids);
+
           /** @var Drupal\Core\Entity\ContentEntityBase $entity */
           $entity = $entityStorage->load($id);
-          $translation = $entity->addTranslation($langcode, $entity->toArray());
+          $entity_values = $entity->toArray();
+          $entity_values['path'] = [];
+          $translation = $entity->addTranslation($langcode, $entity_values);
 
           // Parse the process array and find anything that came from a CSV.
           // Then, map the translated CSV value's onto the current field.
           // @todo Add multivalue field support.
           foreach ($processes as $field => $process) {
-            $untranslatable = ['uuid', 'type'];
+            $untranslatable = ['uuid', 'type', 'path'];
             if (!in_array($field, $untranslatable) && isset($process[0]['source']) && isset($row[$process[0]['source']])) {
+              $new_value = $row[$process[0]['source']];
               $field_parts = explode('/', $field);
-              if ($translation->hasField($field_parts[0])) {
-                $field = $translation->get($field_parts[0]);
-                $value = $field->getValue();
-                if (isset($field_parts[1]) && isset($value[0]) && isset($value[0][$field_parts[1]])) {
-                  $value[0][$field_parts[1]] = $row[$process[0]['source']];
+              $field_name = $field_parts[0];
+              $value_key = isset($field_parts[1]) ? $field_parts[1] : FALSE;
+              if ($entity->hasField($field_name)) {
+                // If the process is defined as something like body/value, we
+                // know that we only need to change the key "value".
+                if ($value_key) {
+                  $value = $translation->get($field_name)->getValue();
+                  $value[0][$value_key] = $new_value;
+                  $translation->get($field_name)->setValue($value);
                 }
+                // This is probably a property like title.
                 else {
-                  $value = $row[$process[0]['source']];
+                  $translation->get($field_name)->setValue($new_value);
                 }
-                $field->setValue($value);
               }
             }
           }
 
-          // Save the entity and its translation.
-          $entity->save();
           $translation->save();
         }
 

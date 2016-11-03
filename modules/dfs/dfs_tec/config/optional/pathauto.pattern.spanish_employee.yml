@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: spanish_employee
+label: 'Spanish Employee'
+type: 'canonical_entities:node'
+pattern: '/equipo/[node:title]'
+selection_criteria:
+  015823b9-03f7-4ea2-8b67-5a54ab0b2aec:
+    id: node_type
+    bundles:
+      employee: employee
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 015823b9-03f7-4ea2-8b67-5a54ab0b2aec
+  ea2fd557-5311-43bd-8b7c-0db476bfb8ee:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: ea2fd557-5311-43bd-8b7c-0db476bfb8ee
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: french_article
+label: 'French Article'
+type: 'canonical_entities:node'
+pattern: '/contenu/[node:title]'
+selection_criteria:
+  f8b745d9-bb6f-4180-9c98-6d88cabac869:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f8b745d9-bb6f-4180-9c98-6d88cabac869
+  004e07a2-659b-4037-8d7d-8f25eb6df98d:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 004e07a2-659b-4037-8d7d-8f25eb6df98d
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: english_employee
+label: 'English Employee'
+type: 'canonical_entities:node'
+pattern: '/team/[node:title]'
+selection_criteria:
+  3023fd53-a8f1-4e0d-b4b3-4f0b708c66b3:
+    id: node_type
+    bundles:
+      employee: employee
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3023fd53-a8f1-4e0d-b4b3-4f0b708c66b3
+  f981c889-8216-4447-9955-9b3429f87f1d:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: f981c889-8216-4447-9955-9b3429f87f1d
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

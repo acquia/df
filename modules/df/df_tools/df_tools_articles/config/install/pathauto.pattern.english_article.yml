@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: english_article
+label: 'English Article'
+type: 'canonical_entities:node'
+pattern: '/content/[node:title]'
+selection_criteria:
+  a018d457-e637-4b15-a00e-e84813ee4545:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a018d457-e637-4b15-a00e-e84813ee4545
+  d213d2cf-b0db-4ece-a5d9-c372bc52663a:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: d213d2cf-b0db-4ece-a5d9-c372bc52663a
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

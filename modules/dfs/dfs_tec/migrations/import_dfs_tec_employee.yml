@@ -6,7 +6,7 @@ source:
     path: ../data/dfs_tec.node.employee.csv
     header_row_count: 1
     keys: [Title]
-    csvColumns: { 2: 'Job Title', 3: Biography, 0: Title, 1: Name, 4: Headshot, 5: Department, 6: Email, 7: Location, 8: Phone, 9: Links, 10: Path }
+    csvColumns: { 2: 'Job Title', 3: Biography, 0: Title, 1: Name, 4: Headshot, 5: Department, 6: Email, 7: Location, 8: Phone, 9: Links }
 destination:
     plugin: 'entity:node'
 process:
@@ -17,7 +17,6 @@ process:
     field_tags: { plugin: migration, migration: import_dfs_tec_tags, source: Tags }
     body/format: { plugin: default_value, default_value: full_html }
     moderation_state: { plugin: default_value, default_value: published }
-    path: Path
     field_employee_name: Name
     field_title: 'Job Title'
     field_biography/value: Biography
