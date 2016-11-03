@@ -16,9 +16,9 @@ Feature: DFS TEC: Service node
     | top      |
     | chef     |
     And "service" content:
-    | title       | path  | field_headline | field_subheadline | field_tags |
-    | Tomfoolery  | /ipsum | Lorem ipsum    | Doler sit amet    | top, chef  |
-    When I visit "/ipsum"
+    | title       | field_headline | field_subheadline | field_tags |
+    | Tomfoolery  | Lorem ipsum    | Doler sit amet    | top, chef  |
+    When I visit "/service/tomfoolery"
     Then I should see the heading "Tomfoolery"
     And I should see the text "Lorem ipsum"
     And I should see the text "Doler sit amet"
