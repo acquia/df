@@ -122,31 +122,6 @@
                     "reference": "origin/master"
                 }
             }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "openannotation/annotator",
-                "version": "1.2.10",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/openannotation/annotator/releases/download/v1.2.10/annotator-full.1.2.10.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "drupal/workbench_annotation",
-                "version": "dev-master",
-                "type": "drupal-module",
-                "source": {
-                    "url": "https://github.com/mortenson/workbench_annotations",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
         }
     ],
     "extra": {
@@ -284,7 +259,8 @@
         "drupal/lightning": "8.1.11",
         "drupal/link_class": "8.1.0",
         "drupal/lite": "8.1.3",
-        "drupal/moderate_mmenu": "8.1.x-dev",
+        "drupal/moderation_note": "8.1.x-dev",
+        "drupal/moderation_sidebar": "8.1.x-dev",
         "drupal/migrate_plus": "8.2.0-beta2",
         "drupal/migrate_source_csv": "8.2.0-beta1",
         "drupal/migrate_tools": "8.2.0-beta1",
@@ -297,7 +273,6 @@
         "drupal/scheduler": "8.1.0-alpha2",
         "drupal/url_embed": "8.1.x-dev",
         "drupal/view_modes_display": "8.1.0",
-        "drupal/workbench_annotation": "dev-master",
         "drupal/workbench_moderation": "8.1.1",
         "drupal/zurb_foundation": "8.6.x-dev",
         "openannotation/annotator": "1.2.10",
