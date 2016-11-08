@@ -1,22 +1,22 @@
+.hero-block .full-width-inner {
+  position: relative;
+}
+
 .hero-block .hero-block-fields {
   position: absolute;
+  padding: 20px;
+  width: 100%;
 }
 
 .hero-block .hero-block-fields.hero-block-align-right {
-  right: 5%;
-  top: 5%;
   text-align: right;
 }
 
 .hero-block .hero-block-fields.hero-block-align-left {
-  left: 5%;
-  top: 5%;
   text-align: left;
 }
 
 .hero-block .hero-block-fields.hero-block-align-center {
-  top: 5%;
-  width: 100%;
   text-align: center;
 }
 
@@ -26,8 +26,13 @@
 
 .hero-block .field-name-field-second-line {
   font-size: 1rem;
+  margin-bottom: .5rem;
 }
 
 .hero-block .field-name-field-hero-link a {
   color: white;
+}
+
+.hero-block .field-name-field-hero-image img {
+  width: 100%;
 }
