@@ -1,10 +1,6 @@
 <?php
 
-/**
- * @file
- * Contains df_tools_blocks.module.
- */
-
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -14,21 +10,21 @@ use Drupal\Core\Form\FormStateInterface;
 function df_tools_blocks_preprocess_block(&$variables) {
   if (isset($variables['content']) && isset($variables['content']['#block_content'])) {
     if ($variables['content']['#block_content']->bundle() == 'hero') {
-      $wrapper = array(
+      $wrapper = [
         '#prefix' =>'<div class="full-width-inner">',
         '#suffix' =>'</div>',
         '#type' => 'container',
         '#weight' => -1,
-        '#attributes' => array(
-          'class' => array('hero-block-fields row align-center')
-        ),
-        '#children' => array()
-      );
+        '#attributes' => [
+          'class' => ['hero-block-fields'],
+        ],
+        '#children' => [],
+      ];
       foreach (Element::getVisibleChildren($variables['content']) as $field_name) {
         if ($field_name == 'field_icon' && isset($variables['content'][$field_name]['#object'])) {
           $icon = $variables['content'][$field_name]['#object']->field_icon->getString();
           if (!empty($icon)) {
-            $wrapper['#children'][] = [
+            $wrapper['#children'][$field_name] = [
               '#markup' => '<i class="fa ' . $icon . ' hero-icon"></i>',
               '#allowed_tags' => ['i'],
             ];
@@ -36,11 +32,26 @@ function df_tools_blocks_preprocess_block(&$variables) {
           unset($variables['content'][$field_name]);
         }
         else if ($field_name != 'field_hero_image') {
-          $wrapper['#children'][] = $variables['content'][$field_name];
+          $wrapper['#children'][$field_name] = $variables['content'][$field_name];
           unset($variables['content'][$field_name]);
         }
       }
+      // Attach styles.
+      /** @var \Drupal\block_content\BlockContentInterface $entity */
+      $entity = $variables['content']['#block_content'];
+      $alignment = $entity->get('field_hero_alignment')->getString();
+      if (preg_match('/^[a-z_]+$/i', $alignment)) {
+        $wrapper['#attributes']['class'][] = Html::cleanCssIdentifier('hero-block-align-' . $alignment);
+      }
+      $text_color = $entity->get('field_text_color')->getString();
+      if (preg_match('/^#[0-9a-f]+$/i', $text_color)) {
+        $wrapper['#children']['field_first_line']['#attributes']['style'] = 'color: ' . $text_color;
+        $wrapper['#children']['field_second_line']['#attributes']['style'] = 'color: ' . $text_color;
+      }
+      $wrapper['#children']['field_hero_link']['#attributes']['class'][] = 'button';
+      $wrapper['#attached']['library'][] = 'df_tools_blocks/hero';
       $variables['content']['wrapper'] = $wrapper;
+      $variables['attributes']['class'][] = 'hero-block';
     }
   }
 }
@@ -151,27 +162,46 @@ function df_tools_blocks_form_panels_ipe_block_plugin_form_alter(&$form, FormSta
  * Implements hook_form_FORM_ID_alter().
  */
 function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Group the form into multiple fieldsets.
-  $grouping = [
-    'Hero Text' => ['field_first_line', 'field_second_line'],
-    'Hero Link' => ['field_hero_link'],
-    'Hero Icon' => ['field_icon'],
-    'Nested Block' => ['field_nested_block'],
-  ];
-  foreach ($grouping as $label => $fields) {
-    $fieldset_key = strtolower(str_replace(' ', '_', $label));
-    $form[$fieldset_key] = [
-      '#type' => 'details',
-      '#title' => t($label),
-      '#attributes' => ['class' => ['fieldset']],
-      '#collapsed' => TRUE,
-      '#weight' => 99,
-    ];
-    foreach ($fields as $field) {
-      $form[$fieldset_key][$field] = $form[$field];
-      unset($form[$field]);
-    }
+  // Move the hero image out of the details element and set a better label.
+  $form['field_hero_image']['widget']['#type'] = 'container';
+  $form['field_hero_image']['widget']['entity_browser']['#process'][] = '_df_tools_blocks_hero_browser_button';
+  // Remove the link fieldset and put the URI and title side-by-side.
+  $form['field_hero_link']['widget'][0]['#type'] = 'container';
+  $form['field_hero_link']['widget'][0]['#attributes']['class'][] = 'row';
+  unset($form['field_hero_link']['widget'][0]['uri']['#description']);
+  $form['field_hero_link']['widget'][0]['uri']['#title'] = t('Callout link');
+  $form['field_hero_link']['widget'][0]['title']['#title'] = t('Callout text');
+  $form['field_hero_link']['widget'][0]['uri']['#prefix'] = '<div class="large-6 columns">';
+  $form['field_hero_link']['widget'][0]['uri']['#suffix'] = '</div>';
+  $form['field_hero_link']['widget'][0]['title']['#prefix'] = '<div class="large-6 columns">';
+  $form['field_hero_link']['widget'][0]['title']['#suffix'] = '</div>';
+  // Group complex form elements into the advanced section.
+  $form['advanced'][] = $form['field_icon'];
+  $form['advanced'][] = $form['field_nested_block'];
+  unset($form['field_icon']);
+  unset($form['field_nested_block']);
+  $form['field_text_color']['widget'][0]['value']['#type'] = 'color';
+}
+
+/**
+ * Does nit-picky changes on the Hero image entity browser.
+ *
+ * @param array $element
+ *   The element render array.
+ *
+ * @return array
+ *   The possibly modified form render array.
+ */
+function _df_tools_blocks_hero_browser_button($element) {
+  $element['entity_browser']['open_modal']['#value'] = t('Select background');
+  if (isset($element['entity_browser']['open_modal']['#ajax'])) {
+    /** @var \Drupal\entity_browser\DisplayInterface $display */
+    $display = $element['entity_browser']['open_modal']['#ajax']['callback'][0];
+    $configuration = $display->getConfiguration();
+    $configuration['link_text'] = t('Background image');
+    $display->setConfiguration($configuration);
   }
+  return $element;
 }
 
 /**

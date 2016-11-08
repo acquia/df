@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_text_color
+id: block_content.hero.field_text_color
+field_name: field_text_color
+entity_type: block_content
+bundle: hero
+label: 'Text color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: inherit
+default_value_callback: ''
+settings: {  }
+field_type: string
