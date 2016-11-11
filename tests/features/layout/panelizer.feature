@@ -15,8 +15,8 @@ Feature: Panelizer
   Scenario: One-off changes can be made to Landing Pages using the IPE out of the box.
     Given I am logged in as a user with the "access panels in-place editing,administer panelizer node landing_page content,edit any landing_page content,view any unpublished content,use draft_draft transition,view latest version,access user profiles" permissions
     And landing_page content:
-      | title  | path    | moderation_state |
-      | Foobar | /foobar | draft            |
+      | title  | moderation_state |
+      | Foobar | draft            |
     When I visit "/foobar"
     And I place the "views_block:who_s_online-who_s_online_block" block from the "Lists" category
     # Click IPE Save
@@ -28,8 +28,8 @@ Feature: Panelizer
   Scenario: Quick-editing custom blocks in an IPE layout
     Given I am logged in as a user with the administrator role
     And landing_page content:
-      | title  | path    | moderation_state |
-      | Foobar | /foobar | draft            |
+      | title  | moderation_state |
+      | Foobar | draft            |
     And block_content entities:
       | type  | info               | body    | uuid                  |
       | basic | Here be dragons... | RAWWWR! | test--here-be-dragons |

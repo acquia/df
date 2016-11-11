@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Set up the Landing Page content type for Demo Framework.
+ * Contains installation and update routines for DF Tools Layout.
  */
 
 use Drupal\shortcut\Entity\Shortcut;
@@ -10,7 +10,7 @@ use Drupal\shortcut\Entity\Shortcut;
 /**
  * Implements hook_install().
  */
-function df_tools_landing_install() {
+function df_tools_layout_install() {
   if (!\Drupal::service('config.installer')->isSyncing()) {
     // Add Landing Page to the default shortcut set.
     $shortcut = Shortcut::create(array(

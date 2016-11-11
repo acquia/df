@@ -5,17 +5,17 @@ Feature: Workflow moderation states
 
   Scenario: Anonymous users should not be able to access content in an unpublished, non-draft state.
     Given page content:
-      | title             | path   | moderation_state |
-      | Moderation Test 1 | /mod-1 | needs_review     |
-    When I go to "/mod-1"
+      | title             | moderation_state |
+      | Moderation Test 1 | needs_review     |
+    When I go to "/moderation-test-1"
     Then the response status code should be 403
 
   Scenario: Users with permission to transition content between moderation states should be able to see content in an unpublished, non-draft state.
     Given I am logged in as a user with the "view any unpublished content" permission
     And page content:
-      | title             | path   | moderation_state |
-      | Moderation Test 2 | /mod-2 | needs_review     |
-    When I visit "/mod-2"
+      | title             | moderation_state |
+      | Moderation Test 2 | needs_review     |
+    When I visit "/moderation-test-2"
     Then the response status code should be 200
 
 #  Scenario: Publishing an entity by transitioning it to a published state

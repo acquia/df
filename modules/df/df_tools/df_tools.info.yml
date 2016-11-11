@@ -4,6 +4,7 @@ description: Wrapper for enabling all DF tools.
 core: 8.x
 package: Demo Framework Tools
 dependencies:
+  - df_core
   - df_tools_articles
   - df_tools_blocks
   - df_tools_config
@@ -12,12 +13,12 @@ dependencies:
   - df_tools_frontend
   - df_tools_gallery
   - df_tools_image
-  - df_tools_landing
+  - df_tools_layout
   - df_tools_map
   - df_tools_media
   - df_tools_moderation
+  - df_tools_page
   - df_tools_slideshow
   - df_tools_translation
   - df_tools_theme
   - df_tools_user
-  - lightning_core

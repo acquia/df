@@ -26,8 +26,8 @@ Feature: Scheduled updates to content
   Scenario: Schedule and execute publication of node through bulk scheduled updates
     Given I am logged in as a user with the administrator role
     And page content:
-      | title  | path    | moderation_state |
-      | Foobar | /foobar | draft            |
+      | title  | moderation_state |
+      | Foobar | draft            |
     When I visit "/admin/content/scheduled-update/add"
     And I reference node "Foobar" in "entity_ids[0][target_id]"
     And I enter "1984-09-19" for "update_timestamp[0][value][date]"
