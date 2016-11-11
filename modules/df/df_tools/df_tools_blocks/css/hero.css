@@ -5,6 +5,7 @@
 .hero-block .hero-block-fields {
   position: absolute;
   padding: 20px;
+  margin-top: 10%;
   width: 100%;
 }
 
@@ -31,8 +32,28 @@
 
 .hero-block .field-name-field-hero-link a {
   color: white;
+  border: 1px solid white;
+  background: #2199e8;
+  padding: 10px;
+  filter: brightness(100%);
+  transition: .2s;
+}
+
+.hero-block .field-name-field-hero-link a:hover {
+  filter: brightness(85%);
 }
 
 .hero-block .field-name-field-hero-image img {
   width: 100%;
+}
+
+.hero-block .field-name-field-hero-image:before {
+  content: '';
+  position: absolute;
+  background-image: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .6;
 }

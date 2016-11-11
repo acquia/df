@@ -3,7 +3,9 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
+    - field.field.block_content.hero.field_callout_color
     - field.field.block_content.hero.field_first_line
+    - field.field.block_content.hero.field_gradient_color
     - field.field.block_content.hero.field_hero_alignment
     - field.field.block_content.hero.field_hero_image
     - field.field.block_content.hero.field_hero_link
@@ -69,6 +71,8 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_callout_color: true
+  field_gradient_color: true
   field_hero_alignment: true
   field_text_color: true
   langcode: true

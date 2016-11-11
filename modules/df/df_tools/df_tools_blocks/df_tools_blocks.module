@@ -43,12 +43,31 @@ function df_tools_blocks_preprocess_block(&$variables) {
       if (preg_match('/^[a-z_]+$/i', $alignment)) {
         $wrapper['#attributes']['class'][] = Html::cleanCssIdentifier('hero-block-align-' . $alignment);
       }
+      $color_regex = '/^#[0-9a-f]+$/i';
       $text_color = $entity->get('field_text_color')->getString();
-      if (preg_match('/^#[0-9a-f]+$/i', $text_color)) {
+      if (preg_match($color_regex, $text_color)) {
         $wrapper['#children']['field_first_line']['#attributes']['style'] = 'color: ' . $text_color;
         $wrapper['#children']['field_second_line']['#attributes']['style'] = 'color: ' . $text_color;
       }
-      $wrapper['#children']['field_hero_link']['#attributes']['class'][] = 'button';
+      $gradient_color = $entity->get('field_gradient_color')->getString();
+      if (preg_match($color_regex, $gradient_color)) {
+        switch ($alignment) {
+          case 'left':
+            $direction = 'to right';
+            break;
+          case 'right':
+            $direction = 'to left';
+            break;
+          default:
+            $direction = 'to bottom';
+            break;
+        }
+        $variables['content']['field_hero_image']['#attributes']['style'] = "background-image: linear-gradient($direction, $gradient_color, transparent)";
+      }
+      $callout_color = $entity->get('field_callout_color')->getString();
+      if (preg_match($color_regex, $callout_color)) {
+        $wrapper['#children']['field_hero_link'][0]['#attributes']['style'] = 'background-color: ' . $callout_color;
+      }
       $wrapper['#attached']['library'][] = 'df_tools_blocks/hero';
       $variables['content']['wrapper'] = $wrapper;
       $variables['attributes']['class'][] = 'hero-block';
@@ -180,7 +199,24 @@ function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, F
   $form['advanced'][] = $form['field_nested_block'];
   unset($form['field_icon']);
   unset($form['field_nested_block']);
-  $form['field_text_color']['widget'][0]['value']['#type'] = 'color';
+  $style_fields = [
+    'field_text_color',
+    'field_gradient_color',
+    'field_callout_color',
+  ];
+  $form['style_fields'] = [
+    '#type' => 'container',
+    '#attributes' => ['class' => ['row']],
+  ];
+  foreach ($style_fields as $field) {
+    if (strpos($field, 'color') !== FALSE) {
+      $form[$field]['widget'][0]['value']['#type'] = 'color';
+    }
+    $form[$field]['#attributes']['class'][] = 'large-4 columns';
+    $form['style_fields'][] = $form[$field];
+    $form['style_fields']['#weight'] = $form[$field]['#weight'];
+    unset($form[$field]);
+  }
 }
 
 /**
