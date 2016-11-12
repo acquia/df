@@ -36,11 +36,19 @@
   background: #2199e8;
   padding: 10px;
   filter: brightness(100%);
-  transition: .2s;
+  transition: .2s filter;
 }
 
-.hero-block .field-name-field-hero-link a:hover {
+.hero-block .field-name-field-hero-link a.hero-link-light-bg:hover {
   filter: brightness(85%);
+}
+
+.hero-block .field-name-field-hero-link a.hero-link-dark-bg:hover {
+  filter: brightness(115%);
+}
+
+.hero-block .field-name-field-hero-image {
+  position: relative;
 }
 
 .hero-block .field-name-field-hero-image img {

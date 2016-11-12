@@ -43,7 +43,7 @@ function df_tools_blocks_preprocess_block(&$variables) {
       if (preg_match('/^[a-z_]+$/i', $alignment)) {
         $wrapper['#attributes']['class'][] = Html::cleanCssIdentifier('hero-block-align-' . $alignment);
       }
-      $color_regex = '/^#[0-9a-f]+$/i';
+      $color_regex = '/^#[0-9a-f]{6}$/i';
       $text_color = $entity->get('field_text_color')->getString();
       if (preg_match($color_regex, $text_color)) {
         $wrapper['#children']['field_first_line']['#attributes']['style'] = 'color: ' . $text_color;
@@ -66,7 +66,20 @@ function df_tools_blocks_preprocess_block(&$variables) {
       }
       $callout_color = $entity->get('field_callout_color')->getString();
       if (preg_match($color_regex, $callout_color)) {
-        $wrapper['#children']['field_hero_link'][0]['#attributes']['style'] = 'background-color: ' . $callout_color;
+        $style = 'background-color: ' . $callout_color . ';';
+        $hex = trim($callout_color, '#');
+        $r = hexdec(substr($hex,0,2));
+        $g = hexdec(substr($hex,2,2));
+        $b = hexdec(substr($hex,4,2));
+        if ($r + $g + $b > 382) {
+          $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-light-bg';
+          $style .= 'border-color:black;color:black;';
+        }
+        else {
+          $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-dark-bg';
+          $style .= 'border-color:white;color:white;';
+        }
+        $wrapper['#children']['field_hero_link'][0]['#attributes']['style'] = $style;
       }
       $wrapper['#attached']['library'][] = 'df_tools_blocks/hero';
       $variables['content']['wrapper'] = $wrapper;
