@@ -1,90 +1,89 @@
 <?php
 
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_preprocess_block().
+ * Implements hook_ENTITY_TYPE_view_alter().
  */
-function df_tools_blocks_preprocess_block(&$variables) {
-  if (isset($variables['content']) && isset($variables['content']['#block_content'])) {
-    if ($variables['content']['#block_content']->bundle() == 'hero') {
-      $wrapper = [
-        '#prefix' =>'<div class="full-width-inner">',
-        '#suffix' =>'</div>',
-        '#type' => 'container',
-        '#weight' => -1,
-        '#attributes' => [
-          'class' => ['hero-block-fields'],
-        ],
-        '#children' => [],
-      ];
-      foreach (Element::getVisibleChildren($variables['content']) as $field_name) {
-        if ($field_name == 'field_icon' && isset($variables['content'][$field_name]['#object'])) {
-          $icon = $variables['content'][$field_name]['#object']->field_icon->getString();
-          if (!empty($icon)) {
-            $wrapper['#children'][$field_name] = [
-              '#markup' => '<i class="fa ' . $icon . ' hero-icon"></i>',
-              '#allowed_tags' => ['i'],
-            ];
-          }
-          unset($variables['content'][$field_name]);
+function df_tools_blocks_block_content_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if ($entity->bundle() == 'hero') {
+    $wrapper = [
+      '#prefix' =>'<div class="full-width-inner">',
+      '#suffix' =>'</div>',
+      '#type' => 'container',
+      '#weight' => -1,
+      '#attributes' => [
+        'class' => ['hero-block-fields'],
+      ],
+      '#children' => [],
+    ];
+    foreach (Element::getVisibleChildren($build) as $field_name) {
+      if ($field_name == 'field_icon' && isset($build[$field_name]['#object'])) {
+        $icon = $build[$field_name]['#object']->field_icon->getString();
+        if (!empty($icon)) {
+          $wrapper['#children'][$field_name] = [
+            '#markup' => '<i class="fa ' . $icon . ' hero-icon"></i>',
+            '#allowed_tags' => ['i'],
+          ];
         }
-        else if ($field_name != 'field_hero_image') {
-          $wrapper['#children'][$field_name] = $variables['content'][$field_name];
-          unset($variables['content'][$field_name]);
-        }
+        unset($build[$field_name]);
       }
-      // Attach styles.
-      /** @var \Drupal\block_content\BlockContentInterface $entity */
-      $entity = $variables['content']['#block_content'];
-      $alignment = $entity->get('field_hero_alignment')->getString();
-      if (preg_match('/^[a-z_]+$/i', $alignment)) {
-        $wrapper['#attributes']['class'][] = Html::cleanCssIdentifier('hero-block-align-' . $alignment);
+      else if ($field_name != 'field_hero_image') {
+        $wrapper['#children'][$field_name] = $build[$field_name];
+        unset($build[$field_name]);
       }
-      $color_regex = '/^#[0-9a-f]{6}$/i';
-      $text_color = $entity->get('field_text_color')->getString();
-      if (preg_match($color_regex, $text_color)) {
-        $wrapper['#children']['field_first_line']['#attributes']['style'] = 'color: ' . $text_color;
-        $wrapper['#children']['field_second_line']['#attributes']['style'] = 'color: ' . $text_color;
-      }
-      $gradient_color = $entity->get('field_gradient_color')->getString();
-      if (preg_match($color_regex, $gradient_color)) {
-        switch ($alignment) {
-          case 'left':
-            $direction = 'to right';
-            break;
-          case 'right':
-            $direction = 'to left';
-            break;
-          default:
-            $direction = 'to bottom';
-            break;
-        }
-        $variables['content']['field_hero_image']['#attributes']['style'] = "background-image: linear-gradient($direction, $gradient_color, transparent)";
-      }
-      $callout_color = $entity->get('field_callout_color')->getString();
-      if (preg_match($color_regex, $callout_color)) {
-        $style = 'background-color: ' . $callout_color . ';';
-        $hex = trim($callout_color, '#');
-        $r = hexdec(substr($hex,0,2));
-        $g = hexdec(substr($hex,2,2));
-        $b = hexdec(substr($hex,4,2));
-        if ($r + $g + $b > 382) {
-          $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-light-bg';
-          $style .= 'border-color:black;color:black;';
-        }
-        else {
-          $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-dark-bg';
-          $style .= 'border-color:white;color:white;';
-        }
-        $wrapper['#children']['field_hero_link'][0]['#attributes']['style'] = $style;
-      }
-      $wrapper['#attached']['library'][] = 'df_tools_blocks/hero';
-      $variables['content']['wrapper'] = $wrapper;
-      $variables['attributes']['class'][] = 'hero-block';
     }
+    // Attach styles.
+    $alignment = $entity->get('field_hero_alignment')->getString();
+    if (preg_match('/^[a-z_]+$/i', $alignment)) {
+      $wrapper['#attributes']['class'][] = Html::cleanCssIdentifier('hero-block-align-' . $alignment);
+    }
+    $color_regex = '/^#[0-9a-f]{6}$/i';
+    $text_color = $entity->get('field_text_color')->getString();
+    if (preg_match($color_regex, $text_color)) {
+      $wrapper['#children']['field_first_line']['#attributes']['style'] = 'color: ' . $text_color;
+      $wrapper['#children']['field_second_line']['#attributes']['style'] = 'color: ' . $text_color;
+    }
+    $gradient_color = $entity->get('field_gradient_color')->getString();
+    if (preg_match($color_regex, $gradient_color)) {
+      switch ($alignment) {
+        case 'left':
+          $direction = 'to right';
+          break;
+        case 'right':
+          $direction = 'to left';
+          break;
+        default:
+          $direction = 'to bottom';
+          break;
+      }
+      $build['field_hero_image']['#attributes']['style'] = "background-image: linear-gradient($direction, $gradient_color, transparent)";
+    }
+    $callout_color = $entity->get('field_callout_color')->getString();
+    if (preg_match($color_regex, $callout_color)) {
+      $style = 'background-color: ' . $callout_color . ';';
+      $hex = trim($callout_color, '#');
+      $r = hexdec(substr($hex,0,2));
+      $g = hexdec(substr($hex,2,2));
+      $b = hexdec(substr($hex,4,2));
+      if ($r + $g + $b > 382) {
+        $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-light-bg';
+        $style .= 'border-color:black;color:black;';
+      }
+      else {
+        $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-dark-bg';
+        $style .= 'border-color:white;color:white;';
+      }
+      $wrapper['#children']['field_hero_link'][0]['#attributes']['style'] = $style;
+    }
+    $wrapper['#attached']['library'][] = 'df_tools_blocks/hero';
+    $build['wrapper'] = $wrapper;
+    $build['#prefix'] = '<div class="hero-block">';
+    $build['#suffix'] = '</div>';
   }
 }
 
