@@ -1,1 +1,295 @@
 // Non-modular or client styles for .l-header region.
+.header-bar {
+    @include top-bar-container;
+    background: $primary-bg;
+    @include breakpoint(medium up) {
+        background: transparent;
+    }
+    max-width: 75em;
+    width: 100%;
+    margin: 0 auto;
+    ul {
+        background: $primary-bg;
+        @include breakpoint(medium up) {
+            background: inherit;
+        }
+        li {
+            &.is-active {
+                a {
+                    color: $primary-font-hover-color;
+                }
+            }
+            a {
+                color: $primary-font-color;
+                text-transform: uppercase;
+                &:hover {
+                    color: $primary-font-hover-color;
+                }
+            }
+        }
+        ul.is-dropdown-submenu {
+            background: $bg-hover;
+            li {
+                &:hover {
+                    background: $white;
+                }
+                a {
+                    color: $white;
+                    text-transform: capitalize;
+                    &:hover,
+                    &:active {
+                        color: $primary-font-color;
+                    }
+                }
+            }
+        }
+    }
+    .top-bar-right {
+        text-align: left;
+        float:right;
+        margin-top: rem-calc(20px);
+        @include breakpoint(medium only) {
+            //line break and center for medium (before goes to mobile menu)
+            margin: 0 auto;
+            float: none;
+            font-size: .9em;
+            text-align: center;
+            max-width:rem-calc(610px);
+            .topbar-toplevel {
+                display: inline-block;
+            }
+        }
+        @include breakpoint(large only) {
+            //things break slightly too early, so set this font a bit smaller
+            font-size: .95em;
+        }
+        .main-menu-icon {
+            float: right;
+        }
+    }
+    .top-bar-left {
+        float:left;
+        @include breakpoint(medium only) {
+            width: rem-calc(260px);
+            margin: 0 auto;
+            float: none;
+        }
+    }
+}
+
+
+#top-bar-sticky-container {
+    position: relative;
+    z-index: 6;
+    //sticky provides a js plugin that calcs the width of the site. since we want to simulate a full width column, we need to override this with !important. bummer.
+    .sticky {
+        max-width: 100%!important;
+        width: 100%;
+        background: $bg-transparency;
+    }
+    .is-anchored {
+        top: inherit!important;
+        bottom: inherit!important;
+    }
+    .is-stuck {
+        border-bottom: 1px solid #000;
+        background: $bg-transparency-float;
+        padding: 0px;
+        .header-bar {
+            padding: 0;
+            .top-bar-left {
+                li a img {
+                    max-width: 150px;
+                }
+                .top-bar-right {
+                    padding-top: (10px);
+                }
+            }
+        }
+    }
+    .title-bar {
+        background: $bg-transparency;
+        padding: rem-calc(15px);
+    }
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.block-userdropdown,
+.language-switcher-language-url {
+    line-height: rem-calc(40px);
+    a {
+        text-transform: capitalize;
+    }
+}
+
+// @media #{$medium-up} {
+// .top-bar-right > ul {
+//   display:none;
+//   overflow: hidden;
+//   &.main-menu-open {
+//     width:auto;
+//     overflow:visible;
+//     display:inline-block;
+//   }
+//   }
+// }
+// if turned off, hide this icon
+.no-icon.top-bar-right {
+    > ul {
+        display: inline-block;
+        width: auto;
+        overflow: visible;
+        display: inline-block;
+    }
+    .main-menu-icon {
+        display: none;
+    }
+}
+
+.main-menu-icon {
+    cursor: pointer;
+    display: block;
+    margin-top: -3px;
+    font-size: 40px;
+    @extend .standard-icon;
+    @media #{$small-only} {
+        display: none;
+    }
+}
+
+#search-block-form.searchbox-open {
+    width: 100%;
+}
+
+#search-block-form {
+    position: relative;
+    min-width: rem-calc(30px);
+    width: 0%;
+    float: right;
+    overflow: hidden;
+    .searchbox-icon,
+    .form-submit {
+        @extend .form-reset;
+        width: rem-calc(30px);
+        height: rem-calc(30px);
+        display: block;
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+        background: $secondary-bg;
+    }
+    .form-submit {
+        text-indent: -9999px;
+    }
+    .searchbox-icon,
+    .main-menu-icon {
+        @extend .standard-icon;
+        &:hover {
+            &:before {
+                color: $primary-font-hover-color;
+            }
+        }
+        &.hover {
+            background: $white;
+        }
+    }
+    .form-search {
+        @extend .form-reset;
+        width: 100%;
+        height: rem-calc(30px);
+        margin: 0;
+        padding: 0px 55px 0px 10px;
+        font-size: rem-calc(14px);
+        color: $primary-font-color;
+    }
+}
+
+.login-dropdown-button {
+    display: block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover span,
+    &.hover span {
+        color: $primary-font-hover-color;
+    }
+    @extend .standard-icon;
+    span {
+        font-size: 12px;
+        padding-left: rem-calc(5px);
+        vertical-align: text-bottom;
+    }
+}
+
+.language-dropdown-button {
+    &:hover span,
+    &.hover span {
+        color: $primary-font-hover-color;
+    }
+    .current-langcode {
+        font-size: 12px;
+        padding-left: rem-calc(5px);
+        vertical-align: text-bottom;
+        text-transform: uppercase;
+    }
+}
+
+#user-login-wrapper .dropdown-pane,
+.language-pane {
+    @include disable-mouse-outline;
+}
+
+.language-pane {
+    width: rem-calc(110px);
+    padding: rem-calc(10px);
+    ul {
+        list-style: none;
+        li {
+            a {
+                @include disable-mouse-outline;
+                padding-bottom: 5px;
+                font-size: 13px;
+                display: block;
+                &:hover {
+                    color: $primary-font-hover-color;
+                }
+                &.is-active {
+                    font-weight: bold;
+                    &:before {
+                        content: "\f00c"!important;
+                        font-family: FontAwesome;
+                        display: inline-block;
+                        float: left;
+                        margin-left: rem-calc(-18px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#user-logout-wrapper.dropdown-pane {
+    width: 200px;
+    a {
+        @include disable-mouse-outline;
+        font-size: 13px;
+        display: block;
+        max-width: 167px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+            color: $primary-font-hover-color;
+        }
+        span {
+            padding-right: rem-calc(5px);
+        }
+    }
+}

@@ -32,6 +32,261 @@
   }
 }
 
+// A fix for https://www.drupal.org/node/953034 - Themes currently cannot
+// determine if a region is empty.
+.region-highlighted:empty {
+  display: none;
+}
+
+#main {
+  position: relative;
+}
+
+// This has been an issue since 7.x, Foundation rules about list elements
+// affect Navbar sizing.
+.toolbar-tray a {
+  font-size: 13px;
+}
+
+// Remove Foundation's top margin from the toggle orientation button.
+.toolbar .toolbar-toggle-orientation .toolbar-icon {
+  margin: 0;
+  // Fix offset problem where half of orientation button is not visible.
+  &:before {
+    min-height: 0;
+  }
+}
+
+// Convert the logo to greyscale in the header.
+.toolbar-icon-admin-toolbar-tools-help {
+  &:before {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin-left: 5px;
+  }
+}
+
+// Override styles from /core/modules/system/css/components/menu.theme.css
+.top-bar-section ul li {
+  padding-top: 0;
+  a.is-active {
+    color: $white;
+  }
+}
+
+.comment-form {
+  .filter-guidelines, .filter-help  {
+    display:none;
+  }
+}
+
+// Offset the top bar if the Navbar (toolbar) is present.
+body.toolbar-fixed .sticky.is-stuck .top-bar {
+  margin-top: 39px;
+}
+
+body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .sticky.is-stuck .top-bar {
+  margin-top: 78px;
+}
+
+body.toolbar-fixed .sticky.is-stuck.is-at-top {
+  margin-top: 0 !important;
+}
+
+// Removes core arrow image from menu items.
+.top-bar {
+  .menu-item--collapsed,
+  .menu-item--expanded {
+    list-style: none;
+  }
+}
+
+// Style the search form, if embedded in the Top Bar.
+.top-bar .search-block-form {
+  .form-item-keys,
+  .form-actions {
+    display: inline-block;
+  }
+}
+
+// Dropdown button styling.
+.dropbutton-wrapper {
+  // Sub-themes will have to override this color, unfortunately.
+  background-color: #008CBA;
+  margin: 0 0 1.25rem;
+  .button {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+// Disable some contextual links that just cause issues with demoing logged in
+// because the block is too small. Also, nobody should be editing these.
+.search-block-form,
+#block-userdropdown,
+#block-languageswitcher {
+  .contextual {
+    display: none!important;
+  }
+}
+
+nav {
+  .contextual {
+    left: 0;
+    right: inherit;
+  }
+}
+
+// Move contextual link for heroes down. Because nav sits ontop of the hero,
+// the contextual link gets covered up.
+.hero {
+  .contextual,
+  [data-block-id] [data-contextual-id].contextual {
+    top: 20%!important;
+  }
+}
+
+// Make the dialogs responsive (copied from core theme css).
+@media all and (max-width: 48em) {
+  /* 768px */
+  .ui-dialog {
+    min-width: 92%;
+    max-width: 92%;
+  }
+}
+
+// Don't let the background scroll when the category picker is open.
+.panels-ipe-category-picker-top-open {
+  overflow: hidden;
+  position: fixed!important;
+}
+
+// Hide those crazy gray bars that Quick Edit has flying all over the page.
+.quickedit-toolbar-container {
+  -webkit-transition: ease-out .5s;
+  transition: ease-out .5s;
+  .quickedit-toolbar-pointer {
+    background-color: #fff;
+    bottom: 2px;
+    box-shadow: 0 0 0 1px #818181, 0px 0px 0 2px rgba(150, 150, 150, 0.2);
+    display: block;
+    height: 16px;
+    left: 18px;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 16px;
+    z-index: 1;
+  }
+  .quickedit-toolbar-content {
+    background: #fff;
+    box-sizing: border-box;
+    color: black;
+    padding: 0.1667em;
+    position: relative;
+    z-index: 2;
+  }
+  .quickedit-toolbar-lining {
+    bottom: 7px;
+    box-shadow: 0 0 0 1px #818181, 0px 2px 0px 1px rgba(150, 150, 150, 0.2);
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    border-radius: 0;
+    z-index: 0;
+  }
+  .quickedit .icon.icon-only {
+    line-height: 20px;
+  }
+}
+
+/* IPE Styles */
+
+.ipe-form .entities-list {
+  .description {
+    display: none;
+  }
+  tr {
+    vertical-align: middle;
+  }
+  td:empty {
+    padding: 0;
+    margin: 0;
+  }
+  td {
+    padding: 5px;
+  }
+  .form-item {
+    padding-bottom: 0;
+    input {
+      margin: 0;
+    }
+  }
+  .item-container {
+    background: $white;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    padding: 5px;
+    &:before {
+      content: "\f263";
+      font-family: "Ionicons";
+      padding-right: .5em;
+    }
+  }
+}
+
+.ipe-category-picker-top::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.ipe-category-picker-top::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+  outline: 2px solid slategrey;
+}
+
+// Various updates to site when IPE (and Quick Edit) are on.
+
+.quickedit-on .absoluteNav,
+.panels-ipe-tabs-open .absoluteNav,
+.panels-ipe-active .absoluteNav
+{
+  position: relative!important;
+}
+
+.panels-ipe-tabs-open #top-bar-sticky-container .is-stuck,
+.panels-ipe-active #top-bar-sticky-container .is-stuck {
+  position: absolute;
+  border-bottom: none;
+  .top-bar {
+    margin-top: 0px;
+    .top-bar-left {
+      li a img {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+.panels-ipe-tabs-open,
+.panels-ipe-active {
+  padding-top: 0!important;
+}
+
+// Hide other administration tasks when in edit mode.
+.panels-ipe-tabs-open #toolbar-bar,
+.panels-ipe-active #toolbar-bar {
+  display: none;
+  transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+}
+
 .ipe-block-form {
   input[type="submit"] {
     border-radius: 0;
@@ -70,6 +325,451 @@
   }
 }
 
-#main-canvas-wrapper {
-  background: $body-background;
+.ipe-tabs-content {
+  box-shadow: 3px -1px 2px 0px rgba(0, 0, 0, 0.3333);
+}
+
+.ipe-tab {
+  box-shadow: 3px -1px 2px 0px rgba(0, 0, 0, 0.3333);
+}
+
+.ipe-tab:first-child {
+  box-shadow: -2px -1px 2px rgba(0, 0, 0, 0.3333);
+  z-index: 2;
+  // Offset box-shadow causes a gap between the other tabs, this fixes that.
+  right: -5px;
+}
+
+.ipe-tab:nth-child(2) {
+  padding-left: 5px;
+}
+
+.ipe-tab:last-child {
+  box-shadow: 2px -1px 2px rgba(0, 0, 0, 0.3333);
+}
+
+.ipe-category.active:after,
+.ipe-category.active:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  color: #fff;
+}
+
+.ipe-category.active:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.ipe-category.active:before {
+  border-color: rgba(67, 125, 33, 0);
+  border-bottom-color: rgba(67, 125, 33, 1);
+  border-width: 12px;
+  margin-left: -12px;
+}
+
+.ipe-block-plugin-info p,
+.ipe-block-content-type-info p,
+#js-form-item-settings-admin-label,
+.js-form-item-settings-admin-label {
+  display: none;
+}
+
+.ipe-icons-ion {
+  font-family: "Ionicons";
+  display: inline-block;
+  float: left;
+  padding-right: .5em;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+  height: 60px;
+}
+
+.ipe-icons-fa {
+  font-family: "FontAwesome";
+  display: inline-block;
+  float: left;
+  padding-right: .5em;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+}
+
+.ipe-create-styles {
+  width: 100%;
+}
+
+a[data-block-type="basic"] {
+  @extend .ipe-create-styles;
+  &:before {
+    content: "\f418";
+    @extend .ipe-icons-ion;
+  }
+}
+
+a[data-block-type="content"] {
+  @extend .ipe-create-styles;
+  &:before {
+    content: "\f472";
+    @extend .ipe-icons-ion;
+  }
+}
+
+a[data-block-type="hero"] {
+  @extend .ipe-create-styles;
+  &:before {
+    content: "\f147";
+    @extend .ipe-icons-ion;
+  }
+}
+
+a[data-block-type="slideshow"] {
+  @extend .ipe-create-styles;
+  &:before {
+    content: "\f3ca";
+    @extend .ipe-icons-ion;
+  }
+}
+
+a[data-block-type="map"] {
+  @extend .ipe-create-styles;
+  &:before {
+    content: "\f456";
+    @extend .ipe-icons-ion;
+  }
+}
+
+a[data-block-type="media"] {
+  @extend .ipe-create-styles;
+  &:before {
+    content: "\f42b";
+    @extend .ipe-icons-ion;
+  }
+}
+
+a[data-block-type="url"] {
+  @extend .ipe-create-styles;
+  &:before {
+    content: "\f408";
+    @extend .ipe-icons-ion;
+  }
+}
+
+.ipe-block-picker-list .ipe-category-picker-top.active {
+  margin: 0 auto;
+  width: 100%;
+  @include breakpoint(medium up) {
+    width: 90%;
+  }
+}
+
+.ipe-category-picker-top h4 {
+  border-bottom: none;
+}
+
+.ipe-block-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.ipe-blockpicker-item {
+  flex-basis: 240px;
+  text-align: left;
+  a {
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 30px;
+    height: 100%;
+    border-radius: 0;
+    padding: 0;
+    &:hover {
+      border: 1px solid rgb(67, 125, 33);
+      color: rgb(67, 125, 33);
+      h5 {
+        color: rgb(67, 125, 33);
+      }
+    }
+    h5 {
+      position: relative;
+      bottom: 0;
+      display: inline-block;
+      padding: 10px;
+      background: #efefef;
+      color: #000;
+      font-size: 12px;
+      line-height: 1.5em;
+      min-height: 30px;
+      width: 100%;
+      padding-right: 20px;
+      &:after {
+        content: "\f218";
+        position: absolute;
+        right: 10px;
+        font-family: "Ionicons";
+        display: inline-block;
+        top: 30%
+      }
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// Set to max width 100% to prevent horizontal scroll on mobile.
+.ipe-form {
+  @include breakpoint(small only) {
+    width: 100%;
+  }
+}
+
+.ipe-form input[data-drupal-selector="edit-preview"],
+.ipe-form input[data-drupal-selector="edit-field-hero-image-entity-browser-open-modal"],
+.ipe-form input[data-drupal-selector="edit-field-content-entity-browser-open-modal"] {
+  @extend .button;
+}
+
+.ipe-form input[data-drupal-selector="edit-submit"],
+.ipe-form input[data-drupal-selector="edit-field-block-form-actions-ief-reference-save"] {
+  @extend .button;
+  background: $success-color;
+  &:hover {
+    background: scale-color($success-color, $lightness: -15%);
+  }
+}
+
+.ipe-icon.ipe-icon-revert:before {
+  content: "\f0e2";
+  font-family: FontAwesome;
+  line-height: 25px;
+  vertical-align: text-bottom;
+  font-size: 21px;
+}
+
+@media screen and (max-width: 40em) {
+  [data-tab-id="cancel"] .ipe-tab-title {
+    display: none;
+  }
+  .ipe-icon-cancel {
+    &:before {
+      color: $alert-color;
+    }
+  }
+  .ipe-icon-save {
+    &:before {
+      color: $success-color;
+    }
+  }
+  .ipe-icon-revert {
+    &:before {
+      color: $warning-color;
+    }
+  }
+}
+
+.ipe-form input[value="Remove"] {
+  background: $alert-color;
+  color: $white;
+}
+
+.ipe-form .fieldset {
+  padding: .5em;
+}
+
+.ipe-form summary {
+  text-transform: capitalize;
+  transition: all 500ms ease;
+  &[aria-expanded="true"] {
+    padding-bottom: 20px;
+    color: rgb(67, 125, 33);
+  }
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.ipe-form .form-item {
+  padding-bottom: 15px;
+}
+
+.ipe-block-form.flipped {
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.ipe-block-form .flipper {
+  width: 100%;
+  .back {
+    width: 100%;
+    zoom: 0.6;
+    -moz-transform: scale(0.5);
+  }
+}
+
+
+/* Content browser styles. */
+
+#views-exposed-form-content-browser-entity-browser {
+  .form-item,
+  .form-actions {
+    display: inline-block;
+    margin-left: .5em;
+  }
+  .form-submit {
+    margin-bottom: .4em;
+  }
+}
+
+.view-content-browser {
+  .views-exposed-form {
+    margin-bottom: 1.5em;
+  }
+}
+
+.views-field-content-browser-preview {
+  height: 100%;
+  article {
+    height: 100%;
+  }
+}
+
+.content-browser-node-title {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, .8);
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+  h2 {
+    font-size: 16px;
+    padding: 5px 5px 0px 5px;
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+    font-family: "opensans";
+  }
+  p {
+    padding: 0;
+    padding-left: 10px;
+    font-size: .8em;
+    font-weight: 100;
+    margin-bottom: 5px;
+    i {
+      padding-right: 10px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.page-node-type {
+  .field-type-text-with-summary {
+    padding: 10px;
+    margin: 10px;
+    h4 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.content-browser-form .content-browser-actions {
+  background: #eee;
+  box-shadow: 0px -3px 9px rgba(0, 0, 0, 0.3333);
+  z-index: 1000;
+}
+
+.content-browser-form .views-field-entity-browser-select {
+  &:hover {
+    border: 3px solid rgba(142, 222, 142, 1)
+  }
+}
+
+.social_login {
+  max-height:100px;
+  overflow:hidden;
+  iframe {
+    visibility: inherit!important;
+    height: inherit!important
+  }
+}
+
+/* Dialog styles. */
+
+#drupal-modal {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+.ui-dialog {
+  .ui-dialog-titlebar {
+    border: none;
+    background: none;
+    border-bottom: 1px solid lightgray;
+  }
+  .ui-dialog-titlebar-close {
+    background: none;
+    z-index: 101;
+    border: none;
+  }
+  .ui-dialog-buttonpane {
+    box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.3333);
+  }
+  .ui-dialog-buttonset .ui-button {
+    margin: 5px;
+    padding: 5px;
+    color: $black;
+    background: $success-color;
+    border: none;
+  }
+}
+
+.ui-dialog-full-width {
+  top: 0 !important;
+  left: 0 !important;
+  max-width: 100%!important;
+}
+
+.ipe-block-picker-list .ipe-category-picker-top.active {
+  overflow-y: auto;
+  justify-content: center;
+}
+
+.ipe-category-picker-top::-webkit-scrollbar {
+  width: 5px;
+  &:before {
+    box-shadow: 3px -1px 2px 0px rgba(0, 0, 0, 0.3333);
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+// Stuff that doesn't really work on mobile so hide for now...
+
+.tabledrag-toggle-weight-wrapper
+{
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.ipe-form .tabledrag-handle {
+  @include breakpoint(small only) {
+    display: none;
+  }
 }

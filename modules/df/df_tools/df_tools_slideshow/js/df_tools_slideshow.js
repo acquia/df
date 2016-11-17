@@ -9,7 +9,7 @@
 
   Drupal.behaviors.DFToolsSlideshow = {
     attach: function (context, settings) {
-      $('.df-tools-slideshow > .field-items').slick(settings.DFToolsSlideshow.slick);
+      $('.df-tools-slideshow > .field-items').not('.slick-initialized').slick(settings.DFToolsSlideshow.slick);
     }
   };
 

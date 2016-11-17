@@ -27,6 +27,9 @@ class UserPictureFile extends CSV {
       $path = $base_path . $image;
       $destination_path = 'public://' . $image;
 
+      // Copy the file.
+      file_unmanaged_copy($path, $destination_path, FILE_EXISTS_REPLACE);
+
       $row->setSourceProperty('filepath', $path);
       $row->setDestinationProperty('uri', $destination_path);
       $row->setDestinationProperty('status', 1);

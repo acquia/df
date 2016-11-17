@@ -5,3 +5,276 @@
 // %font-FONTNAME   {}
 // %font-sans-serif { font-family: sans-serif; }
 // %font-serif      { font-family: serif; }
+
+.vertical-margin-space {
+    margin-top: rem-calc(10px);
+    margin-bottom: rem-calc(10px);
+}
+
+.vertical-padding-space {
+    padding-top: rem-calc(10px);
+    padding-bottom: rem-calc(10px);
+}
+
+.horizontal-padding-space {
+    padding-left: rem-calc(10px);
+    padding-right: rem-calc(10px);
+}
+
+.columns {
+    max-width: 100%;
+}
+
+.full-width-row {
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    position: relative;
+    z-index: 0;
+    .full-width-inner {
+        max-width: $grid-row-width;
+        margin: 0 auto;
+    }
+    &.grid-bg {
+        background: url(../images/grid-bg.png) repeat;
+    }
+}
+
+.row .row {margin-left:0; margin-right:0; max-width:$grid-row-width}
+
+.dark-bg {
+    background: $dark-bg
+}
+
+.meta-icon-size {
+    font-size: rem-calc(25px);
+    line-height: rem-calc(30px);
+}
+
+.standard-icon {
+    color: $primary-font-color;
+    &.hover span,
+    &.hover i,
+    &.hover
+    {
+        &:before {
+            color: $primary-font-hover-color;
+        }
+    }
+}
+
+// Special case if standard icon is attached to an anchor tag.
+a.standard-icon {
+    &:hover i,
+    &:hover span
+    {
+        &:before {
+            color: $primary-font-hover-color;
+        }
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+.broken-image-wrap {
+    display: block;
+    background: url(../images/broken-image.png) repeat;
+    max-width: 100%;
+    position: relative;
+}
+
+.form-reset {
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+.full-block-spacing {
+    padding-top: rem-calc(20px);
+    padding-bottom: rem-calc(20px);
+    @media #{$large-up} {
+        padding-top: rem-calc(40px);
+        padding-bottom: rem-calc(40px);
+    }
+}
+
+.full-block-spacing-margin {
+    margin-top: rem-calc(20px);
+    margin-bottom: rem-calc(20px);
+    @media #{$large-up} {
+        margin-top: rem-calc(40px);
+        margin-bottom: rem-calc(40px);
+    }
+}
+
+// This allows you to have text with the centering bar. E.G. --- headline ---.
+.center-focus-bar {
+    position: relative;
+    display: inline-block;
+    &:before {
+        border-top: 2px solid #333;
+        content: "";
+        width: rem-calc(50px);
+        line-height: 20px;
+        position: absolute;
+        top: 50%;
+        margin-left: rem-calc(-60px);
+        @include breakpoint (small only) {
+            width: rem-calc(20px);
+            margin-left: rem-calc(-25px);
+        }
+    }
+    &:after {
+        border-top: 2px solid #333;
+        content: "";
+        width: rem-calc(50px);
+        line-height: 20px;
+        position: absolute;
+        top: 50%;
+        margin-left:rem-calc(10px);
+        @include breakpoint (small only) {
+            width: rem-calc(20px);
+            margin-left:rem-calc(5px);
+        }
+    }
+}
+
+blockquote {
+    border-left: 3px solid map-get($foundation-palette, primary);
+}
+
+.arrowbox-bottom {
+    position: relative;
+    background: $bg-transparency-float;
+    border: $absolute-item-border;
+    padding: 10px;
+    &:after,
+    &:before {
+        top: 100%;
+        left: 50%;
+        right: inherit;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &:after {
+        border-color: transparent;
+        border-top-color: $white;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-width: 20px;
+        margin-left: -20px;
+        margin-top: inherit;
+        margin-right: inherit;
+        margin-bottom: inherit;
+    }
+
+    &:before {
+        border-color: transparent;
+        border-top-color: $dark-bg;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-width: 23px;
+        margin-left: -23px;
+        margin-top: inherit;
+        margin-right: inherit;
+        margin-bottom: inherit;
+    }
+
+}
+
+.arrowbox-left {
+    position: relative;
+    background: $bg-transparency-float;
+    border: $absolute-item-border;
+    padding: 10px;
+    &:after,
+    &:before {
+        right: 100%;
+        left:inherit;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:after {
+        border-color: transparent;
+        border-right-color: $white;
+        border-top-color:transparent;
+        border-left-color:transparent;
+        border-bottom-color:transparent;
+        border-width: 20px;
+        margin-top: -20px;
+        margin-left:inherit;
+        margin-right:inherit;
+        margin-bottom:inherit;
+    }
+    &:before {
+        border-color: transparent;
+        border-right-color: $dark-bg;
+        border-top-color:transparent;
+        border-left-color:transparent;
+        border-bottom-color:transparent;
+        border-width: 23px;
+        margin-top: -23px;
+        margin-left:inherit;
+        margin-right:inherit;
+        margin-bottom:inherit;
+    }
+}
+
+ul.checklist {
+    list-style: none;
+    padding: 0;
+    li {
+        padding-left: 1.3em;
+        &:before {
+            content: "\f046";
+            /* FontAwesome Unicode */
+            font-family: FontAwesome;
+            display: inline-block;
+            margin-left: -1.3em;
+            /* same as padding-left set on li */
+            width: 1.3em;
+            /* same as padding-left set on li */
+        }
+    }
+}
+
+// Small profile pic.
+.profile-pic {
+    width: rem-calc(75px);
+    border-radius: 75px;
+    border: $absolute-item-border;
+}
+
+.hero .icon-wrapper {
+    width:100%;
+    position:relative;
+    text-align: center;
+    padding-top:20px;
+    i.fa {
+        font-size:30px;
+        padding:10px;
+        color:$icon-color;
+    }
+}
+
+.topbar-toplevel > li:last-child a.button {
+    &:after {
+        border-color:$white transparent transparent!important;
+    }
+}

@@ -1,0 +1,13 @@
+id: import_media_image
+label: Import media:image entities
+source:
+  plugin: media_image
+  path: '../data/media.image.csv'
+  header_row_count: 1
+  keys:
+    - Image
+destination:
+  plugin: entity:media
+process:
+  bundle: { plugin: default_value, default_value: image }
+  image: File

@@ -1,3 +1,36 @@
+// These are custom colors used in common.scss.
+
+//use: menu, main background of site outide grid,
+$primary-bg:#fbfcfc;
+
+//this is for elements that have unpredictable backgrounds so more opacity is added (like floating nav)
+$bg-transparency-float: rgba(255,255,255,0.95);
+$bg-hover: rgba(44,49,76,0.95);
+$dark-bg:#181a24;
+$icon-color:#585a63;
+
+//use: metanav
+$secondary-bg:#f3f3f3;
+$secondary-color:$secondary-bg;
+$secondary-bg-darken:darken( $secondary-bg, 10% );
+
+//horizontal line breaks
+$line-break:2px solid $secondary-bg;
+
+//dark border
+$absolute-item-border:2px solid $dark-bg;
+
+// all paragraph text, links in meta, links in navbar
+$primary-font-color:#353535;
+$primary-font-hover-color:#399bc9;
+
+//dark background colors used in the footer
+
+$dark-bg-font-color:#555761;
+$dark-bg-border:#222534;
+
+$bg-transparency: rgba(255,255,255,0.55);
+
 //  Foundation for Sites Settings
 //  -----------------------------
 //

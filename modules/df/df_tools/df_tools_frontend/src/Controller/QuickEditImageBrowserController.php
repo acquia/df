@@ -4,8 +4,8 @@ namespace Drupal\df_tools_frontend\Controller;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Render\Element\StatusMessages;
-use Drupal\file\Entity\File;
 use Drupal\image\Controller\QuickEditImageController;
+use Drupal\media_entity\Entity\Media;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
@@ -37,9 +37,9 @@ class QuickEditImageBrowserController extends QuickEditImageController {
    *   Throws an exception if the request is invalid.
    */
   public function existing(EntityInterface $entity, $field_name, $langcode, $view_mode_id, Request $request) {
-    $fid = $request->request->get('fid');
-    if (!$fid || !is_numeric($fid)) {
-      throw new BadRequestHttpException('FID missing or invalid.');
+    $mid = $request->request->get('mid');
+    if (!$mid || !is_numeric($mid)) {
+      throw new BadRequestHttpException('MID missing or invalid.');
     }
 
     $field = $this->getField($entity, $field_name, $langcode);
@@ -52,8 +52,13 @@ class QuickEditImageBrowserController extends QuickEditImageController {
     }
 
     // Attempt to load the image given the field's constraints.
+    $media = Media::load($mid);
+    if (!$media || !$media->bundle() == 'image') {
+      throw new BadRequestHttpException('Media Entity not found or not of bundle "Image".');
+    }
+
     /** @var \Drupal\file\Entity\file $file */
-    $file = File::load($request->request->get('fid'));
+    $file = $media->get('image')->first()->get('entity')->getTarget()->getValue();
     if ($file) {
       // Call the validation functions specified by this function's caller.
       $errors = file_validate($file, $field_validators);

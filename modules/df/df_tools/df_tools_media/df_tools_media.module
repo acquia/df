@@ -4,3 +4,11 @@
  * @file
  * Contains df_tools_media.module.
  */
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function df_tools_media_migration_plugins_alter(&$definitions) {
+  $id = 'import_media_image';
+  $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
+}

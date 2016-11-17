@@ -40,7 +40,7 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
         'accessibility' => TRUE,
         'adaptiveHeight' => FALSE,
         'variableWidth' => FALSE,
-        'autoplay' => TRUE,
+        'autoplay' => FALSE,
         'centerMode' => FALSE,
         'infinite' => TRUE,
         'useCSS' => TRUE,

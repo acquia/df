@@ -6,6 +6,30 @@
  * Implements hook_preprocess_block()
  */
 function dfs_base_preprocess_block(&$variables) {
+	if ($variables['elements']['#base_plugin_id'] == 'language_block') {
+		$language = \Drupal::languageManager()->getCurrentLanguage();
+		$content = $variables['content'];
+		$variables['content'] = [];
+		$variables['content'][] = [
+			'#markup' =>
+				'<a data-toggle="language-dropdown" class="standard-icon meta-icon-size language-dropdown-button left">' .
+				'<i class="icon ion-earth"></i>' .
+				'<span class="current-langcode">' . $language->getId() . '</span>' .
+				'</a>',
+			'#allowed_tags' => ['a', 'i', 'span'],
+		];
+		$variables['content'][] = [
+			'#type' => 'container',
+			'#attributes' => [
+				'class' => ['dropdown-pane', 'bottom', 'language-pane'],
+				'id' => 'language-dropdown',
+				'data-dropdown' => '',
+				'data-auto-focus' => 'true',
+			],
+			0 => $content
+		];
+	}
+
 }
 
 /**
@@ -20,6 +44,7 @@ function dfs_base_preprocess_field(&$variables) {
  * Adds additional classes
  */
 function dfs_base_preprocess_html(&$variables) {
+	$variables['html_attributes'] .= ' class="no-js"';
 }
 
 /**
@@ -44,3 +69,36 @@ function dfs_base_preprocess_page(&$variables) {
  * Implements template_preprocess_views_view().
  */
 function dfs_base_preprocess_views_view(&$variables) {}
+
+function dfs_base_preprocess_menu__main(&$variables) {
+
+//add logo to menu
+
+	$variables['logo_img'] = '';
+
+	$logo = theme_get_setting('logo.url');
+	$site_name = \Drupal::config('system.site')->get('name');
+
+	if (!empty($logo)) {
+		$elements = array(
+			'#theme' => 'image',
+			'#uri' => $logo,
+			'#attributes' => array(
+				'alt' => strip_tags($site_name) . ' ' . t('logo'),
+				'title' => strip_tags($site_name) . ' ' . t('Home'),
+				'class' => array('logo'),
+			)
+		);
+
+		$variables['logo_img'] = $elements;
+	}
+
+	$title = strip_tags($site_name) . ' ' . t('Home');
+	$url = \Drupal\Core\Url::fromRoute('<front>');
+	$url->setOption('attributes', array('title' => $title));
+
+	$variables['linked_logo'] = '';
+	if (!empty($variables['logo_img'])) {
+		$variables['linked_logo'] = \Drupal::l($variables['logo_img'], $url);
+	}
+}

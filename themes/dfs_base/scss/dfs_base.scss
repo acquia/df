@@ -37,13 +37,10 @@
 // Set flex to true to enable the new Foundation 6 flex grid.
 $flex: true;
 @include foundation-everything($flex);
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-
 // Components
-
 
 // Import our mixins early so they can be used by other partials.
 // Optional.
@@ -51,18 +48,18 @@ $flex: true;
 
 // Common file is where you place common utility classes to extend or
 // parametrics.
-// Optional.
-// @import "base/common";
+@import "base/common";
+
+// Fonts!
+@import "base/fonts/font-awesome";
+@import "base/fonts/ionicons";
 
 // Drupal specific styles (to fix Drupalisms).
 @import "base/drupal";
-
-// Styling for elements.
-// Optional.
-// @import "base/elements";
+@import "base/elements";
 
 // Layout
-// Each section of the document has it's own partial seperated out to improve
+// Each section of the document has it's own partial separated out to improve
 // developer experience. Additionally, grids can be declared in layouts as well.
 @import "layout/header";
 @import "layout/main";

@@ -8,6 +8,7 @@
   'use strict';
 
   if (Drupal.quickedit.editors.image && !Drupal.quickedit.editors.image.prototype.overriden) {
+    Drupal.quickedit.editors.image.prototype.overriden = true;
     var stateChange = Drupal.quickedit.editors.image.prototype.stateChange;
     // Override the default stateChange handler for quickedit_image.
     Drupal.quickedit.editors.image.prototype.stateChange = function (fieldModel, state, options) {
@@ -15,8 +16,10 @@
       stateChange.call(this, fieldModel, state, options);
       if (state == 'active') {
         // Append a "Browse" button.
+        var $ops = fieldModel.get('entity').toolbarView._find('ops');
+        $ops.find('.action-browse').remove();
         var $button = $('<button type="button" class="action-browse quickedit-button icon">' + Drupal.t('Browse') + '</button>');
-        fieldModel.get('entity').toolbarView._find('ops').prepend($button);
+        $ops.prepend($button);
         var self = this;
         $button.on('click', function () {
           // Embed File Browser in an iFrame.
@@ -27,32 +30,27 @@
             // Reset styling on the iFrame.
             var $contents = $(this).contents();
 
-            // Switch tabs to the browser automatically.
-            var $upload = $contents.find('[data-button-id="edit-tab-selector-735d146c-a4b2-4327-a057-d109e0905e05"]').hide();
-            var $browse = $contents.find('[data-button-id="edit-tab-selector-a4ad947c-9669-497c-9988-24351955a02f"]');
-            if ($upload.hasClass('active')) {
-              $browse[0].click();
-              return;
-            }
+            // Hide the other tabs.
+            $contents.find('.eb-tabs').hide();
 
             // Fade in the contents.
             $(this).fadeIn();
             // When "Select" is clicked, trigger our Quickedit logic and block
             // the normal form submit.
-            $contents.find('#edit-actions-wrap input').on('click', function (e) {
+            $contents.find('#edit-submit').on('click', function (e) {
               e.preventDefault();
               e.stopPropagation();
 
               var $input = $(this).closest('form').find('input[type="checkbox"]:checked');
               if ($input.length) {
-                var parts = $input.attr('name').match(/\[file:(\d+)\]/);
+                var parts = $input.attr('name').match(/\[media:(\d+)\]/);
                 if (parts && parts[1]) {
                   var fieldID = fieldModel.get('fieldID');
                   var url = Drupal.quickedit.util.buildUrl(fieldID, Drupal.url('quickedit_image/!entity_type/!id/!field_name/!langcode/!view_mode/existing'));
 
                   // Construct form data that our endpoint can consume.
                   var data = new FormData();
-                  data.append('fid', parts[1]);
+                  data.append('mid', parts[1]);
 
                   self.ajax({
                     type: 'POST',
