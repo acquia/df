@@ -30,10 +30,10 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
    * {@inheritdoc}
    */
   public static function defaultSettings() {
-    return array(
+    return [
       'view_mode' => 'default',
       'link' => FALSE,
-      'slick' => array(
+      'slick' => [
         'arrows' => TRUE,
         'draggable' => TRUE,
         'dots' => TRUE,
@@ -48,9 +48,11 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
         'rtl' => FALSE,
         'fade' => FALSE,
         'pauseOnDotsHover' => FALSE,
-        'vertical' => FALSE
-      )
-    ) + parent::defaultSettings();
+        'vertical' => FALSE,
+      ],
+      'use_view_mode_pager' => FALSE,
+      'pager_view_mode' => 'default',
+    ] + parent::defaultSettings();
   }
 
   /**
@@ -58,27 +60,46 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
     $elements = [];
-    $elements['view_mode'] = array(
+    $elements['view_mode'] = [
       '#type' => 'select',
-      '#options' => \Drupal::entityManager()->getViewModeOptions($this->getFieldSetting('target_type')),
-      '#title' => t('View mode'),
+      '#options' => $this->entityDisplayRepository->getViewModeOptions($this->getFieldSetting('target_type')),
+      '#title' => $this->t('View mode'),
       '#default_value' => $this->getSetting('view_mode'),
       '#required' => TRUE,
-    );
+    ];
 
-    $elements['slick'] = array(
+    $elements['slick'] = [
       '#type' => 'fieldset',
-      '#title' => t('Slick settings'),
-      '#description' => t('Visit @url to view detailed descriptions for each setting.', array('@url' => 'http://kenwheeler.github.io/slick/#settings')),
-    );
+      '#title' => $this->t('Slick settings'),
+      '#description' => $this->t('Visit @url to view detailed descriptions for each setting.', ['@url' => 'http://kenwheeler.github.io/slick/#settings']),
+    ];
 
     foreach ($this->getSetting('slick') as $setting => $default_value) {
-      $elements['slick'][$setting] = array(
+      $elements['slick'][$setting] = [
         '#type' => 'checkbox',
         '#title' => $setting,
         '#default_value' => $default_value,
-      );
+      ];
     }
+
+    $elements['use_view_mode_pager'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Use an entity view mode for the pager'),
+      '#default_value' => $this->getSetting('use_view_mode_pager'),
+    ];
+
+    $elements['pager_view_mode'] = [
+      '#type' => 'select',
+      '#options' => $this->entityDisplayRepository->getViewModeOptions($this->getFieldSetting('target_type')),
+      '#title' => $this->t('Pager view mode'),
+      '#default_value' => $this->getSetting('pager_view_mode'),
+      '#required' => TRUE,
+      '#states' => [
+        'visible' => [
+          ':input[name*="[use_view_mode_pager]"]' => ['checked' => TRUE],
+        ],
+      ],
+    ];
 
     return $elements;
   }
@@ -130,13 +151,36 @@ class EntityReferenceSlideshowFormatter extends EntityReferenceEntityFormatter {
 
     $elements['#attributes']['class'][] = 'df-tools-slideshow';
 
-    // Fix slick boolean values so that they're passed to javascript correctly
-    $slick = array();
+    $slideshow_id = \Drupal::service('uuid')->generate();
+    $elements['#attributes']['data-df-tools-slideshow-instance-id'] = $slideshow_id;
+
+    // Fix slick boolean values so that they're passed to javascript correctly.
+    $slick = [];
     foreach ($this->getSetting('slick') as $setting => $value) {
       $slick[$setting] = (bool) $value;
     }
 
-    $elements['#attached']['drupalSettings']['DFToolsSlideshow']['slick'] = $slick;
+    if ($this->getSetting('use_view_mode_pager')) {
+      static::$recursiveRenderDepth = [];
+      $pager_view_mode = $this->getSetting('pager_view_mode');
+      $this->setSetting('view_mode', $pager_view_mode);
+      $pager_elements = parent::viewElements($items, $langcode);
+      foreach (Element::getVisibleChildren($pager_elements) as $i) {
+        if (isset($elements[$i])) {
+          $elements[$i]['pager_element'] = [
+            '#type' => 'container',
+            0 => $pager_elements[$i],
+            '#attributes' => [
+              'class' => ['df-tools-slideshow-pager-element'],
+            ],
+          ];
+        }
+      }
+      $slick['customPaging'] = TRUE;
+      $slick['dots'] = TRUE;
+    }
+
+    $elements['#attached']['drupalSettings']['DFToolsSlideshow'][$slideshow_id]['slick'] = $slick;
 
     return $elements;
   }

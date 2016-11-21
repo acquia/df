@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media_entity
+third_party_settings:
+  lightning_core:
+    description: 'A simplified, smaller view of the given Media.'
+id: media.teaser
+label: Teaser
+targetEntityType: media
+cache: true

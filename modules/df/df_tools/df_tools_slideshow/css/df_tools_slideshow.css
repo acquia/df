@@ -33,3 +33,43 @@
 	font-size:20px;
 }
 
+.df-tools-slideshow-pager-element {
+	display: none;
+}
+
+.df-tools-slideshow-custom-pager .df-tools-slideshow-pager-element {
+	display: inherit;
+}
+
+@media screen and (max-width:600px) {
+	.df-tools-slideshow-uses-custom-pager .slick-dots {
+		display: none !important;
+	}
+}
+
+.df-tools-slideshow-uses-custom-pager .slick-dots li {
+	width: auto;
+	height: auto;
+	border: 2px solid black;
+	position: relative;
+	transition: border-color .2s;
+}
+
+.df-tools-slideshow-uses-custom-pager .slick-dots li a:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.31);
+	transition: background-color .2s;
+}
+
+.df-tools-slideshow-uses-custom-pager .slick-dots li.slick-active {
+	border-color: #3366cc;
+}
+
+.df-tools-slideshow-uses-custom-pager .slick-dots li.slick-active a:after {
+	background-color: transparent;
+}

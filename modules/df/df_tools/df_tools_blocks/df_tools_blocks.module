@@ -116,8 +116,11 @@ function df_tools_blocks_form_panels_ipe_block_plugin_form_alter(&$form, FormSta
   // Add special logic for the Entity Browser block plugins.
   if (isset($form['plugin_id']) && !$form_state->isProcessingInput()) {
     if ($form['plugin_id']['#value'] == 'content_embed') {
-      $form['#attached']['library'][] = 'df_tools_blocks/auto_open';
-      $form['#attributes']['data-df-tools-blocks-auto-open'] = 'settings_selection_nids_entity_browser';
+      // Only auto-open the Content Embed block if it is empty.
+      if (empty(Element::getVisibleChildren($form['flipper']['front']['settings']['selection']['table']))) {
+        $form['#attached']['library'][] = 'df_tools_blocks/auto_open';
+        $form['#attributes']['data-df-tools-blocks-auto-open'] = 'settings_selection_nids_entity_browser';
+      }
 
       // Modify the Content Embed form to guide users to valid View Modes.
       if (empty($form['flipper']['front']['settings']['view_mode']['#default_value'])) {
@@ -178,8 +181,8 @@ function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, F
  * Implements hook_migration_plugins_alter().
  */
 function df_tools_blocks_migration_plugins_alter(&$definitions) {
-  // Set up the correct path for the CSV file in import_block_map.
-  $types = ['hero', 'url'];
+  // Set up the correct pa$th for the CSV files in this module.
+  $types = ['hero', 'media'];
   foreach ($types as $type) {
     $id = 'import_block_' . $type;
     $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
