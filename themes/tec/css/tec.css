@@ -26,7 +26,7 @@
  */
 /**
  * Foundation for Sites by ZURB
- * Version 6.2.1
+ * Version 6.2.4
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
@@ -508,10 +508,8 @@ button {
     padding-left: 0;
     padding-right: 0; }
   .row .row, footer .footer-contact > div .row, footer .footer-about > div .row, .row footer .footer-contact > div, footer .row .footer-contact > div, footer .footer-contact > div .footer-contact > div, footer .footer-about > div .footer-contact > div, .row footer .footer-about > div, footer .row .footer-about > div, footer .footer-contact > div .footer-about > div, footer .footer-about > div .footer-about > div {
-    max-width: none;
     margin-left: -0.625rem;
-    margin-right: -0.625rem;
-    max-width: none; }
+    margin-right: -0.625rem; }
     @media screen and (min-width: 40em) {
       .row .row, footer .footer-contact > div .row, footer .footer-about > div .row, .row footer .footer-contact > div, footer .row .footer-contact > div, footer .footer-contact > div .footer-contact > div, footer .footer-about > div .footer-contact > div, .row footer .footer-about > div, footer .row .footer-about > div, footer .footer-contact > div .footer-about > div, footer .footer-about > div .footer-about > div {
         margin-left: -0.9375rem;
@@ -541,11 +539,12 @@ button {
 
 .column.row.row, .row.row.columns, footer .footer-contact > div.columns, footer .footer-about > div.columns, footer .footer-contact > div.column, footer .footer-about > div.column {
   float: none; }
-  .row .column.row.row, footer .footer-contact > div .column.row.row, footer .footer-about > div .column.row.row, .row .row.row.columns, footer .footer-contact > div .row.row.columns, footer .footer-about > div .row.row.columns, .row footer .footer-contact > div.columns, footer .row .footer-contact > div.columns, footer .footer-contact > div .footer-contact > div.columns, footer .footer-about > div .footer-contact > div.columns, .row footer .footer-about > div.columns, footer .row .footer-about > div.columns, footer .footer-contact > div .footer-about > div.columns, footer .footer-about > div .footer-about > div.columns, .row footer .footer-contact > div.column, footer .row .footer-contact > div.column, footer .footer-contact > div .footer-contact > div.column, footer .footer-about > div .footer-contact > div.column, .row footer .footer-about > div.column, footer .row .footer-about > div.column, footer .footer-contact > div .footer-about > div.column, footer .footer-about > div .footer-about > div.column {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0; }
+
+.row .column.row.row, footer .footer-contact > div .column.row.row, footer .footer-about > div .column.row.row, .row .row.row.columns, footer .footer-contact > div .row.row.columns, footer .footer-about > div .row.row.columns, .row footer .footer-contact > div.columns, footer .row .footer-contact > div.columns, footer .footer-contact > div .footer-contact > div.columns, footer .footer-about > div .footer-contact > div.columns, .row footer .footer-about > div.columns, footer .row .footer-about > div.columns, footer .footer-contact > div .footer-about > div.columns, footer .footer-about > div .footer-about > div.columns, .row footer .footer-contact > div.column, footer .row .footer-contact > div.column, footer .footer-contact > div .footer-contact > div.column, footer .footer-about > div .footer-contact > div.column, .row footer .footer-about > div.column, footer .row .footer-about > div.column, footer .footer-contact > div .footer-about > div.column, footer .footer-about > div .footer-about > div.column {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0; }
 
 .small-1 {
   width: 8.33333%; }
@@ -795,14 +794,20 @@ button {
   margin-left: 0;
   margin-right: 0; }
 
+.expanded.row .small-collapse.row, footer .footer-contact > div.expanded .small-collapse.row, footer .footer-about > div.expanded .small-collapse.row, .expanded.row footer .footer-contact > div.small-collapse, footer .expanded.row .footer-contact > div.small-collapse, footer .footer-contact > div.expanded .footer-contact > div.small-collapse, footer .footer-about > div.expanded .footer-contact > div.small-collapse, .expanded.row footer .footer-about > div.small-collapse, footer .expanded.row .footer-about > div.small-collapse, footer .footer-contact > div.expanded .footer-about > div.small-collapse, footer .footer-about > div.expanded .footer-about > div.small-collapse {
+  margin-left: 0;
+  margin-right: 0; }
+
 .small-uncollapse > .column, .small-uncollapse > .columns {
   padding-left: 0.625rem;
   padding-right: 0.625rem; }
 
 .small-centered {
-  float: none;
   margin-left: auto;
   margin-right: auto; }
+  .small-centered, .small-centered:last-child:not(:first-child) {
+    float: none;
+    clear: both; }
 
 .small-uncentered,
 .small-push-0,
@@ -1005,13 +1010,18 @@ button {
   .medium-collapse .row, .medium-collapse footer .footer-contact > div, footer .medium-collapse .footer-contact > div, .medium-collapse footer .footer-about > div, footer .medium-collapse .footer-about > div {
     margin-left: 0;
     margin-right: 0; }
+  .expanded.row .medium-collapse.row, footer .footer-contact > div.expanded .medium-collapse.row, footer .footer-about > div.expanded .medium-collapse.row, .expanded.row footer .footer-contact > div.medium-collapse, footer .expanded.row .footer-contact > div.medium-collapse, footer .footer-contact > div.expanded .footer-contact > div.medium-collapse, footer .footer-about > div.expanded .footer-contact > div.medium-collapse, .expanded.row footer .footer-about > div.medium-collapse, footer .expanded.row .footer-about > div.medium-collapse, footer .footer-contact > div.expanded .footer-about > div.medium-collapse, footer .footer-about > div.expanded .footer-about > div.medium-collapse {
+    margin-left: 0;
+    margin-right: 0; }
   .medium-uncollapse > .column, .medium-uncollapse > .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
   .medium-centered {
-    float: none;
     margin-left: auto;
     margin-right: auto; }
+    .medium-centered, .medium-centered:last-child:not(:first-child) {
+      float: none;
+      clear: both; }
   .medium-uncentered,
   .medium-push-0,
   .medium-pull-0 {
@@ -1213,13 +1223,18 @@ button {
   .large-collapse .row, .large-collapse footer .footer-contact > div, footer .large-collapse .footer-contact > div, .large-collapse footer .footer-about > div, footer .large-collapse .footer-about > div {
     margin-left: 0;
     margin-right: 0; }
+  .expanded.row .large-collapse.row, footer .footer-contact > div.expanded .large-collapse.row, footer .footer-about > div.expanded .large-collapse.row, .expanded.row footer .footer-contact > div.large-collapse, footer .expanded.row .footer-contact > div.large-collapse, footer .footer-contact > div.expanded .footer-contact > div.large-collapse, footer .footer-about > div.expanded .footer-contact > div.large-collapse, .expanded.row footer .footer-about > div.large-collapse, footer .expanded.row .footer-about > div.large-collapse, footer .footer-contact > div.expanded .footer-about > div.large-collapse, footer .footer-about > div.expanded .footer-about > div.large-collapse {
+    margin-left: 0;
+    margin-right: 0; }
   .large-uncollapse > .column, .large-uncollapse > .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
   .large-centered {
-    float: none;
     margin-left: auto;
     margin-right: auto; }
+    .large-centered, .large-centered:last-child:not(:first-child) {
+      float: none;
+      clear: both; }
   .large-uncentered,
   .large-push-0,
   .large-pull-0 {
@@ -1421,13 +1436,18 @@ button {
   .xlarge-collapse .row, .xlarge-collapse footer .footer-contact > div, footer .xlarge-collapse .footer-contact > div, .xlarge-collapse footer .footer-about > div, footer .xlarge-collapse .footer-about > div {
     margin-left: 0;
     margin-right: 0; }
+  .expanded.row .xlarge-collapse.row, footer .footer-contact > div.expanded .xlarge-collapse.row, footer .footer-about > div.expanded .xlarge-collapse.row, .expanded.row footer .footer-contact > div.xlarge-collapse, footer .expanded.row .footer-contact > div.xlarge-collapse, footer .footer-contact > div.expanded .footer-contact > div.xlarge-collapse, footer .footer-about > div.expanded .footer-contact > div.xlarge-collapse, .expanded.row footer .footer-about > div.xlarge-collapse, footer .expanded.row .footer-about > div.xlarge-collapse, footer .footer-contact > div.expanded .footer-about > div.xlarge-collapse, footer .footer-about > div.expanded .footer-about > div.xlarge-collapse {
+    margin-left: 0;
+    margin-right: 0; }
   .xlarge-uncollapse > .column, .xlarge-uncollapse > .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
   .xlarge-centered {
-    float: none;
     margin-left: auto;
     margin-right: auto; }
+    .xlarge-centered, .xlarge-centered:last-child:not(:first-child) {
+      float: none;
+      clear: both; }
   .xlarge-uncentered,
   .xlarge-push-0,
   .xlarge-pull-0 {
@@ -1838,6 +1858,39 @@ kbd {
   .button.disabled, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled, .button[disabled], .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled] {
     opacity: 0.25;
     cursor: not-allowed; }
+    .button.disabled:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled:hover, .button.disabled:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled:focus, .button[disabled]:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled]:hover, .button[disabled]:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled]:focus {
+      background-color: #224660;
+      color: #fff; }
+    .button.disabled.primary, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.primary, .button[disabled].primary, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].primary {
+      opacity: 0.25;
+      cursor: not-allowed; }
+      .button.disabled.primary:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.primary:hover, .button.disabled.primary:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.primary:focus, .button[disabled].primary:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].primary:hover, .button[disabled].primary:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].primary:focus {
+        background-color: #224660;
+        color: #fff; }
+    .button.disabled.secondary, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.secondary, .button[disabled].secondary, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].secondary {
+      opacity: 0.25;
+      cursor: not-allowed; }
+      .button.disabled.secondary:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.secondary:hover, .button.disabled.secondary:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.secondary:focus, .button[disabled].secondary:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].secondary:hover, .button[disabled].secondary:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].secondary:focus {
+        background-color: #7eb5b9;
+        color: #fff; }
+    .button.disabled.success, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.success, .button[disabled].success, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].success {
+      opacity: 0.25;
+      cursor: not-allowed; }
+      .button.disabled.success:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.success:hover, .button.disabled.success:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.success:focus, .button[disabled].success:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].success:hover, .button[disabled].success:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].success:focus {
+        background-color: #3adb76;
+        color: #fff; }
+    .button.disabled.warning, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.warning, .button[disabled].warning, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].warning {
+      opacity: 0.25;
+      cursor: not-allowed; }
+      .button.disabled.warning:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.warning:hover, .button.disabled.warning:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled.warning:focus, .button[disabled].warning:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].warning:hover, .button[disabled].warning:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled].warning:focus {
+        background-color: #ffae00;
+        color: #fff; }
+    .button.disabled.alert, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled, .button[disabled].alert, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled] {
+      opacity: 0.25;
+      cursor: not-allowed; }
+      .button.disabled.alert:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled:hover, .button.disabled.alert:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.disabled:focus, .button[disabled].alert:hover, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled]:hover, .button[disabled].alert:focus, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a[disabled]:focus {
+        background-color: #ec5840;
+        color: #fff; }
   .button.dropdown::after, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a.dropdown::after {
     content: '';
     display: block;
@@ -1970,6 +2023,7 @@ label {
 
 .input-group-label, .input-group-field, .input-group-button {
   margin: 0;
+  white-space: nowrap;
   display: table-cell;
   vertical-align: middle; }
 
@@ -2037,11 +2091,12 @@ select {
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%2851, 51, 51%29"></polygon></svg>');
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2851, 51, 51%29'></polygon></svg>");
   background-size: 9px 6px;
-  background-position: right center;
+  background-position: right -1rem center;
   background-origin: content-box;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  padding-right: 1.5rem; }
   @media screen and (min-width: 0\0) {
     select {
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg=="); } }
@@ -2193,10 +2248,13 @@ select {
 .accordion {
   list-style-type: none;
   background: #fefefe;
-  border: 1px solid #818181;
-  border-bottom: 0;
-  border-radius: 0;
   margin-left: 0; }
+
+.accordion-item:first-child > :first-child {
+  border-radius: 0 0 0 0; }
+
+.accordion-item:last-child > :last-child {
+  border-radius: 0 0 0 0; }
 
 .accordion-title {
   display: block;
@@ -2205,7 +2263,11 @@ select {
   font-size: 0.75rem;
   color: #224660;
   position: relative;
-  border-bottom: 1px solid #818181; }
+  border: 1px solid #818181;
+  border-bottom: 0; }
+  :last-child:not(.is-active) > .accordion-title {
+    border-radius: 0 0 0 0;
+    border-bottom: 1px solid #818181; }
   .accordion-title:hover, .accordion-title:focus {
     background-color: #818181; }
   .accordion-title::before {
@@ -2220,8 +2282,12 @@ select {
 .accordion-content {
   padding: 1rem;
   display: none;
-  border-bottom: 1px solid #818181;
-  background-color: #fefefe; }
+  border: 1px solid #818181;
+  border-bottom: 0;
+  background-color: #fefefe;
+  color: #224660; }
+  :last-child > .accordion-content:last-child {
+    border-bottom: 1px solid #818181; }
 
 .is-accordion-submenu-parent > a {
   position: relative; }
@@ -2306,9 +2372,11 @@ select {
     clear: both; }
   .button-group .button, .button-group .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group a {
     margin: 0;
+    margin-right: 1px;
+    margin-bottom: 1px;
     font-size: 0.9rem; }
-    .button-group .button:not(:last-child), .button-group .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:not(:last-child), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group a:not(:last-child) {
-      margin-right: 1px; }
+    .button-group .button:last-child, .button-group .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group a:last-child {
+      margin-right: 0; }
   .button-group.tiny .button, .button-group.tiny .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.tiny a {
     font-size: 0.6rem; }
   .button-group.small .button, .button-group.small .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.small a {
@@ -2321,24 +2389,34 @@ select {
       display: none; }
     .button-group.expanded .button:first-child:nth-last-child(2), .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(2), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(2), .button-group.expanded .button:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ .button, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a {
       display: inline-block;
-      width: 50%;
+      width: calc(50% - 1px);
       margin-right: 1px; }
+      .button-group.expanded .button:first-child:nth-last-child(2):last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(2):last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(2):last-child, .button-group.expanded .button:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ .button:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(2):first-child:nth-last-child(2) ~ a:last-child {
+        margin-right: -6px; }
     .button-group.expanded .button:first-child:nth-last-child(3), .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(3), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(3), .button-group.expanded .button:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ .button, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a {
       display: inline-block;
-      width: 33.33333%;
+      width: calc(33.33333% - 1px);
       margin-right: 1px; }
+      .button-group.expanded .button:first-child:nth-last-child(3):last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(3):last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(3):last-child, .button-group.expanded .button:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ .button:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(3):first-child:nth-last-child(3) ~ a:last-child {
+        margin-right: -6px; }
     .button-group.expanded .button:first-child:nth-last-child(4), .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(4), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(4), .button-group.expanded .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a {
       display: inline-block;
-      width: 25%;
+      width: calc(25% - 1px);
       margin-right: 1px; }
+      .button-group.expanded .button:first-child:nth-last-child(4):last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(4):last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(4):last-child, .button-group.expanded .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ a:last-child {
+        margin-right: -6px; }
     .button-group.expanded .button:first-child:nth-last-child(5), .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(5), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(5), .button-group.expanded .button:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ .button, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a {
       display: inline-block;
-      width: 20%;
+      width: calc(20% - 1px);
       margin-right: 1px; }
+      .button-group.expanded .button:first-child:nth-last-child(5):last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(5):last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(5):last-child, .button-group.expanded .button:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ .button:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(5):first-child:nth-last-child(5) ~ a:last-child {
+        margin-right: -6px; }
     .button-group.expanded .button:first-child:nth-last-child(6), .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(6), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(6), .button-group.expanded .button:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ .button, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ .button, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a {
       display: inline-block;
-      width: 16.66667%;
+      width: calc(16.66667% - 1px);
       margin-right: 1px; }
+      .button-group.expanded .button:first-child:nth-last-child(6):last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(6):last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(6):last-child, .button-group.expanded .button:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ .button:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ .button:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded .button:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a:last-child, .button-group.expanded .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.expanded a:first-child:nth-last-child(6):first-child:nth-last-child(6) ~ a:last-child {
+        margin-right: -6px; }
   .button-group.primary .button, .button-group.primary .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.primary a {
     background-color: #224660;
     color: #fff; }
@@ -2370,20 +2448,17 @@ select {
       background-color: #da3116;
       color: #fff; }
   .button-group.stacked .button, .button-group.stacked .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked a, .button-group.stacked-for-small .button, .button-group.stacked-for-small .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-small a, .button-group.stacked-for-medium .button, .button-group.stacked-for-medium .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-medium a {
-    width: 100%;
-    border-right: 1px solid transparent; }
-    .button-group.stacked .button:not(:last-child), .button-group.stacked .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:not(:last-child), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked a:not(:last-child), .button-group.stacked-for-small .button:not(:last-child), .button-group.stacked-for-small .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:not(:last-child), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-small a:not(:last-child), .button-group.stacked-for-medium .button:not(:last-child), .button-group.stacked-for-medium .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:not(:last-child), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-medium a:not(:last-child) {
-      border-bottom: 1px solid #fefefe; }
+    width: 100%; }
+    .button-group.stacked .button:last-child, .button-group.stacked .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked a:last-child, .button-group.stacked-for-small .button:last-child, .button-group.stacked-for-small .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-small a:last-child, .button-group.stacked-for-medium .button:last-child, .button-group.stacked-for-medium .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:last-child, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-medium a:last-child {
+      margin-bottom: 0; }
   @media screen and (min-width: 40em) {
     .button-group.stacked-for-small .button, .button-group.stacked-for-small .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-small a {
-      width: auto; }
-      .button-group.stacked-for-small .button:not(:last-child), .button-group.stacked-for-small .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:not(:last-child), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-small a:not(:last-child) {
-        margin-right: 1px; } }
+      width: auto;
+      margin-bottom: 0; } }
   @media screen and (min-width: 56.25em) {
     .button-group.stacked-for-medium .button, .button-group.stacked-for-medium .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a, .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-medium a {
-      width: auto; }
-      .button-group.stacked-for-medium .button:not(:last-child), .button-group.stacked-for-medium .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link a:not(:last-child), .landing-display-dfs-tec-home .df-tools-slideshow .field-name-field-hero-link .button-group.stacked-for-medium a:not(:last-child) {
-        margin-right: 1px; } }
+      width: auto;
+      margin-bottom: 0; } }
   @media screen and (max-width: 39.9375em) {
     .button-group.stacked-for-small.expanded {
       display: block; }
@@ -2448,7 +2523,6 @@ select {
   top: 0;
   left: 100%;
   z-index: -1;
-  height: 100%;
   width: 100%;
   background: #fefefe;
   transition: transform 0.15s linear; }
@@ -2549,11 +2623,11 @@ select {
 .dropdown.menu.vertical > li .is-dropdown-submenu {
   top: 0; }
 
-.dropdown.menu.vertical > li.opens-left .is-dropdown-submenu {
+.dropdown.menu.vertical > li.opens-left > .is-dropdown-submenu {
   left: auto;
   right: 100%; }
 
-.dropdown.menu.vertical > li.opens-right .is-dropdown-submenu {
+.dropdown.menu.vertical > li.opens-right > .is-dropdown-submenu {
   right: auto;
   left: 100%; }
 
@@ -2606,10 +2680,10 @@ select {
     margin-top: -2px; }
   .dropdown.menu.medium-vertical > li .is-dropdown-submenu {
     top: 0; }
-  .dropdown.menu.medium-vertical > li.opens-left .is-dropdown-submenu {
+  .dropdown.menu.medium-vertical > li.opens-left > .is-dropdown-submenu {
     left: auto;
     right: 100%; }
-  .dropdown.menu.medium-vertical > li.opens-right .is-dropdown-submenu {
+  .dropdown.menu.medium-vertical > li.opens-right > .is-dropdown-submenu {
     right: auto;
     left: 100%; }
   .dropdown.menu.medium-vertical > li > a::after {
@@ -2659,10 +2733,10 @@ select {
     margin-top: -2px; }
   .dropdown.menu.large-vertical > li .is-dropdown-submenu {
     top: 0; }
-  .dropdown.menu.large-vertical > li.opens-left .is-dropdown-submenu {
+  .dropdown.menu.large-vertical > li.opens-left > .is-dropdown-submenu {
     left: auto;
     right: 100%; }
-  .dropdown.menu.large-vertical > li.opens-right .is-dropdown-submenu {
+  .dropdown.menu.large-vertical > li.opens-right > .is-dropdown-submenu {
     right: auto;
     left: 100%; }
   .dropdown.menu.large-vertical > li > a::after {
@@ -2712,10 +2786,10 @@ select {
     margin-top: -2px; }
   .dropdown.menu.xlarge-vertical > li .is-dropdown-submenu {
     top: 0; }
-  .dropdown.menu.xlarge-vertical > li.opens-left .is-dropdown-submenu {
+  .dropdown.menu.xlarge-vertical > li.opens-left > .is-dropdown-submenu {
     left: auto;
     right: 100%; }
-  .dropdown.menu.xlarge-vertical > li.opens-right .is-dropdown-submenu {
+  .dropdown.menu.xlarge-vertical > li.opens-right > .is-dropdown-submenu {
     right: auto;
     left: 100%; }
   .dropdown.menu.xlarge-vertical > li > a::after {
@@ -2757,11 +2831,15 @@ select {
     top: 50%;
     right: 5px;
     margin-top: -2px; }
-  .is-dropdown-submenu-parent.opens-inner .is-dropdown-submenu {
-    top: 100%; }
-  .is-dropdown-submenu-parent.opens-left .is-dropdown-submenu {
+  .is-dropdown-submenu-parent.opens-inner > .is-dropdown-submenu {
+    top: 100%;
+    left: auto; }
+  .is-dropdown-submenu-parent.opens-left > .is-dropdown-submenu {
     left: auto;
     right: 100%; }
+  .is-dropdown-submenu-parent.opens-right > .is-dropdown-submenu {
+    right: auto;
+    left: 100%; }
 
 .is-dropdown-submenu {
   display: none;
@@ -2797,7 +2875,7 @@ select {
     margin-top: -1px; }
   .is-dropdown-submenu > li {
     width: 100%; }
-  .is-dropdown-submenu:not(.js-dropdown-nohover) > .is-dropdown-submenu-parent:hover > .is-dropdown-submenu, .is-dropdown-submenu.js-dropdown-active {
+  .is-dropdown-submenu.js-dropdown-active {
     display: block; }
 
 .flex-video {
@@ -2863,6 +2941,8 @@ select {
     padding-right: 1rem; }
   .media-object-section:last-child:not(:nth-child(2)) {
     padding-left: 1rem; }
+  .media-object-section > :last-child {
+    margin-bottom: 0; }
   .media-object-section.middle {
     vertical-align: middle; }
   .media-object-section.bottom {
@@ -2885,13 +2965,16 @@ select {
   .menu button {
     margin-bottom: 0; }
   .menu > li > a img,
-  .menu > li > a i {
+  .menu > li > a i,
+  .menu > li > a svg {
     vertical-align: middle; }
-  .menu > li > a i + span,
-  .menu > li > a img + span {
-    vertical-align: middle; }
+    .menu > li > a img + span,
+    .menu > li > a i + span,
+    .menu > li > a svg + span {
+      vertical-align: middle; }
   .menu > li > a img,
-  .menu > li > a i {
+  .menu > li > a i,
+  .menu > li > a svg {
     margin-right: 0.25rem;
     display: inline-block; }
   .menu > li {
@@ -2935,7 +3018,8 @@ select {
   .menu.icon-top > li > a {
     text-align: center; }
     .menu.icon-top > li > a img,
-    .menu.icon-top > li > a i {
+    .menu.icon-top > li > a i,
+    .menu.icon-top > li > a svg {
       display: block;
       margin: 0 auto 0.25rem; }
   .menu.nested {
@@ -2975,6 +3059,7 @@ body {
 .off-canvas-wrapper-inner {
   position: relative;
   width: 100%;
+  min-height: 100%;
   transition: transform 0.5s ease; }
   .off-canvas-wrapper-inner::before, .off-canvas-wrapper-inner::after {
     content: ' ';
@@ -3333,6 +3418,15 @@ body {
 body.is-reveal-open {
   overflow: hidden; }
 
+html.is-reveal-open,
+html.is-reveal-open body {
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
 .reveal-overlay {
   display: none;
   position: fixed;
@@ -3416,6 +3510,7 @@ body.is-reveal-open {
     position: fixed; }
 
 .switch {
+  height: 2rem;
   margin-bottom: 1rem;
   outline: 0;
   position: relative;
@@ -3429,7 +3524,8 @@ body.is-reveal-open {
 
 .switch-input {
   opacity: 0;
-  position: absolute; }
+  position: absolute;
+  margin-bottom: 0; }
 
 .switch-paddle {
   background: #cacaca;
@@ -3480,41 +3576,41 @@ body.is-reveal-open {
   input:checked + label > .switch-inactive {
     display: none; }
 
-.switch.tiny .switch-paddle {
-  width: 3rem;
-  height: 1.5rem;
-  font-size: 0.625rem; }
+.switch.tiny {
+  height: 1.5rem; }
+  .switch.tiny .switch-paddle {
+    width: 3rem;
+    height: 1.5rem;
+    font-size: 0.625rem; }
+  .switch.tiny .switch-paddle::after {
+    width: 1rem;
+    height: 1rem; }
+  .switch.tiny input:checked ~ .switch-paddle::after {
+    left: 1.75rem; }
 
-.switch.tiny .switch-paddle::after {
-  width: 1rem;
-  height: 1rem; }
+.switch.small {
+  height: 1.75rem; }
+  .switch.small .switch-paddle {
+    width: 3.5rem;
+    height: 1.75rem;
+    font-size: 0.75rem; }
+  .switch.small .switch-paddle::after {
+    width: 1.25rem;
+    height: 1.25rem; }
+  .switch.small input:checked ~ .switch-paddle::after {
+    left: 2rem; }
 
-.switch.tiny input:checked ~ .switch-paddle::after {
-  left: 1.75rem; }
-
-.switch.small .switch-paddle {
-  width: 3.5rem;
-  height: 1.75rem;
-  font-size: 0.75rem; }
-
-.switch.small .switch-paddle::after {
-  width: 1.25rem;
-  height: 1.25rem; }
-
-.switch.small input:checked ~ .switch-paddle::after {
-  left: 2rem; }
-
-.switch.large .switch-paddle {
-  width: 5rem;
-  height: 2.5rem;
-  font-size: 1rem; }
-
-.switch.large .switch-paddle::after {
-  width: 2rem;
-  height: 2rem; }
-
-.switch.large input:checked ~ .switch-paddle::after {
-  left: 2.75rem; }
+.switch.large {
+  height: 2.5rem; }
+  .switch.large .switch-paddle {
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1rem; }
+  .switch.large .switch-paddle::after {
+    width: 2rem;
+    height: 2rem; }
+  .switch.large input:checked ~ .switch-paddle::after {
+    left: 2.75rem; }
 
 table {
   width: 100%;
@@ -3528,20 +3624,22 @@ table {
   table caption {
     font-weight: bold;
     padding: 0.5rem 0.625rem 0.625rem; }
-  table thead,
-  table tfoot {
+  table thead {
     background: #f8f8f8;
     color: #606060; }
-    table thead tr,
-    table tfoot tr {
-      background: transparent; }
-    table thead th,
-    table thead td,
-    table tfoot th,
-    table tfoot td {
-      padding: 0.5rem 0.625rem 0.625rem;
-      font-weight: bold;
-      text-align: left; }
+  table tfoot {
+    background: #f1f1f1;
+    color: #606060; }
+  table thead tr,
+  table tfoot tr {
+    background: transparent; }
+  table thead th,
+  table thead td,
+  table tfoot th,
+  table tfoot td {
+    padding: 0.5rem 0.625rem 0.625rem;
+    font-weight: bold;
+    text-align: left; }
   table tbody tr:nth-child(even) {
     background-color: #f1f1f1; }
   table tbody th,
@@ -3565,10 +3663,16 @@ table.scroll {
   width: 100%;
   overflow-x: auto; }
 
-table.hover tr:hover {
+table.hover thead tr:hover {
+  background-color: #f3f3f3; }
+
+table.hover tfoot tr:hover {
+  background-color: #ececec; }
+
+table.hover tbody tr:hover {
   background-color: #f9f9f9; }
 
-table.hover tr:nth-of-type(even):hover {
+table.hover tbody tr:nth-of-type(even):hover {
   background-color: #ececec; }
 
 .table-scroll {
@@ -3655,7 +3759,7 @@ table.hover tr:nth-of-type(even):hover {
     clear: both; }
   .title-bar .menu-icon {
     margin-left: 0.25rem;
-    margin-right: 0.5rem; }
+    margin-right: 0.25rem; }
 
 .title-bar-left {
   float: left; }
@@ -3668,27 +3772,6 @@ table.hover tr:nth-of-type(even):hover {
   font-weight: bold;
   vertical-align: middle;
   display: inline-block; }
-
-.menu-icon.dark {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-  width: 20px;
-  height: 16px; }
-  .menu-icon.dark::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #0a0a0a;
-    top: 0;
-    left: 0;
-    box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a; }
-  .menu-icon.dark:hover::after {
-    background: #8a8a8a;
-    box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a; }
 
 .has-tip {
   border-bottom: none;
@@ -4840,6 +4923,60 @@ section[rel~="schema:comment"] .field-items {
     .node-service .field-name-field-subheadline {
       top: 25%;
       font-size: 1.25rem; } }
+
+/* Article view mode summary */
+.view-mode-preview {
+  margin: 0 0 1.875rem; }
+  .view-mode-preview .article-title {
+    background: transparent;
+    padding: 0;
+    margin: 0.9375rem 0;
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: none; }
+  .view-mode-preview .more-link {
+    margin: 0 1.25rem; }
+    .view-mode-preview .more-link a {
+      background-color: #2099E8;
+      color: #fefefe;
+      font-size: 0.75rem;
+      padding: 0.625rem 1.875rem 0.625rem 0.9375rem;
+      position: relative; }
+      .view-mode-preview .more-link a:before {
+        position: absolute;
+        top: 12px;
+        right: 15px; }
+      .view-mode-preview .more-link a:focus, .view-mode-preview .more-link a:hover {
+        background-color: #fefefe;
+        color: #2099E8; }
+  .view-mode-preview .number-comments {
+    color: #2099E8;
+    margin: 0 1.25rem; }
+    .view-mode-preview .number-comments span {
+      background-color: #2099E8;
+      border-radius: 100%;
+      color: #fefefe;
+      display: inline-block;
+      font-size: 0.625rem;
+      height: 25px;
+      line-height: 2.4;
+      text-align: center;
+      width: 25px; }
+  .view-mode-preview .links {
+    margin: 1.5625rem 0 0; }
+
+.round {
+  border-radius: 1000px; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.right {
+  float: right !important; }
+
+.left {
+  float: left !important; }
 
 /* Employee styles */
 .node-employee .field-name-field-location,

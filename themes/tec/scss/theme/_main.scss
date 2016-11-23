@@ -316,6 +316,75 @@ section[rel~="schema:comment"] {
   }
 }
 
+/* Article view mode summary */
+.view-mode-preview {
+  margin: 0 0 rem-calc(30px);
+  .article-title {
+    background: transparent;
+    padding: 0;
+    margin: rem-calc(15px 0);
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: none;
+  }
+  .more-link {
+    margin: 0 rem-calc(20px);
+    a {
+      background-color: $dodger-blue;
+      color: $white;
+      font-size: rem-calc(12px);
+      padding: rem-calc(10px) rem-calc(30px) rem-calc(10px) rem-calc(15px);
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+      }
+      &:focus,
+      &:hover {
+        background-color: $white;
+        color: $dodger-blue;
+      }
+    }
+  }
+  .number-comments {
+    color: $dodger-blue;
+    margin: 0 rem-calc(20px);
+    span {
+      background-color: $dodger-blue;
+      border-radius: 100%;
+      color: $white;
+      display: inline-block;
+      font-size: rem-calc(10px);
+      height: 25px;
+      line-height: 2.4;
+      text-align: center;
+      width: 25px;
+    }
+  }
+  .links {
+    margin: rem-calc(25px) 0 0;
+  }
+}
+
+
+// De sters
+.round {
+      border-radius: 1000px;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.right {
+    float: right !important;
+}
+
+.left {
+    float: left !important;
+}
 
 /* Employee styles */
 
