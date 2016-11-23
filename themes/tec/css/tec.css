@@ -4953,30 +4953,16 @@ section[rel~="schema:comment"] .field-items {
     color: #2099E8;
     margin: 0 1.25rem; }
     .view-mode-preview .number-comments span {
-      background-color: #2099E8;
-      border-radius: 100%;
-      color: #fefefe;
-      display: inline-block;
       font-size: 0.625rem;
       height: 25px;
       line-height: 2.4;
+      color: #fefefe;
+      display: inline-block;
       text-align: center;
-      width: 25px; }
+      width: 25px;
+      background-color: #2099E8; }
   .view-mode-preview .links {
     margin: 1.5625rem 0 0; }
-
-.round {
-  border-radius: 1000px; }
-
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table; }
-
-.right {
-  float: right !important; }
-
-.left {
-  float: left !important; }
 
 /* Employee styles */
 .node-employee .field-name-field-location,

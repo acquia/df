@@ -351,39 +351,19 @@ section[rel~="schema:comment"] {
     color: $dodger-blue;
     margin: 0 rem-calc(20px);
     span {
-      background-color: $dodger-blue;
-      border-radius: 100%;
-      color: $white;
-      display: inline-block;
       font-size: rem-calc(10px);
       height: 25px;
       line-height: 2.4;
+      color: $white;
+      display: inline-block;
       text-align: center;
       width: 25px;
+      background-color: $dodger-blue;
     }
   }
   .links {
     margin: rem-calc(25px) 0 0;
   }
-}
-
-
-// De sters
-.round {
-      border-radius: 1000px;
-}
-
-.clearfix:before, .clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.right {
-    float: right !important;
-}
-
-.left {
-    float: left !important;
 }
 
 /* Employee styles */
