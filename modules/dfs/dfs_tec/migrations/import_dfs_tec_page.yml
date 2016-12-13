@@ -12,6 +12,6 @@ process:
     type: { plugin: default_value, default_value: page }
     title: Title
     body/value: Body
-    body/format: { plugin: default_value, default_value: full_html }
+    body/format: { plugin: default_value, default_value: rich_text }
     moderation_state: { plugin: default_value, default_value: published }
 provider: import

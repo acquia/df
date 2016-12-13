@@ -3,7 +3,7 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.2.2"
+projects[drupal][version] = "8.2.4"
 projects[drupal][patch][1] = "https://www.drupal.org/files/issues/node-migration-traits-database-exception-2703669-3.patch"
 projects[drupal][patch][2] = "https://www.drupal.org/files/issues/2635712-14.patch"
 projects[drupal][patch][3] = "https://www.drupal.org/files/issues/refreshless-alpha3-core-patch-2695717-7.patch"
@@ -11,3 +11,5 @@ projects[drupal][patch][4] = "https://www.drupal.org/files/issues/make_inherited
 projects[drupal][patch][5] = "https://www.drupal.org/files/issues/2684873-28.patch"
 projects[drupal][patch][6] = "https://www.drupal.org/files/issues/quickedit-image-2421427-125.patch"
 projects[drupal][patch][7] = "https://www.drupal.org/files/issues/core-hotfix-2788277-3.patch"
+projects[drupal][patch][8] = "https://www.drupal.org/files/issues/quickedit-undefined-attr-2661880-14.patch"
+projects[drupal][patch][9] = "https://www.drupal.org/files/issues/outside-in-early-event-binding-fix.patch"

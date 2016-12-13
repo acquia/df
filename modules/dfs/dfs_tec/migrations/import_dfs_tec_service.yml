@@ -15,7 +15,7 @@ process:
     body/value: Body
     field_image: Image
     field_tags: { plugin: migration, migration: import_dfs_tec_tags, source: Tags }
-    body/format: { plugin: default_value, default_value: full_html }
+    body/format: { plugin: default_value, default_value: rich_text }
     moderation_state: { plugin: default_value, default_value: published }
     field_headline/value: Headline
     field_subheadline/value: Subheadline

@@ -2,6 +2,8 @@
 
 // Add your custom theme override functions here.
 
+use Drupal\Component\Utility\Html;
+
 /**
  * Implements hook_preprocess_block()
  */
@@ -29,7 +31,20 @@ function dfs_base_preprocess_block(&$variables) {
 			0 => $content
 		];
 	}
-
+	// We get really verbose when it comes to block classes.
+	else if ($variables['elements']['#base_plugin_id'] === 'entity_field') {
+		$field = $variables['content']['field'];
+		if (isset($field['#field_name'])) {
+			$variables['attributes']['class'][] = Html::cleanCssIdentifier('block-entity-field-name-' . $field['#field_name']);
+			$variables['attributes']['class'][] = Html::cleanCssIdentifier('block-entity-field-type-' . $field['#field_type']);
+			$variables['attributes']['class'][] = Html::cleanCssIdentifier('block-entity-field-formatter-' . $field['#formatter']);
+		}
+	}
+	else if ($variables['elements']['#base_plugin_id'] === 'block_content') {
+		$block_content = $variables['content']['#block_content'];
+		$variables['attributes']['class'][] = Html::cleanCssIdentifier('block-content-type-' . $block_content->bundle());
+	}
+	$variables['attributes']['class'][] = Html::cleanCssIdentifier('block-plugin-id-' . $variables['elements']['#base_plugin_id']);
 }
 
 /**

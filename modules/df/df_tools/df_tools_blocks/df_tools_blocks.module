@@ -158,8 +158,11 @@ function df_tools_blocks_form_panels_ipe_block_plugin_form_alter(&$form, FormSta
   // Add special logic for the Entity Browser block plugins.
   if (isset($form['plugin_id']) && !$form_state->isProcessingInput()) {
     if ($form['plugin_id']['#value'] == 'content_embed') {
-      $form['#attached']['library'][] = 'df_tools_blocks/auto_open';
-      $form['#attributes']['data-df-tools-blocks-auto-open'] = 'settings_selection_nids_entity_browser';
+      // Only auto-open the Content Embed block if it is empty.
+      if (empty(Element::getVisibleChildren($form['flipper']['front']['settings']['selection']['table']))) {
+        $form['#attached']['library'][] = 'df_tools_blocks/auto_open';
+        $form['#attributes']['data-df-tools-blocks-auto-open'] = 'settings_selection_nids_entity_browser';
+      }
 
       // Modify the Content Embed form to guide users to valid View Modes.
       if (empty($form['flipper']['front']['settings']['view_mode']['#default_value'])) {
@@ -256,8 +259,8 @@ function _df_tools_blocks_hero_browser_button($element) {
  * Implements hook_migration_plugins_alter().
  */
 function df_tools_blocks_migration_plugins_alter(&$definitions) {
-  // Set up the correct path for the CSV file in import_block_map.
-  $types = ['hero', 'url'];
+  // Set up the correct pa$th for the CSV files in this module.
+  $types = ['hero', 'media'];
   foreach ($types as $type) {
     $id = 'import_block_' . $type;
     $definitions[$id]['source']['path'] = str_replace('..', dirname(__FILE__), $definitions[$id]['source']['path']);
@@ -283,12 +286,14 @@ function df_tools_blocks_block_alter(&$block_info) {
 
   // Create a whitelist of entity types to pare down the list of entity blocks.
   $entity_block_id_whitelist = [
+    'entity_block:block_content',
+    'entity_block:commerce_product',
     'entity_block:entity_gallery',
     'entity_block:file',
     'entity_block:media',
     'entity_block:node',
     'entity_block:taxonomy_term',
-    'entity_block:user'
+    'entity_block:user',
   ];
 
   foreach ($block_info as $key => $info) {

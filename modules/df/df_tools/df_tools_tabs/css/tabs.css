@@ -1,0 +1,46 @@
+/**
+ * @file tabs.css
+ */
+
+.df-tools-tabs-wrapper {
+  border: none;
+  background: transparent;
+}
+
+.df-tools-tabs-wrapper .ui-tabs-nav {
+  background: none;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.df-tools-tabs-wrapper .ui-tabs-nav li {
+  border: 2px solid #3366cc;
+  color: #3366cc;
+  border-bottom-width: 0;
+  background: transparent;
+  border-radius: 0;
+  filter: brightness(100%);
+  transition: .2s filter;
+}
+
+.df-tools-tabs-wrapper .ui-tabs-nav li a,
+.df-tools-tabs-wrapper .ui-tabs-nav li a:hover {
+  color: inherit;
+}
+
+.df-tools-tabs-wrapper .ui-tabs-nav li:not(.ui-tabs-active):hover {
+  filter: brightness(50%);
+}
+
+.df-tools-tabs-wrapper .ui-tabs-nav li.ui-tabs-active {
+  margin-bottom: -2px;
+  padding-bottom: 0;
+  border-color: black;
+  color: black;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.df-tools-tabs-wrapper .ui-tabs-nav li a:focus {
+  outline: none;
+}

@@ -2,7 +2,7 @@ class: \Drupal\migrate\Plugin\Migration
 id: import_dfs_tec_article
 label: 'Import dfs_tec:node:article'
 source:
-    plugin: article_node
+    plugin: creator_article_node
     path: ../data/dfs_tec.node.article.csv
     header_row_count: 1
     keys: [Title]
@@ -14,8 +14,15 @@ process:
     title: Title
     body/value: Body
     field_image: Image
-    field_tags: { plugin: migration, migration: import_dfs_tec_tags, source: Tags }
-    body/format: { plugin: default_value, default_value: full_html }
+    field_tags:
+      -
+        plugin: explode
+        delimiter: ,
+        source: Tags
+      -
+        plugin: migration
+        migration: import_dfs_tec_tags
+    body/format: { plugin: default_value, default_value: rich_text }
     moderation_state: { plugin: default_value, default_value: published }
 provider: import
 migration_dependencies:

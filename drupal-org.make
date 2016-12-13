@@ -44,7 +44,7 @@ projects[config_devel][download][branch] = "8.x-1.x"
 projects[config_devel][version] = "1.x-dev"
 
 projects[config_rewrite][type] = "module"
-projects[config_rewrite][version] = "1.0-beta1"
+projects[config_rewrite][version] = "1.0-beta2"
 
 projects[config_sync][type] = "module"
 projects[config_sync][version] = "1.0-alpha3"
@@ -52,8 +52,6 @@ projects[config_sync][version] = "1.0-alpha3"
 projects[config_tools][type] = "module"
 projects[config_tools][download][type] = "git"
 projects[config_tools][download][branch] = "8.x-1.x"
-projects[config_tools][version] = "1.x-dev"
-projects[config_tools][patch][0] = "https://www.drupal.org/files/issues/config_partial_override-8.x-1.x.patch"
 
 projects[config_update][type] = "module"
 projects[config_update][version] = "1.2"
@@ -82,6 +80,7 @@ projects[entity_block][type] = "module"
 projects[entity_block][download][type] = "git"
 projects[entity_block][download][branch] = "8.x-1.x"
 projects[entity_block][version] = "1.x-dev"
+projects[entity_block][patch][0] = "https://www.drupal.org/files/issues/add-uuid-support-2834377-2.patch"
 
 projects[entity_browser][type] = "module"
 projects[entity_browser][version] = "1.0-alpha10"
@@ -101,7 +100,7 @@ projects[field_formatter_class][type] = "module"
 projects[field_formatter_class][version] = "1.0-rc2"
 
 projects[field_group][type] = "module"
-projects[field_group][version] = "1.0-rc4"
+projects[field_group][version] = "1.0-rc5"
 
 projects[file_entity][type] = "module"
 projects[file_entity][version] = "2.0-beta2"
@@ -153,10 +152,11 @@ projects[link_class][type] = "module"
 projects[link_class][version] = "1.0"
 
 projects[lite][type] = "module"
-projects[lite][version] = "1.3"
+projects[lite][version] = "1.4"
 
 projects[media_entity][type] = "module"
 projects[media_entity][version] = "1.5"
+projects[media_entity][patch][0] = "https://www.drupal.org/files/issues/remove-media-entity-version-constraints.patch"
 
 projects[media_entity_document][type] = "module"
 projects[media_entity_document][version] = "1.1"

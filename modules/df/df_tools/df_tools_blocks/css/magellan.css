@@ -1,0 +1,29 @@
+/**
+ * @file magellan.css
+ */
+
+.df-tools-magellan-block [data-sticky] {
+  display: block;
+  min-height: 40px;
+  text-align: center;
+  background: black;
+}
+
+.df-tools-magellan-block .menu > li > a {
+  color: white;
+  flex-direction: column;
+  transition: .2s color;
+}
+
+.df-tools-magellan-block .menu > li > a:hover,
+.df-tools-magellan-block .menu > li > a.active {
+  color: #3366cc;
+}
+
+body.toolbar-fixed .df-tools-magellan-block .sticky.is-stuck.is-at-top {
+  margin-top: 39px !important;
+}
+
+body.toolbar-tray-open .df-tools-magellan-block .sticky.is-stuck.is-at-top {
+  margin-top: 79px !important;
+}

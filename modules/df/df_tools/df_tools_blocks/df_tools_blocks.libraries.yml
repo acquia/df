@@ -4,9 +4,22 @@ auto_open:
     js/auto_open.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.once
 
 hero:
   version: VERSION
   css:
     theme:
       css/hero.css: {}
+
+magellan:
+  version: VERSION
+  js:
+    js/magellan.js: {}
+  css:
+    theme:
+      css/magellan.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/jquery.ui

@@ -14,5 +14,5 @@ process:
     uuid: UUID
     info: Info
     body/value: Body
-    body/format: { plugin: default_value, default_value: full_html }
+    body/format: { plugin: default_value, default_value: rich_text }
 provider: import

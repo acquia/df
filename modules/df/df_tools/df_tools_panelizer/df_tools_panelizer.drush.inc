@@ -18,7 +18,7 @@ function df_tools_panelizer_drush_command() {
       'scenario' => 'The target Scenario.',
     ),
     'examples' => array(
-      'df-pe 1 dfs_fin' => 'Export the Panels Display of Node 1 to the given scenario\'s config directory.',
+      'df-pe 1 dfs_tec' => 'Export the Panels Display of Node 1 to the given scenario\'s config directory.',
     ),
     'drupal dependencies' => array('panelizer', 'df_tools_panelizer'),
     'aliases' => array('df-pe'),
