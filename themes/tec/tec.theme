@@ -6,6 +6,8 @@
  */
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_preprocess_menu().
@@ -87,6 +89,28 @@ function tec_preprocess_node(&$variables) {
     unset($variables['label']);
     $variables['label'] = array('#markup' => $markup);
     unset($variables['content']['field_title']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_node_VIEW_MODE().
+ */
+function tec_preprocess_node__article__preview(&$variables) {
+  if (!empty($variables['node']->get('comment'))) {
+      $variables['count_comment'] = $variables['node']->get('comment')->comment_count;
+    }
+
+  if (isset($variables['url'])) {
+    $url = Url::fromUri('internal:' . $variables['url']);
+    $link_options = array(
+      'attributes' => array(
+        'class' => array(
+          'fi-arrow-right',
+        ),
+      ),
+    );
+    $url->setOptions($link_options);
+    $variables['more_link'] = \Drupal::l('Read Article', $url);
   }
 }
 
