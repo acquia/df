@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d42fc669e7f873dd9af3310d7cc5bd95",
-    "content-hash": "38f07be3f77151cadb891536fe788e1d",
+    "hash": "4cb2def72084cf288d7ef6c7afcb317c",
+    "content-hash": "b7025b540a99330d072cb7b0e055718b",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -1114,9 +1114,9 @@
             "require": {
                 "drupal/core": "~8.0"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/acquia_search",
-                "drupal/search_api_solr": "Required by drupal/acquia_search"
+            "require-dev": {
+                "drupal/core": "*",
+                "drupal/search_api_solr": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1369,7 +1369,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.3",
-                    "datestamp": "1468906139"
+                    "datestamp": "1468906218"
                 },
                 "patches_applied": {
                     "Support Outside In navbar changes with new quickedit button styling | https://www.drupal.org/node/2826670": "https://www.drupal.org/files/issues/2826670-adminimal-admin-toolbar-outside-in-styles.patch"
@@ -1694,7 +1694,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta2",
-                    "datestamp": "1481740085"
+                    "datestamp": "1481760375"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1746,6 +1746,14 @@
                     "homepage": "https://www.drupal.org/user/2006064"
                 },
                 {
+                    "name": "mlncn",
+                    "homepage": "https://www.drupal.org/user/64383"
+                },
+                {
+                    "name": "mtift",
+                    "homepage": "https://www.drupal.org/user/751908"
+                },
+                {
                     "name": "nedjo",
                     "homepage": "https://www.drupal.org/user/4481"
                 }
@@ -1768,8 +1776,8 @@
             "require": {
                 "drupal/core": "~8.0"
             },
-            "suggest": {
-                "drupal/config_files": "Required by drupal/git_config"
+            "require-dev": {
+                "drupal/config_files": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1814,8 +1822,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/config_update_ui"
+            "require-dev": {
+                "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2167,8 +2175,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/media_entity": "Required by drupal/crop_media_entity"
+            "require-dev": {
+                "drupal/media_entity": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2222,8 +2230,8 @@
             "require": {
                 "drupal/core": "~8.0"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/ctools_views"
+            "require-dev": {
+                "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2373,9 +2381,9 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/dropzonejs_eb_widget",
-                "drupal/entity_browser": "Required by drupal/dropzonejs_eb_widget"
+            "require-dev": {
+                "drupal/core": "*",
+                "drupal/entity_browser": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2612,13 +2620,13 @@
             "require": {
                 "drupal/core": "~8.0"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/entity_browser_example",
-                "drupal/ctools": "Required by drupal/entity_browser",
-                "drupal/inline_entity_form": "Required by drupal/entity_browser",
-                "drupal/media_entity": "Required by drupal/entity_browser",
-                "drupal/paragraphs": "Required by drupal/entity_browser",
-                "drupal/token": "Required by drupal/entity_browser"
+            "require-dev": {
+                "drupal/core": "*",
+                "drupal/ctools": "*",
+                "drupal/inline_entity_form": "*",
+                "drupal/media_entity": "*",
+                "drupal/paragraphs": "*",
+                "drupal/token": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2694,8 +2702,8 @@
                 "drupal/core": "*",
                 "drupal/embed": "*"
             },
-            "suggest": {
-                "drupal/entity_browser": "Required by drupal/entity_embed"
+            "require-dev": {
+                "drupal/entity_browser": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2977,8 +2985,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/pathauto": "Required by drupal/file_entity"
+            "require-dev": {
+                "drupal/pathauto": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -3068,11 +3076,11 @@
                 "drupal/core": "~8.0",
                 "willdurand/geocoder": "^3.3"
             },
-            "suggest": {
-                "drupal/address": "Required by drupal/geocoder_address",
-                "drupal/core": "Required by drupal/geocoder_field",
-                "drupal/geocoder_field": "Required by drupal/geocoder_geofield",
-                "drupal/geofield": "Required by drupal/geocoder_geofield"
+            "require-dev": {
+                "drupal/address": "*",
+                "drupal/core": "*",
+                "drupal/geocoder_field": "*",
+                "drupal/geofield": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -3217,7 +3225,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geolocation",
-                "reference": "7f427fdd863dadfc3a44c41f9b67f9c08dded081"
+                "reference": "83fc40e910159a2a0f32797586410a492d500f54"
             },
             "require": {
                 "drupal/core": "*"
@@ -3228,8 +3236,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.8+58-dev",
-                    "datestamp": "1481903584"
+                    "version": "8.x-1.8+61-dev",
+                    "datestamp": "1482156483"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3251,7 +3259,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
             },
-            "time": "2016-12-16 15:48:02"
+            "time": "2016-12-19 13:45:26"
         },
         {
             "name": "drupal/geophp",
@@ -3316,9 +3324,9 @@
             "require": {
                 "drupal/core": "~8.0"
             },
-            "suggest": {
-                "drupal/php": "Required by drupal/google_analytics",
-                "drupal/token": "Required by drupal/google_analytics"
+            "require-dev": {
+                "drupal/php": "*",
+                "drupal/token": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -3472,8 +3480,8 @@
             "require": {
                 "drupal/core": "~8.0"
             },
-            "suggest": {
-                "drupal/entity_reference_revisions": "Required by drupal/inline_entity_form"
+            "require-dev": {
+                "drupal/entity_reference_revisions": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -3592,7 +3600,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha23",
-                    "datestamp": "1476238140"
+                    "datestamp": "1476269960"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3635,8 +3643,8 @@
                 "drupal/core": "~8.0",
                 "leaflet/leaflet": "^0.7.7"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/leaflet_views"
+            "require-dev": {
+                "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -3844,9 +3852,9 @@
                 "drupal/core": "~8.1",
                 "drupal/entity": "^1.0.0-alpha3"
             },
-            "suggest": {
-                "drupal/entity": "Required by drupal/media_entity",
-                "drupal/inline_entity_form": "Required by drupal/media_entity"
+            "require-dev": {
+                "drupal/entity": "*",
+                "drupal/inline_entity_form": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -3895,6 +3903,14 @@
                     "homepage": "https://www.drupal.org/user/210762"
                 },
                 {
+                    "name": "katzilla",
+                    "homepage": "https://www.drupal.org/user/260398"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
                     "name": "seanB",
                     "homepage": "https://www.drupal.org/user/545912"
                 },
@@ -3938,7 +3954,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.1",
-                    "datestamp": "1470211439"
+                    "datestamp": "1470211995"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3982,8 +3998,8 @@
                 "drupal/core": "~8.1",
                 "drupal/media_entity": "~1.0 || ~8.1.0"
             },
-            "suggest": {
-                "drupal/entity_browser": "Required by drupal/media_entity_image"
+            "require-dev": {
+                "drupal/entity_browser": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -4200,10 +4216,12 @@
             "require": {
                 "drupal/core": "^8.2"
             },
+            "require-dev": {
+                "drupal/core": "*",
+                "drupal/migrate_example_advanced_setup": "*",
+                "drupal/migrate_example_setup": "*"
+            },
             "suggest": {
-                "drupal/core": "Required by drupal/migrate_example",
-                "drupal/migrate_example_advanced_setup": "Required by drupal/migrate_example_advanced",
-                "drupal/migrate_example_setup": "Required by drupal/migrate_example",
                 "sainsburys/guzzle-oauth2-plugin": "3.0 required for the OAuth2 authentication plugin"
             },
             "type": "drupal-module",
@@ -4346,8 +4364,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/workbench_moderation": "Required by drupal/moderation_note"
+            "require-dev": {
+                "drupal/workbench_moderation": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -4696,9 +4714,9 @@
                 "drupal/ctools": ">=3.0.0-alpha26",
                 "drupal/layout_plugin": ">=1.0.0-alpha22"
             },
-            "suggest": {
-                "drupal/core": "Required by drupal/panels_ipe",
-                "drupal/page_manager": "Required by drupal/panels"
+            "require-dev": {
+                "drupal/core": "*",
+                "drupal/page_manager": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -5222,8 +5240,8 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/rules": "Required by drupal/scheduler_rules_integration"
+            "require-dev": {
+                "drupal/rules": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -5274,7 +5292,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/search_autocomplete",
-                "reference": "5136413c0dd9c78065b2fc28bfb85a1ee3c305a4"
+                "reference": "16174199073fa88bd0de7c774ae3789f3ec57eed"
             },
             "require": {
                 "drupal/core": "*"
@@ -5285,8 +5303,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0+7-dev",
-                    "datestamp": "1469203139"
+                    "version": "8.x-1.0+9-dev",
+                    "datestamp": "1481973783"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5304,7 +5322,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/search_autocomplete"
             },
-            "time": "2016-07-22 15:54:11"
+            "time": "2016-12-17 11:22:06"
         },
         {
             "name": "drupal/token",
@@ -5445,11 +5463,11 @@
             "require": {
                 "drupal/core": "*"
             },
-            "suggest": {
-                "drupal/colorbox": "Required by drupal/video_embed_field",
-                "drupal/core": "Required by drupal/video_embed_wysiwyg",
-                "drupal/media_entity": "Required by drupal/video_embed_field",
-                "drupal/media_entity_embeddable_video": "Required by drupal/video_embed_field"
+            "require-dev": {
+                "drupal/colorbox": "*",
+                "drupal/core": "*",
+                "drupal/media_entity": "*",
+                "drupal/media_entity_embeddable_video": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -5536,6 +5554,51 @@
                 "source": "http://cgit.drupalcode.org/view_modes_display",
                 "issues": "http://drupal.org/project/issues/view_modes_display"
             }
+        },
+        {
+            "name": "drupal/views_block_filter_block",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_block_filter_block",
+                "reference": "54df59b5a45c02e4a919986751672fd61efebb08"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1471773239"
+                },
+                "patches_applied": {
+                    "Empty exposed forms appeared in each view | https://www.drupal.org/node/2790505": "https://www.drupal.org/files/issues/empty_exposed_forms-2790505-2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "iamEAP",
+                    "homepage": "https://www.drupal.org/user/1467594"
+                },
+                {
+                    "name": "sumitmadan",
+                    "homepage": "https://www.drupal.org/user/1538790"
+                }
+            ],
+            "description": "Provides blocks for Views exposed filters on View blocks.",
+            "homepage": "https://www.drupal.org/project/views_block_filter_block",
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_block_filter_block"
+            },
+            "time": "2016-08-21 09:48:35"
         },
         {
             "name": "drupal/views_infinite_scroll",
@@ -12243,6 +12306,7 @@
         "drupal/search_autocomplete": 20,
         "drupal/scenarios": 20,
         "drupal/url_embed": 20,
+        "drupal/views_block_filter_block": 20,
         "drupal/zurb_foundation": 20,
         "lite": 20
     },
