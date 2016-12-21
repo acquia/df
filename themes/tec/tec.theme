@@ -6,6 +6,8 @@
  */
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_preprocess_menu().
@@ -88,6 +90,22 @@ function tec_preprocess_node(&$variables) {
     $variables['label'] = array('#markup' => $markup);
     unset($variables['content']['field_title']);
   }
+
+  // Set variables when node type is article and view mode is summary.
+  if ($variables['view_mode'] == 'summary' && $variables['node']->getType() == 'article') {
+    // Set read more link variable.
+    if (isset($variables['url'])) {
+      $options_link = array(
+        'attributes' => ['class' => ['fi-arrow-right']],
+      );
+      $variables['read_more'] = Link::fromTextAndUrl(t('Learn More'), Url::fromUri('internal:' . $variables['url'], $options_link))->toString();
+    }
+    // Set comment counter.
+    if (!empty($variables['node']->get('comment'))) {
+      $variables['count_comment'] = $variables['node']->get('comment')->comment_count;
+    }
+  }
+
 }
 
 /**

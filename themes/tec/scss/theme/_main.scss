@@ -316,6 +316,58 @@ section[rel~="schema:comment"] {
   }
 }
 
+/* Article view mode summary */
+.view-mode-summary {
+  margin: 0 0 rem-calc(30px);
+  .article-title {
+    background-color: transparent;
+    letter-spacing: rem-calc(1px);
+    margin: rem-calc(15px 0);
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+  }
+  .read-more {
+    margin: 0 rem-calc(20px);
+    a {
+      background-color: $blue-light;
+      border: 1px solid;
+      color: $white;
+      font-size: rem-calc(12px);
+      padding: rem-calc(10px) rem-calc(30px) rem-calc(10px) rem-calc(15px);
+      position: relative;
+      transition: $slider-transition;
+      &:before {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+      }
+      &:focus,
+      &:hover {
+        background-color: $white;
+        color: $blue-light;
+      }
+    }
+  }
+  .comments-count {
+    color: $blue-light;
+    margin: 0 rem-calc(20px);
+    span {
+      background-color: $blue-light;
+      border-radius: 100%;
+      color: $white;
+      display: inline-block;
+      font-size: rem-calc(10px);
+      height: 25px;
+      line-height: 2.4;
+      text-align: center;
+      width: 25px;
+    }
+  }
+  .article-links {
+    margin: rem-calc(25px) 0 0;
+  }
+}
 
 /* Employee styles */
 
