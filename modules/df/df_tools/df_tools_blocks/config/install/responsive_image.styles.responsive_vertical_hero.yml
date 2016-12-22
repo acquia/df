@@ -1,0 +1,35 @@
+uuid: 4ae46abc-2fc8-4b33-87a8-2865474ec65c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.vertical_hero
+    - image.style.vertical_hero_small
+  module:
+    - df_tools_blocks
+id: responsive_vertical_hero
+label: 'Responsive Vertical Hero'
+image_style_mappings:
+  -
+    breakpoint_id: df_tools.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: vertical_hero
+  -
+    breakpoint_id: df_tools.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: vertical_hero
+  -
+    breakpoint_id: df_tools.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: vertical_hero_small
+  -
+    breakpoint_id: df_tools.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: vertical_hero_small
+breakpoint_group: df_tools_blocks
+fallback_image_style: vertical_hero
+

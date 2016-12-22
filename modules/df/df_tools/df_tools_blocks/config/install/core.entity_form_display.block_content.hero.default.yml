@@ -3,24 +3,34 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
+    - entity_browser.browser.image_browser
+    - field.field.block_content.hero.field_callout_color
     - field.field.block_content.hero.field_first_line
+    - field.field.block_content.hero.field_gradient_color
+    - field.field.block_content.hero.field_hero_alignment
     - field.field.block_content.hero.field_hero_image
     - field.field.block_content.hero.field_hero_link
     - field.field.block_content.hero.field_icon
     - field.field.block_content.hero.field_nested_block
     - field.field.block_content.hero.field_second_line
+    - field.field.block_content.hero.field_text_color
   module:
     - df_tools_icons
     - entity_browser
     - link
     - workbench_moderation
-_core:
-  default_config_hash: KMS6836KpBsVCg1aU6YqSuxs7S0RD3Tu0XAM2bW0QII
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
 mode: default
 content:
+  field_callout_color:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_first_line:
     type: string_textfield
     weight: 5
@@ -28,14 +38,26 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_gradient_color:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_hero_alignment:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_hero_image:
     type: entity_browser_file
     weight: 4
     settings:
       entity_browser: image_browser
-      field_widget_edit: '1'
-      field_widget_remove: '1'
-      open: '1'
+      field_widget_edit: false
+      field_widget_remove: true
+      open: true
       selection_mode: selection_append
       view_mode: gallery_item
       preview_image_style: thumbnail
@@ -69,6 +91,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_text_color:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   info:
     type: string_textfield
     weight: 0

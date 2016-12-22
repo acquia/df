@@ -1,0 +1,189 @@
+uuid: a2471a71-47a2-4d3d-8072-ae3aaeebd4ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - core.entity_view_mode.block_content.featured
+    - field.field.block_content.hero.field_callout_color
+    - field.field.block_content.hero.field_first_line
+    - field.field.block_content.hero.field_gradient_color
+    - field.field.block_content.hero.field_hero_alignment
+    - field.field.block_content.hero.field_hero_image
+    - field.field.block_content.hero.field_hero_link
+    - field.field.block_content.hero.field_icon
+    - field.field.block_content.hero.field_nested_block
+    - field.field.block_content.hero.field_second_line
+    - field.field.block_content.hero.field_text_color
+    - responsive_image.styles.responsive_vertical_hero
+  module:
+    - field_group
+    - link
+    - responsive_image
+third_party_settings:
+  field_group:
+    group_hero_inner_content:
+      children:
+        - group_hero_column
+      parent_name: group_hero_content
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: full-width-inner
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Inner content'
+    group_hero_content:
+      children:
+        - group_hero_inner_content
+      parent_name: group_hero
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: l-over-each__item
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Hero content'
+    group_hero_image:
+      children:
+        - field_hero_image
+      parent_name: group_hero
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: 'Hero image'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'l-over-each__item l-over-each__nested-img l-over-each__nested-img--hero'
+      label: 'Hero image'
+    group_hero:
+      children:
+        - group_hero_image
+        - group_hero_content
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'full-width-row l-over-each'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Hero
+    group_hero_content_spanned:
+      children:
+        - field_icon
+        - field_first_line
+        - field_second_line
+        - field_hero_link
+      parent_name: group_hero_column
+      weight: 21
+      format_type: html_element
+      format_settings:
+        label: 'Spanned content'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'hero-content text-center'
+      label: 'Spanned content'
+    group_hero_column:
+      children:
+        - group_hero_content_spanned
+        - field_nested_block
+      parent_name: group_hero_inner_content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'medium-7 large-5 column'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Column
+_core:
+  default_config_hash: KwZKHfM7Ixui_187qEJvrlRPW_LMvGch5orlPGTe4S0
+id: block_content.hero.featured
+targetEntityType: block_content
+bundle: hero
+mode: featured
+content:
+  field_first_line:
+    type: string
+    weight: 22
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    label: hidden
+  field_hero_image:
+    type: responsive_image
+    weight: 21
+    settings:
+      responsive_image_style: responsive_vertical_hero
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+  field_hero_link:
+    type: link
+    weight: 24
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    label: hidden
+  field_icon:
+    weight: 21
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_nested_block:
+    weight: 22
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_second_line:
+    type: string
+    weight: 23
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_callout_color: true
+  field_gradient_color: true
+  field_hero_alignment: true
+  field_text_color: true
+  langcode: true
+

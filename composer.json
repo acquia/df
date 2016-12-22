@@ -147,6 +147,8 @@
         "enable-patching": true,
         "patches": {
             "acquia/lightning": {
+                "Disable lightning_core_entity_load()| https://www.drupal.org/node/2770791":
+                "https://www.drupal.org/files/issues/disable-lightning_core_entity_load-2.patch",
                 "Skip lightning_core_form_user_form_alter() | https://www.drupal.org/node/2770791":
                 "https://www.drupal.org/files/issues/lightning_core-skip-user-edit-form-alter.patch"
             },
@@ -223,6 +225,10 @@
             "drupal/adminimal_admin_toolbar": {
                 "Support Outside In navbar changes with new quickedit button styling | https://www.drupal.org/node/2826670": 
                 "https://www.drupal.org/files/issues/2826670-adminimal-admin-toolbar-outside-in-styles.patch"
+            },
+            "drupal/entity_browser": {
+                "Improve Field Widget UX for single-cardinality File/Image fields | https://www.drupal.org/node/2825555":
+                "https://www.drupal.org/files/issues/entity-browser-file-widget-single.patch"
             },
             "drupal/migrate_plus": {
               "Properly integrate configuration-entity-based migrations with the core plugin manager | https://www.drupal.org/node/2752335":

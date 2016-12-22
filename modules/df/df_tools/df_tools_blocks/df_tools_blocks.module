@@ -1,47 +1,89 @@
 <?php
 
-/**
- * @file
- * Contains df_tools_blocks.module.
- */
-
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_preprocess_block().
+ * Implements hook_ENTITY_TYPE_view_alter().
  */
-function df_tools_blocks_preprocess_block(&$variables) {
-  if (isset($variables['content']) && isset($variables['content']['#block_content'])) {
-    if ($variables['content']['#block_content']->bundle() == 'hero') {
-      $wrapper = array(
-        '#prefix' =>'<div class="full-width-inner">',
-        '#suffix' =>'</div>',
-        '#type' => 'container',
-        '#weight' => -1,
-        '#attributes' => array(
-          'class' => array('hero-block-fields row align-center')
-        ),
-        '#children' => array()
-      );
-      foreach (Element::getVisibleChildren($variables['content']) as $field_name) {
-        if ($field_name == 'field_icon' && isset($variables['content'][$field_name]['#object'])) {
-          $icon = $variables['content'][$field_name]['#object']->field_icon->getString();
-          if (!empty($icon)) {
-            $wrapper['#children'][] = [
-              '#markup' => '<i class="fa ' . $icon . ' hero-icon"></i>',
-              '#allowed_tags' => ['i'],
-            ];
-          }
-          unset($variables['content'][$field_name]);
+function df_tools_blocks_block_content_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if ($entity->bundle() == 'hero') {
+    $wrapper = [
+      '#prefix' =>'<div class="full-width-inner">',
+      '#suffix' =>'</div>',
+      '#type' => 'container',
+      '#weight' => -1,
+      '#attributes' => [
+        'class' => ['hero-block-fields'],
+      ],
+      '#children' => [],
+    ];
+    foreach (Element::getVisibleChildren($build) as $field_name) {
+      if ($field_name == 'field_icon' && isset($build[$field_name]['#object'])) {
+        $icon = $build[$field_name]['#object']->field_icon->getString();
+        if (!empty($icon)) {
+          $wrapper['#children'][$field_name] = [
+            '#markup' => '<i class="fa ' . $icon . ' hero-icon"></i>',
+            '#allowed_tags' => ['i'],
+          ];
         }
-        else if ($field_name != 'field_hero_image') {
-          $wrapper['#children'][] = $variables['content'][$field_name];
-          unset($variables['content'][$field_name]);
-        }
+        unset($build[$field_name]);
       }
-      $variables['content']['wrapper'] = $wrapper;
+      else if ($field_name != 'field_hero_image') {
+        $wrapper['#children'][$field_name] = $build[$field_name];
+        unset($build[$field_name]);
+      }
     }
+    // Attach styles.
+    $alignment = $entity->get('field_hero_alignment')->getString();
+    if (preg_match('/^[a-z_]+$/i', $alignment)) {
+      $wrapper['#attributes']['class'][] = Html::cleanCssIdentifier('hero-block-align-' . $alignment);
+    }
+    $color_regex = '/^#[0-9a-f]{6}$/i';
+    $text_color = $entity->get('field_text_color')->getString();
+    if (preg_match($color_regex, $text_color)) {
+      $wrapper['#children']['field_first_line']['#attributes']['style'] = 'color: ' . $text_color;
+      $wrapper['#children']['field_second_line']['#attributes']['style'] = 'color: ' . $text_color;
+    }
+    $gradient_color = $entity->get('field_gradient_color')->getString();
+    if (preg_match($color_regex, $gradient_color)) {
+      switch ($alignment) {
+        case 'left':
+          $direction = 'to right';
+          break;
+        case 'right':
+          $direction = 'to left';
+          break;
+        default:
+          $direction = 'to bottom';
+          break;
+      }
+      $build['field_hero_image']['#attributes']['style'] = "background-image: linear-gradient($direction, $gradient_color, transparent)";
+    }
+    $callout_color = $entity->get('field_callout_color')->getString();
+    if (preg_match($color_regex, $callout_color)) {
+      $style = 'background-color: ' . $callout_color . ';';
+      $hex = trim($callout_color, '#');
+      $r = hexdec(substr($hex,0,2));
+      $g = hexdec(substr($hex,2,2));
+      $b = hexdec(substr($hex,4,2));
+      if ($r + $g + $b > 382) {
+        $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-light-bg';
+        $style .= 'border-color:black;color:black;';
+      }
+      else {
+        $wrapper['#children']['field_hero_link'][0]['#attributes']['class'][] = 'hero-link-dark-bg';
+        $style .= 'border-color:white;color:white;';
+      }
+      $wrapper['#children']['field_hero_link'][0]['#attributes']['style'] = $style;
+    }
+    $wrapper['#attached']['library'][] = 'df_tools_blocks/hero';
+    $build['wrapper'] = $wrapper;
+    $build['#prefix'] = '<div class="hero-block">';
+    $build['#suffix'] = '</div>';
   }
 }
 
@@ -154,27 +196,63 @@ function df_tools_blocks_form_panels_ipe_block_plugin_form_alter(&$form, FormSta
  * Implements hook_form_FORM_ID_alter().
  */
 function df_tools_blocks_form_block_content_hero_panels_ipe_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Group the form into multiple fieldsets.
-  $grouping = [
-    'Hero Text' => ['field_first_line', 'field_second_line'],
-    'Hero Link' => ['field_hero_link'],
-    'Hero Icon' => ['field_icon'],
-    'Nested Block' => ['field_nested_block'],
+  // Move the hero image out of the details element and set a better label.
+  $form['field_hero_image']['widget']['#type'] = 'container';
+  $form['field_hero_image']['widget']['entity_browser']['#process'][] = '_df_tools_blocks_hero_browser_button';
+  // Remove the link fieldset and put the URI and title side-by-side.
+  $form['field_hero_link']['widget'][0]['#type'] = 'container';
+  $form['field_hero_link']['widget'][0]['#attributes']['class'][] = 'row';
+  unset($form['field_hero_link']['widget'][0]['uri']['#description']);
+  $form['field_hero_link']['widget'][0]['uri']['#title'] = t('Callout link');
+  $form['field_hero_link']['widget'][0]['title']['#title'] = t('Callout text');
+  $form['field_hero_link']['widget'][0]['uri']['#prefix'] = '<div class="large-6 columns">';
+  $form['field_hero_link']['widget'][0]['uri']['#suffix'] = '</div>';
+  $form['field_hero_link']['widget'][0]['title']['#prefix'] = '<div class="large-6 columns">';
+  $form['field_hero_link']['widget'][0]['title']['#suffix'] = '</div>';
+  // Group complex form elements into the advanced section.
+  $form['advanced'][] = $form['field_icon'];
+  $form['advanced'][] = $form['field_nested_block'];
+  unset($form['field_icon']);
+  unset($form['field_nested_block']);
+  $style_fields = [
+    'field_text_color',
+    'field_gradient_color',
+    'field_callout_color',
   ];
-  foreach ($grouping as $label => $fields) {
-    $fieldset_key = strtolower(str_replace(' ', '_', $label));
-    $form[$fieldset_key] = [
-      '#type' => 'details',
-      '#title' => t($label),
-      '#attributes' => ['class' => ['fieldset']],
-      '#collapsed' => TRUE,
-      '#weight' => 99,
-    ];
-    foreach ($fields as $field) {
-      $form[$fieldset_key][$field] = $form[$field];
-      unset($form[$field]);
+  $form['style_fields'] = [
+    '#type' => 'container',
+    '#attributes' => ['class' => ['row']],
+  ];
+  foreach ($style_fields as $field) {
+    if (strpos($field, 'color') !== FALSE) {
+      $form[$field]['widget'][0]['value']['#type'] = 'color';
     }
+    $form[$field]['#attributes']['class'][] = 'large-4 columns';
+    $form['style_fields'][] = $form[$field];
+    $form['style_fields']['#weight'] = $form[$field]['#weight'];
+    unset($form[$field]);
   }
+}
+
+/**
+ * Does nit-picky changes on the Hero image entity browser.
+ *
+ * @param array $element
+ *   The element render array.
+ *
+ * @return array
+ *   The possibly modified form render array.
+ */
+function _df_tools_blocks_hero_browser_button($element) {
+  $element['entity_browser']['open_modal']['#value'] = t('Select background');
+  if (isset($element['entity_browser']['open_modal']['#ajax'])) {
+    /** @var \Drupal\entity_browser\DisplayInterface $display */
+    $display = $element['entity_browser']['open_modal']['#ajax']['callback'][0];
+    $configuration = $display->getConfiguration();
+    $configuration['link_text'] = t('Background image');
+    $display->setConfiguration($configuration);
+  }
+  return $element;
 }
 
 /**

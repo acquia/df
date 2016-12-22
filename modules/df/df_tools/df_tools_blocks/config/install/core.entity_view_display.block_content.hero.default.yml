@@ -3,17 +3,20 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
+    - field.field.block_content.hero.field_callout_color
     - field.field.block_content.hero.field_first_line
+    - field.field.block_content.hero.field_gradient_color
+    - field.field.block_content.hero.field_hero_alignment
     - field.field.block_content.hero.field_hero_image
     - field.field.block_content.hero.field_hero_link
     - field.field.block_content.hero.field_icon
     - field.field.block_content.hero.field_nested_block
     - field.field.block_content.hero.field_second_line
+    - field.field.block_content.hero.field_text_color
+    - responsive_image.styles.responsive_hero
   module:
     - link
     - responsive_image
-_core:
-  default_config_hash: MIgjD8AeLo3PpuKfzTz6kctew-wHcKxGwsglVW4HmGA
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero
@@ -68,4 +71,8 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_callout_color: true
+  field_gradient_color: true
+  field_hero_alignment: true
+  field_text_color: true
   langcode: true

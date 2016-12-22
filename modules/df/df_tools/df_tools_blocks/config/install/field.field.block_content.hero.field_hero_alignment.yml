@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_hero_alignment
+  module:
+    - options
+id: block_content.hero.field_hero_alignment
+field_name: field_hero_alignment
+entity_type: block_content
+bundle: hero
+label: Alignment
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

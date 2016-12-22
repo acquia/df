@@ -1,0 +1,67 @@
+.hero-block .full-width-inner {
+  position: relative;
+}
+
+.hero-block .hero-block-fields {
+  position: absolute;
+  padding: 20px;
+  margin-top: 10%;
+  width: 100%;
+}
+
+.hero-block .hero-block-fields.hero-block-align-right {
+  text-align: right;
+}
+
+.hero-block .hero-block-fields.hero-block-align-left {
+  text-align: left;
+}
+
+.hero-block .hero-block-fields.hero-block-align-center {
+  text-align: center;
+}
+
+.hero-block .field-name-field-first-line {
+  font-size: 2rem;
+}
+
+.hero-block .field-name-field-second-line {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.hero-block .field-name-field-hero-link a {
+  color: white;
+  border: 1px solid white;
+  background: #2199e8;
+  padding: 10px;
+  filter: brightness(100%);
+  transition: .2s filter;
+}
+
+.hero-block .field-name-field-hero-link a.hero-link-light-bg:hover {
+  filter: brightness(85%);
+}
+
+.hero-block .field-name-field-hero-link a.hero-link-dark-bg:hover {
+  filter: brightness(115%);
+}
+
+.hero-block .field-name-field-hero-image {
+  position: relative;
+}
+
+.hero-block .field-name-field-hero-image img {
+  width: 100%;
+}
+
+.hero-block .field-name-field-hero-image:before {
+  content: '';
+  position: absolute;
+  background-image: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .6;
+}
