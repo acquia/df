@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6cf5a2070a64debfcce1e284e128676f",
-    "content-hash": "ac1a9ff2785cd581e36542696a37d188",
+    "hash": "c09c12fce33adb4d5b402e915853ae0f",
+    "content-hash": "ce908ab8053b2f97ee7f0929553ed054",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -1116,7 +1116,6 @@
                 "drupal/core": "~8.0"
             },
             "require-dev": {
-                "drupal/core": "*",
                 "drupal/search_api_solr": "*"
             },
             "type": "drupal-module",
@@ -1823,9 +1822,6 @@
             "require": {
                 "drupal/core": "*"
             },
-            "require-dev": {
-                "drupal/core": "*"
-            },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
@@ -2133,7 +2129,8 @@
                     "Patch Drupal core to fix obscure AJAX form bug | https://www.drupal.org/node/2794457": "https://www.drupal.org/files/issues/core-hotfix-2788277-3.patch",
                     "Quick Edit doesn't work for Custom Blocks referenced by other Custom Blocks | https://www.drupal.org/node/2661880": "https://www.drupal.org/files/issues/quickedit-undefined-attr-2661880-14.patch",
                     "Outside In is intermittently unable to bind dialog events to the window | https://www.drupal.org/node/2831924": "https://www.drupal.org/files/issues/outside-in-early-event-binding-fix.patch",
-                    "Cached autoloader misses cause failures when missed class becomes available | https://www.drupal.org/node/2776235": "https://www.drupal.org/files/issues/migrate-opcache-missing-class-2776235.patch"
+                    "Cached autoloader misses cause failures when missed class becomes available | https://www.drupal.org/node/2776235": "https://www.drupal.org/files/issues/migrate-opcache-missing-class-2776235.patch",
+                    "Allow exposed-form-in-block for block displays | https://www.drupal.org/node/2681947": "https://www.drupal.org/files/issues/allow-2681947-20_0.patch"
                 }
             },
             "autoload": {
@@ -2230,9 +2227,6 @@
             },
             "require": {
                 "drupal/core": "~8.0"
-            },
-            "require-dev": {
-                "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2383,7 +2377,6 @@
                 "drupal/core": "*"
             },
             "require-dev": {
-                "drupal/core": "*",
                 "drupal/entity_browser": "*"
             },
             "type": "drupal-module",
@@ -2622,7 +2615,6 @@
                 "drupal/core": "~8.0"
             },
             "require-dev": {
-                "drupal/core": "*",
                 "drupal/ctools": "*",
                 "drupal/inline_entity_form": "*",
                 "drupal/media_entity": "*",
@@ -3082,7 +3074,6 @@
             },
             "require-dev": {
                 "drupal/address": "*",
-                "drupal/core": "*",
                 "drupal/geocoder_field": "*",
                 "drupal/geofield": "*"
             },
@@ -3229,7 +3220,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geolocation",
-                "reference": "83fc40e910159a2a0f32797586410a492d500f54"
+                "reference": "96bdee4c4084f29481b4eec0a08fbc5d1b8dae94"
             },
             "require": {
                 "drupal/core": "*"
@@ -3240,8 +3231,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.8+61-dev",
-                    "datestamp": "1482156483"
+                    "version": "8.x-1.9+2-dev",
+                    "datestamp": "1482403683"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3263,7 +3254,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
             },
-            "time": "2016-12-19 13:45:26"
+            "time": "2016-12-22 10:45:58"
         },
         {
             "name": "drupal/geophp",
@@ -3646,9 +3637,6 @@
             "require": {
                 "drupal/core": "~8.0",
                 "leaflet/leaflet": "^0.7.7"
-            },
-            "require-dev": {
-                "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -4221,7 +4209,6 @@
                 "drupal/core": "^8.2"
             },
             "require-dev": {
-                "drupal/core": "*",
                 "drupal/migrate_example_advanced_setup": "*",
                 "drupal/migrate_example_setup": "*"
             },
@@ -4719,7 +4706,6 @@
                 "drupal/layout_plugin": ">=1.0.0-alpha22"
             },
             "require-dev": {
-                "drupal/core": "*",
                 "drupal/page_manager": "*"
             },
             "type": "drupal-module",
@@ -5469,7 +5455,6 @@
             },
             "require-dev": {
                 "drupal/colorbox": "*",
-                "drupal/core": "*",
                 "drupal/media_entity": "*",
                 "drupal/media_entity_embeddable_video": "*"
             },
