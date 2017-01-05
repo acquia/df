@@ -174,7 +174,11 @@
                 "Cached autoloader misses cause failures when missed class becomes available | https://www.drupal.org/node/2776235":
                 "https://www.drupal.org/files/issues/migrate-opcache-missing-class-2776235.patch",
                 "Allow exposed-form-in-block for block displays | https://www.drupal.org/node/2681947":
-                "https://www.drupal.org/files/issues/allow-2681947-20_0.patch"
+                "https://www.drupal.org/files/issues/allow-2681947-20_0.patch",
+                "MigrationPluginManager::getDefinitions() blows up in node derivers | https://www.drupal.org/node/2830036":
+                "https://www.drupal.org/files/issues/2830036-17.patch",
+                "Fix SqlBase fallback priorities and document them | https://www.drupal.org/node/2830031":
+                "https://www.drupal.org/files/issues/fix_sqlbase_fallback-2830031-5.patch"
             },
             "drupal/adminimal_admin_toolbar": {
                 "Support Outside In navbar changes with new quickedit button styling | https://www.drupal.org/node/2826670": 
@@ -261,7 +265,6 @@
         "cweagans/composer-patches": "^1.5.0",
         "desandro/masonry": "3.3.1",
         "desandro/imagesloaded": "3.1.8",
-        "drupal/core": "8.2.4",
         "drupal/address": "1.x-dev",
         "drupal/addtoany": "1.7.0",
         "drupal/admin_toolbar": "1.18.0",

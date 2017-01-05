@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "86c977746f8e77a13105899ebc5d94e4",
-    "content-hash": "222ea3f779823167895a02ddb29a353d",
+    "hash": "9e6c80c4265fd0ab7ed2b4a188b979e8",
+    "content-hash": "a10434feff055816db2886702e47c400",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -1961,16 +1961,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.2.4",
+            "version": "8.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "0741cbf486fc55721b5dab050b37c721c80df097"
+                "reference": "fbf10f63dba6b312e1d1b67bac521db1648384f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/0741cbf486fc55721b5dab050b37c721c80df097",
-                "reference": "0741cbf486fc55721b5dab050b37c721c80df097",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/fbf10f63dba6b312e1d1b67bac521db1648384f3",
+                "reference": "fbf10f63dba6b312e1d1b67bac521db1648384f3",
                 "shasum": ""
             },
             "require": {
@@ -2127,7 +2127,9 @@
                     "Quick Edit doesn't work for Custom Blocks referenced by other Custom Blocks | https://www.drupal.org/node/2661880": "https://www.drupal.org/files/issues/quickedit-undefined-attr-2661880-14.patch",
                     "Outside In is intermittently unable to bind dialog events to the window | https://www.drupal.org/node/2831924": "https://www.drupal.org/files/issues/outside-in-early-event-binding-fix.patch",
                     "Cached autoloader misses cause failures when missed class becomes available | https://www.drupal.org/node/2776235": "https://www.drupal.org/files/issues/migrate-opcache-missing-class-2776235.patch",
-                    "Allow exposed-form-in-block for block displays | https://www.drupal.org/node/2681947": "https://www.drupal.org/files/issues/allow-2681947-20_0.patch"
+                    "Allow exposed-form-in-block for block displays | https://www.drupal.org/node/2681947": "https://www.drupal.org/files/issues/allow-2681947-20_0.patch",
+                    "MigrationPluginManager::getDefinitions() blows up in node derivers | https://www.drupal.org/node/2830036": "https://www.drupal.org/files/issues/2830036-17.patch",
+                    "Fix SqlBase fallback priorities and document them | https://www.drupal.org/node/2830031": "https://www.drupal.org/files/issues/fix_sqlbase_fallback-2830031-5.patch"
                 }
             },
             "autoload": {
@@ -2151,7 +2153,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-12-07 18:31:42"
+            "time": "2017-01-04 11:31:35"
         },
         {
             "name": "drupal/crop",
