@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9e6c80c4265fd0ab7ed2b4a188b979e8",
-    "content-hash": "a10434feff055816db2886702e47c400",
+    "hash": "01f2cbc82923122940389c40bfb1d903",
+    "content-hash": "c89c3f8aa62ee59a6f72924e7d65af98",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -2129,7 +2129,8 @@
                     "Cached autoloader misses cause failures when missed class becomes available | https://www.drupal.org/node/2776235": "https://www.drupal.org/files/issues/migrate-opcache-missing-class-2776235.patch",
                     "Allow exposed-form-in-block for block displays | https://www.drupal.org/node/2681947": "https://www.drupal.org/files/issues/allow-2681947-20_0.patch",
                     "MigrationPluginManager::getDefinitions() blows up in node derivers | https://www.drupal.org/node/2830036": "https://www.drupal.org/files/issues/2830036-17.patch",
-                    "Fix SqlBase fallback priorities and document them | https://www.drupal.org/node/2830031": "https://www.drupal.org/files/issues/fix_sqlbase_fallback-2830031-5.patch"
+                    "Fix SqlBase fallback priorities and document them | https://www.drupal.org/node/2830031": "https://www.drupal.org/files/issues/fix_sqlbase_fallback-2830031-5.patch",
+                    "Do not scan the migration_templates directory in the MigrationPluginManager | https://www.drupal.org/node/2841437": "https://www.drupal.org/files/issues/dont-scan-migration-templates.patch"
                 }
             },
             "autoload": {
