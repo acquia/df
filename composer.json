@@ -35,6 +35,10 @@
             "url": "https://github.com/DevinCarlson/composer-patches"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/balsama/lightning"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "desandro/masonry",
@@ -171,8 +175,6 @@
                 "https://www.drupal.org/files/issues/2635712-14.patch",
                 "Can we test RefreshLess with simplytest.me? | https://www.drupal.org/node/2695717":
                 "https://www.drupal.org/files/issues/refreshless-alpha3-core-patch-2695717-7.patch",
-                "Allow profiles to provide a base/parent profile and load them in the correct order | https://www.drupal.org/node/1356276":
-                "https://www.drupal.org/files/issues/make_inherited_install-1356276-157.patch",
                 "ConfigurableLanguageManager::getConfigOverrideLanguage() returns NULL | https://www.drupal.org/node/2684873":
                 "https://www.drupal.org/files/issues/2684873-28.patch",
                 "Improve the UX of Quick Editing images | https://www.drupal.org/node/2421427":
@@ -282,7 +284,7 @@
         }
     },
     "require": {
-        "acquia/lightning": "2.0.3",
+        "acquia/lightning": "dev-8.x-subprofile",
         "cweagans/composer-patches": "^1.6.0",
         "desandro/masonry": "3.3.1",
         "desandro/imagesloaded": "3.1.8",
