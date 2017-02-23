@@ -1,5 +1,19 @@
 // These are custom colors used in common.scss.
 
+// BC function as foreground was removed in 6.3.0, and color-pick-contrast does
+// not do the same thing.
+@function foreground($color, $yes: $black, $no: $white, $threshold: 60%) {
+  @if $color == transparent {
+    $color: $body-background;
+  }
+  @if (lightness($color) > $threshold) {
+    @return $yes;
+  }
+  @else {
+    @return $no;
+  }
+}
+
 //use: menu, main background of site outide grid,
 $primary-bg:#fbfcfc;
 
@@ -74,17 +88,31 @@ $bg-transparency: rgba(255,255,255,0.55);
 
 @import 'util/util';
 
+// Colors used for buttons, callouts, links, etc.
+// There must always be a color called `primary`.
+// @type Map
+$foundation-palette: (
+  primary: #2199e8,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+) !default;
+
+// Internal variables used for colors. These would be overridden based on the
+// palette map above by foundation in obio.scss@34 (see @import "foundation";).
+$primary-color: map-get($foundation-palette, primary);
+$secondary-color: map-get($foundation-palette, secondary);
+$success-color: map-get($foundation-palette, success);
+$warning-color: map-get($foundation-palette, warning);
+$alert-color: map-get($foundation-palette, alert);
+
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
-$primary-color: #2199e8;
-$secondary-color: #777;
-$success-color: #3adb76;
-$warning-color: #ffae00;
-$alert-color: #ec5840;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -112,6 +140,14 @@ $breakpoints: (
   xxlarge: 1440px,
 );
 $breakpoint-classes: (small medium large);
+$small-only: unquote('screen and #{breakpoint(small only)}');
+$medium-up: unquote('screen and #{breakpoint(medium)}');
+$medium-only: unquote('screen and #{breakpoint(medium only)}');
+$large-up: unquote('screen and #{breakpoint(large)}');
+$large-only: unquote('screen and #{breakpoint(large only)}');
+$xlarge-up: unquote('screen and #{breakpoint(xlarge)}');
+$xlarge-only: unquote('screen and #{breakpoint(xlarge only)}');
+$xxlarge-up: unquote('screen and #{breakpoint(xxlarge)}');
 
 // 3. The Grid
 // -----------
@@ -132,22 +168,22 @@ $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-sizes: (
+$header-styles: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': 48,
-    'h2': 40,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 40),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
   ),
 );
 $header-color: inherit;
