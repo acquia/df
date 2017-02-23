@@ -39,7 +39,7 @@ gulp.task('javascript', function() {
 
 // concatanate all vendor scripts into a single js file. specific order is defined
 gulp.task('concat', function() {
-  return gulp.src(['./js/vendor/what-input.min.js','./js/vendor/motion-ui.min.js','./js/vendor/foundation.min.js'])
+  return gulp.src(['./js/vendor/what-input.min.js','./js/vendor/motion-ui.min.js','./js/vendor/js/foundation.min.js'])
     .pipe(concat('vendor.all.js'))
     .pipe(gulp.dest('./js/'));
 });
