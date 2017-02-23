@@ -39,6 +39,20 @@
 //  34. Tooltip
 //  35. Top Bar
 
+// BC function as foreground was removed in 6.3.0, and color-pick-contrast does
+// not do the same thing.
+@function foreground($color, $yes: $black, $no: $white, $threshold: 60%) {
+  @if $color == transparent {
+    $color: $body-background;
+  }
+  @if (lightness($color) > $threshold) {
+    @return $yes;
+  }
+  @else {
+    @return $no;
+  }
+}
+
 @import 'util/util';
 
 // 1. Global
@@ -52,7 +66,7 @@ $foundation-palette: (
   secondary: #7eb5b9,
   success:  #3adb76,
   warning: #ffae00,
-  alert: #ec5840,
+  alert: #a32c20,
 );
 
 $primary-color: #224660;
@@ -99,6 +113,15 @@ $breakpoints: (
   xxlarge: 1440px,
 );
 $breakpoint-classes: (small medium large xlarge);
+$small-up: screen;
+$small-only: unquote('screen and #{breakpoint(small only)}');
+$medium-up: unquote('screen and #{breakpoint(medium)}');
+$medium-only: unquote('screen and #{breakpoint(medium only)}');
+$large-up: unquote('screen and #{breakpoint(large)}');
+$large-only: unquote('screen and #{breakpoint(large only)}');
+$xlarge-up: unquote('screen and #{breakpoint(xlarge)}');
+$xlarge-only: unquote('screen and #{breakpoint(xlarge only)}');
+$xxlarge-up: unquote('screen and #{breakpoint(xxlarge)}');
 
 // 3. The Grid
 // -----------
@@ -120,39 +143,24 @@ $header-font-weight: $global-weight-normal;
 $header-font-color: $primary-alt-color;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-sizes: (
+$header-styles: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': 32,
-    'h2': 24,
-    'h3': 20,
-    'h4': 24,
-    'h5': 16,
-    'h6': 15,
+    'h1': ('font-size': 32),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 24),
+    'h5': ('font-size': 16),
+    'h6': ('font-size': 15),
   ),
 );
-
-$h1-font-size: rem-calc(32);
-$h2-font-size: rem-calc(24);
-$h3-font-size: rem-calc(20);
-$h4-font-size: rem-calc(24);
-$h5-font-size: rem-calc(16);
-$h6-font-size: rem-calc(15);
-
-$h1-font-reduction: rem-calc(10);
-$h2-font-reduction: rem-calc(10);
-$h3-font-reduction: rem-calc(5);
-$h4-font-reduction: rem-calc(5);
-$h5-font-reduction: rem-calc(3);
-$h6-font-reduction: rem-calc(3);
-
 
 $header-color: $primary-alt-color;
 $header-lineheight: 1.4;

@@ -25,8 +25,9 @@
 </div>
 
 <div class="menu-mobile-wrap">
-  <div id="menu-mobile" data-dropdown class="f-dropdown" aria-hidden="true" aria-autoclose="true" data-auto-focus="false" tabindex="-1">
-    {{ menus.menu_links(items, attributes, 0, linked_logo) }}
+  <button class="menu-icon" type="button" data-toggle="menu-mobile"></button>
+  <div id="menu-mobile" class="dropdown-pane f-dropdown" data-dropdown aria-hidden="true" aria-autoclose="false" data-auto-focus="false">
+    {{ menus.menu_links(items, attributes.addClass('vertical'), 0, linked_logo) }}
   </div>
 </div>
 

@@ -22,7 +22,7 @@ gulp.task('sass', function() {
 
 // move vendor js files from bower_components into /js/ folder for deployment purposes
 gulp.task('copy', function() {
-return gulp.src(['bower_components/foundation-sites/dist/*min.js', 'bower_components/motion-ui/dist/*min.js','bower_components/what-input/*min.js'])
+return gulp.src(['bower_components/foundation-sites/dist/js/*min.js', 'bower_components/motion-ui/dist/*min.js','bower_components/what-input/*min.js'])
   .pipe(gulpCopy('js/vendor',{prefix: 3}));
 });
 

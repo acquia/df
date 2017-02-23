@@ -101,9 +101,11 @@ function tec_preprocess_page(&$variables) {
     unset($variables['page']['content']['pagetitle']);
   }
   // Wrap tabs so we can float them above our hero images.
-  $variables['page']['content']['tabs'] = [
-    '#type' => 'container',
-    '#attributes' => ['class' => ['tab-wrap']],
-    0 => $variables['page']['content']['tabs']
-  ];
+  if (isset($variables['page']['content']['tabs'] )) {
+    $variables['page']['content']['tabs'] = [
+      '#type' => 'container',
+      '#attributes' => ['class' => ['tab-wrap']],
+      0 => $variables['page']['content']['tabs']
+    ];
+  }
 }
