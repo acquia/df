@@ -587,7 +587,7 @@ class DFSubContext extends DrupalSubContextBase {
     // Open the Content Embed form.
     $this->clickElementBySelector('a[title="Manage Content"]');
     $this->minkContext->iWaitForAjaxToFinish();
-    $this->clickElementBySelector('a[data-category="Create Display"]');
+    $this->clickElementBySelector('a[data-category="Existing Content"]');
     $this->minkContext->iWaitForAjaxToFinish();
     $this->clickElementBySelector('a[data-plugin-id="content_embed"]');
     $this->minkContext->iWaitForAjaxToFinish();
