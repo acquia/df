@@ -274,7 +274,9 @@
                 "Provide hook to alter available blocks | https://www.drupal.org/node/2767087":
                 "https://www.drupal.org/files/issues/panels_override_blocks-2767087-4.patch",
                 "Panels IPE won't animate the \"Toggle Preview\" effect if additional form classes are added by a theme | https://www.drupal.org/node/2847503":
-                "https://www.drupal.org/files/issues/panels-ipe-improve-flipper-logic.patch"
+                "https://www.drupal.org/files/issues/panels-ipe-improve-flipper-logic.patch",
+                "Allow modules to influence the IPE tempstore ID | https://www.drupal.org/node/2793801":
+                "https://www.drupal.org/files/issues/2793801-17.patch"
             },
             "drupal/rules": {
                 "PHP Fatal error when adding an action and address is installed | http://drupal.org/node/2694685":
@@ -301,6 +303,9 @@
             "acquia/lightning": {
                 "drupal/entity_block": {
                     "This patch conflicts with the patch to add UUID support": "https://www.drupal.org/files/issues/2846004-2.patch"
+                },
+                "drupal/panels": {
+                    "We replace this patch with the patch from #17": "https://www.drupal.org/files/issues/2793801-13.patch"
                 }
             }
         }
