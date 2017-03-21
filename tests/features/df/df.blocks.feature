@@ -60,4 +60,6 @@ Feature: Demo Framework: Blocks
       | Foobar | /foobar | draft            |
     When I go to "/foobar"
     And I embed the content "My Content" in the "middle" region
+    And I click the "li[data-tab-id='save']" element
+    And I wait for ajax to finish
     Then I should see "My Content"
