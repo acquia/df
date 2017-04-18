@@ -1,4 +1,4 @@
-@ipe
+@df @ipe
 Feature: Demo Framework: Landing page
   In order to prove that landing pages for a given scenario function properly
   As a developer
