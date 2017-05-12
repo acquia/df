@@ -22,6 +22,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   field_last_name:
     type: string
     weight: 1
@@ -29,6 +30,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   user_picture:
     type: image
     weight: 2
@@ -37,6 +39,7 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
+    region: content
 hidden:
   field_subscriptions: true
   field_user_agent_location: true

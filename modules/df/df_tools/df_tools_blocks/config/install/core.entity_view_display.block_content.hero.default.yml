@@ -29,6 +29,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     label: hidden
+    region: content
   field_hero_image:
     type: responsive_image
     weight: 0
@@ -37,6 +38,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+    region: content
   field_hero_link:
     type: link
     weight: 3
@@ -48,6 +50,7 @@ content:
       url_plain: false
     third_party_settings: {  }
     label: hidden
+    region: content
   field_icon:
     weight: 5
     label: hidden
@@ -55,6 +58,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_nested_block:
     weight: 4
     label: hidden
@@ -63,6 +67,7 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
   field_second_line:
     type: string
     weight: 2
@@ -70,6 +75,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     label: hidden
+    region: content
 hidden:
   field_callout_color: true
   field_gradient_color: true

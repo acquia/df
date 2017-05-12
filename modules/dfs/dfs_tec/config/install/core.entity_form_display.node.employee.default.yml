@@ -31,6 +31,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
   field_biography:
     type: text_textarea_with_summary
     weight: 4
@@ -39,17 +40,20 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_department:
     type: options_select
     weight: 5
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_email:
     type: email_default
     weight: 6
     settings:
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_employee_name:
     type: string_textfield
     weight: 2
@@ -57,6 +61,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_headshot:
     type: image_image
     weight: 3
@@ -64,6 +69,7 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+    region: content
   field_links:
     type: link_default
     weight: 9
@@ -71,11 +77,13 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+    region: content
   field_location:
     type: options_select
     weight: 8
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_phone:
     type: string_textfield
     weight: 7
@@ -83,6 +91,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_title:
     type: string_textfield
     weight: 1
@@ -90,11 +99,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -102,12 +113,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   translation:
     weight: 10
+    region: content
 hidden:
   created: true
   path: true
   promote: true
   sticky: true
   uid: true
-

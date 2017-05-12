@@ -32,12 +32,14 @@ content:
     third_party_settings:
       field_formatter_class:
         class: show-for-medium
+    region: content
   field_cta_headline:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_cta_link:
     weight: 2
     label: hidden
@@ -49,6 +51,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
 hidden:
   field_cta_background: true
   langcode: true

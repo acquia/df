@@ -31,12 +31,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
+    region: content
   field_email:
     type: email_mailto
     weight: 3
     settings: {  }
     third_party_settings: {  }
     label: hidden
+    region: content
   field_headshot:
     type: image
     weight: 5
@@ -45,6 +47,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+    region: content
   field_links:
     type: link
     weight: 7
@@ -56,12 +59,14 @@ content:
       target: ''
     third_party_settings: {  }
     label: above
+    region: content
   field_location:
     type: list_default
     weight: 2
     settings: {  }
     third_party_settings: {  }
     label: hidden
+    region: content
   field_phone:
     type: string
     weight: 4
@@ -69,6 +74,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     label: hidden
+    region: content
   field_title:
     type: string
     weight: 1
@@ -76,14 +82,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     label: hidden
+    region: content
   links:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   body: true
   field_department: true
   field_employee_name: true
   field_job: true
   langcode: true
-

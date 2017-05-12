@@ -147,6 +147,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     label: hidden
+    region: content
   comment:
     label: hidden
     type: comment_default
@@ -155,6 +156,7 @@ content:
       pager_id: 0
       view_mode: default
     third_party_settings: {  }
+    region: content
   field_image:
     type: image
     weight: -1
@@ -163,16 +165,19 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+    region: content
   field_tags:
     type: entity_reference_rss_category
     weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
   scheduled_update:
     weight: 101
     label: above
@@ -180,12 +185,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   workbench_moderation_control:
     weight: -20
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   addtoany: true
   langcode: true
   panelizer: true
-

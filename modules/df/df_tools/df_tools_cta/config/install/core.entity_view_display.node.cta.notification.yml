@@ -33,6 +33,7 @@ content:
       field_formatter_class:
         class: ''
     type: text_default
+    region: content
   field_cta_link:
     weight: 2
     label: hidden
@@ -44,6 +45,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
 hidden:
   field_cta_background: true
   field_cta_detail: true
