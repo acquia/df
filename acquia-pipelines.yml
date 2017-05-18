@@ -25,8 +25,8 @@ events:
             - ./bin/phing cloud-db-snippet
             - mkdir -p ./config/default
             # Generate Behat configuration.
-            - ./bin/drupal behat:init http://127.0.0.1:8080 --merge=../tests/behat.yml
-            - ./bin/drupal behat:include ../tests/features --with-subcontexts=../tests/features/bootstrap --with-subcontexts=../src/DFExtension/Context
+            - ./bin/drupal behat:init http://127.0.0.1:8080 --merge=../docroot/profiles/df/tests/behat.yml
+            - ./bin/drupal behat:include ../docroot/profiles/df/tests/features --with-subcontexts=../docroot/profiles/df/tests/features/bootstrap --with-subcontexts=../docroot/profiles/df/src/DFExtension/Context
       - test:
           type: script
           script:

@@ -71,8 +71,8 @@ tests:
 
 ### Behat
     $ cd MYPROJECT
-    $ ./bin/drupal behat:init http://YOUR.DF.SITE --merge=../tests/behat.yml
-    $ ./bin/drupal behat:include ../tests/features --with-subcontexts=../tests/features/bootstrap --with-subcontexts=../src/LightningExtension/Context
+    $ ./bin/drupal behat:init http://YOUR.DF.SITE --merge=../docroot/profiles/df/tests/behat.yml
+    $ ./bin/drupal behat:include ../docroot/profiles/df/tests/features --with-subcontexts=../docroot/profiles/df/tests/features/bootstrap --with-subcontexts=../docroot/profiles/df/src/DFExtension/Context
     $ ./bin/behat --config ./docroot/sites/default/files/behat.yml
 
 If necessary, you can edit ```docroot/sites/default/files/behat.yml``` to match
