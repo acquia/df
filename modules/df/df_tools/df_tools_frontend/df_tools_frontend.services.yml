@@ -1,5 +1,0 @@
-services:
-  df_tools_frontend.route_subscriber:
-    class: Drupal\df_tools_frontend\Routing\RouteSubscriber
-    tags:
-      - { name: event_subscriber }
