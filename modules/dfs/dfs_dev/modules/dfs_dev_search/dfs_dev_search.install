@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install routine for dfs_tec_search module.
+ * Install routine for dfs_dev_search module.
  */
 
 use Drupal\lightning_core\ConfigHelper as Config;
@@ -13,10 +13,10 @@ use Drupal\search_api\Entity\Server;
 /**
  * Implements hook_install().
  */
-function dfs_tec_search_install() {
+function dfs_dev_search_install() {
   // Enable default permissions for system roles.
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('use search_api_autocomplete for dfs_tec_search'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('use search_api_autocomplete for dfs_tec_search'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('use search_api_autocomplete for dfs_dev_search'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('use search_api_autocomplete for dfs_dev_search'));
 
   // Search API DB is not a hard dependency, but install it if it's available so
   // that the search index we provide will "just work" out of the box.
@@ -32,14 +32,14 @@ function dfs_tec_search_install() {
 
   /** @var \Drupal\node\NodeTypeInterface $node_type */
   $node_types = NodeType::loadMultiple();
-  array_walk($node_types, 'dfs_tec_search_node_type_insert');
+  array_walk($node_types, 'dfs_dev_search_node_type_insert');
 
   // The database server is optional configuration, to be installed only if
   // Search API DB is present. For some reason, it's not installed during a
   // normal site install, so create it now if it doesn't already exist.
   $server = Server::load('database');
   if (empty($server) && \Drupal::moduleHandler()->moduleExists('search_api_db')) {
-    Config::forModule('dfs_tec_search')
+    Config::forModule('dfs_dev_search')
       ->optional()
       ->getEntity('search_api_server', 'database')
       ->save();
@@ -47,6 +47,6 @@ function dfs_tec_search_install() {
     $server = Server::load('database');
   }
   if ($server) {
-    Index::load('dfs_tec')->setServer($server)->enable()->save();
+    Index::load('dfs_dev')->setServer($server)->enable()->save();
   }
 }

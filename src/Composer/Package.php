@@ -38,7 +38,7 @@ class Package {
 
     // Retrieve a list of all libraries.
     $libraries = array_filter($libraries, function (PackageInterface $package) {
-      return $package->getType() == 'drupal-library';
+      return in_array($package->getType(), array('drupal-library', 'bower-asset', 'npm-asset'));
     });
 
     // Build a whitelist of libraries which are approved for distribution via
@@ -54,17 +54,26 @@ class Package {
       // 'vendor/library-name'. The vendor name must be removed in order to
       // support drush make.
       $old_key = $library->getName();
-      $new_key = basename($old_key);
-      $make['libraries'][$new_key] = $make['libraries'][$old_key];
-      unset($make['libraries'][$old_key]);
 
-      // Libraries must be located in the root 'libraries' folder.
-      $make['libraries'][$new_key]['destination'] = "../../libraries";
+      // Drush make-convert doesn't currently include dependencies of libraries
+      // that are automatically detected and downloaded by Composer via
+      // asset-packagist in $make. However, these packages *are* detected by
+      // Composer and included in $libraries.
+      // Since we don't care about or want to process dependencies, we check to
+      // see if they are in $make and otherwise ignore them.
+      if (isset($make['libraries'][$old_key])) {
+        $new_key = basename($old_key);
+        $make['libraries'][$new_key] = $make['libraries'][$old_key];
+        unset($make['libraries'][$old_key]);
 
-      // Remove any libraries that are not specifically whitelisted above.
-      // Users will need to download these libraries manually.
-      if (!in_array($new_key, $whitelist)) {
-        unset($make['libraries'][$new_key]);
+        // Libraries must be located in the root 'libraries' folder.
+        $make['libraries'][$new_key]['destination'] = "../../libraries";
+
+        // Remove any libraries that are not specifically whitelisted above.
+        // Users will need to download these libraries manually.
+        if (!in_array($new_key, $whitelist)) {
+          unset($make['libraries'][$new_key]);
+        }
       }
     }
 
@@ -80,6 +89,12 @@ class Package {
     // download, to 'lite'.
     if (isset($make['libraries']['ckeditor-track-changes'])) {
       $make['libraries']['ckeditor-track-changes']['directory_name'] = 'lite';
+    }
+
+    // The slick library is designed to be renamed, after download, to
+    // 'slick-carousel'.
+    if (isset($make['libraries']['slick'])) {
+      $make['libraries']['slick']['directory_name'] = 'slick-carousel';
     }
 
     // The Zurb Foundation theme had its shortname changed from

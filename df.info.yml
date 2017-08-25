@@ -10,7 +10,9 @@ base profile:
     - lightning_contact_form
     - lightning_preview
     - lightning_roles
-    - lightning_search
+  excluded_themes:
+    - bartik
+    - seven
 dependencies:
   - contact
   - dblog
@@ -18,5 +20,5 @@ dependencies:
   - df_core
   - df_tools
 themes:
-  - bartik
-  - seven
+  - dfs_base
+  - adminimal_theme

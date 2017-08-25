@@ -1,0 +1,82 @@
+uuid: 15d207d6-d9ef-482f-a615-b28a34dd65f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.dfs_dev_search_created
+    - facets.facet.dfs_dev_search_tags
+    - facets.facet.dfs_dev_search_type
+    - page_manager.page.dfs_dev_search
+    - views.view.dfs_dev_search
+  module:
+    - facets
+    - panels
+    - views
+id: dfs_dev_search-panels_variant-0
+label: Search
+variant: panels_variant
+variant_settings:
+  blocks:
+    9a7fab44-0437-4e04-9d76-56da0a76d6c1:
+      id: 'views_exposed_filter_block:dfs_dev_search-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      region: middle
+      weight: 1
+      uuid: 9a7fab44-0437-4e04-9d76-56da0a76d6c1
+      context_mapping: {  }
+    9c6af790-554e-4410-9ef1-120736572960:
+      id: 'views_block:dfs_dev_search-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: middle
+      weight: 2
+      uuid: 9c6af790-554e-4410-9ef1-120736572960
+      context_mapping: {  }
+    65fda0be-e6c2-4019-b92c-2d3d4f0890ba:
+      id: 'facet_block:dfs_dev_search_type'
+      label: Type
+      provider: facets
+      label_display: visible
+      region: middle
+      weight: -2
+      uuid: 65fda0be-e6c2-4019-b92c-2d3d4f0890ba
+      context_mapping: {  }
+    09bd368f-83bd-4075-b5a1-093495ae84b6:
+      id: 'facet_block:dfs_dev_search_created'
+      label: Created
+      provider: facets
+      label_display: visible
+      region: middle
+      weight: -1
+      uuid: 09bd368f-83bd-4075-b5a1-093495ae84b6
+      context_mapping: {  }
+    bff95634-1855-4d7d-baf3-2170c52074d3:
+      id: 'facet_block:dfs_dev_search_tags'
+      label: Tags
+      provider: facets
+      label_display: visible
+      region: middle
+      weight: 0
+      uuid: bff95634-1855-4d7d-baf3-2170c52074d3
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 16dda589-fdab-4d63-a26f-6cef92ccfe6b
+  label: null
+  weight: 0
+  layout: foundation_1col
+  layout_settings: {  }
+  page_title: Search
+  storage_type: page_manager
+  storage_id: dfs_dev_search-panels_variant-0
+  builder: ipe
+page: dfs_dev_search
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,58 @@
+uuid: c9acb6cd-b8fb-4a18-90ad-ce282ffa534b
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.dfs_dev
+    - views.view.dfs_dev_search
+  module:
+    - search_api
+id: dfs_dev_search_created
+name: 'DFS Dev Search Created'
+url_alias: created
+weight: 0
+min_count: 1
+show_only_one_result: false
+field_identifier: created
+facet_source_id: 'search_api:views_block__dfs_dev_search__block_1'
+widget:
+  type: datebasic
+  config:
+    show_numbers: false
+    display_relative: '0'
+    granularity: '5'
+    date_display: ''
+query_operator: or
+use_hierarchy: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 0
+exclude: false
+only_visible_when_facet_source_is_visible: false
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: DESC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: DESC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: ASC
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: -10
+      build: -10
+    settings: {  }
+empty_behavior:
+  behavior: none

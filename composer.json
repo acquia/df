@@ -13,7 +13,7 @@
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "~4.8",
         "symfony/css-selector": "~2.8",
-        "drush/drush": "8.1.11",
+        "drush/drush": "8.1.12",
         "drupal/drupal-extension": "~3.2.0",
         "behat/behat": "^3.0",
         "drupal/coder": "~8.2.0",
@@ -39,97 +39,6 @@
         {
             "type": "package",
             "package": {
-                "name": "desandro/masonry",
-                "version": "v3.3.1",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/desandro/masonry.git",
-                    "type": "git",
-                    "reference": "v3.3.1"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "desandro/imagesloaded",
-                "version": "v3.1.8",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/desandro/imagesloaded.git",
-                    "type": "git",
-                    "reference": "v3.1.8"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "enyo/dropzone",
-                "version": "v4.2.0",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/enyo/dropzone.git",
-                    "type": "git",
-                    "reference": "v4.2.0"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "fengyuanchen/cropper",
-                "version": "v3.0.0-rc.2",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/fengyuanchen/cropper.git",
-                    "type": "git",
-                    "reference": "v3.0.0-rc.2"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "leaflet/leaflet",
-                "version": "v1.0.3",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/Leaflet/Leaflet.git",
-                    "type": "git",
-                    "reference": "v1.0.3"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "itsjavi/fontawesome-iconpicker",
-                "version": "1.2.0",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/itsjavi/fontawesome-iconpicker.git",
-                    "type": "git",
-                    "reference": "1.2.0"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "kenwheeler/slick",
-                "version": "1.5.0",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/kenwheeler/slick.git",
-                    "type": "git",
-                    "reference": "1.5.0"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "loopindex/ckeditor-track-changes",
                 "version": "dev-master",
                 "type": "drupal-library",
@@ -137,19 +46,6 @@
                     "url": "https://github.com/loopindex/ckeditor-track-changes.git",
                     "type": "git",
                     "reference": "dev-master"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "lokesh/lightbox2",
-                "version": "v2.9.0",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/lokesh/lightbox2.git",
-                    "type": "git",
-                    "reference": "v2.9.0"
                 }
             }
         }
@@ -247,7 +143,7 @@
                 "Fixed the issue of Call to a member function getConfigDependencyKey() on null | https://www.drupal.org/node/2845037":
                 "https://www.drupal.org/files/issues/2845037-4.patch",
                 "Quick edit compatibility | https://www.drupal.org/node/2733605":
-                "https://www.drupal.org/files/issues/entity-browser-quickedit-2733605-6.patch"
+                "https://www.drupal.org/files/issues/entity-browser-quickedit-2733605.patch"
             },
             "drupal/leaflet": {
                 "Leaflet not always working with AJAX. | https://www.drupal.org/node/2858091":
@@ -304,16 +200,13 @@
                     "This patch conflicts with the patch to add UUID support": "https://www.drupal.org/files/issues/2846004-2.patch"
                 },
                 "drupal/entity_browser": {
-                    "2877751 - Inform users how many items they can add to a field that uses an entity browser": "https://www.drupal.org/files/issues/2877751-10.patch"
+                    "2877751 - Inform users how many items they can add to a field that uses an entity browser": "https://www.drupal.org/files/issues/2877751-17.patch"
                 }
             }
         }
     },
     "require": {
-        "acquia/lightning": "2.1.6",
-        "cweagans/composer-patches": "^1.6.0",
-        "desandro/masonry": "v3.3.1",
-        "desandro/imagesloaded": "v3.1.8",
+        "acquia/lightning": "2.1.7",
         "doctrine/inflector": "1.1.0",
         "drupal/address": "1.1.0",
         "drupal/addtoany": "1.8.0",
@@ -334,7 +227,7 @@
         "drupal/facets": "1.0.0-alpha11",
         "drupal/field_formatter_class": "1.0.0",
         "drupal/field_group": "1.0.0-rc6",
-        "drupal/file_entity": "2.0.0-beta3",
+        "drupal/file_entity": "2.0.0-beta4",
         "drupal/geocoder": "2.0.0-alpha5",
         "drupal/geofield": "1.0.0-alpha4",
         "drupal/geophp": "1.x-dev",
@@ -348,8 +241,9 @@
         "drupal/link_class": "1.3.0",
         "drupal/lite": "1.4.0",
         "drupal/mailsystem": "4.1.0",
+        "drupal/material_admin": "1.x-dev",
         "drupal/media_entity_video": "1.0.0-beta2",
-        "drupal/message": "1.0.0-beta1",
+        "drupal/message": "1.0.0-beta2",
         "drupal/message_notify": "1.0.0-beta1",
         "drupal/metatag": "1.2.0",
         "drupal/moderation_dashboard": "1.x-dev",
@@ -366,22 +260,24 @@
         "drupal/restui": "1.15.0",
         "drupal/revision_log_default": "1.0.0",
         "drupal/rules": "3.0.0-alpha3",
-        "drupal/search_api_autocomplete": "1.0.0-alpha2",
+        "drupal/search_api_autocomplete": "1.0.0-alpha3",
         "drupal/search_api_solr": "1.0.0",
         "drupal/scenarios": "2.x-dev",
-        "drupal/scheduler": "1.0.0-rc1",
+        "drupal/scheduler": "1.0.0-rc2",
         "drupal/swiftmailer": "1.0.0-beta1",
+        "drupal/type_style": "1.x-dev",
         "drupal/url_embed": "1.x-dev",
         "drupal/view_modes_display": "1.0.0",
-        "drupal/workbench_email": "1.0-alpha5",
+        "drupal/workbench_email": "1.0-alpha6",
         "drupal/zurb_foundation": "6.x-dev",
-        "drupal-composer/drupal-scaffold": "^2.0.0",
-        "enyo/dropzone": "v4.2.0",
-        "fengyuanchen/cropper": "v3.0.0-rc.2",
-        "itsjavi/fontawesome-iconpicker": "1.2.0",
-        "kenwheeler/slick": "1.5.0",
-        "leaflet/leaflet": "v1.0.3",
-        "lokesh/lightbox2": "v2.9.0",
+        "bower-asset/cropper": "v3.0.0-rc.3",
+        "bower-asset/dropzone": "v4.3.0",
+        "bower-asset/fontawesome-iconpicker": "1.3.0",
+        "bower-asset/imagesloaded": "v4.1.1",
+        "bower-asset/leaflet": "v1.0.3",
+        "bower-asset/lightbox2": "v2.9.0",
+        "bower-asset/masonry": "v4.2.0",
+        "bower-asset/slick-carousel": "1.7.1",
         "loopindex/ckeditor-track-changes": "dev-master#a7df5c6b685385713e8aaf2df3f44c82e3bf823a"
     },
     "autoload": {

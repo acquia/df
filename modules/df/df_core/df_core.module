@@ -19,13 +19,6 @@ function df_core_module_implements_alter(&$implementations, $hook) {
   if ($hook == 'themes_installed') {
     unset($implementations['block']);
   }
-
-  // Lightning attempts to automatically populate any empty path fields on
-  // entities when they are loaded. This currently causes issues with Commerce
-  // so we disable it for now.
-  if ($hook == 'entity_load') {
-    unset($implementations['lightning_core']);
-  }
 }
 
 /**

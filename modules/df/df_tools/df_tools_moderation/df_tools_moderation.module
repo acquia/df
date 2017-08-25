@@ -109,3 +109,13 @@ function df_tools_moderation_tokens($type, $tokens, array $data, array $options,
 
   return $replacements;
 }
+
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function df_tools_moderation_library_info_alter(&$libraries, $extension) {
+  if ($extension === 'moderation_note') {
+    unset($libraries['main']['dependencies']);
+  }
+}

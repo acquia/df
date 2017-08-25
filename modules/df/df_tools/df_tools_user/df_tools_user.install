@@ -13,8 +13,8 @@ use Drupal\user\Entity\User;
  */
 function df_tools_user_install() {
   // Enable default permissions for system roles.
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments', 'use search', 'search content', 'use search_api_autocomplete for search_api_views_search', 'access user profiles'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval', 'search content', 'use search_api_autocomplete for search_api_views_search', 'access user profiles'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access comments', 'access user profiles'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access comments', 'post comments', 'skip comment approval', 'access user profiles'));
 
   // Assign user 1 the "administrator" role.
   if ($user = User::load(1)) {

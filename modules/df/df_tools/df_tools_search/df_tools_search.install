@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains installation and update routines for df_tools_search.
+ */
+
+use Drupal\search_api\Entity\Index;
+use Drupal\search_api\Entity\Server;
+
+/**
+ * Implements hook_install().
+ */
+function df_tools_search_install() {
+  // Don't make any configuration changes during config sync.
+  if (\Drupal::isConfigSyncing()) {
+    return;
+  }
+
+  // Disable Lightning's default 'content' search index.
+  $server = Server::load('database');
+  if ($server) {
+    Index::load('content')->setServer($server)->disable()->save();
+  }
+}
