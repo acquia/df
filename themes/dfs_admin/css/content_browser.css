@@ -1,0 +1,80 @@
+/**
+ * @file
+ * Overrides the Content Browser module.
+ *
+ */
+
+.views-field-entity-browser-select {
+  display: none;
+}
+
+.eb-tabs {
+  display: none;
+}
+
+.exposed-form-collapsible .collapsible-header {
+  margin-bottom: .5rem;
+}
+
+.exposed-form-collapsible .collapsible-body {
+  padding-top: 2rem;
+}
+
+.card .card-content {
+  color: white;
+  max-height: 72px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.card .field--name-field-product-media .field__item:not(:first-child) {
+  display: none;
+}
+
+.card .card-image {
+  max-height: 214px;
+  overflow: hidden;
+}
+
+.views-row {
+  cursor: pointer;
+}
+
+.views-row .views-field-content-browser-preview {
+  transition: .2s;
+}
+
+.views-row.checked .views-field-content-browser-preview {
+  background: rgb(66, 133, 244);
+}
+
+.views-field-content-browser-preview > .field-content {
+  display: block;
+  transition: .2s;
+}
+
+.views-row.checked .views-field-content-browser-preview > .field-content,
+.views-field-content-browser-preview > .field-content:hover {
+  transform: translateZ(0px) scale(.98);
+}
+
+.check-indicator {
+  position:  absolute;
+  left: 5px;
+  top: 5px;
+  color: rgba(255, 255, 255, 0.36);
+  transition: .2s;
+}
+
+.views-row:hover .check-indicator {
+  color: rgb(255, 255, 255);
+}
+
+.views-row.checked .check-indicator {
+  color: rgb(66, 133, 244)
+}
+
+.card .contextual {
+  display: none;
+}

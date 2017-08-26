@@ -8,3 +8,14 @@ global:
   dependencies:
     - core/jquery
     - core/drupal
+
+content_browser:
+  version: VERSION
+  css:
+    base:
+      css/content_browser.css: {}
+  js:
+    js/content_browser.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -65,19 +65,21 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
-  <div{{ content_attributes }}>
-    {{ content }}
+<article {{ attributes.addClass('card', 'content-browser-card') }}>
+  <div class="card-image">
+    <div{{ content_attributes }}>
+      {{ content }}
+    </div>
+    <i class="material-icons check-indicator">check_circle</i>
   </div>
-
-  <div class="content-browser-node-title" style="background: {{ type_style(node, 'color', '#2196F3') }}">
+  <div class="card-content" style="background: {{ type_style(node, 'color', '#2196F3') }}">
+    <i class="material-icons left">{{ type_style(node, 'icon', 'star') }}</i>
     {{ title_prefix }}
     {% if not page %}
-      <h2{{ title_attributes }}>
+      <p{{ title_attributes }}>
         {{ label }}
-      </h2>
+      </p>
     {% endif %}
     {{ title_suffix }}
-    <p><i class="material-icons">{{ type_style(node, 'icon', 'star') }}</i>{{ bundle_label }}</p>
   </div>
 </article>
