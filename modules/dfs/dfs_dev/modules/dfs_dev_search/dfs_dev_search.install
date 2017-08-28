@@ -15,8 +15,8 @@ use Drupal\search_api\Entity\Server;
  */
 function dfs_dev_search_install() {
   // Enable default permissions for system roles.
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('use search_api_autocomplete for dfs_dev_search'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('use search_api_autocomplete for dfs_dev_search'));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('use search_api_autocomplete for search_api_views_dfs_dev_search'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('use search_api_autocomplete for search_api_views_dfs_dev_search'));
 
   // Search API DB is not a hard dependency, but install it if it's available so
   // that the search index we provide will "just work" out of the box.

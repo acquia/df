@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "387d97209b2250c4da268f4a9bccadb0",
+    "content-hash": "386c22896db4296de036bb3021cd50c1",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -3323,6 +3323,7 @@
                     "Improve Field Widget UX for single-cardinality File/Image fields | https://www.drupal.org/node/2825555": "https://www.drupal.org/files/issues/entity-browser-file-widget-single.patch",
                     "Fixed the issue of Call to a member function getConfigDependencyKey() on null | https://www.drupal.org/node/2845037": "https://www.drupal.org/files/issues/2845037-4.patch",
                     "Quick edit compatibility | https://www.drupal.org/node/2733605": "https://www.drupal.org/files/issues/entity-browser-quickedit-2733605.patch",
+                    "Entity browser views [...] are broken with 8.3.7 | https://www.drupal.org/node/2902831": "https://www.drupal.org/files/issues/entity-browser-use-ajax-2902831-24.patch",
                     "2865928 - The View widget should filter based on field settings": "https://www.drupal.org/files/issues/entity-browser-view-context-2865928-8.patch"
                 }
             },
@@ -6946,17 +6947,17 @@
         },
         {
             "name": "drupal/search_api_autocomplete",
-            "version": "1.0.0-alpha3",
+            "version": "1.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/search_api_autocomplete",
-                "reference": "8.x-1.0-alpha3"
+                "reference": "8.x-1.0-alpha2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_autocomplete-8.x-1.0-alpha3.zip",
-                "reference": "8.x-1.0-alpha3",
-                "shasum": "d820e2d3a767e56778c89c48acefd7f50965a5a4"
+                "url": "https://ftp.drupal.org/files/projects/search_api_autocomplete-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "e1b444d6235aab1fa4fb7f6d16c3dae482b1c6b9"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -6968,7 +6969,7 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha3",
+                    "version": "8.x-1.0-alpha2",
                     "datestamp": "1502711044",
                     "security-coverage": {
                         "status": "not-covered",
