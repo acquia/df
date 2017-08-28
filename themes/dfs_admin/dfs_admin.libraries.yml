@@ -3,19 +3,20 @@ global:
   css:
     base:
       css/dfs_admin.css: {}
+      fonts/socicon/style.css: {}
   js:
     js/dfs_admin.js: {}
   dependencies:
     - core/jquery
     - core/drupal
 
-content_browser:
+browsers:
   version: VERSION
+  js:
+    js/browsers.js: {}
   css:
     base:
-      css/content_browser.css: {}
-  js:
-    js/content_browser.js: {}
+      css/browsers.css: {}
   dependencies:
     - core/jquery
     - core/drupal

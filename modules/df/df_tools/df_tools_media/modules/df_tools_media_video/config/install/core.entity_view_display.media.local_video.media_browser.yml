@@ -1,0 +1,33 @@
+uuid: 57ff23c7-d9fc-4309-b84f-b78ec5742b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_browser
+    - field.field.media.local_video.field_media_in_library
+    - field.field.media.local_video.field_media_video_local_file
+    - image.style.card_narrow
+    - media_entity.bundle.local_video
+  module:
+    - image
+id: media.local_video.media_browser
+targetEntityType: media
+bundle: local_video
+mode: media_browser
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: card_narrow
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_in_library: true
+  field_media_video_local_file: true
+  langcode: true
+  name: true
+  uid: true

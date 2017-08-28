@@ -16,7 +16,7 @@ function df_install() {
   \Drupal::configFactory()
     ->getEditable('system.theme')
     ->set('default', 'dfs_base')
-    ->set('admin', 'adminimal_theme')
+    ->set('admin', 'dfs_admin')
     ->save(TRUE);
 
   // Now that all modules are installed, make sure the entity storage and other

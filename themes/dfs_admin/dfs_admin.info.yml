@@ -4,13 +4,16 @@ core: 8.x
 type: theme
 base theme: material_admin
 
-screenshot: screenshot.png
+screenshot: images/screenshot.png
 
 libraries:
  - dfs_admin/global
 
 libraries-override:
-  content_browser/view: dfs_admin/content_browser
+  content_browser/view: dfs_admin/browsers
+
+stylesheets-remove:
+  - '@lightning_media/css/browser.css'
 
 regions:
   header: Header

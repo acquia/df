@@ -1,0 +1,14 @@
+uuid: 404ac61b-87f2-4aaa-bf19-1d5af7710f9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media_entity
+third_party_settings:
+  lightning_core:
+    description: 'A view mode for use with the Media library and administrative views.'
+id: media.media_browser
+label: 'Media Browser'
+targetEntityType: media
+cache: true

@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.browse_content
+    - image.style.card_narrow
     - node.type.article
   module:
     - image
@@ -125,8 +125,6 @@ third_party_settings:
         storage_type: panelizer_default
         storage_id: 'node:article:full:default'
         builder: ipe
-_core:
-  default_config_hash: zA22A4Yvy3gVgoEhcYokmCzLsPnlCiFDGrqoD2rNpCQ
 id: node.article.content_browser
 targetEntityType: node
 bundle: article
@@ -136,7 +134,7 @@ content:
     type: image
     weight: -1
     settings:
-      image_style: browse_content
+      image_style: card_narrow
       image_link: ''
     third_party_settings: {  }
     label: hidden

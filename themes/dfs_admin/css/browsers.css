@@ -1,7 +1,6 @@
 /**
  * @file
- * Overrides the Content Browser module.
- *
+ * Shared styles between the content and media browsers.
  */
 
 .views-field-entity-browser-select {
@@ -32,31 +31,31 @@
   display: none;
 }
 
-.card .card-image {
-  max-height: 214px;
-  overflow: hidden;
-}
-
-.views-row {
+.card {
   cursor: pointer;
 }
 
+.views-row .views-field-rendered-entity,
 .views-row .views-field-content-browser-preview {
   transition: .2s;
 }
 
+.views-row.checked .views-field-rendered-entity,
 .views-row.checked .views-field-content-browser-preview {
   background: rgb(66, 133, 244);
 }
 
+.views-field-rendered-entity > .field-content,
 .views-field-content-browser-preview > .field-content {
   display: block;
   transition: .2s;
 }
 
+.views-row.checked .views-field-rendered-entity > .field-content,
+.views-field-rendered-entity > .field-content:hover,
 .views-row.checked .views-field-content-browser-preview > .field-content,
 .views-field-content-browser-preview > .field-content:hover {
-  transform: translateZ(0px) scale(.98);
+  transform: translateZ(0) scale(.98);
 }
 
 .check-indicator {
@@ -77,4 +76,32 @@
 
 .card .contextual {
   display: none;
+}
+
+.card .card-image img {
+  height: auto;
+  /* Please, don't change these rules. */
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 0;
+}
+
+.card [class*=socicon-] {
+  font-size: 20px;
+}
+
+.entity-browser-form .form-actions {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  padding: 10px 0 20px 30px;
+  background: white;
+  width: 100%;
+  border-top: 1px solid lightgray;
+  max-height: 70px;
+  height: 70px;
+}
+
+.entity-browser-form {
+  padding-bottom: 70px;
 }
