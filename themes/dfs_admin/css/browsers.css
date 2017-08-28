@@ -7,7 +7,11 @@
   display: none;
 }
 
-.eb-tabs {
+.eb-tabs ul {
+  border-bottom: none;
+}
+
+.eb-tabs li:only-child {
   display: none;
 }
 
@@ -87,10 +91,10 @@
 }
 
 .card [class*=socicon-] {
-  font-size: 20px;
+  font-size: 24px;
 }
 
-.entity-browser-form .form-actions {
+.entity-browser-form > .form-actions {
   position: fixed;
   z-index: 1;
   bottom: 0;
