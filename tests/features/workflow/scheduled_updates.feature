@@ -13,16 +13,15 @@ Feature: Scheduled updates to content
     Given I am logged in as a user with the administrator role
     And page content:
       | title  | path    | moderation_state |
-      | Foobar | /foobar | draft            |
+      | Foobar | /foobar | needs_review     |
     When I visit "/foobar"
     And I open the moderation sidebar
     And I click "Edit draft"
-    And I select "Needs Review" from "Moderation state"
     And I schedule the node to be published at "1984-09-19 08:57:00"
     And I press "Save"
     And I visit "/admin/config/workflow/schedule-updates/run"
     And I press "Run Updates"
-    And I should see "Results: 1 update(s) were performed"
+    And the response should contain "Results: 1 update(s) were performed"
     And I visit "/user/logout"
     And I visit "/foobar"
     Then I should not see "Access denied"
