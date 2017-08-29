@@ -29,9 +29,7 @@ Feature: Site search
     And I place the "block_content:dragons" block from the "Basic block" category
     And I save the layout
     And I open the moderation sidebar
-    And I click "Edit draft"
-    And I select "Published" from "Moderation state"
-    And I press "Save"
+    And I press the "Publish" button
     And I am an anonymous user
     And I visit "/search"
     And I enter "dragons" for "Keywords"
