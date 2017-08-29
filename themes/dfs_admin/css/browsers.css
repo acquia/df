@@ -11,6 +11,22 @@
   border-bottom: none;
 }
 
+.eb-tabs ul li.active {
+  border-bottom: 2px solid #f6b2b5;
+}
+
+.eb-tabs ul li.active a,
+.eb-tabs ul li:hover a {
+  color: #ee6e73;
+  text-decoration: none;
+}
+
+.eb-tabs ul li a {
+  text-transform: uppercase;
+  color: rgba(238,110,115,0.7);
+  transition: .2s;
+}
+
 .eb-tabs li:only-child {
   display: none;
 }
