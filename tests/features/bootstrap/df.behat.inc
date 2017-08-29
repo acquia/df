@@ -139,6 +139,33 @@ class DFSubContext extends DrupalSubContextBase {
   }
 
   /**
+   * Triggers a click for an arbitrary element, found by CSS selector.
+   *
+   * @param string $selector
+   *   The CSS selector.
+   *
+   * @throws \Behat\Mink\Exception\ElementNotFoundException
+   *   If the specified element is not present on the page.
+   *
+   * @When I trigger a click for the :selector element
+   */
+  public function triggerClickElementBySelector($selector) {
+    $session = $this->getSession();
+    $element = $session->getPage()->find('css', $selector);
+    if ($element) {
+      $script = <<<JS
+      (function(){
+        return jQuery("$selector").trigger("click");
+      })();
+JS;
+      $session->executeScript($script);
+    }
+    else {
+      throw new ElementNotFoundException($session, 'element', 'css', $selector);
+    }
+  }
+
+  /**
    * Asserts that a role as a set of permissions.
    *
    * @param string $rid
