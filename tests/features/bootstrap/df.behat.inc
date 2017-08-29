@@ -508,10 +508,10 @@ class DFSubContext extends DrupalSubContextBase {
 
     list ($date, $time) = explode(' ', $when, 2);
 
-    $this->minkContext->getSession()->executeScript('document.querySelector("[data-drupal-selector=\"edit-scheduled-update-form-inline-entity-form-update-timestamp-0-value-date\"]").value="' . $date . '"');
-    $this->minkContext->getSession()->executeScript('document.querySelector("[data-drupal-selector=\"edit-scheduled-update-form-inline-entity-form-update-timestamp-0-value-time\"]").value="' . $time . '"');
+    $this->minkContext->getSession()->executeScript('document.querySelector("[name=\"scheduled_update[form][inline_entity_form][update_timestamp][0][value][date]\"]").value="' . $date . '"');
+    $this->minkContext->getSession()->executeScript('document.querySelector("[name=\"scheduled_update[form][inline_entity_form][update_timestamp][0][value][time]\"]").value="' . $time . '"');
 
-    $this->minkContext->selectOption('scheduled_update[form][inline_entity_form][field_moderation_state]', 'published');
+    $this->minkContext->getSession()->executeScript('document.querySelector("[name=\"scheduled_update[form][inline_entity_form][field_moderation_state]\"]").value="published"');
 
     $this->minkContext->pressButton('Create scheduled update');
     $this->minkContext->iWaitForAjaxToFinish();
