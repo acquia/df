@@ -591,16 +591,18 @@ class DFSubContext extends DrupalSubContextBase {
     $this->clickElementBySelector('a[data-plugin-id="content_embed"]');
     $this->minkContext->iWaitForAjaxToFinish();
     // Wait for the modal to load.
-    $this->waitForJsCondition("jQuery('.ui-dialog .views-exposed-form:visible').length > 0");
+    $this->waitForJsCondition("jQuery('.ui-dialog iframe').contents().find('.exposed-form-collapsible:visible').length > 0");
     // Switch to the iFrame context.
     $this->getSession()->switchToIFrame('entity_browser_iframe_browse_content');
     // Search for content matching the passed in title and select the result.
+    $this->getSession()->getDriver()->executeScript('jQuery(".exposed-form-collapsible .collapsible-header").click()');
+    $this->minkContext->iWaitForAjaxToFinish();
     $this->getSession()->getDriver()->setValue('//*[@id="edit-title"]', $title);
-    $this->getSession()->getDriver()->click('//*[@id="edit-submit-content-browser"]');
+    $this->getSession()->getDriver()->executeScript('jQuery("[id*=edit-submit-content-browser]").click()');
     $this->minkContext->iWaitForAjaxToFinish();
     $this->getSession()->getDriver()->executeScript('jQuery(".views-field-entity-browser-select").first().click()');
     // Submit the entity browser form.
-    $this->getSession()->getDriver()->executeScript('jQuery(".is-entity-browser-submit").click()');
+    $this->getSession()->getDriver()->executeScript('jQuery(".is-entity-browser-submit input").click()');
     $this->minkContext->iWaitForAjaxToFinish();
     // Wait for the modal to close.
     $this->getSession()->switchToIFrame();
