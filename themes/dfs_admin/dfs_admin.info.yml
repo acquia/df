@@ -12,6 +12,10 @@ libraries:
 libraries-override:
   content_browser/view: dfs_admin/browsers
 
+libraries-extend:
+  entity_browser/entity_browser:
+    - dfs_admin/browsers
+
 stylesheets-remove:
   - '@lightning_media/css/browser.css'
 
