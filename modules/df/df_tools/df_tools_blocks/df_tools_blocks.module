@@ -320,6 +320,7 @@ function df_tools_blocks_alter_block_categories(&$block_info) {
 
   $label_map = [
     'Content Embed' => 'Content',
+    'Media Embed' => 'Media',
   ];
 
   foreach ($block_info as $key => $info) {
