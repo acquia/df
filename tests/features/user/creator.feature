@@ -13,11 +13,12 @@ Feature: Content creator user
     Given I am logged in as a user with the "creator" role
     When I visit "/admin/content"
     And I should see the page title "Content"
-    And I should see the link "Add content"
+    Then the element ".fixed-action-btn.horizontal" should exist
 
   @360d4f13
   Scenario: Content creators should be able to view lists of site media
     Given I am logged in as a user with the "creator" role
     When I visit "/admin/content/media"
     And I should see the page title "Media"
-    And I should see the link "Add media"
+    Then the element ".fixed-action-btn.horizontal" should exist
+    

@@ -13,7 +13,7 @@ Feature: Content reviewer user
     Given I am logged in as a user with the "reviewer" role
     When I visit "/admin/content"
     And I should see the page title "Content"
-    And I should see the link "Add content"
+    Then the element ".fixed-action-btn.horizontal" should exist
 
   @2a6cd1e6
   Scenario: Content reviewers should not be able to view lists of site media
