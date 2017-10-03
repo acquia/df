@@ -148,3 +148,11 @@ function df_tools_moderation_moderation_sidebar_alter(array &$build, \Drupal\Cor
     }
   }
 }
+
+/**
+ * Implements hook_scenarios_post_enable().
+ */
+function df_tools_moderation_scenarios_post_enable($scenario) {
+  module_load_include('install', 'material_admin_support');
+  material_admin_support_install();
+}
