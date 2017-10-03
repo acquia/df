@@ -9,14 +9,6 @@ screenshot: images/screenshot.png
 libraries:
  - dfs_admin/global
 
-libraries-override:
-  content_browser/view: dfs_admin/browsers
-  lightning_media/browser.styling: dfs_admin/browsers
-
-libraries-extend:
-  entity_browser/entity_browser:
-    - dfs_admin/browsers
-
 regions:
   header: Header
   status: 'Status area'
