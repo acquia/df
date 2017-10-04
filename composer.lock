@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "640d4532f607b04851f3842cdc6ce778",
+    "content-hash": "762867a8f1139fbb2da5c659d9eadf58",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -4898,7 +4898,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/material_admin",
-                "reference": "db85d296d77417956e7ffada8a7d332ea02c68c7"
+                "reference": "4d797804cb572f5ef041c8085d00da78a2fdad2d"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4935,7 +4935,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/material_admin"
             },
-            "time": "2017-10-02T13:54:02+00:00"
+            "time": "2017-09-29T18:41:38+00:00"
         },
         {
             "name": "drupal/material_admin_support",
@@ -7180,21 +7180,21 @@
         },
         {
             "name": "drupal/search_api_solr",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/search_api_solr",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "2559a2d54867632b2b0fac12e634da3eb820993d"
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "ff124407b883c9e56030e8c10dcd8827c922cceb"
             },
             "require": {
                 "drupal/core": "~8.0",
-                "drupal/search_api": "~1.2",
+                "drupal/search_api": "~1.3",
                 "solarium/solarium": "3.8.*"
             },
             "require-dev": {
@@ -7213,8 +7213,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1505488144",
+                    "version": "8.x-1.1",
+                    "datestamp": "1505488645",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
