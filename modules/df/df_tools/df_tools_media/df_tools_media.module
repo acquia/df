@@ -28,7 +28,7 @@ function df_tools_media_form_entity_browser_media_browser_in_modal_form_alter(ar
 function df_tools_media_module_implements_alter(&$implementations, $hook) {
   // Lightning media overrides the normal Entity Browser widget, but for our
   // use case and admin theme the level of details nesting looks bad.
-  if ($hook == 'field_widget_info_alter') {
+  if (strpos($hook, 'field_widget_') === 0 && isset($implementations['lightning_media'])) {
     unset($implementations['lightning_media']);
   }
 }
