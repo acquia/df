@@ -1,0 +1,14 @@
+uuid: 8e35d3c2-5ca6-4b5b-83e4-c227611fc992
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_gallery
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'A view mode for Entity Browser.'
+id: entity_gallery.browser
+label: Browser
+targetEntityType: entity_gallery
+cache: true

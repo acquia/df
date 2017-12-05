@@ -40,3 +40,20 @@
 .toolbar .toolbar-bar .toolbar-tab.contextual-toolbar-tab {
   display: none;
 }
+
+.entity-gallery-browser-card .file {
+  padding-left: 0;
+  display: block;
+}
+
+.entity-gallery-browser-card .row,
+.entity-gallery-browser-card .col {
+  padding: 0;
+  overflow: hidden;
+}
+
+.entity-gallery-browser-card .card-extra-images img {
+  max-height: 68px;
+  width: inherit;
+  margin: 0 auto;
+}

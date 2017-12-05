@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains dfs_admin.theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function dfs_admin_form_alter(&$form, FormStateInterface &$form_state) {
+  if (isset($form['#form_id'])) {
+    if ($form['#form_id'] == 'entity_browser_entity_gallery_browser_form') {
+      $form['#attached']['library'][] = 'material_admin_support/browsers';
+    }
+  }
+}

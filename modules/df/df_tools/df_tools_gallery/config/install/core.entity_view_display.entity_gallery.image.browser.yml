@@ -1,0 +1,29 @@
+uuid: 2b4780ae-dfaf-4d5a-89ea-c693b87b0524
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.entity_gallery.browser
+    - entity_gallery.type.image
+    - field.field.entity_gallery.image.entity_gallery_file
+  module:
+    - user
+_core:
+  default_config_hash: wts3mXZCJ7zzsAcZpvQh7Yj809z_I5fkuIZFt_e_1zw
+id: entity_gallery.image.browser
+targetEntityType: entity_gallery
+bundle: image
+mode: browser
+content:
+  entity_gallery_file:
+    label: hidden
+    type: entity_reference_entity_view
+    settings:
+      view_mode: card
+      link: false
+    weight: 101
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  links: true

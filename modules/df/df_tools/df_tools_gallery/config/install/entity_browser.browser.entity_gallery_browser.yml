@@ -1,0 +1,31 @@
+uuid: 4108d081-d09b-435d-a582-ef01374baed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_gallery_browser
+  module:
+    - views
+name: entity_gallery_browser
+label: 'Entity Gallery Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select gallery'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  18d48756-edd6-4272-99c3-4a9b42295532:
+    settings:
+      view: entity_gallery_browser
+      view_display: entity_browser_1
+      submit_text: 'Select galleries'
+      auto_select: false
+    uuid: 18d48756-edd6-4272-99c3-4a9b42295532
+    weight: 1
+    label: view
+    id: view
