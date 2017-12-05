@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "97efc559c21c74cfa0f01f6052b1f60d",
+    "content-hash": "89073a213eb8cccaf8f3040c35b9ea16",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -2877,7 +2877,6 @@
                     "form elements use '#markup' and are not escaped | https://www.drupal.org/node/2652850": "https://www.drupal.org/files/issues/2652850-17.patch",
                     "Field attachments not bubbled when rendering a saved field in Quick Edit | https://www.drupal.org/node/2851332": "https://www.drupal.org/files/issues/quickedit-render-field-attachments.patch",
                     "Fatal error when setMainContent() method is not called (block module not installed) | https://www.drupal.org/node/2819219": "https://www.drupal.org/files/issues/core-fatal_error_main_content_block-2819219-2.patch",
-                    "Make media name available on manage display | https://www.drupal.org/node/2912298": "https://www.drupal.org/files/issues/core-media-add-name-to-display-2912298-25-after-2883813-27.patch",
                     "Invoke hook after a site install is complete | https://www.drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch"
                 }
             },
@@ -3580,6 +3579,52 @@
                 "issues": "http://drupal.org/project/issues/entity_browser",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
+        },
+        {
+            "name": "drupal/entity_browser_block",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_browser_block",
+                "reference": "312e42ffaeb7791f67f3b2a97fc394dfff783198"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/entity_browser": "*"
+            },
+            "require-dev": {
+                "drupal/ctools": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1512430086",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Derives block plugins for every Entity Browser on your site",
+            "homepage": "https://www.drupal.org/project/entity_browser_block",
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_browser_block"
+            },
+            "time": "2017-12-04T22:29:59+00:00"
         },
         {
             "name": "drupal/entity_embed",
@@ -5033,7 +5078,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/material_admin_support",
-                "reference": "d76e2b04dbc14be40d03339a6b33dc50b7f5ec43"
+                "reference": "642eccea5d8554bedd181f566eb20830daa6cb9c"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -5046,7 +5091,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1511812685",
+                    "datestamp": "1512076084",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -5076,7 +5121,7 @@
                 "source": "http://cgit.drupalcode.org/material_admin_support",
                 "issues": "https://www.drupal.org/project/issues/material_admin_support"
             },
-            "time": "2017-11-30T21:03:01+00:00"
+            "time": "2017-12-05T21:29:16+00:00"
         },
         {
             "name": "drupal/media_entity",
@@ -15730,6 +15775,7 @@
         "drupal/config_rewrite": 20,
         "drupal/config_sync": 20,
         "drupal/config_tools": 20,
+        "drupal/entity_browser_block": 20,
         "drupal/entity_gallery": 20,
         "drupal/geophp": 20,
         "drupal/geolocation": 20,
