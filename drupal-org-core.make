@@ -16,5 +16,6 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/allow-2681947-20
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2652850-17.patch
 projects[drupal][patch][] = https://www.drupal.org/files/issues/quickedit-render-field-attachments.patch
 projects[drupal][patch][] = https://www.drupal.org/files/issues/core-fatal_error_main_content_block-2819219-2.patch
+projects[drupal][patch][] = https://www.drupal.org/files/issues/core-media-add-name-to-display-2912298-25-after-2883813-27.patch
 projects[drupal][patch][] = https://www.drupal.org/files/issues/core-post-site-install-hook.patch
 projects[drupal][version] = 8.4.2
