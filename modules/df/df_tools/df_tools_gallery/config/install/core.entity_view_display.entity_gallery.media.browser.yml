@@ -1,29 +1,31 @@
-uuid: 2b4780ae-dfaf-4d5a-89ea-c693b87b0524
+uuid: 03aafcf7-8aab-4d8d-a6b8-60a115f03f4a
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.entity_gallery.browser
-    - entity_gallery.type.image
-    - field.field.entity_gallery.image.entity_gallery_file
+    - entity_gallery.type.media
+    - field.field.entity_gallery.media.entity_gallery_media
   module:
     - user
-_core:
-  default_config_hash: wts3mXZCJ7zzsAcZpvQh7Yj809z_I5fkuIZFt_e_1zw
-id: entity_gallery.image.browser
+id: entity_gallery.media.browser
 targetEntityType: entity_gallery
-bundle: image
+bundle: media
 mode: browser
 content:
-  entity_gallery_file:
+  entity_gallery_media:
     label: hidden
     type: entity_reference_entity_view
     settings:
-      view_mode: card
+      view_mode: thumbnail
       link: false
     weight: 101
     third_party_settings: {  }
     region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
-  links: true

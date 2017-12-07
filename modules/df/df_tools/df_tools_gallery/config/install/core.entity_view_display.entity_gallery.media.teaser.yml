@@ -1,0 +1,27 @@
+uuid: 06206c0c-1b75-4fb8-b0b9-990a8a65a8c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.entity_gallery.teaser
+    - entity_gallery.type.media
+  module:
+    - user
+id: entity_gallery.media.teaser
+targetEntityType: entity_gallery
+bundle: media
+mode: teaser
+content:
+  entity_gallery_media:
+    label: hidden
+    type: entity_reference_entity_view
+    settings:
+      view_mode: teaser
+    weight: 101
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

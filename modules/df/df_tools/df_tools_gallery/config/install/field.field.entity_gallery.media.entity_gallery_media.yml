@@ -1,0 +1,32 @@
+uuid: 7f1379b5-1d32-4f1c-bf43-42a5c93cad5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_gallery.type.media
+    - field.storage.entity_gallery.entity_gallery_media
+    - media.type.image
+    - media.type.instagram
+    - media.type.local_video
+    - media.type.tweet
+    - media.type.video
+id: entity_gallery.media.entity_gallery_media
+field_name: entity_gallery_media
+entity_type: entity_gallery
+bundle: media
+label: 'Gallery Items'
+description: 'Reference one or more existing items to add to the gallery.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    target_bundles:
+      image: image
+      instagram: instagram
+      local_video: local_video
+      tweet: tweet
+      video: video
+  handler: 'default:media'
+field_type: entity_reference

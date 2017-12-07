@@ -1,27 +1,31 @@
-uuid: ba14fa7d-c2e3-49f5-8240-20a7a84a116c
+uuid: 69daf81e-1dba-4948-ba0d-3ec74bb08a27
 langcode: en
 status: true
 dependencies:
   config:
-    - entity_gallery.type.image
-    - field.field.entity_gallery.image.entity_gallery_file
+    - entity_gallery.type.media
+    - field.field.entity_gallery.media.entity_gallery_media
   module:
     - df_tools_gallery
     - user
-id: entity_gallery.image.default
+id: entity_gallery.media.default
 targetEntityType: entity_gallery
-bundle: image
+bundle: media
 mode: default
 content:
-  entity_gallery_file:
+  entity_gallery_media:
     label: hidden
     type: entity_reference_masonry
     settings:
-      view_mode: gallery_item
+      view_mode: embedded
       link: false
     weight: 101
     third_party_settings: {  }
     region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
-  links: true

@@ -52,8 +52,12 @@
   overflow: hidden;
 }
 
-.entity-gallery-browser-card .card-extra-images img {
-  max-height: 68px;
-  width: inherit;
-  margin: 0 auto;
+.entity-gallery-browser-card .card-main-media {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.entity-gallery-browser-card .card-extra-media {
+  max-height: 50px;
+  overflow: hidden;
 }

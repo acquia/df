@@ -1,18 +1,18 @@
-uuid: 67ea8d0d-8ce7-40c0-86ec-d2c58a5c94cb
+uuid: 5a66a458-f91d-477c-8f8c-8bdd7b7e0566
 langcode: en
 status: true
 dependencies:
   module:
     - entity_gallery
-    - file
-id: entity_gallery.entity_gallery_file
-field_name: entity_gallery_file
+    - taxonomy
+id: entity_gallery.field_tags
+field_name: field_tags
 entity_type: entity_gallery
 type: entity_reference
 settings:
-  target_type: file
+  target_type: taxonomy_term
 module: core
-locked: true
+locked: false
 cardinality: -1
 translatable: true
 indexes: {  }

@@ -75,14 +75,16 @@
 #}
 <article {{ attributes.addClass('card', 'entity-gallery-browser-card') }} data-selectable>
   <div class="card-image">
-      {% if content.entity_gallery_file %}
-        {% if content.entity_gallery_file.0 %}
-          {{ content.entity_gallery_file.0 }}
-        {% endif %}
-        <div class="row card-extra-images">
+      {% if content.entity_gallery_media %}
+        <div class="row card-main-media">
+          {% if content.entity_gallery_media.0 %}
+            {{ content.entity_gallery_media.0 }}
+          {% endif %}
+        </div>
+        <div class="row card-extra-media">
           {% for i in range(1, 3) %}
-            {% if content.entity_gallery_file[i] %}
-              <div class="col s{{ 12 / ((entity_gallery.entity_gallery_file | length) - 1) | round }}">{{ content.entity_gallery_file[i] }}</div>
+            {% if content.entity_gallery_media[i] %}
+              <div class="col s{{ 12 / ((entity_gallery.entity_gallery_media | length) - 1) | round }}">{{ content.entity_gallery_media[i] }}</div>
             {% endif %}
           {% endfor %}
         </div>
