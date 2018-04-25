@@ -5,8 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.entity_gallery.teaser
     - entity_gallery.type.media
+    - field.field.entity_gallery.media.entity_gallery_media
+    - field.field.entity_gallery.media.field_tags
   module:
     - user
+_core:
+  default_config_hash: 9Qh-U1xtFOvjUkrCX-p5ALvDcMP0lBUwUBHT2qwKcpc
 id: entity_gallery.media.teaser
 targetEntityType: entity_gallery
 bundle: media
@@ -17,11 +21,14 @@ content:
     type: entity_reference_entity_view
     settings:
       view_mode: teaser
-    weight: 101
+      link: false
+    weight: 102
     third_party_settings: {  }
     region: content
   links:
     weight: 100
     region: content
 hidden:
+  field_tags: true
   langcode: true
+  scheduled_publication: true

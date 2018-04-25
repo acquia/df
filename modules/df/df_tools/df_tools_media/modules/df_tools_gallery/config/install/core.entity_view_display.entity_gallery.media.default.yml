@@ -5,9 +5,11 @@ dependencies:
   config:
     - entity_gallery.type.media
     - field.field.entity_gallery.media.entity_gallery_media
+    - field.field.entity_gallery.media.field_tags
   module:
-    - df_tools_gallery
     - user
+_core:
+  default_config_hash: HhIv61EYIMjOiyLsP2P8pEOYkaw6JXgyeoHlFFxt_QQ
 id: entity_gallery.media.default
 targetEntityType: entity_gallery
 bundle: media
@@ -15,11 +17,11 @@ mode: default
 content:
   entity_gallery_media:
     label: hidden
-    type: entity_reference_masonry
+    type: entity_reference_entity_view
     settings:
-      view_mode: embedded
+      view_mode: default
       link: false
-    weight: 101
+    weight: 102
     third_party_settings: {  }
     region: content
   links:
@@ -28,4 +30,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_tags: true
   langcode: true
+  scheduled_publication: true
