@@ -7,7 +7,7 @@ WBG_C='\033[43m'
 EBG_C='\033[41m'
 NO_C='\033[0m'
 
-# Use: Update Demo Framework Lock
+# Use: Update DF Lock
 #
 # Example: ./update-lock.sh 
 
@@ -21,7 +21,7 @@ else
     exit
 fi
 
-echo "Updating lock file for demo_framework"
+echo "Updating lock file for df"
 
 echo "Removing old directories"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} composer nuke && rm -rf composer.lock"
