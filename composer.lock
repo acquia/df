@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "029b34cabcce3c56f4ae5b4402d2faf3",
+    "content-hash": "26ef5230bc0633d48ec50beed8ef8122",
     "packages": [
         {
             "name": "acquia/content-hub-php",
@@ -3150,16 +3150,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.5.4",
+            "version": "8.5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "6b4dc1cf3347761f63152a31786b4680b8ac7781"
+                "reference": "ff6da3e987faf63f8bee679b6418065687d2266a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/6b4dc1cf3347761f63152a31786b4680b8ac7781",
-                "reference": "6b4dc1cf3347761f63152a31786b4680b8ac7781",
+                "url": "https://api.github.com/repos/drupal/core/zipball/ff6da3e987faf63f8bee679b6418065687d2266a",
+                "reference": "ff6da3e987faf63f8bee679b6418065687d2266a",
                 "shasum": ""
             },
             "require": {
@@ -3403,7 +3403,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-06-06T21:02:51+00:00"
+            "time": "2018-06-09T10:39:01+00:00"
         },
         {
             "name": "drupal/crop",
@@ -4733,17 +4733,11 @@
         },
         {
             "name": "drupal/geofield",
-            "version": "1.0.0-beta4",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geofield",
-                "reference": "8.x-1.0-beta4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.0-beta4.zip",
-                "reference": "8.x-1.0-beta4",
-                "shasum": "afc3006a891a83b79f44f8f62cac6322c83726e1"
+                "reference": "3c0c5e3c86e488343e748ef503cb250542cc7c28"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -4755,11 +4749,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4",
-                    "datestamp": "1520365980",
+                    "version": "8.x-1.0-beta4+1-dev",
+                    "datestamp": "1522431484",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4810,7 +4804,8 @@
                 "source": "http://git.drupal.org/project/geofield.git",
                 "issues": "https://www.drupal.org/project/issues/geofield",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
+            },
+            "time": "2018-05-18T03:31:47+00:00"
         },
         {
             "name": "drupal/geolocation",
@@ -4818,7 +4813,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geolocation",
-                "reference": "e191b912203e55bdf40ae1d9a8c0be5da26e6620"
+                "reference": "e4639b9da6c963d9fb802b822bbdeebaa0853b4d"
             },
             "require": {
                 "drupal/core": "*"
@@ -4856,7 +4851,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
             },
-            "time": "2018-06-07T14:05:47+00:00"
+            "time": "2018-06-08T22:06:05+00:00"
         },
         {
             "name": "drupal/geophp",
@@ -5576,24 +5571,18 @@
         },
         {
             "name": "drupal/lightning_core",
-            "version": "2.7.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/lightning_core",
-                "reference": "8.x-2.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/lightning_core-8.x-2.7.zip",
-                "reference": "8.x-2.7",
-                "shasum": "cdad9b2444462411217e8d8aa9343a5054fd7d69"
+                "reference": "01b27e727e0955bc09119c1df2e9d36607744fb1"
             },
             "require": {
                 "cweagans/composer-patches": "^1.6.4",
                 "drupal-composer/drupal-scaffold": "^2.0.0",
                 "drupal/acquia_connector": "^1.1",
                 "drupal/contact_storage": "^1.0",
-                "drupal/core": "~8.5.4",
+                "drupal/core": "8.5.x-dev",
                 "drupal/metatag": "^1.0",
                 "drupal/pathauto": "^1.0",
                 "drupal/search_api": "^1.0",
@@ -5616,11 +5605,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.7",
-                    "datestamp": "1528377484",
+                    "version": "8.x-2.7+1-dev",
+                    "datestamp": "1528379584",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "installer-types": [
@@ -5707,7 +5696,8 @@
             "homepage": "https://www.drupal.org/project/lightning_core",
             "support": {
                 "source": "http://cgit.drupalcode.org/lightning_core"
-            }
+            },
+            "time": "2018-06-08T18:40:46+00:00"
         },
         {
             "name": "drupal/lightning_layout",
@@ -5967,24 +5957,18 @@
         },
         {
             "name": "drupal/lightning_workflow",
-            "version": "2.0.0-rc2",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/lightning_workflow",
-                "reference": "8.x-2.0-rc2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/lightning_workflow-8.x-2.0-rc2.zip",
-                "reference": "8.x-2.0-rc2",
-                "shasum": "72fec8c144e15afde836637844a2ff87cbec1679"
+                "reference": "d882176193a75312459975ee5adccd51d1fd9bad"
             },
             "require": {
                 "cweagans/composer-patches": "^1.6.4",
                 "drupal-composer/drupal-scaffold": "^2.0.0",
                 "drupal/core": "*",
                 "drupal/diff": "^1.0",
-                "drupal/lightning_core": "^2.5",
+                "drupal/lightning_core": "2.x-dev",
                 "oomphinc/composer-installers-extender": "^1.1"
             },
             "require-dev": {
@@ -5998,11 +5982,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-rc2",
-                    "datestamp": "1525822680",
+                    "version": "8.x-2.0-rc2+2-dev",
+                    "datestamp": "1525980780",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "installer-types": [
@@ -6070,7 +6054,8 @@
             "homepage": "https://www.drupal.org/project/lightning_workflow",
             "support": {
                 "source": "http://cgit.drupalcode.org/lightning_workflow"
-            }
+            },
+            "time": "2018-05-11T14:08:46+00:00"
         },
         {
             "name": "drupal/link_class",
@@ -7192,7 +7177,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha1",
-                    "datestamp": "1498657743",
+                    "datestamp": "1528645980",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7246,7 +7231,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha1",
-                    "datestamp": "1498657743",
+                    "datestamp": "1528645980",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -10284,16 +10269,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.14",
+            "version": "v2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "f6ce7dd93628088e1017fb5dd73b0b9fec7df9e5"
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/f6ce7dd93628088e1017fb5dd73b0b9fec7df9e5",
-                "reference": "f6ce7dd93628088e1017fb5dd73b0b9fec7df9e5",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/10bcb46e8f3d365170f6de9d05245aa066b81f09",
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09",
                 "shasum": ""
             },
             "require": {
@@ -10329,7 +10314,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-06-06T17:40:22+00:00"
+            "time": "2018-06-08T15:26:40+00:00"
         },
         {
             "name": "phayes/geophp",
@@ -12399,7 +12384,7 @@
             ],
             "authors": [
                 {
-                    "name": "William Durand",
+                    "name": "William DURAND",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -15804,16 +15789,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.9.5",
+            "version": "v0.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106"
+                "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0951e91ac04ca28cf317f3997a0adfc319e80106",
-                "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4a2ce86f199d51b6e2524214dc06835e872f4fce",
+                "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce",
                 "shasum": ""
             },
             "require": {
@@ -15872,7 +15857,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2018-06-02T16:39:22+00:00"
+            "time": "2018-06-10T17:57:20+00:00"
         },
         {
             "name": "se/selenium-server-standalone",
@@ -17225,6 +17210,12 @@
     ],
     "aliases": [
         {
+            "alias": "2.0.0-rc2",
+            "alias_normalized": "2.0.0.0-RC2",
+            "version": "2.9999999.9999999.9999999-dev",
+            "package": "drupal/lightning_workflow"
+        },
+        {
             "alias": "1.6.5",
             "alias_normalized": "1.6.5.0",
             "version": "1.9999999.9999999.9999999-dev",
@@ -17242,8 +17233,10 @@
         "drupal/entity_gallery": 20,
         "drupal/eu_cookie_compliance": 20,
         "drupal/geocoder": 20,
+        "drupal/geofield": 20,
         "drupal/geophp": 20,
         "drupal/geolocation": 20,
+        "drupal/lightning_workflow": 20,
         "drupal/leaflet": 20,
         "drupal/libraries": 20,
         "drupal/material_admin_support": 20,
