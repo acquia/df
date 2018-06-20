@@ -1,0 +1,34 @@
+uuid: b246448e-c7cb-4533-9089-1c699cf5f51c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.hero
+    - field.field.media.local_video.field_media_in_library
+    - field.field.media.local_video.field_media_video_local_file
+    - media.type.local_video
+  module:
+    - media_entity_video
+id: media.local_video.hero
+targetEntityType: media
+bundle: local_video
+mode: hero
+content:
+  field_media_video_local_file:
+    type: video_player_html5
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      video_attributes: 'controlsList="nodownload" autoplay loop muted'
+      provide_download_link: 0
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  scheduled_publication: true
+  thumbnail: true
+  uid: true

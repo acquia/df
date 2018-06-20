@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26ef5230bc0633d48ec50beed8ef8122",
+    "content-hash": "13d4433433fe373e6c36ce4a0ccf7f5a",
     "packages": [
         {
             "name": "acquia/content-hub-php",
@@ -952,12 +952,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "2ec4f00ff5fb64de584c8c4aea53bf9053ecb0b3"
+                "reference": "0cf7b7abb49f5b6752e4663060e25684528a3390"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/2ec4f00ff5fb64de584c8c4aea53bf9053ecb0b3",
-                "reference": "2ec4f00ff5fb64de584c8c4aea53bf9053ecb0b3",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/0cf7b7abb49f5b6752e4663060e25684528a3390",
+                "reference": "0cf7b7abb49f5b6752e4663060e25684528a3390",
                 "shasum": ""
             },
             "require": {
@@ -988,7 +988,7 @@
                 }
             ],
             "description": "Provides a way to patch Composer packages.",
-            "time": "2018-05-11T18:00:16+00:00"
+            "time": "2018-06-18T21:42:23+00:00"
         },
         {
             "name": "cweagans/php-webdam-client",
@@ -1501,16 +1501,16 @@
         },
         {
             "name": "drupal-composer/drupal-scaffold",
-            "version": "2.5.1",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-scaffold.git",
-                "reference": "2d6b25538ab4d7245cb8a5f01895b24bbd4d69c0"
+                "reference": "80c7d2794d7d1b347c6f718feaa8ec9b02e43f4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/2d6b25538ab4d7245cb8a5f01895b24bbd4d69c0",
-                "reference": "2d6b25538ab4d7245cb8a5f01895b24bbd4d69c0",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/80c7d2794d7d1b347c6f718feaa8ec9b02e43f4f",
+                "reference": "80c7d2794d7d1b347c6f718feaa8ec9b02e43f4f",
                 "shasum": ""
             },
             "require": {
@@ -1520,7 +1520,9 @@
             },
             "require-dev": {
                 "composer/composer": "dev-master",
-                "phpunit/phpunit": "^4.4.0"
+                "g1a/composer-test-scenarios": "^2.1.0",
+                "phpunit/phpunit": "^6",
+                "squizlabs/php_codesniffer": "^2.8"
             },
             "type": "composer-plugin",
             "extra": {
@@ -1539,7 +1541,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
-            "time": "2018-06-06T20:36:41+00:00"
+            "time": "2018-06-14T17:48:21+00:00"
         },
         {
             "name": "drupal/acquia_connector",
@@ -3150,16 +3152,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.5.x-dev",
+            "version": "8.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "ff6da3e987faf63f8bee679b6418065687d2266a"
+                "reference": "6b4dc1cf3347761f63152a31786b4680b8ac7781"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/ff6da3e987faf63f8bee679b6418065687d2266a",
-                "reference": "ff6da3e987faf63f8bee679b6418065687d2266a",
+                "url": "https://api.github.com/repos/drupal/core/zipball/6b4dc1cf3347761f63152a31786b4680b8ac7781",
+                "reference": "6b4dc1cf3347761f63152a31786b4680b8ac7781",
                 "shasum": ""
             },
             "require": {
@@ -3403,7 +3405,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-06-09T10:39:01+00:00"
+            "time": "2018-06-06T21:02:51+00:00"
         },
         {
             "name": "drupal/crop",
@@ -4640,11 +4642,17 @@
         },
         {
             "name": "drupal/geocoder",
-            "version": "dev-2.x",
+            "version": "2.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geocoder",
-                "reference": "c981643aeed943b9edd35769c4e55876d1561a73"
+                "reference": "8.x-2.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-2.0-beta3.zip",
+                "reference": "8.x-2.0-beta3",
+                "shasum": "6d6378ec78577077d26f82a51682ac28a778e91a"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -4666,11 +4674,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-beta3+7-dev",
-                    "datestamp": "1527734884",
+                    "version": "8.x-2.0-beta3",
+                    "datestamp": "1521381784",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4728,16 +4736,21 @@
                 "source": "https://cgit.drupalcode.org/geocoder",
                 "issues": "https://drupal.org/project/issues/geocoder",
                 "irc": "irc://irc.freenode.org/drupal-geo"
-            },
-            "time": "2018-06-01T15:22:44+00:00"
+            }
         },
         {
             "name": "drupal/geofield",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geofield",
-                "reference": "3c0c5e3c86e488343e748ef503cb250542cc7c28"
+                "reference": "8.x-1.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.0-beta4.zip",
+                "reference": "8.x-1.0-beta4",
+                "shasum": "afc3006a891a83b79f44f8f62cac6322c83726e1"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -4749,11 +4762,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4+1-dev",
-                    "datestamp": "1522431484",
+                    "version": "8.x-1.0-beta4",
+                    "datestamp": "1520365980",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4804,8 +4817,7 @@
                 "source": "http://git.drupal.org/project/geofield.git",
                 "issues": "https://www.drupal.org/project/issues/geofield",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2018-05-18T03:31:47+00:00"
+            }
         },
         {
             "name": "drupal/geolocation",
@@ -4813,7 +4825,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geolocation",
-                "reference": "e4639b9da6c963d9fb802b822bbdeebaa0853b4d"
+                "reference": "e191b912203e55bdf40ae1d9a8c0be5da26e6620"
             },
             "require": {
                 "drupal/core": "*"
@@ -4851,7 +4863,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
             },
-            "time": "2018-06-08T22:06:05+00:00"
+            "time": "2018-06-07T14:05:47+00:00"
         },
         {
             "name": "drupal/geophp",
@@ -5330,7 +5342,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/leaflet",
-                "reference": "46c2cd9db1332b62ac005a7126e7f98d3d716d71"
+                "reference": "f8205538099a6e2d01f99bd62cc91094a2c6adc5"
             },
             "require": {
                 "drupal/core": "*",
@@ -5342,8 +5354,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta5+0-dev",
-                    "datestamp": "1527827284",
+                    "version": "8.x-1.0-beta6+0-dev",
+                    "datestamp": "1529441025",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5395,7 +5407,7 @@
                 "source": "http://cgit.drupalcode.org/leaflet",
                 "issues": "https://www.drupal.org/project/issues/leaflet"
             },
-            "time": "2018-06-01T04:23:09+00:00"
+            "time": "2018-06-19T11:27:28+00:00"
         },
         {
             "name": "drupal/libraries",
@@ -5571,18 +5583,24 @@
         },
         {
             "name": "drupal/lightning_core",
-            "version": "dev-2.x",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/lightning_core",
-                "reference": "01b27e727e0955bc09119c1df2e9d36607744fb1"
+                "reference": "8.x-2.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/lightning_core-8.x-2.7.zip",
+                "reference": "8.x-2.7",
+                "shasum": "cdad9b2444462411217e8d8aa9343a5054fd7d69"
             },
             "require": {
                 "cweagans/composer-patches": "^1.6.4",
                 "drupal-composer/drupal-scaffold": "^2.0.0",
                 "drupal/acquia_connector": "^1.1",
                 "drupal/contact_storage": "^1.0",
-                "drupal/core": "8.5.x-dev",
+                "drupal/core": "~8.5.4",
                 "drupal/metatag": "^1.0",
                 "drupal/pathauto": "^1.0",
                 "drupal/search_api": "^1.0",
@@ -5605,11 +5623,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.7+1-dev",
-                    "datestamp": "1528379584",
+                    "version": "8.x-2.7",
+                    "datestamp": "1528377484",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "installer-types": [
@@ -5696,8 +5714,7 @@
             "homepage": "https://www.drupal.org/project/lightning_core",
             "support": {
                 "source": "http://cgit.drupalcode.org/lightning_core"
-            },
-            "time": "2018-06-08T18:40:46+00:00"
+            }
         },
         {
             "name": "drupal/lightning_layout",
@@ -5957,18 +5974,24 @@
         },
         {
             "name": "drupal/lightning_workflow",
-            "version": "dev-2.x",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/lightning_workflow",
-                "reference": "d882176193a75312459975ee5adccd51d1fd9bad"
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/lightning_workflow-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "354bfc2432ba1ed104a9b383667fd71bf6bf6995"
             },
             "require": {
                 "cweagans/composer-patches": "^1.6.4",
                 "drupal-composer/drupal-scaffold": "^2.0.0",
                 "drupal/core": "*",
                 "drupal/diff": "^1.0",
-                "drupal/lightning_core": "2.x-dev",
+                "drupal/lightning_core": "^2.7",
                 "oomphinc/composer-installers-extender": "^1.1"
             },
             "require-dev": {
@@ -5982,11 +6005,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-rc2+2-dev",
-                    "datestamp": "1525980780",
+                    "version": "8.x-2.0",
+                    "datestamp": "1528747680",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "installer-types": [
@@ -6054,8 +6077,7 @@
             "homepage": "https://www.drupal.org/project/lightning_workflow",
             "support": {
                 "source": "http://cgit.drupalcode.org/lightning_workflow"
-            },
-            "time": "2018-05-11T14:08:46+00:00"
+            }
         },
         {
             "name": "drupal/link_class",
@@ -6323,17 +6345,17 @@
         },
         {
             "name": "drupal/media_acquiadam",
-            "version": "1.2.0",
+            "version": "1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/media_acquiadam",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "0b7f70ec80a5ca838f384561e627c2a6c9c7bc0e"
+                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-8.x-1.32.zip",
+                "reference": "8.x-1.32",
+                "shasum": "65a1b42a876fbdca88f0eaa8fb2f89d07a5e1fa1"
             },
             "require": {
                 "cweagans/php-webdam-client": "dev-master",
@@ -6341,6 +6363,7 @@
                 "drupal/fallback_formatter": "*"
             },
             "require-dev": {
+                "drupal/entity_usage": "*",
                 "drupal/fallback_formatter": "*"
             },
             "type": "drupal-module",
@@ -6349,8 +6372,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1523762584",
+                    "version": "8.x-1.32",
+                    "datestamp": "1529441320",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -12498,16 +12521,16 @@
         },
         {
             "name": "zendframework/zend-feed",
-            "version": "2.10.1",
+            "version": "2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-feed.git",
-                "reference": "2815c29a4c4e52bf4033128592ea310b0f4e9379"
+                "reference": "5253f949f4ad999086ab9b408908b6c6776f24db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/2815c29a4c4e52bf4033128592ea310b0f4e9379",
-                "reference": "2815c29a4c4e52bf4033128592ea310b0f4e9379",
+                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/5253f949f4ad999086ab9b408908b6c6776f24db",
+                "reference": "5253f949f4ad999086ab9b408908b6c6776f24db",
                 "shasum": ""
             },
             "require": {
@@ -12555,7 +12578,7 @@
                 "feed",
                 "zf"
             ],
-            "time": "2018-06-05T13:16:04+00:00"
+            "time": "2018-06-18T20:14:01+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -13784,16 +13807,16 @@
         },
         {
             "name": "dmore/behat-chrome-extension",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/DMore/behat-chrome-extension.git",
-                "reference": "ed71e19fc12e0c6af5920e569c4699d4294f44b7"
+                "reference": "d58e02381e8fed0561c3ae841b60ce0cb12d1cc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/DMore%2Fbehat-chrome-extension/repository/archive.zip?sha=ed71e19fc12e0c6af5920e569c4699d4294f44b7",
-                "reference": "ed71e19fc12e0c6af5920e569c4699d4294f44b7",
+                "url": "https://gitlab.com/api/v4/projects/DMore%2Fbehat-chrome-extension/repository/archive.zip?sha=d58e02381e8fed0561c3ae841b60ce0cb12d1cc9",
+                "reference": "d58e02381e8fed0561c3ae841b60ce0cb12d1cc9",
                 "shasum": ""
             },
             "require": {
@@ -13828,7 +13851,7 @@
                 "driver",
                 "headless"
             ],
-            "time": "2017-10-15T08:47:55+00:00"
+            "time": "2017-10-31T17:34:39+00:00"
         },
         {
             "name": "dmore/chrome-mink-driver",
@@ -15133,16 +15156,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6"
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/478465659fd987669df0bd8a9bf22a8710e5f1b6",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
+                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
                 "shasum": ""
             },
             "require": {
@@ -15177,7 +15200,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-05-29T17:25:09+00:00"
+            "time": "2018-06-11T23:09:50+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -17210,12 +17233,6 @@
     ],
     "aliases": [
         {
-            "alias": "2.0.0-rc2",
-            "alias_normalized": "2.0.0.0-RC2",
-            "version": "2.9999999.9999999.9999999-dev",
-            "package": "drupal/lightning_workflow"
-        },
-        {
             "alias": "1.6.5",
             "alias_normalized": "1.6.5.0",
             "version": "1.9999999.9999999.9999999-dev",
@@ -17232,11 +17249,8 @@
         "drupal/entity_browser_block": 20,
         "drupal/entity_gallery": 20,
         "drupal/eu_cookie_compliance": 20,
-        "drupal/geocoder": 20,
-        "drupal/geofield": 20,
         "drupal/geophp": 20,
         "drupal/geolocation": 20,
-        "drupal/lightning_workflow": 20,
         "drupal/leaflet": 20,
         "drupal/libraries": 20,
         "drupal/material_admin_support": 20,

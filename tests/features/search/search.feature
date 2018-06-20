@@ -1,18 +1,22 @@
 @df @core @search @api @errors
 Feature: Site search
 
-  @page @e4c5b23b
-  Scenario: Unpublished content does not appear in search results
-    Given I am an anonymous user
-    And page content:
-      | title    | status | body                                                                   |
-      | Zombie 1 | 0      | Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. |
-      | Zombie 2 | 0      | De carne lumbering animata corpora quaeritis.                          |
-      | Zombie 3 | 1      | Summus brains sit, morbo vel maleficia?                                |
-    When I visit "/search"
-    And I enter "zombie" for "Keywords"
+  @layout @landing-page @javascript @6aa9edbb
+  Scenario: Indexing and searching for landing pages
+    Given I am logged in as a user with the administrator role
+    And landing_page content:
+      | title  | path    | moderation_state | body                                                    |
+      | Foobar | /foobar | draft            | In which my landing page is described in a flowery way. |
+    And block_content entities:
+      | type  | info    | body             | uuid    |
+      | basic | Dragons | Here be dragons. | dragons |
+    When I visit "/foobar"
+    And I place the "block_content:dragons" block from the "Basic block" category
+    And I save the layout
+    And I open the moderation sidebar
+    And I press the "Publish" button
+    And I am an anonymous user
+    And I visit "/search"
+    And I enter "dragons" for "Keywords"
     And I press "Search"
-    Then the response status code should be 200
-    And I should not see the link "Zombie 1"
-    And I should not see the link "Zombie 2"
-    And I should see the link "Zombie 3"
+    Then I should see "Foobar"
