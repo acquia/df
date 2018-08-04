@@ -224,6 +224,7 @@ projects[panels][type] = module
 projects[panels][patch][] = https://www.drupal.org/files/issues/panels-ipe-remove-activeclick.patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/panels-ipe-improve-flipper-logic.patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/panels-ipe-cache-temp-store-id.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/panels-ipe-search-2824508-8.patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/panels-ipe-2878684-3.patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/panels-ipe-propogate-errors-2825034-5.patch
 projects[panels][version] = 4.3
