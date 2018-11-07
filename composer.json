@@ -83,7 +83,7 @@
         "enable-patching": true,
         "patches": {
             "acquia/lightning": {
-                "Move common configuration from profile into lightning_common module":
+                "Move common configuration from profile into lightning_common module | https://drupal.org/node/3012138":
                 "https://www.drupal.org/files/issues/2018-11-07/lightning-common-config-remove-0.patch"
             },
             "drupal/core": {
@@ -109,9 +109,12 @@
                 "https://www.drupal.org/files/issues/member-function-url-fix-2565247-4.patch",
                 "Muted attribute not working for Video file | https://www.drupal.org/project/drupal/issues/2969691":
                 "https://www.drupal.org/files/issues/2018-07-07/drupal-fix-attributes-filemediaformatterbase-2969691-4.patch",
-                "Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2018-09-25/2815221-111.patch",
-                "Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.x.patch",
-                "Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-11-07/2914389-11-do-not-test.patch"
+                "Add quickedit to the latest-revision route | https://drupal.org/node/2815221":
+                "https://www.drupal.org/files/issues/2018-09-25/2815221-111.patch",
+                "Allow profiles to define a base/parent profile and load them in the correct order | https://drupal.org/node/1356276":
+                "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.x.patch",
+                "Allow profiles to exclude dependencies of their parent | https://drupal.org/node/2914389":
+                "https://www.drupal.org/files/issues/2018-11-07/2914389-11-do-not-test.patch"
             },
             "drupal/acquia_contenthub": {
                 "Page title missing from admin page | https://www.drupal.org/node/3002886": "https://www.drupal.org/files/issues/2018-09-27/page-title-missing-from-admin-page-3002886-2.patch"
