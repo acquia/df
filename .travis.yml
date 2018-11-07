@@ -78,6 +78,7 @@ script:
   - composer validate composer.json --no-check-all --ansi --no-interaction
   - if [[ "$SCENARIO" != df ]]; then behat --config .behat.yml --stop-on-failure --tags=df; fi
   - if [[ "$SCENARIO" != df ]]; then behat --config .behat.yml --stop-on-failure --tags=$SCENARIO; fi
+  - if [[ "$SCENARIO" == df ]]; then drush en df_tools_test -y; fi
 
 after_failure:
   - cd docroot
