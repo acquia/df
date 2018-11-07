@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3101c661625e97747d2da30fa78fe4f2",
+    "content-hash": "f0dd963d47094a8f3ca5ef62c251cf83",
     "packages": [
         {
             "name": "acquia/content-hub-php",
@@ -2585,17 +2585,17 @@
         },
         {
             "name": "drupal/asset_injector",
-            "version": "2.2.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/asset_injector",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "c0a1caf17b44d40b3e1a0bba4f3b88020ec65ed7"
+                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "c377e8aa7ff9a0fcb180586173540450f22c93bc"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2606,8 +2606,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1540492680",
+                    "version": "8.x-2.4",
+                    "datestamp": "1540573084",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4644,17 +4644,17 @@
         },
         {
             "name": "drupal/facets",
-            "version": "1.0.0-beta2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/facets",
-                "reference": "8.x-1.0-beta2"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "3dfeb0a353039ee8a6554bad9f6d02ec7cadee24"
+                "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "d916790b16da4e42b1615bc03221d4d81905ec3f"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4668,17 +4668,15 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1530623921",
+                    "version": "8.x-1.1",
+                    "datestamp": "1533065280",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "patches_applied": {
-                    "Fatal error after upgrade to beta-2 | https://www.drupal.org/node/2938089": "https://www.drupal.org/files/issues/2938089-1.patch",
-                    "facets_range_widget: 'TypeError: r.toFixed() is not a function' | https://www.drupal.org/project/facets/issues/2922151": "https://www.drupal.org/files/issues/facets_range_widget_js_error_toFixed_is_not_a_function-2922151-2.patch",
-                    "Update jquery.ui.slider.pips JS/CSS paths | https://www.drupal.org/node/2943636": "https://www.drupal.org/files/issues/update-facets-range-widget-library-paths-2943636-2.patch"
+                    "facets_range_widget: 'TypeError: r.toFixed() is not a function' | https://www.drupal.org/project/facets/issues/2922151": "https://www.drupal.org/files/issues/facets_range_widget_js_error_toFixed_is_not_a_function-2922151-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7174,17 +7172,17 @@
         },
         {
             "name": "drupal/migrate_plus",
-            "version": "4.0.0-beta3",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/migrate_plus",
-                "reference": "8.x-4.0-beta3"
+                "reference": "8.x-4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-4.0-beta3.zip",
-                "reference": "8.x-4.0-beta3",
-                "shasum": "a0da6dc169a0315bf29a8dd0ee2146d18215a56b"
+                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-4.0.zip",
+                "reference": "8.x-4.0",
+                "shasum": "63dad289defe8298aa5ca5e30062fe9761d19eca"
             },
             "require": {
                 "drupal/core": "^8.3"
@@ -7203,11 +7201,11 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.0-beta3",
-                    "datestamp": "1535381280",
+                    "version": "8.x-4.0",
+                    "datestamp": "1536264180",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -7294,24 +7292,25 @@
         },
         {
             "name": "drupal/migrate_tools",
-            "version": "4.0.0-beta3",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/migrate_tools",
-                "reference": "8.x-4.0-beta3"
+                "reference": "8.x-4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-4.0-beta3.zip",
-                "reference": "8.x-4.0-beta3",
-                "shasum": "5256ef34d63bbcc564bd9e1e4434c34f12983dba"
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-4.0.zip",
+                "reference": "8.x-4.0",
+                "shasum": "016dfb010df76723c5a6a447921fdccd3c885237"
             },
             "require": {
                 "drupal/core": "^8.3",
-                "drupal/migrate_plus": "*"
+                "drupal/migrate_plus": "^4"
             },
             "require-dev": {
-                "drupal/coder": "^8"
+                "drupal/coder": "^8",
+                "drupal/migrate_source_csv": "^2.2"
             },
             "type": "drupal-module",
             "extra": {
@@ -7319,11 +7318,11 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.0-beta3",
-                    "datestamp": "1531143824",
+                    "version": "8.x-4.0",
+                    "datestamp": "1535380084",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -7377,8 +7376,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha1+1-dev",
-                    "datestamp": "1539350881",
+                    "version": "8.x-1.0-alpha1+2-dev",
+                    "datestamp": "1539889981",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -8384,7 +8383,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Preview url in js is relative path | https://www.drupal.org/project/responsive_preview/issues/2929331": "https://www.drupal.org/files/issues/2018-04-02/preview_path-2929331-6.patch"
+                    "Preview url in js is relative path | https://www.drupal.org/project/responsive_preview/issues/2929331": "https://www.drupal.org/files/issues/2018-04-02/preview_path-2929331-6.patch",
+                    "Update devices | https://www.drupal.org/node/3011828": "https://www.drupal.org/files/issues/2018-11-06/update-devices-3011828-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -8439,7 +8439,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.15",
-                    "datestamp": "1496919842",
+                    "datestamp": "1541330284",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9593,7 +9593,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-rc24",
-                    "datestamp": "1540255380",
+                    "datestamp": "1541452980",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -11571,16 +11571,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.19.4",
+            "version": "v3.19.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "9a9b63634fdbe1de0556818fdb78e211c4e2fa83"
+                "reference": "30f3f10bf52ec22bf5278b2e4a3719c2371209ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/9a9b63634fdbe1de0556818fdb78e211c4e2fa83",
-                "reference": "9a9b63634fdbe1de0556818fdb78e211c4e2fa83",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/30f3f10bf52ec22bf5278b2e4a3719c2371209ed",
+                "reference": "30f3f10bf52ec22bf5278b2e4a3719c2371209ed",
                 "shasum": ""
             },
             "type": "library",
@@ -11624,7 +11624,7 @@
                 "swagger",
                 "ui"
             ],
-            "time": "2018-10-20T04:48:22+00:00"
+            "time": "2018-11-05T05:26:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -11741,16 +11741,16 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
-                "reference": "f31333bdff54c7595f834d510a6d2325573ddb36"
+                "reference": "5605edec7b8f034ead2497ff4aab17bb70d558c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/class-loader/zipball/f31333bdff54c7595f834d510a6d2325573ddb36",
-                "reference": "f31333bdff54c7595f834d510a6d2325573ddb36",
+                "url": "https://api.github.com/repos/symfony/class-loader/zipball/5605edec7b8f034ead2497ff4aab17bb70d558c1",
+                "reference": "5605edec7b8f034ead2497ff4aab17bb70d558c1",
                 "shasum": ""
             },
             "require": {
@@ -11793,20 +11793,20 @@
             ],
             "description": "Symfony ClassLoader Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T12:28:39+00:00"
+            "time": "2018-10-31T09:06:03+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3b2b415d4c48fbefca7dc742aa0a0171bfae4e0b"
+                "reference": "1d228fb4602047d7b26a0554e0d3efd567da5803"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3b2b415d4c48fbefca7dc742aa0a0171bfae4e0b",
-                "reference": "3b2b415d4c48fbefca7dc742aa0a0171bfae4e0b",
+                "url": "https://api.github.com/repos/symfony/console/zipball/1d228fb4602047d7b26a0554e0d3efd567da5803",
+                "reference": "1d228fb4602047d7b26a0554e0d3efd567da5803",
                 "shasum": ""
             },
             "require": {
@@ -11862,20 +11862,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T16:33:53+00:00"
+            "time": "2018-10-30T16:50:50+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "0a612e9dfbd2ccce03eb174365f31ecdca930ff6"
+                "reference": "fe9793af008b651c5441bdeab21ede8172dab097"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/0a612e9dfbd2ccce03eb174365f31ecdca930ff6",
-                "reference": "0a612e9dfbd2ccce03eb174365f31ecdca930ff6",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/fe9793af008b651c5441bdeab21ede8172dab097",
+                "reference": "fe9793af008b651c5441bdeab21ede8172dab097",
                 "shasum": ""
             },
             "require": {
@@ -11918,20 +11918,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T16:33:53+00:00"
+            "time": "2018-10-31T09:06:03+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "aea20fef4e92396928b5db175788b90234c0270d"
+                "reference": "9c98452ac7fff4b538956775630bc9701f5384ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/aea20fef4e92396928b5db175788b90234c0270d",
-                "reference": "aea20fef4e92396928b5db175788b90234c0270d",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/9c98452ac7fff4b538956775630bc9701f5384ba",
+                "reference": "9c98452ac7fff4b538956775630bc9701f5384ba",
                 "shasum": ""
             },
             "require": {
@@ -11989,20 +11989,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T12:28:39+00:00"
+            "time": "2018-10-31T10:49:51+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "b2e1f19280c09a42dc64c0b72b80fe44dd6e88fb"
+                "reference": "db9e829c8f34c3d35cf37fcd4cdb4293bc4a2f14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b2e1f19280c09a42dc64c0b72b80fe44dd6e88fb",
-                "reference": "b2e1f19280c09a42dc64c0b72b80fe44dd6e88fb",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/db9e829c8f34c3d35cf37fcd4cdb4293bc4a2f14",
+                "reference": "db9e829c8f34c3d35cf37fcd4cdb4293bc4a2f14",
                 "shasum": ""
             },
             "require": {
@@ -12052,20 +12052,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T09:06:28+00:00"
+            "time": "2018-10-30T16:50:50+00:00"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "3a4498236ade473c52b92d509303e5fd1b211ab1"
+                "reference": "5aea7a86ca3203dd7a257e765b4b9c9cfd01c6c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3a4498236ade473c52b92d509303e5fd1b211ab1",
-                "reference": "3a4498236ade473c52b92d509303e5fd1b211ab1",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/5aea7a86ca3203dd7a257e765b4b9c9cfd01c6c0",
+                "reference": "5aea7a86ca3203dd7a257e765b4b9c9cfd01c6c0",
                 "shasum": ""
             },
             "require": {
@@ -12106,20 +12106,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-03T08:48:18+00:00"
+            "time": "2018-10-31T08:57:11+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "a0944a9a1d8845da724236cde9a310964acadb1c"
+                "reference": "4bf0be7c7fe63eff6a5eae2f21c83e77e31a56fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/a0944a9a1d8845da724236cde9a310964acadb1c",
-                "reference": "a0944a9a1d8845da724236cde9a310964acadb1c",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/4bf0be7c7fe63eff6a5eae2f21c83e77e31a56fb",
+                "reference": "4bf0be7c7fe63eff6a5eae2f21c83e77e31a56fb",
                 "shasum": ""
             },
             "require": {
@@ -12195,7 +12195,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-03T12:03:34+00:00"
+            "time": "2018-11-03T10:03:02+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -12434,16 +12434,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "1dc2977afa7d70f90f3fefbcd84152813558910e"
+                "reference": "35c2914a9f50519bd207164c353ae4d59182c2cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/1dc2977afa7d70f90f3fefbcd84152813558910e",
-                "reference": "1dc2977afa7d70f90f3fefbcd84152813558910e",
+                "url": "https://api.github.com/repos/symfony/process/zipball/35c2914a9f50519bd207164c353ae4d59182c2cb",
+                "reference": "35c2914a9f50519bd207164c353ae4d59182c2cb",
                 "shasum": ""
             },
             "require": {
@@ -12479,7 +12479,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T12:28:39+00:00"
+            "time": "2018-10-14T17:33:21+00:00"
         },
         {
             "name": "symfony/psr-http-message-bridge",
@@ -12544,7 +12544,7 @@
         },
         {
             "name": "symfony/routing",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
@@ -12621,7 +12621,7 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
@@ -12700,7 +12700,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -12768,16 +12768,16 @@
         },
         {
             "name": "symfony/validator",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",
-                "reference": "9f8dbf0dceb03815c3160a279bf8cf4f8018a1c5"
+                "reference": "6ab5fee7c0763d90753f37fce6db9fdbca1b1a4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/validator/zipball/9f8dbf0dceb03815c3160a279bf8cf4f8018a1c5",
-                "reference": "9f8dbf0dceb03815c3160a279bf8cf4f8018a1c5",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/6ab5fee7c0763d90753f37fce6db9fdbca1b1a4c",
+                "reference": "6ab5fee7c0763d90753f37fce6db9fdbca1b1a4c",
                 "shasum": ""
             },
             "require": {
@@ -12849,11 +12849,11 @@
             ],
             "description": "Symfony Validator Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T16:33:53+00:00"
+            "time": "2018-10-14T18:32:13+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -14399,16 +14399,16 @@
         },
         {
             "name": "consolidation/site-alias",
-            "version": "1.1.10",
+            "version": "1.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-alias.git",
-                "reference": "73b04026e5a8c9c4d10e72aee3f443b9a0c48aa4"
+                "reference": "54ea74ee7dbd54ef356798028ca9a3548cb8df14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/73b04026e5a8c9c4d10e72aee3f443b9a0c48aa4",
-                "reference": "73b04026e5a8c9c4d10e72aee3f443b9a0c48aa4",
+                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/54ea74ee7dbd54ef356798028ca9a3548cb8df14",
+                "reference": "54ea74ee7dbd54ef356798028ca9a3548cb8df14",
                 "shasum": ""
             },
             "require": {
@@ -14451,7 +14451,7 @@
                 }
             ],
             "description": "Manage alias records for local and remote sites.",
-            "time": "2018-11-01T23:42:38+00:00"
+            "time": "2018-11-03T05:07:56+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -17517,7 +17517,7 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v4.1.6",
+            "version": "v4.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
@@ -17574,16 +17574,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "e5389132dc6320682de3643091121c048ff796b3"
+                "reference": "99b2fa8acc244e656cdf324ff419fbe6fd300a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/e5389132dc6320682de3643091121c048ff796b3",
-                "reference": "e5389132dc6320682de3643091121c048ff796b3",
+                "url": "https://api.github.com/repos/symfony/config/zipball/99b2fa8acc244e656cdf324ff419fbe6fd300a4d",
+                "reference": "99b2fa8acc244e656cdf324ff419fbe6fd300a4d",
                 "shasum": ""
             },
             "require": {
@@ -17634,11 +17634,11 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-08T13:15:14+00:00"
+            "time": "2018-10-31T09:06:03+00:00"
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -17691,7 +17691,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -17748,7 +17748,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -17798,7 +17798,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -17847,7 +17847,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
@@ -17913,7 +17913,7 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.17",
+            "version": "v3.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
@@ -18148,12 +18148,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/weitzman/drupal-test-traits.git",
-                "reference": "82bf5059908f9073b3468cb7313960da72176d9a"
+                "reference": "e55746679e47b01e378e4baf25141094d005406b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/weitzman%2Fdrupal-test-traits/repository/archive.zip?sha=82bf5059908f9073b3468cb7313960da72176d9a",
-                "reference": "82bf5059908f9073b3468cb7313960da72176d9a",
+                "url": "https://gitlab.com/api/v4/projects/weitzman%2Fdrupal-test-traits/repository/archive.zip?sha=e55746679e47b01e378e4baf25141094d005406b",
+                "reference": "e55746679e47b01e378e4baf25141094d005406b",
                 "shasum": ""
             },
             "require": {
@@ -18203,7 +18203,7 @@
                 }
             ],
             "description": "Traits for testing Drupal sites that have user content (versus unpopulated sites).",
-            "time": "2018-10-03T02:38:33+00:00"
+            "time": "2018-10-17T03:04:56+00:00"
         }
     ],
     "aliases": [
