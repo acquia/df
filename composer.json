@@ -82,6 +82,10 @@
         },
         "enable-patching": true,
         "patches": {
+            "acquia/lightning": {
+                "Move common configuration from profile into lightning_common module":
+                "https://www.drupal.org/files/issues/2018-11-07/lightning-common-config-remove-0.patch"
+            },
             "drupal/core": {
                 "ConnectionNotDefinedException thrown... | https://www.drupal.org/node/2703669":
                 "https://www.drupal.org/files/issues/node-migration-traits-database-exception-2703669-3.patch",
@@ -186,8 +190,8 @@
             },
             "drupal/lightning_core": {
                 "drupal/core": {
-                    "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2018-10-17/2815221-reroll-8.6.1.patch",
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-05/1356276-515.patch",
+                    "2815221 - Add quickedit to the latest-revision route": "https://www.drupal.org/files/issues/2018-09-24/2815221-109.patch",
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-12/1356276-531.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
                 }
             }
