@@ -18,7 +18,19 @@
         var mWidth = $(window).width()-20;
         var mHeight = $(window).height()-20;
 
+        // Because we hide the body scrollbar our modal is not centered
+        var scrollbarWidth=(window.innerWidth-$(window).width());
+        var cModal = Math.floor(10 + (scrollbarWidth/2));
+
         $('.color-preview').dialog({
+          open: function () {
+            $('body').css('overflow','hidden');
+            // Update left to make modal centered
+            $('.color-preview').parent().css({'left': cModal});
+          },
+          close: function () {
+            $('body').css('overflow','scroll');
+          },
           autoOpen: false,
           title: 'Color Preview',
           width: mWidth,
