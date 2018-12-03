@@ -5,7 +5,24 @@ dependencies:
     - block_content.type.map
     - field.storage.block_content.field_map_geofield
   module:
+    - geocoder_field
     - geofield
+third_party_settings:
+  geocoder_field:
+    method: source
+    weight: 0
+    geocode_field: field_map_address
+    reverse_geocode_field: ''
+    hidden: true
+    disabled: false
+    plugins:
+      - openstreetmap
+    dumper: wkt
+    delta_handling: s_to_m
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
 id: block_content.map.field_map_geofield
 field_name: field_map_geofield
 entity_type: block_content
@@ -16,5 +33,6 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  backend: geofield_backend_default
 field_type: geofield
