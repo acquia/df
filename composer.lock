@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc2ec079e996d7d110927a0ba6c0a4cb",
+    "content-hash": "5c0768ae636117f17371b1ea9b05022b",
     "packages": [
         {
             "name": "acquia/acf",
@@ -4489,7 +4489,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_rewrite.git",
-                "reference": "0e7331a0b2e5c3e184338a968e8db890e34c0bbc"
+                "reference": "4b7b0830069e0f56e28d65fdd5392ec5fbded0fa"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4506,9 +4506,6 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "Stop creating config during rewrites of optional or non existing config | https://www.drupal.org/node/2903629": "https://www.drupal.org/files/issues/allow_optional_config-2903629-14.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4521,12 +4518,12 @@
                     "homepage": "https://www.drupal.org/user/252788"
                 }
             ],
-            "description": "Changes configuration YAML from config/install|optional with YAML from config/rewrite.",
+            "description": "Rewrites existing configuration on module installation via using a \"rewrite\" folder in the config directory.",
             "homepage": "https://www.drupal.org/project/config_rewrite",
             "support": {
                 "source": "https://git.drupalcode.org/project/config_rewrite"
             },
-            "time": "2017-05-22T18:29:12+00:00"
+            "time": "2019-10-16T12:58:39+00:00"
         },
         {
             "name": "drupal/config_sync",
