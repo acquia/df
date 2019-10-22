@@ -19,6 +19,13 @@ function df_install() {
     ->set('admin', 'acquia_claro')
     ->save(TRUE);
 
+  // Set front page to "node" and set site name to "DF"
+  \Drupal::configFactory()
+    ->getEditable('system.site');
+    ->set('page.front', '/node')
+    ->set('name', "DF")
+    ->save(TRUE);
+
   // Now that all modules are installed, make sure the entity storage and other
   // handlers are up to date with the current entity and field definitions. For
   // example, Path module adds a base field to nodes and taxonomy terms after
