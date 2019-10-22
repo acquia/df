@@ -2,6 +2,8 @@ name: 'Demo Framework'
 type: profile
 description: 'Architects start here.'
 package: 'Demo Framework'
+distribution:
+  name: df
 core: 8.x
 base profile: lightning
 install:
@@ -25,6 +27,8 @@ exclude:
   - image_widget_crop
   - lightning_api
   - lightning_contact_form
+  - lightning_hero_block
+  - lightning_map_block
   - lightning_page
   - lightning_preview
   - lightning_roles

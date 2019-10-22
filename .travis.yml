@@ -59,7 +59,7 @@ install:
   - composer install
 
   # Install Demo Framework cleanly so that settings.php will be created properly.
-  - lightning install 'mysql\://df:df@127.0.0.1/drupal' dfs_one 'http://127.0.0.1:8080' --no-dev
+  - lightning install 'mysql\://df:df@127.0.0.1/drupal' df 'http://127.0.0.1:8080' --no-dev
   - lightning configure:behat 'http://127.0.0.1:8080'
 
 before_script:
@@ -71,6 +71,7 @@ script:
   - composer validate composer.json --no-check-all --ansi --no-interaction
   - if [[ "$SCENARIO" == none ]]; then drush en df_tools_test -y; fi
   - if [[ "$SCENARIO" == none ]]; then drush en df_tools_media_acquiadam -y; fi
+  - if [[ "$SCENARIO" != none ]]; then drush en $SCENARIO -y; fi
   - if [[ "$SCENARIO" != none ]]; then behat --config .behat.yml --stop-on-failure --tags=df; fi
   - if [[ "$SCENARIO" != none ]]; then behat --config .behat.yml --stop-on-failure --tags=$SCENARIO; fi
 

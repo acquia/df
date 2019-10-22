@@ -1,10 +1,9 @@
 name: 'DFS One'
-type: profile
+type: module
 description: 'Demo Framework Scenario for One.'
 core: 8.x
 package: 'Demo Framework Scenarios'
-base profile: df
-install:
+dependencies:
   - color
   - df_tools_articles
   - df_tools_blocks
@@ -28,16 +27,3 @@ install:
   - responsive_preview
   - scenarios_contenthub
   - view_modes_display
-themes:
-  - one
-exclude:
-  - image_widget_crop
-  - lightning_api
-  - lightning_contact_form
-  - lightning_hero_block
-  - lightning_map_block
-  - lightning_page
-  - lightning_preview
-  - lightning_roles
-  - bartik
-  - seven
