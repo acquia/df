@@ -15,4 +15,7 @@ function dfs_one_install() {
     ->set('page.front', '/home')
     ->set('name', "One")
     ->save(TRUE);
+
+  // Clear cached info causing post-install class discovery errors.
+  drupal_flush_all_caches();
 }
