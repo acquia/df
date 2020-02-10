@@ -7,6 +7,13 @@ use Drupal\Component\Utility\NestedArray;
 class RoboFile extends \Robo\Tasks {
 
   /**
+   * The default URL of the Drupal site.
+   *
+   * @var string
+   */
+  const BASE_URL = 'http://127.0.0.1:8080';
+
+  /**
    * {@inheritdoc}
    */
   protected function taskBehat($behat = NULL) {
