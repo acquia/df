@@ -58,9 +58,8 @@ install:
   - composer install
 
   # Install Demo Framework cleanly so that settings.php will be created properly.
-  - if [[ !"$PROFILE" ]]; then lightning install 'mysql\://df:df@127.0.0.1/drupal' df 'http://127.0.0.1:8080' --no-dev; fi
-  - if [[ "$PROFILE" ]]; then lightning install 'mysql\://df:df@127.0.0.1/drupal' $PROFILE 'http://127.0.0.1:8080' --no-dev; fi
-  - lightning configure:behat 'http://127.0.0.1:8080'
+  - drush site-install df --db-url=mysql://df:df@127.0.0.1/drupal -y
+  - robo configure:behat 'http://127.0.0.1:8080'
 
 before_script:
   - drush config:set system.date timezone.default $TZ --yes
