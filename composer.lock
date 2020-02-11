@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96e96518a45f3f8f18aca67df1651f54",
+    "content-hash": "b61564361be934497374d250fad2dca8",
     "packages": [
         {
             "name": "acquia/acf",
@@ -17732,16 +17732,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.42.4",
+            "version": "v1.42.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e587180584c3d2d6cb864a0454e777bb6dcb6152"
+                "reference": "87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e587180584c3d2d6cb864a0454e777bb6dcb6152",
-                "reference": "e587180584c3d2d6cb864a0454e777bb6dcb6152",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e",
+                "reference": "87b2ea9d8f6fd014d0621ca089bb1b3769ea3f8e",
                 "shasum": ""
             },
             "require": {
@@ -17750,8 +17750,7 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "^3.4|^4.2",
-                "symfony/phpunit-bridge": "^4.4@dev|^5.0"
+                "symfony/phpunit-bridge": "^4.4|^5.0"
             },
             "type": "library",
             "extra": {
@@ -17780,7 +17779,6 @@
                 },
                 {
                     "name": "Twig Team",
-                    "homepage": "https://twig.symfony.com/contributors",
                     "role": "Contributors"
                 },
                 {
@@ -17794,7 +17792,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-11-11T16:49:32+00:00"
+            "time": "2020-02-11T05:59:23+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",
@@ -18281,116 +18279,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "acquia/lightning_dev",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/brantwynn/lightning-dev.git",
-                "reference": "85686cfa721b9780a66b414b98adb8d69ede9916"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/brantwynn/lightning-dev/zipball/85686cfa721b9780a66b414b98adb8d69ede9916",
-                "reference": "85686cfa721b9780a66b414b98adb8d69ede9916",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "^3.0",
-                "behat/mink": "1.7.x-dev",
-                "behat/mink-selenium2-driver": "1.3.x-dev",
-                "cebe/markdown": "^1.2",
-                "consolidation/robo": "^1.2",
-                "dmore/behat-chrome-extension": "^1.1",
-                "drupal/coder": "^8.2.12",
-                "drupal/console": "^1.8",
-                "drupal/devel": "*",
-                "drupal/drupal-extension": "^3.4.0",
-                "drush/drush": "^9.4",
-                "enm1989/chromedriver": "^2.41",
-                "jcalderonzumba/gastonjs": "^1.0.2",
-                "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
-                "mikey179/vfsstream": "^1.2",
-                "phpspec/prophecy": "^1.4",
-                "phpunit/phpunit": "^4.8.35 || ^6.1",
-                "se/selenium-server-standalone": "^2.53",
-                "squizlabs/php_codesniffer": "2.*",
-                "symfony/css-selector": "^3.4.0",
-                "symfony/debug": "^3.4.0",
-                "symfony/phpunit-bridge": "^3.4.3",
-                "weitzman/drupal-test-traits": "dev-master"
-            },
-            "require-dev": {
-                "composer/composer": "^1.5",
-                "cweagans/composer-patches": "^1.6.4",
-                "drupal-composer/drupal-scaffold": "^2.0.0",
-                "oomphinc/composer-installers-extender": "^1.1"
-            },
-            "bin": [
-                "lightning"
-            ],
-            "type": "drupal-module",
-            "extra": {
-                "installer-types": [
-                    "bower-asset",
-                    "npm-asset"
-                ],
-                "installer-paths": {
-                    "docroot/core": [
-                        "type:drupal-core"
-                    ],
-                    "docroot/libraries/{$name}": [
-                        "type:drupal-library",
-                        "type:bower-asset",
-                        "type:npm-asset"
-                    ],
-                    "docroot/modules/contrib/{$name}": [
-                        "type:drupal-module"
-                    ],
-                    "docroot/profiles/contrib/{$name}": [
-                        "type:drupal-profile"
-                    ],
-                    "docroot/themes/contrib/{$name}": [
-                        "type:drupal-theme"
-                    ]
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "Commands/"
-                ]
-            },
-            "scripts": {
-                "post-install-cmd": [
-                    "@composer push",
-                    "@composer drupal-scaffold",
-                    "PhantomInstaller\\Installer::installPhantomJS"
-                ],
-                "drupal-scaffold": [
-                    "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-                ],
-                "nuke": [
-                    "rm -r -f docroot vendor"
-                ],
-                "pull": [
-                    "Acquia\\Lightning\\Commands\\FileCommands::pull"
-                ],
-                "push": [
-                    "Acquia\\Lightning\\Commands\\FileCommands::push"
-                ],
-                "show-stable": [
-                    "Acquia\\Lightning\\Commands\\ShowStable::execute"
-                ]
-            },
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Internal development tools for Acquia Lightning.",
-            "support": {
-                "source": "https://github.com/brantwynn/lightning-dev/tree/8.x-1.x"
-            },
-            "time": "2019-05-15T22:17:33+00:00"
-        },
         {
             "name": "alchemy/zippy",
             "version": "0.4.9",
@@ -21771,8 +21659,7 @@
         "drupal/object_log": 20,
         "behat/mink": 20,
         "behat/mink-selenium2-driver": 20,
-        "weitzman/drupal-test-traits": 20,
-        "acquia/lightning_dev": 20
+        "weitzman/drupal-test-traits": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
