@@ -18,7 +18,7 @@ class RoboFile extends \Robo\Tasks {
    */
   protected function taskBehat($behat = NULL) {
     return parent::taskBehat($behat ?: 'vendor/bin/behat')
-      ->config('docroot/sites/default/files/behat.yml')
+      ->config('.behat.yml')
       ->format('pretty')
       ->option('colors')
       ->option('stop-on-failure')
