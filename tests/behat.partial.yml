@@ -1,3 +1,9 @@
+# This is a partial configuration file for Behat. The Robo command utility's
+# 'configure:behat' command scans the Drupal installation for all files named
+# behat.partial.yml, merges them together, and outputs a single .behat.yml
+# file. The variable '%paths.base%' is replaced with the path to the partial.
+# The '%base_url%' and '%drupal_root%' variables are replaced with the base
+# URL and path of the Drupal installation, respectively.
 default:
   suites:
     default:
@@ -5,11 +11,29 @@ default:
         - '\Drupal\DrupalExtension\Context\DrupalContext'
         - '\Drupal\DrupalExtension\Context\MinkContext'
         - '\Drupal\DrupalExtension\Context\MessageContext'
+        - '\Drupal\DrupalExtension\Context\DrushContext'
         - '\Drupal\Tests\lightning_core\FixtureContext'
       paths:
         - '%paths.base%/features'
   extensions:
+    'Behat\MinkExtension':
+      base_url: '%base_url%'
+      goutte: null
+      selenium2:
+        wd_host: 'http://127.0.0.1:4444/wd/hub'
+        browser: chrome
     'Drupal\DrupalExtension':
       subcontexts:
         paths:
           - '%paths.base%/features/bootstrap'
+      api_driver: drupal
+      blackbox: null
+      drupal:
+        drupal_root: '%drupal_root%'
+      drush:
+        alias: self
+      selectors:
+        error_message_selector: '.messages [role="alert"]'
+        warning_message_selector: '.messages--warning'
+        login_form_selector: '#user-login-form'
+
