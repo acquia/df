@@ -71,8 +71,8 @@ script:
   - if [[ "$SCENARIO" == none ]]; then drush en df_tools_test -y; fi
   - if [[ "$SCENARIO" == none ]]; then drush en df_tools_media_acquiadam -y; fi
   - if [[ "$SCENARIO" == none ]]; then drush en df_tools_translation -y; fi
-  - behat --config .behat.yml --stop-on-failure --tags=df;
   - if [[ "$SCENARIO" != none ]]; then drush en $SCENARIO -y; fi
+  - if [[ "$SCENARIO" != none ]]; then behat --config .behat.yml --stop-on-failure --tags=df; fi
   - if [[ "$SCENARIO" != none ]]; then behat --config .behat.yml --stop-on-failure --tags=$SCENARIO; fi
 
 after_failure:
