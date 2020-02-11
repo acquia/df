@@ -28,7 +28,8 @@
         "dmore/behat-chrome-extension": "^1.1",
         "weitzman/drupal-test-traits": "dev-master",
         "cebe/markdown": "^1.2",
-        "enm1989/chromedriver": "^2.41"
+        "enm1989/chromedriver": "^2.41",
+        "acquia/lightning_dev": "dev-8.x-1.x"
     },
     "repositories": {
         "drupal": {
@@ -38,6 +39,10 @@
         "assets": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "dev": {
+            "type": "vcs",
+            "url": "https://github.com/brantwynn/lightning-dev"
         },
         "lift": {
             "type": "vcs",
