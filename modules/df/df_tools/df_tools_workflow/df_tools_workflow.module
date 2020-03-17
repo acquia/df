@@ -128,8 +128,10 @@ function df_tools_workflow_tokens($type, $tokens, array $data, array $options, \
   $replacements = [];
 
   if ($type == 'node' && !empty($data['node'])) {
+    /** @var \Drupal\node\NodeInterface $node */
+    $node = $data['node'];
     $url_options = ['absolute' => TRUE];
-    if (isset($options['langcode'])) {
+    if (isset($options['langcode']) && $node->hasTranslation($options['langcode'])) {
       $url_options['language'] = \Drupal::languageManager()->getLanguage($options['langcode']);
       $langcode = $options['langcode'];
     }
@@ -137,8 +139,6 @@ function df_tools_workflow_tokens($type, $tokens, array $data, array $options, \
       $langcode = NULL;
     }
 
-    /** @var \Drupal\node\NodeInterface $node */
-    $node = $data['node'];
     /** @var \Drupal\content_moderation\ModerationInformation $moderation_information */
     $moderation_information = \Drupal::service('content_moderation.moderation_information');
 
