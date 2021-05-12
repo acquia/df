@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains acquia_pendo.module.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function acquia_pendo_preprocess_html(&$variables) {
+  // TEST: putenv('AH_SITE_GROUP=eemgrasmick');.
+  $acquia_env_vars = [
+    'AH_CURRENT_REGION',
+    'AH_SITE_NAME',
+    'AH_APPLICATION_UUID',
+    'AH_REALM',
+    'AH_NON_PRODUCTION',
+    'AH_SITE_ENVIRONMENT',
+    'AH_SITE_GROUP',
+  ];
+  foreach ($acquia_env_vars as $value) {
+    if (getenv($value) !== FALSE) {
+      $variables['#attached']['drupalSettings']['pendo']['data']['account'][$value] = getenv($value);
+    }
+  }
+}
