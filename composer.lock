@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e56f2ccb93ee628bbeea00214661236",
+    "content-hash": "e8680f86a6acddc6ab3c54eaa7067dc7",
     "packages": [
         {
             "name": "acquia/acf",
@@ -3343,17 +3343,17 @@
         },
         {
             "name": "drupal/acquia_lift",
-            "version": "4.3.0",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_lift.git",
-                "reference": "8.x-4.3"
+                "reference": "8.x-4.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_lift-8.x-4.3.zip",
-                "reference": "8.x-4.3",
-                "shasum": "9414aef6b802b6a6c7fa1c82ca804ebe5cf87276"
+                "url": "https://ftp.drupal.org/files/projects/acquia_lift-8.x-4.4.zip",
+                "reference": "8.x-4.4",
+                "shasum": "0c9338b47337cf0ce2ab350cfd8efcf79c0ecf0b"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -3364,8 +3364,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.3",
-                    "datestamp": "1600460602",
+                    "version": "8.x-4.4",
+                    "datestamp": "1626368035",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13429,6 +13429,71 @@
             "support": {
                 "source": "http://drupalcode.org/seo_checklist",
                 "issues": "https://www.drupal.org/project/issues/seo_checklist"
+            }
+        },
+        {
+            "name": "drupal/shield",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/shield.git",
+                "reference": "7c1fe1d647825be9b3b98dc908c26df524dcfae7"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "require-dev": {
+                "drupal/key": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev",
+                    "dev-8.x-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4+7-dev",
+                    "datestamp": "1588630576",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "badjava",
+                    "homepage": "https://www.drupal.org/user/83372"
+                },
+                {
+                    "name": "chx",
+                    "homepage": "https://www.drupal.org/user/9446"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "kalman.hosszu",
+                    "homepage": "https://www.drupal.org/user/267481"
+                },
+                {
+                    "name": "pkiraly",
+                    "homepage": "https://www.drupal.org/user/352587"
+                }
+            ],
+            "description": "Creates a general shield for the site.",
+            "homepage": "https://www.drupal.org/project/shield",
+            "support": {
+                "source": "https://git.drupalcode.org/project/shield"
             }
         },
         {
@@ -24979,7 +25044,8 @@
         "drupal/auto_entitylabel": 10,
         "drupal/jsonapi_explorer": 10,
         "drupal/gdpr": 15,
-        "drupal/object_log": 20
+        "drupal/object_log": 20,
+        "drupal/shield": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

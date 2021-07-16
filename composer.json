@@ -190,7 +190,11 @@
               "Update DCD importer | http://drupal.org/node/3113974":
               "https://www.drupal.org/files/issues/2020-03-06/3113974-update-dcd-dev-importer-4.patch"
             },
-            "acquia/cohesion": {
+            "drupal/shield": {
+              "Make shield work with D8 core basic_auth (1) | https://www.drupal.org/node/2815945":
+              "https://www.drupal.org/files/issues/2021-06-11/2815945-58.patch"
+            },
+	    "acquia/cohesion": {
               "After import, field default value is set, instead of exported one | http://drupal.org/node/3098630":
               "https://www.drupal.org/files/issues/2020-05-14/cohesion-layout-remove-setDefaultValue.patch",
               "Set batch limit from UI | http://drupal.org/node/2681947":
@@ -313,7 +317,8 @@
         "drupal/environment_indicator": "^4.0",
         "drupal/entity_reference_revisions": "^1.6",
         "mautic/api-library": "^2.15",
-        "drupal/object_log": "1.x-dev"
+        "drupal/object_log": "1.x-dev",
+        "drupal/shield": "1.x-dev"
     },
     "autoload": {
         "psr-4": {
