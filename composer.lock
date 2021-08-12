@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd2ab7500303be2e0b73ce62021a0d80",
+    "content-hash": "3f835f5a9fcb0d937b9975f90b1d8bfc",
     "packages": [
         {
             "name": "acquia/acf",
@@ -330,22 +330,22 @@
         },
         {
             "name": "acquia/contenthub-console",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/contenthub-console.git",
-                "reference": "4dc8e23253e9a1685b19a28eb687da2a7854c1b7"
+                "reference": "b11bf253cd51caaaf4882cc119b4b4bfa4fd997f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/contenthub-console/zipball/4dc8e23253e9a1685b19a28eb687da2a7854c1b7",
-                "reference": "4dc8e23253e9a1685b19a28eb687da2a7854c1b7",
+                "url": "https://api.github.com/repos/acquia/contenthub-console/zipball/b11bf253cd51caaaf4882cc119b4b4bfa4fd997f",
+                "reference": "b11bf253cd51caaaf4882cc119b4b4bfa4fd997f",
                 "shasum": ""
             },
             "require": {
                 "acquia/acsf-contenthub-console": "^1.2.0",
                 "ext-json": "*",
-                "spatie/ssl-certificate": "1.21",
+                "spatie/ssl-certificate": "1.21|1.22.1",
                 "zumba/amplitude-php": "^1"
             },
             "require-dev": {
@@ -373,9 +373,9 @@
             "description": "A package providing Acquia ContentHub commands for the CommonConsole command line interface.",
             "support": {
                 "issues": "https://github.com/acquia/contenthub-console/issues",
-                "source": "https://github.com/acquia/contenthub-console/tree/1.3.0"
+                "source": "https://github.com/acquia/contenthub-console/tree/1.3.1"
             },
-            "time": "2021-04-09T19:35:16+00:00"
+            "time": "2021-08-10T14:24:41+00:00"
         },
         {
             "name": "acquia/contenthub-console-helpers",
@@ -555,23 +555,23 @@
         },
         {
             "name": "acquia/lightning",
-            "version": "4.1.14",
+            "version": "4.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/lightning.git",
-                "reference": "379e08de7df7e1d7fd488d390edeed66369c6b9f"
+                "reference": "e527c618fdaf4761766a3710a63b6adddb048b24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/lightning/zipball/379e08de7df7e1d7fd488d390edeed66369c6b9f",
-                "reference": "379e08de7df7e1d7fd488d390edeed66369c6b9f",
+                "url": "https://api.github.com/repos/acquia/lightning/zipball/e527c618fdaf4761766a3710a63b6adddb048b24",
+                "reference": "e527c618fdaf4761766a3710a63b6adddb048b24",
                 "shasum": ""
             },
             "require": {
                 "composer/composer": "^1.10.22 || ^2.0.13",
                 "cweagans/composer-patches": "^1.6",
                 "drupal/acquia_connector": "*",
-                "drupal/core": "~8.9.14",
+                "drupal/core": "~8.9.17",
                 "drupal/libraries": "^3.0",
                 "drupal/lightning_api": "^4.4",
                 "drupal/lightning_core": "^5.2",
@@ -677,9 +677,9 @@
             ],
             "description": "The best of Drupal, curated by Acquia",
             "support": {
-                "source": "https://github.com/acquia/lightning/tree/4.1.14"
+                "source": "https://github.com/acquia/lightning/tree/4.1.16"
             },
-            "time": "2021-05-14T23:14:56+00:00"
+            "time": "2021-07-21T16:56:56+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -2295,16 +2295,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.13.1",
+            "version": "1.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f"
+                "reference": "5b668aef16090008790395c02c893b1ba13f7e08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
-                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5b668aef16090008790395c02c893b1ba13f7e08",
+                "reference": "5b668aef16090008790395c02c893b1ba13f7e08",
                 "shasum": ""
             },
             "require": {
@@ -2361,9 +2361,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.13.1"
+                "source": "https://github.com/doctrine/annotations/tree/1.13.2"
             },
-            "time": "2021-05-16T18:07:53+00:00"
+            "time": "2021-08-05T19:00:23+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -2466,26 +2466,26 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.6.7",
+            "version": "1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "55f8b799269a1a472457bd1a41b4f379d4cfba4a"
+                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/55f8b799269a1a472457bd1a41b4f379d4cfba4a",
-                "reference": "55f8b799269a1a472457bd1a41b4f379d4cfba4a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/1958a744696c6bb3bb0d28db2611dc11610e78af",
+                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpstan/phpstan-shim": "^0.9.2",
-                "phpunit/phpunit": "^7.0",
-                "vimeo/psalm": "^3.8.1"
+                "doctrine/coding-standard": "^9.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.1.5",
+                "vimeo/psalm": "^4.2.1"
             },
             "type": "library",
             "autoload": {
@@ -2529,9 +2529,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/collections/issues",
-                "source": "https://github.com/doctrine/collections/tree/1.6.7"
+                "source": "https://github.com/doctrine/collections/tree/1.6.8"
             },
-            "time": "2020-07-27T17:53:49+00:00"
+            "time": "2021-08-10T18:51:53+00:00"
         },
         {
             "name": "doctrine/common",
@@ -5764,17 +5764,17 @@
         },
         {
             "name": "drupal/context",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/context.git",
-                "reference": "8.x-4.0"
+                "reference": "8.x-4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/context-8.x-4.0.zip",
-                "reference": "8.x-4.0",
-                "shasum": "e96410e09450f1cd58724d152b8caef2a299b3ca"
+                "url": "https://ftp.drupal.org/files/projects/context-8.x-4.1.zip",
+                "reference": "8.x-4.1",
+                "shasum": "5cfee680f7299d82b584502479c85566bb4285c1"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -5782,8 +5782,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.0",
-                    "datestamp": "1627322441",
+                    "version": "8.x-4.1",
+                    "datestamp": "1628187190",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14104,22 +14104,22 @@
         },
         {
             "name": "drupal/upgrade_status",
-            "version": "3.8.0",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/upgrade_status.git",
-                "reference": "8.x-3.8"
+                "reference": "8.x-3.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-3.8.zip",
-                "reference": "8.x-3.8",
-                "shasum": "76e0893e6f8e1a4fd99f8a935f414c0f242d0620"
+                "url": "https://ftp.drupal.org/files/projects/upgrade_status-8.x-3.9.zip",
+                "reference": "8.x-3.9",
+                "shasum": "5a0c33e882d72ac8d1ac28d68013937fcdced6cd"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
                 "mathieuviossat/arraytotexttable": "~1.0.0",
-                "mglaman/phpstan-drupal": "^0.12.11",
+                "mglaman/phpstan-drupal": "^0.12.12",
                 "nikic/php-parser": "^4.0.0",
                 "phpstan/phpstan-deprecation-rules": "^0.12.0",
                 "webflo/drupal-finder": "^1.2"
@@ -14127,8 +14127,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.8",
-                    "datestamp": "1626775913",
+                    "version": "8.x-3.9",
+                    "datestamp": "1628707640",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -17581,16 +17581,16 @@
         },
         {
             "name": "pear/pear-core-minimal",
-            "version": "v1.10.10",
+            "version": "v1.10.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/pear-core-minimal.git",
-                "reference": "625a3c429d9b2c1546438679074cac1b089116a7"
+                "reference": "68d0d32ada737153b7e93b8d3c710ebe70ac867d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/pear-core-minimal/zipball/625a3c429d9b2c1546438679074cac1b089116a7",
-                "reference": "625a3c429d9b2c1546438679074cac1b089116a7",
+                "url": "https://api.github.com/repos/pear/pear-core-minimal/zipball/68d0d32ada737153b7e93b8d3c710ebe70ac867d",
+                "reference": "68d0d32ada737153b7e93b8d3c710ebe70ac867d",
                 "shasum": ""
             },
             "require": {
@@ -17625,7 +17625,7 @@
                 "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=PEAR",
                 "source": "https://github.com/pear/pear-core-minimal"
             },
-            "time": "2019-11-19T19:00:24+00:00"
+            "time": "2021-08-10T22:31:03+00:00"
         },
         {
             "name": "pear/pear_exception",
@@ -19114,28 +19114,28 @@
         },
         {
             "name": "spatie/ssl-certificate",
-            "version": "1.21.0",
+            "version": "1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ssl-certificate.git",
-                "reference": "3f827acdbff1745e1af2a4a38d7b985494db4ac1"
+                "reference": "c4756c3f18f9abeea62cfe99fc841229d9fead2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ssl-certificate/zipball/3f827acdbff1745e1af2a4a38d7b985494db4ac1",
-                "reference": "3f827acdbff1745e1af2a4a38d7b985494db4ac1",
+                "url": "https://api.github.com/repos/spatie/ssl-certificate/zipball/c4756c3f18f9abeea62cfe99fc841229d9fead2c",
+                "reference": "c4756c3f18f9abeea62cfe99fc841229d9fead2c",
                 "shasum": ""
             },
             "require": {
                 "ext-intl": "*",
                 "ext-json": "*",
-                "nesbot/carbon": "^2.3",
-                "php": "^7.2",
+                "nesbot/carbon": "^2.23",
+                "php": "^7.4|^8.0",
                 "spatie/macroable": "^1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.0",
-                "spatie/phpunit-snapshot-assertions": "^2.0"
+                "phpunit/phpunit": "^9.0",
+                "spatie/phpunit-snapshot-assertions": "^4.2.3"
             },
             "type": "library",
             "autoload": {
@@ -19166,14 +19166,19 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/ssl-certificate/issues",
-                "source": "https://github.com/spatie/ssl-certificate/tree/1.21.0"
+                "source": "https://github.com/spatie/ssl-certificate/tree/1.22.1"
             },
             "funding": [
                 {
-                    "type": "spatie"
+                    "url": "https://github.com/sponsors/spatie",
+                    "type": "github"
+                },
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "other"
                 }
             ],
-            "time": "2020-10-19T06:41:57+00:00"
+            "time": "2021-02-15T15:42:15+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -19287,16 +19292,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.51.2",
+            "version": "v3.52.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "4c29a94daa8271096fd3e2aa34516e07a8932cf4"
+                "reference": "b1ccd1f03a77cfd88b76c1cf3e07b6af7f9bbd7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/4c29a94daa8271096fd3e2aa34516e07a8932cf4",
-                "reference": "4c29a94daa8271096fd3e2aa34516e07a8932cf4",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/b1ccd1f03a77cfd88b76c1cf3e07b6af7f9bbd7b",
+                "reference": "b1ccd1f03a77cfd88b76c1cf3e07b6af7f9bbd7b",
                 "shasum": ""
             },
             "type": "library",
@@ -19342,9 +19347,9 @@
             ],
             "support": {
                 "issues": "https://github.com/swagger-api/swagger-ui/issues",
-                "source": "https://github.com/swagger-api/swagger-ui/tree/v3.51.2"
+                "source": "https://github.com/swagger-api/swagger-ui/tree/v3.52.0"
             },
-            "time": "2021-07-30T10:10:42+00:00"
+            "time": "2021-08-09T15:14:18+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
