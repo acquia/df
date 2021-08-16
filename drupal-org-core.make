@@ -3,5 +3,5 @@ api = 2
 projects[drupal][type] = core
 projects[drupal][download][type] = git
 projects[drupal][download][url] = https://git.drupal.org/project/drupal.git
-projects[drupal][download][branch] = 8.9.17
-projects[drupal][download][tag] = 8.9.17
+projects[drupal][download][branch] = 8.9.18
+projects[drupal][download][tag] = 8.9.18
