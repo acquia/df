@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa53a1df7a8781406b627bb3dee6aab4",
+    "content-hash": "72c955d5c8d21457c9648b564c1c5f44",
     "packages": [
         {
             "name": "acquia/acf",
@@ -7809,24 +7809,24 @@
         },
         {
             "name": "drupal/feeds_ex",
-            "version": "1.0.0-alpha4",
+            "version": "1.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds_ex.git",
-                "reference": "8.x-1.0-alpha4"
+                "reference": "8.x-1.0-alpha5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds_ex-8.x-1.0-alpha4.zip",
-                "reference": "8.x-1.0-alpha4",
-                "shasum": "b1b5d5478335c133af1f6eb6bb3434aad9d202b7"
+                "url": "https://ftp.drupal.org/files/projects/feeds_ex-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "95f155c9d794b97518bbc9171c434319d2e007d8"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
                 "drupal/feeds": "*",
-                "flow/jsonpath": "~0.3",
                 "mtdowling/jmespath.php": "^2.0",
-                "querypath/querypath": "^3.0"
+                "querypath/querypath": "^3.0",
+                "softcreatr/jsonpath": "^0.5 || ^0.7"
             },
             "require-dev": {
                 "drupal/feeds": "3.x-dev"
@@ -7834,8 +7834,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-alpha4",
-                    "datestamp": "1591295180",
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1630593698",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -14994,52 +14994,6 @@
             "time": "2020-06-29T00:56:53+00:00"
         },
         {
-            "name": "flow/jsonpath",
-            "version": "0.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FlowCommunications/JSONPath.git",
-                "reference": "b9738858c75d008c1211612b973e9510f8b7f8ea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FlowCommunications/JSONPath/zipball/b9738858c75d008c1211612b973e9510f8b7f8ea",
-                "reference": "b9738858c75d008c1211612b973e9510f8b7f8ea",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "peekmo/jsonpath": "dev-master",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Flow\\JSONPath": "src/",
-                    "Flow\\JSONPath\\Test": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stephen Frank",
-                    "email": "stephen@flowsa.com"
-                }
-            ],
-            "description": "JSONPath implementation for parsing, searching and flattening arrays",
-            "support": {
-                "issues": "https://github.com/FlowCommunications/JSONPath/issues",
-                "source": "https://github.com/FlowCommunications/JSONPath/tree/0.5.0"
-            },
-            "abandoned": "softcreatr/jsonpath",
-            "time": "2019-07-15T17:23:22+00:00"
-        },
-        {
             "name": "grasmash/expander",
             "version": "1.0.0",
             "source": {
@@ -19083,6 +19037,71 @@
                 "wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
             },
             "time": "2021-07-06T23:45:17+00:00"
+        },
+        {
+            "name": "softcreatr/jsonpath",
+            "version": "0.7.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SoftCreatR/JSONPath.git",
+                "reference": "008569bf80aa3584834f7890781576bc7b65afa7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SoftCreatR/JSONPath/zipball/008569bf80aa3584834f7890781576bc7b65afa7",
+                "reference": "008569bf80aa3584834f7890781576bc7b65afa7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.1"
+            },
+            "replace": {
+                "flow/jsonpath": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=7.0",
+                "roave/security-advisories": "dev-master",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flow\\JSONPath\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Frank",
+                    "email": "stephen@flowsa.com",
+                    "homepage": "https://prismaticbytes.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sascha Greuel",
+                    "email": "hello@1-2.dev",
+                    "homepage": "http://1-2.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "JSONPath implementation for parsing, searching and flattening arrays",
+            "support": {
+                "email": "hello@1-2.dev",
+                "forum": "https://github.com/SoftCreatR/JSONPath/discussions",
+                "issues": "https://github.com/SoftCreatR/JSONPath/issues",
+                "source": "https://github.com/SoftCreatR/JSONPath"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/softcreatr",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-06-02T22:15:26+00:00"
         },
         {
             "name": "solarium/solarium",
