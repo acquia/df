@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_mobile
+label: 'Hero mobile (600x700)'
+effects:
+  650ac8cd-dfa8-484f-a827-39b79954683d:
+    uuid: 650ac8cd-dfa8-484f-a827-39b79954683d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 700
+      crop_type: focal_point

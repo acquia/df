@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: bf413f25-05be-4393-b48a-f5f7091e1cec
+  default_langcode: en
+  depends:
+    d5150c6c-7a64-4dae-af18-a4cdd101cee5: media
+default:
+  preferred_langcode:
+    -
+      value: en
+  name:
+    -
+      value: EmilyPhillips
+  mail:
+    -
+      value: EmilyPhillips@example.com
+  timezone:
+    -
+      value: UTC
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1552071575
+  access:
+    -
+      value: 1474668188
+  login:
+    -
+      value: 1474668188
+  roles:
+    -
+      target_id: content_administrator
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_first_name:
+    -
+      value: Emily
+  field_image:
+    -
+      entity: d5150c6c-7a64-4dae-af18-a4cdd101cee5
+  field_last_name:
+    -
+      value: Phillips

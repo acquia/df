@@ -1,66 +1,35 @@
 <?php
 
-use Drupal\user\Entity\User;
-
-/**
+/*
  * @file
- * Contains core functionality for the DF distribution.
+ * Contains df_core.module.
  */
 
-/**
- * Implements hook_module_implements_alter().
- *
- * @todo Remove after #2635978 is fixed.
- */
-function df_core_module_implements_alter(&$implementations, $hook) {
-  // Disable block initialization/inheritance for themes enabled after Lightning
-  // is installed in order to prevent blocks associated with the profile from
-  // bleeding over into scenarios.
-  if ($hook == 'themes_installed') {
-    unset($implementations['block']);
-  }
-}
+use Drupal\Core\Entity\EntityInterface;
 
 /**
- * Implements hook_menu_local_tasks_alter().
+ * Implements hook_entity_operation().
  */
-function df_core_menu_local_tasks_alter(&$data, $route_name) {
-  // Core doesn't currently clean up local tasks created via Views when the View
-  // is disabled/deleted. Remove the core file listing view's local tasks in
-  // order to prevent duplicate 'Files' tabs from appear on admin/content.
-  // @todo: remove this when https://www.drupal.org/node/2027043 is fixed.
-  if (!empty($data['tabs'])) {
-    foreach ($data['tabs'] as $tab_level => $tabs) {
-      foreach ($tabs as $href => $tab_data) {
-        if ($href == 'views_view:view.files.page_1') {
-          $data['tabs'][$tab_level][$href]['#access'] = FALSE;
-        }
-      }
-    }
+function df_core_entity_operation_alter(array &$operations, EntityInterface $entity) {
+  // Removes the clone operation from Entity clone for Access unpublished.
+  $entityTypeId = $entity->getEntityTypeId();
+  if ($entityTypeId == 'access_token') {
+    unset($operations['clone']);
   }
 }
 
 /**
  * Implements hook_requirements().
  */
-function df_requirements($phase) {
+function df_core_requirements($phase) {
   $requirements = [];
-  if (phpversion() < '7.1') {
-    $requirements['df_requirements'] = [
-      'title' => t('DEMO FRAMEWORK REQUIREMENTS'),
-      'value' => t("Your PHP installation is too old."),
-      'description' => t("This build requires your cloud env to run PHP7.1+"),
-      'severity' => REQUIREMENT_ERROR,
-    ];
-  }
   if ($phase == 'runtime') {
     $requirements['df_version'] = [
       'title' => t("Demo Framework"),
-      'value' => t( "4.2.0+dev"),
-      'description' => 'Last Update: 2021-07-15',
+      'value' => t( "5.x-dev"),
+      'description' => 'Last Update: 2021-10-18',
       'severity' => REQUIREMENT_INFO,
     ];
   }
   return $requirements;
 }
-

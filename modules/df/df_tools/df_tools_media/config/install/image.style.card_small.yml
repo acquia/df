@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_small
+label: 'Card small (550x290)'
+effects:
+  2e45e1c7-3ee6-47d4-8419-902c65cb9541:
+    uuid: 2e45e1c7-3ee6-47d4-8419-902c65cb9541
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 550
+      height: 290
+      crop_type: focal_point

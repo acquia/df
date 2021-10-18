@@ -1,0 +1,58 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function df_tools_slack_entity_insert(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node') {
+    if ($entity->hasField('field_send_to_slack') && $entity->isPublished()) {
+      // node info
+      $entity_id = $entity->id();
+      $entity_title = $entity->getTitle();
+      $entity_url = Url::fromRoute('entity.node.canonical', ['node' => $entity_id], ['absolute' => TRUE])->toString();
+      $summary = $entity->get('body')->summary;
+      // $author = strip_tags($entity->getAuthorName());
+
+      if ($entity->hasField('field_tags')) {
+        $term = Term::load($entity->get('field_tags')->target_id);
+        if (isset($term) && !empty($term)) {
+          $term_name = $term->getName();
+          // todo: select slack channel by taxonomy term, e.g. office location
+        }
+      }
+
+      // site name
+      $config = \Drupal::config('system.site');
+      $sitename = $config->get('name');
+
+      // slack info
+      $config = \Drupal::config('slack.settings');
+      $channel = $config->get('slack_channel');
+      $username = $config->get('slack_username');
+
+      // build message
+      $output = [];
+      $output[] = "A new content has been published on $sitename: ";
+      $output[] = "<$entity_url | $entity_title>";
+      if (isset($term) && !empty($term)) {
+        $output[] = " tag: _$term_name _";
+      }
+      $output[] = "$summary";
+      // $output[] = "_Comment author_: $author";
+
+      // send slack message
+      if ($entity->get('field_send_to_slack')->value == 1) {
+        \Drupal::service('slack.slack_service')
+          ->sendMessage(implode("\n", $output), $channel, $username);
+          
+        \Drupal::logger('publish_to_slack')->info('Message sent.');
+      }
+  
+    }
+  }
+
+}

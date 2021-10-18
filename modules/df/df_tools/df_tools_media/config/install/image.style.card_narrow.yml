@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_narrow
+label: 'Card narrow (612x336)'
+effects:
+  f9eedc18-9cff-44cf-a576-cbdb377694d7:
+    uuid: f9eedc18-9cff-44cf-a576-cbdb377694d7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 612
+      height: 336
+      crop_type: focal_point

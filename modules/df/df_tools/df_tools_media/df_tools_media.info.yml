@@ -1,22 +1,9 @@
 name: DF Tools Media
 type: module
-description: Extends the Lightning Media module to provide media handling capabilities.
-core_version_requirement: ^8.8 || ^9
+description: Provides media handling capabilities.
+core_version_requirement: ^9
 package: Demo Framework Tools
 dependencies:
+  - acquia_cms_image
   - df_core
-  - df_tools_crop
-  - entity_browser
-  - image
-  - lightning_media
-  - lightning_media_audio
-  - lightning_media_document
-  - lightning_media_image
-  - lightning_media_instagram
-  - lightning_media_twitter
-  - lightning_media_slideshow
-  - lightning_media_video
-  - media
-  - media_entity_video
-  - unsplash_stream
-  - views_infinite_scroll
+  - responsive_image

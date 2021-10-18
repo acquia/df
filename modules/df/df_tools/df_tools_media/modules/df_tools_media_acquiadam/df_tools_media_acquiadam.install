@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Contains df_tools_media_acquiadam.install.
+ */
+
+
+/**
+ * Implements hook_install().
+ */
+function df_tools_media_acquiadam_install() {
+  $moduleHandler = \Drupal::service('module_handler');
+  $config_factory = \Drupal::configFactory();
+
+  // Adds Entity Browser for Site Studio.
+  if ($moduleHandler->moduleExists('cohesion')) {
+    $config_factory
+      ->getEditable('cohesion.settings')
+      ->set('image_browser.config.type', 'entity_imagebrowser')
+      ->set('image_browser.config.dx8_imce_stream_wrapper', 'public')
+      ->set('image_browser.config.dx8_entity_browser', 'media_browser')
+      ->set('image_browser.content.type', 'entity_imagebrowser')
+      ->set('image_browser.content.dx8_entity_browser', 'media_browser')
+      ->save(TRUE);
+  }
+
+}

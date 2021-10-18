@@ -1,0 +1,18 @@
+config_rewrite: replace
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium
+label: 'Medium (350x350)'
+effects:
+  d53ca6a1-0a8e-40e3-bf33-60ebba099193:
+    uuid: d53ca6a1-0a8e-40e3-bf33-60ebba099193
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 350
+      height: 350
+      crop_type: focal_point
+

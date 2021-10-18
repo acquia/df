@@ -1,0 +1,18 @@
+config_rewrite: replace
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large
+label: 'Large (480×480)'
+effects:
+  1fbdda92-f4e4-4513-8b2d-d64dc670a678:
+    uuid: 1fbdda92-f4e4-4513-8b2d-d64dc670a678
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 480
+      height: 480
+      crop_type: focal_point
+

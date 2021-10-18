@@ -1,4 +1,3 @@
-uuid: aea4d7ec-e7c8-4a26-9cfb-4fd3813a110b
 langcode: en
 status: true
 dependencies:
@@ -17,12 +16,9 @@ dependencies:
     - field.field.media.acquia_dam_asset.field_acquiadam_asset_type_id
     - field.field.media.acquia_dam_asset.field_acquiadam_asset_version
     - field.field.media.acquia_dam_asset.field_acquiadam_asset_width
-    - field.field.media.acquia_dam_asset.field_media_in_library
     - media.type.acquia_dam_asset
   module:
     - image
-_core:
-  default_config_hash: k5lZ3lHM-qNzqve3tSnwarxtRh585IhXKnCS_G4AblI
 id: media.acquia_dam_asset.full
 targetEntityType: media
 bundle: acquia_dam_asset
@@ -170,5 +166,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_acquiadam_asset_file: true
-  field_media_in_library: true
   langcode: true

@@ -1,0 +1,14 @@
+name: DF Tools Media Entity Browser
+type: module
+description: Extends the DF Tools Media module to provide support for Entity Browser.
+core_version_requirement: ^9
+package: Demo Framework Tools
+dependencies:
+  - acquia_cms_article
+  - acquia_cms_event
+  - acquia_cms_page
+  - acquia_cms_person
+  - acquia_cms_place
+  - df_tools_media
+  - df_tools_user_demo
+  - entity_browser

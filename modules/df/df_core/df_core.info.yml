@@ -1,10 +1,42 @@
 name: DF
 type: module
 description: Core functionality for the DF distribution.
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9
 package: Demo Framework
 dependencies:
+  - acquia_cms_common
+  - acquia_cms_image
+  - acquia_cms_toolbar
+  - admin_toolbar
+  - admin_toolbar_tools
+  - block_content
+  - collapsiblock
+  - color
+  - config
   - config_rewrite
-  - contact
-  - lightning_core
+  - dblog
+  - df_tools_user
+  - dynamic_page_cache
+  - entity_clone
+  - facets
+  - facets_pretty_paths
+  - field_ui
+  - google_analytics
+  - menu_link_content
+  - menu_ui
   - metatag
+  - moderation_sidebar
+  - options
+  - pathauto
+  - permissions_filter
+  - responsive_preview
+  - revision_log_default
+  - scheduler
+  - search_api
+  - search_api_autocomplete
+  - search_api_db
+  - syslog
+  - tour
+  - view_modes_display
+  - views_ui
+  - webform

@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser_media
+  module:
+    - views
+name: image_browser
+label: 'Image browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select Image(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  bb464de8-a875-415e-8d89-7a38a5694cf8:
+    settings:
+      view: entity_browser_media
+      view_display: entity_browser_2
+      submit_text: Place
+      auto_select: false
+    uuid: bb464de8-a875-415e-8d89-7a38a5694cf8
+    weight: 1
+    label: Library
+    id: view
+  af7008a0-4863-4faa-8966-bb9dd97dca44:
+    settings:
+      upload_location: 'public://'
+      multiple: true
+      submit_text: 'Place'
+      extensions: 'jpg jpeg png gif'
+    uuid: af7008a0-4863-4faa-8966-bb9dd97dca44
+    weight: 2
+    label: Upload
+    id: upload

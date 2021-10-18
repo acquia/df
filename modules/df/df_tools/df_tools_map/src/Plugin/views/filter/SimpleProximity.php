@@ -109,7 +109,8 @@ class SimpleProximity extends FilterPluginBase {
 
     // Geocode the location if it's present.
     if (!empty($location)) {
-      if ($collection = \Drupal::service('geocoder')->geocode($location,['googlemaps'])) {
+      $provider = \Drupal::entityTypeManager()->getStorage('geocoder_provider')->load('googlemaps');
+      if ($collection = \Drupal::service('geocoder')->geocode($location,[$provider])) {
         $coordinates = $collection->first()->getCoordinates();
 
         // Generate a distance formula programatically.

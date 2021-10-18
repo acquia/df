@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 3aa4f897-4b37-4e07-8608-41428afb2163
+  default_langcode: en
+  depends:
+    48b1cdcc-924d-437d-8f10-ca08f4576e8d: media
+default:
+  preferred_langcode:
+    -
+      value: en
+  preferred_admin_langcode:
+    -
+      value: en
+  name:
+    -
+      value: AshRydell
+  mail:
+    -
+      value: ash@example.com
+  timezone:
+    -
+      value: UTC
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1567122670
+  access:
+    -
+      value: 0
+  login:
+    -
+      value: 0
+  init:
+    -
+      value: ash@example.com
+  roles:
+    -
+      target_id: administrator
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_first_name:
+    -
+      value: Ashlyn
+  field_image:
+    -
+      entity: 48b1cdcc-924d-437d-8f10-ca08f4576e8d
+  field_last_name:
+    -
+      value: Rydell

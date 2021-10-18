@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: coh_xx_large_super_landscape
+label: 'XX Large super landscape (1600x753)'
+effects:
+  6e24a2f7-0467-4455-a796-1f22057d970f:
+    uuid: 6e24a2f7-0467-4455-a796-1f22057d970f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 753
+      crop_type: focal_point

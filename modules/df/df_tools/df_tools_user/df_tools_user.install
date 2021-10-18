@@ -19,34 +19,16 @@ function df_tools_user_install() {
   // Assign user 1 the "administrator" role.
   if ($user = User::load(1)) {
     $user->roles[] = 'administrator';
+    $user->set('name', 'admin');
+    $user->set('mail', 'admin@example.com');
     $user->save();
   }
 
-  // Enable the Contact link in the footer menu.
-  /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
-  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-  $menu_link_manager->updateDefinition('contact.site_page', array('enabled' => 1));
-
+  // Allow access to contact form.
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array('access site-wide contact form'));
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array('access site-wide contact form'));
 
   // Allow authenticated users to use shortcuts.
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array('access shortcuts'));
 
-  // Add the First and Last Name fields to the user entity form display.
-  \Drupal::service('entity_display.repository')->getFormDisplay('user', 'user', 'default')
-    ->setComponent('field_first_name', array(
-      'type' => 'string_textfield',
-    ))
-    ->setComponent('field_last_name', array(
-      'type' => 'string_textfield',
-    ))
-    ->save();
-
-  // Add values for the First and Last name fields to the admin user.
-  if ($user = User::load(1)) {
-    $user->set('field_first_name', 'Bill');
-    $user->set('field_last_name', 'James');
-    $user->save();
-  }
 }

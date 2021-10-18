@@ -1,0 +1,19 @@
+main:
+  version: VERSION
+  js:
+    js/prism.js: {}
+    js/endpoint-block.js: {}
+  dependencies:
+    - core/drupal
+    - jquery_ui_dialog/dialog
+    - df_tools_article/addons
+  css:
+    theme:
+      css/prism.css: {}
+      css/highlight-override.css: {}
+      css/endpoint-block.css: { weight: 1 }
+
+addons:
+  version: VERSION
+  js:
+    //cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js: {}

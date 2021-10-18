@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_image
+    - image.style.hero_mobile
+    - image.style.hero_square
+id: responsive_hero
+label: 'Responsive Hero'
+image_style_mappings:
+  -
+    breakpoint_id: df_tools.largeup
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_image
+  -
+    breakpoint_id: df_tools.largeup
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_image
+  -
+    breakpoint_id: df_tools.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_square
+  -
+    breakpoint_id: df_tools.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_square
+  -
+    breakpoint_id: df_tools.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_mobile
+  -
+    breakpoint_id: df_tools.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_mobile
+breakpoint_group: df_tools_crop
+fallback_image_style: hero_image

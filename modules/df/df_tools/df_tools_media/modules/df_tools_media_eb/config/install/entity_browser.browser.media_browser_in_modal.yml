@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser_media
+  module:
+    - views
+name: media_browser_in_modal
+label: 'Media browser (Modal)'
+display: modal
+display_configuration:
+  width: '1100'
+  height: '650'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  bb464de8-a875-415e-8d89-7a38a5694cf8:
+    settings:
+      view: entity_browser_media
+      view_display: entity_browser_1
+      submit_text: Place
+      auto_select: false
+    uuid: bb464de8-a875-415e-8d89-7a38a5694cf8
+    weight: 1
+    label: Library
+    id: view
+  d327d929-3bb2-4e7b-b7af-0255414186c4:
+    settings:
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+      upload_location: 'public://images'
+      multiple: '1'
+      submit_text: Place
+    uuid: d327d929-3bb2-4e7b-b7af-0255414186c4
+    weight: 2
+    label: Upload
+    id: media_image_upload

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_square
+label: 'Hero Square Half (700x400)'
+effects:
+  9476c215-dafc-4e8d-ae08-8d4af892e715:
+    uuid: 9476c215-dafc-4e8d-ae08-8d4af892e715
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 400
+      crop_type: focal_point

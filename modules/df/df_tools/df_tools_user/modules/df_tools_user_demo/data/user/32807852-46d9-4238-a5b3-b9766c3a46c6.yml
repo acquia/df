@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 32807852-46d9-4238-a5b3-b9766c3a46c6
+  default_langcode: en
+  depends:
+    32e878f3-e4dd-4018-a3c0-7ab7d2ec0c73: media
+default:
+  preferred_langcode:
+    -
+      value: en
+  name:
+    -
+      value: AdamIngram
+  mail:
+    -
+      value: AdamIngram@example.com
+  timezone:
+    -
+      value: UTC
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1552071575
+  access:
+    -
+      value: 1474668188
+  login:
+    -
+      value: 1474668188
+  roles:
+    -
+      target_id: content_editor
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_first_name:
+    -
+      value: Adam
+  field_image:
+    -
+      entity: 32e878f3-e4dd-4018-a3c0-7ab7d2ec0c73
+  field_last_name:
+    -
+      value: Ingram

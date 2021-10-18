@@ -1,0 +1,49 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 1ff0b7bc-d952-467c-b3bb-0715e25f89b3
+  default_langcode: en
+  depends:
+    1c5b3536-1daf-4faf-95c2-b2d6db69c2ae: media
+default:
+  preferred_langcode:
+    -
+      value: en
+  name:
+    -
+      value: TomThemer
+  mail:
+    -
+      value: TomThemer@example.com
+  timezone:
+    -
+      value: UTC
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1552071575
+  access:
+    -
+      value: 1576260488
+  login:
+    -
+      value: 1576260488
+  roles:
+    -
+      target_id: site_builder
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_first_name:
+    -
+      value: Tom
+  field_image:
+    -
+      entity: 1c5b3536-1daf-4faf-95c2-b2d6db69c2ae
+  field_last_name:
+    -
+      value: Themer

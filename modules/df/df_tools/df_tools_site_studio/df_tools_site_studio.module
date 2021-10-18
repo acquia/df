@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains df_tools_site_studio.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_entity_operation().
+ */
+function df_tools_site_studio_entity_operation_alter(array &$operations, EntityInterface $entity) {
+  // Removes the clone operation from Entity clone for all Site Studio entity types.
+  // Site Studio has a duplicate operation that should be used instead.
+  $regex = '/cohesion_*/';
+  $entityTypeId = $entity->getEntityTypeId();
+  if (preg_match($regex, $entityTypeId)) {
+    unset($operations['clone']);
+  }
+}

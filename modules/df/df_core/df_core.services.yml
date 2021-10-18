@@ -1,5 +1,0 @@
-services:
-  df_core.subscriber:
-    class: Drupal\df_core\EventSubscriber\MenuRouterRebuildSubscriber
-    tags:
-      - { name: event_subscriber }

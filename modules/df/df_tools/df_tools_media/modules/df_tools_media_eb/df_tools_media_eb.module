@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains df_tools_media_eb.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function df_tools_media_eb_form_alter(array &$form, FormStateInterface $form_state) {
+  if ($form_state->has('entity_browser')) {
+    $form['#attached']['library'][] = 'df_tools_media_eb/browser.styling';
+  }
+}
+
+/**
+ * Preprocess function for grid views of the Entity browser.
+ *
+ * @param array $variables
+ *   Template variables.
+ */
+function df_tools_media_eb_preprocess_views_view_grid(array &$variables) {
+  /** @var \Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+
+  if ($view->display_handler->getPluginId() == 'entity_browser') {
+    foreach ($variables['items'] as &$item) {
+      foreach ($item['content'] as &$column) {
+        $column['attributes']['data-selectable'] = 'true';
+      }
+    }
+  }
+}

@@ -1,9 +1,10 @@
 name: DF Tools User
 type: module
 description: Provides default user roles, users, and permissions.
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9
 package: Demo Framework Tools
 dependencies:
+  - default_content
   - df_core
-  - df_tools_display
+  - moderation_dashboard
   - shortcut

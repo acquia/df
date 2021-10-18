@@ -1,0 +1,46 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the DF installation profile.
+ */
+
+/**
+ * Implements hook_install_tasks().
+ */
+function df_install_tasks(): array {
+  $tasks = [];
+
+  // Set system settings after install.
+  $tasks['df_settings'] = [];
+
+  return $tasks;
+}
+
+/**
+ * The site name gets overwritten when the install configuration form is
+ * submitted by Drush. We are using hook_install_tasks() to set values after
+ * the form has been submitted.
+ */
+function df_settings() {
+  $config_factory = \Drupal::configFactory();
+
+  // Set theme settings.
+  $config_factory
+    ->getEditable('system.theme')
+    ->set('default', 'olivero')
+    ->set('admin', 'acquia_claro')
+    ->save(TRUE);
+
+  // Set site settings.
+  $config_factory
+    ->getEditable('system.site')
+    ->set('name', "Demo Framework")
+    ->set('mail', 'no-reply@example.com')
+    ->save(TRUE);
+
+  // Set node settings.
+  $config_factory
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+}

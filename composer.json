@@ -3,52 +3,74 @@
     "description": "A framework for demoing enterprise-ready Drupal solutions.",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "drupal/drupal-extension": "^3.4.0",
-        "se/selenium-server-standalone": "^2.53",
-        "drupal/devel": "*",
-        "drush/drush": "^9.4",
-        "consolidation/robo": "^1.2",
-        "drupal/console": "^1.8"
+    "require": {
+        "acquia/acf": "2.x-feeds-dev",
+        "acquia/acquia_cms": "^1",
+        "acquia/drupal-environment-detector": "^1",
+        "acquia/memcache-settings": "^1",
+        "cweagans/composer-patches": "^1.6.0",
+        "drupal/access_unpublished": "^1.3",
+        "drupal/acquia_claro": "1.3.x-dev",
+        "drupal/asset_injector": "^2.7",
+        "drupal/coffee": "^1.2",
+        "drupal/component": "^1.0@RC",
+        "drupal/condition_query": "^1.3",
+        "drupal/context": "^4.1",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/cshs": "^3.4",
+        "drupal/editoria11y": "^1.0",
+        "drupal/entity_browser": "^2.6",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/feeds": "^3.0@alpha",
+        "drupal/feeds_ex": "^1.0@alpha",
+        "drupal/field_permissions": "^1.1",
+        "drupal/flag": "^4.0@beta",
+        "drupal/image_url_formatter": "^1.0",
+        "drupal/jquery_ui_dialog": "^1.0",
+        "drupal/json_field": "^1.0@RC",
+        "drupal/jsonapi_explorer": "^1.1",
+        "drupal/link_attributes": "^1.11",
+        "drupal/masquerade": "^2.0@beta",
+        "drupal/mautic": "^1.11",
+        "drupal/mautic_api": "1.x-dev",
+        "drupal/media_acquiadam": "^1.48",
+        "drupal/pendo": "^1.0@alpha",
+        "drupal/permissions_filter": "^1.2",
+        "drupal/pwa": "^1.5",
+        "drupal/require_login": "^2.4",
+        "drupal/revision_log_default": "^1.2",
+        "drupal/samlauth": "3.2",
+        "drupal/slack": "^1.3",
+        "drupal/smart_date": "^3.4",
+        "drupal/storage": "^1.0",
+        "drupal/tac_lite": "^1.5",
+        "drupal/tmgmt": "^1.12",
+        "drupal/user_field_value": "^1.1",
+        "drupal/view_modes_display": "^2.3",
+        "drupal/views_flag_refresh": "^1.0@alpha",
+        "drupal/webform_mautic": "^1.1",
+        "drupal/yext": "^1.0",
+        "drush/drush": "^10",
+        "kevinfunk/content_filter": "1.x-dev",
+        "kevinfunk/default_content_ui": "2.x-dev",
+        "npm-asset/jsonview": "^1.2",
+        "oomphinc/composer-installers-extender": "^1.1 || ^2"
     },
-    "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "assets": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        "lift": {
-            "type": "vcs",
-            "url": "https://github.com/acquia/lift-sdk-php"
-        },
-        "lift-samples": {
-            "type": "vcs",
-            "url": "https://github.com/acquia/acquia-lift-samples"
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "@composer push"
-        ],
-        "post-update-cmd": [
-            "@composer package",
-            "@composer push"
-        ],
-        "package": "Acquia\\DF\\Composer\\Package::execute",
-        "push": "./vendor/bin/phing push",
-        "nuke": "rm -r -f docroot vendor modules/contrib themes/contrib",
-        "remove-git-submodules" : "find . -mindepth 2 -type d -name .git | xargs rm -rf"
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
         "drupal-scaffold": {
+            "allowed-packages": [
+                "drupal/core"
+            ],
             "file-mapping": {
-                "[project-root]/.editorconfig": false,
-                "[project-root]/.gitattributes": false,
+                "[profile-root]/.editorconfig": false,
+                "[profile-root]/.gitattributes": false,
+                "[profile-root]/.travis.yml": false,
+                "[profile-root]/acquia-pipelines.yml": false,
                 "[web-root]/.csslintrc": false,
                 "[web-root]/INSTALL.txt": false,
                 "[web-root]/example.gitignore": false,
@@ -59,20 +81,16 @@
                 "[web-root]/themes/README.txt": false,
                 "[web-root]/web.config": false
             },
+            "gitignore": true,
             "locations": {
+                "project-root": ".",
                 "web-root": "docroot/"
             }
         },
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
+        "enable-patching": true,
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
-            ],
-            "docroot/profiles/{$name}": [
-                "type:drupal-profile"
             ],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
@@ -82,248 +100,93 @@
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
+            "docroot/profiles/{$name}": [
+                "type:drupal-profile"
+            ],
             "docroot/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ]
         },
-        "enable-patching": true,
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "patchLevel": {
-           "drupal/core": "-p2"
+            "drupal/core": "-p2"
         },
         "patches": {
             "drupal/core": {
+                "Invoke hook after a site install is complete | https://drupal.org/node/2924549":
+                "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
+                "Update module fails on installation | https://drupal.org/node/2350711":
+                "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
                 "Allow exposed-form-in-block for block displays | http://drupal.org/node/2681947":
                 "https://www.drupal.org/files/issues/2019-09-30/2681947-33.patch",
-                "Field attachments not bubbled when rendering a saved field in Quick Edit | http://drupal.org/node/2851332":
-                "https://www.drupal.org/files/issues/quickedit-render-field-attachments.patch",
-                "Fatal error when setMainContent() method is not called (block module not installed) | http://drupal.org/node/2819219":
-                "https://www.drupal.org/files/issues/core-fatal_error_main_content_block-2819219-2.patch",
-                "Invoke hook after a site install is complete | http://drupal.org/node/2924549":
-                "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
-                "Dispatch events for changing content moderation states | http://drupal.org/node/2873287":
-                "https://www.drupal.org/files/issues/2018-11-06/2873287-50.patch",
-                "Support third party settings for components within a section | http://drupal.org/node/2998114":
-                "https://www.drupal.org/files/issues/2019-02-26/3015152-tps-5.patch",
-                "Improve block listing in Layout Builder... | https://drupal.org/node/2977587":
-                "https://www.drupal.org/files/issues/2019-07-19/2977587-140-DO-NOT-TEST.patch",
-                "Layout builder's \"Add Block\" sidebar menu UX improvements | http://drupal.org/node/3069446":
-                "https://www.drupal.org/files/issues/2019-07-22/core-layout_builder-inline-block-ux-7.patch",
-                "Blocks added by Layout Builder should have 'Display title' unchecked | http://drupal.org/node/3074435":
-                "https://www.drupal.org/files/issues/2019-08-12/layout_builder_add_block-label-0.patch",
-                "Overriding already overridden libraries-override requires knowledge of previous libraries-overrides | http://drupal.org/node/2642122":
-                "https://www.drupal.org/files/issues/2020-06-04/2642122-120.patch",
-                "Argument 2 passed... | http://drupal.org/node/2996114":
-                "https://www.drupal.org/files/issues/2019-07-07/jsonapi_routes_config_catching.patch",
-                "Do not create a new file entity to overwrite an existing entity | http://drupal.org/node/2241865":
-                "https://www.drupal.org/files/issues/2019-12-05/2241865-8.8.patch",
-                "Don't show the revision log message on creation of content, media, etc. | https://www.drupal.org/project/drupal/issues/3096906":
-                "https://www.drupal.org/files/issues/2019-12-07/3096906-10.patch",
-                "Expose Layout Builder data to REST and JSON:API | https://www.drupal.org/project/drupal/issues/2942975":
-                "https://www.drupal.org/files/issues/2020-05-20/2942975-100.patch",
-                "Imported PO files have no public URL but have a link at admin/content/files | https://www.drupal.org/project/drupal/issues/2449895":
-                "https://www.drupal.org/files/issues/2020-06-01/2449895-2-80.patch",
-                "'Negate' form value for condition plugins should be cast to boolean in validation | https://www.drupal.org/project/drupal/issues/3114467":
-                "https://www.drupal.org/files/issues/2020-03-23/3114467-8.patch"
-
+                "'Negate' form value for condition plugins should be cast to boolean in validation | https://drupal.org/node/3114467":
+                "https://www.drupal.org/files/issues/2021-01-06/3114467-16.patch"
             },
-            "drupal/adminimal_admin_toolbar": {
-                "Update icon| http://drupal.org/node/3163092":
-                "https://www.drupal.org/files/issues/2020-10-07/icon-update-3163092-4.patch"
+            "drupal/component": {
+                "Missing Use statement creates fatal errors | https://drupal.org/node/3236462":
+                "https://git.drupalcode.org/project/component/-/merge_requests/2.patch"
             },
-            "drupal/block_class": {
-                "Integration with Drupal core's new Layout Builder| http://drupal.org/node/2998114":
-                "https://www.drupal.org/files/issues/2019-11-30/2998114-67.patch"
-            },
-            "drupal/coffee": {
-              "Fix Could not load data for internal links.| https://drupal.org/node/3128583":
-              "https://www.drupal.org/files/issues/2020-06-21/3128583-16.patch",
-              "Search does not work in multilingual sites.| https://drupal.org/node/3164536":
-              "https://www.drupal.org/files/issues/2020-08-29/3164536-fixed-ajax-multilang-url-2.patch"
-            },
-            "drupal/content_browser": {
-                "Error when trying to place a new block | http://drupal.org/node/3042028":
-                "https://www.drupal.org/files/issues/2019-03-21/runtime_exception_when_placing_block-3042028-2_0.patch"
-            },
-            "drupal/context": {
-              "Cannot add a context in Drupal 8.7 with layout builder installed | http://drupal.org/node/3043383":
-              "https://www.drupal.org/files/issues/2019-06-11/context-config-schema-for-lb-support-3043383-12.patch"
-            },
-            "drupal/default_content_deploy": {
-                "Export to tar VIA GUI. | http://drupal.org/node/3070222":
-                "https://www.drupal.org/files/issues/2020-07-22/3070222-8_3119056-04_combined.patch"
+            "drupal/default_content": {
+                "Import doesn't overwrite files | https://drupal.org/node/3200212":
+                "https://git.drupalcode.org/project/default_content/-/merge_requests/8.patch"
             },
             "drupal/entity_browser": {
-                "Fixed the issue of Call to a member function getConfigDependencyKey() on null | http://drupal.org/node/2845037":
-                "https://www.drupal.org/files/issues/2845037-4.patch",
                 "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555":
                 "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
             },
-            "drupal/entity_clone": {
-                "Allow fields implementing EntityReferenceFieldItemListInterface to clone their referenced entities | https://drupal.org/node/3013286":
-                "https://www.drupal.org/files/issues/2019-02-22/3013286-8.patch"
+            "drupal/json_field": {
+                "Add hook_requirements() to help determine requirements, available options | http://drupal.org/node/3213859":
+                "https://www.drupal.org/files/issues/2021-05-14/3213859-9.patch"
             },
-            "drupal/field_group": {
-                "Undefined property: stdClass::$region in field_group_form_process() | https://drupal.org/node/3059614":
-                "https://www.drupal.org/files/issues/2020-06-15/3059614-37.patch"
-            },
-            "drupal/lightning_core": {
-              "Tests using FixtureContext fail due to Content Hub 2.0 enabled | http://drupal.org/node/3055022":
-              "https://www.drupal.org/files/issues/2019-05-15/lightning_core-ch-publisher-fixture-setup-0.patch"
-            },
-            "drupal/page_manager": {
-              "Custom attributes in blocks | http://drupal.org/node/2710169":
-              "https://www.drupal.org/files/issues/2710169-block-attributes-24.patch",
-              "Incorrect page_title title in browser toolbar | http://drupal.org/node/2752227":
-              "https://www.drupal.org/files/issues/2018-10-26/page_manager-incorrect-page_title-2752227-37-8.x.4.x.patch"
+            "drupal/mautic": {
+                "Mautic blocks | http://drupal.org/node/3229268":
+                "https://www.drupal.org/files/issues/2021-08-21/mautic-blocks-3229268-01.patch"
             },
             "drupal/pathauto": {
-              "Batch operations stuck on Drush version >= 9.6.2| http://drupal.org/node/2681947":
-              "https://www.drupal.org/files/issues/2021-03-19/pathauto-batch-operations-stuck.patch"
+                "Aliases are not created for affected translations | http://drupal.org/node/2973478":
+                "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
             },
-            "drupal/radix": {
-              "Integrate with OffCanvas (Layout Builder) | http://drupal.org/node/3053579":
-              "https://www.drupal.org/files/issues/2020-02-16/integrate-with-offcanvas-3053579-12.patch",
-              "components API | http://drupal.org/node/3193046-09":
-              "https://www.drupal.org/files/issues/2021-01-20/components-API-3193046-09.patch"
+            "drupal/tac_lite": {
+                "Call to undefined method getVocabularyId() | https://drupal.org/node/3216126":
+                "https://www.drupal.org/files/issues/2021-05-28/Fix_D9.patch"
             },
-            "drupal/scenarios": {
-              "Update DCD importer | http://drupal.org/node/3113974":
-              "https://www.drupal.org/files/issues/2020-03-06/3113974-update-dcd-dev-importer-4.patch"
-            },
-            "drupal/shield": {
-              "Make shield work with D8 core basic_auth (1) | https://www.drupal.org/node/2815945":
-              "https://www.drupal.org/files/issues/2021-06-11/2815945-58.patch"
-            },
-	    "acquia/cohesion": {
-              "After import, field default value is set, instead of exported one | http://drupal.org/node/3098630":
-              "https://www.drupal.org/files/issues/2020-05-14/cohesion-layout-remove-setDefaultValue.patch",
-              "Set batch limit from UI | http://drupal.org/node/2681947":
-              "https://www.drupal.org/files/issues/2021-03-19/site-studio-set-batch-limit-from-ui.patch",
-              "Do not rebuild on module import | http://drupal.org/node/2681947":
-              "https://www.drupal.org/files/issues/2021-03-19/cohesion_sync-do-no-rebuild-on-module-import.patch",
-              "When creating a new menu template and applying in the menu element it renders the default menu.html.twig": 
-              "https://www.drupal.org/files/issues/2021-07-14/aco-1183-01.patch"
+            "acquia/cohesion": {
+                "When creating a new menu template and applying in the menu element it renders the default menu.html.twig":
+                "https://www.drupal.org/files/issues/2021-07-14/aco-1183-01.patch"
             }
         }
     },
-    "require": {
-        "acquia/lightning": "4.1.17",
-        "acquia/acquia-lift-samples": "dev-master",
-        "acquia/cohesion": "6.6.0",
-        "acquia/cohesion-theme": "6.6.0",
-        "acquia/lift-sdk-php": "dev-master",
-        "bower-asset/jquery-ui-slider-pips": "1.11.3",
-        "bower-asset/masonry": "4.2.0",
-        "npm-asset/fontawesome-iconpicker": "1.3.0",
-        "npm-asset/imagesloaded": "4.1.1",
-        "npm-asset/leaflet": "^1.7",
-        "npm-asset/masonry-layout": "4.2.0",
-        "drupal/access_unpublished": "1.3",
-        "drupal/acquia_contenthub": "2.29",
-        "drupal/acquia_lift": "~4",
-        "drupal/acquia_search": "^3.0",
-        "drupal/acsf": "2.69.0",
-        "drupal/address": "1.9.0",
-        "drupal/addtoany": "1.15.0",
-        "drupal/admin_login_path": "1.0.0",
-        "drupal/admin_toolbar": "^3.0",
-        "drupal/adminimal_admin_toolbar": "1.11.0",
-        "drupal/allowed_formats": "1.3.0",
-        "drupal/asset_injector": "2.7.0",
-        "drupal/better_normalizers": "1.0-beta4",
-        "drupal/block_class": "1.3.0",
-        "drupal/coffee": "1.0.0",
-        "drupal/component": "^1.0@beta",
-        "drupal/condition_query": "1.3.0",
-        "drupal/contact_message_rest": "1.0.0-alpha1",
-        "drupal/config_devel": "1.0.0-alpha3",
-        "drupal/config_inspector": "^1.0@beta",
-        "drupal/config_rewrite": "^1.0",
-        "drupal/config_sync": "1.x-dev",
-        "drupal/config_tools": "1.x-dev",
-        "drupal/content_browser": "1.0.0",
-        "drupal/context": "^4",
-        "drupal/core-composer-scaffold": "^8",
-        "drupal/default_content": "1.0.0-alpha9",
-        "drupal/default_content_deploy": "1.x-dev#97ea1ae as 1.x-dev",
-        "drupal/dx8_addtoany": "^1.1",
-        "drupal/entity_gallery": "1.x-dev",
-        "drupal/entity_browser": "^2.4",
-        "drupal/entity_clone": "1.0-beta4",
-        "drupal/entity_usage": "2.0.0-beta5",
-        "drupal/facets": "1.8.0",
-        "drupal/feeds": "3.0-alpha10",
-        "drupal/feeds_ex": "1.0-alpha5",
-        "drupal/field_formatter_class": "1.5.0",
-        "drupal/field_group": "3.2",
-        "drupal/fontyourface": "3.6",
-        "drupal/focal_point": "1.5.0",
-        "drupal/geocoder": "2.22.0",
-        "drupal/geofield": "1.34.0",
-        "drupal/google_analytics": "^3.0",
-        "drupal/google_tag": "^1.3",
-        "drupal/import": "2.0.0-beta2",
-        "drupal/image_url_formatter": "1.0",
-        "drupal/layout_builder_at": "2.12.0",
-        "drupal/layout_builder_modal": "^1.0",
-        "drupal/leaflet": "2.1.14",
-        "drupal/link_class": "2.0.0",
-        "drupal/linkit": "^4.3",
-        "drupal/mautic": "1.12.0",
-        "drupal/media_acquiadam": "1.48.0",
-        "drupal/media_entity_video": "2.0.0-alpha1",
-        "drupal/moderation_note": "1.0-beta3",
-        "drupal/migrate_plus": "4.1.0",
-        "drupal/migrate_source_csv": "2.0.0",
-        "drupal/migrate_tools": "4.1.0",
-        "drupal/oauth": "2.2.0",
-        "drupal/page_manager": "4.0-beta6",
-        "drupal/permissions_by_term": "^2.26",
-        "drupal/pwa": "1.5.0",
-        "drupal/radix": "~4.10.0",
-        "drupal/refreshless": "1.0.0-alpha3",
-        "drupal/responsive_preview": "1.0.0",
-        "drupal/restui": "1.20.0",
-        "drupal/revision_log_default": "1.2.0",
-        "drupal/rules": "3.0.0-alpha6",
-        "drupal/samlauth": "3.1",
-        "drupal/search_api_autocomplete": "1.5.0",
-        "drupal/search_api_solr": "4.2.1",
-        "drupal/scenarios": "4.x-dev",
-        "drupal/swiftmailer": "2.0.0",
-        "drupal/tmgmt": "1.12",
-        "drupal/upgrade_status": "^3.0",
-        "drupal/view_modes_display": "2.3.0",
-        "drupal/webform": "6.0.5",
-        "drupal/webform_mautic": "1.1.0",
-        "drupal/webform_views": "5.0.0-alpha8",
-        "drupal/workbench_email": "2.2.0",
-        "cweagans/composer-patches": "^1.6",
-        "oomphinc/composer-installers-extender": "^1.1 || ^2",
-        "phing/phing": "^2.14",
-        "acquia/acf": "2.x-dev",
-        "drupal/basic_data": "^1.1",
-        "drupal/connection": "1.x-dev",
-        "drupal/react_block": "^1.0@alpha",
-        "drupal/simple_api": "1.x-dev",
-        "saltednut/unsplash_stream": "dev-8.x-1.x",
-        "drupal/auto_entitylabel": "^3.0@beta",
-        "drupal/jsonapi_explorer": "^1.0@beta",
-        "drupal/checklistapi": "^2",
-        "drupal/seo_checklist": "^5",
-        "drupal/yoast_seo": "^1.5",
-        "drupal/simple_sitemap": "^3.3",
-        "drupal/gdpr": "^3.0@alpha",
-        "drupal/environment_indicator": "^4.0",
-        "drupal/entity_reference_revisions": "^1.6",
-        "mautic/api-library": "^2.15",
-        "drupal/object_log": "1.x-dev",
-        "drupal/shield": "1.x-dev"
-    },
-    "autoload": {
-        "psr-4": {
-            "Acquia\\DF\\": "src",
-            "Acquia\\DFExtension\\": "src/DFExtension"
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": [
+            "composer run-script post-update-cmd"
+        ],
+        "pre-update-cmd": [
+            "@putenv COMPOSER_MEMORY_LIMIT=2G"
+        ],
+        "post-update-cmd": [
+            "rsync -a docroot/profiles/acquia_cms/modules/ docroot/modules/contrib",
+            "rsync -a modules/ docroot/modules/df",
+            "rsync -a profiles/ docroot/profiles/df",
+            "composer run-script remove-git-submodules"
+        ],
+        "nuke": [
+            "rm -rf docroot vendor composer.lock"
+        ],
+        "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf"
     }
 }
