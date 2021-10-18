@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6153667145d34554d79d72ba3a2bc48",
+    "content-hash": "cc3f5ee8a8393e7297b3fdd956266c4c",
     "packages": [
         {
             "name": "acquia/acf",
@@ -3468,17 +3468,17 @@
         },
         {
             "name": "drupal/asset_injector",
-            "version": "2.7.0",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/asset_injector.git",
-                "reference": "8.x-2.7"
+                "reference": "8.x-2.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.7.zip",
-                "reference": "8.x-2.7",
-                "shasum": "95287280fc513b4d32f6fc81feac9ada0a6f7948"
+                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.8.zip",
+                "reference": "8.x-2.8",
+                "shasum": "e29c1cafd2b1d84e00545e66b07d12ddaea9ad91"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -3486,8 +3486,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.7",
-                    "datestamp": "1591636386",
+                    "version": "8.x-2.8",
+                    "datestamp": "1634576177",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3496,7 +3496,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -20489,5 +20489,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
