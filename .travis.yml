@@ -71,6 +71,7 @@ before_script:
 script:
   - composer validate composer.json --no-check-all --ansi --no-interaction
   - if [[ "$SCENARIO" == none ]]; then drush en df_tools_test -y; fi
+  - if [[ "$SCENARIO" == none ]]; then drush en df_tools_media_acquiadam -y; fi
   - if [[ "$SCENARIO" == none ]]; then drush en df_tools_translation -y; fi
   - if [[ "$SCENARIO" == none ]]; then behat --config .behat.yml --stop-on-failure --tags=df; fi
   - if [[ "$SCENARIO" != none ]]; then drush en $SCENARIO -y; fi
