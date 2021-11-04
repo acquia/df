@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains df_tools_site_studio_vs.install.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function df_tools_site_studio_vs_install() {
+  $warning = '';
+  $warning .= 'DF Tools Site Studio Vertical Slider is using Site Studio and ';
+  $warning .= 'needs assets to be built for it. You may need to perform a ';
+  $warning .= '<a href="/admin/cohesion/developer/rebuild">rebuild.</a></p>';
+  \Drupal::messenger()->addWarning(t($warning));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function df_tools_site_studio_vs_uninstall() {
+  // Delete configuration installed by DF Tools Site Studio Vertical Slider.
+  $config_factory = \Drupal::configFactory();
+  $config_factory->getEditable('asset_injector.js.vertical_slider')->delete();
+}

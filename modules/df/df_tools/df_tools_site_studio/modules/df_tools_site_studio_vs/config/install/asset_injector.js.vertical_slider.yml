@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - system
+id: vertical_slider
+label: 'Vertical Slider'
+code: |
+  function isScrolledIntoView(elem) {
+    var docViewTop = jQuery(window).scrollTop();
+    var docViewBottom = docViewTop + jQuery(window).height();
+
+    var elemTop = jQuery(elem).offset().top;
+    var elemBottom = elemTop + jQuery(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+
+  jQuery(document).ready(function() {
+    jQuery(".image--wrapper .imagery:first").addClass("active");
+    jQuery(".text--wrapper .text-inview").each(function(index) {
+      jQuery(this).attr("tab" ,".serial_" + index);
+    });
+
+    jQuery(".image--wrapper .imagery").each(function(index) {
+      jQuery(this).addClass("serial_" + index);
+    });
+  });
+  jQuery(window).scroll(function () {
+    jQuery('.text-inview').each(function () {
+        if (isScrolledIntoView(this) === true) {
+            jQuery(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
+            //Toggle target tab
+            jQuery(jQuery(this).attr('tab')).addClass('active').siblings('.image--wrapper .imagery').removeClass('active');
+        }
+    });
+  });
+conditions_require_all: true
+conditions:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+  current_theme:
+    id: current_theme
+    theme:
+      cohesion_theme: cohesion_theme
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: true
+noscript: ''
+noscriptRegion: {  }
