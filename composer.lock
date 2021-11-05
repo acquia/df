@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f488932a6fdd0a5cab970ea54a82db44",
+    "content-hash": "ee9db11951a57694f1efab3b5be15ee1",
     "packages": [
         {
             "name": "acquia/acf",
@@ -748,6 +748,43 @@
                 "source": "https://github.com/acquia/memcache-settings/tree/v1.1.0"
             },
             "time": "2021-08-23T18:08:00+00:00"
+        },
+        {
+            "name": "acquia/sitestudio_contenthub",
+            "version": "6.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acquia/sitestudio_contenthub.git",
+                "reference": "d51b0a03df5cff0d346f5289f06655b95f83ecca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/d51b0a03df5cff0d346f5289f06655b95f83ecca",
+                "reference": "d51b0a03df5cff0d346f5289f06655b95f83ecca",
+                "shasum": ""
+            },
+            "require": {
+                "acquia/cohesion": "^6.7.0",
+                "drupal/acquia_contenthub": "^2.28.0"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia Engineering",
+                    "homepage": "https://www.acquia.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Adds Site Studio support for Acquia ContentHub.",
+            "support": {
+                "issues": "https://github.com/acquia/sitestudio_contenthub/issues",
+                "source": "https://github.com/acquia/sitestudio_contenthub/tree/6.7.0"
+            },
+            "time": "2021-10-06T13:31:16+00:00"
         },
         {
             "name": "asm89/stack-cors",
