@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_page_attachments().
+ */
+function df_tools_frontend_page_attachments(array &$attachments) {
+  $is_admin = \Drupal::service('cohesion.utils')->isAdminTheme();
+  $is_cohesion_enabled_theme = \Drupal::service('cohesion.utils')
+    ->currentThemeUseCohesion();
+
+  if ($is_cohesion_enabled_theme && !$is_admin) {
+    // Attach library if theme is using Site Studio.
+    $attachments['#attached']['library'][] = 'df_tools_frontend/search';
+  }
+
+}
