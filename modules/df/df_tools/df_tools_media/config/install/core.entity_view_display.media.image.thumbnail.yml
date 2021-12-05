@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_tags
+    - field.field.media.image.image
+    - media.type.image
+    - responsive_image.styles.square
+  enforced:
+    module:
+      - acquia_cms_image
+  module:
+    - responsive_image
+id: media.image.thumbnail
+targetEntityType: media
+bundle: image
+mode: thumbnail
+content:
+  thumbnail:
+    type: responsive_image
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      responsive_image_style: square
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_categories: true
+  field_tags: true
+  image: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true
