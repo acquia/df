@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion_elements
+id: component_content.component_content.layout_canvas
+field_name: layout_canvas
+entity_type: component_content
+bundle: component_content
+label: 'Layout canvas'
+description: 'The Acquia Cohesion layout canvas associated to this content'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  access_elements: 0
+  handler: default
+  handler_settings: {  }
+field_type: cohesion_entity_reference_revisions
