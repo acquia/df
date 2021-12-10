@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_article_type
     - field.field.node.article.field_categories
     - field.field.node.article.field_display_author
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_tags
     - node.type.article
     - workflows.workflow.editorial
@@ -19,6 +20,7 @@ dependencies:
     - content_moderation
     - field_group
     - media_library
+    - metatag
     - path
     - scheduler
     - scheduler_content_moderation_integration
@@ -103,6 +105,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 15
+    region: content
+    settings:
+      sidebar: true
+    third_party_settings: {  }
   field_tags:
     weight: 9
     settings:
