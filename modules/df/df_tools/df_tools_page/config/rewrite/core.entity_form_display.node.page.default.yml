@@ -4,6 +4,16 @@ dependencies:
   module:
     - metatag
 content:
+  body:
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   field_meta_tags:
     weight: 31
     settings:
