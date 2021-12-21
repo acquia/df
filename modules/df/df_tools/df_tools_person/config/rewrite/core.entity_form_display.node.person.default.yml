@@ -1,6 +1,7 @@
 dependencies:
   config:
     - field.field.node.person.field_meta_tags
+    - field.field.node.person.field_persona
   module:
     - metatag
 content:
@@ -11,3 +12,13 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  field_persona:
+    type: entity_reference_autocomplete
+    weight: 32
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
