@@ -1732,16 +1732,16 @@
         },
         {
             "name": "consolidation/self-update",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/self-update.git",
-                "reference": "7b9223bdfc1b23ab93489b580382accb6f0411b6"
+                "reference": "74289cf9b37d5cf84321ebea47deeea21678b940"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/self-update/zipball/7b9223bdfc1b23ab93489b580382accb6f0411b6",
-                "reference": "7b9223bdfc1b23ab93489b580382accb6f0411b6",
+                "url": "https://api.github.com/repos/consolidation/self-update/zipball/74289cf9b37d5cf84321ebea47deeea21678b940",
+                "reference": "74289cf9b37d5cf84321ebea47deeea21678b940",
                 "shasum": ""
             },
             "require": {
@@ -1781,22 +1781,22 @@
             "description": "Provides a self:update command for Symfony Console applications.",
             "support": {
                 "issues": "https://github.com/consolidation/self-update/issues",
-                "source": "https://github.com/consolidation/self-update/tree/2.0.1"
+                "source": "https://github.com/consolidation/self-update/tree/2.0.2"
             },
-            "time": "2021-12-03T23:57:36+00:00"
+            "time": "2021-12-17T16:45:58+00:00"
         },
         {
             "name": "consolidation/site-alias",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-alias.git",
-                "reference": "e824b57253d9174f4a500f87e6d0e1e497c2a50a"
+                "reference": "2d514a1b278a1c5f28df20df317631f9829a88f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/e824b57253d9174f4a500f87e6d0e1e497c2a50a",
-                "reference": "e824b57253d9174f4a500f87e6d0e1e497c2a50a",
+                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/2d514a1b278a1c5f28df20df317631f9829a88f2",
+                "reference": "2d514a1b278a1c5f28df20df317631f9829a88f2",
                 "shasum": ""
             },
             "require": {
@@ -1839,9 +1839,9 @@
             "description": "Manage alias records for local and remote sites.",
             "support": {
                 "issues": "https://github.com/consolidation/site-alias/issues",
-                "source": "https://github.com/consolidation/site-alias/tree/3.1.1"
+                "source": "https://github.com/consolidation/site-alias/tree/3.1.2"
             },
-            "time": "2021-09-21T00:30:48+00:00"
+            "time": "2021-10-29T17:58:54+00:00"
         },
         {
             "name": "consolidation/site-process",
@@ -5927,32 +5927,36 @@
         },
         {
             "name": "drupal/file_mdm",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/file_mdm.git",
-                "reference": "8.x-2.1"
+                "reference": "8.x-2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/file_mdm-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "5c3d75622299ebddc0e8456bb08bb371da8771bd"
+                "url": "https://ftp.drupal.org/files/projects/file_mdm-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "94b6e1dd7e5c605c149cf146fe1ee539850cb19f"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
+                "drupal/core": "^9.2",
                 "lsolesen/pel": "^0.9.8",
-                "phenx/php-font-lib": "^0.5.2",
-                "php": ">=7"
+                "phenx/php-font-lib": "^0.5.3"
+            },
+            "conflict": {
+                "lsolesen/pel": "0.9.10"
             },
             "require-dev": {
-                "drupal/image_effects": "*"
+                "drupal/image_effects": "*",
+                "drupal/vendor_stream_wrapper": "^2",
+                "fileeye/linuxlibertine-fonts": "^5.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1586801064",
+                    "version": "8.x-2.2",
+                    "datestamp": "1639755159",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7887,21 +7891,22 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "1.16.0",
+            "version": "1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "8.x-1.16"
+                "reference": "8.x-1.18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.16.zip",
-                "reference": "8.x-1.16",
-                "shasum": "1c0028f4ff4583dc6601035657dd631c351b290c"
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.18.zip",
+                "reference": "8.x-1.18",
+                "shasum": "b35683715780a45f0809af5a612f28bc4fbb777e"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/token": "^1.0"
+                "drupal/core": "^9",
+                "drupal/token": "^1.0",
+                "php": ">=7.0"
             },
             "require-dev": {
                 "drupal/devel": "^4.0",
@@ -7909,13 +7914,14 @@
                 "drupal/metatag_open_graph": "*",
                 "drupal/page_manager": "4.x-dev",
                 "drupal/panelizer": "4.x-dev",
-                "drupal/redirect": "1.x-dev"
+                "drupal/redirect": "1.x-dev",
+                "mpyw/phpunit-patch-serializable-comparison": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.16",
-                    "datestamp": "1615820867",
+                    "version": "8.x-1.18",
+                    "datestamp": "1640098931",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12619,27 +12625,26 @@
         },
         {
             "name": "lsolesen/pel",
-            "version": "0.9.10",
+            "version": "0.9.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pel/pel.git",
-                "reference": "04ecb8a29e4b1628414193b0df9294232a44f8a9"
+                "reference": "95dd3c16161c588f0ac66662c1870a073159e5ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pel/pel/zipball/04ecb8a29e4b1628414193b0df9294232a44f8a9",
-                "reference": "04ecb8a29e4b1628414193b0df9294232a44f8a9",
+                "url": "https://api.github.com/repos/pel/pel/zipball/95dd3c16161c588f0ac66662c1870a073159e5ec",
+                "reference": "95dd3c16161c588f0ac66662c1870a073159e5ec",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.0"
+                "php": ">=5.4.0"
             },
             "require-dev": {
-                "ext-exif": "*",
                 "ext-gd": "*",
-                "php-coveralls/php-coveralls": ">2.4",
-                "squizlabs/php_codesniffer": ">3.5",
-                "symfony/phpunit-bridge": "^4 || ^5"
+                "phpunit/phpunit": ">=4.8.36 <8",
+                "satooshi/php-coveralls": "1.0.*",
+                "squizlabs/php_codesniffer": "^3.0.0"
             },
             "type": "library",
             "autoload": {
@@ -12673,9 +12678,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pel/pel/issues",
-                "source": "https://github.com/pel/pel/tree/0.9.10"
+                "source": "https://github.com/pel/pel/tree/0.9.9"
             },
-            "time": "2021-01-01T22:15:50+00:00"
+            "time": "2020-11-07T06:04:18+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
@@ -13802,16 +13807,16 @@
         },
         {
             "name": "phenx/php-font-lib",
-            "version": "0.5.3",
+            "version": "0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/php-font-lib.git",
-                "reference": "e359fc811c40ffd272b46c609a35934a5fc6316e"
+                "reference": "dd448ad1ce34c63d09baccd05415e361300c35b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-font-lib/zipball/e359fc811c40ffd272b46c609a35934a5fc6316e",
-                "reference": "e359fc811c40ffd272b46c609a35934a5fc6316e",
+                "url": "https://api.github.com/repos/dompdf/php-font-lib/zipball/dd448ad1ce34c63d09baccd05415e361300c35b4",
+                "reference": "dd448ad1ce34c63d09baccd05415e361300c35b4",
                 "shasum": ""
             },
             "require": {
@@ -13840,9 +13845,9 @@
             "homepage": "https://github.com/PhenX/php-font-lib",
             "support": {
                 "issues": "https://github.com/dompdf/php-font-lib/issues",
-                "source": "https://github.com/dompdf/php-font-lib/tree/0.5.3"
+                "source": "https://github.com/dompdf/php-font-lib/tree/0.5.4"
             },
-            "time": "2021-12-17T13:58:44+00:00"
+            "time": "2021-12-17T19:44:54+00:00"
         },
         {
             "name": "php-http/discovery",
