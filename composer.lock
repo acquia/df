@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8319d7e2546c407fbb53f80f7e8680b4",
+    "content-hash": "e4f8c7da6eaab9319b7a5e1e0fea850c",
     "packages": [
         {
             "name": "acquia/acf",
@@ -10621,6 +10621,67 @@
             }
         },
         {
+            "name": "drupal/webform_views",
+            "version": "5.0.0-alpha8",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform_views.git",
+                "reference": "8.x-5.0-alpha8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform_views-8.x-5.0-alpha8.zip",
+                "reference": "8.x-5.0-alpha8",
+                "shasum": "110cf10ed151c1954fe4b7fee5c4f5fb9b81f99b"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/webform": "^6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-5.0-alpha8",
+                    "datestamp": "1594941454",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "bucefal91",
+                    "homepage": "https://www.drupal.org/user/504128"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                },
+                {
+                    "name": "matio89",
+                    "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "ws.agency",
+                    "homepage": "https://www.drupal.org/user/2851415"
+                }
+            ],
+            "description": "Webform integration with views.",
+            "homepage": "https://www.drupal.org/project/webform_views",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform_views"
+            }
+        },
+        {
             "name": "drupal/workbench_email",
             "version": "2.2.1",
             "source": {
@@ -20684,6 +20745,7 @@
         "drupal/media_acquiadam": 10,
         "drupal/pendo": 15,
         "drupal/views_flag_refresh": 15,
+        "drupal/webform_views": 15,
         "kevinfunk/default_content_ui": 20
     },
     "prefer-stable": true,
