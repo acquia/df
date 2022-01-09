@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_selector
+    - node.type.page
+  module:
+    - cohesion_templates
+id: node.page.field_template_selector
+field_name: field_template_selector
+entity_type: node
+bundle: page
+label: 'Template selector'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    selected_template: __default__
+default_value_callback: ''
+settings: {  }
+field_type: cohesion_template_selector
