@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion_templates
+    - node
+id: node.field_template_selector
+field_name: field_template_selector
+entity_type: node
+type: cohesion_template_selector
+settings: {  }
+module: cohesion_templates
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
