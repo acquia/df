@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cde2c8ae0b1a69e3108bf0c0ea61600e",
+    "content-hash": "31f0f37e2485244faf7b66b84932bf33",
     "packages": [
         {
             "name": "acquia/acf",
@@ -2500,23 +2500,26 @@
         },
         {
             "name": "drupal/acquia_claro",
-            "version": "dev-1.3.x",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_claro.git",
-                "reference": "85ed88be4bedb4154038e5ede7d1263e1ef620a7"
+                "reference": "1.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/acquia_claro-1.3.0.zip",
+                "reference": "1.3.0",
+                "shasum": "c9b284b4c246342bb036282e546e6572a7ef84a5"
             },
             "require": {
                 "drupal/core": "^9"
             },
             "type": "drupal-theme",
             "extra": {
-                "branch-alias": {
-                    "dev-1.3.x": "1.3.x-dev"
-                },
                 "drupal": {
-                    "version": "1.3.x-dev",
-                    "datestamp": "1629871710",
+                    "version": "1.3.0",
+                    "datestamp": "1631046218",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -20754,7 +20757,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "acquia/acf": 20,
-        "drupal/acquia_claro": 20,
         "drupal/entity_usage": 10,
         "drupal/feeds": 15,
         "drupal/feeds_ex": 15,
