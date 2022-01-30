@@ -1,9 +1,12 @@
+config_rewrite: replace
 langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.media.field_acquiadam_asset_file
     - field.storage.media.image
     - field.storage.node.body
+    - field.storage.node.field_person_image
     - node.type.article
   module:
     - file
@@ -14,6 +17,7 @@ dependencies:
     - serialization
     - text
     - user
+    - views_base_url
 id: mobile_application_endpoint
 label: 'Mobile Application Endpoint'
 module: views
@@ -93,6 +97,127 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        base_url:
+          id: base_url
+          table: views
+          field: base_url
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: base_url
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          show_link: false
+          show_link_options:
+            link_path: ''
+            link_text: ''
+            link_class: ''
+            link_title: ''
+            link_rel: ''
+            link_fragment: ''
+            link_query: ''
+            link_target: ''
+        field_acquiadam_asset_file:
+          id: field_acquiadam_asset_file
+          table: media__field_acquiadam_asset_file
+          field: field_acquiadam_asset_file
+          relationship: field_article_image
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '{{base_url}}/{{ field_acquiadam_asset_file }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         image:
           id: image
           table: media__image
@@ -102,7 +227,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -158,6 +283,55 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Image path rewrite'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_acquiadam_asset_file }}{{ image }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         body:
           id: body
           table: node__body
@@ -545,6 +719,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_person_image:
+          id: field_person_image
+          table: node__field_person_image
+          field: field_person_image
+          plugin_id: field
       pager:
         type: mini
         options:
@@ -730,6 +909,15 @@ display:
           admin_label: 'image from image'
           plugin_id: standard
           required: false
+        field_acquiadam_asset_file_target_id:
+          id: field_acquiadam_asset_file_target_id
+          table: media__field_acquiadam_asset_file
+          field: field_acquiadam_asset_file_target_id
+          relationship: field_article_image
+          group_type: group
+          admin_label: 'file from field_acquiadam_asset_file'
+          plugin_id: standard
+          required: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -743,8 +931,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_acquiadam_asset_file'
         - 'config:field.storage.media.image'
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_person_image'
   article_node_export:
     id: article_node_export
     display_title: 'REST export'
@@ -769,7 +959,13 @@ display:
             nid:
               alias: id
               raw_output: false
+            field_acquiadam_asset_image:
+              alias: ''
+              raw_output: false
             image:
+              alias: ''
+              raw_output: false
+            nothing:
               alias: image
               raw_output: false
             body:
@@ -807,5 +1003,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_acquiadam_asset_file'
         - 'config:field.storage.media.image'
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_person_image'
