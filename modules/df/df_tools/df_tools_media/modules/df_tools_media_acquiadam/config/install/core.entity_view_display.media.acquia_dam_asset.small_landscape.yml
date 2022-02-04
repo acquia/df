@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.small_landscape
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_captured
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_colorspace
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_descrip
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_file
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_filename
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_filesize
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_filetype
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_folder_id
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_height
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_id
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_type_id
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_version
+    - field.field.media.acquia_dam_asset.field_acquiadam_asset_width
+    - image.style.coh_small_landscape
+    - media.type.acquia_dam_asset
+  module:
+    - image
+id: media.acquia_dam_asset.small_landscape
+targetEntityType: media
+bundle: acquia_dam_asset
+mode: small_landscape
+content:
+  field_acquiadam_asset_file:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: coh_small_landscape
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_acquiadam_asset_captured: true
+  field_acquiadam_asset_colorspace: true
+  field_acquiadam_asset_descrip: true
+  field_acquiadam_asset_filename: true
+  field_acquiadam_asset_filesize: true
+  field_acquiadam_asset_filetype: true
+  field_acquiadam_asset_folder_id: true
+  field_acquiadam_asset_height: true
+  field_acquiadam_asset_id: true
+  field_acquiadam_asset_type_id: true
+  field_acquiadam_asset_version: true
+  field_acquiadam_asset_width: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
