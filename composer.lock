@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b49d3462652417e6692afb3bd206cb2",
+    "content-hash": "792d073d32376c726a608bca96e91564",
     "packages": [
         {
             "name": "acquia/acf",
@@ -37,16 +37,16 @@
         },
         {
             "name": "acquia/acquia_cms",
-            "version": "v1.4.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/acquia_cms.git",
-                "reference": "fb5004c9d3358cd7df8a8f26f4aad5d9b6dae259"
+                "reference": "be3c7f8677f376e65a55955bb804716a003a3572"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/acquia_cms/zipball/fb5004c9d3358cd7df8a8f26f4aad5d9b6dae259",
-                "reference": "fb5004c9d3358cd7df8a8f26f4aad5d9b6dae259",
+                "url": "https://api.github.com/repos/acquia/acquia_cms/zipball/be3c7f8677f376e65a55955bb804716a003a3572",
+                "reference": "be3c7f8677f376e65a55955bb804716a003a3572",
                 "shasum": ""
             },
             "require": {
@@ -78,14 +78,15 @@
                 "drupal/facets_pretty_paths": "^1.2",
                 "drupal/field_group": "^3",
                 "drupal/focal_point": "1.5",
-                "drupal/geocoder": "3.20",
+                "drupal/geocoder": "3.24",
                 "drupal/geofield": "^1",
-                "drupal/google_analytics": "^3.1",
+                "drupal/google_analytics": "^4.0",
                 "drupal/google_tag": "^1",
                 "drupal/honeypot": "^2.0",
                 "drupal/imagemagick": "^3",
                 "drupal/imce": "2.x-dev",
                 "drupal/jsonapi_extras": "^3",
+                "drupal/media_entity_soundcloud": "^3.0",
                 "drupal/memcache": "^2.2",
                 "drupal/moderation_dashboard": "1.0.0-beta3",
                 "drupal/moderation_sidebar": "^1.4",
@@ -98,12 +99,12 @@
                 "drupal/responsive_preview": "^1.0",
                 "drupal/scheduler_content_moderation_integration": "^1.3",
                 "drupal/schema_metatag": "^2.2",
-                "drupal/search_api": "1.20",
-                "drupal/search_api_autocomplete": "^1.4",
+                "drupal/search_api": "1.22",
+                "drupal/search_api_autocomplete": "^1.6",
                 "drupal/search_api_solr": "^4.2",
                 "drupal/seckit": "^2",
                 "drupal/shield": "^1",
-                "drupal/simple_sitemap": "^3",
+                "drupal/simple_sitemap": "^4.0",
                 "drupal/smart_trim": "^1.3",
                 "drupal/social_media_links": "^2.7",
                 "drupal/username_enumeration_prevention": "^1.2",
@@ -250,9 +251,9 @@
             "homepage": "https://github.com/acquia/acquia_cms",
             "support": {
                 "issues": "https://github.com/acquia/acquia_cms/issues",
-                "source": "https://github.com/acquia/acquia_cms/tree/v1.4.1"
+                "source": "https://github.com/acquia/acquia_cms/tree/v1.4.2"
             },
-            "time": "2022-01-20T14:44:50+00:00"
+            "time": "2022-01-25T11:53:41+00:00"
         },
         {
             "name": "acquia/acsf-contenthub-console",
@@ -6261,17 +6262,17 @@
         },
         {
             "name": "drupal/geocoder",
-            "version": "3.20.0",
+            "version": "3.24.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geocoder.git",
-                "reference": "8.x-3.20"
+                "reference": "8.x-3.24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.20.zip",
-                "reference": "8.x-3.20",
-                "shasum": "2dd95f768cc58f16e8203fee99b6ace174c2c300"
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.24.zip",
+                "reference": "8.x-3.24",
+                "shasum": "6674d4c3f8a840f6aef3bffbb7d8f15fc4dc6084"
             },
             "require": {
                 "davedevelopment/stiphle": "^0.9.2",
@@ -6316,8 +6317,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.20",
-                    "datestamp": "1617644936",
+                    "version": "8.x-3.24",
+                    "datestamp": "1638225451",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6452,20 +6453,20 @@
         },
         {
             "name": "drupal/google_analytics",
-            "version": "3.1.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_analytics.git",
-                "reference": "8.x-3.1"
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_analytics-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "171dcac5a67cde66201754baaa52711f45e47a3b"
+                "url": "https://ftp.drupal.org/files/projects/google_analytics-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "4f761d4c852d11966f7289b0eb6431cc8db27240"
             },
             "require": {
-                "drupal/core": "^8.8.6|^9.0"
+                "drupal/core": "^8.9|^9.0"
             },
             "require-dev": {
                 "drupal/token": "^1.7"
@@ -6473,15 +6474,15 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1591298584",
+                    "version": "4.0.0",
+                    "datestamp": "1634230238",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-8.x-2.x": "2.x-dev"
+                    "dev-4.x": "4.x-dev"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6517,7 +6518,7 @@
             "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
             "homepage": "https://www.drupal.org/project/google_analytics",
             "support": {
-                "source": "https://git.drupal.org/project/google_analytics.git",
+                "source": "https://git.drupalcode.org/project/google_analytics",
                 "issues": "https://www.drupal.org/project/issues/google_analytics"
             }
         },
@@ -7900,6 +7901,68 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/media_acquiadam",
                 "issues": "https://drupal.org/project/issues/media_acquiadam"
+            }
+        },
+        {
+            "name": "drupal/media_entity_soundcloud",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_entity_soundcloud.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_entity_soundcloud-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "b1f3a1d12132d22eaa45f04eb6650b3a4974d1fc"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1603867629",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\media_entity_soundcloud\\": "src/"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "arshadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "jcisio",
+                    "homepage": "https://www.drupal.org/user/210762"
+                },
+                {
+                    "name": "jcisio",
+                    "homepage": "https://www.drupal.org/user/210762"
+                }
+            ],
+            "description": "Soundcloud integration for the Media Entity module",
+            "homepage": "https://drupal.org/project/media_entity_soundcloud",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_entity_soundcloud",
+                "issues": "https://drupal.org/project/issues/media_entity_soundcloud"
             }
         },
         {
@@ -9427,17 +9490,17 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.20.0",
+            "version": "1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.20"
+                "reference": "8.x-1.22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.20.zip",
-                "reference": "8.x-1.20",
-                "shasum": "4bed60ac7b502ccc1d4a01411aa35d2cb7f496c7"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.22.zip",
+                "reference": "8.x-1.22",
+                "shasum": "bac5923161436830eecdf115ef0333b3b931657e"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -9458,8 +9521,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.20",
-                    "datestamp": "1626684847",
+                    "version": "8.x-1.22",
+                    "datestamp": "1642935792",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9553,30 +9616,30 @@
         },
         {
             "name": "drupal/search_api_solr",
-            "version": "4.2.1",
+            "version": "4.2.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "4.2.1"
+                "reference": "4.2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.2.1.zip",
-                "reference": "4.2.1",
-                "shasum": "54e40c7ce41cef8edfb92807f87db06b0b13e9c8"
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.2.6.zip",
+                "reference": "4.2.6",
+                "shasum": "6ea4a66fe2736e0e0ea6f5952f1a30fc10391994"
             },
             "require": {
                 "composer/semver": "^1.0|^3.0",
                 "consolidation/annotated-command": "^2.12|^4.1",
-                "drupal/core": "^8.8 || ^9",
-                "drupal/search_api": "~1.17",
+                "drupal/core": "^9.2 || ^10.0",
+                "drupal/search_api": "~1.21",
                 "ext-dom": "*",
                 "ext-json": "*",
                 "ext-simplexml": "*",
                 "laminas/laminas-stdlib": "^3.2",
                 "maennchen/zipstream-php": "^1.2|^2.0",
                 "php": "^7.3|^8.0",
-                "solarium/solarium": "^6.1.5"
+                "solarium/solarium": "^6.2.1"
             },
             "conflict": {
                 "drupal/acquia_search_solr": "<1.0.0-beta8",
@@ -9586,7 +9649,7 @@
                 "drupal/devel": "^4.0",
                 "drupal/facets": "1.x-dev",
                 "drupal/geofield": "1.x-dev",
-                "drupal/search_api_autocomplete": "1.x-dev",
+                "drupal/search_api_autocomplete": "*",
                 "drupal/search_api_location": "1.x-dev",
                 "drupal/search_api_spellcheck": "3.x-dev",
                 "monolog/monolog": "^1.25",
@@ -9602,8 +9665,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.1",
-                    "datestamp": "1628871708",
+                    "version": "4.2.6",
+                    "datestamp": "1641799949",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9611,7 +9674,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9"
+                        "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
@@ -9790,27 +9853,27 @@
         },
         {
             "name": "drupal/simple_sitemap",
-            "version": "3.11.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_sitemap.git",
-                "reference": "8.x-3.11"
+                "reference": "4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-8.x-3.11.zip",
-                "reference": "8.x-3.11",
-                "shasum": "5fdd4ed5af5e37e3c707e401d094a179f52e7711"
+                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "db2e5a47227356e30d237bb50d9eed559224375d"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^8.7.7 || ^9",
                 "ext-xmlwriter": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.11",
-                    "datestamp": "1634344305",
+                    "version": "4.0.1",
+                    "datestamp": "1640700660",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9842,8 +9905,7 @@
             "homepage": "https://drupal.org/project/simple_sitemap",
             "support": {
                 "source": "https://cgit.drupalcode.org/simple_sitemap",
-                "issues": "https://drupal.org/project/issues/simple_sitemap",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
+                "issues": "https://drupal.org/project/issues/simple_sitemap"
             }
         },
         {
