@@ -18,8 +18,9 @@ function df_tools_slack_entity_insert(EntityInterface $entity) {
       // $author = strip_tags($entity->getAuthorName());
 
       if ($entity->hasField('field_tags')) {
-        $term = Term::load($entity->get('field_tags')->target_id);
-        if (isset($term) && !empty($term)) {
+        $target_id = $entity->get('field_tags')->target_id;
+        if ($target_id !== null) {
+          $term = Term::load($target_id);
           $term_name = $term->getName();
           // todo: select slack channel by taxonomy term, e.g. office location
         }
@@ -48,10 +49,10 @@ function df_tools_slack_entity_insert(EntityInterface $entity) {
       if ($entity->get('field_send_to_slack')->value == 1) {
         \Drupal::service('slack.slack_service')
           ->sendMessage(implode("\n", $output), $channel, $username);
-          
+
         \Drupal::logger('publish_to_slack')->info('Message sent.');
       }
-  
+
     }
   }
 
