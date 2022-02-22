@@ -1,44 +1,155 @@
-# Theme
+# Files and directories suggested to be ignored by Drupal
+# @see https://git.drupalcode.org/project/drupal/-/blob/9.3.x/example.gitignore
+#
+# We allow settings.php to be committed since Acquia's filesystem is read-only
+# @see https://www.drupal.org/project/drupal/issues/3257119
+/docroot/core
+/vendor/
+/docroot/sites/*/settings.*.php
+/docroot/sites/*/services*.yml
+/docroot/sites/*/files
+/docroot/sites/*/private
+/docroot/sites/simpletest
+
+# Directories specific to this template
+/docroot/libraries
+/docroot/modules/contrib
+/docroot/profiles/contrib
+/docroot/themes/contrib
+
+# DF
+/docroot/modules/df
+/docroot/profiles/df
+/docroot/profiles/acquia_cms
+/docroot/.gitignore
+/docroot/sites/development.services.yml
+/docroot/sites/example.settings.local.php
+/docroot/sites/example.sites.php
+/docroot/sites/.gitignore
+/docroot/sites/default/default.services.yml
+/docroot/sites/default/default.settings.php
+/docroot/sites/default/settings.php
+/docroot/sites/default/.gitignore
+
+# Drupal
+/docroot/.eslintignore
+/docroot/.eslintrc.json
+/docroot/.ht.router.php
+/docroot/.htaccess
+/docroot/README.md
+/docroot/autoload.php
+/docroot/index.php
+/docroot/update.php
+
+# Files and directories for common development environments, loosely inherited from BLT Project
+# @see https://github.com/acquia/blt-project/blob/11.x/.gitignore
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Eclipse
+*.pydevproject
+.project
+.metadata
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+*.launch
+.externalToolBuilders/
+
+# CDT / PDT
+.cproject
+.buildpathk
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# IntelliJ / PhpStorm
+.idea/
+atlassian-ide-plugin.xml
+
+# XHProf
+xhprof_*
+
+# Sass
 .sass-cache
+*.css.map
+
+# Netbeans IDE
+nbproject
+nbproject/*
+
+# DrupalVM
+.vagrant/
+
+# DevDesktop
+*.dd
+
+# NPM
+npm-debug.log
+
+# Drush 9 Checksums
+drush/sites/.checksums
+
+# Deprecation detector rules
+.rules
+
+# PHPCS
+.phpcs-cache
+
+# PHPUnit
+.phpunit.result.cache
+
+# Drupal check report.
+drupal-check-report.xml
+
+# Local files
+local.settings.php
+local.drush.yml
+local.site.yml
+local.services.yml
+*.local
+local.blt.yml
+
+
+# Other
 .bin
 node_modules
 bower_components
-
-# OSX
-.DS_Store
-
-# Ant
 build
 build.properties
-
-# Composer
 bin/
-docroot/
-vendor/
-
-# Drush local
 drush/
-
-# Drupal Console
 console/
-
-# Contrib
-modules/contrib/*
-themes/contrib/*
-
-# Libraries
-libraries/*
-
-# PHPStorm
-.idea
-
-# Other
 private
 robots-replace.txt
 .ddev
 *sqlite*
-.editorconfig
-.gitattributes
-
-# Behat
+/.editorconfig
+/.gitattributes
 .behat.yml
