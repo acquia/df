@@ -1,9 +1,9 @@
 # Demo Framework (DF)
-[![Travis build status](https://api.travis-ci.org/acquia/df.svg?branch=8.x-2.x)](https://travis-ci.org/acquia/df) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/acquia/df/badges/quality-score.png?b=8.x-3.x)](https://scrutinizer-ci.com/g/acquia/df/?branch=8.x-3.x)
+[![Travis build status](https://api.travis-ci.org/acquia/df.svg?branch=5.x)](https://travis-ci.org/acquia/df) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/acquia/df/badges/quality-score.png?b=5.x)](https://scrutinizer-ci.com/g/acquia/df/?branch=5.x)
 
 Demo Framework is a distribution consisting of modules, themes and libraries. It highlights powerful features created by the Drupal community. It is intended to be used as a starterkit for promoting enterprise-ready solutions.
 
-Demo Framework is powered by [Lightning](https://www.drupal.org/project/lightning).
+Demo Framework is powered by [Acquia CMS](https://www.acquia.com/products/drupal-cloud/acquia-cms).
 
 ## Installing Demo Framework
 
@@ -11,11 +11,7 @@ The preferred way to install Demo Framework is using our [Composer-based project
 
 Once you have a docroot built, you can use DDev, Acquia Developer Studio or any other similar project to get started.
 
-  ``ddev config --project-name df --project-type drupal8 && ddev start``
-  
-  or
-  
-  ``ads new webpsite``
+  ``ddev config --project-name df --project-type drupal9 && ddev start``
 
 Now use the ``site-install`` command to install Drupal with the DF installation profile.
 
@@ -24,16 +20,8 @@ Now use the ``site-install`` command to install Drupal with the DF installation 
 You may now login to your site.
 
   ``drush uli``
-  
-By default, you will be asked to select a demo scenario to install.
-
-![Install Demo](https://user-images.githubusercontent.com/1102654/70927089-f9ff6600-1ff3-11ea-8d42-d37eb745056b.png)
 
 Installation may take a few minutes depending on your environment. ☕️
-
-To install the DF installation profile and the One scenario without the UI.
-
-  ``drush si df -y && drush en dfs_one -y``
 
 Then login to your site.
 
@@ -53,28 +41,6 @@ libraries/*
 ```
 
 If you do not do so, you will see an error in the installation referring to missing modules.
-
-## Using the [Radix](https://www.drupal.org/project/radix) Sub Theme
-
-To modify the CSS/JS you must use the scss files. You will find various different SCSS files in src/sass. You can override variables in src/sass/base/_variables.scss.
-
-To compile scss you will need NPM ([How To Install NPM](http://blog.npmjs.org/post/85484771375/how-to-install-npm)) installed on your machine.
-
-When you have NPM installed on your machine, you will need to run ``npm install`` to install the NPM packages. Once they are installed, you can run ``npm run dev`` to compile the scss files or run ``npm run production`` to compile and minify the scss files.
-
-## Running Tests
-These instructions assume you have used Composer to install Lightning. Once you
-have it up and running, follow these steps to execute all of Lightning's Behat
-tests:
-
-### Behat
-    $ cd MYPROJECT
-    $ ./bin/drupal behat:init http://YOUR.DF.SITE --merge=../docroot/profiles/df/tests/behat.yml
-    $ ./bin/drupal behat:include ../docroot/profiles/df/tests/features --with-subcontexts=../docroot/profiles/df/tests/features/bootstrap --with-subcontexts=../docroot/profiles/df/src/DFExtension/Context --with-subcontexts=../docroot/profiles/lightning/src/LightningExtension/Context
-    $ ./bin/behat --config ./docroot/sites/default/files/behat.yml
-
-If necessary, you can edit ```docroot/sites/default/files/behat.yml``` to match
-your environment, but generally you will not need to do this.
 
 ## Resources
 
