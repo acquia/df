@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9458a112b371fc8e1a5d0260bfaa4590",
+    "content-hash": "70c7e6b9f7f2bf95576ead637032d70a",
     "packages": [
         {
             "name": "acquia/acf",
@@ -10058,6 +10058,51 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/simple_sitemap",
                 "issues": "https://drupal.org/project/issues/simple_sitemap"
+            }
+        },
+        {
+            "name": "drupal/sitestudio_extras",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/sitestudio_extras.git",
+                "reference": "8bbd37d145152574f206b2331246aea5a9768f5d"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.x-dev",
+                    "datestamp": "1646816585",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "rlnorthcutt",
+                    "homepage": "https://www.drupal.org/user/116893"
+                },
+                {
+                    "name": "shree.yesare",
+                    "homepage": "https://www.drupal.org/user/1569342"
+                }
+            ],
+            "description": "Module provides functionality to extend site studio features.",
+            "homepage": "https://www.drupal.org/project/sitestudio_extras",
+            "support": {
+                "source": "https://git.drupalcode.org/project/sitestudio_extras"
             }
         },
         {
@@ -21235,6 +21280,7 @@
         "drupal/media_acquiadam": 10,
         "drupal/moderation_note": 10,
         "drupal/pendo": 15,
+        "drupal/sitestudio_extras": 20,
         "drupal/views_flag_refresh": 15,
         "drupal/webform_views": 15,
         "kevinfunk/default_content_ui": 20
