@@ -10348,26 +10348,29 @@
         },
         {
             "name": "drupal/tac_lite",
-            "version": "dev-1.x",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tac_lite.git",
-                "reference": "9e55fb1116284d5f283edbbd50ad557b2533f97e"
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tac_lite-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "b3510147720a14d9a5bd178cf806c8dcf93c838f"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.5+2-dev",
-                    "datestamp": "1643803265",
+                    "version": "8.x-1.6",
+                    "datestamp": "1646147606",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -10383,6 +10386,14 @@
                 {
                     "name": "grndlvl",
                     "homepage": "https://www.drupal.org/user/103553"
+                },
+                {
+                    "name": "ikit-claw",
+                    "homepage": "https://www.drupal.org/user/3285813"
+                },
+                {
+                    "name": "jenlampton",
+                    "homepage": "https://www.drupal.org/user/85586"
                 }
             ],
             "description": "Simple access control based on categories.",
@@ -10393,23 +10404,24 @@
         },
         {
             "name": "drupal/tmgmt",
-            "version": "1.12.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tmgmt.git",
-                "reference": "8.x-1.12"
+                "reference": "8.x-1.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tmgmt-8.x-1.12.zip",
-                "reference": "8.x-1.12",
-                "shasum": "3dbc8f783d77a23bdbd95277884e5838b95d9938"
+                "url": "https://ftp.drupal.org/files/projects/tmgmt-8.x-1.13.zip",
+                "reference": "8.x-1.13",
+                "shasum": "6e59ed65335d450308158902ffcce6ccb626a4dd"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
                 "drupal/metatag": "1.x-dev",
+                "drupal/paragraphs": "1.x-dev",
                 "drupal/pathauto": "1.x-dev",
                 "drupal/tmgmt_content": "*",
                 "drupal/tmgmt_file": "*",
@@ -10421,8 +10433,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.12",
-                    "datestamp": "1612891039",
+                    "version": "8.x-1.13",
+                    "datestamp": "1646811201",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11501,16 +11513,16 @@
         },
         {
             "name": "ergebnis/composer-normalize",
-            "version": "2.23.1",
+            "version": "2.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/composer-normalize.git",
-                "reference": "a54e28d1338903d9b6043d2187ed0f059d89938f"
+                "reference": "0492b8de602ac601f5d53a5ef9c9558701a18f31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/a54e28d1338903d9b6043d2187ed0f059d89938f",
-                "reference": "a54e28d1338903d9b6043d2187ed0f059d89938f",
+                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/0492b8de602ac601f5d53a5ef9c9558701a18f31",
+                "reference": "0492b8de602ac601f5d53a5ef9c9558701a18f31",
                 "shasum": ""
             },
             "require": {
@@ -11525,11 +11537,11 @@
                 "composer/composer": "^2.2.5",
                 "ergebnis/license": "^1.2.0",
                 "ergebnis/php-cs-fixer-config": "^3.4.0",
-                "fakerphp/faker": "^1.18.0",
-                "phpunit/phpunit": "^9.5.13",
+                "fakerphp/faker": "^1.19.0",
+                "phpunit/phpunit": "^9.5.17",
                 "psalm/plugin-phpunit": "~0.16.1",
-                "symfony/filesystem": "^5.4.3",
-                "vimeo/psalm": "^4.18.1"
+                "symfony/filesystem": "^5.4.6",
+                "vimeo/psalm": "^4.22.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -11572,7 +11584,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-31T06:49:30+00:00"
+            "time": "2022-03-09T08:15:05+00:00"
         },
         {
             "name": "ergebnis/json-normalizer",
@@ -12705,33 +12717,33 @@
         },
         {
             "name": "laminas/laminas-escaper",
-            "version": "2.9.0",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-escaper.git",
-                "reference": "891ad70986729e20ed2e86355fcf93c9dc238a5f"
+                "reference": "58af67282db37d24e584a837a94ee55b9c7552be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/891ad70986729e20ed2e86355fcf93c9dc238a5f",
-                "reference": "891ad70986729e20ed2e86355fcf93c9dc238a5f",
+                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/58af67282db37d24e584a837a94ee55b9c7552be",
+                "reference": "58af67282db37d24e584a837a94ee55b9c7552be",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3 || ~8.0.0 || ~8.1.0"
+                "ext-ctype": "*",
+                "ext-mbstring": "*",
+                "php": "^7.4 || ~8.0.0 || ~8.1.0"
             },
             "conflict": {
                 "zendframework/zend-escaper": "*"
             },
             "require-dev": {
+                "infection/infection": "^0.26.6",
                 "laminas/laminas-coding-standard": "~2.3.0",
-                "phpunit/phpunit": "^9.3",
-                "psalm/plugin-phpunit": "^0.12.2",
-                "vimeo/psalm": "^3.16"
-            },
-            "suggest": {
-                "ext-iconv": "*",
-                "ext-mbstring": "*"
+                "maglnet/composer-require-checker": "^3.8.0",
+                "phpunit/phpunit": "^9.5.18",
+                "psalm/plugin-phpunit": "^0.16.1",
+                "vimeo/psalm": "^4.22.0"
             },
             "type": "library",
             "autoload": {
@@ -12763,7 +12775,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-09-02T17:10:53+00:00"
+            "time": "2022-03-08T20:15:36+00:00"
         },
         {
             "name": "laminas/laminas-feed",
@@ -15416,16 +15428,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.17",
+            "version": "9.5.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "5c5abcfaa2cbd44b2203995d7a339ef910fe0c8f"
+                "reference": "1b5856028273bfd855e60a887278857d872ec67a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5c5abcfaa2cbd44b2203995d7a339ef910fe0c8f",
-                "reference": "5c5abcfaa2cbd44b2203995d7a339ef910fe0c8f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1b5856028273bfd855e60a887278857d872ec67a",
+                "reference": "1b5856028273bfd855e60a887278857d872ec67a",
                 "shasum": ""
             },
             "require": {
@@ -15503,7 +15515,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.17"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.18"
             },
             "funding": [
                 {
@@ -15515,7 +15527,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-05T16:54:31+00:00"
+            "time": "2022-03-08T06:52:28+00:00"
         },
         {
             "name": "psr/cache",
