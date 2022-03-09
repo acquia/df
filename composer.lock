@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70c7e6b9f7f2bf95576ead637032d70a",
+    "content-hash": "a6891c76fd5b37f1dbd90fef71d2c457",
     "packages": [
         {
             "name": "acquia/acf",
@@ -7487,6 +7487,54 @@
             "homepage": "https://www.drupal.org/project/jsonapi_hypermedia",
             "support": {
                 "source": "https://git.drupalcode.org/project/jsonapi_hypermedia"
+            }
+        },
+        {
+            "name": "drupal/jsonapi_node_preview_tab",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_node_preview_tab.git",
+                "reference": "1.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_node_preview_tab-1.0.0-beta1.zip",
+                "reference": "1.0.0-beta1",
+                "shasum": "2d50f9987d9fd8a96427bb80a06592035870def1"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta1",
+                    "datestamp": "1646045624",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Adds a tab to nodes to allow easy preview of the node&#039;s JSON:API structure.",
+            "homepage": "https://www.drupal.org/project/jsonapi_node_preview_tab",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_node_preview_tab"
             }
         },
         {
@@ -21275,6 +21323,7 @@
         "drupal/feeds_ex": 15,
         "drupal/flag": 10,
         "drupal/json_field": 5,
+        "drupal/jsonapi_node_preview_tab": 10,
         "drupal/masquerade": 10,
         "drupal/mautic_api": 20,
         "drupal/media_acquiadam": 10,
