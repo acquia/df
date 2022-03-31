@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06c8fab74bcc896da2923f3df3f843ec",
+    "content-hash": "d34f68db4f2042ed639cb267de0986c7",
     "packages": [
         {
             "name": "acquia/acf",
@@ -10645,6 +10645,63 @@
             "homepage": "https://www.drupal.org/project/tmgmt",
             "support": {
                 "source": "https://git.drupalcode.org/project/tmgmt"
+            }
+        },
+        {
+            "name": "drupal/tmgmt_google",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tmgmt_google.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tmgmt_google-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "624742f315f2c1d8ad4d693374f0d01907556063"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "drupal/tmgmt": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1579973881",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "blueminds",
+                    "homepage": "https://www.drupal.org/user/128652"
+                },
+                {
+                    "name": "corvus_ch",
+                    "homepage": "https://www.drupal.org/user/1865206"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "TMGMT implementation of Google Translate Service.",
+            "homepage": "https://www.drupal.org/project/tmgmt_google",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tmgmt_google"
             }
         },
         {
