@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains df_tools_place_search.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function df_tools_place_search_theme() {
+  return [
+    'views_view__places_search' => [
+      'base hook' => 'views view',
+    ]
+  ];
+}
