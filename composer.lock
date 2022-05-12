@@ -2645,20 +2645,20 @@
         },
         {
             "name": "drupal/acquia_contenthub",
-            "version": "2.31.0",
+            "version": "2.32.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_contenthub.git",
-                "reference": "8.x-2.31"
+                "reference": "8.x-2.32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-8.x-2.31.zip",
-                "reference": "8.x-2.31",
-                "shasum": "e764652564e7eedb9f633cb8d43f521321d4a70d"
+                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-8.x-2.32.zip",
+                "reference": "8.x-2.32",
+                "shasum": "854dd1d0c243551b31b4fcb3da279323016c34d0"
             },
             "require": {
-                "acquia/content-hub-php": "^2.1.1",
+                "acquia/content-hub-php": "^2.1.2",
                 "acquia/contenthub-console": "^1.4",
                 "drupal/core": "^8.8 || ^9",
                 "drupal/depcalc": "^1.11",
@@ -2682,8 +2682,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.31",
-                    "datestamp": "1648484465",
+                    "version": "8.x-2.32",
+                    "datestamp": "1652167415",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10473,26 +10473,26 @@
         },
         {
             "name": "drupal/storage",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/storage.git",
-                "reference": "1.2.0"
+                "reference": "1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/storage-1.2.0.zip",
-                "reference": "1.2.0",
-                "shasum": "23bbc75a239d674cc5cfc1ebfc30c69716b9f275"
+                "url": "https://ftp.drupal.org/files/projects/storage-1.2.1.zip",
+                "reference": "1.2.1",
+                "shasum": "57a3e287d18c8b4b8c4c07ba1cbd6e5810bd71e3"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.0",
-                    "datestamp": "1647443970",
+                    "version": "1.2.1",
+                    "datestamp": "1652176269",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -21078,20 +21078,21 @@
         },
         {
             "name": "zumba/amplitude-php",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zumba/amplitude-php.git",
-                "reference": "d6d163b52bfa32af3a3ae391d73d94e7740b70f7"
+                "reference": "c0d14d5fce750c76710024601b0d698df2bdf365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zumba/amplitude-php/zipball/d6d163b52bfa32af3a3ae391d73d94e7740b70f7",
-                "reference": "d6d163b52bfa32af3a3ae391d73d94e7740b70f7",
+                "url": "https://api.github.com/repos/zumba/amplitude-php/zipball/c0d14d5fce750c76710024601b0d698df2bdf365",
+                "reference": "c0d14d5fce750c76710024601b0d698df2bdf365",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
+                "ext-json": "*",
                 "php": ">=7.2",
                 "psr/log": "^1.0 | ^2.0"
             },
@@ -21132,9 +21133,9 @@
             ],
             "support": {
                 "issues": "https://github.com/zumba/amplitude-php/issues",
-                "source": "https://github.com/zumba/amplitude-php/tree/1.0.3"
+                "source": "https://github.com/zumba/amplitude-php/tree/1.0.4"
             },
-            "time": "2022-05-02T20:36:39+00:00"
+            "time": "2022-05-09T20:55:33+00:00"
         }
     ],
     "packages-dev": [],
