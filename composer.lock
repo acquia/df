@@ -4,8 +4,69 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab50f968eaf525e4171d83fd02ff0537",
+    "content-hash": "ae1d55ab200ad81cfad0508904fa3021",
     "packages": [
+        {
+            "name": "abraham/twitteroauth",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/abraham/twitteroauth.git",
+                "reference": "5a424e80a1200674451844fbaae8a0098a316a01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/5a424e80a1200674451844fbaae8a0098a316a01",
+                "reference": "5a424e80a1200674451844fbaae8a0098a316a01",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.2",
+                "ext-curl": "*",
+                "php": "^7.3 || ^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "php-vcr/php-vcr": "^1",
+                "php-vcr/phpunit-testlistener-vcr": "dev-php-8",
+                "phpmd/phpmd": "^2",
+                "phpunit/phpunit": "^8 || ^9",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Abraham\\TwitterOAuth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abraham Williams",
+                    "email": "abraham@abrah.am",
+                    "homepage": "https://abrah.am",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
+            "homepage": "https://twitteroauth.com",
+            "keywords": [
+                "Twitter API",
+                "Twitter oAuth",
+                "api",
+                "oauth",
+                "rest",
+                "social",
+                "twitter"
+            ],
+            "support": {
+                "issues": "https://github.com/abraham/twitteroauth/issues",
+                "source": "https://github.com/abraham/twitteroauth"
+            },
+            "time": "2021-06-11T02:56:14+00:00"
+        },
         {
             "name": "acquia/acf",
             "version": "dev-2.x-feeds",
@@ -1096,6 +1157,82 @@
                 "source": "https://github.com/commerceguys/addressing/tree/v1.3.0"
             },
             "time": "2022-04-08T13:06:51+00:00"
+        },
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "4c679186f2aca4ab6a0f1b0b9cf9252decb44d0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/4c679186f2aca4ab6a0f1b0b9cf9252decb44d0b",
+                "reference": "4c679186f2aca4ab6a0f1b0b9cf9252decb44d0b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.55",
+                "psr/log": "^1.0",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/ca-bundle/issues",
+                "source": "https://github.com/composer/ca-bundle/tree/1.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-28T20:44:15+00:00"
         },
         {
             "name": "composer/installers",
@@ -6317,6 +6454,59 @@
             }
         },
         {
+            "name": "drupal/get_tweets",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/get_tweets.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/get_tweets-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "edfcd651bf11150640f4f44e36d98a0e185450ba"
+            },
+            "require": {
+                "abraham/twitteroauth": "^2.0.1",
+                "drupal/core": "^8.8.3 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1620903534",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "baikho",
+                    "homepage": "https://www.drupal.org/user/2727459"
+                },
+                {
+                    "name": "rakesh.gectcr",
+                    "homepage": "https://www.drupal.org/user/1177822"
+                },
+                {
+                    "name": "shalimanov",
+                    "homepage": "https://www.drupal.org/user/3066567"
+                }
+            ],
+            "description": "Provides functionality for import tweets in Drupal nodes.",
+            "homepage": "http://drupal.org/project/get_tweets",
+            "support": {
+                "source": "https://git.drupalcode.org/project/get_tweets"
+            }
+        },
+        {
             "name": "drupal/google_analytics",
             "version": "4.0.0",
             "source": {
@@ -7849,17 +8039,17 @@
         },
         {
             "name": "drupal/media_acquiadam",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_acquiadam.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "91309ee761f808438d4785f15aa70ae4dbcb3212"
+                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "a535b9dbe5a0e57063a289f7b17df7a8d6625416"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9",
@@ -7875,8 +8065,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1650651865",
+                    "version": "2.0.2",
+                    "datestamp": "1652455930",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7932,12 +8122,12 @@
                     "homepage": "https://www.drupal.org/user/1231722"
                 },
                 {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
+                    "name": "attilatilman",
+                    "homepage": "https://www.drupal.org/user/3528404"
                 },
                 {
-                    "name": "jmoreira",
-                    "homepage": "https://www.drupal.org/user/2374486"
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
                 },
                 {
                     "name": "mglaman",
@@ -12796,16 +12986,16 @@
         },
         {
             "name": "laminas/laminas-diactoros",
-            "version": "2.10.0",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-diactoros.git",
-                "reference": "a3f03b3c158a3a7014c6ba553b0cb83bf7da19c4"
+                "reference": "d1bc565b23c2040fafde398a8a5db083c47928c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/a3f03b3c158a3a7014c6ba553b0cb83bf7da19c4",
-                "reference": "a3f03b3c158a3a7014c6ba553b0cb83bf7da19c4",
+                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/d1bc565b23c2040fafde398a8a5db083c47928c0",
+                "reference": "d1bc565b23c2040fafde398a8a5db083c47928c0",
                 "shasum": ""
             },
             "require": {
@@ -12891,7 +13081,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-05-04T15:16:15+00:00"
+            "time": "2022-05-17T10:57:52+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -20667,16 +20857,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.14.13",
+            "version": "v2.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "66856cd0459df3dc97d32077a98454dc2a0ee75a"
+                "reference": "3b7cedb2f736899a7dbd0ba3d6da335a015f5cc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/66856cd0459df3dc97d32077a98454dc2a0ee75a",
-                "reference": "66856cd0459df3dc97d32077a98454dc2a0ee75a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3b7cedb2f736899a7dbd0ba3d6da335a015f5cc4",
+                "reference": "3b7cedb2f736899a7dbd0ba3d6da335a015f5cc4",
                 "shasum": ""
             },
             "require": {
@@ -20692,7 +20882,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.14-dev"
+                    "dev-master": "2.15-dev"
                 }
             },
             "autoload": {
@@ -20731,7 +20921,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v2.14.13"
+                "source": "https://github.com/twigphp/Twig/tree/v2.15.1"
             },
             "funding": [
                 {
@@ -20743,7 +20933,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-06T06:45:17+00:00"
+            "time": "2022-05-17T05:46:24+00:00"
         },
         {
             "name": "typhonius/acquia-php-sdk-v2",
@@ -21147,6 +21337,7 @@
         "drupal/feeds": 15,
         "drupal/feeds_ex": 15,
         "drupal/flag": 10,
+        "drupal/get_tweets": 10,
         "drupal/json_field": 5,
         "drupal/jsonapi_node_preview_tab": 10,
         "drupal/masquerade": 10,

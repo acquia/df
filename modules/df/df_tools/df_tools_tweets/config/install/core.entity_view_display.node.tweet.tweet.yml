@@ -1,0 +1,83 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tweet
+    - field.field.node.tweet.field_tweet_account_name
+    - field.field.node.tweet.field_tweet_author
+    - field.field.node.tweet.field_tweet_content
+    - field.field.node.tweet.field_tweet_date_time
+    - field.field.node.tweet.field_tweet_external_image
+    - field.field.node.tweet.field_tweet_hashtags
+    - field.field.node.tweet.field_tweet_id
+    - field.field.node.tweet.field_tweet_likes
+    - field.field.node.tweet.field_tweet_local_image
+    - field.field.node.tweet.field_tweet_mentions
+    - field.field.node.tweet.field_tweet_profile_image
+    - field.field.node.tweet.field_tweet_retweet_count
+    - node.type.tweet
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.tweet.tweet
+targetEntityType: node
+bundle: tweet
+mode: tweet
+content:
+  field_tweet_account_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tweet_author:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tweet_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tweet_date_time:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tweet_profile_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_tweet_external_image: true
+  field_tweet_hashtags: true
+  field_tweet_id: true
+  field_tweet_likes: true
+  field_tweet_local_image: true
+  field_tweet_mentions: true
+  field_tweet_retweet_count: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -26,6 +26,7 @@
         "drupal/field_permissions": "^1.1",
         "drupal/flag": "^4.0@beta",
         "drupal/fpa": "^3.0",
+        "drupal/get_tweets": "^2.0@beta",
         "drupal/image_url_formatter": "^1.0",
         "drupal/jquery_ui_dialog": "^1.0",
         "drupal/json_field": "^1.0@RC",
@@ -150,6 +151,12 @@
             "drupal/entity_browser": {
                 "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555":
                 "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
+            },
+            "drupal/get_tweets": {
+                "Adds new fields":
+                "patches/get_tweets-adds-fields.patch",
+                "Changes menu link title":
+                "patches/get_tweets-updates-menu-link.patch"
             },
             "drupal/json_field": {
                 "Add hook_requirements() to help determine requirements, available options | http://drupal.org/node/3213859":
