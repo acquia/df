@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75e9d0ce23c7bc863b7b97b14cbd5438",
+    "content-hash": "c0f23169e26ce1398adc2e22d65da176",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -98,16 +98,16 @@
         },
         {
             "name": "acquia/acquia_cms",
-            "version": "v1.4.8",
+            "version": "v1.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/acquia_cms.git",
-                "reference": "1090f57854feec0672651fccda1f14ba9491b31c"
+                "reference": "7eebc02604d69f0cb91150d1e493f4f8e7e47350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/acquia_cms/zipball/1090f57854feec0672651fccda1f14ba9491b31c",
-                "reference": "1090f57854feec0672651fccda1f14ba9491b31c",
+                "url": "https://api.github.com/repos/acquia/acquia_cms/zipball/7eebc02604d69f0cb91150d1e493f4f8e7e47350",
+                "reference": "7eebc02604d69f0cb91150d1e493f4f8e7e47350",
                 "shasum": ""
             },
             "require": {
@@ -131,7 +131,7 @@
                 "drupal/component": "1.0-rc3",
                 "drupal/config_ignore": "2.3.0",
                 "drupal/config_rewrite": "^1.4",
-                "drupal/core": "~9.2.18 || ~9.3.12",
+                "drupal/core": "~9.2.19 || ~9.3.13",
                 "drupal/default_content": "2.0.0-alpha1",
                 "drupal/diff": "^1",
                 "drupal/entity_clone": "1.0-beta6",
@@ -141,7 +141,7 @@
                 "drupal/focal_point": "1.5",
                 "drupal/geocoder": "3.25",
                 "drupal/geofield": "^1",
-                "drupal/google_analytics": "^4.0",
+                "drupal/google_analytics": "4.0.0",
                 "drupal/google_tag": "^1.5",
                 "drupal/honeypot": "^2.0",
                 "drupal/imagemagick": "^3",
@@ -255,9 +255,6 @@
                     "drupal/component": {
                         "3236462 - Missing Use statement creates fatal errors": "https://git.drupalcode.org/project/component/-/merge_requests/2.patch"
                     },
-                    "drupal/config_ignore": {
-                        "2857247 - Support for export filtering via Drush": "https://www.drupal.org/files/issues/2021-08-18/config_ignore_2857247-75.patch"
-                    },
                     "drupal/core": {
                         "3059955 - It is possible to overflow the number of items allowed in Media Library": "https://www.drupal.org/files/issues/2019-12-28/3082690-80.patch",
                         "3160238 - Media Library widget produces \"This value should not be null\" error when field is required": "https://www.drupal.org/files/issues/2020-10-08/3160238-25.patch",
@@ -277,6 +274,9 @@
                     },
                     "drupal/geocoder": {
                         "3224364 - Replace deprecated boolean return in uksort() for PHP 8 compatibility.": "https://www.drupal.org/files/issues/2021-07-19/3224364-2.patch"
+                    },
+                    "drupal/google_analytics": {
+                        "3246597 - Add dependency on drupal:path_alias": "https://www.drupal.org/files/issues/2021-11-25/google_analytics-3246597-7.patch"
                     },
                     "drupal/search_api": {
                         "3236696 - Call to a member function preExecute() on null in SearchApiTagCache->alterCacheMetadata()": "https://www.drupal.org/files/issues/2021-09-20/search_api_condition_cacheable_metadata.patch"
@@ -311,9 +311,9 @@
             "homepage": "https://github.com/acquia/acquia_cms",
             "support": {
                 "issues": "https://github.com/acquia/acquia_cms/issues",
-                "source": "https://github.com/acquia/acquia_cms/tree/v1.4.8"
+                "source": "https://github.com/acquia/acquia_cms/tree/v1.4.9"
             },
-            "time": "2022-04-20T17:29:09+00:00"
+            "time": "2022-05-12T14:15:48+00:00"
         },
         {
             "name": "acquia/acsf-contenthub-console",
