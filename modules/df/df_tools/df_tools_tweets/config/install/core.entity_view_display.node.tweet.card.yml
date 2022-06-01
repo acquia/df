@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.tweet
+    - core.entity_view_mode.node.card
     - field.field.node.tweet.field_tweet_account_name
     - field.field.node.tweet.field_tweet_author
     - field.field.node.tweet.field_tweet_content
@@ -21,10 +21,10 @@ dependencies:
     - link
     - text
     - user
-id: node.tweet.tweet
+id: node.tweet.card
 targetEntityType: node
 bundle: tweet
-mode: tweet
+mode: card
 content:
   field_tweet_account_name:
     type: string

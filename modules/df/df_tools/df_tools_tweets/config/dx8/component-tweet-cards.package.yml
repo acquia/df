@@ -1,0 +1,41 @@
+-
+  type: cohesion_component
+  export:
+    uuid: 782e1ad6-9975-4620-98fc-603def71f6ca
+    langcode: en
+    status: true
+    dependencies:
+      config:
+        - cohesion_elements.cohesion_component_category.cpt_cat_feature_sections
+    label: 'Tweet cards'
+    id: cpt_tweet_cards
+    json_values: '{"canvas":[{"type":"item","uid":"sitestudio_view_element","isCustom":true,"title":"Site Studio View element","selected":false,"status":{"collapsed":true},"iconColor":"custom","uuid":"7b3cae14-d251-4216-b044-c77d697c6f23","parentUid":"root","children":[]}],"componentForm":[{"type":"form-field","uid":"form-select","title":"Select","translate":false,"status":{"collapsed":false},"iconColor":"formField","uuid":"49a45e5c-daef-4a51-8c37-a1a6e0dc1908","parentUid":"root","children":[]}],"mapper":{"7b3cae14-d251-4216-b044-c77d697c6f23":{}},"model":{"7b3cae14-d251-4216-b044-c77d697c6f23":{"settings":{"title":"Site Studio View element","number_per_page":"[field.49a45e5c-daef-4a51-8c37-a1a6e0dc1908]","view":"tweet_cards:block_1","view_mode":"card"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"sitestudio_view_element"}}},"49a45e5c-daef-4a51-8c37-a1a6e0dc1908":{"settings":{"title":"Number of items to display","type":"cohSelect","selectType":"custom","schema":{"type":"string"},"options":[{"label":"3","value":"3"},{"label":"6","value":"6"},{"label":"9","value":"9"},{"label":"12","value":"12"}],"machineName":"number-of-items-to-display","tooltipPlacement":"auto right"},"contextVisibility":{"condition":"ALL"},"model":{"value":"6"}}},"previewModel":{"7b3cae14-d251-4216-b044-c77d697c6f23":{"settings":{"number_per_page":""}},"49a45e5c-daef-4a51-8c37-a1a6e0dc1908":{}},"variableFields":{"7b3cae14-d251-4216-b044-c77d697c6f23":["settings.number_per_page"],"49a45e5c-daef-4a51-8c37-a1a6e0dc1908":[]},"disabledNodes":[],"meta":{"fieldHistory":[{"uuid":"49a45e5c-daef-4a51-8c37-a1a6e0dc1908","type":"form-select","machineName":"number-of-items-to-display"}],"lastModifiedEl":"7b3cae14-d251-4216-b044-c77d697c6f23"}}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0035
+    locked: false
+    modified: true
+    selectable: true
+    category: cpt_cat_feature_sections
+    preview_image: ''
+    has_quick_edit: null
+    entity_type_access: {  }
+    bundle_access: {  }
+    twig_template: component--cohesion-cpt-tweet-cards
+    weight: 0
+-
+  type: cohesion_component_category
+  export:
+    uuid: 7845287a-a5fa-4719-ac1f-062eb3daa504
+    langcode: en
+    status: true
+    dependencies: {  }
+    label: 'Feature sections'
+    id: cpt_cat_feature_sections
+    json_values: '{}'
+    json_mapper: '{}'
+    last_entity_update: entityupdate_0035
+    locked: false
+    modified: false
+    selectable: true
+    class: category-10
+    weight: -10

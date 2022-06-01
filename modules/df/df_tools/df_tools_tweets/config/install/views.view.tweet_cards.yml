@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.tweet
+    - core.entity_view_mode.node.card
     - node.type.tweet
   module:
     - node
@@ -168,7 +168,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: tweet
+          view_mode: card
       query:
         type: views_query
         options:
