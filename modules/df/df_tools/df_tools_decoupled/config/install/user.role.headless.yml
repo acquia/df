@@ -2,7 +2,10 @@ langcode: en
 status: true
 dependencies: {  }
 id: headless
-label: headless
+label: Headless
 weight: 61
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access user profiles'
+  - 'bypass node access'
+  - 'issue subrequests'
