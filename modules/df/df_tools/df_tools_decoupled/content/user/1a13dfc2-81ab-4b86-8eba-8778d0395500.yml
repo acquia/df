@@ -1,0 +1,55 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 1a13dfc2-81ab-4b86-8eba-8778d0395500
+  default_langcode: en
+default:
+  preferred_langcode:
+    -
+      value: en
+  preferred_admin_langcode:
+    -
+      value: en
+  name:
+    -
+      value: HeadlessRon
+  mail:
+    -
+      value: HeadlessRon@example.com
+  pass:
+    -
+      value: $S$E2IES.NVY99hR8UGKiKdAwz4KPyulnW5TAPgAplcNex6R/Z/kBe5
+      existing: ''
+      pre_hashed: false
+  timezone:
+    -
+      value: UTC
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1654620894
+  access:
+    -
+      value: 0
+  login:
+    -
+      value: 0
+  roles:
+    -
+      target_id: headless
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_last_password_reset:
+    -
+      value: '2022-06-07T16:55:40'
+  field_password_expiration:
+    -
+      value: false
+  field_pending_expire_sent:
+    -
+      value: 0
