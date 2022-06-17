@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce7607c601124a0f20bafcd55a62dea4",
+    "content-hash": "bc1c150376083b1a07adff49434010ba",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -2941,6 +2941,67 @@
             "homepage": "https://www.drupal.org/project/acquia_contenthub",
             "support": {
                 "source": "https://git.drupalcode.org/project/acquia_contenthub"
+            }
+        },
+        {
+            "name": "drupal/acquia_dam",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/acquia_dam.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "4138bf01be1fba3de51c13e55210e03248bf440f"
+            },
+            "require": {
+                "drupal/core": "^9.3",
+                "drupal/views_remote_data": "^1.0.1",
+                "guzzlehttp/psr7": "^1.0 || ^2.0",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "acquia/cohesion": "^6.8",
+                "acquia/cohesion-theme": "^6.8",
+                "drupal/media_acquiadam": "^2.0",
+                "drupal/token": "^1.10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1655149917",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acquia",
+                    "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                }
+            ],
+            "description": "Integrates with Acquia DAM",
+            "homepage": "https://www.drupal.org/project/acquia_dam",
+            "support": {
+                "source": "https://git.drupalcode.org/project/acquia_dam"
             }
         },
         {
@@ -11908,6 +11969,54 @@
                 "source": "https://git.drupalcode.org/project/views_flag_refresh",
                 "issues": "https://www.drupal.org/project/issues/views_flag_refresh",
                 "documentation": "https://www.drupal.org/node/900924"
+            }
+        },
+        {
+            "name": "drupal/views_remote_data",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_remote_data.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_remote_data-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "861390e9d5388faa401cf2ab98aedf38af1bced1"
+            },
+            "require": {
+                "drupal/core": ">=9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1651583955",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acquia",
+                    "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                }
+            ],
+            "description": "Provide an API to integrate remote data with Views",
+            "homepage": "https://www.drupal.org/project/views_remote_data",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_remote_data"
             }
         },
         {
