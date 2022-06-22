@@ -5978,10 +5978,10 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fallback_formatter.git",
-                "reference": "19366e1bf44dac98c9d98bc969bdc7cc63104f21"
+                "reference": "12f00a43a289245a96cc924421912cba7c4d15f9"
             },
             "require": {
-                "drupal/core": "^8.6 || ^9"
+                "drupal/core": "^8.6 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
@@ -5990,8 +5990,8 @@
                     "dev-8.x-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1+1-dev",
-                    "datestamp": "1612370366",
+                    "version": "8.x-1.2+3-dev",
+                    "datestamp": "1655912622",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6000,7 +6000,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -8613,17 +8613,17 @@
         },
         {
             "name": "drupal/media_acquiadam",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_acquiadam.git",
-                "reference": "2.0.3"
+                "reference": "2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "f120f0d6499f3b6f9260271ecf8bff193c8e5ab1"
+                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "57afc967710c7af6b9227916c2d7bb45d4c4ecda"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9",
@@ -8639,8 +8639,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1653570075",
+                    "version": "2.0.4",
+                    "datestamp": "1655823863",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11038,7 +11038,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/sitestudio_extras.git",
-                "reference": "8bbd37d145152574f206b2331246aea5a9768f5d"
+                "reference": "16f0ad2b6ca251b4cfdb2286c0bc39878048a706"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -11050,7 +11050,7 @@
                 },
                 "drupal": {
                     "version": "1.0.x-dev",
-                    "datestamp": "1646816585",
+                    "datestamp": "1655913747",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -11062,6 +11062,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "kevinfunk",
+                    "homepage": "https://www.drupal.org/user/414328"
+                },
                 {
                     "name": "rlnorthcutt",
                     "homepage": "https://www.drupal.org/user/116893"
@@ -22705,23 +22709,23 @@
         },
         {
             "name": "zumba/amplitude-php",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zumba/amplitude-php.git",
-                "reference": "c0d14d5fce750c76710024601b0d698df2bdf365"
+                "reference": "3cace0b64d5b92eb42792f7696b874bec865aa4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zumba/amplitude-php/zipball/c0d14d5fce750c76710024601b0d698df2bdf365",
-                "reference": "c0d14d5fce750c76710024601b0d698df2bdf365",
+                "url": "https://api.github.com/repos/zumba/amplitude-php/zipball/3cace0b64d5b92eb42792f7696b874bec865aa4a",
+                "reference": "3cace0b64d5b92eb42792f7696b874bec865aa4a",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "php": ">=7.2",
-                "psr/log": "^1.0 | ^2.0"
+                "psr/log": "^1.0 | ^2.0 | ^3.0"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.4",
@@ -22760,9 +22764,9 @@
             ],
             "support": {
                 "issues": "https://github.com/zumba/amplitude-php/issues",
-                "source": "https://github.com/zumba/amplitude-php/tree/1.0.4"
+                "source": "https://github.com/zumba/amplitude-php/tree/1.0.5"
             },
-            "time": "2022-05-09T20:55:33+00:00"
+            "time": "2022-06-22T01:58:20+00:00"
         }
     ],
     "packages-dev": [],
