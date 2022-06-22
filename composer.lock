@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9f71408d55829658c65217e5e620837",
+    "content-hash": "4b80aa30d5bca3d46b5dab6c8971f9aa",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -12042,6 +12042,50 @@
                 "source": "https://git.drupalcode.org/project/views_flag_refresh",
                 "issues": "https://www.drupal.org/project/issues/views_flag_refresh",
                 "documentation": "https://www.drupal.org/node/900924"
+            }
+        },
+        {
+            "name": "drupal/views_json_source",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_json_source.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_json_source-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "b40ed00e90a92bc2d1774950f2d0d49ca8207af9"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1654880380",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "venugopp",
+                    "homepage": "https://www.drupal.org/user/2628911"
+                }
+            ],
+            "description": "Adds a views backend to query JSON data.",
+            "homepage": "https://www.drupal.org/project/views_json_source",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_json_source"
             }
         },
         {
