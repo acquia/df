@@ -5,7 +5,7 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "acquia/acf": "2.x-feeds-dev",
-        "acquia/acquia_cms": "2.0.0",
+        "acquia/acquia_cms": "1.5.1",
         "acquia/drupal-environment-detector": "^1",
         "acquia/memcache-settings": "^1",
         "acquia/sitestudio_contenthub": "6.9",
@@ -216,7 +216,7 @@
             "@putenv COMPOSER_MEMORY_LIMIT=2G"
         ],
         "post-update-cmd": [
-            "rsync -a modules/ docroot/modules/df",
+            "rsync -a modules/ docroot/modules",
             "rsync -a profiles/ docroot/profiles",
             "composer run-script remove-git-submodules"
         ],
