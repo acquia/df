@@ -9198,30 +9198,28 @@
         },
         {
             "name": "drupal/jsonapi_menu_items",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jsonapi_menu_items.git",
-                "reference": "1.2.1"
+                "reference": "1.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jsonapi_menu_items-1.2.1.zip",
-                "reference": "1.2.1",
-                "shasum": "18c52b3a67e58b7b1d28ae5e6d9972e97f30d0ee"
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_menu_items-1.2.3.zip",
+                "reference": "1.2.3",
+                "shasum": "f090c19b8961180ae14f54f3854a91847b1252be"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
+                "drupal/jsonapi_hypermedia": "^1.6",
                 "drupal/jsonapi_resources": "^1.0"
-            },
-            "require-dev": {
-                "drupal/jsonapi_hypermedia": "^1.6"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.1",
-                    "datestamp": "1619993273",
+                    "version": "1.2.3",
+                    "datestamp": "1657144496",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9251,7 +9249,7 @@
                 }
             ],
             "description": "Adds a JSON API resource for menu items.",
-            "homepage": "https://github.com/Realityloop/jsonapi_menu_items",
+            "homepage": "https://www.drupal.org/project/jsonapi_menu_items",
             "keywords": [
                 "Drupal",
                 "JSON API"
@@ -11775,16 +11773,16 @@
         },
         {
             "name": "drupal/search_api_db",
-            "version": "1.23.0",
+            "version": "1.24.0",
             "require": {
-                "drupal/core": "^8.8 || ^9",
+                "drupal/core": "^9.2 || ^10.0",
                 "drupal/search_api": "*"
             },
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.23",
-                    "datestamp": "1642935837",
+                    "version": "8.x-1.24",
+                    "datestamp": "1657180584",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
