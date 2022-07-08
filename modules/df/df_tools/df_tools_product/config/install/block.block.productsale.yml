@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.product_sale
+  module:
+    - cohesion
+    - collapsiblock
+    - facets
+  theme:
+    - cohesion_theme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: productsale
+theme: cohesion_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'facet_block:product_sale'
+settings:
+  id: 'facet_block:product_sale'
+  label: 'Product sale'
+  provider: facets
+  label_display: '0'
+  block_id: productsale
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

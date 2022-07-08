@@ -1,0 +1,191 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.product.default
+    - core.entity_view_mode.node.featured
+    - field.field.node.product.body
+    - field.field.node.product.field_persona
+    - field.field.node.product.field_product_brand
+    - field.field.node.product.field_product_color
+    - field.field.node.product.field_product_image
+    - field.field.node.product.field_product_image_more
+    - field.field.node.product.field_product_material
+    - field.field.node.product.field_product_model
+    - field.field.node.product.field_product_on_sale
+    - field.field.node.product.field_product_price_original
+    - field.field.node.product.field_product_price_sale
+    - field.field.node.product.field_product_rating
+    - field.field.node.product.field_product_review
+    - field.field.node.product.field_product_sku
+    - field.field.node.product.field_product_subscription
+    - field.field.node.product.field_product_tags
+    - field.field.node.product.field_product_type
+    - field.field.node.product.field_product_weight
+    - field.field.node.product.field_related_products
+    - node.type.product
+  module:
+    - comment
+    - image
+    - options
+    - text
+    - user
+id: node.product.featured
+targetEntityType: node
+bundle: product
+mode: featured
+content:
+  body:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_product_brand:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_product_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_product_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_product_image_more:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_product_material:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_product_model:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_product_price_original:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_product_price_sale:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_product_rating:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_product_review:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_product_sku:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_product_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_product_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_product_weight:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_related_products:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_persona: true
+  field_product_on_sale: true
+  field_product_subscription: true
+  langcode: true
+  search_api_excerpt: true

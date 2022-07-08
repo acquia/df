@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - collapsiblock
+    - component
+  theme:
+    - cohesion_theme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: acfwishbutton
+theme: cohesion_theme
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'component:acf_wishbutton'
+settings:
+  id: 'component:acf_wishbutton'
+  label: 'ACF Wish button'
+  provider: component
+  label_display: '0'
+  form_configuration: null
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false

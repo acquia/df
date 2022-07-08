@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - component
+  theme:
+    - cohesion_theme
+id: acffullcart
+theme: cohesion_theme
+region: dx8_hidden
+weight: -11
+provider: null
+plugin: 'component:acf_fullcart'
+settings:
+  id: 'component:acf_fullcart'
+  label: 'ACF Full cart'
+  provider: component
+  label_display: '0'
+  form_configuration: null
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+    context_mapping: {  }
