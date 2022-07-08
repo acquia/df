@@ -4687,16 +4687,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.17",
+            "version": "9.3.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "20c4f2c5ad062295d5c40f42bc27547570513c8c"
+                "reference": "6291852a24fc8d2f494c842f03861ae63d0a54ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/20c4f2c5ad062295d5c40f42bc27547570513c8c",
-                "reference": "20c4f2c5ad062295d5c40f42bc27547570513c8c",
+                "url": "https://api.github.com/repos/drupal/core/zipball/6291852a24fc8d2f494c842f03861ae63d0a54ca",
+                "reference": "6291852a24fc8d2f494c842f03861ae63d0a54ca",
                 "shasum": ""
             },
             "require": {
@@ -4938,9 +4938,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.3.17"
+                "source": "https://github.com/drupal/core/tree/9.3.18"
             },
-            "time": "2022-06-21T20:57:41+00:00"
+            "time": "2022-07-07T23:54:13+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -11600,20 +11600,20 @@
         },
         {
             "name": "drupal/tmgmt",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tmgmt.git",
-                "reference": "8.x-1.13"
+                "reference": "8.x-1.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tmgmt-8.x-1.13.zip",
-                "reference": "8.x-1.13",
-                "shasum": "6e59ed65335d450308158902ffcce6ccb626a4dd"
+                "url": "https://ftp.drupal.org/files/projects/tmgmt-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "9c7a0ee0a9f8c180e485f5ac16c5e8efd74d63bc"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "require-dev": {
                 "drupal/metatag": "1.x-dev",
@@ -11629,8 +11629,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1646811201",
+                    "version": "8.x-1.14",
+                    "datestamp": "1657223863",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
