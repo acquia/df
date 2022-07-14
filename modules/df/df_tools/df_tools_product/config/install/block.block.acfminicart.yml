@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - component
+  theme:
+    - cohesion_theme
+id: acfminicart
+theme: cohesion_theme
+region: dx8_hidden
+weight: -10
+provider: null
+plugin: 'component:acf_minicart'
+settings:
+  id: 'component:acf_minicart'
+  label: 'ACF Mini cart'
+  provider: component
+  label_display: '0'
+  form_configuration: null
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    using_master_template: 0
+    negate: false
+    context_mapping: {  }

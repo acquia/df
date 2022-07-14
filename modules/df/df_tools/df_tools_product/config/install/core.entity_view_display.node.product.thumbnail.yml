@@ -1,0 +1,90 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.thumbnail
+    - field.field.node.product.body
+    - field.field.node.product.field_persona
+    - field.field.node.product.field_product_brand
+    - field.field.node.product.field_product_color
+    - field.field.node.product.field_product_image
+    - field.field.node.product.field_product_image_more
+    - field.field.node.product.field_product_material
+    - field.field.node.product.field_product_model
+    - field.field.node.product.field_product_on_sale
+    - field.field.node.product.field_product_price_original
+    - field.field.node.product.field_product_price_sale
+    - field.field.node.product.field_product_rating
+    - field.field.node.product.field_product_review
+    - field.field.node.product.field_product_sku
+    - field.field.node.product.field_product_subscription
+    - field.field.node.product.field_product_tags
+    - field.field.node.product.field_product_type
+    - field.field.node.product.field_product_weight
+    - field.field.node.product.field_related_products
+    - image.style.coh_medium
+    - node.type.product
+  module:
+    - image
+    - user
+id: node.product.thumbnail
+targetEntityType: node
+bundle: product
+mode: thumbnail
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_product_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: coh_medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_product_price_original:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_product_price_sale:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  body: true
+  field_persona: true
+  field_product_brand: true
+  field_product_color: true
+  field_product_image_more: true
+  field_product_material: true
+  field_product_model: true
+  field_product_on_sale: true
+  field_product_rating: true
+  field_product_review: true
+  field_product_sku: true
+  field_product_subscription: true
+  field_product_tags: true
+  field_product_type: true
+  field_product_weight: true
+  field_related_products: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
