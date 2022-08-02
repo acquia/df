@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "859c7e80fb3a10b53ff0b464a5a38fc7",
+    "content-hash": "da26e1c9fb1c078deab53672bfcf5c34",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -3476,6 +3476,55 @@
             "homepage": "https://www.drupal.org/project/acquia_cms_toolbar",
             "support": {
                 "source": "https://git.drupalcode.org/project/acquia_cms_toolbar"
+            }
+        },
+        {
+            "name": "drupal/acquia_cms_toolbar_gin",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/acquia_cms_toolbar_gin.git",
+                "reference": "1.0.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_toolbar_gin-1.0.0-alpha2.zip",
+                "reference": "1.0.0-alpha2",
+                "shasum": "ab06078adb060d232861a961ec16f5c6fd2ba50c"
+            },
+            "require": {
+                "drupal/acquia_cms_toolbar": "*",
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha2",
+                    "datestamp": "1657216432",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "pavlosdan",
+                    "homepage": "https://www.drupal.org/user/751960"
+                }
+            ],
+            "description": "Allows your site to use the Gin admin theme with Acquia CMS Toolbar.",
+            "homepage": "https://www.drupal.org/project/acquia_cms_toolbar_gin",
+            "support": {
+                "source": "https://git.drupalcode.org/project/acquia_cms_toolbar_gin"
             }
         },
         {
@@ -8004,6 +8053,127 @@
             }
         },
         {
+            "name": "drupal/gin",
+            "version": "3.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gin.git",
+                "reference": "8.x-3.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-beta5.zip",
+                "reference": "8.x-3.0-beta5",
+                "shasum": "651b2047990067e26158368e3aab7f27366a81e9"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9 || ^10",
+                "drupal/gin_toolbar": "^1.0@beta"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0-beta5",
+                    "datestamp": "1656071885",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 0 'web/modules/custom'"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sascha Eggenberger (saschaeggi)",
+                    "homepage": "https://www.drupal.org/u/saschaeggi",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "For a better Admin and Content Editor Experience.",
+            "homepage": "https://www.drupal.org/project/gin",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gin",
+                "issues": "https://www.drupal.org/project/issues/gin"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/sponsors/saschaeggi"
+                },
+                {
+                    "type": "other",
+                    "url": "https://paypal.me/saschaeggi"
+                }
+            ]
+        },
+        {
+            "name": "drupal/gin_toolbar",
+            "version": "1.0.0-beta22",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gin_toolbar.git",
+                "reference": "8.x-1.0-beta22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-8.x-1.0-beta22.zip",
+                "reference": "8.x-1.0-beta22",
+                "shasum": "630b4acb208411b78c61d83c9a27741c546202de"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta22",
+                    "datestamp": "1649709351",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Sascha Eggenberger (saschaeggi)",
+                    "homepage": "https://www.drupal.org/u/saschaeggi",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Gin Toolbar for Frontend use",
+            "homepage": "https://www.drupal.org/project/gin_toolbar",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/gin_toolbar",
+                "issues": "https://www.drupal.org/project/issues/gin_toolbar"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/sponsors/saschaeggi"
+                },
+                {
+                    "type": "other",
+                    "url": "https://paypal.me/saschaeggi"
+                }
+            ]
+        },
+        {
             "name": "drupal/google_analytics",
             "version": "4.0.0",
             "source": {
@@ -12250,6 +12420,58 @@
             "homepage": "https://www.drupal.org/project/sitestudio_extras",
             "support": {
                 "source": "https://git.drupalcode.org/project/sitestudio_extras"
+            }
+        },
+        {
+            "name": "drupal/sitestudio_gin",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/sitestudio_gin.git",
+                "reference": "1.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/sitestudio_gin-1.0.0-alpha1.zip",
+                "reference": "1.0.0-alpha1",
+                "shasum": "19556ebe408b016887be342e3b362b1f6ea818e6"
+            },
+            "require": {
+                "acquia/cohesion": "^6.7.0",
+                "drupal/core": "^8 || ^9 ||^10",
+                "drupal/gin": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha1",
+                    "datestamp": "1657192737",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia Engineering",
+                    "homepage": "https://www.acquia.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pavlosdan",
+                    "homepage": "https://www.drupal.org/user/751960"
+                }
+            ],
+            "description": "Integrates Acquia Site Studio with the Gin admin theme.",
+            "homepage": "https://www.drupal.org/project/sitestudio_gin",
+            "support": {
+                "source": "https://git.drupalcode.org/project/sitestudio_gin",
+                "error": "Invalid dependency: \"cohesion\" is an unknown drupal 8 package name"
             }
         },
         {
@@ -22271,6 +22493,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "acquia/acf": 20,
+        "drupal/acquia_cms_toolbar_gin": 15,
         "drupal/auto_entitylabel": 10,
         "drupal/conditional_fields": 15,
         "drupal/entity_usage": 10,
@@ -22278,6 +22501,7 @@
         "drupal/feeds_ex": 15,
         "drupal/flag": 10,
         "drupal/get_tweets": 10,
+        "drupal/gin": 10,
         "drupal/inline_entity_form": 5,
         "drupal/json_field": 5,
         "drupal/jsonapi_node_preview_tab": 10,
@@ -22287,6 +22511,7 @@
         "drupal/moderation_note": 10,
         "drupal/pendo": 15,
         "drupal/sitestudio_extras": 20,
+        "drupal/sitestudio_gin": 15,
         "drupal/views_flag_refresh": 15,
         "drupal/webform_views": 15,
         "kevinfunk/default_content_ui": 20
