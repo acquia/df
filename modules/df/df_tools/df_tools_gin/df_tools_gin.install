@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function df_tools_gin_install($is_syncing) {
+  $config_factory = \Drupal::configFactory();
+  $module_handler = \Drupal::service('module_handler');
+  $module_installer = \Drupal::service('module_installer');
+  $theme_installer = \Drupal::service('theme_installer');
+
+  // Don't do anything during config sync.
+  if ($is_syncing) {
+    return;
+  }
+
+  // Install Gin theme.
+  $theme_installer->install(['gin']);
+
+  // Set admin theme to Gin.
+  $config_factory
+    ->getEditable('system.theme')
+    ->set('admin', 'gin')
+    ->save(TRUE);
+
+  // Install Gin Toolbar and ACMS Toolbar Gin.
+  $module_installer->install(['gin_toolbar', 'acquia_cms_toolbar_gin']);
+
+  // If using Site Studio, install Site Studio Gin.
+  if ($module_handler->moduleExists('cohesion')) {
+    $module_installer->install(['sitestudio_gin']);
+  }
+
+  // Clear cache to prevent class discovery errors.
+  drupal_flush_all_caches();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function df_tools_gin_uninstall() {
+  $config_factory = \Drupal::configFactory();
+  $module_uninstaller = \Drupal::service('module_installer');
+  $module_handler = \Drupal::service('module_handler');
+  $theme_uninstaller =\Drupal::service("theme_installer");
+
+  // Set admin theme to back to Acquia Claro.
+  $config_factory
+    ->getEditable('system.theme')
+    ->set('admin', 'acquia_claro')
+    ->save(TRUE);
+
+  //Uninstall the theme.
+  $theme_uninstaller->uninstall(['gin']);
+
+  //Uninstall the dependent modules
+  $module_uninstaller->uninstall(['gin_toolbar', 'acquia_cms_toolbar_gin']);
+
+  if ($module_handler->moduleExists('sitestudio_gin')) {
+    $module_uninstaller->uninstall(['sitestudio_gin']);
+  }
+
+  // Clear cache to prevent class discovery errors.
+  drupal_flush_all_caches();
+}
