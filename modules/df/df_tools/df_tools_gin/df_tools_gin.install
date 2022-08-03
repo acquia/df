@@ -44,13 +44,6 @@ function df_tools_gin_uninstall() {
   $module_handler = \Drupal::service('module_handler');
   $theme_uninstaller =\Drupal::service("theme_installer");
 
-  //Uninstall the dependent modules
-  $module_uninstaller->uninstall(['gin_toolbar', 'acquia_cms_toolbar_gin']);
-
-  if ($module_handler->moduleExists('cohesion')) {
-    $module_uninstaller->uninstall(['sitestudio_gin']);
-  }
-
   // Set admin theme to back to Acquia Claro.
   $config_factory
     ->getEditable('system.theme')
@@ -59,6 +52,13 @@ function df_tools_gin_uninstall() {
 
   //Uninstall the theme.
   $theme_uninstaller->uninstall(['gin']);
+
+  //Uninstall the dependent modules
+  $module_uninstaller->uninstall(['gin_toolbar', 'acquia_cms_toolbar_gin']);
+
+  if ($module_handler->moduleExists('sitestudio_gin')) {
+    $module_uninstaller->uninstall(['sitestudio_gin']);
+  }
 
   // Clear cache to prevent class discovery errors.
   drupal_flush_all_caches();
