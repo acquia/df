@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "404257f5ee9ca7c62e8f0fc650cdd75e",
+    "content-hash": "912a276f585bf9305463d49efd0657e6",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -13118,6 +13118,50 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/toolbar_manager",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/toolbar_manager.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/toolbar_manager-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "b14862399f6ad6b58ba9f63aba08f5d5eda7699e"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1660549193",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "junaidpv",
+                    "homepage": "https://www.drupal.org/user/255728"
+                }
+            ],
+            "description": "Helps to manage toolbar items.",
+            "homepage": "https://www.drupal.org/project/toolbar_manager",
+            "support": {
+                "source": "https://git.drupalcode.org/project/toolbar_manager"
             }
         },
         {
