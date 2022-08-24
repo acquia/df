@@ -590,17 +590,20 @@
         },
         {
             "name": "acquia/drupal-environment-detector",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/drupal-environment-detector.git",
-                "reference": "ef6e86df2654f93b11062e07a93dbcd941d65176"
+                "reference": "8f3d8d4340a8d180e226a5dcb7a8948f4e15bde7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/drupal-environment-detector/zipball/ef6e86df2654f93b11062e07a93dbcd941d65176",
-                "reference": "ef6e86df2654f93b11062e07a93dbcd941d65176",
+                "url": "https://api.github.com/repos/acquia/drupal-environment-detector/zipball/8f3d8d4340a8d180e226a5dcb7a8948f4e15bde7",
+                "reference": "8f3d8d4340a8d180e226a5dcb7a8948f4e15bde7",
                 "shasum": ""
+            },
+            "conflict": {
+                "acquia/blt": "<13.5.2"
             },
             "require-dev": {
                 "acquia/coding-standards": "^1.0.0",
@@ -634,9 +637,9 @@
             "description": "Provides common methods for detecting the current Acquia environment",
             "support": {
                 "issues": "https://github.com/acquia/drupal-environment-detector/issues",
-                "source": "https://github.com/acquia/drupal-environment-detector/tree/1.5.0"
+                "source": "https://github.com/acquia/drupal-environment-detector/tree/1.5.1"
             },
-            "time": "2022-08-23T18:15:55+00:00"
+            "time": "2022-08-24T15:13:06+00:00"
         },
         {
             "name": "acquia/http-hmac-php",
@@ -9796,26 +9799,26 @@
         },
         {
             "name": "drupal/masquerade",
-            "version": "2.0.0-beta4",
+            "version": "2.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/masquerade.git",
-                "reference": "8.x-2.0-beta4"
+                "reference": "8.x-2.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/masquerade-8.x-2.0-beta4.zip",
-                "reference": "8.x-2.0-beta4",
-                "shasum": "8ab6cf13239e92a787f373d83bd245b9d50f7e6b"
+                "url": "https://ftp.drupal.org/files/projects/masquerade-8.x-2.0-rc1.zip",
+                "reference": "8.x-2.0-rc1",
+                "shasum": "9a800f80cdc4535019dab2d093286c7262a846bf"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta4",
-                    "datestamp": "1591126607",
+                    "version": "8.x-2.0-rc1",
+                    "datestamp": "1661364139",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -10521,6 +10524,14 @@
                 {
                     "name": "shadcn",
                     "homepage": "https://shadcn.com"
+                },
+                {
+                    "name": "rrrob",
+                    "homepage": "https://www.drupal.org/user/273533"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
                 }
             ],
             "description": "Next.js + Drupal for Incremental Static Regeneration and Preview mode.",
@@ -10649,8 +10660,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "dsnopek",
-                    "homepage": "https://www.drupal.org/user/266527"
+                    "name": "EclipseGc",
+                    "homepage": "https://www.drupal.org/user/61203"
                 },
                 {
                     "name": "japerry",
@@ -10663,10 +10674,6 @@
                 {
                     "name": "phenaproxima",
                     "homepage": "https://www.drupal.org/user/205645"
-                },
-                {
-                    "name": "tim.plunkett",
-                    "homepage": "https://www.drupal.org/user/241634"
                 }
             ],
             "description": "Provides a way to place blocks on a custom page.",
@@ -15874,16 +15881,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.12.0",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "c5aed3c798018e31fbb7b1e421b8d96bf2cda453"
+                "reference": "66a6d03c381f6c9f1dd988bf8244f9afb9380d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/c5aed3c798018e31fbb7b1e421b8d96bf2cda453",
-                "reference": "c5aed3c798018e31fbb7b1e421b8d96bf2cda453",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/66a6d03c381f6c9f1dd988bf8244f9afb9380d76",
+                "reference": "66a6d03c381f6c9f1dd988bf8244f9afb9380d76",
                 "shasum": ""
             },
             "require": {
@@ -15930,7 +15937,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-08-22T22:55:58+00:00"
+            "time": "2022-08-24T13:56:50+00:00"
         },
         {
             "name": "lcobucci/clock",
