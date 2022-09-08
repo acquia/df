@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc11a39e1d94b798c7612eac090ec4f6",
+    "content-hash": "08822801e81b35ffde618476b43e2618",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -467,16 +467,16 @@
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "6.9.1",
+            "version": "6.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "e4df8ed85af1ce9c4b24e6e71257dcb5b1efa19b"
+                "reference": "3deb0fd578c37f992240c93e8d75c2bcbcfae4c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/e4df8ed85af1ce9c4b24e6e71257dcb5b1efa19b",
-                "reference": "e4df8ed85af1ce9c4b24e6e71257dcb5b1efa19b",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/3deb0fd578c37f992240c93e8d75c2bcbcfae4c5",
+                "reference": "3deb0fd578c37f992240c93e8d75c2bcbcfae4c5",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -494,9 +494,9 @@
             "description": "Site Studio minimal theme",
             "support": {
                 "issues": "https://github.com/acquia/cohesion-theme/issues",
-                "source": "https://github.com/acquia/cohesion-theme/tree/6.9.1"
+                "source": "https://github.com/acquia/cohesion-theme/tree/6.9.2"
             },
-            "time": "2022-08-11T13:08:06+00:00"
+            "time": "2022-09-05T13:24:05+00:00"
         },
         {
             "name": "acquia/content-hub-php",
@@ -822,16 +822,16 @@
         },
         {
             "name": "acquia/sitestudio_contenthub",
-            "version": "6.9.1",
+            "version": "6.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/sitestudio_contenthub.git",
-                "reference": "e74dc6cb7ab7578500875238e918ac0a2487c94a"
+                "reference": "ff3eec30fcccb8ed2da01997b7a94b1a73b2495c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/e74dc6cb7ab7578500875238e918ac0a2487c94a",
-                "reference": "e74dc6cb7ab7578500875238e918ac0a2487c94a",
+                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/ff3eec30fcccb8ed2da01997b7a94b1a73b2495c",
+                "reference": "ff3eec30fcccb8ed2da01997b7a94b1a73b2495c",
                 "shasum": ""
             },
             "require": {
@@ -853,9 +853,9 @@
             "description": "Adds Site Studio support for Acquia ContentHub.",
             "support": {
                 "issues": "https://github.com/acquia/sitestudio_contenthub/issues",
-                "source": "https://github.com/acquia/sitestudio_contenthub/tree/6.9.1"
+                "source": "https://github.com/acquia/sitestudio_contenthub/tree/6.9.2"
             },
-            "time": "2022-08-11T13:08:12+00:00"
+            "time": "2022-09-05T13:24:11+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -6879,13 +6879,14 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/depcalc.git",
-                "reference": "36d0cca618b48fc0a3ee9415f388bc48392d8e1d"
+                "reference": "2fb7174e7dd8d7875a455e409415349183df12f6"
             },
             "require": {
                 "drupal/core": ">=9.2"
             },
             "require-dev": {
-                "drupal/entity_embed": "^1.0"
+                "drupal/entity_embed": "^1.0",
+                "drupal/paragraphs": "^1"
             },
             "type": "drupal-module",
             "extra": {
@@ -6894,8 +6895,8 @@
                     "dev-8.x-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.13+3-dev",
-                    "datestamp": "1657616524",
+                    "version": "8.x-1.13+4-dev",
+                    "datestamp": "1662638025",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6913,10 +6914,6 @@
             ],
             "authors": [
                 {
-                    "name": "EclipseGc",
-                    "homepage": "https://www.drupal.org/user/61203"
-                },
-                {
                     "name": "abarrios",
                     "homepage": "https://www.drupal.org/user/109765"
                 },
@@ -6927,6 +6924,10 @@
                 {
                     "name": "amarlata",
                     "homepage": "https://www.drupal.org/user/3504572"
+                },
+                {
+                    "name": "EclipseGc",
+                    "homepage": "https://www.drupal.org/user/61203"
                 },
                 {
                     "name": "jmoreira",
@@ -11106,17 +11107,17 @@
         },
         {
             "name": "drupal/next",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/next.git",
-                "reference": "1.2.0"
+                "reference": "1.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/next-1.2.0.zip",
-                "reference": "1.2.0",
-                "shasum": "12214e50e41d0cc486d14a5a90681acf6d04785c"
+                "url": "https://ftp.drupal.org/files/projects/next-1.3.0.zip",
+                "reference": "1.3.0",
+                "shasum": "696e94311d45aad7a27915930741368c64e2182b"
             },
             "require": {
                 "cweagans/composer-patches": "~1.0",
@@ -11128,14 +11129,16 @@
             },
             "require-dev": {
                 "drupal/decoupled_router": "*",
+                "drupal/jwt": "*",
+                "drupal/jwt_auth_consumer": "*",
                 "drupal/subrequests": "*",
                 "phpunit/phpunit": "^6.0 || ^7.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.0",
-                    "datestamp": "1651741391",
+                    "version": "1.3.0",
+                    "datestamp": "1662572080",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
