@@ -102,16 +102,16 @@
         },
         {
             "name": "acquia/acquia-cms-starterkit",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/acquia-cms-starterkit.git",
-                "reference": "9a1205f702d49b0cae4934f4ac69470126d8c913"
+                "reference": "f5ec9e3e06113a7ea4960f795d96e4c40d4e2594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/9a1205f702d49b0cae4934f4ac69470126d8c913",
-                "reference": "9a1205f702d49b0cae4934f4ac69470126d8c913",
+                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/f5ec9e3e06113a7ea4960f795d96e4c40d4e2594",
+                "reference": "f5ec9e3e06113a7ea4960f795d96e4c40d4e2594",
                 "shasum": ""
             },
             "require": {
@@ -170,9 +170,9 @@
             ],
             "support": {
                 "issues": "https://github.com/acquia/acquia-cms-starterkit/issues",
-                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/v1.0.3"
+                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/v1.0.4"
             },
-            "time": "2022-08-25T18:30:01+00:00"
+            "time": "2022-09-19T04:37:11+00:00"
         },
         {
             "name": "acquia/acquia_cms",
@@ -3277,8 +3277,8 @@
                     "version": "1.4.9",
                     "datestamp": "1662398842",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -3330,6 +3330,10 @@
                 {
                     "name": "acquia",
                     "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "vipin.mittal18",
+                    "homepage": "https://www.drupal.org/user/319716"
                 },
                 {
                     "name": "vishalkhode",
@@ -4254,10 +4258,6 @@
                     "homepage": "https://www.drupal.org/user/1231722"
                 },
                 {
-                    "name": "blueminds",
-                    "homepage": "https://www.drupal.org/user/128652"
-                },
-                {
                     "name": "Dane Powell",
                     "homepage": "https://www.drupal.org/user/339326"
                 },
@@ -4585,36 +4585,39 @@
         },
         {
             "name": "drupal/acquia_search",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_search.git",
-                "reference": "3.0.5"
+                "reference": "3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_search-3.0.5.zip",
-                "reference": "3.0.5",
-                "shasum": "caf78673dfd56b5da4198979d05e35a56c588943"
+                "url": "https://ftp.drupal.org/files/projects/acquia_search-3.0.6.zip",
+                "reference": "3.0.6",
+                "shasum": "7c2697099af2cd5b34841e5d2a4a017e1dfc4be7"
             },
             "require": {
-                "drupal/core": "^8.9 || ^9",
+                "drupal/core": "^9.2 || ^10",
                 "drupal/search_api_solr": "^4.1.12",
-                "http-interop/http-factory-guzzle": "^1.0",
-                "php-http/guzzle6-adapter": "^2.0"
+                "guzzlehttp/guzzle": "^6.5 || ^7.2",
+                "http-interop/http-factory-guzzle": "^1.0"
             },
             "conflict": {
                 "drupal/acquia_connector": "<3",
                 "drupal/search_api_solr_multilingual": "<3"
             },
             "require-dev": {
-                "drush/drush": "^10.0"
+                "drush/drush": "^10 || ^11"
+            },
+            "suggest": {
+                "php-http/guzzle6-adapter": "Required to use Acquia Connector with Guzzle 6 / Drupal 9.3 and lower"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.5",
-                    "datestamp": "1632416597",
+                    "version": "3.0.6",
+                    "datestamp": "1663871683",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4625,7 +4628,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^10"
+                        "drush.services.yml": "^10 || ^11"
                     }
                 }
             },
