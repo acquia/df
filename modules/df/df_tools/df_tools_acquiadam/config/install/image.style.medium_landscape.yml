@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acquia_cms_image
+_core:
+  default_config_hash: MPooU2NAT0Sqi7j39-IaxenaFnhoMrEK-L7TB7Efl20
+name: medium_landscape
+label: 'Medium Landscape'
+effects:
+  25ff55a2-6db0-461d-ba5d-2b02c7e50d28:
+    uuid: 25ff55a2-6db0-461d-ba5d-2b02c7e50d28
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 768
+      height: 512
+      anchor: center-center
