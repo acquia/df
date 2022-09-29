@@ -2743,16 +2743,16 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.7.3",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "09dde3eb237756190f2de738d3c97cff10a8407b"
+                "reference": "2b44dd4cbca8b5744327de78bafef5945c7e7b5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/09dde3eb237756190f2de738d3c97cff10a8407b",
-                "reference": "09dde3eb237756190f2de738d3c97cff10a8407b",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/2b44dd4cbca8b5744327de78bafef5945c7e7b5e",
+                "reference": "2b44dd4cbca8b5744327de78bafef5945c7e7b5e",
                 "shasum": ""
             },
             "require": {
@@ -2807,9 +2807,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/collections/issues",
-                "source": "https://github.com/doctrine/collections/tree/1.7.3"
+                "source": "https://github.com/doctrine/collections/tree/1.8.0"
             },
-            "time": "2022-09-01T19:34:23+00:00"
+            "time": "2022-09-01T20:12:10+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -10837,17 +10837,17 @@
         },
         {
             "name": "drupal/media_entity_soundcloud",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_entity_soundcloud.git",
-                "reference": "3.1.0"
+                "reference": "3.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_entity_soundcloud-3.1.0.zip",
-                "reference": "3.1.0",
-                "shasum": "e67a3535c51cdae2f4dc217d5d72c66dd6484aa1"
+                "url": "https://ftp.drupal.org/files/projects/media_entity_soundcloud-3.1.1.zip",
+                "reference": "3.1.1",
+                "shasum": "565bba7f8505c5330f52abc147b48e2bedd4e988"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -10855,8 +10855,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.0",
-                    "datestamp": "1664284259",
+                    "version": "3.1.1",
+                    "datestamp": "1664452204",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10979,37 +10979,38 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "1.21.0",
+            "version": "1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "8.x-1.21"
+                "reference": "8.x-1.22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.21.zip",
-                "reference": "8.x-1.21",
-                "shasum": "677ff7384b557390d4d1a36f335452e8172f741d"
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.22.zip",
+                "reference": "8.x-1.22",
+                "shasum": "045cd6a4aa5048bfd6d47584eae1210eab9ba1fa"
             },
             "require": {
-                "drupal/core": "^9",
-                "drupal/token": "^1.0",
-                "php": ">=7.0"
+                "drupal/core": "^9.3 || ^10",
+                "drupal/token": "^1.0"
             },
             "require-dev": {
-                "drupal/devel": "^4.0",
+                "drupal/devel": "^4.0 || ^5.0",
+                "drupal/hal": "^9 || ^1 || ^2",
                 "drupal/metatag_dc": "*",
                 "drupal/metatag_open_graph": "*",
-                "drupal/page_manager": "4.x-dev",
-                "drupal/panelizer": "4.x-dev",
-                "drupal/redirect": "1.x-dev",
+                "drupal/page_manager": "^4.0",
+                "drupal/panelizer": "^4.0",
+                "drupal/redirect": "^1.0",
+                "drupal/webprofiler": "^9 || ^10",
                 "mpyw/phpunit-patch-serializable-comparison": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.21",
-                    "datestamp": "1657971667",
+                    "version": "8.x-1.22",
+                    "datestamp": "1664472988",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13993,20 +13994,20 @@
         },
         {
             "name": "drupal/subrequests",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/subrequests.git",
-                "reference": "3.0.5"
+                "reference": "3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/subrequests-3.0.5.zip",
-                "reference": "3.0.5",
-                "shasum": "5d0a61bdd5e5e3229c4e1c4be1adde4b26863e39"
+                "url": "https://ftp.drupal.org/files/projects/subrequests-3.0.6.zip",
+                "reference": "3.0.6",
+                "shasum": "426a4cb77829648e3b67ec15ded57eb4b97a8e78"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^8 || ^9 || ^10",
                 "galbar/jsonpath": "^1.0"
             },
             "require-dev": {
@@ -14015,8 +14016,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.5",
-                    "datestamp": "1663142852",
+                    "version": "3.0.6",
+                    "datestamp": "1664452852",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
