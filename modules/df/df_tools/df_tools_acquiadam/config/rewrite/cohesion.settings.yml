@@ -1,0 +1,14 @@
+image_browser:
+  config:
+    type: medialib_imagebrowser
+    dx8_imce_stream_wrapper: public
+    dx8_entity_browser: media_browser
+    cohesion_media_lib_types:
+      - acquia_dam_image_asset
+      - image
+  content:
+    type: medialib_imagebrowser
+    dx8_entity_browser: media_browser
+    cohesion_media_lib_types:
+      - acquia_dam_image_asset
+      - image
