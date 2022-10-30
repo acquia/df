@@ -6,8 +6,6 @@ dependencies:
     - media.type.acquia_dam_image_asset
   module:
     - acquia_dam
-_core:
-  default_config_hash: ZmrSbFMbvCuXoliTZkpkZCgarZIlEDboMfsvR4MBgTU
 id: media.acquia_dam_image_asset.medium_landscape
 targetEntityType: media
 bundle: acquia_dam_image_asset
@@ -17,7 +15,7 @@ content:
     type: acquia_dam_embed_code
     label: hidden
     settings:
-      embed_style: medium_landscape
+      embed_style: coh_medium_landscape
     third_party_settings: {  }
     weight: 0
     region: content
