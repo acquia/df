@@ -1905,16 +1905,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.5.7",
+            "version": "4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "3785525bfc40d8230452f4c07db8a7bf0530d8f3"
+                "reference": "ee63c57f929e7131c714783193512ea4f76de74c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/3785525bfc40d8230452f4c07db8a7bf0530d8f3",
-                "reference": "3785525bfc40d8230452f4c07db8a7bf0530d8f3",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/ee63c57f929e7131c714783193512ea4f76de74c",
+                "reference": "ee63c57f929e7131c714783193512ea4f76de74c",
                 "shasum": ""
             },
             "require": {
@@ -1955,9 +1955,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.5.7"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.6.0"
             },
-            "time": "2022-10-20T11:00:10+00:00"
+            "time": "2022-10-30T22:08:00+00:00"
         },
         {
             "name": "consolidation/config",
@@ -8226,29 +8226,26 @@
         },
         {
             "name": "drupal/field_group",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_group.git",
-                "reference": "8.x-3.3"
+                "reference": "8.x-3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.3.zip",
-                "reference": "8.x-3.3",
-                "shasum": "c7a423b1d7643ee40dd1543d72fa04e8ac1756e4"
+                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.4.zip",
+                "reference": "8.x-3.4",
+                "shasum": "80b937e1a11f8b29c69d853fc4bf798c057c6f94"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "require-dev": {
-                "drupal/jquery_ui_accordion": "^1.0"
+                "drupal/core": "^9.2 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.3",
-                    "datestamp": "1663516404",
+                    "version": "8.x-3.4",
+                    "datestamp": "1667241979",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
