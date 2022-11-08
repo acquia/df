@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38262cbab8c8d9acc253ba9d99de480d",
+    "content-hash": "eb808c767677acad7059606d25762473",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -500,16 +500,16 @@
         },
         {
             "name": "acquia/content-hub-php",
-            "version": "2.4.1",
+            "version": "3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/content-hub-php.git",
-                "reference": "7214412684298512adfb01b556e39e12b3b08453"
+                "reference": "756e1124f3774dbb354a1febd3eec761bad5a0ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/7214412684298512adfb01b556e39e12b3b08453",
-                "reference": "7214412684298512adfb01b556e39e12b3b08453",
+                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/756e1124f3774dbb354a1febd3eec761bad5a0ee",
+                "reference": "756e1124f3774dbb354a1febd3eec761bad5a0ee",
                 "shasum": ""
             },
             "require": {
@@ -528,7 +528,8 @@
                 "pdepend/pdepend": "~1.0",
                 "phploc/phploc": "~2.0",
                 "phpmd/phpmd": "~1.0",
-                "phpunit/phpunit": "^8",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9",
                 "scrutinizer/ocular": "~1.0",
                 "sebastian/phpcpd": "~2.0",
                 "squizlabs/php_codesniffer": "^3.5"
@@ -539,7 +540,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-2.x": "2.x-dev"
+                    "dev-3.x": "3.x-dev"
                 }
             },
             "autoload": {
@@ -561,9 +562,9 @@
             "homepage": "https://github.com/acquia/content-hub-php",
             "support": {
                 "issues": "https://github.com/acquia/content-hub-php/issues",
-                "source": "https://github.com/acquia/content-hub-php/tree/2.4.1"
+                "source": "https://github.com/acquia/content-hub-php/tree/3.0"
             },
-            "time": "2022-09-09T09:27:00+00:00"
+            "time": "2022-09-27T16:09:53+00:00"
         },
         {
             "name": "acquia/contenthub-console",
@@ -882,24 +883,23 @@
         },
         {
             "name": "acquia/sitestudio_contenthub",
-            "version": "6.9.2",
+            "version": "6.9.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/acquia/sitestudio_contenthub.git",
-                "reference": "ff3eec30fcccb8ed2da01997b7a94b1a73b2495c"
+                "url": "https://github.com/vaibhav-acquia/sitestudio_contenthub.git",
+                "reference": "79cc904a274058b6019e2e3fe1847d530c87393c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/ff3eec30fcccb8ed2da01997b7a94b1a73b2495c",
-                "reference": "ff3eec30fcccb8ed2da01997b7a94b1a73b2495c",
+                "url": "https://api.github.com/repos/vaibhav-acquia/sitestudio_contenthub/zipball/79cc904a274058b6019e2e3fe1847d530c87393c",
+                "reference": "79cc904a274058b6019e2e3fe1847d530c87393c",
                 "shasum": ""
             },
             "require": {
                 "acquia/cohesion": "^6.7.0",
-                "drupal/acquia_contenthub": "^2.28.0"
+                "drupal/acquia_contenthub": "^2.28.0 || ^3"
             },
             "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -912,10 +912,9 @@
             ],
             "description": "Adds Site Studio support for Acquia ContentHub.",
             "support": {
-                "issues": "https://github.com/acquia/sitestudio_contenthub/issues",
-                "source": "https://github.com/acquia/sitestudio_contenthub/tree/6.9.2"
+                "source": "https://github.com/vaibhav-acquia/sitestudio_contenthub/tree/6.9.x"
             },
-            "time": "2022-09-05T13:24:11+00:00"
+            "time": "2022-11-03T12:56:34+00:00"
         },
         {
             "name": "arthurkushman/query-path",
@@ -4510,24 +4509,25 @@
         },
         {
             "name": "drupal/acquia_contenthub",
-            "version": "2.37.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_contenthub.git",
-                "reference": "8.x-2.37"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-8.x-2.37.zip",
-                "reference": "8.x-2.37",
-                "shasum": "5df893f25e7c48c8b585184b60eb7abf7e39c6ad"
+                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "c1e44ee2a13e95cea73d6031c58e9355c9e70266"
             },
             "require": {
-                "acquia/content-hub-php": "^2.4.1",
+                "acquia/content-hub-php": "^3.0",
                 "acquia/contenthub-console": "^1.6.2",
                 "drupal/core": ">=9.2",
                 "drupal/depcalc": "^1.16",
                 "laminas/laminas-diactoros": "^1.8 || ^2.2",
+                "spatie/ssl-certificate": "1.21 || 1.22.1",
                 "symfony/psr-http-message-bridge": "^1.1.2 || ^2.0"
             },
             "require-dev": {
@@ -4547,15 +4547,15 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.37",
-                    "datestamp": "1667904514",
+                    "version": "3.0.0",
+                    "datestamp": "1664475922",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-8.x-2.x": "2.x-dev"
+                    "dev-3.x": "3.x-dev"
                 },
                 "drush": {
                     "services": {
@@ -24129,6 +24129,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "acquia/acf": 20,
+        "acquia/sitestudio_contenthub": 20,
         "drupal/acquia_cms_toolbar_gin": 10,
         "drupal/auto_entitylabel": 10,
         "drupal/conditional_fields": 15,
