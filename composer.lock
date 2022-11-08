@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33b48357eae67c04ce875082217a0f9f",
+    "content-hash": "66ef9b4849a7ae422b8bc3fabec0cb19",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -12669,26 +12669,27 @@
         },
         {
             "name": "drupal/require_login",
-            "version": "2.4.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/require_login.git",
-                "reference": "8.x-2.4"
+                "reference": "3.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/require_login-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "b47b0bde6925d83fe48b835bfd95ed35296b5897"
+                "url": "https://ftp.drupal.org/files/projects/require_login-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "700f9bfe385d939e345e5d4a4f55f72833665cfa"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "php": ">=7.4"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1615474748",
+                    "version": "3.0.2",
+                    "datestamp": "1663943973",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12701,15 +12702,16 @@
             ],
             "authors": [
                 {
-                    "name": "robphillips",
-                    "homepage": "https://www.drupal.org/user/459772"
+                    "name": "Robert Phillips",
+                    "homepage": "https://www.drupal.org/user/459772",
+                    "email": "rob@imagexmedia.com"
                 },
                 {
                     "name": "sindurig",
                     "homepage": "https://www.drupal.org/user/3684910"
                 }
             ],
-            "description": "Provides catch-all solution to require user authentication on pages.",
+            "description": "Easily require user authentication on all pages.",
             "homepage": "https://www.drupal.org/project/require_login",
             "support": {
                 "source": "https://git.drupalcode.org/project/require_login"
