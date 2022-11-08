@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ef9b4849a7ae422b8bc3fabec0cb19",
+    "content-hash": "38262cbab8c8d9acc253ba9d99de480d",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -15262,27 +15262,27 @@
         },
         {
             "name": "drupal/webform_mautic",
-            "version": "1.3.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform_mautic.git",
-                "reference": "8.x-1.3"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform_mautic-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "c60f832ab5a22fde887fd39193abc5f25bcd4faa"
+                "url": "https://ftp.drupal.org/files/projects/webform_mautic-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "b8e357abe08c97578a3bf64e6f5d3e1e5ddd1197"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10",
-                "drupal/webform": "*"
+                "drupal/webform": "^6"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1658527541",
+                    "version": "2.0.0",
+                    "datestamp": "1658532827",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15295,8 +15295,9 @@
             ],
             "authors": [
                 {
-                    "name": "Mohammed J. Razem",
-                    "homepage": "https://www.drupal.org/user/255384"
+                    "name": "Vardot",
+                    "homepage": "https://www.drupal.org/vardot",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "Rajab Natshah",
@@ -15306,7 +15307,8 @@
             "description": "Allows to send Webform submissions as contacts through Mautic forms.",
             "homepage": "https://www.drupal.org/project/webform_mautic",
             "support": {
-                "source": "https://git.drupalcode.org/project/webform_mautic"
+                "source": "http://cgit.drupalcode.org/webform_mautic",
+                "issues": "https://www.drupal.org/project/issues/webform_mautic"
             }
         },
         {
