@@ -918,6 +918,59 @@
             "time": "2022-09-05T13:24:11+00:00"
         },
         {
+            "name": "arthurkushman/query-path",
+            "version": "3.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arthurkushman/querypath.git",
+                "reference": "a62260eddc58e0b30dfeb7c9db60a8bd593d2135"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arthurkushman/querypath/zipball/a62260eddc58e0b30dfeb7c9db60a8bd593d2135",
+                "reference": "a62260eddc58e0b30dfeb7c9db60a8bd593d2135",
+                "shasum": ""
+            },
+            "require": {
+                "masterminds/html5": "2.*",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "^1.8",
+                "mockery/mockery": "^1.1",
+                "phpunit/phpunit": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/qp_functions.php"
+                ],
+                "psr-4": {
+                    "QueryPath\\": "src/",
+                    "QueryPathTests\\": "tests/QueryPath/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "HTML/XML querying (CSS 4 or XPath) and processing (like jQuery)",
+            "homepage": "https://github.com/arthurkushman/querypath",
+            "keywords": [
+                "PHP7",
+                "css",
+                "html",
+                "jquery",
+                "xml",
+                "xslt"
+            ],
+            "support": {
+                "issues": "https://github.com/arthurkushman/querypath/issues",
+                "source": "https://github.com/arthurkushman/querypath/tree/3.1.4"
+            },
+            "time": "2022-03-28T14:28:31+00:00"
+        },
+        {
             "name": "asm89/stack-cors",
             "version": "1.3.0",
             "source": {
@@ -3339,24 +3392,24 @@
         },
         {
             "name": "drupal/acquia_cms_common",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_common.git",
-                "reference": "1.5.0"
+                "reference": "1.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-1.5.0.zip",
-                "reference": "1.5.0",
-                "shasum": "e2b8e1f5b8316fbcb19c4ab07b53048f265d3506"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-1.5.1.zip",
+                "reference": "1.5.1",
+                "shasum": "26ea0cd0092e62bfe963aa751517e8ab82548886"
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.4",
                 "acquia/memcache-settings": "^1",
                 "cweagans/composer-patches": "^1.7",
                 "drupal/acquia_connector": "^3 || ^4",
-                "drupal/acquia_contenthub": "^2.25",
+                "drupal/acquia_contenthub": "^2.25 || ^3",
                 "drupal/acquia_lift": "^4.2",
                 "drupal/acquia_purge": "^1",
                 "drupal/acquia_search": "^3.0.3",
@@ -3418,8 +3471,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.5.0",
-                    "datestamp": "1665133316",
+                    "version": "1.5.1",
+                    "datestamp": "1667452807",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4457,17 +4510,17 @@
         },
         {
             "name": "drupal/acquia_contenthub",
-            "version": "2.36.0",
+            "version": "2.37.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_contenthub.git",
-                "reference": "8.x-2.36"
+                "reference": "8.x-2.37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-8.x-2.36.zip",
-                "reference": "8.x-2.36",
-                "shasum": "801c5aa40707e1295c4598d0d8d9983099d4e4cf"
+                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-8.x-2.37.zip",
+                "reference": "8.x-2.37",
+                "shasum": "5df893f25e7c48c8b585184b60eb7abf7e39c6ad"
             },
             "require": {
                 "acquia/content-hub-php": "^2.4.1",
@@ -4494,8 +4547,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.36",
-                    "datestamp": "1666714696",
+                    "version": "8.x-2.37",
+                    "datestamp": "1667904514",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4572,17 +4625,17 @@
         },
         {
             "name": "drupal/acquia_dam",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_dam.git",
-                "reference": "1.0.1"
+                "reference": "1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "de06dc385ebe706a234aaf51de9389c96c5a5582"
+                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "4aeb5000c31ec655d3c9d12befa53a324cdc9614"
             },
             "require": {
                 "drupal/core": ">=9.4",
@@ -4593,14 +4646,15 @@
                 "acquia/cohesion": "^6.8",
                 "acquia/cohesion-theme": "^6.8",
                 "drupal/entity_reference_revisions": "~1.3",
+                "drupal/focal_point": "^1.5",
                 "drupal/media_acquiadam": "^2.0",
                 "drupal/token": "^1.10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1661199672",
+                    "version": "1.0.2",
+                    "datestamp": "1667397780",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5694,17 +5748,17 @@
         },
         {
             "name": "drupal/captcha",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/captcha.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "36284ece721d3534d0c3bd6ae01cdb549920a024"
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "24b755e77ff4a95f40ef074c91ed9132303fafbb"
             },
             "require": {
                 "drupal/core": ">=8.9 <11"
@@ -5712,8 +5766,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1662751122",
+                    "version": "8.x-1.6",
+                    "datestamp": "1667906819",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5729,8 +5783,20 @@
             ],
             "authors": [
                 {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
                     "name": "elachlan",
                     "homepage": "https://www.drupal.org/user/1021502"
+                },
+                {
+                    "name": "gisle",
+                    "homepage": "https://www.drupal.org/user/409554"
+                },
+                {
+                    "name": "Grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
                 },
                 {
                     "name": "japerry",
@@ -5751,6 +5817,10 @@
                 {
                     "name": "soxofaan",
                     "homepage": "https://www.drupal.org/user/41478"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
                 },
                 {
                     "name": "wundo",
@@ -8162,24 +8232,24 @@
         },
         {
             "name": "drupal/feeds_ex",
-            "version": "1.0.0-beta1",
+            "version": "1.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds_ex.git",
-                "reference": "8.x-1.0-beta1"
+                "reference": "8.x-1.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds_ex-8.x-1.0-beta1.zip",
-                "reference": "8.x-1.0-beta1",
-                "shasum": "26fbbbf7c95a5f7887f04cd2c4505523debd8f60"
+                "url": "https://ftp.drupal.org/files/projects/feeds_ex-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "ba0e70154a2ac29edd03495271dc403d33411d38"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "arthurkushman/query-path": "^3.0",
+                "drupal/core": "^9 || ^10",
                 "drupal/feeds": "*",
                 "mtdowling/jmespath.php": "^2.0",
-                "querypath/querypath": "^3.0",
-                "softcreatr/jsonpath": "^0.5 || ^0.7"
+                "softcreatr/jsonpath": "^0.5 || ^0.7 || ^0.8"
             },
             "require-dev": {
                 "drupal/feeds": "3.x-dev"
@@ -8187,8 +8257,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta1",
-                    "datestamp": "1645727729",
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1667586771",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -11460,26 +11530,26 @@
         },
         {
             "name": "drupal/moderation_sidebar",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/moderation_sidebar.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/moderation_sidebar-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "d3391f5ca10a9d145d217ef2ce0b463d90a14510"
+                "url": "https://ftp.drupal.org/files/projects/moderation_sidebar-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "a854296ff5d59df0fba16df781cf6c9f071c4bfe"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1648129967",
+                    "version": "8.x-1.6",
+                    "datestamp": "1667433303",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13425,7 +13495,7 @@
         },
         {
             "name": "drupal/search_api_db",
-            "version": "1.27.0",
+            "version": "1.28.0",
             "require": {
                 "drupal/core": "^9.2 || ^10.0",
                 "drupal/search_api": "*"
@@ -13433,8 +13503,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.27",
-                    "datestamp": "1666211720",
+                    "version": "8.x-1.28",
+                    "datestamp": "1667814116",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13705,20 +13775,20 @@
         },
         {
             "name": "drupal/simple_oauth",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_oauth.git",
-                "reference": "5.2.0"
+                "reference": "5.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_oauth-5.2.0.zip",
-                "reference": "5.2.0",
-                "shasum": "3d2b0f38284190a59e4ac99d6f5d4af424c4d19f"
+                "url": "https://ftp.drupal.org/files/projects/simple_oauth-5.2.1.zip",
+                "reference": "5.2.1",
+                "shasum": "831aadf6d4ecc723429a0582bb2abc01ac24db1d"
             },
             "require": {
-                "drupal/consumers": "^1.2",
+                "drupal/consumers": "^1.14",
                 "drupal/core": "^8 || ^9",
                 "lcobucci/jwt": "^4",
                 "league/oauth2-server": "^8.3",
@@ -13731,8 +13801,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.2.0",
-                    "datestamp": "1641403293",
+                    "version": "5.2.1",
+                    "datestamp": "1667802031",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13746,7 +13816,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -19660,52 +19730,6 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.10.12"
             },
             "time": "2021-11-30T14:05:36+00:00"
-        },
-        {
-            "name": "querypath/querypath",
-            "version": "3.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/technosophos/querypath.git",
-                "reference": "6b8e2395fac61fac25bbe962f94def556cb85f7d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/technosophos/querypath/zipball/6b8e2395fac61fac25bbe962f94def556cb85f7d",
-                "reference": "6b8e2395fac61fac25bbe962f94def556cb85f7d",
-                "shasum": ""
-            },
-            "require": {
-                "masterminds/html5": "2.*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/qp_functions.php"
-                ],
-                "psr-0": {
-                    "QueryPath": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "HTML/XML querying (CSS 4 or XPath) and processing (like jQuery)",
-            "homepage": "https://github.com/technosophos/querypath",
-            "keywords": [
-                "css",
-                "html",
-                "jquery",
-                "xml",
-                "xslt"
-            ],
-            "support": {
-                "issues": "https://github.com/technosophos/querypath/issues",
-                "source": "https://github.com/technosophos/querypath/tree/master"
-            },
-            "time": "2016-08-01T22:40:30+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
