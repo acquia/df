@@ -61,7 +61,7 @@ install:
 
   # Install Demo Framework cleanly so that settings.php will be created properly.
   - drush site-install df --db-url=mysql://df:df@127.0.0.1/drupal -y
-  - robo configure:behat 'http://127.0.0.1:8080'
+  # - robo configure:behat 'http://127.0.0.1:8080'
 
 before_script:
   - drush config:set system.date timezone.default $TZ --yes
