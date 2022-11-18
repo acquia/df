@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.headless_section
+    - field.field.block_content.headless_section.field_link
+    - field.field.block_content.headless_section.field_section_description
+    - field.field.block_content.headless_section.field_section_heading
+    - field.field.block_content.headless_section.field_section_image
+    - image.style.focal_point_preview
+  module:
+    - focal_point
+    - imce
+    - link
+    - text
+id: block_content.headless_section.default
+targetEntityType: block_content
+bundle: headless_section
+mode: default
+content:
+  field_link:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_section_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_image:
+    type: image_focal_point
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: focal_point_preview
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings:
+      imce:
+        enabled: true
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  info: true

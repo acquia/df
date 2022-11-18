@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_description
+    - node.type.headless
+  module:
+    - text
+id: node.headless.field_section_description
+field_name: field_section_description
+entity_type: node
+bundle: headless
+label: 'Section Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

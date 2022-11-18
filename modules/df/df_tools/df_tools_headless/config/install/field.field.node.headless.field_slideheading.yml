@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slideheading
+    - node.type.headless
+  module:
+    - text
+id: node.headless.field_slideheading
+field_name: field_slideheading
+entity_type: node
+bundle: headless
+label: 'Slide Heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
