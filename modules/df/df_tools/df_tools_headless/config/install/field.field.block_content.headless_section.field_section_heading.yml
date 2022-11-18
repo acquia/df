@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.headless_section
+    - field.storage.block_content.field_section_heading
+id: block_content.headless_section.field_section_heading
+field_name: field_section_heading
+entity_type: block_content
+bundle: headless_section
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

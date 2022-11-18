@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_articles
+    - node.type.headless
+id: node.headless.field_show_articles
+field_name: field_show_articles
+entity_type: node
+bundle: headless
+label: 'Show Articles'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_ty
+    - node.type.headless
+  module:
+    - options
+id: node.headless.field_hero_ty
+field_name: field_hero_ty
+entity_type: node
+bundle: headless
+label: 'Hero type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: banner_hero
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_hero_ty
+field_name: field_hero_ty
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: banner_hero
+      label: 'Banner Type Hero'
+    -
+      value: slider_hero
+      label: 'Slider Type Hero'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
