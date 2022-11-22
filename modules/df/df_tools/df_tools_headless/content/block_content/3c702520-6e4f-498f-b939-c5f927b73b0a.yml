@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 3c702520-6e4f-498f-b939-c5f927b73b0a
+  bundle: headless_section
+  default_langcode: en
+  depends:
+    1da2bf1c-1ffb-4053-9554-d8077707217b: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Headless section'
+  status:
+    -
+      value: true
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_section_description:
+    -
+      value: "<p>When we’re on the trail and connecting with nature, we don’t want to hear more than the sound of our tyres on the dirt, the wind through the trees, and the hoots and shouts of our riding crew. Up until now, e-bikes have pulled us away from that experience with high-pitched motors that take us out of the element. The Fuel EXe is different. It’s not only quieter – it’s less annoying.</p>\r\n"
+      format: filtered_html
+  field_section_heading:
+    -
+      value: 'Less is more'
+  field_section_image:
+    -
+      entity: 1da2bf1c-1ffb-4053-9554-d8077707217b
+      alt: 'Black bike'
+      title: ''
+      width: 1920
+      height: 1356

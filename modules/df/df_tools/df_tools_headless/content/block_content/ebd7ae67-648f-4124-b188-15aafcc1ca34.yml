@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: ebd7ae67-648f-4124-b188-15aafcc1ca34
+  bundle: headless_section
+  default_langcode: en
+  depends:
+    08152f1f-0db2-4f82-b06d-d827ca6a9d85: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Headless section'
+  status:
+    -
+      value: true
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_section_description:
+    -
+      value: "<p>Our bikes assist feels natural, barely there – like an extension of your own power, so you can ride just as you would on a traditional mountain bike.</p>\r\n"
+      format: filtered_html
+  field_section_heading:
+    -
+      value: 'When we’re on the trail and connecting with nature'
+  field_section_image:
+    -
+      entity: 08152f1f-0db2-4f82-b06d-d827ca6a9d85
+      alt: 'Alt bike'
+      title: ''
+      width: 3600
+      height: 2400

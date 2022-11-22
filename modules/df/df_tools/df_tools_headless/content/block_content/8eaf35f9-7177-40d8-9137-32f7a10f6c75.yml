@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 8eaf35f9-7177-40d8-9137-32f7a10f6c75
+  bundle: headless_section
+  default_langcode: en
+  depends:
+    46ebbc62-e0e8-4c9a-bdc6-f30b15622096: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Headless section'
+  status:
+    -
+      value: true
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_section_description:
+    -
+      value: "<p>They're capable geometry is fine-tuned for barrelling into berms and making light work of tech trails, lacing turns through tight aspens and gnawing through rowdy rock gardens. Instead of being flung uphill like a rocket launcher, our bikes assist feels natural, barely there – like an extension of your own power, so you can ride just as you would on a traditional mountain bike.</p>\r\n"
+      format: filtered_html
+  field_section_heading:
+    -
+      value: 'They''re capable geometry is fine-tuned'
+  field_section_image:
+    -
+      entity: 46ebbc62-e0e8-4c9a-bdc6-f30b15622096
+      alt: 'Alt Text'
+      title: ''
+      width: 2000
+      height: 2000
