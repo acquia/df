@@ -1,0 +1,70 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f2f0bd3f-d5ff-4a49-bf36-81a910a4c416
+  bundle: headless
+  default_langcode: en
+  depends:
+    3c702520-6e4f-498f-b939-c5f927b73b0a: block_content
+    ed830210-3135-4007-93c8-f0e6250ec82a: block_content
+    8eaf35f9-7177-40d8-9137-32f7a10f6c75: block_content
+    ebd7ae67-648f-4124-b188-15aafcc1ca34: block_content
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Updated Headless'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'The bike that makes every road ride better everyday'
+  created:
+    -
+      value: 1669044875
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /home
+      langcode: en
+      pathauto: 0
+  field_description:
+    -
+      value: "<p>Sometimes the beauty isn’t in what we see, but what we don’t. Nestled neatly behind the front chain ring, the naturally advanced harmonic pin ring transmission blends in effortlessly. Its petite package allows for a 39% smaller downtube than a traditional e-MTB, resulting in a ride that fits right in with traditional mountain bikes on the trail</p>\r\n"
+      format: filtered_html
+  field_heading:
+    -
+      value: 'Any trail, any time, with eudaimonia.'
+      format: filtered_html
+  field_hero_ty:
+    -
+      value: banner_hero
+  field_sections:
+    -
+      entity: 3c702520-6e4f-498f-b939-c5f927b73b0a
+    -
+      entity: ed830210-3135-4007-93c8-f0e6250ec82a
+    -
+      entity: 8eaf35f9-7177-40d8-9137-32f7a10f6c75
+    -
+      entity: ebd7ae67-648f-4124-b188-15aafcc1ca34
+  field_show_articles:
+    -
+      value: true
+  field_show_places:
+    -
+      value: true
+  field_show_products:
+    -
+      value: true

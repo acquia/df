@@ -1,10 +1,75 @@
+config_rewrite: replace
+langcode: en
+status: true
 dependencies:
   config:
-    - image.style.focal_point_preview
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_tags
+    - field.field.media.image.image
+    - image.style.thumbnail
+    - media.type.image
   module:
     - focal_point
+    - path
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
 content:
-  image:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_image:
     type: image_focal_point
+    weight: 0
+    region: content
     settings:
-      preview_image_style: focal_point_preview
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_categories: true
+  field_tags: true
+  image: true
+  name: true

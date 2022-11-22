@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: ed830210-3135-4007-93c8-f0e6250ec82a
+  bundle: headless_section
+  default_langcode: en
+  depends:
+    eaf592b1-bda2-4725-b2ff-566be2053991: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Created new Headless section'
+  status:
+    -
+      value: true
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_section_description:
+    -
+      value: "<p>While some e-bikes feel cumbersome and bulky, the our bikes are light, nimble and playful, just as a trail bike should be. They're capable geometry is fine-tuned for barrelling into berms and making light work of tech trails, lacing turns through tight aspens and gnawing through rowdy rock gardens. Instead of being flung uphill like a rocket launcher, our bikes assist feels natural, barely there – like an extension of your own power, so you can ride just as you would on a traditional mountain bike.</p>\r\n"
+      format: filtered_html
+  field_section_heading:
+    -
+      value: 'Built like a trail bike. Rips like a trail bike.'
+  field_section_image:
+    -
+      entity: eaf592b1-bda2-4725-b2ff-566be2053991
+      alt: 'Man riding the cycle'
+      title: ''
+      width: 1920
+      height: 1209
