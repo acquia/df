@@ -102,29 +102,30 @@
         },
         {
             "name": "acquia/acquia-cms-starterkit",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/acquia-cms-starterkit.git",
-                "reference": "a52e18dee6ed6b0574f271c6fb397bad3a18c5c3"
+                "reference": "77906f7901b5f51d3874485a200bb072a17c9daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/a52e18dee6ed6b0574f271c6fb397bad3a18c5c3",
-                "reference": "a52e18dee6ed6b0574f271c6fb397bad3a18c5c3",
+                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/77906f7901b5f51d3874485a200bb072a17c9daa",
+                "reference": "77906f7901b5f51d3874485a200bb072a17c9daa",
                 "shasum": ""
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.4",
                 "composer/composer": "^2.2",
                 "stecman/symfony-console-completion": "^0.11.0 || ^0.12.0",
-                "symfony/config": "^4.1 || ^5 || ^6",
-                "symfony/console": "^4.1 || ^5 || ^6",
-                "symfony/dependency-injection": "^4.1 || ^5 || ^6",
-                "symfony/http-client": "^4.1 || ^5 || ^6",
-                "symfony/http-kernel": "^4.1 || ^5 || ^6",
-                "symfony/process": "^4.1 || ^5 || ^6",
-                "symfony/yaml": "^4.1 || ^5 || ^6"
+                "symfony/config": "^4.4 || ^5 || ^6",
+                "symfony/console": "^4.4 || ^5 || ^6",
+                "symfony/dependency-injection": "^4.4 || ^5 || ^6",
+                "symfony/filesystem": "^4.4 || ^5.4 || ^6",
+                "symfony/http-client": "^5 || ^6",
+                "symfony/http-kernel": "^4.4 || ^5 || ^6",
+                "symfony/process": "^4.4 || ^5 || ^6",
+                "symfony/yaml": "^4.4 || ^5 || ^6"
             },
             "require-dev": {
                 "acquia/coding-standards": "^1.0",
@@ -170,9 +171,9 @@
             ],
             "support": {
                 "issues": "https://github.com/acquia/acquia-cms-starterkit/issues",
-                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/v1.0.6"
+                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/v1.0.7"
             },
-            "time": "2022-12-16T18:55:29+00:00"
+            "time": "2023-01-23T07:25:45+00:00"
         },
         {
             "name": "acquia/acquia_cms",
@@ -304,16 +305,16 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "6.9.3",
+            "version": "6.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "559361cd6f1693b120e235d3a8ab9f2a7edfb0a5"
+                "reference": "a33282de3c90b5bf9d4143bf53a4e0b8dc8785dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/559361cd6f1693b120e235d3a8ab9f2a7edfb0a5",
-                "reference": "559361cd6f1693b120e235d3a8ab9f2a7edfb0a5",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/a33282de3c90b5bf9d4143bf53a4e0b8dc8785dc",
+                "reference": "a33282de3c90b5bf9d4143bf53a4e0b8dc8785dc",
                 "shasum": ""
             },
             "require": {
@@ -364,9 +365,9 @@
             ],
             "description": "Site Studio",
             "support": {
-                "source": "https://github.com/acquia/cohesion/tree/6.9.3"
+                "source": "https://github.com/acquia/cohesion/tree/6.9.4"
             },
-            "time": "2022-10-06T19:56:18+00:00"
+            "time": "2023-01-24T15:02:54+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
@@ -4477,17 +4478,17 @@
         },
         {
             "name": "drupal/acquia_dam",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_dam.git",
-                "reference": "1.0.3"
+                "reference": "1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.3.zip",
-                "reference": "1.0.3",
-                "shasum": "5078669e815de5ea7dd7bd4e5be21b6e27c0fa2c"
+                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "c0d8b54bd219c58c5777ab6219269b4685c836c5"
             },
             "require": {
                 "drupal/core": ">=9.4",
@@ -4498,18 +4499,19 @@
                 "acquia/cohesion": "<6.9.3"
             },
             "require-dev": {
-                "acquia/cohesion": "^6.9.3",
-                "acquia/cohesion-theme": "^6.9.3",
+                "acquia/cohesion": "^7.0",
+                "acquia/cohesion-theme": "^7.0",
+                "drupal/ckeditor": "^1.0",
                 "drupal/entity_reference_revisions": "~1.3",
-                "drupal/focal_point": "^1.5",
+                "drupal/focal_point": "^1.5 || ^2.0",
                 "drupal/media_acquiadam": "^2.0",
                 "drupal/token": "^1.10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.3",
-                    "datestamp": "1671126449",
+                    "version": "1.0.4",
+                    "datestamp": "1674847821",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4604,17 +4606,17 @@
         },
         {
             "name": "drupal/acquia_perz",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_perz.git",
-                "reference": "4.1.1"
+                "reference": "4.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_perz-4.1.1.zip",
-                "reference": "4.1.1",
-                "shasum": "615a89cc5991afbdd91b15754c463b8310e4efcf"
+                "url": "https://ftp.drupal.org/files/projects/acquia_perz-4.1.2.zip",
+                "reference": "4.1.2",
+                "shasum": "83215ff519f86b5395a315a3563c4cb8699ad3e2"
             },
             "require": {
                 "acquia/perz-api-php": "^0.1.3",
@@ -4640,8 +4642,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.1",
-                    "datestamp": "1669743223",
+                    "version": "4.1.2",
+                    "datestamp": "1674609420",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4735,17 +4737,17 @@
         },
         {
             "name": "drupal/acquia_search",
-            "version": "3.1.3",
+            "version": "3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_search.git",
-                "reference": "3.1.3"
+                "reference": "3.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_search-3.1.3.zip",
-                "reference": "3.1.3",
-                "shasum": "c18328eab38275a54440bd29c1305ecad6ba6560"
+                "url": "https://ftp.drupal.org/files/projects/acquia_search-3.1.4.zip",
+                "reference": "3.1.4",
+                "shasum": "9ae186bc61ac9ad12dd24b093fd4445c36a1054e"
             },
             "require": {
                 "acquia/http-hmac-php": ">=5.0",
@@ -4768,8 +4770,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.3",
-                    "datestamp": "1673635793",
+                    "version": "3.1.4",
+                    "datestamp": "1674581077",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7373,17 +7375,17 @@
         },
         {
             "name": "drupal/eca_cm",
-            "version": "1.0.2",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eca_cm.git",
-                "reference": "1.0.2"
+                "reference": "1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eca_cm-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "48330950150ffd50f5628347e411ec820af1ab7c"
+                "url": "https://ftp.drupal.org/files/projects/eca_cm-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "4eaae30baac11ef1622dbc82a9d7048df4d96c76"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -7393,8 +7395,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1664386959",
+                    "version": "1.0.4",
+                    "datestamp": "1674914090",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14166,26 +14168,26 @@
         },
         {
             "name": "drupal/slack",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/slack.git",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/slack-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "b724344063aff1cf430f15c51c9328e321d60748"
+                "url": "https://ftp.drupal.org/files/projects/slack-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "7c3873ae6875d6693659ee2317d621e599eb47b9"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1599034179",
+                    "version": "8.x-1.4",
+                    "datestamp": "1674691575",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14199,25 +14201,34 @@
             "authors": [
                 {
                     "name": "Serge_Konst",
-                    "homepage": "https://www.drupal.org/user/3285403"
+                    "homepage": "https://www.drupal.org/u/serge_konst",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Evgeny Leonov",
+                    "homepage": "https://www.drupal.org/u/hxdef",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "adci_contributor",
-                    "homepage": "https://www.drupal.org/user/1830536"
+                    "homepage": "https://www.drupal.org/u/adci_contributor",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "adcillc",
-                    "homepage": "https://www.drupal.org/user/366450"
+                    "name": "Stephen Mustgrave (smustgrave)",
+                    "homepage": "https://www.drupal.org/u/smustgrave",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "hxdef",
-                    "homepage": "https://www.drupal.org/user/2622115"
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
                 }
             ],
             "description": "Integration with Slack.com service.",
             "homepage": "https://www.drupal.org/project/slack",
             "support": {
-                "source": "https://git.drupalcode.org/project/slack"
+                "source": "https://git.drupalcode.org/project/slack",
+                "issues": "https://www.drupal.org/project/issues/slack"
             }
         },
         {
@@ -14445,17 +14456,17 @@
         },
         {
             "name": "drupal/storage",
-            "version": "1.2.5",
+            "version": "1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/storage.git",
-                "reference": "1.2.5"
+                "reference": "1.2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/storage-1.2.5.zip",
-                "reference": "1.2.5",
-                "shasum": "578b12d8785dd13230da989ef254c8726f7a9cf7"
+                "url": "https://ftp.drupal.org/files/projects/storage-1.2.6.zip",
+                "reference": "1.2.6",
+                "shasum": "849f1f38d3909c8c59b55cd02aeee14b99369ba4"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10"
@@ -14463,8 +14474,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.5",
-                    "datestamp": "1671179587",
+                    "version": "1.2.6",
+                    "datestamp": "1674836575",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -18445,16 +18456,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.65.0",
+            "version": "2.66.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "09acf64155c16dc6f580f36569ae89344e9734a3"
+                "reference": "496712849902241f04902033b0441b269effe001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/09acf64155c16dc6f580f36569ae89344e9734a3",
-                "reference": "09acf64155c16dc6f580f36569ae89344e9734a3",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/496712849902241f04902033b0441b269effe001",
+                "reference": "496712849902241f04902033b0441b269effe001",
                 "shasum": ""
             },
             "require": {
@@ -18543,7 +18554,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-06T15:55:01+00:00"
+            "time": "2023-01-29T18:53:47+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -21515,16 +21526,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "40c08632019838dfb3350f18cf5563b8080055fc"
+                "reference": "6071aebf810ad13fe8200c224f36103abb37cf1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/40c08632019838dfb3350f18cf5563b8080055fc",
-                "reference": "40c08632019838dfb3350f18cf5563b8080055fc",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/6071aebf810ad13fe8200c224f36103abb37cf1f",
+                "reference": "6071aebf810ad13fe8200c224f36103abb37cf1f",
                 "shasum": ""
             },
             "require": {
@@ -21558,7 +21569,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.4.17"
+                "source": "https://github.com/symfony/finder/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -21574,20 +21585,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-22T10:31:03+00:00"
+            "time": "2023-01-14T19:14:44+00:00"
         },
         {
             "name": "symfony/http-client",
-            "version": "v5.4.17",
+            "version": "v5.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "772129f800fc0bfaa6bd40c40934d544f0957d30"
+                "reference": "b4d936b657c7952a41e89efd0ddcea51f8c90f34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/772129f800fc0bfaa6bd40c40934d544f0957d30",
-                "reference": "772129f800fc0bfaa6bd40c40934d544f0957d30",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/b4d936b657c7952a41e89efd0ddcea51f8c90f34",
+                "reference": "b4d936b657c7952a41e89efd0ddcea51f8c90f34",
                 "shasum": ""
             },
             "require": {
@@ -21645,7 +21656,7 @@
             "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v5.4.17"
+                "source": "https://github.com/symfony/http-client/tree/v5.4.20"
             },
             "funding": [
                 {
@@ -21661,7 +21672,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-13T11:07:37+00:00"
+            "time": "2023-01-25T18:32:18+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -21811,16 +21822,16 @@
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v4.4.49",
+            "version": "v4.4.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "4e36db8103062c62b3882b1bd297b02de6b021c4"
+                "reference": "aa6df6c045f034aa13ac752fc234bb300b9488ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/4e36db8103062c62b3882b1bd297b02de6b021c4",
-                "reference": "4e36db8103062c62b3882b1bd297b02de6b021c4",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/aa6df6c045f034aa13ac752fc234bb300b9488ef",
+                "reference": "aa6df6c045f034aa13ac752fc234bb300b9488ef",
                 "shasum": ""
             },
             "require": {
@@ -21895,7 +21906,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-kernel/tree/v4.4.49"
+                "source": "https://github.com/symfony/http-kernel/tree/v4.4.50"
             },
             "funding": [
                 {
@@ -21911,7 +21922,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-28T17:58:43+00:00"
+            "time": "2023-02-01T08:01:31+00:00"
         },
         {
             "name": "symfony/mime",
@@ -23423,16 +23434,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "ad74890513d07060255df2575703daf971de92c7"
+                "reference": "2944bbc23f5f8da2b962fbcbf7c4a6109b2f4b7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ad74890513d07060255df2575703daf971de92c7",
-                "reference": "ad74890513d07060255df2575703daf971de92c7",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2944bbc23f5f8da2b962fbcbf7c4a6109b2f4b7b",
+                "reference": "2944bbc23f5f8da2b962fbcbf7c4a6109b2f4b7b",
                 "shasum": ""
             },
             "require": {
@@ -23492,7 +23503,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.4.17"
+                "source": "https://github.com/symfony/var-dumper/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -23508,7 +23519,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-22T10:31:03+00:00"
+            "time": "2023-01-16T10:52:33+00:00"
         },
         {
             "name": "symfony/yaml",
