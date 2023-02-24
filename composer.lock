@@ -102,16 +102,16 @@
         },
         {
             "name": "acquia/acquia-cms-starterkit",
-            "version": "v1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/acquia-cms-starterkit.git",
-                "reference": "77906f7901b5f51d3874485a200bb072a17c9daa"
+                "reference": "0c514873b97d6880f23b66508cc30c5321262c22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/77906f7901b5f51d3874485a200bb072a17c9daa",
-                "reference": "77906f7901b5f51d3874485a200bb072a17c9daa",
+                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/0c514873b97d6880f23b66508cc30c5321262c22",
+                "reference": "0c514873b97d6880f23b66508cc30c5321262c22",
                 "shasum": ""
             },
             "require": {
@@ -171,9 +171,9 @@
             ],
             "support": {
                 "issues": "https://github.com/acquia/acquia-cms-starterkit/issues",
-                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/v1.0.7"
+                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/1.0.8"
             },
-            "time": "2023-01-23T07:25:45+00:00"
+            "time": "2023-02-23T14:05:11+00:00"
         },
         {
             "name": "acquia/acquia_cms",
@@ -2025,41 +2025,36 @@
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "cbb50cc86775f14972003f797b61e232788bee1f"
+                "reference": "b377db7e9435c50c4e019c26ec164b547e754ca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/cbb50cc86775f14972003f797b61e232788bee1f",
-                "reference": "cbb50cc86775f14972003f797b61e232788bee1f",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/b377db7e9435c50c4e019c26ec164b547e754ca0",
+                "reference": "b377db7e9435c50c4e019c26ec164b547e754ca0",
                 "shasum": ""
             },
             "require": {
                 "dflydev/dot-access-data": "^1.1.0 || ^2 || ^3",
                 "php": ">=7.1.3",
-                "symfony/console": "^4|^5|^6",
-                "symfony/finder": "^4|^5|^6"
+                "symfony/console": "^4 || ^5 || ^6",
+                "symfony/finder": "^4 || ^5 || ^6"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.4.2",
-                "phpunit/phpunit": ">=7",
+                "phpunit/phpunit": "^7 || ^8 || ^9",
                 "squizlabs/php_codesniffer": "^3",
-                "symfony/var-dumper": "^4|^5|^6",
-                "symfony/yaml": "^4|^5|^6",
-                "yoast/phpunit-polyfills": "^0.2.0"
+                "symfony/var-dumper": "^4 || ^5 || ^6",
+                "symfony/yaml": "^4 || ^5 || ^6",
+                "yoast/phpunit-polyfills": "^1"
             },
             "suggest": {
                 "symfony/var-dumper": "For using the var_dump formatter"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "4.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Consolidation\\OutputFormatters\\": "src"
@@ -2078,9 +2073,9 @@
             "description": "Format text by applying transformations provided by plug-in formatters.",
             "support": {
                 "issues": "https://github.com/consolidation/output-formatters/issues",
-                "source": "https://github.com/consolidation/output-formatters/tree/4.2.3"
+                "source": "https://github.com/consolidation/output-formatters/tree/4.2.4"
             },
-            "time": "2022-10-17T04:01:40+00:00"
+            "time": "2023-02-24T03:39:10+00:00"
         },
         {
             "name": "consolidation/robo",
@@ -7285,6 +7280,10 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "lhangea",
+                    "homepage": "https://www.drupal.org/user/2743803"
+                },
+                {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
                 },
@@ -11170,17 +11169,17 @@
         },
         {
             "name": "drupal/media_acquiadam",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_acquiadam.git",
-                "reference": "2.0.7"
+                "reference": "2.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.0.7.zip",
-                "reference": "2.0.7",
-                "shasum": "fa5bffa64fffef9d9356bd28f58831684727339c"
+                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.0.8.zip",
+                "reference": "2.0.8",
+                "shasum": "f07753e81d449a7a9cedefa50b5a4b4b35b5f229"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9.2 || ^10",
@@ -11189,13 +11188,14 @@
             "require-dev": {
                 "drupal/entity_browser": "2.x-dev",
                 "drupal/entity_usage": "*",
-                "drupal/fallback_formatter": "*"
+                "drupal/fallback_formatter": "*",
+                "drupal/linkit": "6.0.x-dev"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.7",
-                    "datestamp": "1676303935",
+                    "version": "2.0.8",
+                    "datestamp": "1677254442",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15696,6 +15696,10 @@
                 {
                     "name": "larowlan",
                     "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "mstrelan",
+                    "homepage": "https://www.drupal.org/user/314289"
                 },
                 {
                     "name": "teknic",
