@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10db5b2598aa8817fa79388caf9ed6c5",
+    "content-hash": "7136c162c584fa3db736928106b7697e",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -6941,17 +6941,17 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "4.0.3",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ctools.git",
-                "reference": "4.0.3"
+                "reference": "8.x-3.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-4.0.3.zip",
-                "reference": "4.0.3",
-                "shasum": "4f389b14bd2120069386c2f28f8c4cd49bd2ebfc"
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.13.zip",
+                "reference": "8.x-3.13",
+                "shasum": "b84176544265d4c6aa17917d66335527c9498c5a"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -6959,8 +6959,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.3",
-                    "datestamp": "1668631947",
+                    "version": "8.x-3.13",
+                    "datestamp": "1668631846",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12320,22 +12320,22 @@
         },
         {
             "name": "drupal/panels",
-            "version": "4.6.0",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/panels.git",
-                "reference": "8.x-4.6"
+                "reference": "8.x-4.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/panels-8.x-4.6.zip",
-                "reference": "8.x-4.6",
-                "shasum": "6430436a4d8fb64f8c113729dd92505a1e46b794"
+                "url": "https://ftp.drupal.org/files/projects/panels-8.x-4.7.zip",
+                "reference": "8.x-4.7",
+                "shasum": "5536f192d328e93a9f8c4a2646df15c514d75639"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
-                "drupal/ctools": ">=3.0.0",
-                "drupal/jquery_ui_droppable": "^1.2"
+                "drupal/core": "^9.2 || ^10",
+                "drupal/ctools": "^3.12",
+                "drupal/jquery_ui_droppable": "^1.5"
             },
             "require-dev": {
                 "drupal/jquery_ui_droppable": "*",
@@ -12344,8 +12344,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.6",
-                    "datestamp": "1585870866",
+                    "version": "8.x-4.7",
+                    "datestamp": "1668632919",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
