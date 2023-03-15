@@ -176,9 +176,7 @@
             },
             "drupal/acquia_cms_common": {
                 "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.":
-                "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
-                "Password Policy should be optional":
-                "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-optional-password-policy.patch"
+                "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch"
             },
             "drupal/default_content": {
                 "Import doesn't overwrite files | https://drupal.org/node/3200212":
@@ -223,6 +221,13 @@
                 "https://www.drupal.org/files/issues/2022-07-05/ACO-1980-cohesion-menu-link-tokens.patch",
                 "Gin compatibility":
                 "https://www.drupal.org/files/sitestudio-gin-visual-page-builder-fixes.patch"
+            }
+        },
+        "patches-ignore": {
+            "drupal/acquia_cms_common": {
+                "drupal/core": {
+                    "ignore-me": "https://git.drupalcode.org/project/drupal/-/merge_requests/2601.patch"
+                }
             }
         }
     },
