@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7136c162c584fa3db736928106b7697e",
+    "content-hash": "6c5f9c1bffbb9df3b23e27e1a3a52c6b",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -4505,17 +4505,17 @@
         },
         {
             "name": "drupal/acquia_dam",
-            "version": "1.0.5",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_dam.git",
-                "reference": "1.0.5"
+                "reference": "1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.5.zip",
-                "reference": "1.0.5",
-                "shasum": "429a2ab69bf3b1f861b2a8990e587cf7af4ebb45"
+                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "c0d8b54bd219c58c5777ab6219269b4685c836c5"
             },
             "require": {
                 "drupal/core": ">=9.4",
@@ -4537,8 +4537,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.5",
-                    "datestamp": "1677860548",
+                    "version": "1.0.4",
+                    "datestamp": "1674847821",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8638,22 +8638,23 @@
         },
         {
             "name": "drupal/focal_point",
-            "version": "2.0.0-alpha1",
+            "version": "2.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/focal_point.git",
-                "reference": "2.0.0-alpha1"
+                "reference": "2.0.0-alpha2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/focal_point-2.0.0-alpha1.zip",
-                "reference": "2.0.0-alpha1",
-                "shasum": "15c16b991e597e5b121fe7bb37a5d425699699a9"
+                "url": "https://ftp.drupal.org/files/projects/focal_point-2.0.0-alpha2.zip",
+                "reference": "2.0.0-alpha2",
+                "shasum": "b8e37b18407c7cda0d1295c6d06f1b282910ecc8"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
-                "drupal/crop": "*",
-                "drupal/jquery_ui_draggable": "*"
+                "drupal/crop": "^2.3",
+                "drupal/jquery_ui": "^1.6",
+                "drupal/jquery_ui_draggable": "^1.5"
             },
             "require-dev": {
                 "drupal/crop": "*"
@@ -8661,8 +8662,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-alpha1",
-                    "datestamp": "1667283513",
+                    "version": "2.0.0-alpha2",
+                    "datestamp": "1671532146",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -10198,27 +10199,27 @@
         },
         {
             "name": "drupal/jquery_ui_draggable",
-            "version": "2.0.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui_draggable.git",
-                "reference": "2.0.0"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui_draggable-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "13a8f4bf037449cd176ddb967fc9cba9a466a705"
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_draggable-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "9c634a7b17f53e08cd4061b2d3e770f9c6fc8861"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
-                "drupal/jquery_ui": "^1.6"
+                "drupal/jquery_ui": "^1.5"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1670871516",
+                    "version": "8.x-1.5",
+                    "datestamp": "1668452745",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
