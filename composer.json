@@ -173,7 +173,7 @@
     }
   },
   "extra": {
-    "composer-exit-on-patch-failure": true,
+    "composer-exit-on-patch-failure": false,
     "drupal-scaffold": {
       "allowed-packages": [
         "drupal/core"
@@ -236,6 +236,9 @@
       },
       "drupal/acquia_cms_common": {
         "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch"
+      },
+      "acquia/cohesion": {
+          "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch"
       },
       "drupal/default_content": {
         "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"

@@ -1,0 +1,12 @@
+diff --git a/modules/cohesion_custom_styles/src/Entity/CustomStyle.php b/modules/cohesion_custom_styles/src/Entity/CustomStyle.php
+index dd8b99c..b773f1d 100644
+--- a/modules/cohesion_custom_styles/src/Entity/CustomStyle.php
++++ b/modules/cohesion_custom_styles/src/Entity/CustomStyle.php
+@@ -314,7 +314,7 @@ class CustomStyle extends CohesionConfigEntityBase implements CohesionSettingsIn
+     // Patch in the settings.extended=true for child styles.
+     if ($this->getParentId()) {
+       if (isset($entity_values->values->styles->settings->extended)) {
+-        $entity_values->values->styles->settings->extended = TRUE;
++        $entity_values->values['styles']['settings']['extended'] = TRUE;
+       }
+     }
