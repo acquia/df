@@ -127,7 +127,7 @@ function df_tools_translation_import_translations($type, $name) {
 function df_tools_translation_preprocess_page(&$variables) {
   // Add a new page variable with the current link.
   if (!isset($variables['language_current_link']) && isset($variables['language'])) {
-    $path = \Drupal::service('path.current')->getPath();
+    $path = \Drupal\Core\Extension\ExtensionPathResolver::getPath('path.current');
     $language = $variables['language']->getId();
     $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path, $language);
     $url = Url::fromUri('internal:/' . $alias);
@@ -152,7 +152,7 @@ function df_tools_translation_preprocess_page(&$variables) {
       $langcode = $language->getId();
 
       // Get the path to the current node, translated.
-      $current_path = \Drupal::service('path.current')->getPath();
+      $current_path = Drupal\Core\Extension\ExtensionPathResolver::getPath('path.current');
       $alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path, $langcode);
       // We don't need to alias English links.
       if ($langcode == 'en') {
