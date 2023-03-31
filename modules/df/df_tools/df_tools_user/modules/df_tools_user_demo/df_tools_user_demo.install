@@ -20,7 +20,7 @@ function df_tools_user_demo_install() {
   // before we set values.
   // Requires https://www.drupal.org/issues/2951076
   $importer = \Drupal::service('default_content.importer');
-  $source = Drupal\Core\Extension\ExtensionPathResolver::getPath('module', 'df_tools_user_demo') . '/data';
+  $source = \Drupal::service('extension.list.module')->getPath('df_tools_user_demo') . '/data';
   $importer->importContent($source);
 
   // Add values for the First and Last name fields to the admin user.

@@ -5,7 +5,7 @@ use Drupal\Core\Routing\RouteBuildEvent;
 use Drupal\Core\Routing\RoutingEvents;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\KernelEvents;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class DFToolsServicesSubscriber implements EventSubscriberInterface {
@@ -13,9 +13,9 @@ class DFToolsServicesSubscriber implements EventSubscriberInterface {
   /**
    * Forces CORS enablement for all responses.
    *
-   * @param FilterResponseEvent $event
+   * @param ResponseEvent $event
    */
-  public function allowCORSResponse(FilterResponseEvent $event) {
+  public function allowCORSResponse(ResponseEvent $event) {
     $response = $event->getResponse();
     $request = $event->getRequest();
 

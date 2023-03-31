@@ -71,7 +71,7 @@ function df_tools_translation_update_config_translation() {
   batch_set($batch);
   // Set a batch to update configuration as well.
   if ($batch = locale_config_batch_update_components($options, $langcodes)) {
-    $batch['file'] = drupal_get_path('module', 'df_tools_translation') . '/df_tools_translation.batch.inc';
+    $batch['file'] = \Drupal::service('extension.list.module')->getPath('df_tools_translation') . '/df_tools_translation.batch.inc';
     batch_set($batch);
   }
 }
@@ -86,7 +86,7 @@ function df_tools_translation_update_config_translation() {
  */
 function df_tools_translation_import_translations($type, $name) {
   // Attempt to pull module path.
-  $path = drupal_get_path($type, $name);
+  $path = \Drupal::service('extension.list.module')->getPath($name);
   if (!$path) {
     return FALSE;
   }
@@ -127,7 +127,7 @@ function df_tools_translation_import_translations($type, $name) {
 function df_tools_translation_preprocess_page(&$variables) {
   // Add a new page variable with the current link.
   if (!isset($variables['language_current_link']) && isset($variables['language'])) {
-    $path = \Drupal\Core\Extension\ExtensionPathResolver::getPath('path.current');
+    $path = \Drupal::service('path.current')->getPath();
     $language = $variables['language']->getId();
     $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path, $language);
     $url = Url::fromUri('internal:/' . $alias);
@@ -152,7 +152,7 @@ function df_tools_translation_preprocess_page(&$variables) {
       $langcode = $language->getId();
 
       // Get the path to the current node, translated.
-      $current_path = Drupal\Core\Extension\ExtensionPathResolver::getPath('path.current');
+      $current_path = \Drupal::service('path.current')->getPath();
       $alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path, $langcode);
       // We don't need to alias English links.
       if ($langcode == 'en') {
