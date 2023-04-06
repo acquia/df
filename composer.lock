@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f705430cf895b75872bb0dfcb993af8e",
+    "content-hash": "54f5f53baf73d6d6f9a30b243d8f41b5",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -10923,6 +10923,48 @@
             }
         },
         {
+            "name": "drupal/mautic_api",
+            "version": "2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevinfunk/mautic_api.git",
+                "reference": "fe7096a84f42a0425dc4cdc0fd71db576ea96568"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kevinfunk/mautic_api/zipball/fe7096a84f42a0425dc4cdc0fd71db576ea96568",
+                "reference": "fe7096a84f42a0425dc4cdc0fd71db576ea96568",
+                "shasum": ""
+            },
+            "require": {
+                "cweagans/composer-patches": "^1.7",
+                "mautic/api-library": "^2.14 || ^3.1"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "extra": {
+                "composer-exit-on-patch-failure": true,
+                "enable-patching": true,
+                "patches": {
+                    "mautic/api-library": {
+                        "Upgrade from 3.0.0 to 3.1.0 issue with psr/log requirement | https://github.com/mautic/api-library/issues/273": "https://www.drupal.org/files/issues/2023-04-05/mautic-api-library-upgrade-from-3.0.0-to-3.1.0-273.patch"
+                    }
+                }
+            },
+            "authors": [
+                {
+                    "name": "archnode",
+                    "email": "markus@signalonline.at"
+                }
+            ],
+            "description": "Provides integration with the mautic api library.",
+            "support": {
+                "source": "https://github.com/kevinfunk/mautic_api/tree/2.x",
+                "issues": "https://github.com/kevinfunk/mautic_api/issues"
+            },
+            "time": "2023-04-05T17:17:45+00:00"
+        },
+        {
             "name": "drupal/media_acquiadam",
             "version": "2.0.9",
             "source": {
@@ -14369,6 +14411,55 @@
             }
         },
         {
+            "name": "drupal/sitestudio_extras",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/sitestudio_extras.git",
+                "reference": "d294b223f90f3277f069934dcf888db868be1c0b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.x-dev",
+                    "datestamp": "1656083622",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "kevinfunk",
+                    "homepage": "https://www.drupal.org/user/414328"
+                },
+                {
+                    "name": "rlnorthcutt",
+                    "homepage": "https://www.drupal.org/user/116893"
+                },
+                {
+                    "name": "shree.yesare",
+                    "homepage": "https://www.drupal.org/user/1569342"
+                }
+            ],
+            "description": "Module provides functionality to extend site studio features.",
+            "homepage": "https://www.drupal.org/project/sitestudio_extras",
+            "support": {
+                "source": "https://git.drupalcode.org/project/sitestudio_extras"
+            }
+        },
+        {
             "name": "drupal/sitestudio_gin",
             "version": "1.0.0-rc1",
             "source": {
@@ -15073,27 +15164,27 @@
         },
         {
             "name": "drupal/tmgmt_google",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tmgmt_google.git",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tmgmt_google-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "624742f315f2c1d8ad4d693374f0d01907556063"
+                "url": "https://ftp.drupal.org/files/projects/tmgmt_google-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "56e7cd6a42d9f8d5d04b540173bdf81d903e3e33"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^9 || ^10",
                 "drupal/tmgmt": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1579973881",
+                    "version": "8.x-1.1",
+                    "datestamp": "1680730832",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -18587,6 +18678,49 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.7.6"
             },
             "time": "2022-08-18T16:18:26+00:00"
+        },
+        {
+            "name": "mautic/api-library",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mautic/api-library.git",
+                "reference": "5b0d9051a3a42eea132fa6da35b712e947804d2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mautic/api-library/zipball/5b0d9051a3a42eea132fa6da35b712e947804d2c",
+                "reference": "5b0d9051a3a42eea132fa6da35b712e947804d2c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.2.0",
+                "psr/log": "~1.0 || ~2.0 || ~3.0"
+            },
+            "require-dev": {
+                "brianium/paratest": "^6.2",
+                "friendsofphp/php-cs-fixer": "~2.16.1",
+                "kint-php/kint": "^4.1",
+                "phpunit/phpunit": "~9.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mautic\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Mautic API Connector Library",
+            "support": {
+                "issues": "https://github.com/mautic/api-library/issues",
+                "source": "https://github.com/mautic/api-library/tree/3.1.0"
+            },
+            "time": "2022-05-04T13:59:18+00:00"
         },
         {
             "name": "mglaman/composer-drupal-lenient",
@@ -24825,11 +24959,13 @@
         "drupal/image_url_formatter": 20,
         "drupal/inline_entity_form": 5,
         "drupal/masquerade": 5,
+        "drupal/mautic_api": 20,
         "drupal/moderated_content_bulk_publish": 10,
         "drupal/moderation_note": 10,
         "drupal/page_manager": 5,
         "drupal/profile_switcher": 15,
         "drupal/pwa": 5,
+        "drupal/sitestudio_extras": 20,
         "drupal/sitestudio_gin": 5,
         "drupal/smart_date": 10,
         "drupal/view_modes_display": 20,
