@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54f5f53baf73d6d6f9a30b243d8f41b5",
+    "content-hash": "c38615f1e5326e377677371e1615cf3a",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -5879,51 +5879,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/component",
                 "issues": "https://drupal.org/project/issues/component"
-            }
-        },
-        {
-            "name": "drupal/condition_query",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/condition_query.git",
-                "reference": "00091439a6aa6403138a1d07e9579a78a50936ee"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.2+6-dev",
-                    "datestamp": "1622772127",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "dww",
-                    "homepage": "https://www.drupal.org/user/46549"
-                },
-                {
-                    "name": "logan.H",
-                    "homepage": "https://www.drupal.org/user/629136"
-                }
-            ],
-            "description": "Adds condition plugin by query parameter",
-            "homepage": "https://www.drupal.org/project/condition_query",
-            "support": {
-                "source": "https://git.drupalcode.org/project/condition_query"
             }
         },
         {
@@ -14411,55 +14366,6 @@
             }
         },
         {
-            "name": "drupal/sitestudio_extras",
-            "version": "dev-1.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/sitestudio_extras.git",
-                "reference": "d294b223f90f3277f069934dcf888db868be1c0b"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
-                "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1656083622",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "kevinfunk",
-                    "homepage": "https://www.drupal.org/user/414328"
-                },
-                {
-                    "name": "rlnorthcutt",
-                    "homepage": "https://www.drupal.org/user/116893"
-                },
-                {
-                    "name": "shree.yesare",
-                    "homepage": "https://www.drupal.org/user/1569342"
-                }
-            ],
-            "description": "Module provides functionality to extend site studio features.",
-            "homepage": "https://www.drupal.org/project/sitestudio_extras",
-            "support": {
-                "source": "https://git.drupalcode.org/project/sitestudio_extras"
-            }
-        },
-        {
             "name": "drupal/sitestudio_gin",
             "version": "1.0.0-rc1",
             "source": {
@@ -14945,141 +14851,6 @@
             }
         },
         {
-            "name": "drupal/tac_lite",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/tac_lite.git",
-                "reference": "8.x-1.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tac_lite-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "b3510147720a14d9a5bd178cf806c8dcf93c838f"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1646147606",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "grndlvl",
-                    "homepage": "https://www.drupal.org/user/103553"
-                },
-                {
-                    "name": "ikit-claw",
-                    "homepage": "https://www.drupal.org/user/3285813"
-                },
-                {
-                    "name": "jenlampton",
-                    "homepage": "https://www.drupal.org/user/85586"
-                },
-                {
-                    "name": "Unsupported Projects",
-                    "homepage": "https://www.drupal.org/user/291168"
-                }
-            ],
-            "description": "Simple access control based on categories.",
-            "homepage": "https://www.drupal.org/project/tac_lite",
-            "support": {
-                "source": "https://git.drupalcode.org/project/tac_lite"
-            }
-        },
-        {
-            "name": "drupal/tb_megamenu",
-            "version": "1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/tb_megamenu.git",
-                "reference": "8.x-1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tb_megamenu-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "5b6b0e6580254350d76cec907bd6d07e3044cd10"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1648215867",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Wade Stewart (themodularlab)",
-                    "homepage": "https://www.drupal.org/u/themodularlab",
-                    "role": "Owner"
-                },
-                {
-                    "name": "Michael Girgis (knaffles)",
-                    "homepage": "https://www.drupal.org/u/knaffles",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Andrew Olson (andrewozone)",
-                    "homepage": "https://www.drupal.org/u/andrewozone",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Justin Todd (quondam)",
-                    "homepage": "https://www.drupal.org/u/quondam",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Irene Dobbs (irene_dobbs)",
-                    "homepage": "https://www.drupal.org/u/irene_dobbs",
-                    "role": "Co-Maintainer"
-                },
-                {
-                    "name": "Henry Odiete (henry.odiete)",
-                    "homepage": "https://www.drupal.org/u/henry.odiete",
-                    "role": "Co-Maintainer"
-                },
-                {
-                    "name": "quondam",
-                    "homepage": "https://www.drupal.org/user/327869"
-                },
-                {
-                    "name": "themodularlab",
-                    "homepage": "https://www.drupal.org/user/3190381"
-                }
-            ],
-            "description": "Provides complex, multi-column mega menu solutions for Drupal.",
-            "homepage": "https://www.drupal.org/project/tb_megamenu",
-            "support": {
-                "source": "https://git.drupalcode.org/project/tb_megamenu",
-                "issues": "https://www.drupal.org/project/issues/tb_megamenu"
-            }
-        },
-        {
             "name": "drupal/tmgmt",
             "version": "1.15.0",
             "source": {
@@ -15472,55 +15243,6 @@
             "homepage": "https://www.drupal.org/project/username_enumeration_prevention",
             "support": {
                 "source": "https://git.drupalcode.org/project/username_enumeration_prevention"
-            }
-        },
-        {
-            "name": "drupal/view_modes_display",
-            "version": "dev-2.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/view_modes_display.git",
-                "reference": "b84ea9327ec92091e94e1642de9c9aafc309ab86"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.2+1-dev",
-                    "datestamp": "1586888391",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "pvhee",
-                    "homepage": "https://www.drupal.org/user/108811"
-                },
-                {
-                    "name": "zach.bimson",
-                    "homepage": "https://www.drupal.org/user/1644060"
-                }
-            ],
-            "description": "Preview view modes for every entity type",
-            "homepage": "https://www.drupal.org/project/view_modes_display",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/view_modes_display",
-                "issues": "http://drupal.org/project/issues/view_modes_display"
             }
         },
         {
@@ -16018,58 +15740,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/workbench_email",
                 "issues": "http://drupal.org/project/issues/workbench_email"
-            }
-        },
-        {
-            "name": "drupal/yext",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/yext.git",
-                "reference": "1.0.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/yext-1.0.4.zip",
-                "reference": "1.0.4",
-                "shasum": "11b9cd6d24e641aa73b7018a80491a160aa0d53d"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.4",
-                    "datestamp": "1628694917",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Yext",
-                    "homepage": "https://www.drupal.org/user/3671483"
-                },
-                {
-                    "name": "carnavallaj",
-                    "homepage": "https://www.drupal.org/user/3675911"
-                },
-                {
-                    "name": "ssingh@yext.com",
-                    "homepage": "https://www.drupal.org/user/3675807"
-                }
-            ],
-            "description": "Module to add a Yext Answers experience to your site",
-            "homepage": "https://www.drupal.org/project/yext",
-            "support": {
-                "source": "https://git.drupalcode.org/project/yext"
             }
         },
         {
@@ -24947,7 +24617,6 @@
     "stability-flags": {
         "acquia/acf": 20,
         "acquia/sitestudio_contenthub": 20,
-        "drupal/condition_query": 20,
         "drupal/conditional_fields": 15,
         "drupal/context": 5,
         "drupal/entity_usage": 10,
@@ -24965,10 +24634,8 @@
         "drupal/page_manager": 5,
         "drupal/profile_switcher": 15,
         "drupal/pwa": 5,
-        "drupal/sitestudio_extras": 20,
         "drupal/sitestudio_gin": 5,
         "drupal/smart_date": 10,
-        "drupal/view_modes_display": 20,
         "drupal/views_base_url": 10,
         "drupal/webform": 10,
         "drupal/yoast_seo": 15,
