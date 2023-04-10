@@ -106,11 +106,13 @@
     "drupal/slack": "^1.4",
     "drupal/smart_date": "^4.0@beta",
     "drupal/storage": "^1.2",
+    "drupal/tb_megamenu": "3.x-dev",
     "drupal/tmgmt": "^1.14",
     "drupal/tmgmt_google": "^1.0",
     "drupal/token": "^1.11",
     "drupal/toolbar_manager": "^2.0",
     "drupal/user_field_value": "^8.1",
+    "drupal/view_modes_display": "3.x-dev",
     "drupal/views_base_url": "^2.1@beta",
     "drupal/views_flag_refresh": "^1.0",
     "drupal/views_json_source": "^1.4",
@@ -206,9 +208,6 @@
       "acquia/cohesion": {
           "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch"
       },
-      "drupal/condition_query": {
-        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2022-06-15/condition_query.1.x-dev.rector.patch": "https://www.drupal.org/files/issues/2022-06-15/condition_query.1.x-dev.rector.patch"
-      },
       "drupal/default_content": {
         "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
       },
@@ -230,9 +229,6 @@
       "drupal/inline_entity_form": {
         "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
       },
-      "drupal/jsonapi_explorer": {
-        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-03-21/3288136-12.patch": "https://www.drupal.org/files/issues/2023-03-21/3288136-12.patch"
-      },
       "drupal/jsonapi_schema": {
         "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
       },
@@ -241,18 +237,6 @@
       },
       "drupal/pathauto": {
         "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
-      },
-      "drupal/tac_lite": {
-        "Drupal 10 compatibility | https://www.drupal.org/files/issues/2022-12-02/3325055-drupal-10-compatibility-02.patch": "https://www.drupal.org/files/issues/2022-12-02/3325055-drupal-10-compatibility-02.patch"
-      },
-      "drupal/tb_megamenu": {
-        "Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-03-20/3328163-D10-compatibility.patch": "https://www.drupal.org/files/issues/2023-03-20/3328163-D10-compatibility.patch"
-      },
-      "drupal/view_modes_display": {
-        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2022-11-29/view_modes_display-3299432-04.patch": "https://www.drupal.org/files/issues/2022-11-29/view_modes_display-3299432-04.patch"
-      },
-      "drupal/yext": {
-        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2022-06-16/yext.1.0.4.rector.patch": "https://www.drupal.org/files/issues/2022-06-16/yext.1.0.4.rector.patch"
       }
     },
     "patches-ignore": {
@@ -261,20 +245,27 @@
           "ignore-me": "https://git.drupalcode.org/project/drupal/-/merge_requests/2601.patch"
         }
       }
-    },
-    "drupal-lenient": {
-      "allowed-list": ["drupal/condition_query", "drupal/sitestudio_extras", "drupal/tac_lite", "drupal/tb_megamenu", "drupal/view_modes_display", "drupal/yext"]
     }
   },
   "repositories": {
+    "mautic-api": {
+      "type": "vcs",
+      "url": "https://github.com/kevinfunk/mautic_api",
+      "canonical": true
+    },
     "sitestudio-contenthub": {
       "type": "vcs",
       "url": "https://github.com/vaibhav-acquia/sitestudio_contenthub"
     },
-    "mautic-api": {
-        "type": "vcs",
-        "url": "https://github.com/kevinfunk/mautic_api",
-        "canonical": true
+    "tb-megamenu": {
+      "type": "vcs",
+      "url": "https://github.com/vaibhav-acquia/tb_megamenu",
+      "canonical": true
+    },
+    "view-modes-display": {
+      "type": "vcs",
+      "url": "https://github.com/vaibhav-acquia/view_modes_display",
+      "canonical": true
     },
     "drupal": {
       "type": "composer",
