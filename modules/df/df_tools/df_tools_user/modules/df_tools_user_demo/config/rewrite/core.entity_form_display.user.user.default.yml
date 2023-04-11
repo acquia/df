@@ -1,3 +1,4 @@
+uuid: 7e7ba1e4-66d1-49c7-baf6-964ea85352ee
 langcode: en
 status: true
 dependencies:
@@ -5,7 +6,11 @@ dependencies:
     - field.field.user.user.field_first_name
     - field.field.user.user.field_image
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_password_expiration
+    - field.field.user.user.field_pending_expire_sent
   module:
+    - datetime
     - media_library
     - path
     - user
@@ -16,11 +21,6 @@ mode: default
 content:
   account:
     weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  contact:
-    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -47,8 +47,21 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  google_analytics:
+  field_last_password_reset:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_password_expiration:
+    type: boolean_checkbox
     weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  google_analytics:
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -59,14 +72,15 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_pending_expire_sent: true
   langcode: true
