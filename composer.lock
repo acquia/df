@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fd51bb276ab935a6433e3926da7e24e",
+    "content-hash": "b0a4f49039efaee4e78677d8541e267b",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -3872,6 +3872,68 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/acquia_cms_site_studio",
                 "error": "Invalid dependency: \"sitestudio_page_builder\" is an unknown drupal 8 package name"
+            }
+        },
+        {
+            "name": "drupal/acquia_cms_starter",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/acquia_cms_starter.git",
+                "reference": "1.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_starter-1.4.2.zip",
+                "reference": "1.4.2",
+                "shasum": "df8c77b8d559892d5dea0a9e4cdad05756cc1183"
+            },
+            "require": {
+                "drupal/acquia_cms_article": "^1.5.5",
+                "drupal/acquia_cms_document": "^1.4.4",
+                "drupal/acquia_cms_event": "^1.5.5",
+                "drupal/acquia_cms_page": "^1.5.5",
+                "drupal/acquia_cms_search": "^1.4.10",
+                "drupal/acquia_cms_video": "^1.5.5",
+                "drupal/core": "^9.4 || ^10",
+                "drupal/default_content": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.2",
+                    "datestamp": "1678719797",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-develop": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acquia",
+                    "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "vipin.mittal18",
+                    "homepage": "https://www.drupal.org/user/319716"
+                },
+                {
+                    "name": "vishalkhode",
+                    "homepage": "https://www.drupal.org/user/2439156"
+                }
+            ],
+            "description": "Contains the example content for demonstration.",
+            "homepage": "https://www.drupal.org/project/acquia_cms_starter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/acquia_cms_starter"
             }
         },
         {
@@ -9259,10 +9321,6 @@
                     "homepage": "https://www.drupal.org/user/2416470"
                 },
                 {
-                    "name": "pfaocle",
-                    "homepage": "https://www.drupal.org/user/9740"
-                },
-                {
                     "name": "roberto.rivera.ixis",
                     "homepage": "https://www.drupal.org/user/3632325"
                 }
@@ -9891,6 +9949,72 @@
             }
         },
         {
+            "name": "drupal/jquery_ui_autocomplete",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui_autocomplete.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_autocomplete-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "927d312a74002f99e1c971d3d268be1b0a532fc7"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10",
+                "drupal/jquery_ui": "^1.6",
+                "drupal/jquery_ui_menu": "^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1670871461",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "nod_",
+                    "homepage": "https://www.drupal.org/user/598310"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Provides jQuery UI Autocomplete library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui_autocomplete",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jquery_ui_autocomplete"
+            }
+        },
+        {
             "name": "drupal/jquery_ui_button",
             "version": "2.0.0",
             "source": {
@@ -10228,6 +10352,71 @@
             "homepage": "https://www.drupal.org/project/jquery_ui_droppable",
             "support": {
                 "source": "https://git.drupalcode.org/project/jquery_ui_droppable"
+            }
+        },
+        {
+            "name": "drupal/jquery_ui_menu",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui_menu.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_menu-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "5e1b56bf457669c7779a81784f49da63e3956854"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10",
+                "drupal/jquery_ui": "^1.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1670871546",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "nod_",
+                    "homepage": "https://www.drupal.org/user/598310"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Provides jQuery UI Menu library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui_menu",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jquery_ui_menu"
             }
         },
         {
@@ -14424,12 +14613,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vaibhav-acquia/sitestudio_extras.git",
-                "reference": "0b86003ad8dac6715554544e1ec8825e28d3129c"
+                "reference": "c33ee058316119e029fb4e9c3602ef1bd7d633e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vaibhav-acquia/sitestudio_extras/zipball/0b86003ad8dac6715554544e1ec8825e28d3129c",
-                "reference": "0b86003ad8dac6715554544e1ec8825e28d3129c",
+                "url": "https://api.github.com/repos/vaibhav-acquia/sitestudio_extras/zipball/c33ee058316119e029fb4e9c3602ef1bd7d633e3",
+                "reference": "c33ee058316119e029fb4e9c3602ef1bd7d633e3",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -14441,7 +14630,7 @@
                 "issues": "http://drupal.org/project/issues/sitestudio_extras",
                 "source": "http://cgit.drupalcode.org/sitestudio_extras"
             },
-            "time": "2023-04-18T12:56:20+00:00"
+            "time": "2023-04-18T17:55:18+00:00"
         },
         {
             "name": "drupal/sitestudio_gin",
@@ -24845,8 +25034,8 @@
         "drupal/page_manager": 5,
         "drupal/profile_switcher": 15,
         "drupal/pwa": 5,
-        "drupal/sitestudio_gin": 5,
         "drupal/sitestudio_extras": 20,
+        "drupal/sitestudio_gin": 5,
         "drupal/smart_date": 10,
         "drupal/tac_lite": 20,
         "drupal/tb_megamenu": 20,
