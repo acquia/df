@@ -39,6 +39,7 @@
     "drupal/coffee": "^1.3",
     "drupal/collapsiblock": "^4.0",
     "drupal/color": "^1.0",
+    "drupal/condition_query":"2.x-dev",
     "drupal/conditional_fields": "^4.0@alpha",
     "drupal/config_filter": "^2.4",
     "drupal/consumer_image_styles": "^4.0",
@@ -75,6 +76,7 @@
     "drupal/jquery_ui_draggable": "^2.0",
     "drupal/jquery_ui_droppable": "^2.0",
     "drupal/json_field": "^1.2",
+    "drupal/jsonapi_explorer": "2.x-dev",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_node_preview_tab": "^1.0",
     "drupal/leaflet": "^10.0",
@@ -103,9 +105,11 @@
     "drupal/search_api_autocomplete": "^1.7",
     "drupal/searchstax": "^1.3",
     "drupal/sitestudio_gin": "^1.0@RC",
+    "drupal/sitestudio_extras": "2.x-dev",
     "drupal/slack": "^1.4",
     "drupal/smart_date": "^4.0@beta",
     "drupal/storage": "^1.2",
+    "drupal/tac_lite": "2.x-dev",
     "drupal/tb_megamenu": "3.x-dev",
     "drupal/tmgmt": "^1.14",
     "drupal/tmgmt_google": "^1.0",
@@ -119,6 +123,7 @@
     "drupal/webform": "^6.2@beta",
     "drupal/webform_mautic": "^2.0",
     "drupal/webform_views": "^5.1",
+    "drupal/yext": "2.x-dev",
     "drupal/yoast_seo": "^2.0@alpha",
     "drush/drush": "^11",
     "kevinfunk/content_filter": "1.x-dev",
@@ -223,9 +228,6 @@
       "drupal/gin_toolbar": {
         "Order of toolbar menu items is changed after updating to 1.0.0-beta18 | https://www.drupal.org/project/gin_toolbar/issues/3222799": "https://www.drupal.org/files/issues/2022-03-14/3222799-9.gin_toolbar.add-rearrange-menu-items-setting.patch"
       },
-      "drupal/focal_point": {
-        "After changing focal point, image doesn't change until you click preview | https://www.drupal.org/node/2906631": "https://www.drupal.org/files/issues/2022-06-10/2906631-12.patch"
-      },
       "drupal/inline_entity_form": {
         "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
       },
@@ -248,6 +250,16 @@
     }
   },
   "repositories": {
+    "condition-query": {
+      "type": "vcs",
+      "url": "https://github.com/vaibhav-acquia/condition_query",
+      "canonical": true
+    },
+    "jsonapi-explorer": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
+        "canonical": true
+    },
     "mautic-api": {
       "type": "vcs",
       "url": "https://github.com/kevinfunk/mautic_api",
@@ -256,6 +268,16 @@
     "sitestudio-contenthub": {
       "type": "vcs",
       "url": "https://github.com/vaibhav-acquia/sitestudio_contenthub"
+    },
+    "sitestudio-extras": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/sitestudio_extras",
+        "canonical": true
+    },
+    "tac-lite": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/tac_lite",
+        "canonical": true
     },
     "tb-megamenu": {
       "type": "vcs",
@@ -266,6 +288,11 @@
       "type": "vcs",
       "url": "https://github.com/vaibhav-acquia/view_modes_display",
       "canonical": true
+    },
+    "yext": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/yext",
+        "canonical": true
     },
     "drupal": {
       "type": "composer",
