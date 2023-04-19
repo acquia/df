@@ -1,4 +1,4 @@
 <?php
 
-include_once Drupal\Core\Extension\ExtensionPathResolver::getPath('module', 'locale') . '/locale.bulk.inc';
-include_once Drupal\Core\Extension\ExtensionPathResolver::getPath('module', 'locale') . '/locale.batch.inc';
+include_once \Drupal::service('extension.list.module')->getPath('locale') . '/locale.bulk.inc';
+include_once \Drupal::service('extension.list.module')->getPath('locale') . '/locale.batch.inc';
