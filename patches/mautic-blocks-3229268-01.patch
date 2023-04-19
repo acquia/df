@@ -1,0 +1,399 @@
+diff --git a/modules/mautic_blocks/css/mautic.blocks.css b/modules/mautic_blocks/css/mautic.blocks.css
+new file mode 100755
+index 0000000..ab01203
+--- /dev/null
++++ b/modules/mautic_blocks/css/mautic.blocks.css
+@@ -0,0 +1,3 @@
++.noborder {
++  border: 0;
++}
+diff --git a/modules/mautic_blocks/mautic_blocks.info.yml b/modules/mautic_blocks/mautic_blocks.info.yml
+new file mode 100755
+index 0000000..556c43e
+--- /dev/null
++++ b/modules/mautic_blocks/mautic_blocks.info.yml
+@@ -0,0 +1,8 @@
++name: Mautic Blocks
++type: module
++description: Adds the ability to easily embed Mautic forms and focus items into a site as blocks.
++core_version_requirement: ^8 || ^9 || ^10
++package: Mautic
++dependencies:
++ - mautic
++ - mautic_api
+diff --git a/modules/mautic_blocks/mautic_blocks.libraries.yml b/modules/mautic_blocks/mautic_blocks.libraries.yml
+new file mode 100755
+index 0000000..ac9983b
+--- /dev/null
++++ b/modules/mautic_blocks/mautic_blocks.libraries.yml
+@@ -0,0 +1,5 @@
++blocks:
++  version: 1.x
++  css:
++    component:
++      css/mautic.blocks.css: {}
+diff --git a/modules/mautic_blocks/mautic_blocks.module b/modules/mautic_blocks/mautic_blocks.module
+new file mode 100755
+index 0000000..dae5790
+--- /dev/null
++++ b/modules/mautic_blocks/mautic_blocks.module
+@@ -0,0 +1,45 @@
++<?php
++
++/**
++ * @file
++ * Contains mautic_blocks.module.
++ */
++
++use Drupal\Core\Routing\RouteMatchInterface;
++
++/**
++ * Implements hook_help().
++ */
++function mautic_blocks_help($route_name, RouteMatchInterface $route_match) {
++  switch ($route_name) {
++    case 'help.page.mautic_blocks':
++      $output = '<h3>' . t('About') . '</h3>';
++      $output .= '<p>' . t('Mautic blocks adds the ability to easily embed Mautic forms and focus items into a site as blocks.') . '</p>';
++      return $output;
++
++  }
++}
++
++/**
++ * Implements hook_theme() for Mautic block templates.
++ */
++function mautic_blocks_theme() {
++  return [
++    'mautic_forms' => [
++      'variables' => [
++        'mautic_instance' => NULL,
++        'mautic_id' => NULL,
++        'embed' => NULL,
++        'iframe_width' => NULL,
++        'iframe_height' => NULL,
++        'iframe_border' => NULL,
++      ],
++    ],
++    'mautic_focus' => [
++      'variables' => [
++        'mautic_instance' => NULL,
++        'mautic_id' => NULL,
++      ],
++    ],
++  ];
++}
+diff --git a/modules/mautic_blocks/src/Plugin/Block/MauticFocusBlock.php b/modules/mautic_blocks/src/Plugin/Block/MauticFocusBlock.php
+new file mode 100755
+index 0000000..c781f26
+--- /dev/null
++++ b/modules/mautic_blocks/src/Plugin/Block/MauticFocusBlock.php
+@@ -0,0 +1,44 @@
++<?php
++
++namespace Drupal\mautic_blocks\Plugin\Block;
++
++use Drupal\Core\Form\FormStateInterface;
++
++/**
++ * Provides a 'Mautic focus item' Block.
++ *
++ * This is nearly identical to the Mautic
++ * form block, so we can just extend that with a few adjustments.
++ *
++ * @Block(
++ *   id = "mautic_focus",
++ *   admin_label = @Translation("Mautic Focus Item"),
++ *   category = @Translation("Mautic"),
++ * )
++ */
++class MauticFocusBlock extends MauticFormBlock {
++
++  /**
++   * {@inheritdoc}
++   */
++  protected $endpoint = 'focus';
++
++  /**
++   * {@inheritdoc}
++   */
++  public function blockForm($form, FormStateInterface $form_state) {
++    $form = parent::blockForm($form, $form_state);
++
++    // Change the block title and description.
++    $form['mautic_id']['#title'] = t('Mautic focus item');
++    $form['mautic_id']['#description'] = t('Select the Mautic focus item to embed.');
++
++    // Hide the embed option because focus items only have a JS embed option.
++    $form['embed'] = [
++      '#type' => 'hidden',
++      '#value' => 'js',
++    ];
++    return $form;
++  }
++
++}
+diff --git a/modules/mautic_blocks/src/Plugin/Block/MauticFormBlock.php b/modules/mautic_blocks/src/Plugin/Block/MauticFormBlock.php
+new file mode 100755
+index 0000000..ea86d48
+--- /dev/null
++++ b/modules/mautic_blocks/src/Plugin/Block/MauticFormBlock.php
+@@ -0,0 +1,205 @@
++<?php
++
++namespace Drupal\mautic_blocks\Plugin\Block;
++
++use Drupal\Core\Block\BlockBase;
++use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
++use Symfony\Component\DependencyInjection\ContainerInterface;
++use Drupal\mautic_api\MauticApiService;
++
++/**
++ * Provides a 'Mautic Form' Block.
++ *
++ * @Block(
++ *   id = "mautic_form",
++ *   admin_label = @Translation("Mautic Form"),
++ *   category = @Translation("Mautic"),
++ * )
++ */
++class MauticFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
++
++  /**
++   * Drupal\mautic_api\MauticApiService definition.
++   *
++   * @var \Drupal\mautic_api\MauticApiService
++   */
++  protected $mauticApiService;
++
++  /**
++   * Mautic API endpoint variable.
++   *
++   * Variable to store the Mautic API endpoint that we are using
++   * to manage what items we are listing.
++   * Examples: forms, focus, segments, files.
++   *
++   * @var string
++   */
++  protected $endpoint = 'forms';
++
++  /**
++   * MauticFormBlock constructor.
++   *
++   * @param array $configuration
++   *   A configuration array containing information about the plugin instance.
++   * @param string $plugin_id
++   *   The plugin_id for the plugin instance.
++   * @param mixed $plugin_definition
++   *   The plugin implementation definition.
++   * @param \Drupal\mautic_api\MauticApiService $mautic_api_service
++   *   The Mautic API service.
++   */
++  public function __construct(array $configuration, $plugin_id, $plugin_definition, MauticApiService $mautic_api_service) {
++    parent::__construct($configuration, $plugin_id, $plugin_definition);
++
++    $this->mauticApiService = $mautic_api_service;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
++    return new static(
++      $configuration,
++      $plugin_id,
++      $plugin_definition,
++      $container->get('mautic_api')
++    );
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function defaultConfiguration() {
++    return ['label_display' => FALSE];
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function blockForm($form, FormStateInterface $form_state) {
++    $form = parent::blockForm($form, $form_state);
++    $config = $this->getConfiguration();
++
++    $form['mautic_id'] = [
++      '#type' => 'select',
++      '#title' => t('Mautic form block'),
++      '#description' => t('Select the Mautic form to embed.'),
++      '#default_value' => isset($config['mautic_id']) ? $config['mautic_id'] : '1',
++      '#options' => $this->buildSelectList(),
++      '#required' => TRUE,
++    ];
++    $form['embed'] = [
++      '#type' => 'select',
++      '#title' => t('Embed method'),
++      '#description' => t('Choose whether to embed this with JS or as an iframe.'),
++      '#default_value' => isset($config['embed']) ? $config['embed'] : 'js',
++      '#options' => [
++        'js' => 'Javascript',
++        'iframe' => 'Iframe',
++      ],
++      '#required' => TRUE,
++    ];
++    $form['iframe'] = [
++      '#type' => 'details',
++      '#title' => t('Iframe settings'),
++      '#open' => TRUE,
++      '#states' => [
++        'visible' => [
++          ':input[name="settings[embed]"]' => ['value' => 'iframe'],
++        ],
++      ],
++    ];
++    $form['iframe']['iframe_width'] = [
++      '#type' => 'number',
++      '#title' => $this->t('Width'),
++      '#default_value' => isset($config['iframe_width']) ? $config['iframe_width'] : '300',
++      '#description' => t('Iframe width in pixels with no units (e.g. "<code>300</code>").'),
++      '#min' => 1,
++      '#states' => [
++        'required' => [
++          ':input[name="settings[embed]"]' => ['value' => 'iframe'],
++        ],
++      ],
++    ];
++    $form['iframe']['iframe_height'] = [
++      '#type' => 'number',
++      '#title' => $this->t('Height'),
++      '#default_value' => isset($config['iframe_width']) ? $config['iframe_height'] : '300',
++      '#description' => t('Iframe height in pixels with no units (e.g. "<code>300</code>").'),
++      '#min' => 1,
++      '#states' => [
++        'required' => [
++          ':input[name="settings[embed]"]' => ['value' => 'iframe'],
++        ],
++      ],
++    ];
++    $form['iframe']['iframe_border'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t('Show border'),
++      '#default_value' => isset($config['iframe_border']) ? $config['iframe_border'] : 'FALSE',
++      '#description' => t('Show a border around the iframe.'),
++    ];
++
++    return $form;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function blockSubmit($form, FormStateInterface $form_state) {
++    parent::blockSubmit($form, $form_state);
++    $values = $form_state->getValues();
++    $this->configuration['mautic_id'] = $values['mautic_id'];
++    $this->configuration['embed'] = $values['embed'];
++    $this->configuration['iframe_width'] = $values['iframe']['iframe_width'];
++    $this->configuration['iframe_height'] = $values['iframe']['iframe_height'];
++    $this->configuration['iframe_border'] = $values['iframe']['iframe_border'];
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function buildSelectList() {
++    $type = $this->endpoint;
++    $api_list = $this->mauticApiService->getList($type);
++    $items = $api_list[$type];
++    $list = [];
++    foreach ($items as $item) {
++      $list[$item['id']] = $item['name'];
++    }
++    return $list;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getMauticInstance() {
++    $mautic_settings = \Drupal::config('mautic_api.settings');
++    $base_url = parse_url($mautic_settings->get('base_url'));
++    $mautic_instance = $base_url['host'];
++    return $mautic_instance;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function build() {
++    $config = $this->getConfiguration();
++    return [
++      '#theme' => 'mautic_' . $this->endpoint,
++      '#mautic_instance' => $this->getMauticInstance(),
++      '#mautic_id' => $config['mautic_id'],
++      '#embed' => $config['embed'],
++      '#iframe_width' => $config['iframe_width'],
++      '#iframe_height' => $config['iframe_height'],
++      '#iframe_border' => $config['iframe_border'],
++      '#attached' => [
++        'library' => [
++          'mautic_blocks/blocks',
++        ],
++      ],
++    ];
++  }
++
++}
+diff --git a/modules/mautic_blocks/templates/mautic-focus.html.twig b/modules/mautic_blocks/templates/mautic-focus.html.twig
+new file mode 100755
+index 0000000..7bd2354
+--- /dev/null
++++ b/modules/mautic_blocks/templates/mautic-focus.html.twig
+@@ -0,0 +1,12 @@
++{#
++/**
++ * @file
++ * Template for Mautic focus item block.
++ *
++ * Available variables:
++ * - mautic_instance: Mautic instance hostname.
++ * - mautic_id: Mautic focus item id.
++ */
++#}
++
++<script src="//{{ mautic_instance }}/focus/{{ mautic_id}}.js" type="text/javascript" charset="utf-8" async="async"></script>
+diff --git a/modules/mautic_blocks/templates/mautic-forms.html.twig b/modules/mautic_blocks/templates/mautic-forms.html.twig
+new file mode 100755
+index 0000000..3704657
+--- /dev/null
++++ b/modules/mautic_blocks/templates/mautic-forms.html.twig
+@@ -0,0 +1,29 @@
++{#
++/**
++  * @file
++  * Template for Mautic form block.
++  *
++  * Available variables:
++  * - mautic_instance: Mautic instance hostname.
++  * - mautic_id: Mautic form id.
++  * - embed: Type of embed to do (js or iframe)
++  * - iframe_width: Mautic form iframe width.
++  * - iframe_height: Mautic form iframe height.
++  * - iframe_border: Show Mautic form iframe border.
++  */
++#}
++
++{%
++  set classes = [
++    'mautic',
++    iframe_border ? '' : 'noborder',
++  ]
++%}
++
++{# Check for an iframe embed #}
++{% if embed == 'iframe' %}
++  <iframe {{ attributes.addClass(classes) }} src="//{{ mautic_instance }}/form/{{ mautic_id}}" width={{ iframe_width }}px height={{ iframe_height }}px ><p>Your browser does not support iframes.</p></iframe>
++{# js is the default method. #}
++{% else %}
++  <script type="text/javascript" src="//{{ mautic_instance }}/form/generate.js?id={{ mautic_id }}"></script>
++{% endif %}
