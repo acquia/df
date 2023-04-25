@@ -1,0 +1,22 @@
+diff --git a/src/PerzHelper.php b/src/PerzHelper.php
+index 1dda0dc..82698bc 100644
+--- a/src/PerzHelper.php
++++ b/src/PerzHelper.php
+@@ -364,6 +364,7 @@ class PerzHelper {
+       'us' => 'The Americas',
+       'eu' => 'Europe',
+       'ap' => 'Asia-Pacific',
++      'demo' => 'Demo',
+     ];
+   }
+ 
+@@ -384,6 +385,9 @@ class PerzHelper {
+       case 'ap':
+         return 'https://ap.perz-api.cloudservices.acquia.io';
+ 
++      case 'demo':
++        return 'https://demo.perz-api.cloudservices.acquia.io';
++
+       default:
+         return 'https://us.perz-api.cloudservices.acquia.io';
+     }
