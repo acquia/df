@@ -27,12 +27,17 @@ code: |
       jQuery(this).addClass("serial_" + index);
     });
   });
+
   jQuery(window).scroll(function () {
     jQuery('.text-inview').each(function () {
         if (isScrolledIntoView(this) === true) {
-            jQuery(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
-            //Toggle target tab
-            jQuery(jQuery(this).attr('tab')).addClass('active').siblings('.image--wrapper .imagery').removeClass('active');
+          jQuery(this).addClass('nav-tab-active').siblings().removeClass('nav-tab-active');
+          //Toggle target tab
+          jQuery(jQuery(this).attr('tab')).addClass('active').siblings('.image--wrapper .imagery').removeClass('active');
+        } else {
+          // this should remove the classes from elements not in view
+          jQuery(this).removeClass('nav-tab-active').siblings().removeClass('nav-tab-active');
+          jQuery(jQuery(this).attr('tab')).removeClass('active').siblings('.image--wrapper .imagery').removeClass('active');
         }
     });
   });
