@@ -8,11 +8,12 @@ id: vertical_slider
 label: 'Vertical Slider'
 code: |
   function isScrolledIntoView(elem) {
-    var docViewTop = jQuery(window).scrollTop();
-    var docViewBottom = docViewTop + jQuery(window).height();
+      var cstmOffset = 300;
+    var docViewTop = jQuery(window).scrollTop() - cstmOffset;
+    var docViewBottom = docViewTop + jQuery(window).height() + cstmOffset;
 
-    var elemTop = jQuery(elem).offset().top;
-    var elemBottom = elemTop + jQuery(elem).height();
+    var elemTop = jQuery(elem).offset().top + cstmOffset;
+    var elemBottom = elemTop + jQuery(elem).height() - cstmOffset;
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   }
