@@ -1,10 +1,90 @@
 diff --git a/acquia_cms_common.permissions.yml b/acquia_cms_common.permissions.yml
 new file mode 100644
-index 0000000..f87a6c2
+index 0000000..3cc8253
 --- /dev/null
 +++ b/acquia_cms_common.permissions.yml
-@@ -0,0 +1,4 @@
+@@ -0,0 +1,84 @@
 +use text format full_html:
 +  title: 'Text Format permissions for full_html'
 +use text format cohesion:
 +  title: 'Text format permissions for cohesion'
++create image media:
++  title: 'Permissions to create image media'
++edit own image media:
++  title: 'Permissions to edit own image media'
++delete own image media:
++  title: 'Permissions to delete own image media'
++create place content:
++  title: 'Permissions to create place content'
++edit own place content:
++  title: 'Permissions to edit self created place content'
++delete own place content:
++  title: 'Permissions to delete own place content'
++edit any image media:
++  title: 'Permissions to edit any image media'
++delete any image media:
++  title: 'Permissions to delete any image media'
++edit any place content:
++  title: 'Permissions to edit any place content'
++delete any place content:
++  title: 'Permissions to delete any place content'
++create person content:
++  title: 'Permissions to create person content'
++edit own person content:
++  title: 'Permissions to edit own person content'
++delete own person content:
++  title: 'Permissions to delete own person content'
++edit any person content:
++  title: 'Permissions to edit any person content'
++delete any person content:
++  title: 'Permissions to delete any person content'
++create article content:
++  title: 'Permissions to create article content'
++edit own article content:
++  title: 'Permissions to edit own article content'
++delete own article content:
++  title: 'Permissions to delete own article content'
++edit any article content:
++  title: 'Permissions to edit any article content'
++delete any article content:
++  title: 'Permissions to delete any article content'
++create event content:
++  title: 'Permissions to create event content'
++edit own event content:
++  title: 'Permissions to edit own event content'
++delete own event content:
++  title: 'Permissions to delete own event content'
++edit any event content:
++  title: 'Permissions to edit any event content'
++delete any event content:
++  title: 'Permissions to delete any event content'
++create page content:
++  title: 'Permissions to create page content'
++edit own page content:
++  title: 'Permissions to edit own page content'
++delete own page content:
++  title: 'Permissions to delete own page content'
++edit any page content:
++  title: 'Permissions to edit any page content'
++delete any page content:
++  title: 'Permissions to delete any page content'
++create video media:
++  title: 'Permissions to create video media'
++edit own video media:
++  title: 'Permissions to edit own video media'
++delete own video media:
++  title: 'Permissions to delete own video media'
++edit any video media:
++  title: 'Permissions to edit any video media'
++delete any video media:
++  title: 'Permissions to delete any video media'
++create document media:
++  title: 'Permissions to create document media'
++edit own document media:
++  title: 'Permissions to edit own document media'
++delete own document media:
++  title: 'Permissions to delete own document media'
++edit any document media:
++  title: 'Permissions to edit any document media'
++delete any document media:
++  title: 'Permissions to delete any document media'
