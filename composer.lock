@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b69760ebdafc2253aa92b21cfb65383",
+    "content-hash": "0e7bc3f594c28da378ec57f73a17c4b2",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -6867,17 +6867,17 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "3.13.0",
+            "version": "3.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ctools.git",
-                "reference": "8.x-3.13"
+                "reference": "8.x-3.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.13.zip",
-                "reference": "8.x-3.13",
-                "shasum": "b84176544265d4c6aa17917d66335527c9498c5a"
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.14.zip",
+                "reference": "8.x-3.14",
+                "shasum": "8895a8e47199b458013bc153ceafa0b1495f33c1"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10"
@@ -6885,8 +6885,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.13",
-                    "datestamp": "1668631846",
+                    "version": "8.x-3.14",
+                    "datestamp": "1684299793",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7816,17 +7816,17 @@
         },
         {
             "name": "drupal/entity_usage",
-            "version": "2.0.0-beta11",
+            "version": "2.0.0-beta12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_usage.git",
-                "reference": "8.x-2.0-beta11"
+                "reference": "8.x-2.0-beta12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_usage-8.x-2.0-beta11.zip",
-                "reference": "8.x-2.0-beta11",
-                "shasum": "31b7248887c917a5aa85bb0c8251467b96d53110"
+                "url": "https://ftp.drupal.org/files/projects/entity_usage-8.x-2.0-beta12.zip",
+                "reference": "8.x-2.0-beta12",
+                "shasum": "cdd31e6c413cad6fbdb1bd0aac9ad8a0331eb429"
             },
             "require": {
                 "drupal/core": "^9.1 || ^10"
@@ -7846,8 +7846,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta11",
-                    "datestamp": "1676966168",
+                    "version": "8.x-2.0-beta12",
+                    "datestamp": "1684309054",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -11941,6 +11941,79 @@
             }
         },
         {
+            "name": "drupal/openai",
+            "version": "1.0.0-alpha8",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/openai.git",
+                "reference": "1.0.0-alpha8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha8.zip",
+                "reference": "1.0.0-alpha8",
+                "shasum": "7e18fa569eb73b39f428aee89c00dec3a7b788e2"
+            },
+            "require": {
+                "drupal/core": "^10",
+                "openai-php/client": "^v0.3.4"
+            },
+            "require-dev": {
+                "drupal/devel_generate": "*",
+                "drupal/openai_embeddings": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha8",
+                    "datestamp": "1680745103",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Quillen",
+                    "homepage": "https://kevinquillen.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Julien Alombert",
+                    "homepage": "https://www.drupal.org/user/317279",
+                    "email": "alombertjulien@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "laurencemercer",
+                    "homepage": "https://www.drupal.org/user/96416"
+                },
+                {
+                    "name": "rafuel92",
+                    "homepage": "https://www.drupal.org/user/2287180"
+                }
+            ],
+            "description": "A set of modules to enable OpenAI integration with Drupal and augment the content experience with AI assisted tools.",
+            "homepage": "https://www.drupal.org/project/openai",
+            "keywords": [
+                "AI content",
+                "DALL-E",
+                "GPT-3",
+                "content generation",
+                "content moderation",
+                "gpt",
+                "openai"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/openai"
+            }
+        },
+        {
             "name": "drupal/openapi",
             "version": "2.1.0",
             "source": {
@@ -12775,6 +12848,120 @@
             }
         },
         {
+            "name": "drupal/project_browser",
+            "version": "1.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/project_browser.git",
+                "reference": "1.0.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/project_browser-1.0.0-beta4.zip",
+                "reference": "1.0.0-beta4",
+                "shasum": "5950cb257271b684815d18dfe033be20336b38de"
+            },
+            "require": {
+                "composer/semver": "^3.2",
+                "drupal/core": "^10",
+                "ext-simplexml": "*",
+                "guzzlehttp/guzzle": "^6 || ^7",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "drupal/automatic_updates": "^2.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta4",
+                    "datestamp": "1676399534",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "cs": [
+                    "phpcs -n --standard=PSR2 src --exclude=Generic.Files.LineLength"
+                ],
+                "cbf": [
+                    "phpcbf -n --standard=PSR2 src --exclude=Generic.Files.LineLength"
+                ],
+                "unit": [
+                    "phpunit"
+                ],
+                "lint": [
+                    "find src -name '*.php' -print0 | xargs -0 -n1 php -l"
+                ],
+                "test": [
+                    "@lint",
+                    "@cs"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Grasmick",
+                    "homepage": "https://www.drupal.org/user/2369194",
+                    "email": "matt.grasmick@gmail.com"
+                },
+                {
+                    "name": "chrisfromredfin",
+                    "homepage": "https://www.drupal.org/user/74392"
+                },
+                {
+                    "name": "dmitrig01",
+                    "homepage": "https://www.drupal.org/user/47566"
+                },
+                {
+                    "name": "fjgarlin",
+                    "homepage": "https://www.drupal.org/user/2495842"
+                },
+                {
+                    "name": "grasmash",
+                    "homepage": "https://www.drupal.org/user/455714"
+                },
+                {
+                    "name": "jacob@redfinsolutions.com",
+                    "homepage": "https://www.drupal.org/user/3574855"
+                },
+                {
+                    "name": "leslieg",
+                    "homepage": "https://www.drupal.org/user/1746792"
+                },
+                {
+                    "name": "narendraR",
+                    "homepage": "https://www.drupal.org/user/1730192"
+                },
+                {
+                    "name": "rlnorthcutt",
+                    "homepage": "https://www.drupal.org/user/116893"
+                },
+                {
+                    "name": "srishtiiee",
+                    "homepage": "https://www.drupal.org/user/3685162"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                }
+            ],
+            "description": "A project browser embedded in the Drupal UI.",
+            "homepage": "https://www.drupal.org/project/project_browser",
+            "support": {
+                "source": "https://git.drupalcode.org/project/project_browser"
+            }
+        },
+        {
             "name": "drupal/purge",
             "version": "3.4.0",
             "source": {
@@ -13502,6 +13689,36 @@
                 "source": "http://cgit.drupalcode.org/samlauth",
                 "issues": "http://drupal.org/project/samlauth"
             }
+        },
+        {
+            "name": "drupal/save_edit",
+            "version": "2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevinfunk/save_edit.git",
+                "reference": "ed06e7a30bbd23cef7f4ea9e2cf0f07877db5248"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kevinfunk/save_edit/zipball/ed06e7a30bbd23cef7f4ea9e2cf0f07877db5248",
+                "reference": "ed06e7a30bbd23cef7f4ea9e2cf0f07877db5248",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Gives a 'Save & Edit' button on node pages.",
+            "homepage": "https://www.drupal.org/project/save_edit",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "issues": "http://drupal.org/project/issues/save_edit",
+                "source": "http://cgit.drupalcode.org/save_edit"
+            },
+            "time": "2023-04-19T20:08:54+00:00"
         },
         {
             "name": "drupal/scheduler",
@@ -19520,6 +19737,87 @@
             "time": "2021-12-15T12:32:42+00:00"
         },
         {
+            "name": "openai-php/client",
+            "version": "v0.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openai-php/client.git",
+                "reference": "0bb01e93fbd1f155af1c5a70caa53252dd13478f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openai-php/client/zipball/0bb01e93fbd1f155af1c5a70caa53252dd13478f",
+                "reference": "0bb01e93fbd1f155af1c5a70caa53252dd13478f",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.5.0",
+                "php": "^8.1.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.6.0",
+                "nunomaduro/collision": "^7.0.5",
+                "pestphp/pest": "^2.0.0",
+                "pestphp/pest-plugin-arch": "^2.0.0",
+                "pestphp/pest-plugin-mock": "^2.0.0",
+                "phpstan/phpstan": "^1.10.3",
+                "rector/rector": "^0.14.8",
+                "symfony/var-dumper": "^6.2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/OpenAI.php"
+                ],
+                "psr-4": {
+                    "OpenAI\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "OpenAI PHP is a supercharged PHP API client that allows you to interact with the Open AI API",
+            "keywords": [
+                "GPT-3",
+                "api",
+                "client",
+                "codex",
+                "dall-e",
+                "language",
+                "natural",
+                "openai",
+                "php",
+                "processing",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/openai-php/client/issues",
+                "source": "https://github.com/openai-php/client/tree/v0.3.5"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/paypalme/enunomaduro",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/gehrisandro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-03-08T06:39:38+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v9.99.100",
             "source": {
@@ -19957,16 +20255,16 @@
         },
         {
             "name": "php-http/discovery",
-            "version": "1.18.0",
+            "version": "1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "29ae6fae35f4116bbfe4c8b96ccc3f687eb07cd9"
+                "reference": "f258b3a1d16acb7b21f3b42d7a2494a733365237"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/29ae6fae35f4116bbfe4c8b96ccc3f687eb07cd9",
-                "reference": "29ae6fae35f4116bbfe4c8b96ccc3f687eb07cd9",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/f258b3a1d16acb7b21f3b42d7a2494a733365237",
+                "reference": "f258b3a1d16acb7b21f3b42d7a2494a733365237",
                 "shasum": ""
             },
             "require": {
@@ -20029,9 +20327,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/discovery/issues",
-                "source": "https://github.com/php-http/discovery/tree/1.18.0"
+                "source": "https://github.com/php-http/discovery/tree/1.18.1"
             },
-            "time": "2023-05-03T14:49:12+00:00"
+            "time": "2023-05-17T08:53:10+00:00"
         },
         {
             "name": "php-http/guzzle7-adapter",
@@ -25037,9 +25335,12 @@
         "drupal/mautic_api": 20,
         "drupal/moderated_content_bulk_publish": 10,
         "drupal/moderation_note": 10,
+        "drupal/openai": 15,
         "drupal/page_manager": 5,
         "drupal/profile_switcher": 15,
+        "drupal/project_browser": 10,
         "drupal/pwa": 5,
+        "drupal/save_edit": 20,
         "drupal/sitestudio_extras": 20,
         "drupal/sitestudio_gin": 5,
         "drupal/smart_date": 10,
