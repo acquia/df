@@ -33,3 +33,11 @@ function df_core_requirements($phase) {
   }
   return $requirements;
 }
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function df_core_toolbar_alter(&$items) {
+  // Removes Toolbar Edit menut item.
+  unset($items['contextual']);
+}
