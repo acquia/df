@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a07b3d21ba92fa16aed3ea23f4dff65",
+    "content-hash": "bbcc5b643dff486f1d65b80dcc22a865",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -4361,22 +4361,23 @@
         },
         {
             "name": "drupal/acquia_dam",
-            "version": "1.0.4",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_dam.git",
-                "reference": "1.0.4"
+                "reference": "1.0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.4.zip",
-                "reference": "1.0.4",
-                "shasum": "c0d8b54bd219c58c5777ab6219269b4685c836c5"
+                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.7.zip",
+                "reference": "1.0.7",
+                "shasum": "9db94513ab0ee832b495cc193f4b5b0cfc0c98b2"
             },
             "require": {
                 "drupal/core": ">=9.4",
                 "drupal/views_remote_data": "^1.0.1",
-                "guzzlehttp/psr7": "^1.0 || ^2.0"
+                "guzzlehttp/psr7": "^1.0 || ^2.0",
+                "php": "^7.4 || ^8"
             },
             "conflict": {
                 "acquia/cohesion": "<6.9.3"
@@ -4393,8 +4394,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.4",
-                    "datestamp": "1674847821",
+                    "version": "1.0.7",
+                    "datestamp": "1683551754",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
