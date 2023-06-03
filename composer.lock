@@ -2640,25 +2640,29 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "8cffffb2218e01f3b370bf763e00e81697725259"
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/8cffffb2218e01f3b370bf763e00e81697725259",
-                "reference": "8cffffb2218e01f3b370bf763e00e81697725259",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1|^8.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^9",
-                "phpunit/phpunit": "^7.5|^8.5|^9.5",
-                "psr/log": "^1|^2|^3"
+                "phpstan/phpstan": "1.4.10 || 1.10.15",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "psalm/plugin-phpunit": "0.18.4",
+                "psr/log": "^1 || ^2 || ^3",
+                "vimeo/psalm": "4.30.0 || 5.12.0"
             },
             "suggest": {
                 "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
@@ -2677,9 +2681,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/v1.1.0"
+                "source": "https://github.com/doctrine/deprecations/tree/v1.1.1"
             },
-            "time": "2023-05-29T18:55:17+00:00"
+            "time": "2023-06-03T09:27:29+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -4351,17 +4355,17 @@
         },
         {
             "name": "drupal/acquia_dam",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_dam.git",
-                "reference": "1.0.7"
+                "reference": "1.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.7.zip",
-                "reference": "1.0.7",
-                "shasum": "9db94513ab0ee832b495cc193f4b5b0cfc0c98b2"
+                "url": "https://ftp.drupal.org/files/projects/acquia_dam-1.0.8.zip",
+                "reference": "1.0.8",
+                "shasum": "264bc88415232131a37c2d05569431d3a9a0869a"
             },
             "require": {
                 "drupal/core": ">=9.4",
@@ -4384,8 +4388,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.7",
-                    "datestamp": "1683551754",
+                    "version": "1.0.8",
+                    "datestamp": "1685646509",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8227,17 +8231,17 @@
         },
         {
             "name": "drupal/feeds",
-            "version": "3.0.0-beta3",
+            "version": "3.0.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds.git",
-                "reference": "8.x-3.0-beta3"
+                "reference": "8.x-3.0-beta4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-beta3.zip",
-                "reference": "8.x-3.0-beta3",
-                "shasum": "60e840f47b4cd13cc1f72381f64e81c1d7e60217"
+                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-beta4.zip",
+                "reference": "8.x-3.0-beta4",
+                "shasum": "d715c428819b71d7018d022862c8d1c453bcf4d7"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -8250,8 +8254,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-beta3",
-                    "datestamp": "1670512823",
+                    "version": "8.x-3.0-beta4",
+                    "datestamp": "1685558328",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -12067,31 +12071,30 @@
         },
         {
             "name": "drupal/openai",
-            "version": "1.0.0-alpha11",
+            "version": "1.0.0-alpha12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openai.git",
-                "reference": "1.0.0-alpha11"
+                "reference": "1.0.0-alpha12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha11.zip",
-                "reference": "1.0.0-alpha11",
-                "shasum": "77280fc4ee260d42b8a50622d2c453de3a01633e"
+                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha12.zip",
+                "reference": "1.0.0-alpha12",
+                "shasum": "3e74235475d23522f007b133fe0e87e757bf645d"
             },
             "require": {
                 "drupal/core": "^10",
-                "openai-php/client": "^v0.4"
+                "openai-php/client": "^0.4|^v0.5.2"
             },
             "require-dev": {
-                "drupal/devel_generate": "*",
-                "drupal/openai_embeddings": "*"
+                "drupal/devel_generate": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha11",
-                    "datestamp": "1685128510",
+                    "version": "1.0.0-alpha12",
+                    "datestamp": "1685735331",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -16974,16 +16977,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796"
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b531a2311709443320c786feb4519cfaf94af796",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
                 "shasum": ""
             },
             "require": {
@@ -17029,7 +17032,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.2.5"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.6"
             },
             "funding": [
                 {
@@ -17037,7 +17040,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-02T17:26:14+00:00"
+            "time": "2023-06-01T07:04:22+00:00"
         },
         {
             "name": "enlightn/security-checker",
@@ -18064,12 +18067,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinfunk/default_content_ui.git",
-                "reference": "109db65f1739a700a66669dbf73739c419b60173"
+                "reference": "e4d308b03445e8ac37d43b12ca605a5aeee8f44c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/default_content_ui/zipball/109db65f1739a700a66669dbf73739c419b60173",
-                "reference": "109db65f1739a700a66669dbf73739c419b60173",
+                "url": "https://api.github.com/repos/kevinfunk/default_content_ui/zipball/e4d308b03445e8ac37d43b12ca605a5aeee8f44c",
+                "reference": "e4d308b03445e8ac37d43b12ca605a5aeee8f44c",
                 "shasum": ""
             },
             "require": {
@@ -18102,7 +18105,7 @@
                 "issues": "https://github.com/kevinfunk/default_content_ui/issues",
                 "source": "https://github.com/kevinfunk/default_content_ui/tree/2.x-alpha2"
             },
-            "time": "2022-08-16T00:25:55+00:00"
+            "time": "2023-06-01T15:32:25+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
