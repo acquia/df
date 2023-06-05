@@ -279,16 +279,16 @@
         },
         {
             "name": "acquia/content-hub-php",
-            "version": "3.3",
+            "version": "3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/content-hub-php.git",
-                "reference": "7380e5f275a0d00a685239035bce94413e170445"
+                "reference": "db287bfcee52540ddf0239de07cbbf5db5994d57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/7380e5f275a0d00a685239035bce94413e170445",
-                "reference": "7380e5f275a0d00a685239035bce94413e170445",
+                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/db287bfcee52540ddf0239de07cbbf5db5994d57",
+                "reference": "db287bfcee52540ddf0239de07cbbf5db5994d57",
                 "shasum": ""
             },
             "require": {
@@ -342,9 +342,9 @@
             "homepage": "https://github.com/acquia/content-hub-php",
             "support": {
                 "issues": "https://github.com/acquia/content-hub-php/issues",
-                "source": "https://github.com/acquia/content-hub-php/tree/3.3"
+                "source": "https://github.com/acquia/content-hub-php/tree/3.4"
             },
-            "time": "2023-04-25T11:38:52+00:00"
+            "time": "2023-06-01T12:01:18+00:00"
         },
         {
             "name": "acquia/drupal-environment-detector",
@@ -4237,23 +4237,23 @@
         },
         {
             "name": "drupal/acquia_contenthub",
-            "version": "3.1.2",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_contenthub.git",
-                "reference": "3.1.2"
+                "reference": "3.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-3.1.2.zip",
-                "reference": "3.1.2",
-                "shasum": "0d0a74ecf0114437108e54df2b89b7b5ed132cd2"
+                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-3.2.0.zip",
+                "reference": "3.2.0",
+                "shasum": "c4a5774b0d2b1cb09b479e48478705914b392c9f"
             },
             "require": {
-                "acquia/content-hub-php": "3.3",
-                "drupal/core": ">=9.2",
+                "acquia/content-hub-php": "3.4",
+                "drupal/core": "^9.4.15 || ^10",
                 "drupal/depcalc": "1.16",
-                "laminas/laminas-diactoros": "^1.8 || ^2.2",
+                "laminas/laminas-diactoros": "^1.8 || ^2.2 || ^3",
                 "spatie/ssl-certificate": "1.21 || 1.22.1",
                 "symfony/psr-http-message-bridge": "^1.1.2 || ^2.0"
             },
@@ -4266,10 +4266,11 @@
                 "drupal/metatag": "^1.16",
                 "drupal/paragraphs": "^1",
                 "drupal/redirect": "^1.6",
-                "drupal/s3fs": "3.x-dev@dev",
+                "drupal/s3fs": "3.x-dev",
                 "drupal/seven": "^1.0@alpha",
                 "drupal/webform": "^6.0",
-                "ext-zlib": "*"
+                "ext-zlib": "*",
+                "php": ">=7.4.0"
             },
             "suggest": {
                 "dms/phpunit-arraysubset-asserts": "Used for PHPUnit 8.0+ tests (Drupal 9)"
@@ -4277,15 +4278,15 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.2",
-                    "datestamp": "1682579241",
+                    "version": "3.2.0",
+                    "datestamp": "1685948236",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-3.1.x": "3.1.x-dev"
+                    "dev-3.2.x": "3.2.x-dev"
                 },
                 "drush": {
                     "services": {
@@ -4309,18 +4310,6 @@
                 {
                     "name": "amangrover90",
                     "homepage": "https://www.drupal.org/user/3602433"
-                },
-                {
-                    "name": "amarlata",
-                    "homepage": "https://www.drupal.org/user/3504572"
-                },
-                {
-                    "name": "attilatilman",
-                    "homepage": "https://www.drupal.org/user/3528404"
-                },
-                {
-                    "name": "EclipseGc",
-                    "homepage": "https://www.drupal.org/user/61203"
                 },
                 {
                     "name": "japerry",
@@ -12071,17 +12060,17 @@
         },
         {
             "name": "drupal/openai",
-            "version": "1.0.0-alpha12",
+            "version": "1.0.0-alpha13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openai.git",
-                "reference": "1.0.0-alpha12"
+                "reference": "1.0.0-alpha13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha12.zip",
-                "reference": "1.0.0-alpha12",
-                "shasum": "3e74235475d23522f007b133fe0e87e757bf645d"
+                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha13.zip",
+                "reference": "1.0.0-alpha13",
+                "shasum": "29a751da827f86d1d33864eebe74d6bff712ad40"
             },
             "require": {
                 "drupal/core": "^10",
@@ -12093,8 +12082,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha12",
-                    "datestamp": "1685735331",
+                    "version": "1.0.0-alpha13",
+                    "datestamp": "1685837850",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -21007,16 +20996,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.15",
+            "version": "1.10.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "762c4dac4da6f8756eebb80e528c3a47855da9bd"
+                "reference": "352bdbb960bb523e3d71b834862589f910921c23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/762c4dac4da6f8756eebb80e528c3a47855da9bd",
-                "reference": "762c4dac4da6f8756eebb80e528c3a47855da9bd",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/352bdbb960bb523e3d71b834862589f910921c23",
+                "reference": "352bdbb960bb523e3d71b834862589f910921c23",
                 "shasum": ""
             },
             "require": {
@@ -21065,7 +21054,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-09T15:28:01+00:00"
+            "time": "2023-06-05T08:21:46+00:00"
         },
         {
             "name": "psr/cache",
