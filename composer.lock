@@ -12065,17 +12065,17 @@
         },
         {
             "name": "drupal/openai",
-            "version": "1.0.0-alpha13",
+            "version": "1.0.0-alpha14",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openai.git",
-                "reference": "1.0.0-alpha13"
+                "reference": "1.0.0-alpha14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha13.zip",
-                "reference": "1.0.0-alpha13",
-                "shasum": "29a751da827f86d1d33864eebe74d6bff712ad40"
+                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha14.zip",
+                "reference": "1.0.0-alpha14",
+                "shasum": "2ff80800de358d5818623ccd1825009324264066"
             },
             "require": {
                 "drupal/core": "^10",
@@ -12087,8 +12087,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha13",
-                    "datestamp": "1685837850",
+                    "version": "1.0.0-alpha14",
+                    "datestamp": "1686928727",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -16646,17 +16646,17 @@
         },
         {
             "name": "drupal/yoast_seo",
-            "version": "2.0.0-alpha8",
+            "version": "2.0.0-alpha9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/yoast_seo.git",
-                "reference": "8.x-2.0-alpha8"
+                "reference": "8.x-2.0-alpha9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/yoast_seo-8.x-2.0-alpha8.zip",
-                "reference": "8.x-2.0-alpha8",
-                "shasum": "3656a41e9edada37d4fc42c972d10f9a4a32d85c"
+                "url": "https://ftp.drupal.org/files/projects/yoast_seo-8.x-2.0-alpha9.zip",
+                "reference": "8.x-2.0-alpha9",
+                "shasum": "1fd2695b289a1e725a293e378c0066c18e8c8407"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10",
@@ -16667,13 +16667,26 @@
                 "drupal/commerce": ">2.0 <2.5"
             },
             "require-dev": {
-                "drupal/paragraphs": "*"
+                "composer/installers": "^2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "dmore/behat-chrome-extension": "^1.4",
+                "drupal/devel": "^5.0.2",
+                "drupal/drupal-extension": "^5",
+                "drupal/paragraphs": "^1.15",
+                "drush/drush": "^11.0",
+                "friends-of-behat/mink-debug-extension": "^2.1",
+                "mglaman/phpstan-drupal": "^1.1.25",
+                "phpspec/prophecy-phpunit": "v2.0.1",
+                "phpstan/extension-installer": "^1.1.0",
+                "phpstan/phpstan": "^1.9.2",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.1.1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-alpha8",
-                    "datestamp": "1671283494",
+                    "version": "8.x-2.0-alpha9",
+                    "datestamp": "1686928294",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -18833,35 +18846,34 @@
         },
         {
             "name": "league/oauth2-server",
-            "version": "8.5.1",
+            "version": "8.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-server.git",
-                "reference": "43cd4d406906c6be5c8de2cee9bd3ad3753544ef"
+                "reference": "8ab731e84eef904b5913ba31b38116acf8ea50b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/43cd4d406906c6be5c8de2cee9bd3ad3753544ef",
-                "reference": "43cd4d406906c6be5c8de2cee9bd3ad3753544ef",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/8ab731e84eef904b5913ba31b38116acf8ea50b6",
+                "reference": "8ab731e84eef904b5913ba31b38116acf8ea50b6",
                 "shasum": ""
             },
             "require": {
                 "defuse/php-encryption": "^2.3",
-                "ext-json": "*",
                 "ext-openssl": "*",
                 "lcobucci/clock": "^2.2 || ^3.0",
                 "lcobucci/jwt": "^4.3 || ^5.0",
                 "league/event": "^2.2",
                 "league/uri": "^6.7",
                 "php": "^8.0",
-                "psr/http-message": "^1.0.1"
+                "psr/http-message": "^1.0.1 || ^2.0"
             },
             "replace": {
                 "league/oauth2server": "*",
                 "lncd/oauth2": "*"
             },
             "require-dev": {
-                "laminas/laminas-diactoros": "^2.24.0",
+                "laminas/laminas-diactoros": "^3.0.0",
                 "phpstan/phpstan": "^0.12.57",
                 "phpstan/phpstan-phpunit": "^0.12.16",
                 "phpunit/phpunit": "^9.6.6",
@@ -18910,7 +18922,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/oauth2-server/issues",
-                "source": "https://github.com/thephpleague/oauth2-server/tree/8.5.1"
+                "source": "https://github.com/thephpleague/oauth2-server/tree/8.5.2"
             },
             "funding": [
                 {
@@ -18918,7 +18930,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-04T10:20:16+00:00"
+            "time": "2023-06-16T15:32:47+00:00"
         },
         {
             "name": "league/uri",
