@@ -6,8 +6,8 @@
   "require": {
     "acquia/acf": "2.x-feeds-dev",
     "acquia/acquia-cms-starterkit": "^1.0",
-    "acquia/cohesion": "^7.0",
-    "acquia/cohesion-theme": "^7.0",
+    "acquia/cohesion": "7.2.0",
+    "acquia/cohesion-theme": "7.2.0",
     "acquia/sitestudio_contenthub": "^7.0.x-dev",
     "drupal/access_unpublished": "^1.5",
     "drupal/acquia_claro": "^1.3",
@@ -230,8 +230,7 @@
         "Attempt to modify custom permissions for DF": "patches/acquia_cms_common-custom-permissions.patch"
       },
       "acquia/cohesion": {
-        "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
-        "Call to a member function access() on null | https://backlog.acquia.com/browse/ACO-2769": "patches/ACO-2769.patch"
+        "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch"
       },
       "drupal/acquia_perz": {
         "Fatal error when using the \"Enqueue Content\" button in Drupal 10 | https://www.drupal.org/project/acquia_perz/issues/3366589": "patches/error-enqueue-content-drupal10-3366589.patch"
