@@ -178,16 +178,16 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "7.2.2",
+            "version": "7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "13795b038a7745524b549c8a6876f24162179565"
+                "reference": "45a2d8b38295f17925aa7d48edeadfe4ddc5feaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/13795b038a7745524b549c8a6876f24162179565",
-                "reference": "13795b038a7745524b549c8a6876f24162179565",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/45a2d8b38295f17925aa7d48edeadfe4ddc5feaa",
+                "reference": "45a2d8b38295f17925aa7d48edeadfe4ddc5feaa",
                 "shasum": ""
             },
             "require": {
@@ -240,22 +240,22 @@
             ],
             "description": "Site Studio",
             "support": {
-                "source": "https://github.com/acquia/cohesion/tree/7.2.2"
+                "source": "https://github.com/acquia/cohesion/tree/7.2.3"
             },
-            "time": "2023-08-11T17:08:16+00:00"
+            "time": "2023-08-29T14:00:19+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "7.2.2",
+            "version": "7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "48586c0863eaa654072c33d05b8f201529664df4"
+                "reference": "0bc949094baab1a8f43ef476930a7a525233b9a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/48586c0863eaa654072c33d05b8f201529664df4",
-                "reference": "48586c0863eaa654072c33d05b8f201529664df4",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/0bc949094baab1a8f43ef476930a7a525233b9a6",
+                "reference": "0bc949094baab1a8f43ef476930a7a525233b9a6",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -273,9 +273,9 @@
             "description": "Site Studio minimal theme",
             "support": {
                 "issues": "https://github.com/acquia/cohesion-theme/issues",
-                "source": "https://github.com/acquia/cohesion-theme/tree/7.2.2"
+                "source": "https://github.com/acquia/cohesion-theme/tree/7.2.3"
             },
-            "time": "2023-08-11T17:08:22+00:00"
+            "time": "2023-08-29T14:00:28+00:00"
         },
         {
             "name": "acquia/content-hub-php",
@@ -9183,17 +9183,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-rc5",
+            "version": "3.0.0-rc6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-rc5"
+                "reference": "8.x-3.0-rc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc5.zip",
-                "reference": "8.x-3.0-rc5",
-                "shasum": "81010b540822f0cfc114fd0548e4e27e56b6dc1c"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc6.zip",
+                "reference": "8.x-3.0-rc6",
+                "shasum": "45d1939be11592cff64e0e3fe4e17553e754175a"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -9202,8 +9202,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-rc5",
-                    "datestamp": "1689504430",
+                    "version": "8.x-3.0-rc6",
+                    "datestamp": "1693299666",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -17161,16 +17161,16 @@
         },
         {
             "name": "fileeye/mimemap",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FileEye/MimeMap.git",
-                "reference": "58fbd11312a8f69e0824a640b86b33a9d096fe7f"
+                "reference": "befb9f1ee77dbf6b74a2c578874e128c9a5c1a2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FileEye/MimeMap/zipball/58fbd11312a8f69e0824a640b86b33a9d096fe7f",
-                "reference": "58fbd11312a8f69e0824a640b86b33a9d096fe7f",
+                "url": "https://api.github.com/repos/FileEye/MimeMap/zipball/befb9f1ee77dbf6b74a2c578874e128c9a5c1a2d",
+                "reference": "befb9f1ee77dbf6b74a2c578874e128c9a5c1a2d",
                 "shasum": ""
             },
             "require": {
@@ -17179,7 +17179,7 @@
             "require-dev": {
                 "composer-runtime-api": "^2.0.0",
                 "phpstan/phpstan": "^1.2",
-                "phpunit/phpunit": "^9",
+                "phpunit/phpunit": "^9 | ^10",
                 "sebastian/comparator": ">=4",
                 "sebastian/diff": ">=4",
                 "squizlabs/php_codesniffer": ">=3.6",
@@ -17187,7 +17187,7 @@
                 "symfony/filesystem": ">=5.4",
                 "symfony/var-dumper": ">=5.4",
                 "symfony/yaml": ">=5.4",
-                "vimeo/psalm": "^4.23"
+                "vimeo/psalm": "^4.23 | ^5"
             },
             "bin": [
                 "bin/fileeye-mimemap"
@@ -17217,9 +17217,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FileEye/MimeMap/issues",
-                "source": "https://github.com/FileEye/MimeMap/tree/2.0.1"
+                "source": "https://github.com/FileEye/MimeMap/tree/2.0.2"
             },
-            "time": "2023-02-11T19:58:58+00:00"
+            "time": "2023-08-29T16:20:26+00:00"
         },
         {
             "name": "fileeye/pel",
