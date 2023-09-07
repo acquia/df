@@ -1,0 +1,13 @@
+diff --git a/src/Services/CohesionUtils.php b/src/Services/CohesionUtils.php
+index 075e754589..5fbec297dc 100644
+--- a/src/Services/CohesionUtils.php
++++ b/src/Services/CohesionUtils.php
+@@ -252,7 +252,7 @@ class CohesionUtils {
+ 
+       if ($found_tokens = $token_service->scan($value)) {
+         foreach ($found_tokens as $context => $token_group) {
+-          if (in_array($context, array_keys($token_info['types']))) {
++          if (in_array($context, array_keys($token_info['types'])) && $context !== '_eca_root_token') {
+             foreach ($token_group as $token) {
+               $context_variable = str_replace('-', '_', $context);
+ 
