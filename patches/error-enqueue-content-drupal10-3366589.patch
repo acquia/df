@@ -1,0 +1,19 @@
+diff --git a/modules/acquia_perz_push/src/ExportQueue.php b/modules/acquia_perz_push/src/ExportQueue.php
+index 44fb2f0..0fecc68 100644
+--- a/modules/acquia_perz_push/src/ExportQueue.php
++++ b/modules/acquia_perz_push/src/ExportQueue.php
+@@ -248,11 +248,12 @@ class ExportQueue {
+     $query = $this
+       ->entityTypeManager
+       ->getStorage($entity_type_id)
+-      ->getQuery();
++      ->getQuery()
++      ->accessCheck(TRUE);
+     // For single-bundle entity types like 'user'
+     // we don't use bundle related property.
+     if (!empty($bundle_property_name)) {
+-      $query = $query->accessCheck(TRUE)->condition($bundle_property_name, $available_bundles, 'IN');
++      $query = $query->condition($bundle_property_name, $available_bundles, 'IN');
+     }
+     return $query->execute();
+   }
