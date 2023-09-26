@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f581fc5edbba98de8eeb65c3912171e",
+    "content-hash": "b9dfb249c721ff0f75457d4142f1a51e",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -5336,6 +5336,124 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/asset_injector",
                 "issues": "https://www.drupal.org/project/issues/asset_injector"
+            }
+        },
+        {
+            "name": "drupal/augmentor",
+            "version": "1.1.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/augmentor.git",
+                "reference": "1.1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/augmentor-1.1.0-beta1.zip",
+                "reference": "1.1.0-beta1",
+                "shasum": "925b5d04fd01edcf84df384882475b503c3d5ca2"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10",
+                "drupal/key": "*"
+            },
+            "require-dev": {
+                "drupal/ckeditor": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.0-beta1",
+                    "datestamp": "1695736712",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "eleonel",
+                    "homepage": "https://www.drupal.org/user/440810"
+                },
+                {
+                    "name": "KelvinWong",
+                    "homepage": "https://www.drupal.org/user/62003"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "murrayw",
+                    "homepage": "https://www.drupal.org/user/595658"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                }
+            ],
+            "description": "Integration module which allows content to be augmented in Drupal via connections with external services.",
+            "homepage": "https://www.drupal.org/project/augmentor",
+            "support": {
+                "source": "https://git.drupalcode.org/project/augmentor"
+            }
+        },
+        {
+            "name": "drupal/augmentor_chatgpt",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/augmentor_chatgpt.git",
+                "reference": "1.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/augmentor_chatgpt-1.0.0-alpha1.zip",
+                "reference": "1.0.0-alpha1",
+                "shasum": "ad20b3c6d28447aa303783e64804e3b94823625f"
+            },
+            "require": {
+                "drupal/augmentor": "*",
+                "drupal/core": "^9.3 || ^10",
+                "orhanerday/open-ai": "^4.7"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha1",
+                    "datestamp": "1680049851",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "eleonel",
+                    "homepage": "https://www.drupal.org/user/440810"
+                },
+                {
+                    "name": "murrayw",
+                    "homepage": "https://www.drupal.org/user/595658"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                }
+            ],
+            "description": "Provides Augmentor integration with the ChatGPT API.",
+            "homepage": "http://drupal.org/project/augmentor_chatgpt",
+            "support": {
+                "source": "https://git.drupalcode.org/project/augmentor_chatgpt"
             }
         },
         {
@@ -10989,6 +11107,71 @@
             ],
             "support": {
                 "source": "https://git.drupalcode.org/project/jsonapi_resources"
+            }
+        },
+        {
+            "name": "drupal/key",
+            "version": "1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/key.git",
+                "reference": "8.x-1.17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/key-8.x-1.17.zip",
+                "reference": "8.x-1.17",
+                "shasum": "fa9f606d2ba0e20693e12040004e2ed31302ed03"
+            },
+            "require": {
+                "drupal/core": ">=8.9 <11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.17",
+                    "datestamp": "1674343967",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Cellar Door",
+                    "homepage": "https://www.drupal.org/user/658076"
+                },
+                {
+                    "name": "crashtest_",
+                    "homepage": "https://www.drupal.org/user/261457"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                }
+            ],
+            "description": "Provides the ability to manage site-wide keys",
+            "homepage": "http://drupal.org/project/key",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/key",
+                "issues": "http://drupal.org/project/key"
             }
         },
         {
@@ -20360,6 +20543,65 @@
             "time": "2023-06-07T16:17:31+00:00"
         },
         {
+            "name": "orhanerday/open-ai",
+            "version": "4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orhanerday/open-ai.git",
+                "reference": "896665e293689d68de4b1e9813a2e0b00a06f5ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orhanerday/open-ai/zipball/896665e293689d68de4b1e9813a2e0b00a06f5ef",
+                "reference": "896665e293689d68de4b1e9813a2e0b00a06f5ef",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "pestphp/pest": "^1.20",
+                "spatie/ray": "^1.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orhanerday\\OpenAi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Orhan Erday",
+                    "email": "orhanerday@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OpenAI GPT-3 Api Client in PHP",
+            "homepage": "https://github.com/orhanerday/open-ai",
+            "keywords": [
+                "open-ai",
+                "orhanerday"
+            ],
+            "support": {
+                "issues": "https://github.com/orhanerday/open-ai/issues",
+                "source": "https://github.com/orhanerday/open-ai/tree/4.8"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/orhanerday",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-06-11T09:25:47+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v9.99.100",
             "source": {
@@ -26008,6 +26250,8 @@
         "acquia/acf": 20,
         "acquia/sitestudio_contenthub": 20,
         "drupal/acquia_cms_toolbar_gin": 20,
+        "drupal/augmentor": 10,
+        "drupal/augmentor_chatgpt": 15,
         "drupal/captcha": 10,
         "drupal/condition_query": 20,
         "drupal/conditional_fields": 15,
