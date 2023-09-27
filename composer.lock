@@ -3010,17 +3010,17 @@
         },
         {
             "name": "drupal/acquia_cms_audio",
-            "version": "1.4.9",
+            "version": "1.4.10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_audio.git",
-                "reference": "1.4.9"
+                "reference": "1.4.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_audio-1.4.9.zip",
-                "reference": "1.4.9",
-                "shasum": "909e2146783349d1ec11efe59c73133e0d15ce13"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_audio-1.4.10.zip",
+                "reference": "1.4.10",
+                "shasum": "89835772b7c25f8f6b942b2a78cc5d56228c7cf9"
             },
             "require": {
                 "drupal/acquia_cms_common": "^1.9 || ^2.1 || ^3.1",
@@ -3031,8 +3031,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.4.9",
-                    "datestamp": "1687411033",
+                    "version": "1.4.10",
+                    "datestamp": "1695803790",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3068,17 +3068,17 @@
         },
         {
             "name": "drupal/acquia_cms_common",
-            "version": "3.2.4",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_common.git",
-                "reference": "3.2.4"
+                "reference": "3.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.2.4.zip",
-                "reference": "3.2.4",
-                "shasum": "63f36a06f980e260bd1c0676e8cbe056e46ac1d0"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.3.0.zip",
+                "reference": "3.3.0",
+                "shasum": "7838d26562e315c67b577f4ddf975fadae80940d"
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.5",
@@ -3104,7 +3104,7 @@
                 "drupal/password_policy_length": "*",
                 "drupal/password_policy_username": "*",
                 "drupal/pathauto": "1.11",
-                "drupal/redirect": "1.8",
+                "drupal/redirect": "^1.9",
                 "drupal/scheduler_content_moderation_integration": "^2.0",
                 "drupal/schema_article": "*",
                 "drupal/schema_metatag": "^2.4 || ^3.0",
@@ -3145,8 +3145,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.2.4",
-                    "datestamp": "1692883551",
+                    "version": "3.3.0",
+                    "datestamp": "1695800879",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3163,14 +3163,14 @@
                 "enable-patching": true,
                 "patches": {
                     "drupal/core": {
-                        "3301692: Passing null to parameter to mb_strtolower() is deprecated with PHP 8.1": "https://git.drupalcode.org/project/drupal/-/merge_requests/2598.patch",
-                        "3356894 - Make field selection less overwhelming by introducing groups": "https://www.drupal.org/files/issues/2023-06-20/3356894-mr_3896.patch"
+                        "3301692 - Passing null to parameter to mb_strtolower() is deprecated with PHP 8.1": "https://git.drupalcode.org/project/drupal/-/merge_requests/2598.patch",
+                        "296693 - Restrict access to empty top level administration pages": "https://www.drupal.org/files/issues/2023-08-31/296693-10.1.x_0.patch",
+                        "3371005 - Toolbar does not indicate active menu trail for pages not included in Toolbar": "https://git.drupalcode.org/project/drupal/-/commit/3165269bb01a5a8e5f53c1f369135b967c9d5924.patch",
+                        "3370946 - Page title should contextualize the local navigation": "https://www.drupal.org/files/issues/2023-09-11/3370946-page-title-backport-10-1-x.patch",
+                        "3347291: - Combine field storage and field instance forms": "https://www.drupal.org/files/issues/2023-09-13/10.1-3347291-combine-mega-e.patch"
                     },
                     "drupal/pathauto": {
                         "3328670 - PHP 8.2 compatibility": "https://git.drupalcode.org/project/pathauto/-/merge_requests/40.patch"
-                    },
-                    "drupal/redirect": {
-                        "3357833 - PHP 8.2 compatibility": "https://git.drupalcode.org/project/redirect/-/merge_requests/47.patch"
                     }
                 }
             },
@@ -3204,29 +3204,29 @@
         },
         {
             "name": "drupal/acquia_cms_component",
-            "version": "1.3.10",
+            "version": "1.3.11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_component.git",
-                "reference": "1.3.10"
+                "reference": "1.3.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_component-1.3.10.zip",
-                "reference": "1.3.10",
-                "shasum": "923d3e4bf8e336f6a7fcde668cd18585bf767bb7"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_component-1.3.11.zip",
+                "reference": "1.3.11",
+                "shasum": "ecc1a515d8275044307fb4b0d5209c0c047f7f2d"
             },
             "require": {
                 "drupal/acquia_cms_common": "^1.9 || ^2.1 || ^3.1",
                 "drupal/component": "^1.0",
                 "drupal/core": "^9.4 || ^10",
-                "drupal/jsonapi_extras": "3.23"
+                "drupal/jsonapi_extras": "^3.24"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.3.10",
-                    "datestamp": "1687971992",
+                    "version": "1.3.11",
+                    "datestamp": "1695801210",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3236,11 +3236,7 @@
                     "dev-develop": "1.x-dev"
                 },
                 "enable-patching": true,
-                "patches": {
-                    "drupal/jsonapi_extras": {
-                        "3357832 - PHP 8.2 compatibility": "https://git.drupalcode.org/project/jsonapi_extras/-/merge_requests/30.patch"
-                    }
-                }
+                "patches": []
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -3386,24 +3382,24 @@
         },
         {
             "name": "drupal/acquia_cms_headless",
-            "version": "1.3.11",
+            "version": "1.3.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_headless.git",
-                "reference": "1.3.11"
+                "reference": "1.3.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_headless-1.3.11.zip",
-                "reference": "1.3.11",
-                "shasum": "7425d2b476233d3a2f1edd62f61ca7e16aaa00e3"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_headless-1.3.12.zip",
+                "reference": "1.3.12",
+                "shasum": "ef93780ad4486587554edf1558baf7e77429dc32"
             },
             "require": {
                 "drupal/acquia_cms_tour": "^2.1.8",
                 "drupal/consumers": "*",
                 "drupal/core": "^9.4 || ^10",
                 "drupal/entity_clone": "*",
-                "drupal/jsonapi_extras": "3.23",
+                "drupal/jsonapi_extras": "^3.24",
                 "drupal/jsonapi_menu_items": "^1.2",
                 "drupal/jsonapi_resources": "*",
                 "drupal/next": "^1.6",
@@ -3423,8 +3419,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.3.11",
-                    "datestamp": "1692883841",
+                    "version": "1.3.12",
+                    "datestamp": "1695803970",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3468,9 +3464,6 @@
                 "patches": {
                     "drupal/decoupled_router": {
                         "3111456 - Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2022-11-30/decouple_router-3111456-resolve-language-issue-58.patch"
-                    },
-                    "drupal/jsonapi_extras": {
-                        "3357832 - PHP 8.2 compatibility": "https://git.drupalcode.org/project/jsonapi_extras/-/merge_requests/30.patch"
                     },
                     "drupal/subrequests": {
                         "3049395 - Page Cache causes different subrequests to return the same responses": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
@@ -10898,30 +10891,27 @@
         },
         {
             "name": "drupal/jsonapi_extras",
-            "version": "3.23.0",
+            "version": "3.24.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jsonapi_extras.git",
-                "reference": "8.x-3.23"
+                "reference": "8.x-3.24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jsonapi_extras-8.x-3.23.zip",
-                "reference": "8.x-3.23",
-                "shasum": "2f3518bc1372f01a1ccebcffaa4e7e08478103e0"
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_extras-8.x-3.24.zip",
+                "reference": "8.x-3.24",
+                "shasum": "5031650d17b62f5da5586d3a2c551ac071dbd294"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
                 "e0ipso/shaper": "^1"
             },
-            "require-dev": {
-                "drupal/jsonapi": "*"
-            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.23",
-                    "datestamp": "1669374477",
+                    "version": "8.x-3.24",
+                    "datestamp": "1694442796",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13705,17 +13695,17 @@
         },
         {
             "name": "drupal/redirect",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/redirect.git",
-                "reference": "8.x-1.8"
+                "reference": "8.x-1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/redirect-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "a7a440423434472ff7115ae69df01553f763f839"
+                "url": "https://ftp.drupal.org/files/projects/redirect-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "2987de20f509e9f7cec8a0f81d3a6774f9b0ba3e"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10"
@@ -13723,8 +13713,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1661806955",
+                    "version": "8.x-1.9",
+                    "datestamp": "1693393506",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15327,17 +15317,17 @@
         },
         {
             "name": "drupal/sitestudio_config_management",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/sitestudio_config_management.git",
-                "reference": "1.0.0"
+                "reference": "1.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sitestudio_config_management-1.0.0.zip",
-                "reference": "1.0.0",
-                "shasum": "139d7e08cfa468190b376e8f2dbc1849b1ec8b24"
+                "url": "https://ftp.drupal.org/files/projects/sitestudio_config_management-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "5a1640c99ace13bed9ac57a5dc4909a715da8bae"
             },
             "require": {
                 "acquia/cohesion": "^6.9.2 || ^7.0",
@@ -15347,17 +15337,14 @@
                 "drupal/core": "^9 || ^10",
                 "php": ">=7.4"
             },
-            "conflict": {
-                "acquia/blt-site-studio": "*"
-            },
             "require-dev": {
                 "drush/drush": "^10 || ^11 || ^12"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0",
-                    "datestamp": "1688640959",
+                    "version": "1.0.1",
+                    "datestamp": "1695804128",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
