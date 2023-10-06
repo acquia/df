@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61305956c48502c9687ca4e053ca726f",
+    "content-hash": "a6002391f682730469bbfe8129db11a6",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -279,16 +279,16 @@
         },
         {
             "name": "acquia/content-hub-php",
-            "version": "3.5.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/content-hub-php.git",
-                "reference": "d8531cfff622b507f64ce8e7d8875cb79802c60a"
+                "reference": "9acc2e0bc3481db2d3d0aff9e1bba10dd9dfb2db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/d8531cfff622b507f64ce8e7d8875cb79802c60a",
-                "reference": "d8531cfff622b507f64ce8e7d8875cb79802c60a",
+                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/9acc2e0bc3481db2d3d0aff9e1bba10dd9dfb2db",
+                "reference": "9acc2e0bc3481db2d3d0aff9e1bba10dd9dfb2db",
                 "shasum": ""
             },
             "require": {
@@ -342,9 +342,9 @@
             "homepage": "https://github.com/acquia/content-hub-php",
             "support": {
                 "issues": "https://github.com/acquia/content-hub-php/issues",
-                "source": "https://github.com/acquia/content-hub-php/tree/3.5.0"
+                "source": "https://github.com/acquia/content-hub-php/tree/3.4.1"
             },
-            "time": "2023-09-06T12:08:45+00:00"
+            "time": "2023-09-06T11:58:46+00:00"
         },
         {
             "name": "acquia/drupal-environment-detector",
@@ -4312,22 +4312,22 @@
         },
         {
             "name": "drupal/acquia_contenthub",
-            "version": "3.3.0",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_contenthub.git",
-                "reference": "3.3.0"
+                "reference": "3.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-3.3.0.zip",
-                "reference": "3.3.0",
-                "shasum": "407722072b149f0460510beedc1b518f290f2421"
+                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-3.2.2.zip",
+                "reference": "3.2.2",
+                "shasum": "6fa8c846ddc033c23c06aecab0fc62384db0febc"
             },
             "require": {
-                "acquia/content-hub-php": "3.5.0",
+                "acquia/content-hub-php": "3.4.1",
                 "drupal/core": "^9.4.15 || ^10",
-                "drupal/depcalc": "1.18",
+                "drupal/depcalc": "1.17",
                 "spatie/ssl-certificate": "1.21 || 1.22.1"
             },
             "require-dev": {
@@ -4350,15 +4350,15 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1696000156",
+                    "version": "3.2.2",
+                    "datestamp": "1694497360",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-3.3.x": "3.3.x-dev"
+                    "dev-3.2.x": "3.2.x-dev"
                 },
                 "drush": {
                     "services": {
@@ -7453,17 +7453,17 @@
         },
         {
             "name": "drupal/depcalc",
-            "version": "1.18.0",
+            "version": "1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/depcalc.git",
-                "reference": "8.x-1.18"
+                "reference": "8.x-1.17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/depcalc-8.x-1.18.zip",
-                "reference": "8.x-1.18",
-                "shasum": "2613760dfde8ee52531795eff47e7741316bb089"
+                "url": "https://ftp.drupal.org/files/projects/depcalc-8.x-1.17.zip",
+                "reference": "8.x-1.17",
+                "shasum": "85258f024841437f71945f7bbb0e6e55776d368d"
             },
             "require": {
                 "drupal/core": "^9.4.15 || ^10",
@@ -7476,8 +7476,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.18",
-                    "datestamp": "1695837735",
+                    "version": "8.x-1.17",
+                    "datestamp": "1693394453",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7836,17 +7836,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.1.0",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.1.0"
+                "reference": "2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "f19d1078e2ffe911e404000604bbcde7c879a271"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.2.zip",
+                "reference": "2.1.2",
+                "shasum": "ebd77063566def30be1c7c2fa684c5b05aaa7112"
             },
             "require": {
                 "drupal/core": "^9 || ^10"
@@ -7854,8 +7854,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1696446269",
+                    "version": "2.1.2",
+                    "datestamp": "1696531334",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16708,17 +16708,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.2.0-beta6",
+            "version": "6.2.0-beta7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.2.0-beta6"
+                "reference": "6.2.0-beta7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.2.0-beta6.zip",
-                "reference": "6.2.0-beta6",
-                "shasum": "b466ad3629c58f45994cbca55ab6bd8baaa4b838"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.2.0-beta7.zip",
+                "reference": "6.2.0-beta7",
+                "shasum": "2c15e8103abf105c9a4357c5890fa80b0103c5bd"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10"
@@ -16729,16 +16729,16 @@
                 "drupal/captcha": "^1 || ^2",
                 "drupal/chosen": "3.0.x-dev",
                 "drupal/ckeditor": "1.0.x-dev",
-                "drupal/clientside_validation": "*",
+                "drupal/clientside_validation": "^3 || ^4",
                 "drupal/clientside_validation_jquery": "*",
-                "drupal/devel": "*",
+                "drupal/devel": "5.x-dev",
                 "drupal/entity": "1.x-dev",
-                "drupal/entity_print": "*",
+                "drupal/entity_print": "2.x-dev",
                 "drupal/group": "1.x-dev",
                 "drupal/hal": "1 - 2",
                 "drupal/jquery_ui": "1.x-dev",
-                "drupal/jquery_ui_checkboxradio": "*",
-                "drupal/jquery_ui_datepicker": "*",
+                "drupal/jquery_ui_checkboxradio": "2.x-dev",
+                "drupal/jquery_ui_datepicker": "2.x-dev",
                 "drupal/mailsystem": "4.x-dev",
                 "drupal/metatag": "1.x-dev",
                 "drupal/paragraphs": "1.x-dev",
@@ -16746,7 +16746,7 @@
                 "drupal/smtp": "1.x-dev",
                 "drupal/styleguide": "^1 || ^2",
                 "drupal/telephone_validation": "2.x-dev",
-                "drupal/token": "*",
+                "drupal/token": "1.x-dev",
                 "drupal/variationcache": "1.x-dev",
                 "drupal/webform_access": "*",
                 "drupal/webform_attachment": "*",
@@ -16766,8 +16766,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.2.0-beta6",
-                    "datestamp": "1686598812",
+                    "version": "6.2.0-beta7",
+                    "datestamp": "1696543693",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
