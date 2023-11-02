@@ -223,66 +223,70 @@
       "drupal/core": "-p2"
     },
     "patches": {
-      "drupal/core": {
-        "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
-        "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
-        "'Negate' form value for condition plugins should be cast to boolean in validation | https://drupal.org/node/3114467": "https://www.drupal.org/files/issues/2021-01-06/3114467-16.patch",
-        "Broken title in modal dialog when title is a render array | https://drupal.org/node/2663316": "https://www.drupal.org/files/issues/2019-10-21/2663316-76.drupal.Broken-title-in-modal-dialog-when-title-is-a-render-array.patch"      },
-      "drupal/acquia_cms_common": {
-        "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
-        "Attempt to modify custom permissions for DF": "patches/acquia_cms_common-custom-permissions.patch"
-      },
-      "acquia/cohesion": {
-        "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
-        "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch"
-      },
-      "drupal/acquia_perz": {
-        "Personalized content that relies on JavaScript libraries sometimes fails to behave as expected | https://www.drupal.org/project/acquia_perz/issues/3348204": "https://www.drupal.org/files/issues/2023-08-21/acquia_perz_js_13.patch"
-      },
-      "drupal/admin_toolbar": {
-        "Full Menu Flash | https://www.drupal.org/project/admin_toolbar/issues/3369118": "https://www.drupal.org/files/issues/2023-07-07/3369118-13-inline-styles-to-prevent-flash.patch"
-      },
-      "drupal/default_content": {
-        "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
-      },
-      "drupal/entity_browser": {
-        "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
-      },
-      "drupal/get_tweets": {
-        "Changes menu link title": "https://www.drupal.org/files/issues/2022-05-19/get_tweets-updates-menu-link.patch"
-      },
-      "drupal/gin": {
-        "Gin changes order of Admin menu items | https://www.drupal.org/node/3269548": "https://www.drupal.org/files/issues/2022-03-14/3269548-2.gin_.add-rearrange-menu-items-setting.patch",
-        "[Taxonomy] Enable Gin edit form by default | http://drupal.org/node/3270626": "https://git.drupalcode.org/project/gin/-/merge_requests/237.diff",
-        "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch"
-      },
-      "drupal/gin_moderation_sidebar": {
-        "Add settings tray/off-canvas styles | https://www.drupal.org/node/3364324": "https://git.drupalcode.org/project/gin_moderation_sidebar/-/merge_requests/4.diff"
-      },
-      "drupal/gin_toolbar": {
-        "Order of toolbar menu items is changed after updating to 1.0.0-beta18 | https://www.drupal.org/project/gin_toolbar/issues/3222799": "https://www.drupal.org/files/issues/2022-03-14/3222799-9.gin_toolbar.add-rearrange-menu-items-setting.patch"
-      },
-      "drupal/graphql": {
-        "Add missing subrequest buffer.": "https://patch-diff.githubusercontent.com/raw/drupal-graphql/graphql/pull/1313.patch"
-      },
-      "drupal/inline_entity_form": {
-        "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
-      },
-      "drupal/jsonapi_schema": {
-        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
-      },
-      "drupal/mautic": {
-        "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
-      },
-      "drupal/pathauto": {
-        "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
-      },
-      "drupal/sitestudio_gin": {
-        "Unable to save very basic content type | https://www.drupal.org/project/sitestudio_gin/issues/3358530#comment-15091846": "https://www.drupal.org/files/issues/2023-06-05/3358530-12-unable-to-save.patch"
-      },
-      "drupal/webform_rest": {
-        "Add API endpoint for retrieving autocomplete options | https://drupal.org/node/3317762": "https://www.drupal.org/files/issues/2022-10-27/3317762-2.patch"
-      }
+        "drupal/core": {
+            "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
+            "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
+            "Broken title in modal dialog when title is a render array | https://drupal.org/node/2663316": "https://www.drupal.org/files/issues/2019-10-21/2663316-76.drupal.Broken-title-in-modal-dialog-when-title-is-a-render-array.patch"
+        },
+        "drupal/acquia_cms_common": {
+            "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
+            "Attempt to modify custom permissions for DF": "patches/acquia_cms_common-custom-permissions.patch"
+        },
+        "acquia/cohesion": {
+            "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
+            "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch"
+        },
+        "drupal/acquia_perz": {
+            "Personalized content that relies on JavaScript libraries sometimes fails to behave as expected | https://www.drupal.org/project/acquia_perz/issues/3348204": "https://www.drupal.org/files/issues/2023-08-21/acquia_perz_js_13.patch"
+        },
+        "drupal/admin_toolbar": {
+            "Full Menu Flash | https://www.drupal.org/project/admin_toolbar/issues/3369118": "https://www.drupal.org/files/issues/2023-07-07/3369118-13-inline-styles-to-prevent-flash.patch"
+        },
+        "drupal/default_content": {
+            "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
+        },
+        "drupal/entity_browser": {
+            "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
+        },
+        "drupal/get_tweets": {
+            "Changes menu link title": "https://www.drupal.org/files/issues/2022-05-19/get_tweets-updates-menu-link.patch"
+        },
+        "drupal/gin": {
+            "Gin changes order of Admin menu items | https://www.drupal.org/node/3269548": "https://www.drupal.org/files/issues/2022-03-14/3269548-2.gin_.add-rearrange-menu-items-setting.patch",
+            "[Taxonomy] Enable Gin edit form by default | http://drupal.org/node/3270626": "https://git.drupalcode.org/project/gin/-/merge_requests/237.diff",
+            "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch",
+            "Fatal error when enabling the new experimental sidebar navigation | https://www.drupal.org/project/gin/issues/3394085": "https://www.drupal.org/files/issues/2023-10-17/3394085-09.patch"
+        },
+        "drupal/gin_moderation_sidebar": {
+            "Add settings tray/off-canvas styles | https://www.drupal.org/node/3364324": "https://git.drupalcode.org/project/gin_moderation_sidebar/-/merge_requests/4.diff"
+        },
+        "drupal/gin_toolbar": {
+            "Order of toolbar menu items is changed after updating to 1.0.0-beta18 | https://www.drupal.org/project/gin_toolbar/issues/3222799": "https://www.drupal.org/files/issues/2022-03-14/3222799-9.gin_toolbar.add-rearrange-menu-items-setting.patch"
+        },
+        "drupal/graphql": {
+            "Add missing subrequest buffer.": "https://patch-diff.githubusercontent.com/raw/drupal-graphql/graphql/pull/1313.patch"
+        },
+        "drupal/inline_entity_form": {
+            "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
+        },
+        "drupal/jsonapi_schema": {
+            "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
+        },
+        "drupal/mautic": {
+            "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
+        },
+        "drupal/pathauto": {
+            "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
+        },
+        "drupal/sitestudio_extras": {
+            "Attach Libraries autocomplete doesn't work with Site Studio 7 | https://www.drupal.org/project/sitestudio_extras/issues/3394995": "https://www.drupal.org/files/issues/2023-10-18/3394995-03.patch"
+        },
+        "drupal/sitestudio_gin": {
+            "Unable to save very basic content type | https://www.drupal.org/project/sitestudio_gin/issues/3358530#comment-15091846": "https://www.drupal.org/files/issues/2023-06-05/3358530-12-unable-to-save.patch"
+        },
+        "drupal/webform_rest": {
+            "Add API endpoint for retrieving autocomplete options | https://drupal.org/node/3317762": "https://www.drupal.org/files/issues/2022-10-27/3317762-2.patch"
+        }
     },
     "patches-ignore": {
       "drupal/acquia_cms_common": {
