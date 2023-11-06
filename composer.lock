@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "915d755e40c76c4fb50ec7fe0c302d20",
+    "content-hash": "5358104730d9302528d99bba1d07cdc1",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -707,16 +707,16 @@
         },
         {
             "name": "caxy/php-htmldiff",
-            "version": "v0.1.14",
+            "version": "v0.1.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caxy/php-htmldiff.git",
-                "reference": "3f8ee7edda3d7c6d2e58a02d70a12d3242c84ea5"
+                "reference": "6342b02ddb86fd36093ad7e2db2efc21f01ab7cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/3f8ee7edda3d7c6d2e58a02d70a12d3242c84ea5",
-                "reference": "3f8ee7edda3d7c6d2e58a02d70a12d3242c84ea5",
+                "url": "https://api.github.com/repos/caxy/php-htmldiff/zipball/6342b02ddb86fd36093ad7e2db2efc21f01ab7cd",
+                "reference": "6342b02ddb86fd36093ad7e2db2efc21f01ab7cd",
                 "shasum": ""
             },
             "require": {
@@ -762,9 +762,9 @@
             ],
             "support": {
                 "issues": "https://github.com/caxy/php-htmldiff/issues",
-                "source": "https://github.com/caxy/php-htmldiff/tree/v0.1.14"
+                "source": "https://github.com/caxy/php-htmldiff/tree/v0.1.15"
             },
-            "time": "2022-01-19T11:09:59+00:00"
+            "time": "2023-11-05T23:49:04+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -5341,33 +5341,34 @@
         },
         {
             "name": "drupal/augmentor",
-            "version": "1.1.0-beta1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/augmentor.git",
-                "reference": "1.1.0-beta1"
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/augmentor-1.1.0-beta1.zip",
-                "reference": "1.1.0-beta1",
-                "shasum": "925b5d04fd01edcf84df384882475b503c3d5ca2"
+                "url": "https://ftp.drupal.org/files/projects/augmentor-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "ddad295e795a51c7dbec372480145b5db4cda7cf"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10",
                 "drupal/key": "*"
             },
             "require-dev": {
-                "drupal/ckeditor": "*"
+                "drupal/ckeditor": "*",
+                "drupal/search_api": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.0-beta1",
-                    "datestamp": "1695736712",
+                    "version": "1.1.0",
+                    "datestamp": "1699257287",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -6510,17 +6511,17 @@
         },
         {
             "name": "drupal/config_split",
-            "version": "2.0.0-rc5",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_split.git",
-                "reference": "2.0.0-rc5"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-rc5.zip",
-                "reference": "2.0.0-rc5",
-                "shasum": "6c7240086bb65c668f2cf32f59f2e1414ad6afbe"
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "be9fd0aba1206e0f19e8448f69d4210e53dae069"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10"
@@ -6538,11 +6539,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-rc5",
-                    "datestamp": "1698624439",
+                    "version": "2.0.0",
+                    "datestamp": "1699259254",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -12327,21 +12328,21 @@
         },
         {
             "name": "drupal/openai",
-            "version": "1.0.0-alpha14",
+            "version": "1.0.0-alpha15",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openai.git",
-                "reference": "1.0.0-alpha14"
+                "reference": "1.0.0-alpha15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha14.zip",
-                "reference": "1.0.0-alpha14",
-                "shasum": "2ff80800de358d5818623ccd1825009324264066"
+                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-alpha15.zip",
+                "reference": "1.0.0-alpha15",
+                "shasum": "58ee51031502fa2a3f36f563f5999f31a9351cc6"
             },
             "require": {
                 "drupal/core": "^10",
-                "openai-php/client": "^0.4|^v0.5.2"
+                "openai-php/client": "^0.4|^v0.7.4"
             },
             "require-dev": {
                 "drupal/devel_generate": "*"
@@ -12349,8 +12350,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha14",
-                    "datestamp": "1686928727",
+                    "version": "1.0.0-alpha15",
+                    "datestamp": "1699127528",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -12368,10 +12369,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "Julien Alombert",
-                    "homepage": "https://www.drupal.org/user/317279",
-                    "email": "alombertjulien@gmail.com",
-                    "role": "Maintainer"
+                    "name": "kevinquillen",
+                    "homepage": "https://www.drupal.org/user/317279"
                 },
                 {
                     "name": "laurencemercer",
@@ -12385,9 +12384,13 @@
             "description": "A set of modules to enable OpenAI integration with Drupal and augment the content experience with AI assisted tools.",
             "homepage": "https://www.drupal.org/project/openai",
             "keywords": [
+                "AI",
                 "AI content",
+                "Bard",
                 "DALL-E",
                 "GPT-3",
+                "GPT-4",
+                "artificial intelligence",
                 "content generation",
                 "content moderation",
                 "gpt",
@@ -15213,17 +15216,17 @@
         },
         {
             "name": "drupal/simple_sitemap",
-            "version": "4.1.6",
+            "version": "4.1.7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_sitemap.git",
-                "reference": "4.1.6"
+                "reference": "4.1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.1.6.zip",
-                "reference": "4.1.6",
-                "shasum": "5ea5ee97ab4d59b43db86dd6279c3ac5ecbe69b9"
+                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.1.7.zip",
+                "reference": "4.1.7",
+                "shasum": "3d55ee386b0ebb81ed4c3461451a9e32a15d93d7"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -15232,8 +15235,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.6",
-                    "datestamp": "1686288643",
+                    "version": "4.1.7",
+                    "datestamp": "1698936269",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -20435,39 +20438,39 @@
         },
         {
             "name": "openai-php/client",
-            "version": "v0.5.3",
+            "version": "v0.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/client.git",
-                "reference": "a0ca38da78f7420a0b381e4274e416abbf6e563d"
+                "reference": "db18414d01c09c9a6956e6a47f117e15ae9c9bab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/client/zipball/a0ca38da78f7420a0b381e4274e416abbf6e563d",
-                "reference": "a0ca38da78f7420a0b381e4274e416abbf6e563d",
+                "url": "https://api.github.com/repos/openai-php/client/zipball/db18414d01c09c9a6956e6a47f117e15ae9c9bab",
+                "reference": "db18414d01c09c9a6956e6a47f117e15ae9c9bab",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1.0",
-                "php-http/discovery": "^1.18.1",
+                "php-http/discovery": "^1.19.1",
                 "php-http/multipart-stream-builder": "^1.3.0",
-                "psr/http-client": "^1.0.2",
+                "psr/http-client": "^1.0.3",
                 "psr/http-client-implementation": "^1.0.1",
                 "psr/http-factory-implementation": "*",
                 "psr/http-message": "^1.1.0|^2.0.0"
             },
             "require-dev": {
-                "guzzlehttp/guzzle": "^7.7.0",
-                "guzzlehttp/psr7": "^2.5.0",
-                "laravel/pint": "^1.10.0",
-                "nunomaduro/collision": "^7.5.2",
-                "pestphp/pest": "dev-develop as 2.6.2",
-                "pestphp/pest-plugin-arch": "^2.2.0",
+                "guzzlehttp/guzzle": "^7.8.0",
+                "guzzlehttp/psr7": "^2.6.1",
+                "laravel/pint": "^1.13.2",
+                "nunomaduro/collision": "^7.9.0",
+                "pestphp/pest": "^2.19.2",
+                "pestphp/pest-plugin-arch": "^2.3.3",
                 "pestphp/pest-plugin-mock": "^2.0.0",
-                "pestphp/pest-plugin-type-coverage": "^2.0.0",
-                "phpstan/phpstan": "^1.10.15",
+                "pestphp/pest-plugin-type-coverage": "^2.2.0",
+                "phpstan/phpstan": "^1.10.35",
                 "rector/rector": "^0.16.0",
-                "symfony/var-dumper": "^6.3.0"
+                "symfony/var-dumper": "^6.3.4"
             },
             "type": "library",
             "autoload": {
@@ -20507,7 +20510,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/client/issues",
-                "source": "https://github.com/openai-php/client/tree/v0.5.3"
+                "source": "https://github.com/openai-php/client/tree/v0.7.5"
             },
             "funding": [
                 {
@@ -20523,7 +20526,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-06-07T16:17:31+00:00"
+            "time": "2023-11-06T07:39:32+00:00"
         },
         {
             "name": "orhanerday/open-ai",
@@ -21503,16 +21506,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.40",
+            "version": "1.10.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d"
+                "reference": "c6174523c2a69231df55bdc65b61655e72876d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/93c84b5bf7669920d823631e39904d69b9c7dc5d",
-                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/c6174523c2a69231df55bdc65b61655e72876d76",
+                "reference": "c6174523c2a69231df55bdc65b61655e72876d76",
                 "shasum": ""
             },
             "require": {
@@ -21561,7 +21564,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-30T14:48:31+00:00"
+            "time": "2023-11-05T12:57:57+00:00"
         },
         {
             "name": "psr/cache",
