@@ -3067,17 +3067,17 @@
         },
         {
             "name": "drupal/acquia_cms_common",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_common.git",
-                "reference": "3.3.0"
+                "reference": "3.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.3.0.zip",
-                "reference": "3.3.0",
-                "shasum": "7838d26562e315c67b577f4ddf975fadae80940d"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.3.1.zip",
+                "reference": "3.3.1",
+                "shasum": "c7f3ed7852ea0f94b06553fc1465ccc1049382e1"
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.5",
@@ -3102,7 +3102,7 @@
                 "drupal/password_policy_character_types": "*",
                 "drupal/password_policy_length": "*",
                 "drupal/password_policy_username": "*",
-                "drupal/pathauto": "1.11",
+                "drupal/pathauto": "^1.12",
                 "drupal/redirect": "^1.9",
                 "drupal/scheduler_content_moderation_integration": "^2.0",
                 "drupal/schema_article": "*",
@@ -3110,7 +3110,7 @@
                 "drupal/schema_person": "*",
                 "drupal/schema_place": "*",
                 "drupal/seckit": "^2.0",
-                "drupal/simple_sitemap": "^4.1",
+                "drupal/simple_sitemap": "4.1.7",
                 "drupal/smart_trim": "^2.0",
                 "drupal/social_media_links": "^2.9",
                 "drupal/username_enumeration_prevention": "^1.3",
@@ -3144,8 +3144,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1695800879",
+                    "version": "3.3.1",
+                    "datestamp": "1699334156",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3168,8 +3168,8 @@
                         "3370946 - Page title should contextualize the local navigation": "https://www.drupal.org/files/issues/2023-09-11/3370946-page-title-backport-10-1-x.patch",
                         "3347291: - Combine field storage and field instance forms": "https://www.drupal.org/files/issues/2023-09-13/10.1-3347291-combine-mega-e.patch"
                     },
-                    "drupal/pathauto": {
-                        "3328670 - PHP 8.2 compatibility": "https://git.drupalcode.org/project/pathauto/-/merge_requests/40.patch"
+                    "drupal/simple_sitemap": {
+                        "3398996 - Declare min PHP version": "https://www.drupal.org/files/issues/2023-11-06/simple-sitemap-3398996-php-compatibility-16.patch"
                     }
                 }
             },
@@ -6399,30 +6399,30 @@
         },
         {
             "name": "drupal/config_ignore",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_ignore.git",
-                "reference": "8.x-3.0"
+                "reference": "8.x-3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-3.0.zip",
-                "reference": "8.x-3.0",
-                "shasum": "114707c1ef70f07fdcd9b9658d657764779db8ec"
+                "url": "https://ftp.drupal.org/files/projects/config_ignore-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "5e60f312e02735060d5e5b1724330bb243face4c"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10"
             },
             "require-dev": {
                 "drupal/config_filter": "^1.8||^2.2",
-                "drush/drush": "^10 || ^11"
+                "drush/drush": "^10 || ^11 || ^12"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0",
-                    "datestamp": "1698624094",
+                    "version": "8.x-3.1",
+                    "datestamp": "1699302168",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6450,12 +6450,11 @@
                     "homepage": "https://www.drupal.org/user/413139"
                 }
             ],
-            "description": "Ignore certain configuration during import.",
+            "description": "Ignore certain configuration during import and export.",
             "homepage": "http://drupal.org/project/config_ignore",
             "support": {
-                "source": "http://cgit.drupalcode.org/config_ignore",
-                "issues": "http://drupal.org/project/config_ignore",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
+                "source": "https://git.drupalcode.org/project/config_ignore",
+                "issues": "http://drupal.org/project/config_ignore"
             }
         },
         {
@@ -13057,17 +13056,17 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/pathauto.git",
-                "reference": "8.x-1.11"
+                "reference": "8.x-1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "a006fe9e6046a9833711a1ae56aa4752e65bcdc8"
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "b7b6432e315e38e59a7c6cc117134326c580de4c"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -13080,8 +13079,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1660129564",
+                    "version": "8.x-1.12",
+                    "datestamp": "1696776683",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -20439,16 +20438,16 @@
         },
         {
             "name": "openai-php/client",
-            "version": "v0.7.5",
+            "version": "v0.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/client.git",
-                "reference": "db18414d01c09c9a6956e6a47f117e15ae9c9bab"
+                "reference": "76b2803dbb609d9513bc7f0b9f1b45b96db0a510"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/client/zipball/db18414d01c09c9a6956e6a47f117e15ae9c9bab",
-                "reference": "db18414d01c09c9a6956e6a47f117e15ae9c9bab",
+                "url": "https://api.github.com/repos/openai-php/client/zipball/76b2803dbb609d9513bc7f0b9f1b45b96db0a510",
+                "reference": "76b2803dbb609d9513bc7f0b9f1b45b96db0a510",
                 "shasum": ""
             },
             "require": {
@@ -20511,7 +20510,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/client/issues",
-                "source": "https://github.com/openai-php/client/tree/v0.7.5"
+                "source": "https://github.com/openai-php/client/tree/v0.7.7"
             },
             "funding": [
                 {
@@ -20527,7 +20526,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-06T07:39:32+00:00"
+            "time": "2023-11-07T06:23:08+00:00"
         },
         {
             "name": "orhanerday/open-ai",
