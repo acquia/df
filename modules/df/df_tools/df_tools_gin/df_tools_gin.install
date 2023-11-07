@@ -17,6 +17,13 @@ function df_tools_gin_install($is_syncing) {
   // Install Gin theme.
   $theme_installer->install(['gin']);
 
+  // Update Gin settings.
+  $config_factory
+    ->getEditable('gin.settings')
+    ->set('classic_toolbar', 'horizontal')
+    ->set('rearrange_admin_menu_items', false)
+    ->save(TRUE);
+
   // Set admin theme to Gin.
   $config_factory
     ->getEditable('system.theme')
@@ -25,6 +32,11 @@ function df_tools_gin_install($is_syncing) {
 
   // Install Gin Toolbar and ACMS Toolbar Gin.
   $module_installer->install(['gin_toolbar', 'acquia_cms_toolbar_gin']);
+
+  // If using Moderation Sidebar, install Gin Moderation Sidebar.
+  if ($module_handler->moduleExists('moderation_sidebar')) {
+    $module_installer->install(['gin_moderation_sidebar']);
+  }
 
   // If using Site Studio, install Site Studio Gin.
   if ($module_handler->moduleExists('cohesion')) {
