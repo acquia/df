@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f3200ef59d7332cef11f7cd3b36ce7f",
+    "content-hash": "968643ac4a1e66622273f814e7cb8e14",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -178,16 +178,16 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "7.4.0-beta1",
+            "version": "7.4.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "4d97a0cf9ca55fe8042ef3a35aaf4b8ef504dcd7"
+                "reference": "a1e64b4c559f8818a4839539c68f5b07cef1dc88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/4d97a0cf9ca55fe8042ef3a35aaf4b8ef504dcd7",
-                "reference": "4d97a0cf9ca55fe8042ef3a35aaf4b8ef504dcd7",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/a1e64b4c559f8818a4839539c68f5b07cef1dc88",
+                "reference": "a1e64b4c559f8818a4839539c68f5b07cef1dc88",
                 "shasum": ""
             },
             "require": {
@@ -197,6 +197,7 @@
                 "drupal/jquery_ui": "^1.4",
                 "drupal/stable": "^2.0",
                 "drupal/token": "^1.11",
+                "drush/drush": "^11.6 || ^12",
                 "ext-json": "*"
             },
             "require-dev": {
@@ -220,11 +221,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                },
                 "enable-patching": true
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -240,9 +236,9 @@
             ],
             "description": "Site Studio",
             "support": {
-                "source": "https://github.com/acquia/cohesion/tree/7.4.0-beta1"
+                "source": "https://github.com/acquia/cohesion/tree/7.4.0-beta2"
             },
-            "time": "2023-10-03T14:06:06+00:00"
+            "time": "2023-11-09T10:27:27+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
