@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1bd9a2ae9a90410a0d52d9628a30e971",
+    "content-hash": "d215dc2860303ffa5706a14c78346f34",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -4848,17 +4848,17 @@
         },
         {
             "name": "drupal/acsf",
-            "version": "2.75.0",
+            "version": "2.77.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acsf.git",
-                "reference": "8.x-2.75"
+                "reference": "8.x-2.77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.75.zip",
-                "reference": "8.x-2.75",
-                "shasum": "364875b30d153bab59f24bb3e9c5f271ce5bf7dd"
+                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.77.zip",
+                "reference": "8.x-2.77",
+                "shasum": "c114d3e9d8475540bcad13d943dde1db32541b3c"
             },
             "require": {
                 "drupal/acsf_duplication": "*",
@@ -4879,8 +4879,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.75",
-                    "datestamp": "1690367720",
+                    "version": "8.x-2.77",
+                    "datestamp": "1702470278",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4926,10 +4926,6 @@
                     "homepage": "https://www.drupal.org/user/3603140"
                 },
                 {
-                    "name": "nagba",
-                    "homepage": "https://www.drupal.org/user/21231"
-                },
-                {
                     "name": "nikgregory",
                     "homepage": "https://www.drupal.org/user/419643"
                 },
@@ -4954,7 +4950,7 @@
         },
         {
             "name": "drupal/acsf_duplication",
-            "version": "2.75.0",
+            "version": "2.77.0",
             "require": {
                 "drupal/acsf": "^2",
                 "drupal/core": "^8 || ^9 || ^10"
@@ -4962,8 +4958,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.75",
-                    "datestamp": "1690367720",
+                    "version": "8.x-2.77",
+                    "datestamp": "1702470278",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4998,10 +4994,6 @@
                 {
                     "name": "glitchinfinity",
                     "homepage": "https://www.drupal.org/user/3603140"
-                },
-                {
-                    "name": "nagba",
-                    "homepage": "https://www.drupal.org/user/21231"
                 },
                 {
                     "name": "nikgregory",
@@ -5028,7 +5020,7 @@
         },
         {
             "name": "drupal/acsf_theme",
-            "version": "2.75.0",
+            "version": "2.77.0",
             "require": {
                 "drupal/acsf": "^2",
                 "drupal/acsf_variables": "*",
@@ -5037,8 +5029,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.75",
-                    "datestamp": "1690367720",
+                    "version": "8.x-2.77",
+                    "datestamp": "1702470278",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5073,10 +5065,6 @@
                 {
                     "name": "glitchinfinity",
                     "homepage": "https://www.drupal.org/user/3603140"
-                },
-                {
-                    "name": "nagba",
-                    "homepage": "https://www.drupal.org/user/21231"
                 },
                 {
                     "name": "nikgregory",
@@ -5103,7 +5091,7 @@
         },
         {
             "name": "drupal/acsf_variables",
-            "version": "2.75.0",
+            "version": "2.77.0",
             "require": {
                 "drupal/acsf": "^2",
                 "drupal/core": "^8 || ^9 || ^10"
@@ -5111,8 +5099,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.75",
-                    "datestamp": "1690367720",
+                    "version": "8.x-2.77",
+                    "datestamp": "1702470278",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5147,10 +5135,6 @@
                 {
                     "name": "glitchinfinity",
                     "homepage": "https://www.drupal.org/user/3603140"
-                },
-                {
-                    "name": "nagba",
-                    "homepage": "https://www.drupal.org/user/21231"
                 },
                 {
                     "name": "nikgregory",
@@ -7062,16 +7046,16 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "10.2.0-rc1",
+            "version": "10.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "97bd91856535a354e9b1b815f0957893e26b6622"
+                "reference": "6a2d817ccb59fdb7e6b3720a1478b0d00b475445"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/97bd91856535a354e9b1b815f0957893e26b6622",
-                "reference": "97bd91856535a354e9b1b815f0957893e26b6622",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/6a2d817ccb59fdb7e6b3720a1478b0d00b475445",
+                "reference": "6a2d817ccb59fdb7e6b3720a1478b0d00b475445",
                 "shasum": ""
             },
             "require": {
@@ -7106,9 +7090,9 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.2.0-rc1"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.1.7"
             },
-            "time": "2023-11-15T23:23:28+00:00"
+            "time": "2023-11-15T23:23:43+00:00"
         },
         {
             "name": "drupal/core-recommended",
@@ -21793,16 +21777,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.49",
+            "version": "1.10.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "9367ba4c4f6ad53e9efb594d74a8941563caccf6"
+                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9367ba4c4f6ad53e9efb594d74a8941563caccf6",
-                "reference": "9367ba4c4f6ad53e9efb594d74a8941563caccf6",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/06a98513ac72c03e8366b5a0cb00750b487032e4",
+                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4",
                 "shasum": ""
             },
             "require": {
@@ -21851,7 +21835,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-12T10:05:12+00:00"
+            "time": "2023-12-13T10:59:42+00:00"
         },
         {
             "name": "psr/cache",
