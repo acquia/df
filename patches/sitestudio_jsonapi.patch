@@ -1,30 +1,19 @@
 diff --git a/config/install/jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout.yml b/config/optional/jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout.yml
 similarity index 100%
 rename from config/install/jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout.yml
-rename to config/optional/jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout.yml
+rename to config/optional/jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout.yml    id: ''
 diff --git a/sitestudio_jsonapi.install b/sitestudio_jsonapi.install
-index 537814f..e660fb4 100644
+index 537814f..4043b53 100644
 --- a/sitestudio_jsonapi.install
 +++ b/sitestudio_jsonapi.install
-@@ -1,20 +1,16 @@
+@@ -1,20 +1,30 @@
  <?php
- 
+
  /**
 - * @file
 - * Uninstall hook to remove pre-configured resource config entity.
 + * Implements hook_install().
   */
--
--use Drupal\Core\Config\Config;
--
--/**
-- * Implements hook_uninstall().
-- */
--function sitestudio_jsonapi_uninstall($is_syncing) {
--  // Delete Cohesion Layout resource override.
--  $config = \Drupal::configFactory()->getEditable('jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout');
--  if ($config instanceof Config) {
--    $config->delete();
 +function sitestudio_jsonapi_install($is_syncing) {
 +  $config_factory = \Drupal::configFactory();
 +  if ($config_factory->get('jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout')) {
@@ -33,6 +22,27 @@ index 537814f..e660fb4 100644
 +    ->set('disabled', FALSE)
 +    ->set('resourceFields.json_values.enhancer.id', 'cohesion_layout')
 +    ->save(TRUE);
++  }
+
+-use Drupal\Core\Config\Config;
++}
+
+ /**
+  * Implements hook_uninstall().
+  */
+ function sitestudio_jsonapi_uninstall($is_syncing) {
+-  // Delete Cohesion Layout resource override.
+-  $config = \Drupal::configFactory()->getEditable('jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout');
+-  if ($config instanceof Config) {
+-    $config->delete();
++  $config_factory = \Drupal::configFactory();
++  if ($config_factory->get('jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout')) {
++    $config_factory
++      ->getEditable('jsonapi_extras.jsonapi_resource_config.cohesion_layout--cohesion_layout')
++      ->set('disabled', TRUE)
++      ->set('resourceFields.json_values.enhancer.id', '')
++      ->save(TRUE);
    }
- 
- }
+-
+-}
++}
