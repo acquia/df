@@ -1,0 +1,97 @@
+dependencies:
+  config:
+    - field.field.node.article.field_suggest_summary
+    - field.field.node.article.field_suggest_tags
+    - field.field.node.article.field_suggest_title
+  module:
+    - augmentor
+third_party_settings:
+  field_group:
+    group_taxonomy:
+      children:
+        - field_categories
+        - field_suggest_tags
+        - field_tags
+        - field_article_type
+      label: Taxonomy
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+mode: default
+content:
+  field_categories:
+    weight: 7
+  field_suggest_summary:
+    type: augmentor_summary_widget
+    weight: 1
+    region: content
+    settings:
+      targets:
+        0:
+          target_field: body
+          key: default
+        actions:
+          add_target: 'Add one more target'
+      augmentor: 78614461-55ae-4b0e-b2b0-56ce77e3286f
+      action: replace
+      trim: none
+      button_label: 'Suggest body summary'
+      source_fields: {  }
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+  field_suggest_tags:
+    type: augmentor_tags_widget
+    weight: 9
+    region: content
+    settings:
+      source_fields:
+        - body
+      targets:
+        0:
+          target_field: field_tags
+          key: default
+        actions:
+          add_target: 'Add one more target'
+      augmentor: 3f24ecda-9858-41a0-bf77-eb5cfeb2e1ee
+      action: append
+      trim: none
+      button_label: 'Suggest tags'
+      explode_separator: ','
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+  field_suggest_title:
+    type: augmentor_select_regex_widget
+    weight: -1
+    region: content
+    settings:
+      source_fields:
+        - body
+      targets:
+        0:
+          target_field: title
+          key: default
+        actions:
+          add_target: 'Add one more target'
+      augmentor: bc6eff21-6421-46ae-924f-2d65728fb18c
+      action: replace
+      trim: none
+      button_label: 'Suggest a title'
+      regex: '/\d\. "(.*)"/gim'
+      explode_separator: \n
+      result_pattern: $1
+      match_index: ''
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+  field_tags:
+    weight: 8
+  title:
+    weight: -2

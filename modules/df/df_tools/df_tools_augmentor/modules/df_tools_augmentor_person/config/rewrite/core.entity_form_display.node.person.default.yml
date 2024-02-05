@@ -1,0 +1,68 @@
+dependencies:
+  config:
+    - field.field.node.person.field_suggest_summary
+    - field.field.node.person.field_suggest_tags
+  module:
+    - augmentor
+third_party_settings:
+  field_group:
+    group_taxonomy:
+      children:
+        - field_suggest_tags
+        - field_tags
+      label: Taxonomy
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+mode: default
+content:
+  field_categories:
+    weight: 6
+  field_suggest_summary:
+    type: augmentor_summary_widget
+    weight: 2
+    region: content
+    settings:
+      targets:
+        0:
+          target_field: body
+          key: default
+        actions:
+          add_target: 'Add one more target'
+      augmentor: 78614461-55ae-4b0e-b2b0-56ce77e3286f
+      action: replace
+      trim: none
+      button_label: 'Suggest bio summary'
+      source_fields: {  }
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+  field_suggest_tags:
+    type: augmentor_tags_widget
+    weight: 8
+    region: content
+    settings:
+      source_fields:
+        - body
+      targets:
+        0:
+          target_field: field_tags
+          key: default
+        actions:
+          add_target: 'Add one more target'
+      augmentor: 3f24ecda-9858-41a0-bf77-eb5cfeb2e1ee
+      action: append
+      trim: none
+      button_label: 'Suggest tags'
+      explode_separator: ','
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+  field_tags:
+    weight: 7

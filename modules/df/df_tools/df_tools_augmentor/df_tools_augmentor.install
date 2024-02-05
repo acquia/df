@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_module_install().
+ */
+function df_tools_augmentor_install($is_syncing) {
+  if (!$is_syncing) {
+    $moduleHandler = \Drupal::service('module_handler');
+    $moduleInstaller = \Drupal::service('module_installer');
+
+    // Installs DF Tools Augmentor Article.
+    if ($moduleHandler->moduleExists('df_tools_article')) {
+      $moduleInstaller->install(['df_tools_augmentor_article']);
+    }
+
+     // Installs DF Tools Augmentor Event.
+    if ($moduleHandler->moduleExists('df_tools_event')) {
+      $moduleInstaller->install(['df_tools_augmentor_event']);
+    }
+
+     // Installs DF Tools Augmentor Person.
+    if ($moduleHandler->moduleExists('df_tools_person')) {
+      $moduleInstaller->install(['df_tools_augmentor_person']);
+    }
+
+     // Installs DF Tools Augmentor Place.
+    if ($moduleHandler->moduleExists('df_tools_place')) {
+      $moduleInstaller->install(['df_tools_augmentor_place']);
+    }
+
+    // Installs DF Tools Augmentor Product.
+    if ($moduleHandler->moduleExists('df_tools_product')) {
+      $moduleInstaller->install(['df_tools_augmentor_product']);
+    }
+  }
+}
