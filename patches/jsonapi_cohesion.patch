@@ -1,0 +1,26 @@
+diff --git a/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php b/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php
+index b488d67153..4576b0f8ca 100644
+--- a/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php
++++ b/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php
+@@ -49,7 +49,7 @@ class ImageHandler extends FieldHandlerBase implements FormFieldLevelHandlerInte
+   protected function processProperty(array $item): mixed {
+     $property = parent::processProperty($item);
+ 
+-    if (isset($item['_process_token'])) {
++    if (isset($item['_process_token']) && is_string($property)) {
+       $property = $this->processToken($property);
+     }
+ 
+diff --git a/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/LinkHandler.php b/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/LinkHandler.php
+index 6158cbde86..47ada5b68b 100644
+--- a/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/LinkHandler.php
++++ b/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/LinkHandler.php
+@@ -70,7 +70,7 @@ class LinkHandler extends EntityReferenceBase implements FormFieldLevelHandlerIn
+           return (object) ['url' => $property];
+         }
+       }
+-      $link['url'] = $this->cohesionUtils->urlProcessor($property, TRUE);
++      $link['url'] =  is_string($property) ? $this->cohesionUtils->urlProcessor($property, TRUE) : "";
+       if (!empty($link['url'])) {
+         $entityData = explode('::', (string) $property);
+         if (is_string($entityData[0]) && is_numeric($entityData[1])) {
