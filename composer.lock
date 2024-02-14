@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4507b3b08dc3358b0726be3963f319d",
+    "content-hash": "b3b9364e3e8637f82391200df3352643",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -276,16 +276,16 @@
         },
         {
             "name": "acquia/content-hub-php",
-            "version": "3.4.1",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/content-hub-php.git",
-                "reference": "9acc2e0bc3481db2d3d0aff9e1bba10dd9dfb2db"
+                "reference": "8eb7cdde2ceff1c8da11072629d2684420dbbd6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/9acc2e0bc3481db2d3d0aff9e1bba10dd9dfb2db",
-                "reference": "9acc2e0bc3481db2d3d0aff9e1bba10dd9dfb2db",
+                "url": "https://api.github.com/repos/acquia/content-hub-php/zipball/8eb7cdde2ceff1c8da11072629d2684420dbbd6e",
+                "reference": "8eb7cdde2ceff1c8da11072629d2684420dbbd6e",
                 "shasum": ""
             },
             "require": {
@@ -339,9 +339,9 @@
             "homepage": "https://github.com/acquia/content-hub-php",
             "support": {
                 "issues": "https://github.com/acquia/content-hub-php/issues",
-                "source": "https://github.com/acquia/content-hub-php/tree/3.4.1"
+                "source": "https://github.com/acquia/content-hub-php/tree/3.5.1"
             },
-            "time": "2023-09-06T11:58:46+00:00"
+            "time": "2023-12-12T13:25:55+00:00"
         },
         {
             "name": "acquia/drupal-environment-detector",
@@ -4405,22 +4405,22 @@
         },
         {
             "name": "drupal/acquia_contenthub",
-            "version": "3.2.2",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_contenthub.git",
-                "reference": "3.2.2"
+                "reference": "3.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-3.2.2.zip",
-                "reference": "3.2.2",
-                "shasum": "6fa8c846ddc033c23c06aecab0fc62384db0febc"
+                "url": "https://ftp.drupal.org/files/projects/acquia_contenthub-3.4.1.zip",
+                "reference": "3.4.1",
+                "shasum": "cfd5914e81dab22f6892830075d7fd3ec6cbfffb"
             },
             "require": {
-                "acquia/content-hub-php": "3.4.1",
+                "acquia/content-hub-php": "3.5.1",
                 "drupal/core": "^9.4.15 || ^10",
-                "drupal/depcalc": "1.17",
+                "drupal/depcalc": "1.20",
                 "spatie/ssl-certificate": "1.21 || 1.22.1"
             },
             "require-dev": {
@@ -4443,15 +4443,15 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.2.2",
-                    "datestamp": "1694497360",
+                    "version": "3.4.1",
+                    "datestamp": "1707821930",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-3.2.x": "3.2.x-dev"
+                    "dev-3.4.x": "3.4.x-dev"
                 },
                 "drush": {
                     "services": {
@@ -7580,17 +7580,17 @@
         },
         {
             "name": "drupal/depcalc",
-            "version": "1.17.0",
+            "version": "1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/depcalc.git",
-                "reference": "8.x-1.17"
+                "reference": "8.x-1.20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/depcalc-8.x-1.17.zip",
-                "reference": "8.x-1.17",
-                "shasum": "85258f024841437f71945f7bbb0e6e55776d368d"
+                "url": "https://ftp.drupal.org/files/projects/depcalc-8.x-1.20.zip",
+                "reference": "8.x-1.20",
+                "shasum": "501fea3ec8573fab73333111c35914e6b41616a6"
             },
             "require": {
                 "drupal/core": "^9.4.15 || ^10",
@@ -7603,8 +7603,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.17",
-                    "datestamp": "1693394453",
+                    "version": "8.x-1.20",
+                    "datestamp": "1707292189",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
