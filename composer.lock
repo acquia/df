@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3b9364e3e8637f82391200df3352643",
+    "content-hash": "d48fc56ac5297111b5b776663c99615b",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -560,23 +560,24 @@
         },
         {
             "name": "acquia/sitestudio_contenthub",
-            "version": "7.0.x-dev",
+            "version": "7.4.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vaibhav-acquia/sitestudio_contenthub.git",
-                "reference": "cb92fc7c005dd71fd03157c0a915201adf77f9f3"
+                "url": "https://github.com/acquia/sitestudio_contenthub.git",
+                "reference": "4f653e29a0ab34ea47558adc95c6d88e2fb9a130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vaibhav-acquia/sitestudio_contenthub/zipball/cb92fc7c005dd71fd03157c0a915201adf77f9f3",
-                "reference": "cb92fc7c005dd71fd03157c0a915201adf77f9f3",
+                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/4f653e29a0ab34ea47558adc95c6d88e2fb9a130",
+                "reference": "4f653e29a0ab34ea47558adc95c6d88e2fb9a130",
                 "shasum": ""
             },
             "require": {
-                "acquia/cohesion": "^6.7.0 || ^7",
-                "drupal/acquia_contenthub": "^2.28.0 || ^3"
+                "acquia/cohesion": "^7.0",
+                "drupal/acquia_contenthub": "^3.3.0"
             },
             "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -589,9 +590,10 @@
             ],
             "description": "Adds Site Studio support for Acquia ContentHub.",
             "support": {
-                "source": "https://github.com/vaibhav-acquia/sitestudio_contenthub/tree/7.0.x"
+                "issues": "https://github.com/acquia/sitestudio_contenthub/issues",
+                "source": "https://github.com/acquia/sitestudio_contenthub/tree/7.4.2"
             },
-            "time": "2023-04-19T16:25:52+00:00"
+            "time": "2024-01-22T15:20:49+00:00"
         },
         {
             "name": "acquia/sitestudio_jsonapi",
@@ -26596,7 +26598,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "acquia/acf": 20,
-        "acquia/sitestudio_contenthub": 20,
         "drupal/acquia_cms_toolbar_gin": 20,
         "drupal/augmentor": 10,
         "drupal/augmentor_chatgpt": 15,
