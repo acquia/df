@@ -103,16 +103,16 @@
         },
         {
             "name": "acquia/acquia-cms-starterkit",
-            "version": "1.1.8",
+            "version": "1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/acquia-cms-starterkit.git",
-                "reference": "cfe67db55e22bad2765d5c77f2e60e639b6a849d"
+                "reference": "394129e12d1049be6c00ab154b1a88b42fb6f591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/cfe67db55e22bad2765d5c77f2e60e639b6a849d",
-                "reference": "cfe67db55e22bad2765d5c77f2e60e639b6a849d",
+                "url": "https://api.github.com/repos/acquia/acquia-cms-starterkit/zipball/394129e12d1049be6c00ab154b1a88b42fb6f591",
+                "reference": "394129e12d1049be6c00ab154b1a88b42fb6f591",
                 "shasum": ""
             },
             "require": {
@@ -172,9 +172,9 @@
             ],
             "support": {
                 "issues": "https://github.com/acquia/acquia-cms-starterkit/issues",
-                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/1.1.8"
+                "source": "https://github.com/acquia/acquia-cms-starterkit/tree/1.1.9"
             },
-            "time": "2024-03-26T18:01:38+00:00"
+            "time": "2024-04-23T05:39:47+00:00"
         },
         {
             "name": "acquia/cohesion",
@@ -1210,16 +1210,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.7.3",
+            "version": "2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "e49be96f3bccd183c9ff1313686c06cf898ba4be"
+                "reference": "a625e50598e12171d3f60b1149eb530690c43474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/e49be96f3bccd183c9ff1313686c06cf898ba4be",
-                "reference": "e49be96f3bccd183c9ff1313686c06cf898ba4be",
+                "url": "https://api.github.com/repos/composer/composer/zipball/a625e50598e12171d3f60b1149eb530690c43474",
+                "reference": "a625e50598e12171d3f60b1149eb530690c43474",
                 "shasum": ""
             },
             "require": {
@@ -1304,7 +1304,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.7.3"
+                "source": "https://github.com/composer/composer/tree/2.7.4"
             },
             "funding": [
                 {
@@ -1320,7 +1320,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-19T19:40:57+00:00"
+            "time": "2024-04-22T19:17:03+00:00"
         },
         {
             "name": "composer/installers",
@@ -3181,17 +3181,17 @@
         },
         {
             "name": "drupal/acquia_cms_common",
-            "version": "3.3.7",
+            "version": "3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_common.git",
-                "reference": "3.3.7"
+                "reference": "3.3.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.3.7.zip",
-                "reference": "3.3.7",
-                "shasum": "3ae37473b1a2ecb38de07d41633a556327135ce5"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.3.8.zip",
+                "reference": "3.3.8",
+                "shasum": "56e1050c264843f1fce25422e32ad03a05695f57"
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.5",
@@ -3210,7 +3210,7 @@
                 "drupal/memcache": "^2.5",
                 "drupal/metatag_open_graph": "*",
                 "drupal/metatag_twitter_cards": "*",
-                "drupal/moderation_dashboard": "^2.1",
+                "drupal/moderation_dashboard": "^2.1 || ^3.0",
                 "drupal/moderation_sidebar": "^1.7",
                 "drupal/password_policy": "^4.0",
                 "drupal/password_policy_character_types": "*",
@@ -3229,7 +3229,7 @@
                 "drupal/social_media_links": "^2.9",
                 "drupal/username_enumeration_prevention": "^1.3",
                 "drupal/workbench_email": "^3.0",
-                "nnnick/chartjs": "^3.9"
+                "nnnick/chartjs": "^3.9 || ^4.4"
             },
             "conflict": {
                 "acquia/acquia_cms": "<1.5.2",
@@ -3261,8 +3261,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.7",
-                    "datestamp": "1711463001",
+                    "version": "3.3.8",
+                    "datestamp": "1713797528",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5935,27 +5935,27 @@
         },
         {
             "name": "drupal/checklistapi",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/checklistapi.git",
-                "reference": "2.1.5"
+                "reference": "2.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/checklistapi-2.1.5.zip",
-                "reference": "2.1.5",
-                "shasum": "9d91ecdcba1fc1d4805a6ddc06a6ba5ca8a63fc9"
+                "url": "https://ftp.drupal.org/files/projects/checklistapi-2.1.6.zip",
+                "reference": "2.1.6",
+                "shasum": "64f439b7dd09336c4b32480edf1796cbc911d9b4"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
+                "drupal/core": "^9.3 || ^10 || ^11",
                 "php": ">=7.3.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.5",
-                    "datestamp": "1697644052",
+                    "version": "2.1.6",
+                    "datestamp": "1713801912",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8033,17 +8033,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.1.11",
+            "version": "2.1.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.1.11"
+                "reference": "2.1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.11.zip",
-                "reference": "2.1.11",
-                "shasum": "23fd7f0e7ceb091162468eed290d083a2e3b62af"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.1.12.zip",
+                "reference": "2.1.12",
+                "shasum": "2a3e32c25eebdcdb3c64144b01d7dd4ce2945fec"
             },
             "require": {
                 "drupal/core": "^9 || ^10"
@@ -8054,8 +8054,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.11",
-                    "datestamp": "1713470242",
+                    "version": "2.1.12",
+                    "datestamp": "1713880633",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12201,26 +12201,26 @@
         },
         {
             "name": "drupal/moderation_dashboard",
-            "version": "2.1.5",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/moderation_dashboard.git",
-                "reference": "2.1.5"
+                "reference": "3.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/moderation_dashboard-2.1.5.zip",
-                "reference": "2.1.5",
-                "shasum": "5864fae086ef710cad0615341e6e6214cd2a55a6"
+                "url": "https://ftp.drupal.org/files/projects/moderation_dashboard-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "b425d82d591a4d872d878571df3e9b140f77e0be"
             },
             "require": {
-                "drupal/core": "^9 || ^10"
+                "drupal/core": "^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.5",
-                    "datestamp": "1694008389",
+                    "version": "3.0.2",
+                    "datestamp": "1711391452",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -20734,16 +20734,16 @@
         },
         {
             "name": "nnnick/chartjs",
-            "version": "v3.9.1",
+            "version": "v4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chartjs/Chart.js.git",
-                "reference": "5ea4b3adffcea61c7ec256ac3976927c5619c17a"
+                "reference": "7736ea32da0a93f89d20d59861dd8821a2802447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chartjs/Chart.js/zipball/5ea4b3adffcea61c7ec256ac3976927c5619c17a",
-                "reference": "5ea4b3adffcea61c7ec256ac3976927c5619c17a",
+                "url": "https://api.github.com/repos/chartjs/Chart.js/zipball/7736ea32da0a93f89d20d59861dd8821a2802447",
+                "reference": "7736ea32da0a93f89d20d59861dd8821a2802447",
                 "shasum": ""
             },
             "require": {
@@ -20773,9 +20773,9 @@
             ],
             "support": {
                 "issues": "https://github.com/chartjs/Chart.js/issues",
-                "source": "https://github.com/chartjs/Chart.js/tree/v3.9.1"
+                "source": "https://github.com/chartjs/Chart.js/tree/v4.4.2"
             },
-            "time": "2022-08-03T12:46:38+00:00"
+            "time": "2024-02-28T16:43:58+00:00"
         },
         {
             "name": "npm-asset/jsonview",
