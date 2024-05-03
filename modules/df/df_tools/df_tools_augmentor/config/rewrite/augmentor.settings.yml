@@ -1,0 +1,88 @@
+augmentors:
+  bc6eff21-6421-46ae-924f-2d65728fb18c:
+    label: 'ChatGPT Title'
+    weight: 0
+    type: chatgpt
+    configuration:
+      label: 'ChatGPT Title'
+      uuid: bc6eff21-6421-46ae-924f-2d65728fb18c
+      id: chatgpt
+      weight: ''
+      key: open_ai
+      settings:
+        label: 'ChatGPT Title'
+        key: open_ai
+        model: gpt-3.5-turbo
+        messages:
+          0:
+            role: system
+            content: 'You are a helpful assistant.'
+          1:
+            role: user
+            content: "Suggest three SEO friendly titles for this page based off of the following content in 10 words or less, in the same language as the input:\r\n\r\n{input}"
+          actions: {  }
+        temperature: '1'
+        max_tokens: '100'
+        top_p: '0'
+        'n': '1'
+        frequency_penalty: '0'
+        presence_penalty: '0'
+        user_tracking: 1
+  78614461-55ae-4b0e-b2b0-56ce77e3286f:
+    label: 'ChatGPT Summarize'
+    weight: 1
+    type: chatgpt
+    configuration:
+      label: ''
+      uuid: ''
+      id: chatgpt
+      weight: 1
+      key: ''
+      settings:
+        label: 'ChatGPT Summarize'
+        key: open_ai
+        model: gpt-3.5-turbo
+        messages:
+          0:
+            role: system
+            content: 'You are a helpful assistant.'
+          1:
+            role: user
+            content: "Create an SEO friendly meta description of up to 200 characters for the following text, using the same language as the input:\r\n\r\n{input}"
+          actions: {  }
+        temperature: '1'
+        max_tokens: '60'
+        top_p: '0'
+        'n': '1'
+        frequency_penalty: '0'
+        presence_penalty: '0'
+        user_tracking: 1
+  3f24ecda-9858-41a0-bf77-eb5cfeb2e1ee:
+    label: 'ChatGPT Tags'
+    weight: 2
+    type: chatgpt
+    configuration:
+      label: ''
+      uuid: ''
+      id: chatgpt
+      weight: 2
+      key: ''
+      settings:
+        label: 'ChatGPT Tags'
+        key: open_ai
+        model: gpt-3.5-turbo
+        messages:
+          0:
+            role: system
+            content: 'You are a helpful assistant.'
+          1:
+            role: user
+            content: "Extract keywords from this text and comma separate them:\r\n\r\n{input}"
+          actions: {  }
+        temperature: '1'
+        max_tokens: '40'
+        top_p: '0'
+        'n': '1'
+        frequency_penalty: '0'
+        presence_penalty: '0'
+        user_tracking: 1

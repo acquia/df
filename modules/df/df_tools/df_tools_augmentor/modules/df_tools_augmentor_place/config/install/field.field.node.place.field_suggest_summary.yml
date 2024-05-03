@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suggest_summary
+    - node.type.place
+  module:
+    - augmentor
+id: node.place.field_suggest_summary
+field_name: field_suggest_summary
+entity_type: node
+bundle: place
+label: 'Suggest description summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_augmentor_type
