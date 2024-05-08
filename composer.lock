@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba027316eb72d7f6611da72091f764e7",
+    "content-hash": "726a8ccf3cfce964f33c908e068b8336",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -1770,16 +1770,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "4f988f8fdf580d53bdb2d1278fe93d1ed5462255"
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
-                "reference": "4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/6c1925561632e83d60a44492e0b344cf48ab85ef",
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef",
                 "shasum": ""
             },
             "require": {
@@ -1816,7 +1816,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/3.0.4"
+                "source": "https://github.com/composer/xdebug-handler/tree/3.0.5"
             },
             "funding": [
                 {
@@ -1832,7 +1832,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-26T18:29:49+00:00"
+            "time": "2024-05-06T16:37:16+00:00"
         },
         {
             "name": "consolidation/annotated-command",
@@ -11397,17 +11397,17 @@
         },
         {
             "name": "drupal/leaflet",
-            "version": "10.2.13",
+            "version": "10.2.14",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/leaflet.git",
-                "reference": "10.2.13"
+                "reference": "10.2.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.13.zip",
-                "reference": "10.2.13",
-                "shasum": "ab9386ddf4716124110141f88af11c992f5327de"
+                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.14.zip",
+                "reference": "10.2.14",
+                "shasum": "bc7d09b34b05651fe036311a4416e111a3b13e48"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -11416,8 +11416,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "10.2.13",
-                    "datestamp": "1714774113",
+                    "version": "10.2.14",
+                    "datestamp": "1715114722",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13030,11 +13030,17 @@
         },
         {
             "name": "drupal/panels",
-            "version": "dev-4.x",
+            "version": "4.8.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/panels.git",
-                "reference": "dfc361e4a32b40104e868502596fa9ad2138ed20"
+                "reference": "8.x-4.8-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/panels-8.x-4.8-rc1.zip",
+                "reference": "8.x-4.8-rc1",
+                "shasum": "839f5c98a1792cb1cec3074370662c286e37f265"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
@@ -13047,17 +13053,16 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev",
-                    "dev-8.x-4.x": "4.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-4.7+11-dev",
-                    "datestamp": "1714783998",
+                    "version": "8.x-4.8-rc1",
+                    "datestamp": "1715016244",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
+                },
+                "branch-alias": {
+                    "dev-8.x-4.x": "4.x-dev"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
