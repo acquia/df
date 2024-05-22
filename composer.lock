@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82795e8baa4e73463ecca59ba8484fa4",
+    "content-hash": "a790f4aa8415af5d03fbb8ab14582e6d",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -178,33 +178,33 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "7.3.2",
+            "version": "7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "49e64b0035e7e7bdb0f2c63d4372248e7906f251"
+                "reference": "43d64e60a65455f74e93a4289a43dbb1e312f2df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/49e64b0035e7e7bdb0f2c63d4372248e7906f251",
-                "reference": "49e64b0035e7e7bdb0f2c63d4372248e7906f251",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/43d64e60a65455f74e93a4289a43dbb1e312f2df",
+                "reference": "43d64e60a65455f74e93a4289a43dbb1e312f2df",
                 "shasum": ""
             },
             "require": {
-                "cweagans/composer-patches": "^1.6",
+                "cweagans/composer-patches": "^1.7",
                 "drupal/entity_reference_revisions": "^1.7",
                 "drupal/imce": "^3.0",
                 "drupal/jquery_ui": "^1.4",
                 "drupal/stable": "^2.0",
                 "drupal/token": "^1.11",
+                "drush/drush": "^11.6 || ^12",
                 "ext-json": "*"
             },
             "require-dev": {
-                "acquia/coding-standards": "^0.4.1",
-                "behat/mink": "^1.7",
+                "acquia/coding-standards": "^1.0.0",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-                "phpunit/phpunit": "^6.5",
-                "symfony/phpunit-bridge": "^4.3"
+                "drupal/core-dev": "^9 || ^10",
+                "e0ipso/shaper": "^1"
             },
             "suggest": {
                 "drupal/admin_toolbar": "Provides a better UX for the standard admin toolbar",
@@ -220,11 +220,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                },
                 "enable-patching": true
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -240,22 +235,22 @@
             ],
             "description": "Site Studio",
             "support": {
-                "source": "https://github.com/acquia/cohesion/tree/7.3.2"
+                "source": "https://github.com/acquia/cohesion/tree/7.4.3"
             },
-            "time": "2023-10-24T19:52:55+00:00"
+            "time": "2024-03-04T16:04:22+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "7.3.2",
+            "version": "7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "194102cb6751a3a1cf212ec19be2223d4c788002"
+                "reference": "a24560889aac67b7317d5cc7a39041ec96b462cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/194102cb6751a3a1cf212ec19be2223d4c788002",
-                "reference": "194102cb6751a3a1cf212ec19be2223d4c788002",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/a24560889aac67b7317d5cc7a39041ec96b462cd",
+                "reference": "a24560889aac67b7317d5cc7a39041ec96b462cd",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -273,9 +268,9 @@
             "description": "Site Studio minimal theme",
             "support": {
                 "issues": "https://github.com/acquia/cohesion-theme/issues",
-                "source": "https://github.com/acquia/cohesion-theme/tree/7.3.2"
+                "source": "https://github.com/acquia/cohesion-theme/tree/7.4.3"
             },
-            "time": "2023-10-24T19:53:00+00:00"
+            "time": "2024-03-04T16:04:28+00:00"
         },
         {
             "name": "acquia/content-hub-php",
@@ -563,21 +558,21 @@
         },
         {
             "name": "acquia/sitestudio_contenthub",
-            "version": "7.3.2",
+            "version": "7.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/sitestudio_contenthub.git",
-                "reference": "7a85246393a2f9fdedf08b1ad2e3cc8039a9d9ba"
+                "reference": "ae28fe9f248809751454b31a07e38d2888e37b1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/7a85246393a2f9fdedf08b1ad2e3cc8039a9d9ba",
-                "reference": "7a85246393a2f9fdedf08b1ad2e3cc8039a9d9ba",
+                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/ae28fe9f248809751454b31a07e38d2888e37b1c",
+                "reference": "ae28fe9f248809751454b31a07e38d2888e37b1c",
                 "shasum": ""
             },
             "require": {
                 "acquia/cohesion": "^7.0",
-                "drupal/acquia_contenthub": "^2.28.0 || ^3.0.2"
+                "drupal/acquia_contenthub": "^3.3.0"
             },
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -594,9 +589,9 @@
             "description": "Adds Site Studio support for Acquia ContentHub.",
             "support": {
                 "issues": "https://github.com/acquia/sitestudio_contenthub/issues",
-                "source": "https://github.com/acquia/sitestudio_contenthub/tree/7.3.2"
+                "source": "https://github.com/acquia/sitestudio_contenthub/tree/7.4.3"
             },
-            "time": "2023-10-24T19:53:06+00:00"
+            "time": "2024-03-04T16:04:33+00:00"
         },
         {
             "name": "arthurkushman/query-path",
@@ -3929,21 +3924,21 @@
         },
         {
             "name": "drupal/acquia_cms_site_studio",
-            "version": "1.5.16",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_site_studio.git",
-                "reference": "1.5.16"
+                "reference": "1.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_site_studio-1.5.16.zip",
-                "reference": "1.5.16",
-                "shasum": "9809138ffc1956d3f04f576e7a813b56822ac1e2"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_site_studio-1.6.2.zip",
+                "reference": "1.6.2",
+                "shasum": "431f7fab6520128871c161586c442b114a7c4061"
             },
             "require": {
-                "acquia/cohesion": "^6.9.2 || ~7.3.2",
-                "acquia/cohesion-theme": "^6.9.2 || ~7.3.2",
+                "acquia/cohesion": "~7.4.0 || ~7.5.0",
+                "acquia/cohesion-theme": "~7.4.0 || ~7.5.0",
                 "drupal/acquia_cms_common": "^1.9 || ^2.1 || ^3.1",
                 "drupal/collapsiblock": "^4.0",
                 "drupal/config_ignore": "*",
@@ -3953,21 +3948,26 @@
                 "drupal/sitestudio_config_management": "^1.0"
             },
             "conflict": {
-                "drupal/acquia_cms_article": "<1.5.6",
-                "drupal/acquia_cms_audio": "<1.4.6",
-                "drupal/acquia_cms_event": "<1.5.6",
-                "drupal/acquia_cms_image": "<1.5.8",
-                "drupal/acquia_cms_page": "<1.5.6",
-                "drupal/acquia_cms_person": "<1.5.6",
-                "drupal/acquia_cms_place": "<1.5.6",
-                "drupal/acquia_cms_search": "<1.4.11",
-                "drupal/acquia_cms_video": "<1.5.6"
+                "drupal/acquia_cms_article": "<1.6",
+                "drupal/acquia_cms_audio": "<1.5",
+                "drupal/acquia_cms_dam": "<1.1",
+                "drupal/acquia_cms_event": "<1.6",
+                "drupal/acquia_cms_image": "<1.6",
+                "drupal/acquia_cms_page": "<1.6",
+                "drupal/acquia_cms_person": "<1.6",
+                "drupal/acquia_cms_place": "<1.6",
+                "drupal/acquia_cms_search": "<1.5",
+                "drupal/acquia_cms_video": "<1.6"
+            },
+            "require-dev": {
+                "drupal/acquia_cms_page": "^1",
+                "drupal/acquia_cms_tour": "^2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.5.16",
-                    "datestamp": "1701663341",
+                    "version": "1.6.2",
+                    "datestamp": "1711471259",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3984,8 +3984,7 @@
                 "enable-patching": true,
                 "patches": {
                     "acquia/cohesion": {
-                        "3340269 - Site Studio: Allow optional packages to import": "https://www.drupal.org/files/issues/2023-03-16/3340269-site-studio-allow-optional-packages-6.patch",
-                        "3340269 - Supports Drush 12. If using Drush 10 or Drush 11 & this patch is failing, then ignore this patch": "https://www.drupal.org/files/issues/2023-06-13/3340269-support-drush-12-13.patch"
+                        "3340269 - Site Studio: Allow optional packages to import": "https://www.drupal.org/files/issues/2023-03-16/3340269-site-studio-allow-optional-packages-6.patch"
                     }
                 }
             },
@@ -15609,20 +15608,20 @@
         },
         {
             "name": "drupal/sitestudio_config_management",
-            "version": "1.0.2",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/sitestudio_config_management.git",
-                "reference": "1.0.2"
+                "reference": "1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sitestudio_config_management-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "6a8c316091607c1320c39bc17287c2dfe38d88c0"
+                "url": "https://ftp.drupal.org/files/projects/sitestudio_config_management-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "dd486c7980bebf7bb4139d55ed5c1709223aba4f"
             },
             "require": {
-                "acquia/cohesion": "^6.9.2 || ~7.3.2",
+                "acquia/cohesion": "~7.4.0 || ~7.5.0",
                 "drupal/config_filter": "^2.4",
                 "drupal/config_ignore": "^3.0@beta",
                 "drupal/config_split": "^2.0",
@@ -15630,13 +15629,13 @@
                 "php": ">=7.4"
             },
             "require-dev": {
-                "drush/drush": "^10 || ^11 || ^12"
+                "drush/drush": "^11.6 || ^12"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1701862529",
+                    "version": "1.1.1",
+                    "datestamp": "1711471233",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -19034,12 +19033,12 @@
             "version": "v5.2.13",
             "source": {
                 "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
+                "url": "https://github.com/jsonrainbow/json-schema.git",
                 "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
                 "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793",
                 "shasum": ""
             },
@@ -19094,8 +19093,8 @@
                 "schema"
             ],
             "support": {
-                "issues": "https://github.com/justinrainbow/json-schema/issues",
-                "source": "https://github.com/justinrainbow/json-schema/tree/v5.2.13"
+                "issues": "https://github.com/jsonrainbow/json-schema/issues",
+                "source": "https://github.com/jsonrainbow/json-schema/tree/v5.2.13"
             },
             "time": "2023-09-26T02:20:38+00:00"
         },
@@ -20844,16 +20843,16 @@
         },
         {
             "name": "openai-php/client",
-            "version": "v0.8.5",
+            "version": "v0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openai-php/client.git",
-                "reference": "0f755fafa4d3f8d5c8ed964d3166d078fac0605a"
+                "reference": "7b5652b5e107b04b67aa5bc6560acf162ef2be97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openai-php/client/zipball/0f755fafa4d3f8d5c8ed964d3166d078fac0605a",
-                "reference": "0f755fafa4d3f8d5c8ed964d3166d078fac0605a",
+                "url": "https://api.github.com/repos/openai-php/client/zipball/7b5652b5e107b04b67aa5bc6560acf162ef2be97",
+                "reference": "7b5652b5e107b04b67aa5bc6560acf162ef2be97",
                 "shasum": ""
             },
             "require": {
@@ -20868,15 +20867,15 @@
             "require-dev": {
                 "guzzlehttp/guzzle": "^7.8.1",
                 "guzzlehttp/psr7": "^2.6.2",
-                "laravel/pint": "^1.15.0",
+                "laravel/pint": "^1.15.3",
                 "mockery/mockery": "^1.6.11",
                 "nunomaduro/collision": "^7.10.0",
-                "pestphp/pest": "^2.34.6",
+                "pestphp/pest": "^2.34.7",
                 "pestphp/pest-plugin-arch": "^2.7",
                 "pestphp/pest-plugin-type-coverage": "^2.8.1",
-                "phpstan/phpstan": "^1.10.66",
+                "phpstan/phpstan": "^1.10.67",
                 "rector/rector": "^1.0.4",
-                "symfony/var-dumper": "^6.4.4"
+                "symfony/var-dumper": "^6.4.7"
             },
             "type": "library",
             "autoload": {
@@ -20916,7 +20915,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openai-php/client/issues",
-                "source": "https://github.com/openai-php/client/tree/v0.8.5"
+                "source": "https://github.com/openai-php/client/tree/v0.9.0"
             },
             "funding": [
                 {
@@ -20932,7 +20931,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-15T19:11:23+00:00"
+            "time": "2024-05-21T18:50:46+00:00"
         },
         {
             "name": "orhanerday/open-ai",
