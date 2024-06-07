@@ -26,8 +26,8 @@ function df_core_requirements($phase) {
   if ($phase == 'runtime') {
     $requirements['df_version'] = [
       'title' => t("Demo Framework"),
-      'value' => t("7.1.0+dev"),
-      'description' => 'Last Update: 2024-05-17',
+      'value' => t("7.1.1"),
+      'description' => 'Last Update: 2024-06-07',
       'severity' => REQUIREMENT_INFO,
     ];
   }
