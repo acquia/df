@@ -1,0 +1,116 @@
+diff --git a/modules/component_example/components/example_blank/example_blank.component.yml b/modules/component_example/components/example_blank/example_blank.component.yml
+index c76091c..f52d390 100644
+--- a/modules/component_example/components/example_blank/example_blank.component.yml
++++ b/modules/component_example/components/example_blank/example_blank.component.yml
+@@ -1,2 +1,5 @@
+ name: Example blank
+ description: 'This is a blank component for testing.'
++props:
++  type: object
++  properties: {}
+diff --git a/modules/component_example/components/example_blank/example_blank.twig b/modules/component_example/components/example_blank/example_blank.twig
+new file mode 100644
+index 0000000..8ab052a
+--- /dev/null
++++ b/modules/component_example/components/example_blank/example_blank.twig
+@@ -0,0 +1,6 @@
++{#
++/**
++ * @file
++ * Required Twig template for components as of Drupal 10.3.
++ */
++#}
+diff --git a/modules/component_example/components/example_config/example_config.component.yml b/modules/component_example/components/example_config/example_config.component.yml
+index 1caf413..edc7fb6 100644
+--- a/modules/component_example/components/example_config/example_config.component.yml
++++ b/modules/component_example/components/example_config/example_config.component.yml
+@@ -40,3 +40,6 @@ form_configuration:
+     type: date
+     title: 'Birthday'
+     default_value: '2227-01-20'
++props:
++  type: object
++  properties: {}
+diff --git a/modules/component_example/components/example_config/example_config.twig b/modules/component_example/components/example_config/example_config.twig
+new file mode 100644
+index 0000000..8ab052a
+--- /dev/null
++++ b/modules/component_example/components/example_config/example_config.twig
+@@ -0,0 +1,6 @@
++{#
++/**
++ * @file
++ * Required Twig template for components as of Drupal 10.3.
++ */
++#}
+diff --git a/modules/component_example/components/example_react_calc/example_react_calc.component.yml b/modules/component_example/components/example_react_calc/example_react_calc.component.yml
+index 1387ee0..0b15407 100644
+--- a/modules/component_example/components/example_react_calc/example_react_calc.component.yml
++++ b/modules/component_example/components/example_react_calc/example_react_calc.component.yml
+@@ -11,4 +11,7 @@ dependencies:
+  - component/example_react_lib
+ cache:
+   max-age: 0
++props:
++  type: object
++  properties: {}
+ # Inspired by: https://codepen.io/jlmortola/pen/VPYaEv
+diff --git a/modules/component_example/components/example_react_calc/example_react_calc.twig b/modules/component_example/components/example_react_calc/example_react_calc.twig
+new file mode 100644
+index 0000000..8ab052a
+--- /dev/null
++++ b/modules/component_example/components/example_react_calc/example_react_calc.twig
+@@ -0,0 +1,6 @@
++{#
++/**
++ * @file
++ * Required Twig template for components as of Drupal 10.3.
++ */
++#}
+diff --git a/modules/component_example/components/example_react_lib/example_react_lib.component.yml b/modules/component_example/components/example_react_lib/example_react_lib.component.yml
+index daab796..4cf3dae 100644
+--- a/modules/component_example/components/example_react_lib/example_react_lib.component.yml
++++ b/modules/component_example/components/example_react_lib/example_react_lib.component.yml
+@@ -14,3 +14,6 @@ js:
+   //unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js: { type: external, minified: true, crossorigin: anonymous }
+   //unpkg.com/create-react-class@15.6.0/create-react-class.min.js : { type: external, minified: true, crossorigin: anonymous }
+   //unpkg.com/babel-standalone@6/babel.min.js: { type: external, minified: true, crossorigin: anonymous }
++props:
++  type: object
++  properties: {}
+diff --git a/modules/component_example/components/example_react_lib/example_react_lib.twig b/modules/component_example/components/example_react_lib/example_react_lib.twig
+new file mode 100644
+index 0000000..8ab052a
+--- /dev/null
++++ b/modules/component_example/components/example_react_lib/example_react_lib.twig
+@@ -0,0 +1,6 @@
++{#
++/**
++ * @file
++ * Required Twig template for components as of Drupal 10.3.
++ */
++#}
+diff --git a/modules/component_example/components/example_tabs/example_tabs.component.yml b/modules/component_example/components/example_tabs/example_tabs.component.yml
+index 47837aa..fb8dbbe 100755
+--- a/modules/component_example/components/example_tabs/example_tabs.component.yml
++++ b/modules/component_example/components/example_tabs/example_tabs.component.yml
+@@ -44,3 +44,7 @@ form_configuration:
+ # https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!theme.api.php/group/theme_render/8.2.x#sec_caching
+ cache:
+   max-age: 60
++props:
++  type: object
++  properties: {}
++
+diff --git a/modules/component_example/components/example_tabs/example_tabs.twig b/modules/component_example/components/example_tabs/example_tabs.twig
+new file mode 100644
+index 0000000..8ab052a
+--- /dev/null
++++ b/modules/component_example/components/example_tabs/example_tabs.twig
+@@ -0,0 +1,6 @@
++{#
++/**
++ * @file
++ * Required Twig template for components as of Drupal 10.3.
++ */
++#}

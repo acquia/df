@@ -4,10 +4,10 @@
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "require": {
-    "acquia/acf": "2.x-feeds-dev",
+    "acquia/acf": "^2",
     "acquia/acquia-cms-starterkit": "^1.0",
-    "acquia/cohesion": "7.4.3",
-    "acquia/cohesion-theme": "7.4.3",
+    "acquia/cohesion": "^7",
+    "acquia/cohesion-theme": "^7",
     "acquia/sitestudio_contenthub": "^7",
     "acquia/sitestudio_jsonapi": "^7.4",
     "drupal/access_unpublished": "^1.5",
@@ -235,8 +235,7 @@
     "patches": {
         "drupal/core": {
             "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
-            "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
-            "Broken title in modal dialog when title is a render array | https://drupal.org/node/2663316": "https://www.drupal.org/files/issues/2019-10-21/2663316-76.drupal.Broken-title-in-modal-dialog-when-title-is-a-render-array.patch"
+            "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch"
         },
         "drupal/acquia_cms_common": {
             "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
@@ -245,7 +244,8 @@
         "acquia/cohesion": {
             "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
             "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch",
-            "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch"
+            "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch",
+            "ACMS-3441: Fixed the module installation error on Drupal Core 10.3.0": "patches/ACO-3441.patch"
         },
         "acquia/sitestudio_jsonapi": {
             "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
@@ -257,7 +257,8 @@
           "Unable to create tags after upgrading to 1.1.2 | https://www.drupal.org/project/augmentor/issues/3424980": "https://www.drupal.org/files/issues/2024-03-04/augmentor-3424980-01.patch"
         },
         "drupal/component": {
-            "Creation of dynamic property is deprecated in PHP-8.2 | https://www.drupal.org/project/component/issues/3375525": "https://www.drupal.org/files/issues/2023-08-22/3375525-4.patch"
+            "Creation of dynamic property is deprecated in PHP-8.2 | https://www.drupal.org/project/component/issues/3375525": "https://www.drupal.org/files/issues/2023-08-22/3375525-4.patch",
+            "Component Patch for adding Twig Template and a schema in yaml": "patches/component-d10.3-component-discovery.patch"
         },
         "drupal/default_content": {
             "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
