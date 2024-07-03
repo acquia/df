@@ -55,8 +55,8 @@
     "drupal/config_filter": "^2.4",
     "drupal/consumer_image_styles": "^4.0",
     "drupal/context": "^5.0@RC",
-    "drupal/core-composer-scaffold": "^10",
-    "drupal/core-recommended": "^10",
+    "drupal/core-composer-scaffold": "10.2.7",
+    "drupal/core-recommended": "10.2.7",
     "drupal/crop": "^2.3",
     "drupal/cshs": "^4.0",
     "drupal/decoupled_router": "^2.0.3",
@@ -109,6 +109,7 @@
     "drupal/moderated_content_bulk_publish": "^3.0@beta",
     "drupal/moderation_note": "^1.0@beta",
     "drupal/monsido_tools": "^1.1",
+    "drupal/new_relic_rpm": "^2.1",
     "drupal/next": "^1.6",
     "drupal/openai": "^1.0@alpha",
     "drupal/page_manager": "^4.0@RC",
@@ -233,74 +234,84 @@
       "drupal/core": "-p2"
     },
     "patches": {
-        "drupal/core": {
-            "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
-            "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
-            "Broken title in modal dialog when title is a render array | https://drupal.org/node/2663316": "https://www.drupal.org/files/issues/2019-10-21/2663316-76.drupal.Broken-title-in-modal-dialog-when-title-is-a-render-array.patch"
-        },
-        "drupal/acquia_cms_common": {
-            "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
-            "Attempt to modify custom permissions for DF": "patches/acquia_cms_common-custom-permissions.patch"
-        },
-        "acquia/cohesion": {
-            "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
-            "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch",
-            "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch"
-        },
-        "acquia/sitestudio_jsonapi": {
-            "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
-        },
-        "drupal/admin_toolbar": {
-            "Full Menu Flash | https://www.drupal.org/project/admin_toolbar/issues/3369118": "https://www.drupal.org/files/issues/2023-07-07/3369118-13-inline-styles-to-prevent-flash.patch"
-        },
-        "drupal/augmentor": {
-          "Unable to create tags after upgrading to 1.1.2 | https://www.drupal.org/project/augmentor/issues/3424980": "https://www.drupal.org/files/issues/2024-03-04/augmentor-3424980-01.patch"
-        },
-        "drupal/component": {
-            "Creation of dynamic property is deprecated in PHP-8.2 | https://www.drupal.org/project/component/issues/3375525": "https://www.drupal.org/files/issues/2023-08-22/3375525-4.patch"
-        },
-        "drupal/default_content": {
-            "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
-        },
-        "drupal/entity_browser": {
-            "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
-        },
-        "drupal/get_tweets": {
-            "Changes menu link title": "https://www.drupal.org/files/issues/2022-05-19/get_tweets-updates-menu-link.patch"
-        },
-        "drupal/gin": {
-            "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch"
-        },
-        "drupal/gin_moderation_sidebar": {
-            "Add settings tray/off-canvas styles | https://www.drupal.org/node/3364324": "https://git.drupalcode.org/project/gin_moderation_sidebar/-/merge_requests/4.diff"
-        },
-        "drupal/gin_toolbar": {
-            "Order of toolbar menu items is changed after updating to 1.0.0-beta18 | https://www.drupal.org/project/gin_toolbar/issues/3222799": "https://www.drupal.org/files/issues/2022-03-14/3222799-9.gin_toolbar.add-rearrange-menu-items-setting.patch"
-        },
-        "drupal/graphql": {
-            "Add missing subrequest buffer.": "https://patch-diff.githubusercontent.com/raw/drupal-graphql/graphql/pull/1313.patch"
-        },
-        "drupal/inline_entity_form": {
-            "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
-        },
-        "drupal/jsonapi_schema": {
-            "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
-        },
-        "drupal/mautic": {
-            "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
-        },
-        "drupal/pathauto": {
-            "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
-        },
-        "drupal/webform_rest": {
-            "Add API endpoint for retrieving autocomplete options | https://drupal.org/node/3317762": "https://www.drupal.org/files/issues/2022-10-27/3317762-2.patch"
-        }
+      "drupal/core": {
+        "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
+        "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
+        "Broken title in modal dialog when title is a render array | https://drupal.org/node/2663316": "https://www.drupal.org/files/issues/2019-10-21/2663316-76.drupal.Broken-title-in-modal-dialog-when-title-is-a-render-array.patch"
+      },
+      "drupal/acquia_cms_common": {
+        "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
+        "Attempt to modify custom permissions for DF": "patches/acquia_cms_common-custom-permissions.patch"
+      },
+      "acquia/cohesion": {
+        "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
+        "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch",
+        "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch"
+      },
+      "acquia/sitestudio_jsonapi": {
+        "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
+      },
+      "drupal/admin_toolbar": {
+        "Full Menu Flash | https://www.drupal.org/project/admin_toolbar/issues/3369118": "https://www.drupal.org/files/issues/2023-07-07/3369118-13-inline-styles-to-prevent-flash.patch"
+      },
+      "drupal/augmentor": {
+        "Unable to create tags after upgrading to 1.1.2 | https://www.drupal.org/project/augmentor/issues/3424980": "https://www.drupal.org/files/issues/2024-03-04/augmentor-3424980-01.patch"
+      },
+      "drupal/component": {
+        "Creation of dynamic property is deprecated in PHP-8.2 | https://www.drupal.org/project/component/issues/3375525": "https://www.drupal.org/files/issues/2023-08-22/3375525-4.patch"
+      },
+      "drupal/default_content": {
+        "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
+      },
+      "drupal/entity_browser": {
+        "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
+      },
+      "drupal/get_tweets": {
+        "Changes menu link title": "https://www.drupal.org/files/issues/2022-05-19/get_tweets-updates-menu-link.patch"
+      },
+      "drupal/gin": {
+        "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch"
+      },
+      "drupal/gin_moderation_sidebar": {
+        "Add settings tray/off-canvas styles | https://www.drupal.org/node/3364324": "https://git.drupalcode.org/project/gin_moderation_sidebar/-/merge_requests/4.diff"
+      },
+      "drupal/gin_toolbar": {
+        "Order of toolbar menu items is changed after updating to 1.0.0-beta18 | https://www.drupal.org/project/gin_toolbar/issues/3222799": "https://www.drupal.org/files/issues/2022-03-14/3222799-9.gin_toolbar.add-rearrange-menu-items-setting.patch"
+      },
+      "drupal/graphql": {
+        "Add missing subrequest buffer.": "https://patch-diff.githubusercontent.com/raw/drupal-graphql/graphql/pull/1313.patch"
+      },
+      "drupal/inline_entity_form": {
+        "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
+      },
+      "drupal/jsonapi_schema": {
+        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
+      },
+      "drupal/mautic": {
+        "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
+      },
+      "drupal/pathauto": {
+        "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
+      },
+      "drupal/webform_rest": {
+        "Add API endpoint for retrieving autocomplete options | https://drupal.org/node/3317762": "https://www.drupal.org/files/issues/2022-10-27/3317762-2.patch"
+      }
     },
     "patches-ignore": {
       "drupal/acquia_cms_common": {
         "drupal/core": {
           "ignore-me": "https://git.drupalcode.org/project/drupal/-/merge_requests/2601.patch",
           "3222107 - jQuery UI library order is incorrect when a large number of javascript files is loaded between two jQuery UI libraries": "https://www.drupal.org/files/issues/2022-11-11/3222107-2.patch"
+        }
+      },
+      "drupal/acquia_cms_search": {
+        "drupal/search_api": {
+          "3236696 - Call to a member function preExecute() on null in SearchApiTagCache->alterCacheMetadata()": "https://www.drupal.org/files/issues/2022-08-02/3236696-5.patch"
+        }
+      },
+      "drupal/acquia_cms_site_studio": {
+        "acquia/cohesion": {
+          "3340269 - Supports Drush 12. If using Drush 10 or Drush 11 & this patch is failing, then ignore this patch": "https://www.drupal.org/files/issues/2023-06-13/3340269-support-drush-12-13.patch"
         }
       }
     }
@@ -312,9 +323,9 @@
       "canonical": true
     },
     "jsonapi-explorer": {
-        "type": "vcs",
-        "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
-        "canonical": true
+      "type": "vcs",
+      "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
+      "canonical": true
     },
     "mautic-api": {
       "type": "vcs",
