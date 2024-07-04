@@ -11565,26 +11565,32 @@
         },
         {
             "name": "drupal/key",
-            "version": "1.18.0",
+            "version": "1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/key.git",
-                "reference": "8.x-1.18"
+                "reference": "8.x-1.19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/key-8.x-1.18.zip",
-                "reference": "8.x-1.18",
-                "shasum": "5075295390be486ba9e372efff70f90fde764c40"
+                "url": "https://ftp.drupal.org/files/projects/key-8.x-1.19.zip",
+                "reference": "8.x-1.19",
+                "shasum": "ee8f7b8f8babd381f1e4423dccede94b4eb5985c"
             },
             "require": {
                 "drupal/core": ">=8.9 <12"
             },
+            "require-dev": {
+                "drush/drush": ">=9"
+            },
+            "suggest": {
+                "drush/drush": ">=11"
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.18",
-                    "datestamp": "1717376699",
+                    "version": "8.x-1.19",
+                    "datestamp": "1720053341",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12924,17 +12930,17 @@
         },
         {
             "name": "drupal/openai",
-            "version": "1.0.0-beta5",
+            "version": "1.0.0-beta6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openai.git",
-                "reference": "1.0.0-beta5"
+                "reference": "1.0.0-beta6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-beta5.zip",
-                "reference": "1.0.0-beta5",
-                "shasum": "6c7240e76a0fa7b930105abde335dac45b6bc465"
+                "url": "https://ftp.drupal.org/files/projects/openai-1.0.0-beta6.zip",
+                "reference": "1.0.0-beta6",
+                "shasum": "08c0beac5e4cecafc2a49dbdaa134c0a0e72a5cf"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -12947,8 +12953,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-beta5",
-                    "datestamp": "1716149827",
+                    "version": "1.0.0-beta6",
+                    "datestamp": "1720013825",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
