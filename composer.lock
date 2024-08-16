@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ec5cf333703f51c7dd0dfa64a498d1e",
+    "content-hash": "da9a88115b3470e9e0e6885a25191f3b",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -70,19 +70,18 @@
         },
         {
             "name": "acquia/acf",
-            "version": "2.x-dev",
+            "version": "dev-2.x-feeds",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/acf.git",
-                "reference": "911ad50bf1544802f355f961acc215f4656191f3"
+                "reference": "6a99932b54a804bb54677864aefbfb3c52997360"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/acf/zipball/911ad50bf1544802f355f961acc215f4656191f3",
-                "reference": "911ad50bf1544802f355f961acc215f4656191f3",
+                "url": "https://api.github.com/repos/acquia/acf/zipball/6a99932b54a804bb54677864aefbfb3c52997360",
+                "reference": "6a99932b54a804bb54677864aefbfb3c52997360",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -98,9 +97,9 @@
             "description": "a lightweight framework for headless e-commerce with Drupal. Starter connectors for major e-commerce engines",
             "support": {
                 "issues": "https://github.com/acquia/acf/issues",
-                "source": "https://github.com/acquia/acf/tree/2.x"
+                "source": "https://github.com/acquia/acf/tree/2.x-feeds"
             },
-            "time": "2024-07-01T22:26:32+00:00"
+            "time": "2024-07-01T22:26:58+00:00"
         },
         {
             "name": "acquia/acquia-cms-starterkit",
@@ -28460,6 +28459,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "acquia/acf": 20,
         "drupal/acquia_cms_toolbar_gin": 20,
         "drupal/augmentor_chatgpt": 15,
         "drupal/captcha": 10,
