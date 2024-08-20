@@ -1,0 +1,48 @@
+diff --git a/src/Service/ConductorHelper.php b/src/Service/ConductorHelper.php
+index 6a2a891..be5e236 100644
+--- a/src/Service/ConductorHelper.php
++++ b/src/Service/ConductorHelper.php
+@@ -4,6 +4,7 @@
+
+ use Drupal\conductor\Exception\ConductorApiRequestException;
+ use Drupal\Core\Config\ConfigFactoryInterface;
++use Drupal\Core\Entity\EntityFormInterface;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Extension\ModuleExtensionList;
+ use Drupal\Core\Render\RendererInterface;
+@@ -274,20 +275,24 @@ public function checkContentTypeValidation($form_state, $form_id) {
+       // Not a node form `node_..._form`.
+       return FALSE;
+     }
+-    /** @var \Drupal\node\NodeInterface $node */
+-    $node = $form_state->getFormObject()->getEntity();
+-    if (!$node instanceof NodeInterface) {
+-      // Ensure we have the Node entity to proceed.
+-      return FALSE;
+-    }
+-    $bundle = $node->bundle();
+-    $config = $this->config->get('conductor.settings');
+-    $content_types = !empty($config->get('conductor.content_types')) ? $config->get('conductor.content_types') : [];
+-    if (!in_array($bundle, $content_types)) {
+-      return FALSE;
+-    }
+
+-    return TRUE;
++    if ($form_state->getFormObject() instanceof EntityFormInterface) {
++      /** @var \Drupal\node\NodeInterface $node */
++      $node = $form_state->getFormObject()->getEntity();
++      if (!$node instanceof NodeInterface) {
++        // Ensure we have the Node entity to proceed.
++        return FALSE;
++      }
++
++      $bundle = $node->bundle();
++      $config = $this->config->get('conductor.settings');
++      $content_types = !empty($config->get('conductor.content_types')) ? $config->get('conductor.content_types') : [];
++      if (!in_array($bundle, $content_types)) {
++        return FALSE;
++      }
++
++      return TRUE;
++    }
+   }
