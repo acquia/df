@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f83ea8f99f27cac20bb3cfd4227efa2a",
+    "content-hash": "666c2cf3534d37c539f485c7aee5436d",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -178,16 +178,16 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "7.5.2",
+            "version": "7.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "8a585870fb0f6519087841d963ba4d3030ff7487"
+                "reference": "f0b091ca1fdb7849f3b96a2b4b7901ce87d7df4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/8a585870fb0f6519087841d963ba4d3030ff7487",
-                "reference": "8a585870fb0f6519087841d963ba4d3030ff7487",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/f0b091ca1fdb7849f3b96a2b4b7901ce87d7df4d",
+                "reference": "f0b091ca1fdb7849f3b96a2b4b7901ce87d7df4d",
                 "shasum": ""
             },
             "require": {
@@ -235,22 +235,22 @@
             ],
             "description": "Site Studio",
             "support": {
-                "source": "https://github.com/acquia/cohesion/tree/7.5.2"
+                "source": "https://github.com/acquia/cohesion/tree/7.5.1"
             },
-            "time": "2024-07-12T10:22:27+00:00"
+            "time": "2024-05-21T10:51:50+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "7.5.2",
+            "version": "7.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "7ca91528209e672e44b7ce0dd0cef8c07714e104"
+                "reference": "58087f01e574803a8aa1c39649d268d01973b62f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/7ca91528209e672e44b7ce0dd0cef8c07714e104",
-                "reference": "7ca91528209e672e44b7ce0dd0cef8c07714e104",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/58087f01e574803a8aa1c39649d268d01973b62f",
+                "reference": "58087f01e574803a8aa1c39649d268d01973b62f",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -268,9 +268,9 @@
             "description": "Site Studio minimal theme",
             "support": {
                 "issues": "https://github.com/acquia/cohesion-theme/issues",
-                "source": "https://github.com/acquia/cohesion-theme/tree/7.5.2"
+                "source": "https://github.com/acquia/cohesion-theme/tree/7.5.1"
             },
-            "time": "2024-07-12T10:22:33+00:00"
+            "time": "2024-05-21T10:51:55+00:00"
         },
         {
             "name": "acquia/content-hub-php",
@@ -1157,48 +1157,48 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.7.7",
+            "version": "2.7.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "291942978f39435cf904d33739f98d7d4eca7b23"
+                "reference": "a2edd4e4414c17008ab585e0c62574fdb644ebfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/291942978f39435cf904d33739f98d7d4eca7b23",
-                "reference": "291942978f39435cf904d33739f98d7d4eca7b23",
+                "url": "https://api.github.com/repos/composer/composer/zipball/a2edd4e4414c17008ab585e0c62574fdb644ebfc",
+                "reference": "a2edd4e4414c17008ab585e0c62574fdb644ebfc",
                 "shasum": ""
             },
             "require": {
-                "composer/ca-bundle": "^1.0",
+                "composer/ca-bundle": "^1.5",
                 "composer/class-map-generator": "^1.3.3",
                 "composer/metadata-minifier": "^1.0",
-                "composer/pcre": "^2.1 || ^3.1",
+                "composer/pcre": "^2.2 || ^3.2",
                 "composer/semver": "^3.3",
                 "composer/spdx-licenses": "^1.5.7",
                 "composer/xdebug-handler": "^2.0.2 || ^3.0.3",
-                "justinrainbow/json-schema": "^5.2.11",
+                "justinrainbow/json-schema": "^5.3",
                 "php": "^7.2.5 || ^8.0",
                 "psr/log": "^1.0 || ^2.0 || ^3.0",
-                "react/promise": "^2.8 || ^3",
+                "react/promise": "^3.2",
                 "seld/jsonlint": "^1.4",
                 "seld/phar-utils": "^1.2",
                 "seld/signal-handler": "^2.0",
-                "symfony/console": "^5.4.11 || ^6.0.11 || ^7",
-                "symfony/filesystem": "^5.4 || ^6.0 || ^7",
-                "symfony/finder": "^5.4 || ^6.0 || ^7",
+                "symfony/console": "^5.4.35 || ^6.3.12 || ^7.0.3",
+                "symfony/filesystem": "^5.4.35 || ^6.3.12 || ^7.0.3",
+                "symfony/finder": "^5.4.35 || ^6.3.12 || ^7.0.3",
                 "symfony/polyfill-php73": "^1.24",
                 "symfony/polyfill-php80": "^1.24",
                 "symfony/polyfill-php81": "^1.24",
-                "symfony/process": "^5.4 || ^6.0 || ^7"
+                "symfony/process": "^5.4.35 || ^6.3.12 || ^7.0.3"
             },
             "require-dev": {
-                "phpstan/phpstan": "^1.11.0",
+                "phpstan/phpstan": "^1.11.8",
                 "phpstan/phpstan-deprecation-rules": "^1.2.0",
                 "phpstan/phpstan-phpunit": "^1.4.0",
                 "phpstan/phpstan-strict-rules": "^1.6.0",
                 "phpstan/phpstan-symfony": "^1.4.0",
-                "symfony/phpunit-bridge": "^6.4.1 || ^7.0.1"
+                "symfony/phpunit-bridge": "^6.4.3 || ^7.0.1"
             },
             "suggest": {
                 "ext-openssl": "Enabling the openssl extension allows you to access https URLs for repositories and packages",
@@ -1251,7 +1251,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.7.7"
+                "source": "https://github.com/composer/composer/tree/2.7.8"
             },
             "funding": [
                 {
@@ -1267,7 +1267,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-10T20:11:12+00:00"
+            "time": "2024-08-22T13:28:36+00:00"
         },
         {
             "name": "composer/installers",
@@ -10342,23 +10342,23 @@
         },
         {
             "name": "drupal/graphql_core_schema",
-            "version": "1.0.13",
+            "version": "1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/graphql_core_schema.git",
-                "reference": "1.0.13"
+                "reference": "1.0.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/graphql_core_schema-1.0.13.zip",
-                "reference": "1.0.13",
-                "shasum": "4253aba9715d7039ade1a48cd15555f1589c8c36"
+                "url": "https://ftp.drupal.org/files/projects/graphql_core_schema-1.0.14.zip",
+                "reference": "1.0.14",
+                "shasum": "2b0700b54fbd129e5241af1b36252c20247bb441"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
+                "drupal/core": "^9.3 || ^10 || ^11",
                 "drupal/graphql": "^4",
                 "php": "^8.1",
-                "symfony/string": "^5.4 || ^6"
+                "symfony/string": "^5.4 || ^6 || ^7"
             },
             "require-dev": {
                 "drupal/environment_indicator": "*",
@@ -10368,13 +10368,14 @@
                 "drupal/rokka": "*",
                 "drupal/schema_metatag": "*",
                 "drupal/tablefield": "*",
-                "drupal/telephone_validation": "*"
+                "drupal/telephone_validation": "*",
+                "drupal/translatable_config_pages": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.13",
-                    "datestamp": "1720096970",
+                    "version": "1.0.14",
+                    "datestamp": "1724340653",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14304,15 +14305,15 @@
                     "homepage": "https://www.drupal.org/user/1131532"
                 },
                 {
-                    "name": "Anybody",
+                    "name": "anybody",
                     "homepage": "https://www.drupal.org/user/291091"
                 },
                 {
-                    "name": "ChristophWeber",
+                    "name": "christophweber",
                     "homepage": "https://www.drupal.org/user/281751"
                 },
                 {
-                    "name": "Grevil",
+                    "name": "grevil",
                     "homepage": "https://www.drupal.org/user/3668491"
                 },
                 {
@@ -23758,16 +23759,16 @@
         },
         {
             "name": "psr/log",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/79dff0b268932c640297f5208d6298f71855c03e",
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e",
                 "shasum": ""
             },
             "require": {
@@ -23802,9 +23803,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/3.0.0"
+                "source": "https://github.com/php-fig/log/tree/3.0.1"
             },
-            "time": "2021-07-14T16:46:02+00:00"
+            "time": "2024-08-21T13:31:24+00:00"
         },
         {
             "name": "psr/simple-cache",
