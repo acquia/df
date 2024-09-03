@@ -6,8 +6,8 @@
   "require": {
     "acquia/acf": "2.x-feeds-dev",
     "acquia/acquia-cms-starterkit": "^1.0",
-    "acquia/cohesion": "7.4.3",
-    "acquia/cohesion-theme": "7.4.3",
+    "acquia/cohesion": "^7.4.3",
+    "acquia/cohesion-theme": "^7.4.3",
     "acquia/sitestudio_contenthub": "^7",
     "acquia/sitestudio_jsonapi": "^7.4",
     "drupal/access_unpublished": "^1.5",
@@ -245,8 +245,7 @@
       "acquia/cohesion": {
         "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
         "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch",
-        "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch",
-        "Module Installation Failure containing Site Studio Packages on Drupal Core 10.3.0": "patches/site-studio-package-error-module-installation.patch"
+        "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch"
       },
       "acquia/sitestudio_jsonapi": {
         "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
@@ -270,7 +269,8 @@
         "Changes menu link title": "https://www.drupal.org/files/issues/2022-05-19/get_tweets-updates-menu-link.patch"
       },
       "drupal/gin": {
-        "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch"
+        "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch",
+        "Gin changes order of Admin menu items | https://www.drupal.org/project/gin/issues/3269548": "https://www.drupal.org/files/issues/2024-06-24/add-rearrange-menu-items-setting-rc11-update.patch"
       },
       "drupal/gin_moderation_sidebar": {
         "Add settings tray/off-canvas styles | https://www.drupal.org/node/3364324": "https://git.drupalcode.org/project/gin_moderation_sidebar/-/merge_requests/4.diff"
@@ -317,7 +317,12 @@
       "drupal/acquia_cms_headless" : {
         "drupal/subrequests": {
             "3049395 - Page Cache causes different subrequests to return the same responses": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
-          }
+        }
+      },
+      "drupal/acquia_cms_starter" : {
+        "drupal/default_content": {
+            "Ignoring the patch for Do not reimport existing entities": "https://git.drupalcode.org/project/default_content/-/merge_requests/5.patch"
+        }
       }
     }
   },
