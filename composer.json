@@ -160,7 +160,7 @@
     "drupal/yoast_seo": "^2.0@alpha",
     "drush/drush": "^12",
     "kevinfunk/content_filter": "1.x-dev",
-    "kevinfunk/default_content_ui": "2.x-alpha2-dev",
+    "kevinfunk/default_content_ui": "2.x-alpha3-dev",
     "mglaman/phpstan-drupal": " 1.1.9",
     "npm-asset/jsonview": "^1.2",
     "oomphinc/composer-installers-extender": "^2"
@@ -260,7 +260,7 @@
         "Views bulk actions delete error | https://www.drupal.org/project/conductor/issues/3460311": "patches/view-bulk-actions-delete-error.patch"
       },
       "drupal/default_content": {
-        "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
+        "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2024-08-27/default_content-3200212-25.patch"
       },
       "drupal/entity_browser": {
         "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
@@ -318,12 +318,7 @@
         "drupal/subrequests": {
             "3049395 - Page Cache causes different subrequests to return the same responses": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
         }
-      },
-    "drupal/acquia_cms_starter": {
-        "drupal/default_content": {
-            "Ignoring the patch for Do not reimport existing entities": "https://git.drupalcode.org/project/default_content/-/merge_requests/5.patch"
-        }
-    }
+      }
 }
   },
   "repositories": {
