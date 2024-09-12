@@ -55,8 +55,8 @@
     "drupal/config_filter": "^2.4",
     "drupal/consumer_image_styles": "^4.0",
     "drupal/context": "^5.0@RC",
-    "drupal/core-composer-scaffold": "10.2.7",
-    "drupal/core-recommended": "10.2.7",
+    "drupal/core-composer-scaffold": "^10",
+    "drupal/core-recommended": "^10",
     "drupal/crop": "^2.3",
     "drupal/cshs": "^4.0",
     "drupal/decoupled_router": "^2.0.3",
@@ -160,7 +160,7 @@
     "drupal/yoast_seo": "^2.0@alpha",
     "drush/drush": "^12",
     "kevinfunk/content_filter": "1.x-dev",
-    "kevinfunk/default_content_ui": "2.x-alpha2-dev",
+    "kevinfunk/default_content_ui": "2.x-alpha3-dev",
     "mglaman/phpstan-drupal": " 1.1.9",
     "npm-asset/jsonview": "^1.2",
     "oomphinc/composer-installers-extender": "^2"
@@ -236,8 +236,7 @@
     "patches": {
       "drupal/core": {
         "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
-        "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
-        "Broken title in modal dialog when title is a render array | https://drupal.org/node/2663316": "https://www.drupal.org/files/issues/2019-10-21/2663316-76.drupal.Broken-title-in-modal-dialog-when-title-is-a-render-array.patch"
+        "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch"
       },
       "drupal/acquia_cms_common": {
         "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
@@ -251,17 +250,17 @@
       "acquia/sitestudio_jsonapi": {
         "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
       },
-      "drupal/admin_toolbar": {
-        "Full Menu Flash | https://www.drupal.org/project/admin_toolbar/issues/3369118": "https://www.drupal.org/files/issues/2023-07-07/3369118-13-inline-styles-to-prevent-flash.patch"
-      },
       "drupal/augmentor": {
         "Unable to create tags after upgrading to 1.1.2 | https://www.drupal.org/project/augmentor/issues/3424980": "https://www.drupal.org/files/issues/2024-03-04/augmentor-3424980-01.patch"
       },
       "drupal/component": {
         "Creation of dynamic property is deprecated in PHP-8.2 | https://www.drupal.org/project/component/issues/3375525": "https://www.drupal.org/files/issues/2023-08-22/3375525-4.patch"
       },
+      "drupal/conductor": {
+        "Views bulk actions delete error | https://www.drupal.org/project/conductor/issues/3460311": "patches/view-bulk-actions-delete-error.patch"
+      },
       "drupal/default_content": {
-        "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2021-12-08/default_content-3200212.patch"
+        "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2024-08-27/default_content-3200212-25.patch"
       },
       "drupal/entity_browser": {
         "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
@@ -270,7 +269,8 @@
         "Changes menu link title": "https://www.drupal.org/files/issues/2022-05-19/get_tweets-updates-menu-link.patch"
       },
       "drupal/gin": {
-        "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch"
+        "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch",
+        "Gin changes order of Admin menu items | https://www.drupal.org/project/gin/issues/3269548": "https://www.drupal.org/files/issues/2024-06-24/add-rearrange-menu-items-setting-rc11-update.patch"
       },
       "drupal/gin_moderation_sidebar": {
         "Add settings tray/off-canvas styles | https://www.drupal.org/node/3364324": "https://git.drupalcode.org/project/gin_moderation_sidebar/-/merge_requests/4.diff"
@@ -313,8 +313,13 @@
         "acquia/cohesion": {
           "3340269 - Supports Drush 12. If using Drush 10 or Drush 11 & this patch is failing, then ignore this patch": "https://www.drupal.org/files/issues/2023-06-13/3340269-support-drush-12-13.patch"
         }
+      },
+      "drupal/acquia_cms_headless" : {
+        "drupal/subrequests": {
+            "3049395 - Page Cache causes different subrequests to return the same responses": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
+        }
       }
-    }
+}
   },
   "repositories": {
     "condition-query": {
