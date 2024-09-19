@@ -1,0 +1,46 @@
+diff --git a/src/EmbedCodeUrlBuilder.php b/src/EmbedCodeUrlBuilder.php
+index e566ad2..34f7c87 100644
+--- a/src/EmbedCodeUrlBuilder.php
++++ b/src/EmbedCodeUrlBuilder.php
+@@ -130,7 +130,7 @@ final class EmbedCodeUrlBuilder {
+           }
+ 
+           // If width is not set or set but ratio lower than 1.
+-          if ($effect['data']['height']) {
++          if ($effect['data']['height'] && $image_properties['height']) {
+             $values['h'] = self::calculateScaleDimensions(
+               self::getDimensionValue($image_properties['height']),
+               self::getDimensionValue($effect['data']['height']),
+@@ -141,18 +141,20 @@ final class EmbedCodeUrlBuilder {
+           break;
+ 
+         case 'image_scale_and_crop':
+-          $values['crop'] = 'yes';
+-          $values['k'] = $anchor_mapping[$effect['data']['anchor']] ?? 'c';
+-          $values['w'] = self::calculateScaleDimensions(
+-            $image_properties['width'],
+-            self::getDimensionValue($effect['data']['width']),
+-            TRUE
+-          );
+-          $values['h'] = self::calculateScaleDimensions(
+-            $image_properties['height'],
+-            self::getDimensionValue($effect['data']['height']),
+-            TRUE
+-          );
++          if ($image_properties['height'] && $image_properties['width']) {
++            $values['crop'] = 'yes';
++            $values['k'] = $anchor_mapping[$effect['data']['anchor']] ?? 'c';
++            $values['w'] = self::calculateScaleDimensions(
++              $image_properties['width'],
++              self::getDimensionValue($effect['data']['width']),
++              TRUE
++            );
++            $values['h'] = self::calculateScaleDimensions(
++              $image_properties['height'],
++              self::getDimensionValue($effect['data']['height']),
++              TRUE
++            );
++          }
+           break;
+       }
+     }

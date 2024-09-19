@@ -253,6 +253,9 @@
       "acquia/sitestudio_jsonapi": {
         "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
       },
+      "drupal/acquia_dam": {
+        "TypeError: array_map(): Argument #2 ($array) must be of type array": "patches/acquia_dam-check-for-image-properties.patch"
+      },
       "drupal/augmentor": {
         "Unable to create tags after upgrading to 1.1.2 | https://www.drupal.org/project/augmentor/issues/3424980": "https://www.drupal.org/files/issues/2024-03-04/augmentor-3424980-01.patch"
       },
