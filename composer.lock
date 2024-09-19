@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "091841253b9c92f1134b2c5b172d2d55",
+    "content-hash": "1d9f20c0a2881264e4372855d49191fb",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -12385,6 +12385,76 @@
             }
         },
         {
+            "name": "drupal/menu_item_extras",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_item_extras.git",
+                "reference": "3.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_item_extras-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "39abc5557333e71b1f0b26f069e7367f921bdbab"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.1.0",
+                    "datestamp": "1725022060",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=12"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Khomych",
+                    "homepage": "https://www.drupal.org/u/andriy-khomych",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Bogdan Hepting",
+                    "homepage": "https://www.drupal.org/u/bogdan-hepting",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Oleh Vehera",
+                    "homepage": "https://www.drupal.org/u/voleger",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mykhailo Gurei",
+                    "homepage": "https://www.drupal.org/u/ozin",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provide an additional custom fields which can be used on Menu link",
+            "homepage": "https://www.drupal.org/project/menu_item_extras",
+            "keywords": [
+                "Drupal",
+                "Mega Menu"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_item_extras",
+                "issues": "https://www.drupal.org/project/issues/menu_item_extras"
+            }
+        },
+        {
             "name": "drupal/metatag",
             "version": "2.0.2",
             "source": {
@@ -16141,34 +16211,33 @@
         },
         {
             "name": "drupal/sitestudio_config_management",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/sitestudio_config_management.git",
-                "reference": "1.1.1"
+                "reference": "1.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sitestudio_config_management-1.1.1.zip",
-                "reference": "1.1.1",
-                "shasum": "dd486c7980bebf7bb4139d55ed5c1709223aba4f"
+                "url": "https://ftp.drupal.org/files/projects/sitestudio_config_management-1.1.2.zip",
+                "reference": "1.1.2",
+                "shasum": "32c4a1108f35e01d7ad9e5dac3e57c68a7038642"
             },
             "require": {
-                "acquia/cohesion": "~7.4.0 || ~7.5.0",
-                "drupal/config_filter": "^2.4",
-                "drupal/config_ignore": "^3.0@beta",
+                "acquia/cohesion": "~7.4.0 || ~7.5.0 || ~8.0.0",
+                "drupal/config_ignore": "^3.0",
                 "drupal/config_split": "^2.0",
-                "drupal/core": "^9 || ^10",
+                "drupal/core": "^9 || ^10 || ^11",
                 "php": ">=7.4"
             },
             "require-dev": {
-                "drush/drush": "^11.6 || ^12"
+                "drush/drush": "^11.6 || ^12 || ^13"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.1",
-                    "datestamp": "1711471233",
+                    "version": "1.1.2",
+                    "datestamp": "1726765919",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -17048,6 +17117,52 @@
             "homepage": "https://www.drupal.org/project/tmgmt",
             "support": {
                 "source": "https://git.drupalcode.org/project/tmgmt"
+            }
+        },
+        {
+            "name": "drupal/tmgmt_deepl",
+            "version": "2.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tmgmt_deepl.git",
+                "reference": "2.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tmgmt_deepl-2.2.5.zip",
+                "reference": "2.2.5",
+                "shasum": "e01e336ba7fa3ea248a5dde40d7ac837c397a4d0"
+            },
+            "require": {
+                "drupal/core": "^10.2",
+                "drupal/tmgmt": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.5",
+                    "datestamp": "1723633218",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "SteffenR",
+                    "homepage": "https://www.drupal.org/user/244597"
+                }
+            ],
+            "description": "TMGMT Translator DeepL",
+            "homepage": "https://drupal.org/project/tmgmt_deepl",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tmgmt_deepl",
+                "issues": "https://www.drupal.org/project/issues/tmgmt_deepl"
             }
         },
         {
