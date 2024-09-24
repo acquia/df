@@ -1,0 +1,19 @@
+diff --git a/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php b/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php
+index 3faf41c..ef7797b 100644
+--- a/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php
++++ b/modules/sitestudio_data_transformers/src/Handlers/FormFieldLevel/ImageHandler.php
+@@ -64,8 +64,12 @@ class ImageHandler extends FieldHandlerBase implements FormFieldLevelHandlerInte
+    */
+   protected function processToken(string $property) {
+     $processedToken = $this->browserUpdateManager->decodeToken($property);
+-
+-    return $this->fileUrlGenerator->generateAbsoluteString($processedToken['path']);
++    
++    if (isset($processedToken['path'])) {
++      return $this->fileUrlGenerator->generateAbsoluteString($processedToken['path']);
++    }
++    
++    return null;
+   }
+ 
+   /**
