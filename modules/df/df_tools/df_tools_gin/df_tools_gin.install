@@ -40,7 +40,7 @@ function df_tools_gin_install($is_syncing) {
 
   // If using Site Studio, install Site Studio Gin.
   if ($module_handler->moduleExists('cohesion')) {
-    $module_installer->install(['sitestudio_gin']);
+    // $module_installer->install(['sitestudio_gin']);
   }
 
   // Clear cache to prevent class discovery errors.

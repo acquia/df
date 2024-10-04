@@ -6,9 +6,9 @@
   "require": {
     "acquia/acf": "2.x-feeds-dev",
     "acquia/acquia-cms-starterkit": "^1.0",
-    "acquia/cohesion": "^7",
-    "acquia/cohesion-theme": "^7",
-    "acquia/sitestudio_contenthub": "^7",
+    "acquia/cohesion": "^8",
+    "acquia/cohesion-theme": "^8",
+    "acquia/sitestudio_contenthub": "^8",
     "acquia/sitestudio_jsonapi": "^7.4",
     "drupal/access_unpublished": "^1.5",
     "drupal/acquia_claro": "^1.3",
@@ -135,7 +135,6 @@
     "drupal/simple_sitemap": "^4.1.7",
     "drupal/simplelogin": "^7.0",
     "drupal/sitestudio_extras": "^1.0@beta",
-    "drupal/sitestudio_gin": "^1.0@RC",
     "drupal/slack": "^1.4",
     "drupal/smart_date": "^4.0@beta",
     "drupal/storage": "^1.2",
@@ -246,7 +245,9 @@
       },
       "acquia/cohesion": {
         "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
-        "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch"
+        "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch",
+        "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch",
+        "Site Studio Headless Image handler": "patches/site_studio_data_transformer_image_handler_empty_value_issue.patch"
       },
       "drupal/acquia_dam": {
         "TypeError: array_map(): Argument #2 ($array) must be of type array": "patches/acquia_dam-check-for-image-properties.patch"
