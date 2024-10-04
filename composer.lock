@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6635e88890f01e4708909025dcba3402",
+    "content-hash": "6c34ec6dff9c914d0c6e01e118a18757",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -12513,6 +12513,62 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/media_acquiadam",
                 "issues": "https://drupal.org/project/issues/media_acquiadam"
+            }
+        },
+        {
+            "name": "drupal/media_entity_download",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_entity_download.git",
+                "reference": "8.x-2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_entity_download-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "c63cbdcce4be1ac54c0e516e0fdc4dffee1d8304"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.3",
+                    "datestamp": "1717171044",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "kevinquillen",
+                    "homepage": "https://www.drupal.org/user/317279"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "This module provides a route for linking to media assets by URI for users to download without worrying about the actual file path.",
+            "homepage": "https://www.drupal.org/project/media_entity_download",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_entity_download",
+                "issues": "https://www.drupal.org/project/issues/media_entity_download"
             }
         },
         {
