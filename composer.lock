@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9e9d07131887d23097623f7d17b9790",
+    "content-hash": "d035d1fb1e238fa709b33e79075b360e",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -5095,17 +5095,17 @@
         },
         {
             "name": "drupal/acsf",
-            "version": "2.79.0",
+            "version": "2.80.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acsf.git",
-                "reference": "8.x-2.79"
+                "reference": "8.x-2.80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.79.zip",
-                "reference": "8.x-2.79",
-                "shasum": "36b9ecdf28f105dec4cd81411097e7e015dcaf2f"
+                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.80.zip",
+                "reference": "8.x-2.80",
+                "shasum": "6119edb0a768a4d134ba47af1076c496dc14c1aa"
             },
             "require": {
                 "drupal/acsf_duplication": "*",
@@ -5119,15 +5119,14 @@
                 "acquia/coding-standards": "^1.0",
                 "drupal/acsf_variables": "*",
                 "drupal/samlauth": "^3.3",
-                "mockery/mockery": "2.0.x-dev",
-                "phpunit/phpunit": "^10",
+                "phpunit/phpunit": "^9.6.13|^10.5.19",
                 "rector/rector": "dev-main"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.79",
-                    "datestamp": "1721822601",
+                    "version": "8.x-2.80",
+                    "datestamp": "1729073171",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5197,7 +5196,7 @@
         },
         {
             "name": "drupal/acsf_duplication",
-            "version": "2.79.0",
+            "version": "2.80.0",
             "require": {
                 "drupal/acsf": "^2",
                 "drupal/core": "^8 || ^9 || ^10 || ^11"
@@ -5205,8 +5204,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.79",
-                    "datestamp": "1721822601",
+                    "version": "8.x-2.80",
+                    "datestamp": "1729073171",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5267,7 +5266,7 @@
         },
         {
             "name": "drupal/acsf_theme",
-            "version": "2.79.0",
+            "version": "2.80.0",
             "require": {
                 "drupal/acsf": "^2",
                 "drupal/acsf_variables": "*",
@@ -5276,8 +5275,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.79",
-                    "datestamp": "1721822601",
+                    "version": "8.x-2.80",
+                    "datestamp": "1729073171",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5338,7 +5337,7 @@
         },
         {
             "name": "drupal/acsf_variables",
-            "version": "2.79.0",
+            "version": "2.80.0",
             "require": {
                 "drupal/acsf": "^2",
                 "drupal/core": "^8 || ^9 || ^10 || ^11"
@@ -5346,8 +5345,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.79",
-                    "datestamp": "1721822601",
+                    "version": "8.x-2.80",
+                    "datestamp": "1729073171",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
