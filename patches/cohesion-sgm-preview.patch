@@ -1,0 +1,86 @@
+From 663c4a5af83c602de386c646afc69b69b9520579 Mon Sep 17 00:00:00 2001
+From: Tom Howard <thomas.howard@acquia.com>
+Date: Wed, 16 Oct 2024 11:34:07 +0100
+Subject: [PATCH] ACO-3633 - fixing SGM preview
+
+---
+ .../src/Controller/StyleGuideController.php   | 17 --------------
+ src/ApiPluginBase.php                         | 23 ++++++++++++-------
+ 2 files changed, 15 insertions(+), 25 deletions(-)
+
+diff --git a/modules/cohesion_style_guide/src/Controller/StyleGuideController.php b/modules/cohesion_style_guide/src/Controller/StyleGuideController.php
+index dd8fd0f743..25f43b4e2b 100644
+--- a/modules/cohesion_style_guide/src/Controller/StyleGuideController.php
++++ b/modules/cohesion_style_guide/src/Controller/StyleGuideController.php
+@@ -222,13 +222,6 @@ public function buildStyleGuidePreview(Request $request) {
+       $this->tempStore->set('coh-sgm-preview-uuid', $uuid);
+     }
+ 
+-    $base_css = '';
+-    $base_css_data = $send_to_api->getResponseStyles('base', $active_theme->getName());
+-    if ($base_css_data) {
+-      $base_css = (string) \Drupal::service('twig')
+-        ->renderInline($base_css_data);
+-    }
+-
+     $theme_css = '';
+     $theme_css_data = $send_to_api->getResponseStyles('theme', $active_theme->getName());
+     if ($theme_css_data) {
+@@ -238,16 +231,6 @@ public function buildStyleGuidePreview(Request $request) {
+ 
+     $response = [];
+ 
+-    if ($this->tempStore->get('coh-preview-sgm-base-' . $uuid) != $base_css) {
+-      $this->tempStore->set('coh-preview-sgm-base-' . $uuid, $base_css);
+-      $base_css_path = $this->fileUrlGenerator->generateString($this->localFilesManager->getStyleSheetFilename('base', $active_theme->getName()));
+-      $base_css_preview = Url::fromRoute('cohesion_style_guide.preview.css')
+-        ->setRouteParameter('t', 'base')
+-        ->setRouteParameter('uuid', $uuid)
+-        ->toString();
+-      $response[$base_css_path] = $base_css_preview;
+-    }
+-
+     if ($this->tempStore->get('coh-preview-sgm-theme-' . $uuid) != $theme_css) {
+       $this->tempStore->set('coh-preview-sgm-theme-' . $uuid, $theme_css);
+       $theme_css_path = $this->fileUrlGenerator->generateString($this->localFilesManager->getStyleSheetFilename('theme', $active_theme->getName()));
+diff --git a/src/ApiPluginBase.php b/src/ApiPluginBase.php
+index 9295b1d297..387ad5522a 100644
+--- a/src/ApiPluginBase.php
++++ b/src/ApiPluginBase.php
+@@ -267,21 +267,28 @@ public function getData() {
+    *
+    * @return string|null
+    */
+-  public function getResponseStyles($styleType, $themeId = 'current') {
++  public function getResponseStyles(string $styleType, string $themeId = 'current') {
+     if ($themeId == 'current') {
+       $themeId = $this->themeManager->getActiveTheme()->getName();
+     }
+ 
+     foreach ($this->getData() as $styles) {
++      // Get the current styles.
++      $jsonStylesheet = $this->localFilesManager->getStyleSheetJson($themeId);
++      $currentStyles = Json::decode($jsonStylesheet)['styles'];
++
++      // If styles have been updated/added then merge them with the current styles.
+       if ($stylesAdded = Json::decode($styles['css'])['styles']['added']) {
+-        foreach (self::STYLE_TYPES as $sectionName => $sectionKeys) {
+-          if ($sectionName === $styleType && $themeId == $styles['themeName'] && is_array($stylesAdded)) {
+-            $styleValues = '';
+-            foreach ($stylesAdded as $styleAdded) {
+-              $styleValues .= $this->processCssApiEntries($styleAdded);
+-            }
+-            return $styleValues;
++        $currentStyles = $this->array_merge_recursive_distinct($currentStyles, $stylesAdded);
++      }
++
++      foreach (self::STYLE_TYPES as $sectionName => $sectionKeys) {
++        if ($sectionName === $styleType && $themeId == $styles['themeName'] && is_array($currentStyles)) {
++          $styleValues = '';
++          foreach ($currentStyles as $styleAdded) {
++            $styleValues .= $this->processCssApiEntries($styleAdded);
+           }
++          return $styleValues;
+         }
+       }
+     }
