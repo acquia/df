@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdd8b208a301b65e5c521797012917d8",
+    "content-hash": "d1b4f989e8fa00ca5bd9e1462e7da294",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -5406,6 +5406,51 @@
             }
         },
         {
+            "name": "drupal/add_content_by_bundle",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/add_content_by_bundle.git",
+                "reference": "1.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/add_content_by_bundle-1.2.2.zip",
+                "reference": "1.2.2",
+                "shasum": "47dc9c87c28b49e024d397299f08033a362b9a1a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.2",
+                    "datestamp": "1713171345",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Add Content by Bundle Views Area Plugin",
+            "homepage": "https://www.drupal.org/project/add_content_by_bundle",
+            "support": {
+                "source": "https://git.drupalcode.org/project/add_content_by_bundle",
+                "issues": "https://www.drupal.org/project/issues/add_content_by_bundle"
+            }
+        },
+        {
             "name": "drupal/address",
             "version": "1.12.0",
             "source": {
@@ -5468,6 +5513,59 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "https://git.drupalcode.org/project/address"
+            }
+        },
+        {
+            "name": "drupal/addtocal_augment",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/addtocal_augment.git",
+                "reference": "1.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/addtocal_augment-1.2.2.zip",
+                "reference": "1.2.2",
+                "shasum": "c22655bb6337f6bcdafd288494bd10daed135c7d"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/date_augmenter": "^1.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.2",
+                    "datestamp": "1729328278",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
+                }
+            ],
+            "description": "Provides a plugin to inject add to calendar links into date displays.",
+            "homepage": "https://www.drupal.org/project/addtocal_augment",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/addtocal_augment",
+                "issues": "https://www.drupal.org/project/issues/addtocal_augment"
             }
         },
         {
@@ -7593,6 +7691,74 @@
             }
         },
         {
+            "name": "drupal/content_planner",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/content_planner.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/content_planner-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "b67e1593c37d9eba2b11b2fb7cc79ad5dbaffa97"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/scheduler": "*"
+            },
+            "require-dev": {
+                "drupal/content_calendar": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1715167168",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dieterholvoet",
+                    "homepage": "https://www.drupal.org/user/3567222"
+                },
+                {
+                    "name": "lukas.fischer",
+                    "homepage": "https://www.drupal.org/user/204430"
+                },
+                {
+                    "name": "nataliajustice",
+                    "homepage": "https://www.drupal.org/user/3629850"
+                },
+                {
+                    "name": "nidaismailshah",
+                    "homepage": "https://www.drupal.org/user/3073065"
+                },
+                {
+                    "name": "nkoporec",
+                    "homepage": "https://www.drupal.org/user/3554464"
+                },
+                {
+                    "name": "yannickbaettig",
+                    "homepage": "https://www.drupal.org/user/3662173"
+                }
+            ],
+            "description": "Plan your content using a Dashboard, the Content Calendar and Content Kanban.",
+            "homepage": "https://www.drupal.org/project/content_planner",
+            "support": {
+                "source": "https://git.drupalcode.org/project/content_planner"
+            }
+        },
+        {
             "name": "drupal/context",
             "version": "5.0.0-rc1",
             "source": {
@@ -7717,12 +7883,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "762d4f5e913fd06becba5897a628295b8d38ecda"
+                "reference": "907879309a83b99c2901362a876a105e10225003"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/762d4f5e913fd06becba5897a628295b8d38ecda",
-                "reference": "762d4f5e913fd06becba5897a628295b8d38ecda",
+                "url": "https://api.github.com/repos/drupal/core/zipball/907879309a83b99c2901362a876a105e10225003",
+                "reference": "907879309a83b99c2901362a876a105e10225003",
                 "shasum": ""
             },
             "require": {
@@ -7873,7 +8039,7 @@
             "support": {
                 "source": "https://github.com/drupal/core/tree/10.4.x"
             },
-            "time": "2024-10-21T14:25:23+00:00"
+            "time": "2024-10-22T04:36:47+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -8224,6 +8390,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/date_augmenter",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/date_augmenter.git",
+                "reference": "1.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/date_augmenter-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "137f40d52fcea34a56a117609294d46ae3bd246d"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.1",
+                    "datestamp": "1713350949",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Provides a plugin class for augmenting the display of dates and times.",
+            "homepage": "https://www.drupal.org/project/date_augmenter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/date_augmenter"
             }
         },
         {
@@ -9125,7 +9335,7 @@
                     "homepage": "https://www.drupal.org/user/2795337"
                 },
                 {
-                    "name": "lobodacyril",
+                    "name": "lobodakyrylo",
                     "homepage": "https://www.drupal.org/user/769176"
                 },
                 {
@@ -9925,6 +10135,57 @@
             }
         },
         {
+            "name": "drupal/field_validation",
+            "version": "3.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_validation.git",
+                "reference": "3.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_validation-3.0.0-beta3.zip",
+                "reference": "3.0.0-beta3",
+                "shasum": "c51fe14840dd677eb923e00f1e8a627b427d8455"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "php": "^8.0",
+                "symfony/expression-language": "^6.3",
+                "symfony/intl": "^6.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta3",
+                    "datestamp": "1704264557",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "g089h515r806",
+                    "homepage": "https://www.drupal.org/user/174740"
+                },
+                {
+                    "name": "manuel.adan",
+                    "homepage": "https://www.drupal.org/user/516420"
+                }
+            ],
+            "description": "Field validation allow you add constraint to field by UI.",
+            "homepage": "https://drupal.org/project/field_validation",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_validation"
+            }
+        },
+        {
             "name": "drupal/file_mdm",
             "version": "3.1.0",
             "source": {
@@ -10160,6 +10421,110 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/fpa"
             }
+        },
+        {
+            "name": "drupal/fullcalendar",
+            "version": "3.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/fullcalendar.git",
+                "reference": "3.0.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/fullcalendar-3.0.0-beta6.zip",
+                "reference": "3.0.0-beta6",
+                "shasum": "8f40bbe67c7e98d744c2ff71d4ebe94d1b3bd36a"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/fullcalendar_io": "^6.1",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "drupal/date_recur": "^3.7",
+                "drupal/smart_date": "^4.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta6",
+                    "datestamp": "1729270487",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aspilicious",
+                    "homepage": "https://www.drupal.org/user/172527"
+                },
+                {
+                    "name": "dakala",
+                    "homepage": "https://www.drupal.org/user/53175"
+                },
+                {
+                    "name": "hefox",
+                    "homepage": "https://www.drupal.org/user/426416"
+                },
+                {
+                    "name": "jurgenhaas",
+                    "homepage": "https://www.drupal.org/user/168924"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                },
+                {
+                    "name": "tstoeckler",
+                    "homepage": "https://www.drupal.org/user/107158"
+                }
+            ],
+            "description": "Integrates the Fullcalendar Library from https://fullcalendar.io",
+            "homepage": "https://www.drupal.org/project/fullcalendar",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/fullcalendar",
+                "issues": "https://www.drupal.org/project/issues/fullcalendar"
+            }
+        },
+        {
+            "name": "drupal/fullcalendar_io",
+            "version": "6.1.15",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/fullcalendar_io.git",
+                "reference": "f41aaa56538699155557a4192bc8e95a0c69659c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Ffullcalendar_io/repository/archive.zip?sha=f41aaa56538699155557a4192bc8e95a0c69659c",
+                "reference": "f41aaa56538699155557a4192bc8e95a0c69659c",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "TBD",
+            "homepage": "https://fullcalendar.io/",
+            "support": {
+                "source": "https://git.drupalcode.org/project/fullcalendar_io/-/tree/6.1.15"
+            },
+            "time": "2024-09-13T12:57:11+00:00"
         },
         {
             "name": "drupal/geocoder",
@@ -16546,6 +16911,49 @@
             }
         },
         {
+            "name": "drupal/simple_crawler",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simple_crawler.git",
+                "reference": "47c4cc1e2728ecf5417fddeaca14e9156f1f8ab1"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11",
+                "ivan_boring/readability.php": "1.0.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.x-dev",
+                    "datestamp": "1728463126",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Johansson",
+                    "homepage": "https://www.drupal.org/user/385947",
+                    "email": "m.johansson@oskberlin.com"
+                }
+            ],
+            "description": "Fetches data from websites via CURL.",
+            "homepage": "https://www.drupal.org/project/simple_crawler",
+            "support": {
+                "source": "https://git.drupalcode.org/project/simple_crawler"
+            }
+        },
+        {
             "name": "drupal/simple_oauth",
             "version": "5.2.5",
             "source": {
@@ -16955,17 +17363,17 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "4.1.6",
+            "version": "4.2.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "4.1.6"
+                "reference": "4.2.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-4.1.6.zip",
-                "reference": "4.1.6",
-                "shasum": "930c2dadc2ff9f798bb165125c7f18f63869ad6e"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-4.2.0-beta1.zip",
+                "reference": "4.2.0-beta1",
+                "shasum": "11d7c2df8748bb931c09c827de505499e806d33d"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -16981,11 +17389,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.6",
-                    "datestamp": "1725628698",
+                    "version": "4.2.0-beta1",
+                    "datestamp": "1726577165",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -17895,6 +18303,52 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/typed_data",
                 "issues": "https://www.drupal.org/project/issues/typed_data"
+            }
+        },
+        {
+            "name": "drupal/unstructured",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/unstructured.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/unstructured-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "b69c99d771b9a649d9f1c8d07cc66e793bc71c7c"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/key": "^1.18"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1722423849",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Johansson",
+                    "homepage": "https://www.drupal.org/user/385947",
+                    "email": "me@marcusmailbox.com"
+                }
+            ],
+            "description": "Module for doing calls to Unstructured.io or self hosted",
+            "homepage": "https://www.drupal.org/project/unstructured",
+            "support": {
+                "source": "https://git.drupalcode.org/project/unstructured"
             }
         },
         {
@@ -21195,6 +21649,70 @@
                 "source": "https://github.com/itamair/geoPHP/tree/1.6"
             },
             "time": "2023-12-23T23:28:59+00:00"
+        },
+        {
+            "name": "ivan_boring/readability.php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ivanboring/readability.php.git",
+                "reference": "a530b1bee925ab250a1ee563dc8593e827359b03"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ivanboring/readability.php/zipball/a530b1bee925ab250a1ee563dc8593e827359b03",
+                "reference": "a530b1bee925ab250a1ee563dc8593e827359b03",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "ext-xml": "*",
+                "league/uri": "~7",
+                "masterminds/html5": "^2.0",
+                "php": ">=7.4.0",
+                "psr/log": "^1.0 || ^2.0 || ^3.0 || ^4.0 || ^5.0"
+            },
+            "require-dev": {
+                "monolog/monolog": "^2.3",
+                "phpunit/phpunit": "^9"
+            },
+            "suggest": {
+                "monolog/monolog": "Allow logging debug information"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ivan_boring\\Readability\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andres Rey",
+                    "email": "andreskrey@gmail.com",
+                    "role": "Original Developer"
+                },
+                {
+                    "name": "Keyvan Minoukadeh",
+                    "email": "keyvan@fivefilters.org",
+                    "homepage": "https://www.fivefilters.org",
+                    "role": "Developer/Maintainer"
+                }
+            ],
+            "description": "A PHP port of Readability.js for Drupal/AI Interpolator",
+            "homepage": "https://github.com/ivan_boring/readability.php",
+            "keywords": [
+                "html",
+                "readability"
+            ],
+            "support": {
+                "source": "https://github.com/ivanboring/readability.php/tree/1.0.0"
+            },
+            "time": "2024-01-26T14:05:22+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -26346,6 +26864,179 @@
             "time": "2021-10-14T14:25:14+00:00"
         },
         {
+            "name": "symfony/cache",
+            "version": "v7.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache.git",
+                "reference": "86e5296b10e4dec8c8441056ca606aedb8a3be0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/86e5296b10e4dec8c8441056ca606aedb8a3be0a",
+                "reference": "86e5296b10e4dec8c8441056ca606aedb8a3be0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/cache": "^2.0|^3.0",
+                "psr/log": "^1.1|^2|^3",
+                "symfony/cache-contracts": "^2.5|^3",
+                "symfony/deprecation-contracts": "^2.5|^3.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/var-exporter": "^6.4|^7.0"
+            },
+            "conflict": {
+                "doctrine/dbal": "<3.6",
+                "symfony/dependency-injection": "<6.4",
+                "symfony/http-kernel": "<6.4",
+                "symfony/var-dumper": "<6.4"
+            },
+            "provide": {
+                "psr/cache-implementation": "2.0|3.0",
+                "psr/simple-cache-implementation": "1.0|2.0|3.0",
+                "symfony/cache-implementation": "1.1|2.0|3.0"
+            },
+            "require-dev": {
+                "cache/integration-tests": "dev-master",
+                "doctrine/dbal": "^3.6|^4",
+                "predis/predis": "^1.1|^2.0",
+                "psr/simple-cache": "^1.0|^2.0|^3.0",
+                "symfony/config": "^6.4|^7.0",
+                "symfony/dependency-injection": "^6.4|^7.0",
+                "symfony/filesystem": "^6.4|^7.0",
+                "symfony/http-kernel": "^6.4|^7.0",
+                "symfony/messenger": "^6.4|^7.0",
+                "symfony/var-dumper": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Cache\\": ""
+                },
+                "classmap": [
+                    "Traits/ValueWrapper.php"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides extended PSR-6, PSR-16 (and tags) implementations",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "caching",
+                "psr6"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache/tree/v7.1.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-17T09:16:35+00:00"
+        },
+        {
+            "name": "symfony/cache-contracts",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/cache-contracts.git",
+                "reference": "df6a1a44c890faded49a5fca33c2d5c5fd3c2197"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/df6a1a44c890faded49a5fca33c2d5c5fd3c2197",
+                "reference": "df6a1a44c890faded49a5fca33c2d5c5fd3c2197",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/cache": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\Cache\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to caching",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/cache-contracts/tree/v3.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-04-18T09:32:20+00:00"
+        },
+        {
             "name": "symfony/config",
             "version": "v7.0.8",
             "source": {
@@ -26894,6 +27585,70 @@
             "time": "2024-04-18T09:32:20+00:00"
         },
         {
+            "name": "symfony/expression-language",
+            "version": "v6.4.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/expression-language.git",
+                "reference": "564e109c40d3637053c942a29a58e9434592a8bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/564e109c40d3637053c942a29a58e9434592a8bf",
+                "reference": "564e109c40d3637053c942a29a58e9434592a8bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/cache": "^5.4|^6.0|^7.0",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/service-contracts": "^2.5|^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\ExpressionLanguage\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an engine that can compile and evaluate expressions",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/expression-language/tree/v6.4.11"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-08-12T09:55:28+00:00"
+        },
+        {
             "name": "symfony/filesystem",
             "version": "v6.4.12",
             "source": {
@@ -27385,6 +28140,89 @@
                 }
             ],
             "time": "2024-09-21T06:02:57+00:00"
+        },
+        {
+            "name": "symfony/intl",
+            "version": "v6.4.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/intl.git",
+                "reference": "5f64d7218f4078492ca59da94747d7474a2a52c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/5f64d7218f4078492ca59da94747d7474a2a52c4",
+                "reference": "5f64d7218f4078492ca59da94747d7474a2a52c4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "symfony/filesystem": "^5.4|^6.0|^7.0",
+                "symfony/finder": "^5.4|^6.0|^7.0",
+                "symfony/var-exporter": "^5.4|^6.0|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Intl\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/",
+                    "/Resources/data/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                },
+                {
+                    "name": "Eriksen Costa",
+                    "email": "eriksen.costa@infranology.com.br"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides access to the localization data of the ICU library",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "i18n",
+                "icu",
+                "internationalization",
+                "intl",
+                "l10n",
+                "localization"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/intl/tree/v6.4.12"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-20T08:16:53+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -29914,7 +30752,9 @@
         "drupal/entity_usage": 10,
         "drupal/feeds": 10,
         "drupal/feeds_ex": 10,
+        "drupal/field_validation": 10,
         "drupal/flag": 10,
+        "drupal/fullcalendar": 10,
         "drupal/get_tweets": 15,
         "drupal/gin": 5,
         "drupal/gin_moderation_sidebar": 5,
@@ -29930,10 +30770,12 @@
         "drupal/profile_switcher": 15,
         "drupal/project_browser": 10,
         "drupal/pwa": 5,
+        "drupal/simple_crawler": 20,
         "drupal/sitestudio_extras": 10,
         "drupal/sitestudio_gin": 5,
         "drupal/smart_date": 10,
         "drupal/tb_megamenu": 15,
+        "drupal/unstructured": 10,
         "drupal/views_base_url": 10,
         "drupal/webform": 10,
         "drupal/yoast_seo": 15,
