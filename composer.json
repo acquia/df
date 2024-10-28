@@ -126,6 +126,7 @@
     "drupal/monsido_tools": "^1.1",
     "drupal/new_relic_rpm": "^2.1",
     "drupal/next": "^1.6",
+    "drupal/openai_images": "^1.0",
     "drupal/page_manager": "^4.0@RC",
     "drupal/panels": "^4.7",
     "drupal/permissions_filter": "^1.3",
@@ -263,7 +264,7 @@
         "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch",
         "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch",
         "Site Studio Headless Image handler": "patches/site_studio_data_transformer_image_handler_empty_value_issue.patch",
-        "Site Studio SGM preview fix": "patches/cohesion-sgm-preview.patch" 
+        "Site Studio SGM preview fix": "patches/cohesion-sgm-preview.patch"
       },
       "acquia/sitestudio_jsonapi": {
         "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
@@ -307,6 +308,9 @@
       },
       "drupal/mautic": {
         "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
+      },
+      "drupal/openai_images": {
+        "Changing the field name from field_media_image to image in DF Image Media Type": "patches/changing_field_name_to_image.patch"
       },
       "drupal/pathauto": {
         "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
