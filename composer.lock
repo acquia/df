@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd36f7e56ba6bd7a3da759711ad65305",
+    "content-hash": "1d39a579ec6c065814a0d3da717558b8",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -5630,7 +5630,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai.git",
-                "reference": "a16e8be5d05fe424eb62d668e3adae0f089a8645"
+                "reference": "cd8c567"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -5655,8 +5655,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.0-beta1+11-dev",
-                    "datestamp": "1730825057",
+                    "version": "1.0.0-beta1+12-dev",
+                    "datestamp": "1730974357",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5705,7 +5705,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_agents.git",
-                "reference": "cf2771a42bf926e07cb6f1b5b7b7328ef960a5f8"
+                "reference": "fb8e47d"
             },
             "require": {
                 "drupal/ai": "1.0.x-dev@dev",
@@ -5722,7 +5722,7 @@
                 },
                 "drupal": {
                     "version": "1.0.x-dev",
-                    "datestamp": "1730890156",
+                    "datestamp": "1730978318",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7164,8 +7164,8 @@
                     "homepage": "https://www.drupal.org/user/45640"
                 },
                 {
-                    "name": "secretsayan",
-                    "homepage": "https://www.drupal.org/user/2787791"
+                    "name": "vipin.mittal18",
+                    "homepage": "https://www.drupal.org/user/319716"
                 }
             ],
             "description": "Allows Drupal to communicate with Conductor API.",
@@ -12646,17 +12646,17 @@
         },
         {
             "name": "drupal/leaflet",
-            "version": "10.2.25",
+            "version": "10.2.26",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/leaflet.git",
-                "reference": "10.2.25"
+                "reference": "10.2.26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.25.zip",
-                "reference": "10.2.25",
-                "shasum": "06aff8c46ca30873d6accc452348bcf6f4e46348"
+                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.26.zip",
+                "reference": "10.2.26",
+                "shasum": "826389d325634e42587d4a3ec47485ab350f881a"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10 || ^11",
@@ -12665,8 +12665,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "10.2.25",
-                    "datestamp": "1724410606",
+                    "version": "10.2.26",
+                    "datestamp": "1730930365",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12773,7 +12773,7 @@
                     "homepage": "https://www.drupal.org/user/66273"
                 },
                 {
-                    "name": "RdeBoer",
+                    "name": "rdeboer",
                     "homepage": "https://www.drupal.org/user/404007"
                 }
             ],
@@ -20277,16 +20277,16 @@
         },
         {
             "name": "google/cloud-translate",
-            "version": "v1.19.0",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-translate.git",
-                "reference": "79abf39e60814e04257c8f9d1f4878f34e93141d"
+                "reference": "985a0cae919746376fe5f678f74fdff7185515c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-translate/zipball/79abf39e60814e04257c8f9d1f4878f34e93141d",
-                "reference": "79abf39e60814e04257c8f9d1f4878f34e93141d",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-translate/zipball/985a0cae919746376fe5f678f74fdff7185515c6",
+                "reference": "985a0cae919746376fe5f678f74fdff7185515c6",
                 "shasum": ""
             },
             "require": {
@@ -20327,9 +20327,9 @@
             ],
             "description": "Cloud Translation Client for PHP",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-translate/tree/v1.19.0"
+                "source": "https://github.com/googleapis/google-cloud-php-translate/tree/v1.20.0"
             },
-            "time": "2024-09-28T04:24:22+00:00"
+            "time": "2024-11-06T21:50:43+00:00"
         },
         {
             "name": "google/common-protos",
@@ -20392,16 +20392,16 @@
         },
         {
             "name": "google/gax",
-            "version": "v1.34.1",
+            "version": "v1.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/gax-php.git",
-                "reference": "173f0a97323284f91fd453c4ed7ed8317ecf6cfa"
+                "reference": "21d038043e50498c42f8f060ab2d6949066480f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/173f0a97323284f91fd453c4ed7ed8317ecf6cfa",
-                "reference": "173f0a97323284f91fd453c4ed7ed8317ecf6cfa",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/21d038043e50498c42f8f060ab2d6949066480f3",
+                "reference": "21d038043e50498c42f8f060ab2d6949066480f3",
                 "shasum": ""
             },
             "require": {
@@ -20443,9 +20443,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/gax-php/issues",
-                "source": "https://github.com/googleapis/gax-php/tree/v1.34.1"
+                "source": "https://github.com/googleapis/gax-php/tree/v1.35.0"
             },
-            "time": "2024-08-15T18:00:58+00:00"
+            "time": "2024-11-06T20:27:21+00:00"
         },
         {
             "name": "google/grpc-gcp",
@@ -20494,16 +20494,16 @@
         },
         {
             "name": "google/longrunning",
-            "version": "0.4.3",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/php-longrunning.git",
-                "reference": "ed718a735e407826c3332b7197a44602eb03e608"
+                "reference": "ce921cf2a59082b09ab04f36b1afef4686c3a9ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/ed718a735e407826c3332b7197a44602eb03e608",
-                "reference": "ed718a735e407826c3332b7197a44602eb03e608",
+                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/ce921cf2a59082b09ab04f36b1afef4686c3a9ab",
+                "reference": "ce921cf2a59082b09ab04f36b1afef4686c3a9ab",
                 "shasum": ""
             },
             "require-dev": {
@@ -20532,9 +20532,9 @@
             ],
             "description": "Google LongRunning Client for PHP",
             "support": {
-                "source": "https://github.com/googleapis/php-longrunning/tree/v0.4.3"
+                "source": "https://github.com/googleapis/php-longrunning/tree/v0.4.4"
             },
-            "time": "2024-06-01T03:14:01+00:00"
+            "time": "2024-11-06T21:50:43+00:00"
         },
         {
             "name": "google/protobuf",
@@ -20742,16 +20742,16 @@
         },
         {
             "name": "gravitypdf/querypath",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GravityPDF/querypath.git",
-                "reference": "4a7ca5d46f8cb711845f4a600ef8166e73c9549b"
+                "reference": "a664e7706b3224f3c5d8cec382112c7cf1b90ce5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GravityPDF/querypath/zipball/4a7ca5d46f8cb711845f4a600ef8166e73c9549b",
-                "reference": "4a7ca5d46f8cb711845f4a600ef8166e73c9549b",
+                "url": "https://api.github.com/repos/GravityPDF/querypath/zipball/a664e7706b3224f3c5d8cec382112c7cf1b90ce5",
+                "reference": "a664e7706b3224f3c5d8cec382112c7cf1b90ce5",
                 "shasum": ""
             },
             "require": {
@@ -20802,7 +20802,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2024-08-12T00:05:38+00:00"
+            "time": "2024-11-07T06:15:48+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -24704,16 +24704,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.7",
+            "version": "1.12.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0"
+                "reference": "f6a60a4d66142b8156c9da923f1972657bc4748c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
-                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f6a60a4d66142b8156c9da923f1972657bc4748c",
+                "reference": "f6a60a4d66142b8156c9da923f1972657bc4748c",
                 "shasum": ""
             },
             "require": {
@@ -24758,7 +24758,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-18T11:12:07+00:00"
+            "time": "2024-11-06T19:06:49+00:00"
         },
         {
             "name": "psr/cache",
@@ -29742,16 +29742,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.14.0",
+            "version": "v3.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "126b2c97818dbff0cdf3fbfc881aedb3d40aae72"
+                "reference": "f405356d20fb43603bcadc8b09bfb676cb04a379"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/126b2c97818dbff0cdf3fbfc881aedb3d40aae72",
-                "reference": "126b2c97818dbff0cdf3fbfc881aedb3d40aae72",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f405356d20fb43603bcadc8b09bfb676cb04a379",
+                "reference": "f405356d20fb43603bcadc8b09bfb676cb04a379",
                 "shasum": ""
             },
             "require": {
@@ -29805,7 +29805,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.14.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.14.1"
             },
             "funding": [
                 {
@@ -29817,7 +29817,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T17:55:12+00:00"
+            "time": "2024-11-06T18:17:38+00:00"
         },
         {
             "name": "webflo/drupal-finder",
