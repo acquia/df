@@ -5630,7 +5630,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai.git",
-                "reference": "d7d6be20a44eef62b82a8089989fd2ee55d8c0b1"
+                "reference": "4cd075529b11f3baf1182ba3c9d5272ae15172f1"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -5655,8 +5655,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.0-beta1+12-dev",
-                    "datestamp": "1730974357",
+                    "version": "1.0.0-beta1+13-dev",
+                    "datestamp": "1731005480",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5705,7 +5705,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_agents.git",
-                "reference": "229512ae1b363fbc4e29b64f9d8469e483696164"
+                "reference": "2ad2dac383f1d58caf4e59171c78760c63789ab1"
             },
             "require": {
                 "drupal/ai": "1.0.x-dev@dev",
@@ -5722,7 +5722,7 @@
                 },
                 "drupal": {
                     "version": "1.0.x-dev",
-                    "datestamp": "1730986035",
+                    "datestamp": "1731051015",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7851,12 +7851,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "0a91a7d5aa1e07120f0bce9f72f15ca84c029f8f"
+                "reference": "36735b66ab5da08fb19c6493e30b9b33f57e0cbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/0a91a7d5aa1e07120f0bce9f72f15ca84c029f8f",
-                "reference": "0a91a7d5aa1e07120f0bce9f72f15ca84c029f8f",
+                "url": "https://api.github.com/repos/drupal/core/zipball/36735b66ab5da08fb19c6493e30b9b33f57e0cbe",
+                "reference": "36735b66ab5da08fb19c6493e30b9b33f57e0cbe",
                 "shasum": ""
             },
             "require": {
@@ -7902,7 +7902,7 @@
                 "symfony/serializer": "^6.4",
                 "symfony/validator": "^6.4",
                 "symfony/yaml": "^6.4",
-                "twig/twig": "^3.14.0"
+                "twig/twig": "^3.14.2"
             },
             "conflict": {
                 "drush/drush": "<12.4.3"
@@ -8007,7 +8007,7 @@
             "support": {
                 "source": "https://github.com/drupal/core/tree/10.5.x"
             },
-            "time": "2024-11-03T22:48:31+00:00"
+            "time": "2024-11-07T22:18:24+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -8065,12 +8065,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "07a7e8db58c77babc208a48cca5202248e745e3b"
+                "reference": "3a9cf094f933f3c12e598806303fbce6223b27c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/07a7e8db58c77babc208a48cca5202248e745e3b",
-                "reference": "07a7e8db58c77babc208a48cca5202248e745e3b",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/3a9cf094f933f3c12e598806303fbce6223b27c5",
+                "reference": "3a9cf094f933f3c12e598806303fbce6223b27c5",
                 "shasum": ""
             },
             "require": {
@@ -8128,7 +8128,7 @@
                 "symfony/var-dumper": "~v6.4.7",
                 "symfony/var-exporter": "~v6.4.7",
                 "symfony/yaml": "~v6.4.7",
-                "twig/twig": "~v3.14.0"
+                "twig/twig": "~v3.14.2"
             },
             "conflict": {
                 "webflo/drupal-core-strict": "*"
@@ -8142,7 +8142,7 @@
             "support": {
                 "source": "https://github.com/drupal/core-recommended/tree/10.5.x"
             },
-            "time": "2024-10-31T16:25:34+00:00"
+            "time": "2024-11-07T22:18:24+00:00"
         },
         {
             "name": "drupal/crop",
@@ -10845,17 +10845,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-rc13",
+            "version": "3.0.0-rc14",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-rc13"
+                "reference": "8.x-3.0-rc14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc13.zip",
-                "reference": "8.x-3.0-rc13",
-                "shasum": "7b8e9d7ae6fe6de7de0bba930200fe80b437eefe"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc14.zip",
+                "reference": "8.x-3.0-rc14",
+                "shasum": "8ca8735f5a1d7ef25ee446358cd704a3feb1cae7"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -10864,8 +10864,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-rc13",
-                    "datestamp": "1720416342",
+                    "version": "8.x-3.0-rc14",
+                    "datestamp": "1731015952",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -13372,17 +13372,17 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "2.0.2"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-2.0.2.zip",
-                "reference": "2.0.2",
-                "shasum": "748013c50a0ed5e10359413bb3481392a0bf0d3f"
+                "url": "https://ftp.drupal.org/files/projects/metatag-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "c28fe2fdac68a9370a6af6cbafff4425dd5148f3"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10 || ^11",
@@ -13390,6 +13390,7 @@
                 "php": ">=8.0"
             },
             "require-dev": {
+                "drupal/forum": "*",
                 "drupal/hal": "^1 || ^2 || ^9",
                 "drupal/metatag_dc": "*",
                 "drupal/metatag_open_graph": "*",
@@ -13401,8 +13402,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.2",
-                    "datestamp": "1722869772",
+                    "version": "2.1.0",
+                    "datestamp": "1731004042",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13442,7 +13443,7 @@
         },
         {
             "name": "drupal/metatag_open_graph",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "require": {
                 "drupal/core": "^9.4 || ^10 || ^11",
                 "drupal/metatag": "*"
@@ -13450,8 +13451,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "2.0.2",
-                    "datestamp": "1722869772",
+                    "version": "2.1.0",
+                    "datestamp": "1731004042",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13480,7 +13481,7 @@
         },
         {
             "name": "drupal/metatag_twitter_cards",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "require": {
                 "drupal/core": "^9.4 || ^10 || ^11",
                 "drupal/metatag": "*"
@@ -13488,8 +13489,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "2.0.2",
-                    "datestamp": "1722869772",
+                    "version": "2.1.0",
+                    "datestamp": "1731004042",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -20215,23 +20216,23 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.42.0",
+            "version": "v1.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "0c25599a91530b5847f129b271c536f75a7563f5"
+                "reference": "b6a80acd906492086db59aada9196dcfb9c512fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/0c25599a91530b5847f129b271c536f75a7563f5",
-                "reference": "0c25599a91530b5847f129b271c536f75a7563f5",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/b6a80acd906492086db59aada9196dcfb9c512fe",
+                "reference": "b6a80acd906492086db59aada9196dcfb9c512fe",
                 "shasum": ""
             },
             "require": {
                 "firebase/php-jwt": "^6.0",
                 "guzzlehttp/guzzle": "^7.4.5",
                 "guzzlehttp/psr7": "^2.4.5",
-                "php": "^8.0",
+                "php": "^8.1",
                 "psr/cache": "^2.0||^3.0",
                 "psr/http-message": "^1.1||^2.0"
             },
@@ -20269,9 +20270,9 @@
             "support": {
                 "docs": "https://googleapis.github.io/google-auth-library-php/main/",
                 "issues": "https://github.com/googleapis/google-auth-library-php/issues",
-                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.42.0"
+                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.43.0"
             },
-            "time": "2024-08-26T18:33:48+00:00"
+            "time": "2024-11-07T19:35:20+00:00"
         },
         {
             "name": "google/cloud-core",
