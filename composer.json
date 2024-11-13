@@ -255,7 +255,8 @@
     "patches": {
       "drupal/core": {
         "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
-        "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch"
+        "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
+        "Fatal error: Uncaught TypeError: Drupal\\Core\\Extension\\ThemeHandler::addTheme() | https://www.drupal.org/project/drupal/issues/3478628": "https://www.drupal.org/files/issues/2024-10-23/3478628_fix.patch"
       },
       "drupal/acquia_cms_common": {
         "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
