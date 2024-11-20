@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b42a4e50dea29cc163e14a07821c96c8",
+    "content-hash": "4c0ef0fef95ad67642e2d6bda828fd0c",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -1176,16 +1176,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.8.2",
+            "version": "2.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "6e543d03187c882ea1c6ba43add2467754427803"
+                "reference": "2a7c71266b2545a3bed9f4860734081963f6e688"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/6e543d03187c882ea1c6ba43add2467754427803",
-                "reference": "6e543d03187c882ea1c6ba43add2467754427803",
+                "url": "https://api.github.com/repos/composer/composer/zipball/2a7c71266b2545a3bed9f4860734081963f6e688",
+                "reference": "2a7c71266b2545a3bed9f4860734081963f6e688",
                 "shasum": ""
             },
             "require": {
@@ -1199,7 +1199,7 @@
                 "justinrainbow/json-schema": "^5.3",
                 "php": "^7.2.5 || ^8.0",
                 "psr/log": "^1.0 || ^2.0 || ^3.0",
-                "react/promise": "^3.2",
+                "react/promise": "^2.11 || ^3.2",
                 "seld/jsonlint": "^1.4",
                 "seld/phar-utils": "^1.2",
                 "seld/signal-handler": "^2.0",
@@ -1270,7 +1270,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.8.2"
+                "source": "https://github.com/composer/composer/tree/2.8.3"
             },
             "funding": [
                 {
@@ -1286,7 +1286,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-10-29T15:12:11+00:00"
+            "time": "2024-11-17T12:13:04+00:00"
         },
         {
             "name": "composer/installers",
@@ -5630,7 +5630,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai.git",
-                "reference": "980a9cb9ea9cd26f07a1d3abf19c0a4985dbcbcd"
+                "reference": "6c714b8863cf338184b2045210c32d4bc9cf5049"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -5657,8 +5657,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.0-beta1+31-dev",
-                    "datestamp": "1731511030",
+                    "version": "1.0.0-beta1+37-dev",
+                    "datestamp": "1731946225",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5707,15 +5707,11 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_agents.git",
-                "reference": "e1178696e1805e15f862119e19e66b136c27401d"
+                "reference": "4d1b069edc5528cbdc5e625847f2db03e4c75b11"
             },
             "require": {
                 "drupal/ai": "1.0.x-dev@dev",
                 "drupal/core": "^10.2 || ^11"
-            },
-            "require-dev": {
-                "drupal/unstructured": "*",
-                "drupal/webform": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -5724,7 +5720,7 @@
                 },
                 "drupal": {
                     "version": "1.0.x-dev",
-                    "datestamp": "1731602629",
+                    "datestamp": "1732097195",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -9361,7 +9357,7 @@
             ],
             "authors": [
                 {
-                    "name": "Berdir",
+                    "name": "berdir",
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
@@ -9495,7 +9491,7 @@
             ],
             "authors": [
                 {
-                    "name": "Lullabot",
+                    "name": "lullabot",
                     "homepage": "https://www.drupal.org/user/3815489"
                 },
                 {
@@ -9503,7 +9499,7 @@
                     "homepage": "https://www.drupal.org/user/1288796"
                 },
                 {
-                    "name": "seanB",
+                    "name": "seanb",
                     "homepage": "https://www.drupal.org/user/545912"
                 }
             ],
@@ -10394,17 +10390,17 @@
         },
         {
             "name": "drupal/fullcalendar",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fullcalendar.git",
-                "reference": "3.0.0"
+                "reference": "3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/fullcalendar-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "e540a364786df526fc7923a5f0b64b724fbef516"
+                "url": "https://ftp.drupal.org/files/projects/fullcalendar-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "138cf1a89f034918a1eab96e681cf8df281ffd1f"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -10418,8 +10414,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1731408560",
+                    "version": "3.0.1",
+                    "datestamp": "1731862347",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11019,77 +11015,6 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
-        },
-        {
-            "name": "drupal/google_analytics",
-            "version": "4.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/google_analytics.git",
-                "reference": "4.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_analytics-4.0.2.zip",
-                "reference": "4.0.2",
-                "shasum": "6deec511373e4659e42ff494c8729434728e37d7"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10"
-            },
-            "require-dev": {
-                "drupal/token": "^1.7"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.0.2",
-                    "datestamp": "1662768595",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "See contributors",
-                    "homepage": "https://www.drupal.org/node/49388/committers"
-                },
-                {
-                    "name": "budda",
-                    "homepage": "https://www.drupal.org/user/13164"
-                },
-                {
-                    "name": "ixismark",
-                    "homepage": "https://www.drupal.org/user/3632333"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "roberto.rivera.ixis",
-                    "homepage": "https://www.drupal.org/user/3632325"
-                }
-            ],
-            "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
-            "homepage": "https://www.drupal.org/project/google_analytics",
-            "support": {
-                "source": "https://git.drupalcode.org/project/google_analytics",
-                "issues": "https://www.drupal.org/project/issues/google_analytics"
-            }
         },
         {
             "name": "drupal/google_tag",
@@ -18036,17 +17961,17 @@
         },
         {
             "name": "drupal/tmgmt",
-            "version": "1.16.0",
+            "version": "1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tmgmt.git",
-                "reference": "8.x-1.16"
+                "reference": "8.x-1.17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tmgmt-8.x-1.16.zip",
-                "reference": "8.x-1.16",
-                "shasum": "70166f2b5fe42b1beadacfdf59041706385c7c88"
+                "url": "https://ftp.drupal.org/files/projects/tmgmt-8.x-1.17.zip",
+                "reference": "8.x-1.17",
+                "shasum": "83d9796a0e5219cf6fc752d8db8ecadc81550f34"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11"
@@ -18065,8 +17990,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.16",
-                    "datestamp": "1727678120",
+                    "version": "8.x-1.17",
+                    "datestamp": "1731630348",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -20561,16 +20486,16 @@
         },
         {
             "name": "google/longrunning",
-            "version": "0.4.4",
+            "version": "0.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/php-longrunning.git",
-                "reference": "ce921cf2a59082b09ab04f36b1afef4686c3a9ab"
+                "reference": "062eab0f3b9310da9498bfe20b273f074580b916"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/ce921cf2a59082b09ab04f36b1afef4686c3a9ab",
-                "reference": "ce921cf2a59082b09ab04f36b1afef4686c3a9ab",
+                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/062eab0f3b9310da9498bfe20b273f074580b916",
+                "reference": "062eab0f3b9310da9498bfe20b273f074580b916",
                 "shasum": ""
             },
             "require-dev": {
@@ -20599,9 +20524,9 @@
             ],
             "description": "Google LongRunning Client for PHP",
             "support": {
-                "source": "https://github.com/googleapis/php-longrunning/tree/v0.4.4"
+                "source": "https://github.com/googleapis/php-longrunning/tree/v0.4.5"
             },
-            "time": "2024-11-06T21:50:43+00:00"
+            "time": "2024-11-16T00:28:46+00:00"
         },
         {
             "name": "google/protobuf",
@@ -24772,16 +24697,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.10",
+            "version": "1.12.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071"
+                "reference": "0d1fc20a962a91be578bcfe7cf939e6e1a2ff733"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/fc463b5d0fe906dcf19689be692c65c50406a071",
-                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0d1fc20a962a91be578bcfe7cf939e6e1a2ff733",
+                "reference": "0d1fc20a962a91be578bcfe7cf939e6e1a2ff733",
                 "shasum": ""
             },
             "require": {
@@ -24826,7 +24751,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-11T15:37:09+00:00"
+            "time": "2024-11-17T14:08:01+00:00"
         },
         {
             "name": "psr/cache",
