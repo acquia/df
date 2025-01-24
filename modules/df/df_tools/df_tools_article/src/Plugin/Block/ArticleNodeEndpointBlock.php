@@ -26,11 +26,16 @@ class ArticleNodeEndpointBlock extends BlockBase implements ContainerFactoryPlug
   protected $httpClient;
 
   /**
-   * CollectionNodeEndpointBlock constructor.
+   * Constructs a new ArticleNodeEndpointBlock instance.
+   *
    * @param array $configuration
+   *   A configuration array containing information about the plugin instance.
    * @param string $plugin_id
+   *   The plugin ID for the plugin instance.
    * @param mixed $plugin_definition
+   *   The plugin implementation definition.
    * @param \GuzzleHttp\Client $http_client
+   *   The HTTP client service.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, Client $http_client) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -53,16 +58,29 @@ class ArticleNodeEndpointBlock extends BlockBase implements ContainerFactoryPlug
    * {@inheritdoc}
    */
   public function build() {
-    $build = array();
+    $build = [];
     global $base_url;
+
     header('Content-Type: application/json');
     $json_output = (string) $this->httpClient->get($base_url . '/api/node/article')->getBody();
     $json_pretty = json_encode(json_decode($json_output), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     $json_indented_by_2 = preg_replace('/^(  +?)\\1(?=[^ ])/m', '$1', $json_pretty);
-    $build['article_node_endpoint_block']['#markup'] = '<div id="api-demo"><a class="btn btn-primary button button--primary coh-style-link-button coh-style-link-button-color open-apiModal" href="#open">Expand API Response</a>
-    <div class="apiResponse"><pre><code class="language-json">' . $json_indented_by_2 . '</code></pre></div>
-    <div class="apiResponseModal"><pre><code class="language-json">' . $json_indented_by_2 . '</code></pre></div></div>';
-    $build['article_node_endpoint_block']['#attached']['library'][] = 'df_tools_article/main';
+
+    $build['article_node_endpoint_block'] = [
+      '#markup' => '<div id="api-demo">
+        <button class="btn btn-primary button button--primary coh-style-link-button 
+        coh-style-link-button-color open-apiModal">Expand API Response</button>
+        <div class="apiResponse">
+          <pre><code class="language-json">' . $json_indented_by_2 . '</code></pre>
+        </div>
+        <div class="apiResponseModal">
+          <pre><code class="language-json">' . $json_indented_by_2 . '</code></pre>
+        </div>
+      </div>',
+      '#attached' => ['library' => ['df_tools_article/main']],
+      '#allowed_tags' => ['button', 'code', 'div', 'pre'],
+    ];
+
     return $build;
   }
 
