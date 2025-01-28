@@ -33,15 +33,5 @@ function df_tools_augmentor_install($is_syncing) {
       $moduleInstaller->install(['df_tools_augmentor_product']);
     }
 
-    $role_ids = [
-        'content_administrator',
-        'content_author',
-        'content_editor',
-    ];
-    $user_role = \Drupal::entityTypeManager()->getStorage('user_role')->loadMultiple($role_ids);
-    foreach ($user_role as $role) {
-      $role->grantPermission('execute augmentor');
-      $role->save();
-    }
   }
 }
