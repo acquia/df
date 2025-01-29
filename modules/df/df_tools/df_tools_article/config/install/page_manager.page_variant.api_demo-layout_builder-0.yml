@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.api_demo
+    - views.view.api_demo_article_node_view
+  module:
+    - df_tools_article
+    - layout_builder
+    - views
+id: api_demo-layout_builder-0
+label: 'API Demo Page'
+weight: 0
+variant: layout_builder
+variant_settings:
+  id: layout_builder
+  label: null
+  weight: 0
+  uuid: c7424d2e-d586-4d2a-9827-2639127f424c
+  sections:
+    -
+      layout_id: layout_twocol_section
+      layout_settings:
+        label: ''
+        context_mapping: {  }
+        column_widths: 50-50
+      components:
+        fd78b354-b560-4527-8060-e9f0a673aa74:
+          uuid: fd78b354-b560-4527-8060-e9f0a673aa74
+          region: first
+          configuration:
+            id: article_node_endpoint_block
+            label: 'Article node endpoint block'
+            label_display: '0'
+            provider: df_tools_article
+            context_mapping: {  }
+          weight: 0
+          additional: {  }
+        ad02e10c-f935-45a6-ad9e-609b061aa079:
+          uuid: ad02e10c-f935-45a6-ad9e-609b061aa079
+          region: second
+          configuration:
+            id: 'views_block:api_demo_article_node_view-block_1'
+            label: ''
+            label_display: '0'
+            provider: views
+            context_mapping: {  }
+            views_label: ''
+            items_per_page: none
+          weight: 0
+          additional: {  }
+      third_party_settings: {  }
+page: api_demo
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
