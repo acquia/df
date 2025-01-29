@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - basic_auth
-    - hal
     - node
     - serialization
     - user
@@ -15,9 +14,7 @@ configuration:
   methods:
     - GET
   formats:
-    - hal_json
     - json
-    - xml
   authentication:
     - basic_auth
     - cookie
