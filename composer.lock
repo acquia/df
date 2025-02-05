@@ -1102,16 +1102,16 @@
         },
         {
             "name": "composer/class-map-generator",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/class-map-generator.git",
-                "reference": "4b0a223cf5be7c9ee7e0ef1bc7db42b4a97c9915"
+                "reference": "ffe442c5974c44a9343e37a0abcb1cc37319f5b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/4b0a223cf5be7c9ee7e0ef1bc7db42b4a97c9915",
-                "reference": "4b0a223cf5be7c9ee7e0ef1bc7db42b4a97c9915",
+                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/ffe442c5974c44a9343e37a0abcb1cc37319f5b9",
+                "reference": "ffe442c5974c44a9343e37a0abcb1cc37319f5b9",
                 "shasum": ""
             },
             "require": {
@@ -1155,7 +1155,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/class-map-generator/issues",
-                "source": "https://github.com/composer/class-map-generator/tree/1.5.0"
+                "source": "https://github.com/composer/class-map-generator/tree/1.6.0"
             },
             "funding": [
                 {
@@ -1171,7 +1171,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-25T16:11:06+00:00"
+            "time": "2025-02-05T10:05:34+00:00"
         },
         {
             "name": "composer/composer",
@@ -16758,35 +16758,34 @@
         },
         {
             "name": "drupal/searchstax",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/searchstax.git",
-                "reference": "1.5.0"
+                "reference": "1.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/searchstax-1.5.0.zip",
-                "reference": "1.5.0",
-                "shasum": "dc0e7fd719360e7496604ee6dc04afdf5b8bd94e"
+                "url": "https://ftp.drupal.org/files/projects/searchstax-1.6.0.zip",
+                "reference": "1.6.0",
+                "shasum": "ca446cf9bcc603f604c01f177923a7799a1ce53d"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10 || ^11",
-                "drupal/search_api": "^1"
+                "drupal/search_api": "^1",
+                "ext-libxml": "*"
             },
             "require-dev": {
+                "drupal/acquia_search": "*",
                 "drupal/search_api_autocomplete": "*",
                 "drupal/search_api_page": "*",
                 "drupal/search_api_solr": "*"
             },
-            "suggest": {
-                "drupal/search_api_searchstax": "Provides integration between your Drupal site and the SearchStax Solr service."
-            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.5.0",
-                    "datestamp": "1733483874",
+                    "version": "1.6.0",
+                    "datestamp": "1738749834",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
