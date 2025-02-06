@@ -99,7 +99,6 @@
     "drupal/google_tag": "^2.0",
     "drupal/graphql": "^4.4",
     "drupal/graphql_core_schema": "^1.0@beta",
-    "drupal/hal": "^2.0",
     "drupal/image_url_formatter": "^1.x-dev",
     "drupal/imce": "^3.0",
     "drupal/inline_entity_form": "^1.0@RC",
@@ -194,11 +193,6 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "php-http/discovery": true,
       "mglaman/composer-drupal-lenient": true
-    },
-    "audit": {
-        "ignore": {
-            "CVE-2025-24374": "Believed not to affect Drupal core see https://www.drupal.org/project/drupal/issues/3503195."
-        }
     }
   },
   "extra": {
@@ -259,8 +253,7 @@
       "drupal/core": {
         "Invoke hook after a site install is complete | https://drupal.org/node/2924549": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
         "Update module fails on installation | https://drupal.org/node/2350711": "https://www.drupal.org/files/issues/2021-03-12/2350711-9.x-71.patch",
-        "[regression] Drupal.editors.ckeditor5.onChange event doesn't fire after final input if user types too fast.": "https://www.drupal.org/files/issues/2024-06-05/3443422.patch",
-        "Adding non-existent permissions to a role is not allowed | https://www.drupal.org/project/drupal/issues/3358586": "https://www.drupal.org/files/issues/2023-09-14/3358586-11.patch"
+        "[regression] Drupal.editors.ckeditor5.onChange event doesn't fire after final input if user types too fast.": "https://www.drupal.org/files/issues/2024-06-05/3443422.patch"
       },
       "drupal/acquia_cms_common": {
         "ACMS-1001 - The entity of type workflow by id editorial does not have a UUID.": "https://www.drupal.org/files/issues/2022-07-05/acquia_cms_common-rewrite-missing-uuid.patch",
