@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5ca96fcda6a82ec76cd433109f78dce",
+    "content-hash": "3f49d82ff261813b52452f6b72e1ac0d",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -11262,6 +11262,60 @@
             }
         },
         {
+            "name": "drupal/hal",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/hal.git",
+                "reference": "2.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/hal-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "5d98f2ebbc7952d183278351d24d3e51ea18c8ee"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/aggregator": "2.x-dev",
+                "drupal/entity_reference_revisions": "1.x-dev",
+                "drupal/rdf": "^2.1 || 3.0.x-dev",
+                "drupal/tour": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.4",
+                    "datestamp": "1738532063",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bbrala",
+                    "homepage": "https://www.drupal.org/user/3366066"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Hypermedia Application Language (HAL)",
+            "homepage": "https://www.drupal.org/project/hal",
+            "support": {
+                "source": "https://git.drupalcode.org/project/hal"
+            }
+        },
+        {
             "name": "drupal/image_url_formatter",
             "version": "dev-1.x",
             "source": {
@@ -17743,17 +17797,17 @@
         },
         {
             "name": "drupal/svg_image_field",
-            "version": "2.3.3",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/svg_image_field.git",
-                "reference": "2.3.3"
+                "reference": "2.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/svg_image_field-2.3.3.zip",
-                "reference": "2.3.3",
-                "shasum": "0bd2ff25e745be388cf2106e363120bf746aa8fc"
+                "url": "https://ftp.drupal.org/files/projects/svg_image_field-2.3.4.zip",
+                "reference": "2.3.4",
+                "shasum": "c4452fb1b63b7bb15c807748fe30bd76e641e718"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10 || ^11",
@@ -17761,13 +17815,14 @@
                 "php": ">=8.0"
             },
             "require-dev": {
-                "drupal/stage_file_proxy": "^2.0"
+                "drupal/stage_file_proxy": "^2.0 || ^3.0",
+                "drush/drush": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.3.3",
-                    "datestamp": "1716285826",
+                    "version": "2.3.4",
+                    "datestamp": "1738841344",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
