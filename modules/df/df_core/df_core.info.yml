@@ -1,7 +1,7 @@
 name: DF
 type: module
 description: Core functionality for the DF distribution.
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 package: Demo Framework
 dependencies:
   - acquia_cms_common
@@ -12,7 +12,6 @@ dependencies:
   - block_content
   - ckeditor5
   - collapsiblock
-  - color
   - config
   - config_delete
   - config_rewrite
@@ -28,6 +27,7 @@ dependencies:
   - menu_ui
   - metatag
   - moderation_sidebar
+  - mysql57
   - options
   - page_cache
   - password_policy
@@ -39,7 +39,6 @@ dependencies:
   - search_api_autocomplete
   - search_api_db
   - syslog
-  - tour
   - view_modes_display
   - views_ui
   - webform

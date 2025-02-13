@@ -6,10 +6,10 @@
   "require": {
     "acquia/acf": "2.x-feeds-dev",
     "acquia/acquia-cms-starterkit": "^1.0",
-    "acquia/cohesion": "7.5.2",
-    "acquia/cohesion-theme": "7.5.2",
-    "acquia/sitestudio_contenthub": "^7",
-    "acquia/sitestudio_jsonapi": "^7.4",
+    "acquia/cohesion": "^8",
+    "acquia/cohesion-theme": "^8",
+    "acquia/sitestudio_contenthub": "^8.0",
+    "acquia/sitestudio_jsonapi": "^8",
     "drupal/access_unpublished": "^1.5",
     "drupal/acquia_claro": "^1.3",
     "drupal/acquia_cms_article": "^1.5",
@@ -18,7 +18,7 @@
     "drupal/acquia_cms_component": "^1.3",
     "drupal/acquia_cms_document": "^1.4",
     "drupal/acquia_cms_event": "^1.5",
-    "drupal/acquia_cms_headless": "^1.3",
+    "drupal/acquia_cms_headless": "^1.4",
     "drupal/acquia_cms_image": "^1.5",
     "drupal/acquia_cms_page": "^1.5",
     "drupal/acquia_cms_person": "^1.5",
@@ -32,34 +32,30 @@
     "drupal/acquia_cms_video": "^1.5",
     "drupal/acquia_contenthub": "^3.2",
     "drupal/acquia_dam": "^1.0",
-    "drupal/acquia_lift": "^4.5",
-    "drupal/acquia_perz": "^4.1",
     "drupal/acquia_vwo": "^1.0",
     "drupal/acsf": "^2.73",
     "drupal/add_content_by_bundle": "^1.2",
-    "drupal/address": "^1.11",
+    "drupal/address": "^2.0",
     "drupal/addtocal_augment": "^1.2",
     "drupal/admin_toolbar": "^3.4",
     "drupal/ai": "^1.0",
     "drupal/ai_agents": "^1.0",
-    "drupal/ai_image": "^1.0@beta",
     "drupal/ai_image_alt_text": "^1.0",
     "drupal/ai_provider_openai": "^1.0",
     "drupal/ai_seo": "^1.0@beta",
     "drupal/ai_tmgmt": "^1.0@beta",
     "drupal/aitxt": "^1.0",
     "drupal/asset_injector": "^2.7",
-    "drupal/augmentor": "1.1.2",
+    "drupal/augmentor": "^1.2",
     "drupal/augmentor_chatgpt": "^1.0@alpha",
     "drupal/auto_entitylabel": "^3.0",
     "drupal/auto_translation": "^1.2",
-    "drupal/bpmn_io": "^1.1",
-    "drupal/camunda": "^1.0",
+    "drupal/bpmn_io": "^2.0",
+    "drupal/camunda": "^2.0",
     "drupal/captcha": "^2.0@beta",
-    "drupal/ckeditor": "^1.0",
-    "drupal/coffee": "^1.3",
+    "drupal/coffee": "^2.0",
     "drupal/collapsiblock": "^4.0",
-    "drupal/color": "^1.0",
+    "drupal/composer_deploy": "^1.10",
     "drupal/condition_query": "2.x-dev",
     "drupal/conditional_fields": "^4.0@alpha",
     "drupal/conductor": "^1.0@beta",
@@ -74,7 +70,7 @@
     "drupal/cshs": "^4.0",
     "drupal/decoupled_router": "^2.0.3",
     "drupal/easy_breadcrumb": "^2.0",
-    "drupal/eca": "^1.1",
+    "drupal/eca": "^2.1",
     "drupal/eca_cm": "^1.0",
     "drupal/editoria11y": "^2.0",
     "drupal/entity_browser": "^2.9",
@@ -92,31 +88,27 @@
     "drupal/focal_point": "^2",
     "drupal/fpa": "^4.0",
     "drupal/fullcalendar": "^3.0@beta",
-    "drupal/geofield": "1.56",
-    "drupal/get_tweets": "^3.0@alpha",
+    "drupal/geofield": "^1.64",
     "drupal/gin": "^3.0@RC",
     "drupal/gin_moderation_sidebar": "^1.0@RC",
+    "drupal/git_deploy": "^2.6",
     "drupal/google_tag": "^2.0",
     "drupal/graphql": "^4.4",
     "drupal/graphql_core_schema": "^1.0@beta",
-    "drupal/hal": "^2.0",
     "drupal/image_url_formatter": "^1.x-dev",
     "drupal/imce": "^3.0",
-    "drupal/inline_entity_form": "^1.0@RC",
-    "drupal/jquery_ui": "^1.6",
-    "drupal/jquery_ui_autocomplete": "^2.0",
+    "drupal/inline_entity_form": "^3.0@RC",
     "drupal/jquery_ui_dialog": "^2.0",
-    "drupal/jquery_ui_draggable": "^2.0",
-    "drupal/jquery_ui_droppable": "^2.0",
-    "drupal/json_field": "^1.2",
     "drupal/jsonapi_explorer": "2.x-dev",
+    "drupal/jsonapi_hypermedia": "^1.10",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_node_preview_tab": "^1.0",
+    "drupal/jsonapi_schema": "^1.0@RC",
     "drupal/leaflet": "^10.0",
     "drupal/leaflet_more_maps": "^2.1",
     "drupal/link_attributes": "^2",
     "drupal/masquerade": "^2.0@RC",
-    "drupal/mautic": "^1.13",
+    "drupal/mautic": "2.x-dev",
     "drupal/mautic_api": "2.x-dev",
     "drupal/media_acquiadam": "^2.0",
     "drupal/menu_item_extras": "^3.0",
@@ -124,20 +116,18 @@
     "drupal/moderated_content_bulk_publish": "^3.0@beta",
     "drupal/moderation_note": "^1.0@beta",
     "drupal/monsido_tools": "^1.1",
+    "drupal/mysql57": "^1.0",
     "drupal/new_relic_rpm": "^2.1",
-    "drupal/next": "^1.6",
+    "drupal/next": "^2.0@RC",
     "drupal/openai_images": "^1.0",
     "drupal/page_manager": "^4.0@RC",
-    "drupal/panels": "^4.7",
-    "drupal/permissions_filter": "^1.3",
-    "drupal/profile_switcher": "^1.0@alpha",
     "drupal/project_browser": "^1.0@beta",
     "drupal/purge": "^3.4",
-    "drupal/pwa": "^2.0@RC",
-    "drupal/rdf": "^2.1",
+    "drupal/pwa": "^2.1@beta",
+    "drupal/rdf": "^3.0@beta",
     "drupal/recaptcha": "^3.2",
     "drupal/require_login": "^3.0",
-    "drupal/reroute_email": "^2.2",
+    "drupal/reroute_email": "^2.3@RC",
     "drupal/restui": "^1.21",
     "drupal/revision_log_default": "^1.3",
     "drupal/samlauth": "^3.8",
@@ -148,33 +138,33 @@
     "drupal/searchstax": "^1.4",
     "drupal/shield": "^1.7",
     "drupal/simple_crawler": "1.0.x-dev@dev",
+    "drupal/simple_oauth": "^6.0@beta",
     "drupal/simple_sitemap": "^4.1.7",
     "drupal/simplelogin": "^7.0",
-    "drupal/sitestudio_extras": "^1.0@beta",
+    "drupal/sitestudio_extras": "1.0.x-dev@dev",
     "drupal/sitestudio_gin": "^1.0@RC",
     "drupal/slack": "^1.4",
     "drupal/smart_date": "^4.2@beta",
-    "drupal/storage": "^1.2",
+    "drupal/storage": "^1.4@beta",
     "drupal/svg_image_field": "^2.3",
     "drupal/tac_lite": "^1.7",
     "drupal/tb_megamenu": "^3.0@alpha",
     "drupal/tmgmt": "^1.14",
     "drupal/tmgmt_deepl": "^2.2",
-    "drupal/tmgmt_google": "^1.0",
     "drupal/token": "^1.11",
     "drupal/toolbar_manager": "^2.0",
     "drupal/unstructured": "^2.0@beta",
+    "drupal/upgrade_status": "^4.3",
     "drupal/user_field_value": "^8.1",
-    "drupal/view_modes_display": "^3",
+    "drupal/view_modes_display": "4.x-dev",
     "drupal/views_base_url": "^2.1@beta",
     "drupal/views_flag_refresh": "^1.0",
-    "drupal/views_json_source": "^1.4",
-    "drupal/vwo": "^1",
-    "drupal/webform": "^6.2@beta",
+    "drupal/views_json_source": "^2.0",
+    "drupal/vwo": "2.x-dev",
+    "drupal/webform": "^6.3@beta",
     "drupal/webform_mautic": "^2.0",
-    "drupal/webform_rest": "^4.0",
+    "drupal/webform_rest": "^4.2",
     "drupal/webform_views": "^5.1",
-    "drupal/yext": "^1",
     "drupal/yoast_seo": "^2.0@alpha",
     "drush/drush": "^12",
     "kevinfunk/content_filter": "1.x-dev",
@@ -264,17 +254,13 @@
         "Attempt to modify property 'styles' on array": "patches/modify_property_styles_on_array.patch",
         "Update DF - Patch for Site Studio with ECA | https://backlog.acquia.com/browse/DF-2502": "patches/ECA-token-issue.patch",
         "DF-2606 Simplify media library fixes": "https://www.drupal.org/files/issues/2024-01-04/DF-2606-04.patch",
-        "Site Studio Headless Image handler": "patches/site_studio_data_transformer_image_handler_empty_value_issue.patch",
-        "Site Studio SGM preview fix": "patches/cohesion-sgm-preview.patch"
-      },
-      "acquia/sitestudio_jsonapi": {
-        "Resource config issue for Cohesion Layout": "patches/sitestudio_jsonapi.patch"
+        "Site Studio Headless Image handler": "patches/site_studio_data_transformer_image_handler_empty_value_issue.patch"
       },
       "drupal/acquia_dam": {
         "TypeError: array_map(): Argument #2 ($array) must be of type array": "patches/acquia_dam-check-for-image-properties.patch"
       },
-      "drupal/augmentor": {
-        "Unable to create tags after upgrading to 1.1.2 | https://www.drupal.org/project/augmentor/issues/3424980": "https://www.drupal.org/files/issues/2024-03-04/augmentor-3424980-01.patch"
+      "drupal/context": {
+        "Automated Drupal 11 compatibility fixes for context": "https://www.drupal.org/files/issues/2025-01-02/d11-3429553-15.patch"
       },
       "drupal/default_content": {
         "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2024-08-27/default_content-3200212-25.patch"
@@ -282,8 +268,8 @@
       "drupal/entity_browser": {
         "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
       },
-      "drupal/get_tweets": {
-        "Changes menu link title": "https://www.drupal.org/files/issues/2022-05-19/get_tweets-updates-menu-link.patch"
+      "drupal/entity_role_view_mode_switcher": {
+        "Automated Drupal 11 compatibility fixes for entity_role_view_mode_switcher": "https://www.drupal.org/files/issues/2024-03-17/entity_role_view_mode_switcher.2.0.0.rector.patch"
       },
       "drupal/gin": {
         "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch",
@@ -298,24 +284,46 @@
       "drupal/graphql": {
         "Add missing subrequest buffer.": "https://patch-diff.githubusercontent.com/raw/drupal-graphql/graphql/pull/1313.patch"
       },
-      "drupal/inline_entity_form": {
-        "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
+      "drupal/image_url_formatter": {
+        "Automated Drupal 11 compatibility fixes for image_url_formatter": "https://www.drupal.org/files/issues/2025-01-12/image_url_formatter.1.x-dev.rector.patch"
       },
       "drupal/jsonapi_schema": {
-        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
+        "Automated Drupal 11 compatibility fixes for jsonapi_schema": "https://www.drupal.org/files/issues/2024-03-18/jsonapi_schema.8.x-1.x-dev.rector.patch"
       },
       "drupal/mautic": {
         "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
       },
+      "drupal/new_relic_rpm": {
+        "Automated Drupal 11 compatibility fixes for new_relic_rpm": "https://www.drupal.org/files/issues/2024-10-31/new_relic_rpm-3433555-4_0.patch"
+      },
       "drupal/openai_images": {
         "Changing the field name from field_media_image to image in DF Image Media Type": "patches/changing_field_name_to_image.patch",
-        "Updating the function to read the image file and convert to content": "patches/convert_image_file_to_content.patch"
+        "Updating the function to read the image file and convert to content": "patches/convert_image_file_to_content.patch",
+        "Automated Drupal 11 compatibility fixes for openai_images": "https://www.drupal.org/files/issues/2024-06-02/openai_images.1.0.x-dev.rector.patch"
       },
       "drupal/pathauto": {
         "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
       },
+      "drupal/slack": {
+        "Automated Drupal 11 compatibility fixes for slack": "https://www.drupal.org/files/issues/2024-03-25/slack.8.x-1.4.rector.patch"
+      },
+      "drupal/tac_lite": {
+        "Drupal 11 compatibility": "patches/d11-tac_lite-compatibility.patch"
+      },
+      "drupal/tmgmt_google": {
+        "Automated Drupal 11 compatibility fixes for tmgmt_google": "https://www.drupal.org/files/issues/2024-03-25/tmgmt_google.8.x-1.1.rector.patch"
+      },
+      "drupal/user_field_value": {
+        "Automated Drupal 11 compatibility fixes for user_field_value": "https://www.drupal.org/files/issues/2024-03-25/user_field_value.8.1.3.rector.patch"
+      },
+      "drupal/views_base_url": {
+        "Automated Drupal 11 compatibility fixes for views_base_url": "https://www.drupal.org/files/issues/2024-06-02/views_base_url.2.1.0-beta1.rector.patch"
+      },
       "drupal/webform_rest": {
         "Add API endpoint for retrieving autocomplete options | https://drupal.org/node/3317762": "https://www.drupal.org/files/issues/2022-10-27/3317762-2.patch"
+      },
+      "drupal/webform_mautic": {
+        "Automated Drupal 11 compatibility fixes for webform_mautic": "https://www.drupal.org/files/issues/2024-03-25/webform_mautic.2.0.0.rector.patch"
       }
     },
     "patches-ignore": {
@@ -358,6 +366,21 @@
       "url": "https://github.com/kevinfunk/mautic_api",
       "canonical": true
     },
+    "mautic": {
+      "type": "vcs",
+      "url": "https://github.com/vaibhav-acquia/mautic",
+      "canonical": true
+    },
+    "view-modes-display": {
+      "type": "vcs",
+      "url": "https://github.com/vaibhav-acquia/view_modes_display",
+      "canonical": true
+    },
+    "vwo": {
+      "type": "vcs",
+      "url": "https://github.com/vaibhav-acquia/vwo",
+      "canonical": true
+    },
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
@@ -388,5 +411,8 @@
       "rm -rf docroot vendor composer.lock"
     ],
     "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf"
+  },
+  "require-dev": {
+    "palantirnet/drupal-rector": "^0.20.3"
   }
 }
