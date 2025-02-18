@@ -55,7 +55,6 @@
     "drupal/captcha": "^2.0@beta",
     "drupal/coffee": "^2.0",
     "drupal/collapsiblock": "^4.0",
-    "drupal/composer_deploy": "^1.10",
     "drupal/condition_query": "2.x-dev",
     "drupal/conditional_fields": "^4.0@alpha",
     "drupal/conductor": "^1.0@beta",
@@ -89,7 +88,6 @@
     "drupal/geofield": "^1.64",
     "drupal/gin": "^3.0@RC",
     "drupal/gin_moderation_sidebar": "^1.0@RC",
-    "drupal/git_deploy": "^2.6",
     "drupal/google_tag": "^2.0",
     "drupal/graphql": "^4.4",
     "drupal/graphql_core_schema": "^1.0@beta",
@@ -146,7 +144,6 @@
     "drupal/token": "^1.11",
     "drupal/toolbar_manager": "^2.0",
     "drupal/unstructured": "^2.0@beta",
-    "drupal/upgrade_status": "^4.3",
     "drupal/view_modes_display": "4.x-dev",
     "drupal/views_flag_refresh": "^1.0",
     "drupal/views_json_source": "^2.0",
@@ -396,8 +393,5 @@
       "rm -rf docroot vendor composer.lock"
     ],
     "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf"
-  },
-  "require-dev": {
-    "palantirnet/drupal-rector": "^0.20.3"
   }
 }
