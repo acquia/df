@@ -61,6 +61,7 @@
     "drupal/config_delete": "^2.0",
     "drupal/config_filter": "^2.4",
     "drupal/consumer_image_styles": "^4.0",
+    "drupal/context": "6.x-dev",
     "drupal/content_planner": "^1.2",
     "drupal/core-composer-scaffold": "^11.1",
     "drupal/core-recommended": "^11.1",
@@ -74,6 +75,7 @@
     "drupal/entity_browser": "^2.9",
     "drupal/entity_comparison": "^4.0",
     "drupal/entity_reference_revisions": "^1.10",
+    "drupal/entity_role_view_mode_switcher": "3.x-dev",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/facets": "^2.0",
     "drupal/facets_pretty_paths": "^2",
@@ -91,6 +93,7 @@
     "drupal/google_tag": "^2.0",
     "drupal/graphql": "^4.4",
     "drupal/graphql_core_schema": "^1.0@beta",
+    "drupal/image_url_formatter": "2.x-dev",
     "drupal/imce": "^3.0",
     "drupal/inline_entity_form": "^3.0@RC",
     "drupal/jquery_ui_dialog": "^2.0",
@@ -98,6 +101,8 @@
     "drupal/jsonapi_hypermedia": "^1.10",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_node_preview_tab": "^1.0",
+    "drupal/jsonapi_schema": "3.x-dev",
+    "drupal/js_cookie": "^1.0",
     "drupal/leaflet": "^10.0",
     "drupal/leaflet_more_maps": "^2.1",
     "drupal/link_attributes": "^2",
@@ -111,17 +116,20 @@
     "drupal/moderation_note": "^1.0@beta",
     "drupal/monsido_tools": "^1.1",
     "drupal/mysql57": "^1.0",
+    "drupal/new_relic_rpm": "3.x-dev",
     "drupal/next": "^2.0@RC",
     "drupal/openai_images": "^1.0",
     "drupal/page_manager": "^4.0@RC",
     "drupal/project_browser": "^1.0@beta",
     "drupal/purge": "^3.4",
     "drupal/pwa": "^2.1@beta",
+    "drupal/rdf": "^3.0@beta",
     "drupal/recaptcha": "^3.2",
     "drupal/require_login": "^3.0",
     "drupal/reroute_email": "^2.3@RC",
     "drupal/restui": "^1.21",
     "drupal/revision_log_default": "^1.3",
+    "drupal/robotstxt": "^1.6",
     "drupal/samlauth": "^3.8",
     "drupal/save_edit": "^1.6",
     "drupal/search_api": "^1.28",
@@ -135,19 +143,23 @@
     "drupal/simplelogin": "^7.0",
     "drupal/sitestudio_extras": "1.0.x-dev@dev",
     "drupal/sitestudio_gin": "^1.0@RC",
+    "drupal/slack": "2.x-dev",
     "drupal/smart_date": "^4.2@beta",
     "drupal/storage": "^1.4@beta",
     "drupal/svg_image_field": "^2.3",
+    "drupal/tac_lite": "2.x-dev",
     "drupal/tb_megamenu": "^3.0@alpha",
     "drupal/tmgmt": "^1.14",
     "drupal/tmgmt_deepl": "^2.2",
     "drupal/token": "^1.11",
     "drupal/toolbar_manager": "^2.0",
     "drupal/unstructured": "^2.0@beta",
+    "drupal/user_field_value": "2.x-dev",
+    "drupal/views_base_url": "3.x-dev",
     "drupal/view_modes_display": "4.x-dev",
     "drupal/views_flag_refresh": "^1.0",
     "drupal/views_json_source": "^2.0",
-    "drupal/vwo": "2.x-dev",
+    "drupal/vwo": "^1.8",
     "drupal/webform": "^6.3@beta",
     "drupal/webform_mautic": "^2.0",
     "drupal/webform_rest": "^4.2",
@@ -246,17 +258,11 @@
       "drupal/acquia_dam": {
         "TypeError: array_map(): Argument #2 ($array) must be of type array": "patches/acquia_dam-check-for-image-properties.patch"
       },
-      "drupal/context": {
-        "Automated Drupal 11 compatibility fixes for context": "https://www.drupal.org/files/issues/2025-01-02/d11-3429553-15.patch"
-      },
       "drupal/default_content": {
         "Import doesn't overwrite files | https://drupal.org/node/3200212": "https://www.drupal.org/files/issues/2024-08-27/default_content-3200212-25.patch"
       },
       "drupal/entity_browser": {
         "Improve Field Widget UX for single-cardinality File/Image fields | http://drupal.org/node/2825555": "https://www.drupal.org/files/issues/2018-06-16/entity_browser-single-value-widget-ux-2825555-20-D8.patch"
-      },
-      "drupal/entity_role_view_mode_switcher": {
-        "Automated Drupal 11 compatibility fixes for entity_role_view_mode_switcher": "https://www.drupal.org/files/issues/2024-03-17/entity_role_view_mode_switcher.2.0.0.rector.patch"
       },
       "drupal/gin": {
         "Use Gin's edit form for Media Entries | http://drupal.org/node/3281343": "https://www.drupal.org/files/issues/2023-04-21/edit-form-media-3281343-11.patch",
@@ -271,17 +277,8 @@
       "drupal/graphql": {
         "Add missing subrequest buffer.": "https://patch-diff.githubusercontent.com/raw/drupal-graphql/graphql/pull/1313.patch"
       },
-      "drupal/image_url_formatter": {
-        "Automated Drupal 11 compatibility fixes for image_url_formatter": "https://www.drupal.org/files/issues/2025-01-12/image_url_formatter.1.x-dev.rector.patch"
-      },
-      "drupal/jsonapi_schema": {
-        "Automated Drupal 11 compatibility fixes for jsonapi_schema": "https://www.drupal.org/files/issues/2024-03-18/jsonapi_schema.8.x-1.x-dev.rector.patch"
-      },
       "drupal/mautic": {
         "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
-      },
-      "drupal/new_relic_rpm": {
-        "Automated Drupal 11 compatibility fixes for new_relic_rpm": "https://www.drupal.org/files/issues/2024-10-31/new_relic_rpm-3433555-4_0.patch"
       },
       "drupal/openai_images": {
         "Changing the field name from field_media_image to image in DF Image Media Type": "patches/changing_field_name_to_image.patch"
@@ -289,20 +286,8 @@
       "drupal/pathauto": {
         "Aliases are not created for affected translations | http://drupal.org/node/2973478": "https://www.drupal.org/files/issues/2018-07-12/2973478-4.patch"
       },
-      "drupal/slack": {
-        "Automated Drupal 11 compatibility fixes for slack": "https://www.drupal.org/files/issues/2024-03-25/slack.8.x-1.4.rector.patch"
-      },
-      "drupal/tac_lite": {
-        "Drupal 11 compatibility": "patches/d11-tac_lite-compatibility.patch"
-      },
       "drupal/tmgmt_google": {
         "Automated Drupal 11 compatibility fixes for tmgmt_google": "https://www.drupal.org/files/issues/2024-03-25/tmgmt_google.8.x-1.1.rector.patch"
-      },
-      "drupal/user_field_value": {
-        "Automated Drupal 11 compatibility fixes for user_field_value": "https://www.drupal.org/files/issues/2024-03-25/user_field_value.8.1.3.rector.patch"
-      },
-      "drupal/views_base_url": {
-        "Automated Drupal 11 compatibility fixes for views_base_url": "https://www.drupal.org/files/issues/2024-06-02/views_base_url.2.1.0-beta1.rector.patch"
       },
       "drupal/webform_rest": {
         "Add API endpoint for retrieving autocomplete options | https://drupal.org/node/3317762": "https://www.drupal.org/files/issues/2022-10-27/3317762-2.patch"
@@ -334,34 +319,74 @@
   },
   "repositories": {
     "condition-query": {
-      "type": "vcs",
-      "url": "https://github.com/vaibhav-acquia/condition_query",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/condition_query",
+        "canonical": true
+    },
+    "context": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/context",
+        "canonical": true
+    },
+    "entity-role-view-mode-switcher": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/entity_role_view_mode_switcher",
+        "canonical": true
+    },
+    "image-url-formatter": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/image_url_formatter",
+        "canonical": true
     },
     "jsonapi-explorer": {
-      "type": "vcs",
-      "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
+        "canonical": true
+    },
+    "jsonapi-schema": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/jsonapi_schema",
+        "canonical": true
     },
     "mautic-api": {
-      "type": "vcs",
-      "url": "https://github.com/kevinfunk/mautic_api",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/kevinfunk/mautic_api",
+        "canonical": true
     },
     "mautic": {
-      "type": "vcs",
-      "url": "https://github.com/vaibhav-acquia/mautic",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/mautic",
+        "canonical": true
+    },
+    "new-relic-rpm": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/new_relic_rpm",
+        "canonical": true
+    },
+    "slack": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/slack",
+        "canonical": true
+    },
+    "tac-lite": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/tac_lite",
+        "canonical": true
+    },
+    "user-field-value": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/user_field_value",
+        "canonical": true
+    },
+    "views-base-url": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/views_base_url",
+        "canonical": true
     },
     "view-modes-display": {
-      "type": "vcs",
-      "url": "https://github.com/vaibhav-acquia/view_modes_display",
-      "canonical": true
-    },
-    "vwo": {
-      "type": "vcs",
-      "url": "https://github.com/vaibhav-acquia/vwo",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/view_modes_display",
+        "canonical": true
     },
     "drupal": {
       "type": "composer",
