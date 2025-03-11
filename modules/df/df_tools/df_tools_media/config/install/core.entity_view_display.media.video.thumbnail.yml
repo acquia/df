@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail
+    - field.field.media.video.field_categories
+    - field.field.media.video.field_media_oembed_video
+    - field.field.media.video.field_tags
+    - image.style.thumbnail
+    - media.type.video
+  module:
+    - image
+id: media.video.thumbnail
+targetEntityType: media
+bundle: video
+mode: thumbnail
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_categories: true
+  field_media_oembed_video: true
+  field_tags: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

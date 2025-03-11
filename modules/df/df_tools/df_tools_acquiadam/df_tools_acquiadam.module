@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Contains df_tools_acquiadam.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\MediaInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function df_tools_acquiadam_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $dam_add_forms = '/^media_acquia_dam_.*_add_form$/';
+  $dam_edit_forms = '/^media_acquia_dam_.*_edit_form$/';
+
+  // Hide DAM fields when creating DAM media entities.
+  if (preg_match($dam_add_forms, $form_id)) {
+    $fields_to_hide = [
+      'name',
+      'acquia_dam_asset_id',
+      'acquia_dam_alt_text',
+      'status',
+    ];
+    foreach ($fields_to_hide as $field) {
+      if (isset($form[$field])) {
+        $form[$field]['#access'] = FALSE;
+      }
+    }
+  }
+
+  // Disable DAM fields when editing DAM media entities.
+  if (preg_match($dam_edit_forms, $form_id)) {
+    $fields_to_disable = [
+      'name',
+      'acquia_dam_alt_text',
+    ];
+    foreach ($fields_to_disable as $field) {
+      if (isset($form[$field])) {
+        $form[$field]['#disabled'] = TRUE;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_operation_alter().
+ */
+function df_tools_acquiadam_entity_operation_alter(array &$operations, EntityInterface $entity) {
+  // Remove the clone operation for DAM media entities.
+  $entityTypeId = $entity->getEntityTypeId();
+  $bundle = $entity->bundle();
+
+  if ($entityTypeId == 'media' || strpos($bundle, 'acquia_dam_') === 0) {
+    unset($operations['clone']);
+  }
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function df_tools_acquiadam_menu_local_tasks_alter(&$data, $route_name) {
+  // Remove the clone operation for DAM media entities.
+  $routes = ['entity.media.edit_form', 'entity.media.canonical'];
+  if (in_array($route_name, $routes)) {
+    $route_match = \Drupal::routeMatch();
+    $media = $route_match->getParameter('media');
+
+    if ($media instanceof MediaInterface && strpos($media->bundle(), 'acquia_dam_') === 0) {
+      unset($data['tabs'][0]['entity_clone.clone:media.clone_tab']);
+    }
+  }
+}

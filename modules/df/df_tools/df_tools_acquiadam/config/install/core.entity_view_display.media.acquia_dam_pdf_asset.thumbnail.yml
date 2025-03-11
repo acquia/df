@@ -3,12 +3,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.thumbnail
-    - media.type.acquia_dam_image_asset
+    - media.type.acquia_dam_pdf_asset
   module:
     - acquia_dam
-id: media.acquia_dam_image_asset.thumbnail
+id: media.acquia_dam_pdf_asset.thumbnail
 targetEntityType: media
-bundle: acquia_dam_image_asset
+bundle: acquia_dam_pdf_asset
 mode: thumbnail
 content:
   thumbnail:
