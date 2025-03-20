@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4ef08bea46bf3c5aa8140bb1ec14b60",
+    "content-hash": "e8eb974ff3c80b5a37d9e2be23295fb4",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -8526,6 +8526,68 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/datalayer",
                 "issues": "https://www.drupal.org/project/issues/datalayer"
+            }
+        },
+        {
+            "name": "drupal/datalayer_webform",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/datalayer_webform.git",
+                "reference": "1.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/datalayer_webform-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "293ace1b60cfd07bac174b2c78bbbd8a5afecac4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/datalayer": "*",
+                "drupal/webform": "^6.0 || ^5.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.4",
+                    "datestamp": "1732539765",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Crzdev",
+                    "homepage": "https://www.drupal.org/u/crzdev"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/3199908/committers"
+                },
+                {
+                    "name": "eduardo morales alberti",
+                    "homepage": "https://www.drupal.org/user/3546420"
+                },
+                {
+                    "name": "omarlopesino",
+                    "homepage": "https://www.drupal.org/user/2853043"
+                },
+                {
+                    "name": "tunic",
+                    "homepage": "https://www.drupal.org/user/397132"
+                }
+            ],
+            "description": "Send datalayer events on Webform submission",
+            "homepage": "https://www.drupal.org/project/datalayer_webform",
+            "support": {
+                "source": "https://git.drupalcode.org/project/datalayer_webform"
             }
         },
         {
