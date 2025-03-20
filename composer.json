@@ -387,6 +387,7 @@
     "post-update-cmd": [
       "rsync -a modules/ docroot/modules",
       "rsync -a profiles/ docroot/profiles",
+      "rsync -a private-libraries/ docroot/libraries",
       "composer run-script remove-git-submodules"
     ],
     "nuke": [
