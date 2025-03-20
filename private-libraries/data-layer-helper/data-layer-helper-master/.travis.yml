@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "14"
+addons:
+  firefox: latest
+  chrome: stable
+dist: xenial
+services:
+  - xvfb
+os:
+  - linux
+  - osx
+script: yarn test
