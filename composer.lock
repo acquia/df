@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8eb974ff3c80b5a37d9e2be23295fb4",
+    "content-hash": "0b4c93d0ff8bca174c112640069ba184",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -11323,6 +11323,54 @@
             "homepage": "https://www.drupal.org/project/google_tag",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_tag"
+            }
+        },
+        {
+            "name": "drupal/google_tag_events",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_tag_events.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_tag_events-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "5b76ad6aff4ac2e501c80aa09191142cce2d3a41"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10",
+                "drupal/google_tag": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1705997406",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vyacheslav Malchik (validoll)",
+                    "homepage": "https://www.drupal.org/u/validoll",
+                    "email": "for@validoll.ru",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides API to create GTM events infrastructure.",
+            "homepage": "https://drupal.org/project/google_tag_events",
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_tag_events",
+                "issues": "https://drupal.org/project/issues/google_tag_events"
             }
         },
         {
