@@ -32,9 +32,7 @@
     "drupal/acquia_cms_video": "^1.5",
     "drupal/acquia_contenthub": "^3.2",
     "drupal/acquia_dam": "^1.1",
-    "drupal/acquia_lift": "^4.5",
     "drupal/acquia_optimize": "^1.0",
-    "drupal/acquia_perz": "^4.1",
     "drupal/acquia_vwo": "^1.0",
     "drupal/acsf": "^2.73",
     "drupal/add_content_by_bundle": "^1.2",
@@ -43,7 +41,6 @@
     "drupal/admin_toolbar": "^3.4",
     "drupal/ai": "^1.0",
     "drupal/ai_agents": "^1.0",
-    "drupal/ai_image": "^1.0@beta",
     "drupal/ai_image_alt_text": "^1.0",
     "drupal/ai_provider_openai": "^1.0",
     "drupal/ai_seo": "^1.0@beta",
@@ -57,10 +54,9 @@
     "drupal/bpmn_io": "^1.1",
     "drupal/camunda": "^1.0",
     "drupal/captcha": "^2.0@beta",
-    "drupal/ckeditor": "^1.0",
     "drupal/coffee": "^1.3",
     "drupal/collapsiblock": "^4.0",
-    "drupal/color": "^1.0",
+    "drupal/composer_deploy": "^1.10",
     "drupal/condition_query": "2.x-dev",
     "drupal/conditional_fields": "^4.0@alpha",
     "drupal/conductor": "^1.0@beta",
@@ -68,7 +64,7 @@
     "drupal/config_filter": "^2.4",
     "drupal/consumer_image_styles": "^4.0",
     "drupal/content_planner": "^1.2",
-    "drupal/context": "^5.0@RC",
+    "drupal/context": "6.x-dev",
     "drupal/core-composer-scaffold": "^10",
     "drupal/core-recommended": "^10",
     "drupal/crop": "^2.3",
@@ -83,7 +79,7 @@
     "drupal/entity_browser": "^2.9",
     "drupal/entity_comparison": "^4.0",
     "drupal/entity_reference_revisions": "^1.10",
-    "drupal/entity_role_view_mode_switcher": "^2.0",
+    "drupal/entity_role_view_mode_switcher": "3.x-dev",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/facets": "^2.0",
     "drupal/facets_pretty_paths": "^2",
@@ -96,31 +92,28 @@
     "drupal/fpa": "^4.0",
     "drupal/fullcalendar": "^3.0@beta",
     "drupal/geofield": "1.56",
-    "drupal/get_tweets": "^3.0@alpha",
     "drupal/gin": "^3.0@RC",
     "drupal/gin_moderation_sidebar": "^1.0@RC",
+    "drupal/git_deploy": "^2.6",
     "drupal/google_tag": "^2.0",
     "drupal/google_tag_events": "^3.0",
     "drupal/graphql": "^4.4",
     "drupal/graphql_core_schema": "^1.0@beta",
-    "drupal/hal": "^2.0",
-    "drupal/image_url_formatter": "^1.x-dev",
+    "drupal/image_url_formatter": "2.x-dev",
     "drupal/imce": "^3.0",
     "drupal/inline_entity_form": "^1.0@RC",
-    "drupal/jquery_ui": "^1.6",
-    "drupal/jquery_ui_autocomplete": "^2.0",
     "drupal/jquery_ui_dialog": "^2.0",
-    "drupal/jquery_ui_draggable": "^2.0",
-    "drupal/jquery_ui_droppable": "^2.0",
-    "drupal/json_field": "^1.2",
+    "drupal/js_cookie": "^1.0",
     "drupal/jsonapi_explorer": "2.x-dev",
+    "drupal/jsonapi_hypermedia": "^1.10",
     "drupal/jsonapi_menu_items": "^1.2",
     "drupal/jsonapi_node_preview_tab": "^1.0",
+    "drupal/jsonapi_schema": "3.x-dev",
     "drupal/leaflet": "^10.0",
     "drupal/leaflet_more_maps": "^2.1",
     "drupal/link_attributes": "^2",
     "drupal/masquerade": "^2.0@RC",
-    "drupal/mautic": "^1.13",
+    "drupal/mautic": "2.x-dev",
     "drupal/mautic_api": "2.x-dev",
     "drupal/media_acquiadam": "^2.0",
     "drupal/menu_item_extras": "^3.0",
@@ -128,13 +121,13 @@
     "drupal/moderated_content_bulk_publish": "^3.0@beta",
     "drupal/moderation_note": "^1.0@beta",
     "drupal/monsido_tools": "^1.1",
-    "drupal/new_relic_rpm": "^2.1",
+    "drupal/mysql57": "^1.0",
+    "drupal/new_relic_rpm": "3.x-dev",
     "drupal/next": "1.6.3",
     "drupal/next_jsonapi": "1.6.3",
     "drupal/openai_images": "^1.0",
     "drupal/page_manager": "^4.0@RC",
     "drupal/panels": "^4.7",
-    "drupal/permissions_filter": "^1.3",
     "drupal/profile_switcher": "^1.0@alpha",
     "drupal/project_browser": "^1.0@beta",
     "drupal/purge": "^3.4",
@@ -158,21 +151,21 @@
     "drupal/simplelogin": "^7.0",
     "drupal/sitestudio_extras": "^1.0@beta",
     "drupal/sitestudio_gin": "^1.0@RC",
-    "drupal/slack": "^1.4",
+    "drupal/slack": "2.x-dev",
     "drupal/smart_date": "^4.2@beta",
     "drupal/storage": "^1.2",
     "drupal/svg_image_field": "^2.3",
-    "drupal/tac_lite": "^1.7",
+    "drupal/tac_lite": "2.x-dev",
     "drupal/tb_megamenu": "^3.0@alpha",
     "drupal/tmgmt": "^1.14",
     "drupal/tmgmt_deepl": "^2.2",
-    "drupal/tmgmt_google": "^1.0",
     "drupal/token": "^1.11",
     "drupal/toolbar_manager": "^2.0",
     "drupal/unstructured": "^2.0@beta",
-    "drupal/user_field_value": "^8.1",
-    "drupal/view_modes_display": "^3",
-    "drupal/views_base_url": "^2.1@beta",
+    "drupal/upgrade_status": "^4.3",
+    "drupal/user_field_value": "2.x-dev",
+    "drupal/view_modes_display": "4.x-dev",
+    "drupal/views_base_url": "3.x-dev",
     "drupal/views_flag_refresh": "^1.0",
     "drupal/views_json_source": "^1.4",
     "drupal/vwo": "^1",
@@ -180,7 +173,6 @@
     "drupal/webform_mautic": "^2.0",
     "drupal/webform_rest": "^4.0",
     "drupal/webform_views": "^5.1",
-    "drupal/yext": "^1",
     "drupal/yoast_seo": "^2.0@alpha",
     "drush/drush": "^12",
     "kevinfunk/content_filter": "1.x-dev",
@@ -307,9 +299,6 @@
       "drupal/inline_entity_form": {
         "Can't add more than two items with simple inline entity form widget under some circumstances | https://www.drupal.org/project/inline_entity_form/issues/3088901": "https://www.drupal.org/files/issues/2022-03-23/3088901-1.0-rc10-cant-add-more-than-two-items.patch"
       },
-      "drupal/jsonapi_schema": {
-        "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
-      },
       "drupal/mautic": {
         "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
       },
@@ -350,19 +339,74 @@
   },
   "repositories": {
     "condition-query": {
-      "type": "vcs",
-      "url": "https://github.com/vaibhav-acquia/condition_query",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/condition_query",
+        "canonical": true
+    },
+    "context": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/context",
+        "canonical": true
+    },
+    "entity-role-view-mode-switcher": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/entity_role_view_mode_switcher",
+        "canonical": true
+    },
+    "image-url-formatter": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/image_url_formatter",
+        "canonical": true
     },
     "jsonapi-explorer": {
-      "type": "vcs",
-      "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
+        "canonical": true
+    },
+    "jsonapi-schema": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/jsonapi_schema",
+        "canonical": true
     },
     "mautic-api": {
-      "type": "vcs",
-      "url": "https://github.com/kevinfunk/mautic_api",
-      "canonical": true
+        "type": "vcs",
+        "url": "https://github.com/kevinfunk/mautic_api",
+        "canonical": true
+    },
+    "mautic": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/mautic",
+        "canonical": true
+    },
+    "new-relic-rpm": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/new_relic_rpm",
+        "canonical": true
+    },
+    "slack": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/slack",
+        "canonical": true
+    },
+    "tac-lite": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/tac_lite",
+        "canonical": true
+    },
+    "user-field-value": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/user_field_value",
+        "canonical": true
+    },
+    "views-base-url": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/views_base_url",
+        "canonical": true
+    },
+    "view-modes-display": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/view_modes_display",
+        "canonical": true
     },
     "drupal": {
       "type": "composer",
@@ -395,5 +439,8 @@
       "rm -rf docroot vendor composer.lock"
     ],
     "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf"
+  },
+  "require-dev": {
+    "palantirnet/drupal-rector": "^0.20.3"
   }
 }
