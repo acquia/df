@@ -128,7 +128,7 @@
     "drupal/openai_images": "^1.0",
     "drupal/page_manager": "^4.0@RC",
     "drupal/panels": "^4.7",
-    "drupal/profile_switcher": "^1.0@alpha",
+    "drupal/profile_switcher": "2.x-dev",
     "drupal/project_browser": "^1.0@beta",
     "drupal/purge": "^3.4",
     "drupal/pwa": "^2.0@RC",
@@ -381,6 +381,11 @@
     "new-relic-rpm": {
         "type": "vcs",
         "url": "https://github.com/vaibhav-acquia/new_relic_rpm",
+        "canonical": true
+    },
+    "profile-switcher": {
+        "type": "vcs",
+        "url": "https://github.com/vaibhav-acquia/profile_switcher",
         "canonical": true
     },
     "slack": {
