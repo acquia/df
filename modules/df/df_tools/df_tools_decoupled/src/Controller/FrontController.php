@@ -19,7 +19,7 @@ class FrontController extends ControllerBase {
       if (\Drupal::moduleHandler()->moduleExists('moderation_dashboard')
         && $this->currentUser()->hasPermission('use moderation dashboard')) {
           // Permitted users are directed to their moderation dashboard.
-          return $this->redirect('page_manager.page_view_moderation_dashboard_moderation_dashboard-panels_variant-0', ['user' => $this->currentUser()->id()]);
+          return $this->redirect('view.moderation_dashboard.page_1', ['user' => $this->currentUser()->id()]);
       }
       elseif ($this->currentUser()->hasPermission('access content overview')) {
         // Permitted users are directed to the admin content page.
