@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3121943b7a895fbfce5d0cc7a4e137ce",
+    "content-hash": "5333e573c8e0c61c261078380223b322",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -19249,48 +19249,43 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.2.9",
+            "version": "6.3.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.2.9"
+                "reference": "6.3.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.2.9.zip",
-                "reference": "6.2.9",
-                "shasum": "650752c3cc6d0144c6f378b8d25d45c083e23600"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.3.0-beta2.zip",
+                "reference": "6.3.0-beta2",
+                "shasum": "02e45bf3716c6e81846a9b77837782a43053e6f9"
             },
             "require": {
-                "drupal/core": "^10.2",
-                "php": ">=8.1"
+                "drupal/core": "^10.3 || ^11.0"
             },
             "require-dev": {
-                "drupal/address": "1.x-dev",
-                "drupal/bootstrap": "3.x-dev",
-                "drupal/captcha": "^1 || ^2",
-                "drupal/chosen": "3.0.x-dev",
-                "drupal/ckeditor": "1.0.x-dev",
-                "drupal/clientside_validation": "^3 || ^4",
+                "drupal/address": "^2.0",
+                "drupal/captcha": "^2.0",
+                "drupal/chosen": "^4.0",
+                "drupal/clientside_validation": "^4.1",
                 "drupal/clientside_validation_jquery": "*",
-                "drupal/devel": "5.x-dev",
-                "drupal/entity": "1.x-dev",
-                "drupal/entity_print": "2.x-dev",
-                "drupal/group": "1.x-dev",
-                "drupal/hal": "1 - 2",
-                "drupal/jquery_ui": "1.x-dev",
-                "drupal/jquery_ui_button": "2.x-dev",
-                "drupal/jquery_ui_checkboxradio": "2.x-dev",
-                "drupal/jquery_ui_datepicker": "2.x-dev",
-                "drupal/mailsystem": "4.x-dev",
-                "drupal/metatag": "1.x-dev",
-                "drupal/paragraphs": "1.x-dev",
+                "drupal/devel": "^5.3",
+                "drupal/entity": "^1.5",
+                "drupal/entity_print": "^2.15",
+                "drupal/hal": "^2.0",
+                "drupal/jquery_ui": "^1.7",
+                "drupal/jquery_ui_button": "^2.1",
+                "drupal/jquery_ui_checkboxradio": "^2.1",
+                "drupal/jquery_ui_datepicker": "^2.1",
+                "drupal/mailsystem": "^4.5",
+                "drupal/metatag": "^2.0",
+                "drupal/paragraphs": "^1.18",
                 "drupal/select2": "1.x-dev",
-                "drupal/smtp": "1.x-dev",
-                "drupal/styleguide": "^1 || ^2",
+                "drupal/smtp": "^1.4",
+                "drupal/styleguide": "^2.1",
                 "drupal/telephone_validation": "2.x-dev",
-                "drupal/token": "1.x-dev",
-                "drupal/variationcache": "1.x-dev",
+                "drupal/token": "^1.15",
                 "drupal/webform_access": "*",
                 "drupal/webform_attachment": "*",
                 "drupal/webform_clientside_validation": "*",
@@ -19309,16 +19304,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.2.9",
-                    "datestamp": "1733851063",
+                    "version": "6.3.0-beta2",
+                    "datestamp": "1742582977",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": ">=9"
+                        "drush.services.yml": ">=11"
                     }
                 }
             },
@@ -19412,27 +19407,30 @@
         },
         {
             "name": "drupal/webform_rest",
-            "version": "4.1.0",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform_rest.git",
-                "reference": "4.1.0"
+                "reference": "4.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform_rest-4.1.0.zip",
-                "reference": "4.1.0",
-                "shasum": "ccdb351c28631b0edd284edfd5c4f58408645520"
+                "url": "https://ftp.drupal.org/files/projects/webform_rest-4.2.0.zip",
+                "reference": "4.2.0",
+                "shasum": "73d2b182022b22e9471b497bdeed8a5a35c4758e"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9 || ^10",
-                "drupal/webform": "^6.1"
+                "drupal/core": "^10.3 || ^11",
+                "drupal/webform": "^6.3@alpha"
+            },
+            "require-dev": {
+                "drupal/hal": "^2.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.0",
-                    "datestamp": "1702831078",
+                    "version": "4.2.0",
+                    "datestamp": "1736288230",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -30539,7 +30537,6 @@
         "drupal/tb_megamenu": 15,
         "drupal/unstructured": 10,
         "drupal/views_base_url": 10,
-        "drupal/webform": 10,
         "drupal/yoast_seo": 15,
         "kevinfunk/content_filter": 20,
         "kevinfunk/default_content_ui": 20
