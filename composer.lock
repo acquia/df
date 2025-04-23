@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8b533c9e7a6676de2fda88b9b4e0b04",
+    "content-hash": "7f654937d8a518403c2de7d6103fbf13",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -15501,35 +15501,36 @@
         },
         {
             "name": "drupal/pwa",
-            "version": "2.0.0-rc2",
+            "version": "2.1.0-beta7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/pwa.git",
-                "reference": "2.0.0-rc2"
+                "reference": "2.1.0-beta7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pwa-2.0.0-rc2.zip",
-                "reference": "2.0.0-rc2",
-                "shasum": "96906ba6f8d7000099156c5823bd6c4640760f42"
+                "url": "https://ftp.drupal.org/files/projects/pwa-2.1.0-beta7.zip",
+                "reference": "2.1.0-beta7",
+                "shasum": "78f48c3c2c4c46819d146416670f97021c80d9bf"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10"
+                "drupal/core": "^10.3 || ^11",
+                "php": "^8"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-rc2",
-                    "datestamp": "1684225645",
+                    "version": "2.1.0-beta7",
+                    "datestamp": "1738667492",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -15561,10 +15562,18 @@
                     "homepage": "https://www.drupal.org/user/411999"
                 }
             ],
-            "description": "Make the website installable on mobile.",
+            "description": "Provides progressive web app integration for your Drupal site.",
             "homepage": "https://www.drupal.org/project/pwa",
+            "keywords": [
+                "Drupal",
+                "Handheld",
+                "Mobile",
+                "PWA",
+                "Progressive Web App"
+            ],
             "support": {
-                "source": "https://git.drupalcode.org/project/pwa"
+                "source": "https://git.drupalcode.org/project/pwa",
+                "issues": "https://www.drupal.org/project/issues/pwa"
             }
         },
         {
@@ -30587,7 +30596,6 @@
         "drupal/moderation_note": 10,
         "drupal/page_manager": 5,
         "drupal/profile_switcher": 15,
-        "drupal/pwa": 5,
         "drupal/simple_crawler": 20,
         "drupal/sitestudio_extras": 10,
         "drupal/sitestudio_gin": 5,
