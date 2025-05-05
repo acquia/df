@@ -131,7 +131,7 @@
     "drupal/moderated_content_bulk_publish": "^3.0@beta",
     "drupal/moderation_note": "^1.0@beta",
     "drupal/monsido_tools": "^1.1",
-    "drupal/new_relic_rpm": "^2.1",
+    "drupal/new_relic_rpm": "3.x-dev",
     "drupal/next": "1.6.3",
     "drupal/next_jsonapi": "1.6.3",
     "drupal/openai_images": "^1.0",
@@ -382,6 +382,11 @@
       "type": "vcs",
       "url": "https://github.com/kevinfunk/mautic_api",
       "canonical": true
+    },
+    "new-relic-rpm": {
+        "type": "vcs",
+        "url": "https://github.com/kevinfunk/new_relic_rpm",
+        "canonical": true
     },
     "drupal": {
       "type": "composer",
