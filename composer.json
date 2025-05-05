@@ -161,7 +161,7 @@
     "drupal/simplelogin": "^7.0",
     "drupal/sitestudio_extras": "^1.0@beta",
     "drupal/sitestudio_gin": "^1.0@RC",
-    "drupal/slack": "^1.4",
+    "drupal/slack": "3.x-dev",
     "drupal/smart_date": "^4.2@beta",
     "drupal/storage": "^1.4@beta",
     "drupal/svg_image_field": "^2.3",
@@ -391,6 +391,11 @@
     "user-field-value": {
         "type": "vcs",
         "url": "https://github.com/kevinfunk/user_field_value",
+        "canonical": true
+    },
+    "slack": {
+        "type": "vcs",
+        "url": "https://github.com/kevinfunk/slack",
         "canonical": true
     },
     "drupal": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82083a6f1a983a4e7edbbf1fafc552cf",
+    "content-hash": "7c582ec26a59723e4c6e64f1e71b7a93",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -17739,33 +17739,23 @@
         },
         {
             "name": "drupal/slack",
-            "version": "1.4.0",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/slack.git",
-                "reference": "8.x-1.4"
+                "url": "https://github.com/kevinfunk/slack.git",
+                "reference": "c668df8566bbfc4e77875b8bf1e82ce6750ff3a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/slack-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "7c3873ae6875d6693659ee2317d621e599eb47b9"
+                "url": "https://api.github.com/repos/kevinfunk/slack/zipball/c668df8566bbfc4e77875b8bf1e82ce6750ff3a5",
+                "reference": "c668df8566bbfc4e77875b8bf1e82ce6750ff3a5",
+                "shasum": ""
             },
             "require": {
-                "drupal/core": "^9 || ^10"
+                "drupal/core": "^10.1 || ^11"
             },
+            "default-branch": true,
             "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1674691575",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -17794,9 +17784,10 @@
             "description": "Integration with Slack.com service.",
             "homepage": "https://www.drupal.org/project/slack",
             "support": {
-                "source": "https://git.drupalcode.org/project/slack",
-                "issues": "https://www.drupal.org/project/issues/slack"
-            }
+                "issues": "https://www.drupal.org/project/issues/slack",
+                "source": "https://git.drupalcode.org/project/slack"
+            },
+            "time": "2025-04-24T18:21:53+00:00"
         },
         {
             "name": "drupal/smart_date",
@@ -30534,6 +30525,7 @@
         "drupal/simple_crawler": 20,
         "drupal/sitestudio_extras": 10,
         "drupal/sitestudio_gin": 5,
+        "drupal/slack": 20,
         "drupal/smart_date": 10,
         "drupal/storage": 10,
         "drupal/tb_megamenu": 15,
