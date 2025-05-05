@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "386317f72695323a8508db4fb53a5e65",
+    "content-hash": "df2080675dda12cd8386174059b16b89",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -11680,44 +11680,29 @@
         },
         {
             "name": "drupal/image_url_formatter",
-            "version": "dev-1.x",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/image_url_formatter.git",
-                "reference": "840870d98a03ddf4164fd2f8a6fc1cbaec3488a5"
+                "url": "https://github.com/kevinfunk/image_url_formatter.git",
+                "reference": "cc03cba5ee11d7688e3c0835743fbdaef61442ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kevinfunk/image_url_formatter/zipball/cc03cba5ee11d7688e3c0835743fbdaef61442ab",
+                "reference": "cc03cba5ee11d7688e3c0835743fbdaef61442ab",
+                "shasum": ""
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^10 || ^11"
             },
+            "default-branch": true,
             "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.1+2-dev",
-                    "datestamp": "1692258384",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "g089h515r806",
-                    "homepage": "https://www.drupal.org/user/174740"
-                }
-            ],
             "description": "Add an URL formatter for image field.",
-            "homepage": "https://www.drupal.org/project/image_url_formatter",
             "support": {
-                "source": "https://git.drupalcode.org/project/image_url_formatter"
-            }
+                "source": "https://github.com/kevinfunk/image_url_formatter/tree/2.x",
+                "issues": "https://github.com/kevinfunk/image_url_formatter/issues"
+            },
+            "time": "2025-04-24T19:01:52+00:00"
         },
         {
             "name": "drupal/imagemagick",
