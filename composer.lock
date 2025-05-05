@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df2080675dda12cd8386174059b16b89",
+    "content-hash": "7a600fed1110d29594e0e5867f851782",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -13270,67 +13270,36 @@
         },
         {
             "name": "drupal/mautic",
-            "version": "1.13.0",
+            "version": "dev-2.x-blocks",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/mautic.git",
-                "reference": "8.x-1.13"
+                "url": "https://github.com/kevinfunk/mautic.git",
+                "reference": "2719b8e9ba3e5e0e5634572fb85718c21a0949ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/mautic-8.x-1.13.zip",
-                "reference": "8.x-1.13",
-                "shasum": "0ffcce3d5c392b6b209b47e3f0ba83b275c684a8"
+                "url": "https://api.github.com/repos/kevinfunk/mautic/zipball/2719b8e9ba3e5e0e5634572fb85718c21a0949ea",
+                "reference": "2719b8e9ba3e5e0e5634572fb85718c21a0949ea",
+                "shasum": ""
             },
-            "require": {
-                "drupal/core": "^8.8 || ^9 || ^10"
+            "require-dev": {
+                "drupal/acquia_perz": "^4.1"
             },
             "type": "drupal-module",
             "extra": {
-                "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1663934140",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
-                    "name": "acquia",
-                    "homepage": "https://www.drupal.org/user/1231722"
-                },
-                {
-                    "name": "alanhartless",
-                    "homepage": "https://www.drupal.org/user/3639661"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "jarodriguez",
-                    "homepage": "https://www.drupal.org/user/1551452"
-                },
-                {
-                    "name": "lukassykora",
-                    "homepage": "https://www.drupal.org/user/3501891"
-                },
-                {
-                    "name": "mautic",
-                    "homepage": "https://www.drupal.org/user/3183959"
-                }
-            ],
-            "description": "Allows your site to be tracked by Mautic by adding a Javascript tracking code to every page.",
-            "homepage": "https://www.drupal.org/project/mautic",
+            "description": "Mautic drupal package to track the site pages.",
             "support": {
-                "source": "https://git.drupalcode.org/project/mautic"
-            }
+                "source": "https://github.com/kevinfunk/mautic/tree/2.x-blocks",
+                "issues": "https://github.com/kevinfunk/mautic/issues"
+            },
+            "time": "2025-05-05T11:51:31+00:00"
         },
         {
             "name": "drupal/mautic_api",
@@ -30612,6 +30581,7 @@
         "drupal/inline_entity_form": 5,
         "drupal/jsonapi_explorer": 20,
         "drupal/masquerade": 5,
+        "drupal/mautic": 20,
         "drupal/mautic_api": 20,
         "drupal/moderated_content_bulk_publish": 10,
         "drupal/moderation_note": 10,

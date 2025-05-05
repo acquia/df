@@ -123,7 +123,7 @@
     "drupal/leaflet_more_maps": "^2.1",
     "drupal/link_attributes": "^2",
     "drupal/masquerade": "^2.0@RC",
-    "drupal/mautic": "^1.13",
+    "drupal/mautic": "2.x-blocks-dev",
     "drupal/mautic_api": "2.x-dev",
     "drupal/media_acquiadam": "^2.0",
     "drupal/menu_item_extras": "^3.0",
@@ -314,9 +314,6 @@
       "drupal/jsonapi_schema": {
         "Automated Drupal 10 compatibility fixes | https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch": "https://www.drupal.org/files/issues/2023-02-25/d10-compatibility-fix-3297466-15.patch"
       },
-      "drupal/mautic": {
-        "Mautic blocks | http://drupal.org/node/3229268": "patches/mautic-blocks-3229268-01.patch"
-      },
       "drupal/openai_images": {
         "Changing the field name from field_media_image to image in DF Image Media Type": "patches/changing_field_name_to_image.patch",
         "Updating the function to read the image file and convert to content": "patches/convert_image_file_to_content.patch"
@@ -375,6 +372,11 @@
       "type": "vcs",
       "url": "https://github.com/vaibhav-acquia/jsonapi_explorer",
       "canonical": true
+    },
+    "mautic": {
+        "type": "vcs",
+        "url": "https://github.com/kevinfunk/mautic",
+        "canonical": true
     },
     "mautic-api": {
       "type": "vcs",
