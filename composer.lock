@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "253c0870e2d33bbdf432694585e2e0a7",
+    "content-hash": "6b24fc8683ebf8a27f2dce7b5922de94",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -18829,45 +18829,22 @@
         },
         {
             "name": "drupal/view_modes_display",
-            "version": "3.0.0",
+            "version": "4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/view_modes_display.git",
-                "reference": "3.0.0"
+                "url": "https://github.com/kevinfunk/view_modes_display.git",
+                "reference": "86c79ae9d84d70cdc9b5e7785fbfbd0d3fc89121"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/view_modes_display-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "0a27c4bcb9596784dcb99ebd43a3a70d7cded520"
+                "url": "https://api.github.com/repos/kevinfunk/view_modes_display/zipball/86c79ae9d84d70cdc9b5e7785fbfbd0d3fc89121",
+                "reference": "86c79ae9d84d70cdc9b5e7785fbfbd0d3fc89121",
+                "shasum": ""
             },
-            "require": {
-                "drupal/core": "^9.3 || ^10"
-            },
+            "default-branch": true,
             "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1682169896",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "pvhee",
-                    "homepage": "https://www.drupal.org/user/108811"
-                },
-                {
-                    "name": "zach.bimson",
-                    "homepage": "https://www.drupal.org/user/1644060"
-                }
             ],
             "description": "Preview view modes for every entity type",
             "homepage": "https://www.drupal.org/project/view_modes_display",
@@ -18875,9 +18852,10 @@
                 "Drupal"
             ],
             "support": {
-                "source": "http://cgit.drupalcode.org/view_modes_display",
-                "issues": "http://drupal.org/project/issues/view_modes_display"
-            }
+                "issues": "http://drupal.org/project/issues/view_modes_display",
+                "source": "http://cgit.drupalcode.org/view_modes_display"
+            },
+            "time": "2025-04-24T18:32:39+00:00"
         },
         {
             "name": "drupal/views_base_url",
@@ -30506,6 +30484,7 @@
         "drupal/tb_megamenu": 15,
         "drupal/unstructured": 10,
         "drupal/user_field_value": 20,
+        "drupal/view_modes_display": 20,
         "drupal/views_base_url": 10,
         "drupal/yoast_seo": 15,
         "kevinfunk/content_filter": 20,
