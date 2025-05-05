@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3d85705a4e7b83c42585ce7846c87dc",
+    "content-hash": "82083a6f1a983a4e7edbbf1fafc552cf",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -18787,47 +18787,32 @@
         },
         {
             "name": "drupal/user_field_value",
-            "version": "8.1.3",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/user_field_value.git",
-                "reference": "8.1.3"
+                "url": "https://github.com/kevinfunk/user_field_value.git",
+                "reference": "f219eedb2ba34f440c1cc273a7e9e115d3a36f83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/user_field_value-8.1.3.zip",
-                "reference": "8.1.3",
-                "shasum": "30bf3fb539a89a1a23795218ab84a38ed53fd5f9"
+                "url": "https://api.github.com/repos/kevinfunk/user_field_value/zipball/f219eedb2ba34f440c1cc273a7e9e115d3a36f83",
+                "reference": "f219eedb2ba34f440c1cc273a7e9e115d3a36f83",
+                "shasum": ""
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": ">=8.8"
             },
+            "default-branch": true,
             "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.1.3",
-                    "datestamp": "1670299337",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "taggartj",
-                    "homepage": "https://www.drupal.org/user/786470"
-                }
+                "GPL-2.0+"
             ],
             "description": "Provides a Views user field value contextual filter.",
-            "homepage": "https://www.drupal.org/project/user_field_value",
             "support": {
-                "source": "https://git.drupalcode.org/project/user_field_value"
-            }
+                "source": "https://github.com/kevinfunk/user_field_value/tree/2.x",
+                "issues": "https://github.com/kevinfunk/user_field_value/issues"
+            },
+            "time": "2025-05-05T12:20:27+00:00"
         },
         {
             "name": "drupal/username_enumeration_prevention",
@@ -30553,6 +30538,7 @@
         "drupal/storage": 10,
         "drupal/tb_megamenu": 15,
         "drupal/unstructured": 10,
+        "drupal/user_field_value": 20,
         "drupal/views_base_url": 10,
         "drupal/yoast_seo": 15,
         "kevinfunk/content_filter": 20,
