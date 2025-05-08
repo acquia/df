@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e07cab3cdcea3aae32cfb9d27bdee7e9",
+    "content-hash": "2187ab490cb7b0c3dcb9d66e67d63c3d",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -11434,22 +11434,24 @@
         },
         {
             "name": "drupal/google_tag_events",
-            "version": "3.0.0",
+            "version": "4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinfunk/google_tag_events.git",
-                "reference": "724d88d3bb86f09dd7d758c883659b0f0722768e"
+                "reference": "c9feeca1bd86559448d224556d63d2fa185e3d07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/google_tag_events/zipball/724d88d3bb86f09dd7d758c883659b0f0722768e",
-                "reference": "724d88d3bb86f09dd7d758c883659b0f0722768e",
+                "url": "https://api.github.com/repos/kevinfunk/google_tag_events/zipball/c9feeca1bd86559448d224556d63d2fa185e3d07",
+                "reference": "c9feeca1bd86559448d224556d63d2fa185e3d07",
                 "shasum": ""
             },
             "require": {
-                "drupal/core": "^9.2 || ^10",
-                "drupal/google_tag": "^2.0"
+                "drupal/core": "^9.2 || ^10 || ^11",
+                "drupal/google_tag": "^2.0",
+                "drupal/js_cookie": "^1"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "license": [
                 "GPL-2.0-or-later"
@@ -11468,7 +11470,7 @@
                 "issues": "https://drupal.org/project/issues/google_tag_events",
                 "source": "https://git.drupalcode.org/project/google_tag_events"
             },
-            "time": "2024-01-23T07:59:46+00:00"
+            "time": "2025-04-24T18:04:24+00:00"
         },
         {
             "name": "drupal/graphql",
@@ -30445,6 +30447,7 @@
         "drupal/fullcalendar": 10,
         "drupal/get_tweets": 15,
         "drupal/gin_moderation_sidebar": 5,
+        "drupal/google_tag_events": 20,
         "drupal/graphql_core_schema": 10,
         "drupal/image_url_formatter": 20,
         "drupal/inline_entity_form": 5,
