@@ -4,7 +4,9 @@ description: Extends Acquia CMS Article for Demo Framework.
 core_version_requirement: ^9 || ^10 || ^11
 package: Demo Framework Tools
 dependencies:
+  - acquia_cms_common
   - acquia_cms_article
+  - acquia_cms_search
   - df_core
   - df_tools_comment
   - df_tools_media
@@ -14,3 +16,5 @@ dependencies:
   - image_url_formatter
   - layout_builder
   - page_manager
+  - search_api
+  - user
