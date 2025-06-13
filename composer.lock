@@ -5756,17 +5756,17 @@
         },
         {
             "name": "drupal/ai",
-            "version": "1.0.5",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai.git",
-                "reference": "1.0.5"
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ai-1.0.5.zip",
-                "reference": "1.0.5",
-                "shasum": "baa5a21b8261d5572d72c8a698136c9b03b09861"
+                "url": "https://ftp.drupal.org/files/projects/ai-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "68e284453ce90ea362a94f7aef098f802ac6d2d5"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -5792,8 +5792,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.5",
-                    "datestamp": "1741198584",
+                    "version": "1.1.0",
+                    "datestamp": "1749732062",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5805,6 +5805,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "a.dmitriiev",
+                    "homepage": "https://www.drupal.org/user/3235287"
+                },
                 {
                     "name": "gxleano",
                     "homepage": "https://www.drupal.org/user/3591999"
@@ -5846,23 +5850,25 @@
         },
         {
             "name": "drupal/ai_agents",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_agents.git",
-                "reference": "1.0.2"
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ai_agents-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "91837ebea9b4ca6fcf6cfc1b3f93d4295249d63f"
+                "url": "https://ftp.drupal.org/files/projects/ai_agents-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "8f9c004c9ebe098eee8b1e2a97f8c446c9845ab4"
             },
             "require": {
-                "drupal/ai": "^1.0.0",
+                "drupal/ai": "^1.1.0",
                 "drupal/core": "^10.2 || ^11"
             },
             "require-dev": {
+                "drupal/bpmn_io": "3.0.x-dev",
+                "drupal/modeler_api": "1.0.x-dev",
                 "drupal/webform": "^6.0"
             },
             "suggest": {
@@ -5872,8 +5878,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1738909480",
+                    "version": "1.1.0",
+                    "datestamp": "1749732104",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6022,17 +6028,17 @@
         },
         {
             "name": "drupal/ai_media_image",
-            "version": "1.0.0-alpha3",
+            "version": "1.0.0-alpha4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_media_image.git",
-                "reference": "1.0.0-alpha3"
+                "reference": "1.0.0-alpha4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ai_media_image-1.0.0-alpha3.zip",
-                "reference": "1.0.0-alpha3",
-                "shasum": "8ebdf00cd21afeb2d68845bed0c8cd6a416521ea"
+                "url": "https://ftp.drupal.org/files/projects/ai_media_image-1.0.0-alpha4.zip",
+                "reference": "1.0.0-alpha4",
+                "shasum": "f0f5343bdd1c748a381558ff7765e501a3caee24"
             },
             "require": {
                 "drupal/ai": "*",
@@ -6041,8 +6047,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha3",
-                    "datestamp": "1745357867",
+                    "version": "1.0.0-alpha4",
+                    "datestamp": "1749753508",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -6067,20 +6073,20 @@
         },
         {
             "name": "drupal/ai_provider_openai",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_provider_openai.git",
-                "reference": "1.0.2"
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ai_provider_openai-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "1942f27fd2cac935e5a5cc34c466a7e9bb51b632"
+                "url": "https://ftp.drupal.org/files/projects/ai_provider_openai-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "bc0c1bde2cc74726aed1c5a27bb3fb7ae452de1a"
             },
             "require": {
-                "drupal/ai": "^1.0.4",
+                "drupal/ai": "^1.1.0",
                 "drupal/core": "^10.3 || ^11",
                 "drupal/key": "^1.18",
                 "openai-php/client": ">=v0.10.1"
@@ -6088,8 +6094,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1738761667",
+                    "version": "1.1.0",
+                    "datestamp": "1749732136",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6537,17 +6543,17 @@
         },
         {
             "name": "drupal/auto_translation",
-            "version": "1.4.26",
+            "version": "1.4.27",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/auto_translation.git",
-                "reference": "1.4.26"
+                "reference": "1.4.27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/auto_translation-1.4.26.zip",
-                "reference": "1.4.26",
-                "shasum": "3d2624673e538a2fd7db95ec96dd7d4225ee873c"
+                "url": "https://ftp.drupal.org/files/projects/auto_translation-1.4.27.zip",
+                "reference": "1.4.27",
+                "shasum": "2712389b7bd328b3ea0325ab6c8f8427f8063891"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -6556,8 +6562,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.4.26",
-                    "datestamp": "1748607718",
+                    "version": "1.4.27",
+                    "datestamp": "1749628798",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -9385,17 +9391,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.2.10",
+            "version": "2.2.11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.2.10"
+                "reference": "2.2.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.2.10.zip",
-                "reference": "2.2.10",
-                "shasum": "2299571e0102a2b612256b0bcc4a7fdf85bb401f"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.2.11.zip",
+                "reference": "2.2.11",
+                "shasum": "be8e424636492f3613f3c39de83a9d0175fb83bc"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -9406,8 +9412,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.2.10",
-                    "datestamp": "1748985237",
+                    "version": "2.2.11",
+                    "datestamp": "1749656980",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13029,17 +13035,17 @@
         },
         {
             "name": "drupal/leaflet",
-            "version": "10.2.48",
+            "version": "10.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/leaflet.git",
-                "reference": "10.2.48"
+                "reference": "10.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.48.zip",
-                "reference": "10.2.48",
-                "shasum": "97ed5d38b066194c405772d72da91bc05b6986e7"
+                "url": "https://ftp.drupal.org/files/projects/leaflet-10.3.0.zip",
+                "reference": "10.3.0",
+                "shasum": "f6ce11cd328ff929a1d048d99ac4718361d6c1e7"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10 || ^11",
@@ -13048,8 +13054,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "10.2.48",
-                    "datestamp": "1748189091",
+                    "version": "10.3.0",
+                    "datestamp": "1749804082",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14329,6 +14335,10 @@
                     "name": "Pravin Gaikwad (Rajeshreeputra)",
                     "homepage": "https://www.drupal.org/u/rajeshreeputra",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "seanb",
+                    "homepage": "https://www.drupal.org/user/545912"
                 }
             ],
             "description": "Track and prune node revisions.",
@@ -18466,17 +18476,17 @@
         },
         {
             "name": "drupal/tmgmt_deepl",
-            "version": "2.2.11",
+            "version": "2.2.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tmgmt_deepl.git",
-                "reference": "2.2.11"
+                "reference": "2.2.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tmgmt_deepl-2.2.11.zip",
-                "reference": "2.2.11",
-                "shasum": "ab7cb59c352a6b9298d3e0d746549cf1a1d5c0a1"
+                "url": "https://ftp.drupal.org/files/projects/tmgmt_deepl-2.2.12.zip",
+                "reference": "2.2.12",
+                "shasum": "af02a94be76d4ebf10676ef59802e84d77d625aa"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -18485,8 +18495,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.2.11",
-                    "datestamp": "1747912347",
+                    "version": "2.2.12",
+                    "datestamp": "1749799384",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
