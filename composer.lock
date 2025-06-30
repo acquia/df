@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cfe953ad2699f5517eee25a529623d9d",
+    "content-hash": "7fb2104973740ca6a083e437b70584d0",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -178,33 +178,33 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "7.5.2",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "8a585870fb0f6519087841d963ba4d3030ff7487"
+                "reference": "f5b8f3ed764ce121bb9247ef9a1df9e13b4b74f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/8a585870fb0f6519087841d963ba4d3030ff7487",
-                "reference": "8a585870fb0f6519087841d963ba4d3030ff7487",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/f5b8f3ed764ce121bb9247ef9a1df9e13b4b74f6",
+                "reference": "f5b8f3ed764ce121bb9247ef9a1df9e13b4b74f6",
                 "shasum": ""
             },
             "require": {
                 "cweagans/composer-patches": "^1.7",
-                "drupal/entity_reference_revisions": "^1.7",
-                "drupal/imce": "^3.0",
-                "drupal/jquery_ui": "^1.4",
-                "drupal/stable": "^2.0",
-                "drupal/token": "^1.11",
-                "drush/drush": "^11.6 || ^12",
+                "drupal/entity_reference_revisions": "^1.11",
+                "drupal/imce": "^3.1",
+                "drupal/jquery_ui": "^1.7",
+                "drupal/stable": "^2.0 || ^2.1",
+                "drupal/token": "^1.14",
+                "drush/drush": "^11.6 || ^12 || ^13",
                 "ext-json": "*"
             },
             "require-dev": {
-                "acquia/coding-standards": "^1.0.0",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-                "drupal/core-dev": "^9 || ^10",
-                "e0ipso/shaper": "^1"
+                "acquia/coding-standards": "^3.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "drupal/core-dev": "^10 || ^11",
+                "e0ipso/shaper": "^1.2"
             },
             "suggest": {
                 "drupal/admin_toolbar": "Provides a better UX for the standard admin toolbar",
@@ -235,22 +235,22 @@
             ],
             "description": "Site Studio",
             "support": {
-                "source": "https://github.com/acquia/cohesion/tree/7.5.2"
+                "source": "https://github.com/acquia/cohesion/tree/8.1.1"
             },
-            "time": "2024-07-12T10:22:27+00:00"
+            "time": "2025-06-20T12:35:16+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "7.5.2",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "7ca91528209e672e44b7ce0dd0cef8c07714e104"
+                "reference": "df1786faf422291a20d546a263c84632b45352d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/7ca91528209e672e44b7ce0dd0cef8c07714e104",
-                "reference": "7ca91528209e672e44b7ce0dd0cef8c07714e104",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/df1786faf422291a20d546a263c84632b45352d0",
+                "reference": "df1786faf422291a20d546a263c84632b45352d0",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -268,9 +268,9 @@
             "description": "Site Studio minimal theme",
             "support": {
                 "issues": "https://github.com/acquia/cohesion-theme/issues",
-                "source": "https://github.com/acquia/cohesion-theme/tree/7.5.2"
+                "source": "https://github.com/acquia/cohesion-theme/tree/8.1.1"
             },
-            "time": "2024-07-12T10:22:33+00:00"
+            "time": "2025-06-20T12:35:23+00:00"
         },
         {
             "name": "acquia/content-hub-php",
@@ -516,20 +516,20 @@
         },
         {
             "name": "acquia/sitestudio_contenthub",
-            "version": "7.5.2",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/sitestudio_contenthub.git",
-                "reference": "a4c985d4be1363f736d3496dfc2457831a293ef0"
+                "reference": "acff3182a4f3c5b987bd247fffaf65dd6c8b5360"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/a4c985d4be1363f736d3496dfc2457831a293ef0",
-                "reference": "a4c985d4be1363f736d3496dfc2457831a293ef0",
+                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/acff3182a4f3c5b987bd247fffaf65dd6c8b5360",
+                "reference": "acff3182a4f3c5b987bd247fffaf65dd6c8b5360",
                 "shasum": ""
             },
             "require": {
-                "acquia/cohesion": "^7.0",
+                "acquia/cohesion": "^8.0",
                 "drupal/acquia_contenthub": "^3.3.0"
             },
             "type": "drupal-module",
@@ -547,26 +547,26 @@
             "description": "Adds Site Studio support for Acquia ContentHub.",
             "support": {
                 "issues": "https://github.com/acquia/sitestudio_contenthub/issues",
-                "source": "https://github.com/acquia/sitestudio_contenthub/tree/7.5.2"
+                "source": "https://github.com/acquia/sitestudio_contenthub/tree/8.1.1"
             },
-            "time": "2024-07-12T10:22:38+00:00"
+            "time": "2025-06-20T12:35:28+00:00"
         },
         {
             "name": "acquia/sitestudio_jsonapi",
-            "version": "7.5.2",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/sitestudio_jsonapi.git",
-                "reference": "c54016579f3e3904f0e471235b2bc74fd408f432"
+                "reference": "a130ce1dc1aaa070c9cb5a6af1488490c5876162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/sitestudio_jsonapi/zipball/c54016579f3e3904f0e471235b2bc74fd408f432",
-                "reference": "c54016579f3e3904f0e471235b2bc74fd408f432",
+                "url": "https://api.github.com/repos/acquia/sitestudio_jsonapi/zipball/a130ce1dc1aaa070c9cb5a6af1488490c5876162",
+                "reference": "a130ce1dc1aaa070c9cb5a6af1488490c5876162",
                 "shasum": ""
             },
             "require": {
-                "acquia/cohesion": "^7.4",
+                "acquia/cohesion": "^8.0",
                 "drupal/jsonapi_extras": "^3.24"
             },
             "type": "drupal-module",
@@ -584,9 +584,9 @@
             "description": "Site Studio JSON:API",
             "support": {
                 "issues": "https://github.com/acquia/sitestudio_jsonapi/issues",
-                "source": "https://github.com/acquia/sitestudio_jsonapi/tree/7.5.2"
+                "source": "https://github.com/acquia/sitestudio_jsonapi/tree/8.1.1"
             },
-            "time": "2024-07-12T10:22:48+00:00"
+            "time": "2025-06-20T12:35:38+00:00"
         },
         {
             "name": "asm89/stack-cors",
