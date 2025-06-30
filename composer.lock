@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cb2a5400f127a4380bcb0a82af3eecc",
+    "content-hash": "bded21d97746a82a2a22fe6ee1b5433a",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -19023,30 +19023,27 @@
         },
         {
             "name": "drupal/webform_mautic",
-            "version": "2.0.0",
+            "version": "dev-2.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform_mautic.git",
-                "reference": "2.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform_mautic-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "b8e357abe08c97578a3bf64e6f5d3e1e5ddd1197"
+                "reference": "f43aa749a14b57f9cfafa0f035dfee5ee50761ad"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
                 "drupal/webform": "^6"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1658532827",
+                    "version": "2.0.0+1-dev",
+                    "datestamp": "1735218989",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -30140,6 +30137,7 @@
         "drupal/user_field_value": 20,
         "drupal/view_modes_display": 20,
         "drupal/views_base_url": 20,
+        "drupal/webform_mautic": 20,
         "drupal/yoast_seo": 15,
         "kevinfunk/content_filter": 20,
         "kevinfunk/default_content_ui": 20
