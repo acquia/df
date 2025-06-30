@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73fd5f81f884b18e808e3f7175bf0124",
+    "content-hash": "082281ed3d8245a7e234b4f7061639d8",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -11454,43 +11454,52 @@
         },
         {
             "name": "drupal/google_tag_events",
-            "version": "4.x-dev",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinfunk/google_tag_events.git",
-                "reference": "c9feeca1bd86559448d224556d63d2fa185e3d07"
+                "url": "https://git.drupalcode.org/project/google_tag_events.git",
+                "reference": "3.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/google_tag_events/zipball/c9feeca1bd86559448d224556d63d2fa185e3d07",
-                "reference": "c9feeca1bd86559448d224556d63d2fa185e3d07",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/google_tag_events-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "228ceb2506f7dbaa5d7eadd5b399fa0bfbfccd64"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10 || ^11",
                 "drupal/google_tag": "^2.0",
                 "drupal/js_cookie": "^1"
             },
-            "default-branch": true,
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.1.0",
+                    "datestamp": "1749021659",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
             ],
             "authors": [
                 {
                     "name": "Vyacheslav Malchik (validoll)",
-                    "email": "for@validoll.ru",
                     "homepage": "https://www.drupal.org/u/validoll",
+                    "email": "for@validoll.ru",
                     "role": "Maintainer"
                 }
             ],
             "description": "Provides API to create GTM events infrastructure.",
             "homepage": "https://drupal.org/project/google_tag_events",
             "support": {
-                "issues": "https://drupal.org/project/issues/google_tag_events",
-                "source": "https://git.drupalcode.org/project/google_tag_events"
-            },
-            "time": "2025-04-24T18:04:24+00:00"
+                "source": "https://git.drupalcode.org/project/google_tag_events",
+                "issues": "https://drupal.org/project/issues/google_tag_events"
+            }
         },
         {
             "name": "drupal/graphql",
@@ -30501,7 +30510,6 @@
         "drupal/fullcalendar": 10,
         "drupal/get_tweets": 15,
         "drupal/gin_moderation_sidebar": 5,
-        "drupal/google_tag_events": 20,
         "drupal/graphql_core_schema": 10,
         "drupal/image_url_formatter": 20,
         "drupal/inline_entity_form": 5,
