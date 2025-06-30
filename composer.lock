@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f24f36802aacab29b7c0582ccba8eab",
+    "content-hash": "73fd5f81f884b18e808e3f7175bf0124",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -18288,29 +18288,59 @@
         },
         {
             "name": "drupal/tac_lite",
-            "version": "2.x-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinfunk/tac_lite.git",
-                "reference": "2d7c92ee736e7962d33e1f89a821df45d24e13d1"
+                "url": "https://git.drupalcode.org/project/tac_lite.git",
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/tac_lite/zipball/2d7c92ee736e7962d33e1f89a821df45d24e13d1",
-                "reference": "2d7c92ee736e7962d33e1f89a821df45d24e13d1",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/tac_lite-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "0076488ce3667cfec784c6bb5276c1082a332aa4"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
             },
-            "default-branch": true,
             "type": "drupal-module",
-            "description": "Simple access control based on categories.",
-            "support": {
-                "source": "https://github.com/kevinfunk/tac_lite/tree/2.x",
-                "issues": "https://github.com/kevinfunk/tac_lite/issues"
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1751031935",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
             },
-            "time": "2025-04-24T19:20:51+00:00"
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "grndlvl",
+                    "homepage": "https://www.drupal.org/user/103553"
+                },
+                {
+                    "name": "ikit-claw",
+                    "homepage": "https://www.drupal.org/user/3285813"
+                },
+                {
+                    "name": "jenlampton",
+                    "homepage": "https://www.drupal.org/user/85586"
+                },
+                {
+                    "name": "vladimiraus",
+                    "homepage": "https://www.drupal.org/user/673120"
+                }
+            ],
+            "description": "Simple access control based on categories.",
+            "homepage": "https://www.drupal.org/project/tac_lite",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tac_lite"
+            }
         },
         {
             "name": "drupal/tb_megamenu",
@@ -30490,7 +30520,6 @@
         "drupal/slack": 20,
         "drupal/smart_date": 10,
         "drupal/storage": 10,
-        "drupal/tac_lite": 20,
         "drupal/tb_megamenu": 15,
         "drupal/unstructured": 10,
         "drupal/user_field_value": 20,
