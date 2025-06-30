@@ -4,70 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9903cb86efc219fa6f7e43bab3a0cdf7",
+    "content-hash": "e18900b596ba0125e156f808f33799cb",
     "packages": [
-        {
-            "name": "abraham/twitteroauth",
-            "version": "4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/abraham/twitteroauth.git",
-                "reference": "b9302599e416e5c00742cf7f4455220897f8291d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/b9302599e416e5c00742cf7f4455220897f8291d",
-                "reference": "b9302599e416e5c00742cf7f4455220897f8291d",
-                "shasum": ""
-            },
-            "require": {
-                "composer/ca-bundle": "^1.2",
-                "ext-curl": "*",
-                "php": "^7.4 || ^8.0 || ^8.1"
-            },
-            "require-dev": {
-                "php-vcr/php-vcr": "^1",
-                "php-vcr/phpunit-testlistener-vcr": "dev-php-8",
-                "phpmd/phpmd": "^2",
-                "phpunit/phpunit": "^8 || ^9",
-                "rector/rector": "^0.12.19 || ^0.13.0",
-                "squizlabs/php_codesniffer": "^3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Abraham\\TwitterOAuth\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Abraham Williams",
-                    "email": "abraham@abrah.am",
-                    "homepage": "https://abrah.am",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
-            "homepage": "https://twitteroauth.com",
-            "keywords": [
-                "Twitter API",
-                "Twitter oAuth",
-                "api",
-                "oauth",
-                "rest",
-                "social",
-                "twitter"
-            ],
-            "support": {
-                "issues": "https://github.com/abraham/twitteroauth/issues",
-                "source": "https://github.com/abraham/twitteroauth"
-            },
-            "time": "2022-08-18T23:30:33+00:00"
-        },
         {
             "name": "acquia/acf",
             "version": "dev-2.x-feeds",
@@ -10929,63 +10867,6 @@
                 "source": "https://git.drupalcode.org/project/geofield",
                 "issues": "https://www.drupal.org/project/issues/geofield",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
-        },
-        {
-            "name": "drupal/get_tweets",
-            "version": "3.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/get_tweets.git",
-                "reference": "3.0.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/get_tweets-3.0.0-alpha2.zip",
-                "reference": "3.0.0-alpha2",
-                "shasum": "bc8611cde211a0d59873146ca79cddb6aa691eaa"
-            },
-            "require": {
-                "abraham/twitteroauth": "^4.0",
-                "drupal/core": "^9.3 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0-alpha2",
-                    "datestamp": "1735758879",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "baikho",
-                    "homepage": "https://www.drupal.org/user/2727459"
-                },
-                {
-                    "name": "rahul17",
-                    "homepage": "https://www.drupal.org/user/3755248"
-                },
-                {
-                    "name": "rakesh.gectcr",
-                    "homepage": "https://www.drupal.org/user/1177822"
-                },
-                {
-                    "name": "sstanislav",
-                    "homepage": "https://www.drupal.org/user/3066567"
-                }
-            ],
-            "description": "Provides functionality for import tweets in Drupal nodes.",
-            "homepage": "http://drupal.org/project/get_tweets",
-            "support": {
-                "source": "https://git.drupalcode.org/project/get_tweets"
             }
         },
         {
@@ -30075,7 +29956,6 @@
         "drupal/field_validation": 10,
         "drupal/flag": 10,
         "drupal/fullcalendar": 10,
-        "drupal/get_tweets": 15,
         "drupal/gin_moderation_sidebar": 5,
         "drupal/graphql_core_schema": 10,
         "drupal/image_url_formatter": 20,
