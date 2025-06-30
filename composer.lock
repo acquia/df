@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bca2714a07c48ab5e610ba7973326e5",
+    "content-hash": "55b3be627e1bcf75826c419344c15892",
     "packages": [
         {
             "name": "acquia/acf",
@@ -9746,71 +9746,6 @@
             }
         },
         {
-            "name": "drupal/fallback_formatter",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/fallback_formatter.git",
-                "reference": "8.x-1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/fallback_formatter-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "2645bf6d77f7769e69bf40ebfdcfc29d676284d4"
-            },
-            "require": {
-                "drupal/core": "^9.5 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1726841755",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-8.x-1.x": "1.x-dev"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "dave reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "Drupal media CI",
-                    "homepage": "https://www.drupal.org/user/3057985"
-                },
-                {
-                    "name": "Drupal Media Team",
-                    "homepage": "https://www.drupal.org/user/3260690"
-                },
-                {
-                    "name": "phenaproxima",
-                    "homepage": "https://www.drupal.org/user/205645"
-                },
-                {
-                    "name": "slashrsm",
-                    "homepage": "https://www.drupal.org/user/744628"
-                }
-            ],
-            "description": "Provides a field formatter that can attempt multiple formatters and the first one that returns output wins.",
-            "homepage": "https://www.drupal.org/project/fallback_formatter",
-            "support": {
-                "source": "https://git.drupalcode.org/project/fallback_formatter",
-                "issues": "https://www.drupal.org/project/issues/fallback_formatter",
-                "irc": "irc://irc.freenode.org/drupal-media"
-            }
-        },
-        {
             "name": "drupal/feeds",
             "version": "3.0.0",
             "source": {
@@ -12426,96 +12361,6 @@
                 "issues": "https://github.com/kevinfunk/mautic_api/issues"
             },
             "time": "2024-04-03T15:47:48+00:00"
-        },
-        {
-            "name": "drupal/media_acquiadam",
-            "version": "2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/media_acquiadam.git",
-                "reference": "2.1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_acquiadam-2.1.1.zip",
-                "reference": "2.1.1",
-                "shasum": "2e6a2f37a27bb674c8a1224dcd88e89bf482010b"
-            },
-            "require": {
-                "drupal/acquia_dam": "^1.1.2",
-                "drupal/core": "^9.5 || ^10 || ^11",
-                "drupal/fallback_formatter": "^1.0"
-            },
-            "require-dev": {
-                "drupal/entity_browser": "^2.9",
-                "drupal/entity_usage": "*",
-                "drupal/fallback_formatter": "*",
-                "drupal/linkit": "^6.0 || ^7"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.1",
-                    "datestamp": "1751041067",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Acquia",
-                    "homepage": "https://acquia.com",
-                    "email": "sales@acquia.com"
-                },
-                {
-                    "name": "attilatilman",
-                    "homepage": "https://www.drupal.org/user/3528404"
-                },
-                {
-                    "name": "baluertl",
-                    "homepage": "https://www.drupal.org/user/1086292"
-                },
-                {
-                    "name": "barrett",
-                    "homepage": "https://www.drupal.org/user/52745"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "seanpclark",
-                    "homepage": "https://www.drupal.org/user/375472"
-                },
-                {
-                    "name": "vbouchet",
-                    "homepage": "https://www.drupal.org/user/1671428"
-                }
-            ],
-            "description": "Integrates the Media module ecosystem with Acquia DAM.",
-            "homepage": "https://www.drupal.org/project/media_acquiadam",
-            "support": {
-                "source": "https://cgit.drupalcode.org/media_acquiadam",
-                "issues": "https://drupal.org/project/issues/media_acquiadam"
-            }
         },
         {
             "name": "drupal/media_entity_soundcloud",
