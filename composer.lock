@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "189cd27784a8a57d5e1cf71123c0fcc8",
+    "content-hash": "2813ee642393a0fd76c7acfe635e9ae3",
     "packages": [
         {
             "name": "acquia/acf",
@@ -116,16 +116,16 @@
         },
         {
             "name": "acquia/cohesion",
-            "version": "8.0.3",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion.git",
-                "reference": "74119675919a6284ca8f85e7777b8fbc18bc7124"
+                "reference": "f5b8f3ed764ce121bb9247ef9a1df9e13b4b74f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion/zipball/74119675919a6284ca8f85e7777b8fbc18bc7124",
-                "reference": "74119675919a6284ca8f85e7777b8fbc18bc7124",
+                "url": "https://api.github.com/repos/acquia/cohesion/zipball/f5b8f3ed764ce121bb9247ef9a1df9e13b4b74f6",
+                "reference": "f5b8f3ed764ce121bb9247ef9a1df9e13b4b74f6",
                 "shasum": ""
             },
             "require": {
@@ -173,22 +173,22 @@
             ],
             "description": "Site Studio",
             "support": {
-                "source": "https://github.com/acquia/cohesion/tree/8.0.3"
+                "source": "https://github.com/acquia/cohesion/tree/8.1.1"
             },
-            "time": "2025-01-30T14:26:50+00:00"
+            "time": "2025-06-20T12:35:16+00:00"
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "8.0.3",
+            "version": "8.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "05cc203c0b977798286ff85d8fdf0144c7b1229e"
+                "reference": "df1786faf422291a20d546a263c84632b45352d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/05cc203c0b977798286ff85d8fdf0144c7b1229e",
-                "reference": "05cc203c0b977798286ff85d8fdf0144c7b1229e",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/df1786faf422291a20d546a263c84632b45352d0",
+                "reference": "df1786faf422291a20d546a263c84632b45352d0",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -206,9 +206,9 @@
             "description": "Site Studio minimal theme",
             "support": {
                 "issues": "https://github.com/acquia/cohesion-theme/issues",
-                "source": "https://github.com/acquia/cohesion-theme/tree/8.0.3"
+                "source": "https://github.com/acquia/cohesion-theme/tree/8.1.1"
             },
-            "time": "2025-01-30T14:26:56+00:00"
+            "time": "2025-06-20T12:35:23+00:00"
         },
         {
             "name": "acquia/content-hub-php",
@@ -5681,17 +5681,17 @@
         },
         {
             "name": "drupal/ai_agents",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_agents.git",
-                "reference": "1.1.0"
+                "reference": "1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ai_agents-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "8f9c004c9ebe098eee8b1e2a97f8c446c9845ab4"
+                "url": "https://ftp.drupal.org/files/projects/ai_agents-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "d42f15c83203aa44620f3e1a7f0e1199117856e7"
             },
             "require": {
                 "drupal/ai": "^1.1.0",
@@ -5709,8 +5709,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1749732104",
+                    "version": "1.1.1",
+                    "datestamp": "1752248510",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6129,31 +6129,32 @@
         },
         {
             "name": "drupal/augmentor",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/augmentor.git",
-                "reference": "1.2.1"
+                "reference": "1.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.1.zip",
-                "reference": "1.2.1",
-                "shasum": "84a263c7b85f086b4e05749e55e5e155bc6740d5"
+                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.2.zip",
+                "reference": "1.2.2",
+                "shasum": "979007c6ed4bdc84640023733c8dbcc3dfe36674"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
-                "drupal/key": "*"
+                "drupal/key": "^1.18"
             },
             "require-dev": {
                 "drupal/ckeditor": "*",
-                "drupal/search_api": "*"
+                "drupal/eca": "*",
+                "drupal/search_api": "^1.35"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.1",
-                    "datestamp": "1724982848",
+                    "version": "1.2.2",
+                    "datestamp": "1752467447",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6189,7 +6190,8 @@
             "description": "Integration module which allows content to be augmented in Drupal via connections with external services.",
             "homepage": "https://www.drupal.org/project/augmentor",
             "support": {
-                "source": "https://git.drupalcode.org/project/augmentor"
+                "source": "https://git.drupalcode.org/project/augmentor",
+                "issues": "https://www.drupal.org/project/issues/augmentor"
             }
         },
         {
@@ -12607,7 +12609,7 @@
             "extra": {
                 "drupal": {
                     "version": "2.1.1",
-                    "datestamp": "1748539484",
+                    "datestamp": "1752433708",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12656,7 +12658,7 @@
             "extra": {
                 "drupal": {
                     "version": "2.1.1",
-                    "datestamp": "1748539484",
+                    "datestamp": "1752433708",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12694,7 +12696,7 @@
             "extra": {
                 "drupal": {
                     "version": "2.1.1",
-                    "datestamp": "1748539484",
+                    "datestamp": "1752433708",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13782,7 +13784,7 @@
             ],
             "authors": [
                 {
-                    "name": "AohRveTPV",
+                    "name": "aohrvetpv",
                     "homepage": "https://www.drupal.org/user/2760115"
                 },
                 {
@@ -13790,7 +13792,7 @@
                     "homepage": "https://www.drupal.org/user/972"
                 },
                 {
-                    "name": "Kristen Pol",
+                    "name": "kristen pol",
                     "homepage": "https://www.drupal.org/user/8389"
                 },
                 {
@@ -13845,7 +13847,7 @@
             ],
             "authors": [
                 {
-                    "name": "AohRveTPV",
+                    "name": "aohrvetpv",
                     "homepage": "https://www.drupal.org/user/2760115"
                 },
                 {
@@ -13853,7 +13855,7 @@
                     "homepage": "https://www.drupal.org/user/972"
                 },
                 {
-                    "name": "Kristen Pol",
+                    "name": "kristen pol",
                     "homepage": "https://www.drupal.org/user/8389"
                 },
                 {
@@ -13907,7 +13909,7 @@
             ],
             "authors": [
                 {
-                    "name": "AohRveTPV",
+                    "name": "aohrvetpv",
                     "homepage": "https://www.drupal.org/user/2760115"
                 },
                 {
@@ -13915,7 +13917,7 @@
                     "homepage": "https://www.drupal.org/user/972"
                 },
                 {
-                    "name": "Kristen Pol",
+                    "name": "kristen pol",
                     "homepage": "https://www.drupal.org/user/8389"
                 },
                 {
@@ -13969,7 +13971,7 @@
             ],
             "authors": [
                 {
-                    "name": "AohRveTPV",
+                    "name": "aohrvetpv",
                     "homepage": "https://www.drupal.org/user/2760115"
                 },
                 {
@@ -13977,7 +13979,7 @@
                     "homepage": "https://www.drupal.org/user/972"
                 },
                 {
-                    "name": "Kristen Pol",
+                    "name": "kristen pol",
                     "homepage": "https://www.drupal.org/user/8389"
                 },
                 {
@@ -14952,17 +14954,17 @@
         },
         {
             "name": "drupal/save_edit",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/save_edit.git",
-                "reference": "8.x-1.8"
+                "reference": "8.x-1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/save_edit-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "9562c97eaaea350fe8db4ec69291533ebd65be90"
+                "url": "https://ftp.drupal.org/files/projects/save_edit-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "98b282ce542b372dc7bdd48715c49e64c42be801"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10 || ^11"
@@ -14970,8 +14972,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1721432174",
+                    "version": "8.x-1.9",
+                    "datestamp": "1752272084",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14992,7 +14994,7 @@
                     "homepage": "https://www.drupal.org/user/159141"
                 },
                 {
-                    "name": "NitinSP",
+                    "name": "nitinsp",
                     "homepage": "https://www.drupal.org/user/2198938"
                 },
                 {
@@ -18355,24 +18357,12 @@
             ],
             "authors": [
                 {
-                    "name": "bramtenhove",
-                    "homepage": "https://www.drupal.org/user/1549848"
-                },
-                {
                     "name": "kingdutch",
                     "homepage": "https://www.drupal.org/user/1868952"
                 },
                 {
                     "name": "Open Social",
                     "homepage": "https://www.drupal.org/user/272162"
-                },
-                {
-                    "name": "robertragas",
-                    "homepage": "https://www.drupal.org/user/2723261"
-                },
-                {
-                    "name": "ronaldtebrake",
-                    "homepage": "https://www.drupal.org/user/2314038"
                 }
             ],
             "description": "Adds Real-time SEO page analysis and configuration.",
@@ -19110,12 +19100,12 @@
             "version": "2.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/goalgorilla/RTSEO.js.git",
+                "url": "https://github.com/Kingdutch/RTSEO.js.git",
                 "reference": "ab5f9c3ff478e0e9d61f5cc3831038e4f22bbbb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/goalgorilla/RTSEO.js/zipball/ab5f9c3ff478e0e9d61f5cc3831038e4f22bbbb0",
+                "url": "https://api.github.com/repos/Kingdutch/RTSEO.js/zipball/ab5f9c3ff478e0e9d61f5cc3831038e4f22bbbb0",
                 "reference": "ab5f9c3ff478e0e9d61f5cc3831038e4f22bbbb0",
                 "shasum": ""
             },
@@ -19127,8 +19117,22 @@
             "description": "Text analysis application for use with the Real-Time SEO Drupal module.",
             "homepage": "https://github.com/goalgorilla/RTSEO.js",
             "support": {
-                "source": "https://github.com/goalgorilla/RTSEO.js/tree/2.1.0"
+                "source": "https://github.com/Kingdutch/RTSEO.js/tree/2.1.0"
             },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2018-01-19T23:11:36+00:00"
         },
         {
