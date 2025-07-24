@@ -6,7 +6,7 @@
   "require": {
     "acquia/acf": "2.x-feeds-dev",
     "acquia/acquia-cms-starterkit": "^1.0",
-    "acquia/cohesion": "^8",
+    "acquia/cohesion": "8.2.0-beta2",
     "acquia/cohesion-theme": "^8",
     "acquia/sitestudio_contenthub": "^8",
     "acquia/sitestudio_jsonapi": "^8",
@@ -24,7 +24,7 @@
     "drupal/acquia_cms_person": "^1.5",
     "drupal/acquia_cms_place": "^1.5",
     "drupal/acquia_cms_search": "^1.4",
-    "drupal/acquia_cms_site_studio": "^1.5",
+    "drupal/acquia_cms_site_studio": "ss8-dev",
     "drupal/acquia_cms_starter": "^1.4",
     "drupal/acquia_cms_toolbar": "^1.4",
     "drupal/acquia_cms_toolbar_gin": "^1",
@@ -331,6 +331,11 @@
 }
   },
   "repositories": {
+    "acquia-cms-site-studio": {
+        "type": "vcs",
+        "url": "https://github.com/kevinfunk/acquia_cms_site_studio",
+        "canonical": true
+    },
     "image-url-formatter": {
         "type": "vcs",
         "url": "https://github.com/kevinfunk/image_url_formatter",
