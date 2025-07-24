@@ -1,9 +1,11 @@
 diff --git a/acquia_cms_common.permissions.yml b/acquia_cms_common.permissions.yml
-new file mode 100644
-index 0000000..3cc8253
---- /dev/null
+index 70f4624..be83110 100644
+--- a/acquia_cms_common.permissions.yml
 +++ b/acquia_cms_common.permissions.yml
-@@ -0,0 +1,84 @@
+@@ -2,3 +2,85 @@ use text format full_html:
+   title: 'Use the Full HTML text format'
+   description: 'Warning: This permission may have security implications depending on how the text format is configured.'
+   provider: filter
 +use text format cohesion:
 +  title: 'Text format permissions for cohesion'
 +create image media:
