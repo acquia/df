@@ -1,0 +1,314 @@
+diff --git a/modules/sitestudio_claro/css/claro-media-modal.css b/modules/sitestudio_claro/css/claro-media-modal.css
+index 15ef0d0..7b7dd90 100644
+--- a/modules/sitestudio_claro/css/claro-media-modal.css
++++ b/modules/sitestudio_claro/css/claro-media-modal.css
+@@ -62,6 +62,10 @@
+     background-size: 14px 9px; /* w: 14px + (2 * 15px), h: 9px */
+ }
+
++.media-library-widget-modal .form-select:not(.editor) {
++    padding-right: 31px;
++}
++
+ .media-library-widget-modal .form-item label {
+     display: table;
+     margin-top: 4px;
+@@ -84,7 +88,7 @@
+ .media-library-widget-modal .button {
+     border: 1px solid transparent !important;
+     display: inline-block;
+-    margin: 1rem 0.75rem 1rem 0; /* LTR */
++    margin: 0 0.75rem 0 0; /* LTR */
+     padding: 15px 23px; /* 1 */
+     cursor: pointer;
+     text-align: center;
+@@ -98,6 +102,7 @@
+     -webkit-appearance: none;
+     appearance: none;
+     -webkit-font-smoothing: antialiased;  /* 3 */
++    width: unset;
+ }
+
+ [dir="rtl"] .media-library-widget-modal .button {
+@@ -234,6 +239,19 @@
+     display: none;
+ }
+
++.media-library-widget-modal ul li {
++    list-style-type: none;
++}
++
++.media-library-widget-modal .media-library-menu {
++    margin-block: var(--space-l);
++}
++
++.media-library-widget-modal img {
++    max-width: 100%;
++    height: auto;
++}
++
+ .media-library-widget-modal .ui-dialog-content {
+     padding: 16px 24px !important;
+ }
+diff --git a/modules/sitestudio_claro/css/claro-pager.css b/modules/sitestudio_claro/css/claro-pager.css
+new file mode 100644
+index 0000000..a219b03
+--- /dev/null
++++ b/modules/sitestudio_claro/css/claro-pager.css
+@@ -0,0 +1,144 @@
++/*
++ * This file was copied from core/claro/css/components/pager.css
++ * To prevent the pager styles from bleeding into the Visual Pager Builder,
++ * the styles were copied and prefixed with media-library-widget-modal.
++ */
++/**
++ * @file
++ * Styles for Claro's Pagination.
++ */
++.media-library-widget-modal .pager {
++      --pager-size: 2rem; /* --space-m Ãƒâ€” 2 */
++      --pager-border-width: 0.125rem; /* 2px */
++      --pager-fg-color: var(--color-gray-800);
++      --pager-bg-color: var(--color-white);
++      --pager-hover-bg-color: var(--color-bgblue-active);
++      --pager-focus-bg-color: var(--color-focus);
++      --pager-active-fg-color: var(--color-white);
++      --pager-active-bg-color: var(--color-absolutezero);
++      --pager-border-radius--action: var(--pager-border-width);
++      margin-block: var(--space-m);
++}
++.media-library-widget-modal .pager__items {
++    display: flex;
++    flex-wrap: wrap;
++    align-items: flex-end;
++    justify-content: center;
++    margin: var(--space-m) 0;
++    list-style: none;
++    text-align: center;
++    font-weight: bold;
++}
++.media-library-widget-modal .pager__item {
++    display: inline-block;
++    margin-inline: calc(var(--space-xs) / 2);
++    vertical-align: top;
++}
++.media-library-widget-modal .pager__link,
++.media-library-widget-modal .pager__item--current {
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    box-sizing: border-box;
++    min-inline-size: var(--pager-size);
++    block-size: var(--pager-size);
++    padding-inline: var(--space-xs);
++    -webkit-text-decoration: none;
++    text-decoration: none;
++    color: var(--pager-fg-color);
++    border-radius: var(--space-m); /* Pager size Ã· 2 */
++    background: var(--pager-bg-color); /* Make sure that the text is visible on dark background. */
++    line-height: 1;
++}
++.media-library-widget-modal .pager__link:hover,
++.media-library-widget-modal .pager__link:focus,
++.media-library-widget-modal .pager__link:active {
++    -webkit-text-decoration: none;
++    text-decoration: none;
++}
++.media-library-widget-modal .pager__link:hover,
++.media-library-widget-modal .pager__link.is-active:hover {
++    color: var(--pager-fg-color);
++    background: var(--pager-hover-bg-color);
++}
++.media-library-widget-modal .pager__link--action-link {
++    border-radius: var(--pager-border-radius--action);
++}
++/* Active number link. */
++.media-library-widget-modal .pager__link.is-active,
++.media-library-widget-modal .pager__item--current {
++    color: var(--pager-active-fg-color);
++    border: var(--pager-border-width) solid transparent;
++    background: var(--pager-active-bg-color);
++}
++.media-library-widget-modal .pager__item--first .pager__link::before {
++    --background-image: url("data:image/svgxml,%3csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 2v12M14 2L8 8l6 6' stroke='%23545560' stroke-width='2'/%3e%3c/svg%3e");
++}
++.media-library-widget-modal .pager__item--previous .pager__link::before {
++    --background-image: url("data:image/svgxml,%3csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 2L5 8l6 6' stroke='%23545560' stroke-width='2'/%3e%3c/svg%3e");
++}
++.media-library-widget-modal .pager__item--next .pager__link::after {
++    --background-image: url("data:image/svgxml,%3csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5 14l6-6-6-6' stroke='%23545560' stroke-width='2'/%3e%3c/svg%3e");
++}
++.media-library-widget-modal .pager__item--last .pager__link::after {
++    --background-image: url("data:image/svgxml,%3csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 14V2M2 14l6-6-6-6' stroke='%23545560' stroke-width='2'/%3e%3c/svg%3e");
++}
++.media-library-widget-modal .pager__item--first .pager__link::before,
++.media-library-widget-modal .pager__item--previous .pager__link::before,
++.media-library-widget-modal .pager__item--next .pager__link::after,
++.media-library-widget-modal .pager__item--last .pager__link::after {
++    position: relative;
++    display: inline-block;
++    inline-size: 1rem;
++    block-size: 1rem;
++    content: "";
++    background-image: var(--background-image);
++    background-repeat: no-repeat;
++    background-position: center;
++}
++@media (forced-colors: active) {
++    .media-library-widget-modal .pager__item--first .pager__link::before,
++    .media-library-widget-modal .pager__item--previous .pager__link::before,
++    .media-library-widget-modal .pager__item--next .pager__link::after,
++    .media-library-widget-modal .pager__item--last .pager__link::after {
++    background-color: linktext;
++    background-image: none;
++    -webkit-mask-image: var(--background-image);
++    mask-image: var(--background-image);
++    -webkit-mask-repeat: no-repeat;
++    mask-repeat: no-repeat;
++    -webkit-mask-position: center;
++    mask-position: center;
++    }
++}
++[dir="rtl"] .media-library-widget-modal .pager__item--first .pager__link::before,
++[dir="rtl"] .media-library-widget-modal .pager__item--previous .pager__link::before,
++[dir="rtl"] .media-library-widget-modal .pager__item--next .pager__link::after,
++[dir="rtl"] .media-library-widget-modal .pager__item--last .pager__link::after {
++    transform: scaleX(-1);
++}
++.media-library-widget-modal .pager__item--mini {
++    margin-inline: calc(var(--space-m) / 2);
++}
++.media-library-widget-modal .pager__link--mini {
++    border-radius: 50%;
++}
++/**
++* On the mini pager, remove margins for the previous and next icons.
++* Margins are not needed here as there is no accompanying text.
++*/
++.media-library-widget-modal .pager__link--mini::before {
++    margin-inline: 0;
++}
++.media-library-widget-modal .pager__item-title--backwards {
++    margin-inline-start: 0.5rem;
++}
++.media-library-widget-modal .pager__item-title--forward {
++    margin-inline-end: 0.5rem;
++}
++@media (forced-colors: active) {
++    .media-library-widget-modal .pager__item a:hover {
++    -webkit-text-decoration: underline;
++    text-decoration: underline;
++    }
++}
+\ No newline at end of file
+diff --git a/modules/sitestudio_claro/sitestudio_claro.libraries.yml b/modules/sitestudio_claro/sitestudio_claro.libraries.yml
+index db5c773..251192a 100644
+--- a/modules/sitestudio_claro/sitestudio_claro.libraries.yml
++++ b/modules/sitestudio_claro/sitestudio_claro.libraries.yml
+@@ -2,3 +2,8 @@ claro-media-modal:
+   css:
+     theme:
+       css/claro-media-modal.css: {}
++
++claro-pager:
++  css:
++    component:
++      css/claro-pager.css: {}
+diff --git a/modules/sitestudio_claro/sitestudio_claro.module b/modules/sitestudio_claro/sitestudio_claro.module
+index 6b7306f..6fdb2f0 100644
+--- a/modules/sitestudio_claro/sitestudio_claro.module
++++ b/modules/sitestudio_claro/sitestudio_claro.module
+@@ -46,10 +46,13 @@ function sitestudio_claro_library_info_alter(&$libraries) {
+  * - media_library_item
+  * - media_library_item__small
+  * - media_library_item__widget
++ * - pager
++ * - views_mini_pager
+  * - views_view__media_library
+  * - views_view_unformatted__media_library
+  * - views_view_fields__media_library
+  * - fieldset__media_library_widget
++ * - field
+  * - links__media_library_menu
+  * - item_list__media_library_add_form_media_list
+  * - details__media_library_add_form_selected_media
+@@ -122,6 +125,7 @@ function sitestudio_claro_theme_registry_alter(&$theme_registry) {
+           "template_preprocess",
+           "template_preprocess_media_library_wrapper",
+           "contextual_preprocess",
++          "acquia_dam_preprocess_media_library_wrapper",
+         ],
+       ];
+     }
+@@ -207,6 +211,36 @@ function sitestudio_claro_theme_registry_alter(&$theme_registry) {
+     }
+   }
+
++  if (!in_array('views_mini_pager', $theme_registry)) {
++    $template = 'views-mini-pager';
++    $path = $claroThemePath . '/templates/views';
++    if (sitestudio_claro_template_exists($path, $template)) {
++      $theme_registry['views_mini_pager'] = [
++        'template' => $template,
++        'path' => $path,
++        'variables' => [
++          'view' => NULL,
++          'options' => NULL,
++          'tags' => NULL,
++          'quantity' => NULL,
++          'element' => NULL,
++          'parameters' => NULL,
++        ],
++        'type' => 'base_theme_engine',
++        'theme path' => $claroThemePath,
++        'preprocess functions' => [
++          "template_preprocess",
++          "template_preprocess_views_mini_pager",
++          "contextual_preprocess",
++        ],
++        'includes' => [
++          'core/modules/views/views.theme.inc',
++          'core/modules/views/views.theme.inc',
++        ],
++      ];
++    }
++  }
++
+   if (!in_array('views_view__media_library', $theme_registry)) {
+     $template = 'views-view--media-library';
+     $path = $claroThemePath . '/templates/media-library';
+@@ -306,6 +340,26 @@ function sitestudio_claro_theme_registry_alter(&$theme_registry) {
+     }
+   }
+
++  if (!in_array('field', $theme_registry)) {
++    $template = 'field';
++    $path = $claroThemePath . '/templates/classy/field';
++    if (sitestudio_claro_template_exists($path, $template)) {
++      $theme_registry['field'] = [
++        'template' => $template,
++        'path' => $path,
++        'render element' => 'element',
++        'type' => 'base_theme_engine',
++        'theme path' => $claroThemePath,
++        'preprocess functions' => [
++          'template_preprocess',
++          'template_preprocess_field',
++          'contextual_preprocess',
++          'claro_preprocess_field',
++        ],
++      ];
++    }
++  }
++
+   if (!in_array('fieldset__media_library_widget', $theme_registry)) {
+     $template = 'fieldset--media-library-widget';
+     $path = $claroThemePath . '/templates/media-library';
+@@ -477,6 +531,7 @@ function sitestudio_claro_form_alter(array &$form, FormStateInterface $form_stat
+
+     // Load some extra custom styles.
+     $form['#attached']['library'][] = 'sitestudio_claro/claro-media-modal';
++    $form['#attached']['library'][] = 'sitestudio_claro/claro-pager';
+   }
+
+   // Force loading the 'claro_form_alter()' hook. It is not executed
