@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.product.default
     - core.entity_view_mode.node.card
     - field.field.node.product.body
     - field.field.node.product.field_product_brand
@@ -122,15 +121,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_product_review:
-    weight: 16
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   field_product_sku:
     type: string
     weight: 5
@@ -173,5 +163,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_product_on_sale: true
+  field_product_review: true
   langcode: true
   search_api_excerpt: true
