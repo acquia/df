@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.x_small_square
+    - field.field.media.product_image.field_product_image
+    - image.style.x_small_square
+    - media.type.product_image
+  module:
+    - image
+third_party_settings: {  }
+id: media.product_image.x_small_square
+targetEntityType: media
+bundle: product_image
+mode: x_small_square
+content:
+  field_product_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: x_small_square
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.medium_landscape
+    - field.field.media.product_image.field_product_image
+    - image.style.coh_medium_landscape
+    - media.type.product_image
+  module:
+    - image
+    - layout_builder
+third_party_settings: {  }
+id: media.product_image.medium_landscape
+targetEntityType: media
+bundle: product_image
+mode: medium_landscape
+content:
+  field_product_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: coh_medium_landscape
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
