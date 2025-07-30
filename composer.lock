@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29107fe7ee338c08fe8db3991c6042f9",
+    "content-hash": "2af93bd6b8547904f8731ae8216f913f",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -5555,29 +5555,26 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.6.1"
+                "reference": "3.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.6.1.zip",
-                "reference": "3.6.1",
-                "shasum": "40e8874bdf100de90e0eec6984be14f0ec7765b0"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.6.2.zip",
+                "reference": "3.6.2",
+                "shasum": "0d25e3b7bcea28533ae5f2371a34d507603bfb66"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
             },
-            "require-dev": {
-                "drupal/admin_toolbar_tools": "*"
-            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.6.1",
-                    "datestamp": "1749079734",
+                    "version": "3.6.2",
+                    "datestamp": "1753826106",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5644,7 +5641,7 @@
         },
         {
             "name": "drupal/admin_toolbar_tools",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "require": {
                 "drupal/admin_toolbar": "*",
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -5652,8 +5649,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.6.1",
-                    "datestamp": "1749079734",
+                    "version": "3.6.2",
+                    "datestamp": "1753826106",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6363,32 +6360,31 @@
         },
         {
             "name": "drupal/augmentor",
-            "version": "1.2.2",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/augmentor.git",
-                "reference": "1.2.2"
+                "reference": "1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.2.zip",
-                "reference": "1.2.2",
-                "shasum": "979007c6ed4bdc84640023733c8dbcc3dfe36674"
+                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.1.zip",
+                "reference": "1.2.1",
+                "shasum": "84a263c7b85f086b4e05749e55e5e155bc6740d5"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
-                "drupal/key": "^1.18"
+                "drupal/key": "*"
             },
             "require-dev": {
                 "drupal/ckeditor": "*",
-                "drupal/eca": "*",
-                "drupal/search_api": "^1.35"
+                "drupal/search_api": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.2",
-                    "datestamp": "1752467447",
+                    "version": "1.2.1",
+                    "datestamp": "1724982848",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6424,8 +6420,7 @@
             "description": "Integration module which allows content to be augmented in Drupal via connections with external services.",
             "homepage": "https://www.drupal.org/project/augmentor",
             "support": {
-                "source": "https://git.drupalcode.org/project/augmentor",
-                "issues": "https://www.drupal.org/project/issues/augmentor"
+                "source": "https://git.drupalcode.org/project/augmentor"
             }
         },
         {
