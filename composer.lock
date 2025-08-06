@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7be70cb7cf529256554a73551929101e",
+    "content-hash": "e3f7a0611d957ef9216d6d71989a4fb3",
     "packages": [
         {
             "name": "acquia/acf",
@@ -10908,29 +10908,51 @@
         },
         {
             "name": "drupal/image_url_formatter",
-            "version": "2.x-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinfunk/image_url_formatter.git",
-                "reference": "cc03cba5ee11d7688e3c0835743fbdaef61442ab"
+                "url": "https://git.drupalcode.org/project/image_url_formatter.git",
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/image_url_formatter/zipball/cc03cba5ee11d7688e3c0835743fbdaef61442ab",
-                "reference": "cc03cba5ee11d7688e3c0835743fbdaef61442ab",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/image_url_formatter-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "9a357351236a22c3815a9522e1c58c44b56f6173"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
             },
-            "default-branch": true,
             "type": "drupal-module",
-            "description": "Add an URL formatter for image field.",
-            "support": {
-                "source": "https://github.com/kevinfunk/image_url_formatter/tree/2.x",
-                "issues": "https://github.com/kevinfunk/image_url_formatter/issues"
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1752588651",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
             },
-            "time": "2025-04-24T19:01:52+00:00"
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "g089h515r806",
+                    "homepage": "https://www.drupal.org/user/174740"
+                },
+                {
+                    "name": "nagy.balint",
+                    "homepage": "https://www.drupal.org/user/1763952"
+                }
+            ],
+            "description": "Add an URL formatter for image field.",
+            "homepage": "https://www.drupal.org/project/image_url_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/image_url_formatter"
+            }
         },
         {
             "name": "drupal/imagemagick",
@@ -29038,7 +29060,6 @@
         "drupal/fullcalendar": 10,
         "drupal/gin_moderation_sidebar": 5,
         "drupal/graphql_core_schema": 10,
-        "drupal/image_url_formatter": 20,
         "drupal/inline_entity_form": 5,
         "drupal/masquerade": 5,
         "drupal/mautic": 20,
