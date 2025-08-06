@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3ae6012de21943b60584bf86b07c4ba",
+    "content-hash": "7be70cb7cf529256554a73551929101e",
     "packages": [
         {
             "name": "acquia/acf",
@@ -6346,29 +6346,33 @@
         },
         {
             "name": "drupal/bpmn_io",
-            "version": "2.0.10",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bpmn_io.git",
-                "reference": "2.0.10"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bpmn_io-2.0.10.zip",
-                "reference": "2.0.10",
-                "shasum": "3068bbb5ea4df08279390d5749d62b3b1bcda654"
+                "url": "https://ftp.drupal.org/files/projects/bpmn_io-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "0de76996e8e327664ed926312283a92c89cfe637"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11",
-                "drupal/eca": "^2.0",
-                "drupal/eca_modeller_bpmn": "^2",
-                "php": ">=8.1"
+                "drupal/core": "^11.2",
+                "drupal/modeler_api": "^1.0",
+                "ext-dom": "*",
+                "mtownsend/xml-to-array": "^2.0",
+                "php": ">=8.3"
+            },
+            "require-dev": {
+                "drupal/eca": "^3.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.10",
-                    "datestamp": "1751531607",
+                    "version": "3.0.0",
+                    "datestamp": "1753888221",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6389,64 +6393,11 @@
                     "homepage": "https://www.drupal.org/user/168924"
                 }
             ],
-            "description": "BPMN modeller for ECA, integrated into Drupal's admin UI.",
+            "description": "BPMN modeler, integrated into Drupal's admin UI.",
             "homepage": "https://www.drupal.org/project/bpmn_io",
             "support": {
                 "source": "https://drupal.org/project/bpmn_io",
                 "issues": "https://drupal.org/project/issues/bpmn_io"
-            }
-        },
-        {
-            "name": "drupal/camunda",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/camunda.git",
-                "reference": "2.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/camunda-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "b91010801e5a7f2dcc208cbca7fa12658cae2c48"
-            },
-            "require": {
-                "drupal/core": "^10.3 || ^11",
-                "drupal/eca": "^2.0",
-                "drupal/eca_modeller_bpmn": "^2",
-                "ext-json": "*",
-                "php": ">=8.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1718797417",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "boromino",
-                    "homepage": "https://www.drupal.org/user/859722"
-                },
-                {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
-                }
-            ],
-            "description": "BPMN modeller for ECA, standalone desktop application with import and export from and to this Drupal site.",
-            "homepage": "https://www.drupal.org/project/camunda",
-            "support": {
-                "source": "https://drupal.org/project/camunda",
-                "issues": "https://drupal.org/project/issues/camunda"
             }
         },
         {
@@ -8740,32 +8691,34 @@
         },
         {
             "name": "drupal/eca",
-            "version": "2.1.11",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eca.git",
-                "reference": "2.1.11"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eca-2.1.11.zip",
-                "reference": "2.1.11",
-                "shasum": "851b00d8f2b2d9702c6aec8e4af44366e74ad592"
+                "url": "https://ftp.drupal.org/files/projects/eca-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "178dc874c0446f248760387512fd926abfb9079f"
             },
             "require": {
                 "dragonmantank/cron-expression": "^3.1",
-                "drupal/core": "^10.3||^11",
-                "ext-dom": "*",
+                "drupal/core": "^11.2",
+                "drupal/modeler_api": "^1.0",
                 "ext-json": "*",
-                "mtownsend/xml-to-array": "^2.0",
-                "php": ">=8.1"
+                "php": ">=8.3"
+            },
+            "conflict": {
+                "drush/drush": "<12.5.1"
             },
             "require-dev": {
                 "drupal/ai": "^1.2",
                 "drupal/ai_agents": "^1.2",
-                "drupal/eca_ui": "*",
                 "drupal/entity_reference_revisions": "^1.12",
                 "drupal/inline_entity_form": "^3.0",
+                "drupal/modeler_api": "*",
                 "drupal/paragraphs": "^1.18",
                 "drupal/project_browser": "^2.0",
                 "drupal/token": "^1.15",
@@ -8774,8 +8727,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.11",
-                    "datestamp": "1753534704",
+                    "version": "3.0.0",
+                    "datestamp": "1753888380",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8805,143 +8758,6 @@
             "support": {
                 "source": "https://drupal.org/project/eca",
                 "issues": "https://drupal.org/project/issues/eca"
-            }
-        },
-        {
-            "name": "drupal/eca_cm",
-            "version": "1.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/eca_cm.git",
-                "reference": "1.0.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eca_cm-1.0.10.zip",
-                "reference": "1.0.10",
-                "shasum": "f14dbc8b550d8ec6a118ba795b070631207f56b9"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10 || ^11",
-                "drupal/eca": "^1 || ^2",
-                "drupal/eca_ui": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.10",
-                    "datestamp": "1722681770",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "mxh",
-                    "homepage": "https://www.drupal.org/user/1124384"
-                },
-                {
-                    "name": "qichanghai",
-                    "homepage": "https://www.drupal.org/user/3092355"
-                }
-            ],
-            "description": "A Drupal module that provides a modeller for ECA solely built on top of Drupal core and ECA core.",
-            "homepage": "https://www.drupal.org/project/eca_cm",
-            "support": {
-                "source": "https://drupal.org/project/eca_cm",
-                "issues": "https://drupal.org/project/issues/eca_cm"
-            }
-        },
-        {
-            "name": "drupal/eca_modeller_bpmn",
-            "version": "2.1.11",
-            "require": {
-                "drupal/core": "^10.3 || ^11",
-                "drupal/eca": "^2",
-                "drupal/eca_ui": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.11",
-                    "datestamp": "1753534704",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "boromino",
-                    "homepage": "https://www.drupal.org/user/859722"
-                },
-                {
-                    "name": "danielspeicher",
-                    "homepage": "https://www.drupal.org/user/3621778"
-                },
-                {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
-                }
-            ],
-            "description": "Common functionality for all BPMN based modeller implementations.",
-            "homepage": "https://www.drupal.org/project/eca",
-            "support": {
-                "source": "https://git.drupalcode.org/project/eca"
-            }
-        },
-        {
-            "name": "drupal/eca_ui",
-            "version": "3.0.0",
-            "require": {
-                "drupal/core": "^11.2",
-                "drupal/eca": "*",
-                "drupal/modeler_api": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1753888380",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "boromino",
-                    "homepage": "https://www.drupal.org/user/859722"
-                },
-                {
-                    "name": "danielspeicher",
-                    "homepage": "https://www.drupal.org/user/3621778"
-                },
-                {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
-                }
-            ],
-            "description": "Provides a user interface for managing ECA models.",
-            "homepage": "https://www.drupal.org/project/eca",
-            "support": {
-                "source": "https://git.drupalcode.org/project/eca"
             }
         },
         {
