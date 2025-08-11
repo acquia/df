@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd33429d37946f7812f86068989b574f",
+    "content-hash": "07f701eefc6a7ab5d58ce2c874781398",
     "packages": [
         {
             "name": "acquia/acf",
@@ -17444,33 +17444,55 @@
         },
         {
             "name": "drupal/views_base_url",
-            "version": "3.x-dev",
+            "version": "3.0.0-alpha1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinfunk/views_base_url.git",
-                "reference": "6280a3d6ba2b740994ea00e068962ad6c7b7f9da"
+                "url": "https://git.drupalcode.org/project/views_base_url.git",
+                "reference": "3.0.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/views_base_url/zipball/6280a3d6ba2b740994ea00e068962ad6c7b7f9da",
-                "reference": "6280a3d6ba2b740994ea00e068962ad6c7b7f9da",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/views_base_url-3.0.0-alpha1.zip",
+                "reference": "3.0.0-alpha1",
+                "shasum": "d0d001c702ec61739c426f098925cabd34aa7260"
             },
             "require": {
-                "drupal/core": "^10 || ^11"
+                "drupal/core": "^10.3 || ^11"
             },
-            "default-branch": true,
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-alpha1",
+                    "datestamp": "1754840805",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "description": "Global views field that provides site's base url",
+            "authors": [
+                {
+                    "name": "mably",
+                    "homepage": "https://www.drupal.org/user/3375160"
+                },
+                {
+                    "name": "rjjakes",
+                    "homepage": "https://www.drupal.org/user/3457245"
+                },
+                {
+                    "name": "subhojit777",
+                    "homepage": "https://www.drupal.org/user/1812492"
+                }
+            ],
+            "description": "Views field that generates custom internal links supporting field tokens",
             "homepage": "https://www.drupal.org/project/views_base_url",
             "support": {
-                "source": "https://github.com/kevinfunk/views_base_url/tree/3.x",
-                "issues": "https://github.com/kevinfunk/views_base_url/issues"
-            },
-            "time": "2025-05-05T12:33:48+00:00"
+                "source": "https://git.drupalcode.org/project/views_base_url"
+            }
         },
         {
             "name": "drupal/views_bulk_operations",
@@ -29130,7 +29152,7 @@
         "drupal/unstructured": 10,
         "drupal/user_field_value": 20,
         "drupal/view_modes_display": 20,
-        "drupal/views_base_url": 20,
+        "drupal/views_base_url": 15,
         "drupal/webform_mautic": 20,
         "drupal/yoast_seo": 15,
         "kevinfunk/content_filter": 20,
