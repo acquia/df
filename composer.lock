@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07f701eefc6a7ab5d58ce2c874781398",
+    "content-hash": "f22b784286188111292a7c6201faef70",
     "packages": [
         {
             "name": "acquia/acf",
@@ -5999,32 +5999,31 @@
         },
         {
             "name": "drupal/augmentor",
-            "version": "1.2.2",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/augmentor.git",
-                "reference": "1.2.2"
+                "reference": "1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.2.zip",
-                "reference": "1.2.2",
-                "shasum": "979007c6ed4bdc84640023733c8dbcc3dfe36674"
+                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.1.zip",
+                "reference": "1.2.1",
+                "shasum": "84a263c7b85f086b4e05749e55e5e155bc6740d5"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
-                "drupal/key": "^1.18"
+                "drupal/key": "*"
             },
             "require-dev": {
                 "drupal/ckeditor": "*",
-                "drupal/eca": "*",
-                "drupal/search_api": "^1.35"
+                "drupal/search_api": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.2",
-                    "datestamp": "1752467447",
+                    "version": "1.2.1",
+                    "datestamp": "1724982848",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6060,8 +6059,7 @@
             "description": "Integration module which allows content to be augmented in Drupal via connections with external services.",
             "homepage": "https://www.drupal.org/project/augmentor",
             "support": {
-                "source": "https://git.drupalcode.org/project/augmentor",
-                "issues": "https://www.drupal.org/project/issues/augmentor"
+                "source": "https://git.drupalcode.org/project/augmentor"
             }
         },
         {
