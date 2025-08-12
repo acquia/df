@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "906e7c669e23a903e84313594261d1cf",
+    "content-hash": "542af131a5beb38e603732d1dcc972e9",
     "packages": [
         {
             "name": "acquia/acf",
@@ -179,16 +179,16 @@
         },
         {
             "name": "acquia/cohesion-theme",
-            "version": "8.1.1",
+            "version": "8.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/cohesion-theme.git",
-                "reference": "df1786faf422291a20d546a263c84632b45352d0"
+                "reference": "9c4cb4303028ceb52bbd4c7f319ac2f64e45a19d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/df1786faf422291a20d546a263c84632b45352d0",
-                "reference": "df1786faf422291a20d546a263c84632b45352d0",
+                "url": "https://api.github.com/repos/acquia/cohesion-theme/zipball/9c4cb4303028ceb52bbd4c7f319ac2f64e45a19d",
+                "reference": "9c4cb4303028ceb52bbd4c7f319ac2f64e45a19d",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -206,9 +206,9 @@
             "description": "Site Studio minimal theme",
             "support": {
                 "issues": "https://github.com/acquia/cohesion-theme/issues",
-                "source": "https://github.com/acquia/cohesion-theme/tree/8.1.1"
+                "source": "https://github.com/acquia/cohesion-theme/tree/8.2.0"
             },
-            "time": "2025-06-20T12:35:23+00:00"
+            "time": "2025-08-11T15:16:45+00:00"
         },
         {
             "name": "acquia/content-hub-php",
@@ -393,77 +393,17 @@
             "time": "2025-05-22T22:08:57+00:00"
         },
         {
-            "name": "acquia/perz-api-php",
-            "version": "0.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/acquia/perz-api-php.git",
-                "reference": "ff8a0d4072c56ffce3ef83ca79be63d7da4d9973"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/acquia/perz-api-php/zipball/ff8a0d4072c56ffce3ef83ca79be63d7da4d9973",
-                "reference": "ff8a0d4072c56ffce3ef83ca79be63d7da4d9973",
-                "shasum": ""
-            },
-            "require": {
-                "acquia/http-hmac-php": ">=3.4",
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "~6.0 || ^7.0",
-                "php": ">=7.1",
-                "psr/log": "~1.0 || ^3.0"
-            },
-            "require-dev": {
-                "drupal/coder": "^8.3",
-                "mockery/mockery": "^1.2",
-                "pdepend/pdepend": "~1.0",
-                "phploc/phploc": "~2.0",
-                "phpmd/phpmd": "~1.0",
-                "phpunit/phpunit": "^7",
-                "scrutinizer/ocular": "~1.0",
-                "sebastian/phpcpd": "~2.0",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "suggest": {
-                "ramsey/uuid": "A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID)"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Acquia\\PerzApiPhp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Acquia Engineering",
-                    "homepage": "https://www.acquia.com",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "A PHP Client library to consume the CIS API.",
-            "homepage": "https://github.com/acquia/perz-api-php",
-            "support": {
-                "issues": "https://github.com/acquia/perz-api-php/issues",
-                "source": "https://github.com/acquia/perz-api-php/tree/0.1.5"
-            },
-            "time": "2024-02-09T13:54:58+00:00"
-        },
-        {
             "name": "acquia/sitestudio_contenthub",
-            "version": "8.1.1",
+            "version": "8.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/sitestudio_contenthub.git",
-                "reference": "acff3182a4f3c5b987bd247fffaf65dd6c8b5360"
+                "reference": "4fc6421b78913f1fc84515e2c7a52f4164c93186"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/acff3182a4f3c5b987bd247fffaf65dd6c8b5360",
-                "reference": "acff3182a4f3c5b987bd247fffaf65dd6c8b5360",
+                "url": "https://api.github.com/repos/acquia/sitestudio_contenthub/zipball/4fc6421b78913f1fc84515e2c7a52f4164c93186",
+                "reference": "4fc6421b78913f1fc84515e2c7a52f4164c93186",
                 "shasum": ""
             },
             "require": {
@@ -485,22 +425,22 @@
             "description": "Adds Site Studio support for Acquia ContentHub.",
             "support": {
                 "issues": "https://github.com/acquia/sitestudio_contenthub/issues",
-                "source": "https://github.com/acquia/sitestudio_contenthub/tree/8.1.1"
+                "source": "https://github.com/acquia/sitestudio_contenthub/tree/8.2.0"
             },
-            "time": "2025-06-20T12:35:28+00:00"
+            "time": "2025-08-11T15:16:50+00:00"
         },
         {
             "name": "acquia/sitestudio_jsonapi",
-            "version": "8.1.1",
+            "version": "8.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/sitestudio_jsonapi.git",
-                "reference": "a130ce1dc1aaa070c9cb5a6af1488490c5876162"
+                "reference": "f5ef4b98be666c6de81871bf22d0b512e3abadb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/sitestudio_jsonapi/zipball/a130ce1dc1aaa070c9cb5a6af1488490c5876162",
-                "reference": "a130ce1dc1aaa070c9cb5a6af1488490c5876162",
+                "url": "https://api.github.com/repos/acquia/sitestudio_jsonapi/zipball/f5ef4b98be666c6de81871bf22d0b512e3abadb2",
+                "reference": "f5ef4b98be666c6de81871bf22d0b512e3abadb2",
                 "shasum": ""
             },
             "require": {
@@ -522,9 +462,9 @@
             "description": "Site Studio JSON:API",
             "support": {
                 "issues": "https://github.com/acquia/sitestudio_jsonapi/issues",
-                "source": "https://github.com/acquia/sitestudio_jsonapi/tree/8.1.1"
+                "source": "https://github.com/acquia/sitestudio_jsonapi/tree/8.2.0"
             },
-            "time": "2025-06-20T12:35:38+00:00"
+            "time": "2025-08-11T15:17:01+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -2892,7 +2832,7 @@
             ],
             "authors": [
                 {
-                    "name": "chr.fritsch@gmx.net",
+                    "name": "chr.fritsch",
                     "homepage": "https://www.drupal.org/user/2103716"
                 },
                 {
@@ -4581,78 +4521,6 @@
             }
         },
         {
-            "name": "drupal/acquia_perz",
-            "version": "4.1.9",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/acquia_perz.git",
-                "reference": "4.1.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_perz-4.1.9.zip",
-                "reference": "4.1.9",
-                "shasum": "5124bcdda4d6118b2b21a45e02593701359df44c"
-            },
-            "require": {
-                "acquia/perz-api-php": "^0.1.5",
-                "drupal/acquia_connector": "^4.0",
-                "drupal/core": ">=9.2 <12",
-                "laminas/laminas-diactoros": "^1.8 || ^2.2 || ^3",
-                "php": "^7.4 || ^8",
-                "symfony/psr-http-message-bridge": "^1.1.2 || ^2.0 || ^6.4 || ^7.0"
-            },
-            "require-dev": {
-                "acquia/cohesion": "^7.5 || ^8.0",
-                "dms/phpunit-arraysubset-asserts": "*",
-                "drupal/acquia_connector": "*",
-                "drupal/field_permissions": "^1.1",
-                "drupal/paragraphs": "^1.5",
-                "drush/drush": "^11 || ^12 || ^13"
-            },
-            "suggest": {
-                "dms/phpunit-arraysubset-asserts": "Used for PHPUnit 8.0+ tests (Drupal 9)"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.1.9",
-                    "datestamp": "1729688812",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "acquia",
-                    "homepage": "https://www.drupal.org/user/1231722"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "kk5190",
-                    "homepage": "https://www.drupal.org/user/3541541"
-                },
-                {
-                    "name": "scor",
-                    "homepage": "https://www.drupal.org/user/52142"
-                }
-            ],
-            "description": "Provides integration with Content Index Engine for personalization and visitor data collection.",
-            "homepage": "https://www.drupal.org/project/acquia_perz",
-            "support": {
-                "source": "https://git.drupalcode.org/project/acquia_perz"
-            }
-        },
-        {
             "name": "drupal/acquia_purge",
             "version": "1.5.0",
             "source": {
@@ -6103,32 +5971,31 @@
         },
         {
             "name": "drupal/augmentor",
-            "version": "1.2.2",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/augmentor.git",
-                "reference": "1.2.2"
+                "reference": "1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.2.zip",
-                "reference": "1.2.2",
-                "shasum": "979007c6ed4bdc84640023733c8dbcc3dfe36674"
+                "url": "https://ftp.drupal.org/files/projects/augmentor-1.2.1.zip",
+                "reference": "1.2.1",
+                "shasum": "84a263c7b85f086b4e05749e55e5e155bc6740d5"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
-                "drupal/key": "^1.18"
+                "drupal/key": "*"
             },
             "require-dev": {
                 "drupal/ckeditor": "*",
-                "drupal/eca": "*",
-                "drupal/search_api": "^1.35"
+                "drupal/search_api": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.2",
-                    "datestamp": "1752467447",
+                    "version": "1.2.1",
+                    "datestamp": "1724982848",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6164,8 +6031,7 @@
             "description": "Integration module which allows content to be augmented in Drupal via connections with external services.",
             "homepage": "https://www.drupal.org/project/augmentor",
             "support": {
-                "source": "https://git.drupalcode.org/project/augmentor",
-                "issues": "https://www.drupal.org/project/issues/augmentor"
+                "source": "https://git.drupalcode.org/project/augmentor"
             }
         },
         {
@@ -6450,29 +6316,33 @@
         },
         {
             "name": "drupal/bpmn_io",
-            "version": "2.0.10",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bpmn_io.git",
-                "reference": "2.0.10"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bpmn_io-2.0.10.zip",
-                "reference": "2.0.10",
-                "shasum": "3068bbb5ea4df08279390d5749d62b3b1bcda654"
+                "url": "https://ftp.drupal.org/files/projects/bpmn_io-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "0de76996e8e327664ed926312283a92c89cfe637"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11",
-                "drupal/eca": "^2.0",
-                "drupal/eca_modeller_bpmn": "^2",
-                "php": ">=8.1"
+                "drupal/core": "^11.2",
+                "drupal/modeler_api": "^1.0",
+                "ext-dom": "*",
+                "mtownsend/xml-to-array": "^2.0",
+                "php": ">=8.3"
+            },
+            "require-dev": {
+                "drupal/eca": "^3.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.10",
-                    "datestamp": "1751531607",
+                    "version": "3.0.0",
+                    "datestamp": "1753888221",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6493,64 +6363,11 @@
                     "homepage": "https://www.drupal.org/user/168924"
                 }
             ],
-            "description": "BPMN modeller for ECA, integrated into Drupal's admin UI.",
+            "description": "BPMN modeler, integrated into Drupal's admin UI.",
             "homepage": "https://www.drupal.org/project/bpmn_io",
             "support": {
                 "source": "https://drupal.org/project/bpmn_io",
                 "issues": "https://drupal.org/project/issues/bpmn_io"
-            }
-        },
-        {
-            "name": "drupal/camunda",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/camunda.git",
-                "reference": "2.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/camunda-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "b91010801e5a7f2dcc208cbca7fa12658cae2c48"
-            },
-            "require": {
-                "drupal/core": "^10.3 || ^11",
-                "drupal/eca": "^2.0",
-                "drupal/eca_modeller_bpmn": "^2",
-                "ext-json": "*",
-                "php": ">=8.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1718797417",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "boromino",
-                    "homepage": "https://www.drupal.org/user/859722"
-                },
-                {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
-                }
-            ],
-            "description": "BPMN modeller for ECA, standalone desktop application with import and export from and to this Drupal site.",
-            "homepage": "https://www.drupal.org/project/camunda",
-            "support": {
-                "source": "https://drupal.org/project/camunda",
-                "issues": "https://drupal.org/project/issues/camunda"
             }
         },
         {
@@ -7090,8 +6907,16 @@
                     "homepage": "https://www.drupal.org/user/223087"
                 },
                 {
+                    "name": "isholgueras",
+                    "homepage": "https://www.drupal.org/user/733162"
+                },
+                {
                     "name": "japerry",
                     "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "justafish",
+                    "homepage": "https://www.drupal.org/user/161058"
                 },
                 {
                     "name": "vipin.mittal18",
@@ -7722,16 +7547,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "11.2.2",
+            "version": "11.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "4a1db0db3b144a42daa0887e904f942a55fe5b6b"
+                "reference": "2e115b19fcff820bd7e2ba41aeaa23ff04cfe8a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/4a1db0db3b144a42daa0887e904f942a55fe5b6b",
-                "reference": "4a1db0db3b144a42daa0887e904f942a55fe5b6b",
+                "url": "https://api.github.com/repos/drupal/core/zipball/2e115b19fcff820bd7e2ba41aeaa23ff04cfe8a8",
+                "reference": "2e115b19fcff820bd7e2ba41aeaa23ff04cfe8a8",
                 "shasum": ""
             },
             "require": {
@@ -7785,6 +7610,7 @@
                 "twig/twig": "^3.21.0"
             },
             "conflict": {
+                "dealerdirect/phpcodesniffer-composer-installer": "1.1.0",
                 "drupal/automatic_updates": "<4",
                 "drupal/project_browser": "<2.1",
                 "drush/drush": "<12.4.3"
@@ -7887,13 +7713,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/11.2.2"
+                "source": "https://github.com/drupal/core/tree/11.2.3"
             },
-            "time": "2025-06-26T13:56:54+00:00"
+            "time": "2025-08-07T10:22:57+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "11.2.2",
+            "version": "11.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -7937,22 +7763,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.2.2"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.2.3"
             },
             "time": "2025-05-05T16:18:58+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "11.2.2",
+            "version": "11.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "0f9d479fdb22596d8a8e23c39376302a3bb3df56"
+                "reference": "07ed2ffda41e106017a8b4ed450c8bb0d775bd35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/0f9d479fdb22596d8a8e23c39376302a3bb3df56",
-                "reference": "0f9d479fdb22596d8a8e23c39376302a3bb3df56",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/07ed2ffda41e106017a8b4ed450c8bb0d775bd35",
+                "reference": "07ed2ffda41e106017a8b4ed450c8bb0d775bd35",
                 "shasum": ""
             },
             "require": {
@@ -7961,7 +7787,7 @@
                 "doctrine/annotations": "~2.0.2",
                 "doctrine/deprecations": "~1.1.5",
                 "doctrine/lexer": "~2.1.1",
-                "drupal/core": "11.2.2",
+                "drupal/core": "11.2.3",
                 "egulias/email-validator": "~4.0.4",
                 "guzzlehttp/guzzle": "~7.9.3",
                 "guzzlehttp/promises": "~2.2.0",
@@ -7981,7 +7807,6 @@
                 "psr/log": "~3.0.2",
                 "ralouphie/getallheaders": "~3.0.3",
                 "revolt/event-loop": "~v1.0.7",
-                "sebastian/diff": "~6.0.2",
                 "symfony/console": "~v7.3.0",
                 "symfony/dependency-injection": "~v7.3.0",
                 "symfony/deprecation-contracts": "~v3.6.0",
@@ -8024,9 +7849,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/11.2.2"
+                "source": "https://github.com/drupal/core-recommended/tree/11.2.3"
             },
-            "time": "2025-06-26T13:56:54+00:00"
+            "time": "2025-08-07T10:22:57+00:00"
         },
         {
             "name": "drupal/crop",
@@ -8844,32 +8669,34 @@
         },
         {
             "name": "drupal/eca",
-            "version": "2.1.11",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eca.git",
-                "reference": "2.1.11"
+                "reference": "3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eca-2.1.11.zip",
-                "reference": "2.1.11",
-                "shasum": "851b00d8f2b2d9702c6aec8e4af44366e74ad592"
+                "url": "https://ftp.drupal.org/files/projects/eca-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "627cb62e156e2387bbbab64c0191d2da9ebfaf07"
             },
             "require": {
                 "dragonmantank/cron-expression": "^3.1",
-                "drupal/core": "^10.3||^11",
-                "ext-dom": "*",
+                "drupal/core": "^11.2",
+                "drupal/modeler_api": "^1.0",
                 "ext-json": "*",
-                "mtownsend/xml-to-array": "^2.0",
-                "php": ">=8.1"
+                "php": ">=8.3"
+            },
+            "conflict": {
+                "drush/drush": "<12.5.1"
             },
             "require-dev": {
                 "drupal/ai": "^1.2",
                 "drupal/ai_agents": "^1.2",
-                "drupal/eca_ui": "*",
                 "drupal/entity_reference_revisions": "^1.12",
                 "drupal/inline_entity_form": "^3.0",
+                "drupal/modeler_api": "*",
                 "drupal/paragraphs": "^1.18",
                 "drupal/project_browser": "^2.0",
                 "drupal/token": "^1.15",
@@ -8878,8 +8705,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.11",
-                    "datestamp": "1753534704",
+                    "version": "3.0.1",
+                    "datestamp": "1754929004",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8909,143 +8736,6 @@
             "support": {
                 "source": "https://drupal.org/project/eca",
                 "issues": "https://drupal.org/project/issues/eca"
-            }
-        },
-        {
-            "name": "drupal/eca_cm",
-            "version": "1.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/eca_cm.git",
-                "reference": "1.0.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eca_cm-1.0.10.zip",
-                "reference": "1.0.10",
-                "shasum": "f14dbc8b550d8ec6a118ba795b070631207f56b9"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10 || ^11",
-                "drupal/eca": "^1 || ^2",
-                "drupal/eca_ui": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.10",
-                    "datestamp": "1722681770",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "mxh",
-                    "homepage": "https://www.drupal.org/user/1124384"
-                },
-                {
-                    "name": "qichanghai",
-                    "homepage": "https://www.drupal.org/user/3092355"
-                }
-            ],
-            "description": "A Drupal module that provides a modeller for ECA solely built on top of Drupal core and ECA core.",
-            "homepage": "https://www.drupal.org/project/eca_cm",
-            "support": {
-                "source": "https://drupal.org/project/eca_cm",
-                "issues": "https://drupal.org/project/issues/eca_cm"
-            }
-        },
-        {
-            "name": "drupal/eca_modeller_bpmn",
-            "version": "2.1.11",
-            "require": {
-                "drupal/core": "^10.3 || ^11",
-                "drupal/eca": "^2",
-                "drupal/eca_ui": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.11",
-                    "datestamp": "1753534704",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "boromino",
-                    "homepage": "https://www.drupal.org/user/859722"
-                },
-                {
-                    "name": "danielspeicher",
-                    "homepage": "https://www.drupal.org/user/3621778"
-                },
-                {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
-                }
-            ],
-            "description": "Common functionality for all BPMN based modeller implementations.",
-            "homepage": "https://www.drupal.org/project/eca",
-            "support": {
-                "source": "https://git.drupalcode.org/project/eca"
-            }
-        },
-        {
-            "name": "drupal/eca_ui",
-            "version": "3.0.0",
-            "require": {
-                "drupal/core": "^11.2",
-                "drupal/eca": "*",
-                "drupal/modeler_api": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1753888380",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "boromino",
-                    "homepage": "https://www.drupal.org/user/859722"
-                },
-                {
-                    "name": "danielspeicher",
-                    "homepage": "https://www.drupal.org/user/3621778"
-                },
-                {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
-                }
-            ],
-            "description": "Provides a user interface for managing ECA models.",
-            "homepage": "https://www.drupal.org/project/eca",
-            "support": {
-                "source": "https://git.drupalcode.org/project/eca"
             }
         },
         {
@@ -10417,16 +10107,16 @@
         },
         {
             "name": "drupal/fullcalendar_io",
-            "version": "6.1.18",
+            "version": "6.1.19",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fullcalendar_io.git",
-                "reference": "0e7be269ec8e30860ad329eced36a57d22f19bf6"
+                "reference": "86acbc990edefbc141875cd2c27abd08f58d665c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://git.drupalcode.org/api/v4/projects/project%2Ffullcalendar_io/repository/archive.zip?sha=0e7be269ec8e30860ad329eced36a57d22f19bf6",
-                "reference": "0e7be269ec8e30860ad329eced36a57d22f19bf6",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Ffullcalendar_io/repository/archive.zip?sha=86acbc990edefbc141875cd2c27abd08f58d665c",
+                "reference": "86acbc990edefbc141875cd2c27abd08f58d665c",
                 "shasum": ""
             },
             "type": "drupal-library",
@@ -10437,9 +10127,9 @@
             "description": "TBD",
             "homepage": "https://fullcalendar.io/",
             "support": {
-                "source": "https://git.drupalcode.org/project/fullcalendar_io/-/tree/6.1.18"
+                "source": "https://git.drupalcode.org/project/fullcalendar_io/-/tree/6.1.19"
             },
-            "time": "2025-06-30T09:15:31+00:00"
+            "time": "2025-08-11T15:43:22+00:00"
         },
         {
             "name": "drupal/geocoder",
@@ -10682,17 +10372,17 @@
         },
         {
             "name": "drupal/geofield",
-            "version": "1.64.0",
+            "version": "1.65.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield.git",
-                "reference": "8.x-1.64"
+                "reference": "8.x-1.65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.64.zip",
-                "reference": "8.x-1.64",
-                "shasum": "300f8cf8bf4d0cf2660c5a7e81d56146d947b772"
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.65.zip",
+                "reference": "8.x-1.65",
+                "shasum": "931c4864847e5612c50583580505ba5c0f89d395"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -10705,8 +10395,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.64",
-                    "datestamp": "1736675456",
+                    "version": "8.x-1.65",
+                    "datestamp": "1754552601",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11196,29 +10886,51 @@
         },
         {
             "name": "drupal/image_url_formatter",
-            "version": "2.x-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinfunk/image_url_formatter.git",
-                "reference": "cc03cba5ee11d7688e3c0835743fbdaef61442ab"
+                "url": "https://git.drupalcode.org/project/image_url_formatter.git",
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/image_url_formatter/zipball/cc03cba5ee11d7688e3c0835743fbdaef61442ab",
-                "reference": "cc03cba5ee11d7688e3c0835743fbdaef61442ab",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/image_url_formatter-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "9a357351236a22c3815a9522e1c58c44b56f6173"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
             },
-            "default-branch": true,
             "type": "drupal-module",
-            "description": "Add an URL formatter for image field.",
-            "support": {
-                "source": "https://github.com/kevinfunk/image_url_formatter/tree/2.x",
-                "issues": "https://github.com/kevinfunk/image_url_formatter/issues"
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1752588651",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
             },
-            "time": "2025-04-24T19:01:52+00:00"
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "g089h515r806",
+                    "homepage": "https://www.drupal.org/user/174740"
+                },
+                {
+                    "name": "nagy.balint",
+                    "homepage": "https://www.drupal.org/user/1763952"
+                }
+            ],
+            "description": "Add an URL formatter for image field.",
+            "homepage": "https://www.drupal.org/project/image_url_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/image_url_formatter"
+            }
         },
         {
             "name": "drupal/imagemagick",
@@ -12706,17 +12418,17 @@
         },
         {
             "name": "drupal/modeler_api",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/modeler_api.git",
-                "reference": "1.0.0"
+                "reference": "1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/modeler_api-1.0.0.zip",
-                "reference": "1.0.0",
-                "shasum": "0314a9fa8894a24103c594533c99fe3e27e61df0"
+                "url": "https://ftp.drupal.org/files/projects/modeler_api-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "852decdaf28b463381dc1f2973490f148372b48a"
             },
             "require": {
                 "drupal/core": "^10.4 || ^11"
@@ -12724,8 +12436,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0",
-                    "datestamp": "1753888179",
+                    "version": "1.0.2",
+                    "datestamp": "1755009470",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13086,36 +12798,78 @@
         },
         {
             "name": "drupal/new_relic_rpm",
-            "version": "3.x-dev",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinfunk/new_relic_rpm.git",
-                "reference": "0cccf09eb45026beef6328220103ce3cf98c93f0"
+                "url": "https://git.drupalcode.org/project/new_relic_rpm.git",
+                "reference": "2.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/new_relic_rpm/zipball/0cccf09eb45026beef6328220103ce3cf98c93f0",
-                "reference": "0cccf09eb45026beef6328220103ce3cf98c93f0",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/new_relic_rpm-2.2.0.zip",
+                "reference": "2.2.0",
+                "shasum": "1c8918dc18aba4fac5ca78ea00334727b19a1717"
             },
             "require": {
+                "drupal/core": "^10.1 || ^11",
                 "php": ">=8.0"
             },
             "type": "drupal-module",
             "extra": {
+                "drupal": {
+                    "version": "2.2.0",
+                    "datestamp": "1754884034",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
                 "drush": {
                     "services": {
                         "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Chris Charlton",
+                    "homepage": "https://www.drupal.org/user/17089"
+                },
+                {
+                    "name": "hosef",
+                    "homepage": "https://www.drupal.org/user/1203298"
+                },
+                {
+                    "name": "Jonathan Webb",
+                    "homepage": "https://www.drupal.org/user/61512"
+                },
+                {
+                    "name": "neclimdul",
+                    "homepage": "https://www.drupal.org/user/48673"
+                },
+                {
+                    "name": "nterbogt",
+                    "homepage": "https://www.drupal.org/user/102218"
+                },
+                {
+                    "name": "soyarma",
+                    "homepage": "https://www.drupal.org/user/286273"
+                }
+            ],
             "description": "Provides additional newrelic integration with Drupal.",
             "homepage": "https://drupal.org/project/new_relic_rpm",
             "support": {
-                "issues": "https://drupal.org/project/issues/new_relic_rpm",
-                "source": "https://git.drupalcode.org/project/new_relic_rpm"
-            },
-            "time": "2025-05-05T12:06:17+00:00"
+                "source": "https://git.drupalcode.org/project/new_relic_rpm",
+                "issues": "https://drupal.org/project/issues/new_relic_rpm"
+            }
         },
         {
             "name": "drupal/next",
@@ -14116,17 +13870,17 @@
         },
         {
             "name": "drupal/project_browser",
-            "version": "2.1.0-beta2",
+            "version": "2.1.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/project_browser.git",
-                "reference": "2.1.0-beta2"
+                "reference": "2.1.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/project_browser-2.1.0-beta2.zip",
-                "reference": "2.1.0-beta2",
-                "shasum": "38a91396adac0fcec5b50fecf0832ea919ecbfaa"
+                "url": "https://ftp.drupal.org/files/projects/project_browser-2.1.0-beta3.zip",
+                "reference": "2.1.0-beta3",
+                "shasum": "ab80aa5737f05389e73cc8fd3a64f0277d423ad7"
             },
             "require": {
                 "composer-runtime-api": "^2",
@@ -14149,8 +13903,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0-beta2",
-                    "datestamp": "1749047509",
+                    "version": "2.1.0-beta3",
+                    "datestamp": "1754425660",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -14987,17 +14741,17 @@
         },
         {
             "name": "drupal/save_edit",
-            "version": "1.10.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/save_edit.git",
-                "reference": "8.x-1.10"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/save_edit-8.x-1.10.zip",
-                "reference": "8.x-1.10",
-                "shasum": "63fcd22402c73e275b8cbbbf79930be46c6d308b"
+                "url": "https://ftp.drupal.org/files/projects/save_edit-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "f9f2564b98d9459face86478c1a4e9e37334ef89"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
@@ -15005,8 +14759,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.10",
-                    "datestamp": "1752701683",
+                    "version": "2.1.0",
+                    "datestamp": "1752701893",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -17013,17 +16767,17 @@
         },
         {
             "name": "drupal/tac_lite",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tac_lite.git",
-                "reference": "2.0.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tac_lite-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "0076488ce3667cfec784c6bb5276c1082a332aa4"
+                "url": "https://ftp.drupal.org/files/projects/tac_lite-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "4a3c4827379f637c4922968ec4a4643f4a184ab8"
             },
             "require": {
                 "drupal/core": "^10 || ^11"
@@ -17031,8 +16785,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1751031935",
+                    "version": "2.0.1",
+                    "datestamp": "1754430736",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -17660,33 +17414,55 @@
         },
         {
             "name": "drupal/views_base_url",
-            "version": "3.x-dev",
+            "version": "3.0.0-alpha1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kevinfunk/views_base_url.git",
-                "reference": "6280a3d6ba2b740994ea00e068962ad6c7b7f9da"
+                "url": "https://git.drupalcode.org/project/views_base_url.git",
+                "reference": "3.0.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinfunk/views_base_url/zipball/6280a3d6ba2b740994ea00e068962ad6c7b7f9da",
-                "reference": "6280a3d6ba2b740994ea00e068962ad6c7b7f9da",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/views_base_url-3.0.0-alpha1.zip",
+                "reference": "3.0.0-alpha1",
+                "shasum": "d0d001c702ec61739c426f098925cabd34aa7260"
             },
             "require": {
-                "drupal/core": "^10 || ^11"
+                "drupal/core": "^10.3 || ^11"
             },
-            "default-branch": true,
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-alpha1",
+                    "datestamp": "1754840805",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "description": "Global views field that provides site's base url",
+            "authors": [
+                {
+                    "name": "mably",
+                    "homepage": "https://www.drupal.org/user/3375160"
+                },
+                {
+                    "name": "rjjakes",
+                    "homepage": "https://www.drupal.org/user/3457245"
+                },
+                {
+                    "name": "subhojit777",
+                    "homepage": "https://www.drupal.org/user/1812492"
+                }
+            ],
+            "description": "Views field that generates custom internal links supporting field tokens",
             "homepage": "https://www.drupal.org/project/views_base_url",
             "support": {
-                "source": "https://github.com/kevinfunk/views_base_url/tree/3.x",
-                "issues": "https://github.com/kevinfunk/views_base_url/issues"
-            },
-            "time": "2025-05-05T12:33:48+00:00"
+                "source": "https://git.drupalcode.org/project/views_base_url"
+            }
         },
         {
             "name": "drupal/views_bulk_operations",
@@ -18655,16 +18431,16 @@
         },
         {
             "name": "enshrined/svg-sanitize",
-            "version": "0.21.0",
+            "version": "0.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darylldoyle/svg-sanitizer.git",
-                "reference": "5e477468fac5c5ce933dce53af3e8e4e58dcccc9"
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/5e477468fac5c5ce933dce53af3e8e4e58dcccc9",
-                "reference": "5e477468fac5c5ce933dce53af3e8e4e58dcccc9",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/0afa95ea74be155a7bcd6c6fb60c276c39984500",
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500",
                 "shasum": ""
             },
             "require": {
@@ -18694,9 +18470,9 @@
             "description": "An SVG sanitizer for PHP",
             "support": {
                 "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
-                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.21.0"
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.22.0"
             },
-            "time": "2025-01-13T09:32:25+00:00"
+            "time": "2025-08-12T10:13:48+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -20563,94 +20339,6 @@
             "time": "2024-08-27T13:33:42+00:00"
         },
         {
-            "name": "laminas/laminas-diactoros",
-            "version": "3.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laminas/laminas-diactoros.git",
-                "reference": "b068eac123f21c0e592de41deeb7403b88e0a89f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/b068eac123f21c0e592de41deeb7403b88e0a89f",
-                "reference": "b068eac123f21c0e592de41deeb7403b88e0a89f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
-                "psr/http-factory": "^1.1",
-                "psr/http-message": "^1.1 || ^2.0"
-            },
-            "conflict": {
-                "amphp/amp": "<2.6.4"
-            },
-            "provide": {
-                "psr/http-factory-implementation": "^1.0",
-                "psr/http-message-implementation": "^1.1 || ^2.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "ext-dom": "*",
-                "ext-gd": "*",
-                "ext-libxml": "*",
-                "http-interop/http-factory-tests": "^2.2.0",
-                "laminas/laminas-coding-standard": "~3.0.0",
-                "php-http/psr7-integration-tests": "^1.4.0",
-                "phpunit/phpunit": "^10.5.36",
-                "psalm/plugin-phpunit": "^0.19.0",
-                "vimeo/psalm": "^5.26.1"
-            },
-            "type": "library",
-            "extra": {
-                "laminas": {
-                    "module": "Laminas\\Diactoros",
-                    "config-provider": "Laminas\\Diactoros\\ConfigProvider"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/functions/create_uploaded_file.php",
-                    "src/functions/marshal_headers_from_sapi.php",
-                    "src/functions/marshal_method_from_sapi.php",
-                    "src/functions/marshal_protocol_version_from_sapi.php",
-                    "src/functions/normalize_server.php",
-                    "src/functions/normalize_uploaded_files.php",
-                    "src/functions/parse_cookie_header.php"
-                ],
-                "psr-4": {
-                    "Laminas\\Diactoros\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "PSR HTTP Message implementations",
-            "homepage": "https://laminas.dev",
-            "keywords": [
-                "http",
-                "laminas",
-                "psr",
-                "psr-17",
-                "psr-7"
-            ],
-            "support": {
-                "chat": "https://laminas.dev/chat",
-                "docs": "https://docs.laminas.dev/laminas-diactoros/",
-                "forum": "https://discourse.laminas.dev",
-                "issues": "https://github.com/laminas/laminas-diactoros/issues",
-                "rss": "https://github.com/laminas/laminas-diactoros/releases.atom",
-                "source": "https://github.com/laminas/laminas-diactoros"
-            },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2025-05-05T16:03:34+00:00"
-        },
-        {
             "name": "laminas/laminas-escaper",
             "version": "2.17.0",
             "source": {
@@ -22480,29 +22168,29 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "e67c4061eb40b9c113b218214e42cb5a0dda28f2"
+                "reference": "c930ca4e3cf4f17dcfb03037703679d2396d2ede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/e67c4061eb40b9c113b218214e42cb5a0dda28f2",
-                "reference": "e67c4061eb40b9c113b218214e42cb5a0dda28f2",
+                "url": "https://api.github.com/repos/nette/utils/zipball/c930ca4e3cf4f17dcfb03037703679d2396d2ede",
+                "reference": "c930ca4e3cf4f17dcfb03037703679d2396d2ede",
                 "shasum": ""
             },
             "require": {
-                "php": "8.0 - 8.4"
+                "php": "8.0 - 8.5"
             },
             "conflict": {
                 "nette/finder": "<3",
                 "nette/schema": "<1.2.2"
             },
             "require-dev": {
-                "jetbrains/phpstorm-attributes": "dev-master",
+                "jetbrains/phpstorm-attributes": "^1.2",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-nette": "^2.0@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -22520,6 +22208,9 @@
                 }
             },
             "autoload": {
+                "psr-4": {
+                    "Nette\\": "src"
+                },
                 "classmap": [
                     "src/"
                 ]
@@ -22560,9 +22251,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.7"
+                "source": "https://github.com/nette/utils/tree/v4.0.8"
             },
-            "time": "2025-06-03T04:55:08+00:00"
+            "time": "2025-08-06T21:43:34+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -24888,29 +24579,29 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "6.0.2",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "b4ccd857127db5d41a5b676f24b51371d76d8544"
+                "reference": "7ab1ea946c012266ca32390913653d844ecd085f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/b4ccd857127db5d41a5b676f24b51371d76d8544",
-                "reference": "b4ccd857127db5d41a5b676f24b51371d76d8544",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7ab1ea946c012266ca32390913653d844ecd085f",
+                "reference": "7ab1ea946c012266ca32390913653d844ecd085f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2"
+                "php": ">=8.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^11.0",
-                "symfony/process": "^4.2 || ^5"
+                "phpunit/phpunit": "^12.0",
+                "symfony/process": "^7.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "6.0-dev"
+                    "dev-main": "7.0-dev"
                 }
             },
             "autoload": {
@@ -24943,7 +24634,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/diff/issues",
                 "security": "https://github.com/sebastianbergmann/diff/security/policy",
-                "source": "https://github.com/sebastianbergmann/diff/tree/6.0.2"
+                "source": "https://github.com/sebastianbergmann/diff/tree/7.0.0"
             },
             "funding": [
                 {
@@ -24951,7 +24642,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-03T04:53:05+00:00"
+            "time": "2025-02-07T04:55:46+00:00"
         },
         {
             "name": "seld/jsonlint",
@@ -29415,14 +29106,12 @@
         "drupal/fullcalendar": 10,
         "drupal/gin_moderation_sidebar": 5,
         "drupal/graphql_core_schema": 10,
-        "drupal/image_url_formatter": 20,
         "drupal/inline_entity_form": 5,
         "drupal/masquerade": 5,
         "drupal/mautic": 20,
         "drupal/mautic_api": 20,
         "drupal/moderated_content_bulk_publish": 10,
         "drupal/moderation_note": 10,
-        "drupal/new_relic_rpm": 20,
         "drupal/page_manager": 5,
         "drupal/simple_crawler": 20,
         "drupal/sitestudio_extras": 10,
@@ -29434,7 +29123,7 @@
         "drupal/unstructured": 10,
         "drupal/user_field_value": 20,
         "drupal/view_modes_display": 20,
-        "drupal/views_base_url": 20,
+        "drupal/views_base_url": 15,
         "drupal/webform_mautic": 20,
         "drupal/yoast_seo": 15,
         "kevinfunk/content_filter": 20,
