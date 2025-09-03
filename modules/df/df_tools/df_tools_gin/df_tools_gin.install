@@ -59,7 +59,7 @@ function df_tools_gin_uninstall() {
   // Set admin theme to back to Acquia Claro.
   $config_factory
     ->getEditable('system.theme')
-    ->set('admin', 'acquia_claro')
+    ->set('admin', 'claro')
     ->save(TRUE);
 
   //Uninstall the theme.
