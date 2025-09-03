@@ -11,7 +11,10 @@ function df_install_tasks(): array {
   $tasks = [];
 
   // Set system settings after install.
-  $tasks['df_settings'] = [];
+  $tasks['install_df_settings'] = [];
+
+  // Install DF Tools Gin.
+  $tasks['install_df_gin'] = [];
 
   return $tasks;
 }
@@ -21,14 +24,14 @@ function df_install_tasks(): array {
  * submitted by Drush. We are using hook_install_tasks() to set values after
  * the form has been submitted.
  */
-function df_settings() {
+function install_df_settings() {
   $config_factory = \Drupal::configFactory();
 
   // Set theme settings.
   $config_factory
     ->getEditable('system.theme')
     ->set('default', 'olivero')
-    ->set('admin', 'acquia_claro')
+    ->set('admin', 'gin')
     ->save(TRUE);
 
   // Set site settings.
@@ -43,4 +46,12 @@ function df_settings() {
     ->getEditable('node.settings')
     ->set('use_admin_theme', TRUE)
     ->save(TRUE);
+}
+
+/**
+ * Install DF Tools Gin as part of install task.
+ */
+function install_df_gin() {
+  $installer = \Drupal::service('module_installer');
+  $installer->install(['df_tools_gin']);
 }
