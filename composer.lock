@@ -3017,17 +3017,17 @@
         },
         {
             "name": "drupal/acquia_cms_common",
-            "version": "3.3.12",
+            "version": "3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_common.git",
-                "reference": "3.3.12"
+                "reference": "3.3.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.3.12.zip",
-                "reference": "3.3.12",
-                "shasum": "23c84ff9845758762ee9300310d2e7669e018abb"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_common-3.3.13.zip",
+                "reference": "3.3.13",
+                "shasum": "bf92e424923025000f89ac3a45fbfe4ca897488f"
             },
             "require": {
                 "acquia/drupal-environment-detector": "^1.5",
@@ -3035,7 +3035,7 @@
                 "drupal/acquia_connector": "^4.0",
                 "drupal/acquia_purge": "^1.3",
                 "drupal/acquia_search": "^3.1",
-                "drupal/autologout": "^1.4",
+                "drupal/autologout": ">=1",
                 "drupal/config_ignore": "^3.0@beta",
                 "drupal/config_rewrite": "^1.5",
                 "drupal/core": "^10.2.2 || ^11",
@@ -3045,7 +3045,7 @@
                 "drupal/memcache": "^2.5",
                 "drupal/metatag_open_graph": "*",
                 "drupal/metatag_twitter_cards": "*",
-                "drupal/moderation_dashboard": "^2.1 || ^3.0",
+                "drupal/moderation_dashboard": "^3.0 || ^4.0",
                 "drupal/moderation_sidebar": "^1.7",
                 "drupal/password_policy": "^4.0",
                 "drupal/password_policy_character_types": "*",
@@ -3098,8 +3098,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.12",
-                    "datestamp": "1737366196",
+                    "version": "3.3.13",
+                    "datestamp": "1757698597",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3275,17 +3275,17 @@
         },
         {
             "name": "drupal/acquia_cms_event",
-            "version": "1.6.3",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_event.git",
-                "reference": "1.6.3"
+                "reference": "1.6.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_event-1.6.3.zip",
-                "reference": "1.6.3",
-                "shasum": "c3f7e7a0eba39ced224e61fbca4d1fdb26ce8ccf"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_event-1.6.4.zip",
+                "reference": "1.6.4",
+                "shasum": "1adbf3ee1b8f5b2c0f3d45a61b70e4f018317f83"
             },
             "require": {
                 "drupal/acquia_cms_place": "^1.5.7",
@@ -3295,8 +3295,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.6.3",
-                    "datestamp": "1726719709",
+                    "version": "1.6.4",
+                    "datestamp": "1757699141",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3521,17 +3521,17 @@
         },
         {
             "name": "drupal/acquia_cms_page",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_page.git",
-                "reference": "1.6.1"
+                "reference": "1.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_page-1.6.1.zip",
-                "reference": "1.6.1",
-                "shasum": "1f75712ba0ef90f28d15701403b237d747deb9c7"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_page-1.6.2.zip",
+                "reference": "1.6.2",
+                "shasum": "57836eceb8847a8fac3c3dcfc20ee071a2898be8"
             },
             "require": {
                 "drupal/acquia_cms_image": "^1.5.10",
@@ -3548,8 +3548,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.6.1",
-                    "datestamp": "1727264393",
+                    "version": "1.6.2",
+                    "datestamp": "1757698925",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3791,17 +3791,17 @@
         },
         {
             "name": "drupal/acquia_cms_site_studio",
-            "version": "1.6.6",
+            "version": "1.6.7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_site_studio.git",
-                "reference": "1.6.6"
+                "reference": "1.6.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_site_studio-1.6.6.zip",
-                "reference": "1.6.6",
-                "shasum": "6bf8cf75e8033e5ac19ecd037aec1137393d6a09"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_site_studio-1.6.7.zip",
+                "reference": "1.6.7",
+                "shasum": "fa07b66f193a171e1f043567ebb76ea4e55e9983"
             },
             "require": {
                 "acquia/cohesion": "~7.4.0 || ~7.5.0 || ~8.0.0 || ~8.1.0 || ~8.2.0",
@@ -3832,8 +3832,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.6.6",
-                    "datestamp": "1755669329",
+                    "version": "1.6.7",
+                    "datestamp": "1757698822",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3885,17 +3885,17 @@
         },
         {
             "name": "drupal/acquia_cms_starter",
-            "version": "1.4.5",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_cms_starter.git",
-                "reference": "1.4.5"
+                "reference": "1.4.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_cms_starter-1.4.5.zip",
-                "reference": "1.4.5",
-                "shasum": "eef85f1b57e25b7c5a2944f206a153ee4c96ee93"
+                "url": "https://ftp.drupal.org/files/projects/acquia_cms_starter-1.4.6.zip",
+                "reference": "1.4.6",
+                "shasum": "4164764041cddf726244ad5e60744f8fd3186feb"
             },
             "require": {
                 "drupal/acquia_cms_article": "^1.5.7",
@@ -3910,8 +3910,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.4.5",
-                    "datestamp": "1727720797",
+                    "version": "1.4.6",
+                    "datestamp": "1757699250",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4492,6 +4492,10 @@
                 {
                     "name": "acquia",
                     "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "ankitv18",
+                    "homepage": "https://www.drupal.org/user/3550392"
                 },
                 {
                     "name": "balsama",
@@ -5577,6 +5581,10 @@
             ],
             "authors": [
                 {
+                    "name": "akhil babu",
+                    "homepage": "https://www.drupal.org/user/3632866"
+                },
+                {
                     "name": "andrewbelcher",
                     "homepage": "https://www.drupal.org/user/655282"
                 },
@@ -6232,17 +6240,17 @@
         },
         {
             "name": "drupal/autologout",
-            "version": "1.6.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/autologout.git",
-                "reference": "8.x-1.6"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/autologout-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "ec666b324ac8aaffe2f5012b1b21c27d9c1780c9"
+                "url": "https://ftp.drupal.org/files/projects/autologout-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "61407ffa8b857b1e5d22d03ededac94b5119bd60"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10 || ^11",
@@ -6251,8 +6259,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1732235148",
+                    "version": "2.0.1",
+                    "datestamp": "1732235105",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8687,17 +8695,17 @@
         },
         {
             "name": "drupal/eca",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eca.git",
-                "reference": "3.0.2"
+                "reference": "3.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eca-3.0.2.zip",
-                "reference": "3.0.2",
-                "shasum": "f7ccbfb7945a76643c89297badd934c655593089"
+                "url": "https://ftp.drupal.org/files/projects/eca-3.0.3.zip",
+                "reference": "3.0.3",
+                "shasum": "764d9ce999cced47e6c3e774aafd1cd96d2b2956"
             },
             "require": {
                 "dragonmantank/cron-expression": "^3.1",
@@ -8710,8 +8718,8 @@
                 "drush/drush": "<12.5.1"
             },
             "require-dev": {
-                "drupal/ai": "^1.2",
-                "drupal/ai_agents": "^1.2",
+                "drupal/ai": "1.2.x-dev",
+                "drupal/ai_agents": "1.2.x-dev",
                 "drupal/entity_reference_revisions": "^1.12",
                 "drupal/inline_entity_form": "^3.0",
                 "drupal/modeler_api": "*",
@@ -8723,8 +8731,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.2",
-                    "datestamp": "1755341165",
+                    "version": "3.0.3",
+                    "datestamp": "1757505170",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9766,17 +9774,17 @@
         },
         {
             "name": "drupal/field_validation",
-            "version": "3.0.0-beta4",
+            "version": "3.0.0-beta5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_validation.git",
-                "reference": "3.0.0-beta4"
+                "reference": "3.0.0-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_validation-3.0.0-beta4.zip",
-                "reference": "3.0.0-beta4",
-                "shasum": "b5a417a0fc4093629ab96326e154068b7340d797"
+                "url": "https://ftp.drupal.org/files/projects/field_validation-3.0.0-beta5.zip",
+                "reference": "3.0.0-beta5",
+                "shasum": "617ca0d199e1eabb538f9e57813c8975039ecfc1"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -9787,8 +9795,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-beta4",
-                    "datestamp": "1731485225",
+                    "version": "3.0.0-beta5",
+                    "datestamp": "1758096648",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -9800,6 +9808,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "abhisekmazumdar",
+                    "homepage": "https://www.drupal.org/user/3557964"
+                },
                 {
                     "name": "g089h515r806",
                     "homepage": "https://www.drupal.org/user/174740"
@@ -10398,17 +10410,17 @@
         },
         {
             "name": "drupal/geofield",
-            "version": "1.65.0",
+            "version": "1.66.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield.git",
-                "reference": "8.x-1.65"
+                "reference": "8.x-1.66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.65.zip",
-                "reference": "8.x-1.65",
-                "shasum": "931c4864847e5612c50583580505ba5c0f89d395"
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.66.zip",
+                "reference": "8.x-1.66",
+                "shasum": "c217b8f506dcc6c4c581d2dd0dc6c02f9ce8bd14"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -10421,8 +10433,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.65",
-                    "datestamp": "1754552601",
+                    "version": "8.x-1.66",
+                    "datestamp": "1757514238",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11427,8 +11439,20 @@
             ],
             "authors": [
                 {
-                    "name": "Dave Reid",
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "dave reid",
                     "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "jan kellermann",
+                    "homepage": "https://www.drupal.org/user/371731"
                 }
             ],
             "description": "Provides the js-cookie library as a dependency.",
@@ -12319,7 +12343,7 @@
                 "drupal/hal": "^1 || ^2 || ^9",
                 "drupal/metatag_dc": "*",
                 "drupal/metatag_open_graph": "*",
-                "drupal/page_manager": "^4.0",
+                "drupal/page_manager": "*",
                 "drupal/redirect": "^1.0",
                 "ergebnis/composer-normalize": "*",
                 "mpyw/phpunit-patch-serializable-comparison": "*"
@@ -12552,26 +12576,26 @@
         },
         {
             "name": "drupal/moderation_dashboard",
-            "version": "3.1.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/moderation_dashboard.git",
-                "reference": "3.1.0"
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/moderation_dashboard-3.1.0.zip",
-                "reference": "3.1.0",
-                "shasum": "efe8ce67a4c78291726ef3883f3fb815dfb6f17b"
+                "url": "https://ftp.drupal.org/files/projects/moderation_dashboard-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "13bc2ae7ec03b99f8c3c3b8dba8b2048af95ff12"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11"
+                "drupal/core": "^11.2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.0",
-                    "datestamp": "1725558905",
+                    "version": "4.0.0",
+                    "datestamp": "1750860234",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15769,17 +15793,17 @@
         },
         {
             "name": "drupal/searchstax",
-            "version": "1.7.3",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/searchstax.git",
-                "reference": "1.7.3"
+                "reference": "1.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/searchstax-1.7.3.zip",
-                "reference": "1.7.3",
-                "shasum": "f48d1bf6e43c594ec9949c96179666c0c3324e5d"
+                "url": "https://ftp.drupal.org/files/projects/searchstax-1.8.0.zip",
+                "reference": "1.8.0",
+                "shasum": "965da14b10d009f730d9b1fe157e42971ae7c867"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10 || ^11",
@@ -15787,17 +15811,18 @@
                 "ext-libxml": "*"
             },
             "require-dev": {
-                "drupal/acquia_search": "*",
-                "drupal/search_api_autocomplete": "*",
-                "drupal/search_api_page": "*",
-                "drupal/search_api_solr": "*",
+                "drupal/acquia_search": "3.1.x-dev||3.1.11",
+                "drupal/search_api_attachments": ">=10||1.0.0-beta19",
+                "drupal/search_api_autocomplete": "1.x-dev||1.6.0",
+                "drupal/search_api_page": "1.x-dev||1.0.0-beta3",
+                "drupal/search_api_solr": "4.x-dev||4.2.1",
                 "phpcompatibility/php-compatibility": "^9.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.7.3",
-                    "datestamp": "1757404320",
+                    "version": "1.8.0",
+                    "datestamp": "1758015053",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16008,17 +16033,17 @@
         },
         {
             "name": "drupal/simple_oauth",
-            "version": "6.0.0",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_oauth.git",
-                "reference": "6.0.0"
+                "reference": "6.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_oauth-6.0.0.zip",
-                "reference": "6.0.0",
-                "shasum": "a19c2ef0cbfae431af0e92ea5c89d7514cd7c238"
+                "url": "https://ftp.drupal.org/files/projects/simple_oauth-6.0.1.zip",
+                "reference": "6.0.1",
+                "shasum": "99a89daa914641feb5d432ab50f29fcb1504cc48"
             },
             "require": {
                 "drupal/consumers": "^1.17",
@@ -16034,8 +16059,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0",
-                    "datestamp": "1741341101",
+                    "version": "6.0.1",
+                    "datestamp": "1757918288",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16059,6 +16084,10 @@
                 {
                     "name": "e0ipso",
                     "homepage": "https://www.drupal.org/user/550110"
+                },
+                {
+                    "name": "kingdutch",
+                    "homepage": "https://www.drupal.org/user/1868952"
                 },
                 {
                     "name": "pcambra",
@@ -16421,7 +16450,7 @@
                 "shasum": "87638e15bd1878f402cdb9cd40154d481a849881"
             },
             "require": {
-                "drupal/core": "^9 || ^10  || ^11",
+                "drupal/core": "^9 || ^10 || ^11",
                 "php": ">=8.1",
                 "simshaun/recurr": "^5"
             },
@@ -16459,6 +16488,10 @@
                 {
                     "name": "stefan.korn",
                     "homepage": "https://www.drupal.org/user/1942204"
+                },
+                {
+                    "name": "tyapchyc",
+                    "homepage": "https://www.drupal.org/user/3351412"
                 }
             ],
             "description": "Adds app-like date and recurring date functionality.",
@@ -19034,23 +19067,23 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.47.1",
+            "version": "v1.48.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "d7a0a215ec42ca0c8cb40e9ae0c5960aa9a024b7"
+                "reference": "3053a5bfe284538419d4fee8c9df148488db6d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/d7a0a215ec42ca0c8cb40e9ae0c5960aa9a024b7",
-                "reference": "d7a0a215ec42ca0c8cb40e9ae0c5960aa9a024b7",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/3053a5bfe284538419d4fee8c9df148488db6d30",
+                "reference": "3053a5bfe284538419d4fee8c9df148488db6d30",
                 "shasum": ""
             },
             "require": {
                 "firebase/php-jwt": "^6.0",
                 "guzzlehttp/guzzle": "^7.4.5",
                 "guzzlehttp/psr7": "^2.4.5",
-                "php": "^8.0",
+                "php": "^8.1",
                 "psr/cache": "^2.0||^3.0",
                 "psr/http-message": "^1.1||^2.0",
                 "psr/log": "^3.0"
@@ -19062,7 +19095,7 @@
                 "phpspec/prophecy-phpunit": "^2.1",
                 "phpunit/phpunit": "^9.6",
                 "sebastian/comparator": ">=1.2.3",
-                "squizlabs/php_codesniffer": "^3.5",
+                "squizlabs/php_codesniffer": "^4.0",
                 "symfony/process": "^6.0||^7.0",
                 "webmozart/assert": "^1.11"
             },
@@ -19089,9 +19122,9 @@
             "support": {
                 "docs": "https://cloud.google.com/php/docs/reference/auth/latest",
                 "issues": "https://github.com/googleapis/google-auth-library-php/issues",
-                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.47.1"
+                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.48.0"
             },
-            "time": "2025-07-09T15:26:02+00:00"
+            "time": "2025-09-16T22:09:18+00:00"
         },
         {
             "name": "google/cloud-core",
@@ -19276,16 +19309,16 @@
         },
         {
             "name": "google/gax",
-            "version": "v1.36.1",
+            "version": "v1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/gax-php.git",
-                "reference": "afdac3bc38a3b17d70668115d7b1a97289ac4d72"
+                "reference": "05719d8a6a5a7233fc9aa41d9d6e5a873930c8ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/afdac3bc38a3b17d70668115d7b1a97289ac4d72",
-                "reference": "afdac3bc38a3b17d70668115d7b1a97289ac4d72",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/05719d8a6a5a7233fc9aa41d9d6e5a873930c8ae",
+                "reference": "05719d8a6a5a7233fc9aa41d9d6e5a873930c8ae",
                 "shasum": ""
             },
             "require": {
@@ -19293,15 +19326,15 @@
                 "google/common-protos": "^4.4",
                 "google/grpc-gcp": "^0.4",
                 "google/longrunning": "~0.4",
-                "google/protobuf": "^v3.25.3||^4.26.1",
+                "google/protobuf": "^4.26.1",
                 "grpc/grpc": "^1.13",
                 "guzzlehttp/promises": "^2.0",
                 "guzzlehttp/psr7": "^2.0",
-                "php": "^8.0",
+                "php": "^8.1",
                 "ramsey/uuid": "^4.0"
             },
             "conflict": {
-                "ext-protobuf": "<3.7.0"
+                "ext-protobuf": "<4.7.0"
             },
             "require-dev": {
                 "phpspec/prophecy-phpunit": "^2.1",
@@ -19327,9 +19360,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/gax-php/issues",
-                "source": "https://github.com/googleapis/gax-php/tree/v1.36.1"
+                "source": "https://github.com/googleapis/gax-php/tree/v1.37.0"
             },
-            "time": "2025-05-20T19:50:43+00:00"
+            "time": "2025-09-13T16:22:17+00:00"
         },
         {
             "name": "google/grpc-gcp",
@@ -19422,23 +19455,20 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.32.0",
+            "version": "v4.32.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "9a9a92ecbe9c671dc1863f6d4a91ea3ea12c8646"
+                "reference": "c4ed1c1f9bbc1e91766e2cd6c0af749324fe87cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/9a9a92ecbe9c671dc1863f6d4a91ea3ea12c8646",
-                "reference": "9a9a92ecbe9c671dc1863f6d4a91ea3ea12c8646",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c4ed1c1f9bbc1e91766e2cd6c0af749324fe87cb",
+                "reference": "c4ed1c1f9bbc1e91766e2cd6c0af749324fe87cb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1.0"
-            },
-            "provide": {
-                "ext-protobuf": "*"
             },
             "require-dev": {
                 "phpunit/phpunit": ">=5.0.0 <8.5.27"
@@ -19463,9 +19493,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.32.0"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.32.1"
             },
-            "time": "2025-08-14T20:00:33+00:00"
+            "time": "2025-09-14T05:14:52+00:00"
         },
         {
             "name": "google/recaptcha",
@@ -21607,16 +21637,16 @@
         },
         {
             "name": "marc-mabe/php-enum",
-            "version": "v4.7.1",
+            "version": "v4.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marc-mabe/php-enum.git",
-                "reference": "7159809e5cfa041dca28e61f7f7ae58063aae8ed"
+                "reference": "bb426fcdd65c60fb3638ef741e8782508fda7eef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marc-mabe/php-enum/zipball/7159809e5cfa041dca28e61f7f7ae58063aae8ed",
-                "reference": "7159809e5cfa041dca28e61f7f7ae58063aae8ed",
+                "url": "https://api.github.com/repos/marc-mabe/php-enum/zipball/bb426fcdd65c60fb3638ef741e8782508fda7eef",
+                "reference": "bb426fcdd65c60fb3638ef741e8782508fda7eef",
                 "shasum": ""
             },
             "require": {
@@ -21674,9 +21704,9 @@
             ],
             "support": {
                 "issues": "https://github.com/marc-mabe/php-enum/issues",
-                "source": "https://github.com/marc-mabe/php-enum/tree/v4.7.1"
+                "source": "https://github.com/marc-mabe/php-enum/tree/v4.7.2"
             },
-            "time": "2024-11-28T04:54:44+00:00"
+            "time": "2025-09-14T11:18:39+00:00"
         },
         {
             "name": "masterminds/html5",
