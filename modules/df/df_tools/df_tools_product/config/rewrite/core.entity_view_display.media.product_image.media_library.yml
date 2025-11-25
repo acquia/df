@@ -1,33 +1,33 @@
-config_rewrite: replace
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.media_library
     - field.field.media.product_image.field_product_image
-    - image.style.coh_x_large
+    - image.style.media_library
     - media.type.product_image
   module:
     - image
-id: media.product_image.default
+id: media.product_image.media_library
 targetEntityType: media
 bundle: product_image
-mode: default
+mode: media_library
 content:
-  field_product_image:
+  thumbnail:
     type: image
-    label: visually_hidden
+    label: hidden
     settings:
       image_link: ''
-      image_style: coh_x_large
+      image_style: media_library
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   created: true
+  field_product_image: true
   langcode: true
   name: true
   search_api_excerpt: true
-  thumbnail: true
   uid: true

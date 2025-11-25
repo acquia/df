@@ -1,0 +1,63 @@
+uuid: 3e774913-e57b-4533-a595-a2c695674bef
+langcode: en
+status: true
+dependencies: {  }
+label: Microsite
+id: mstr_tpl_microsite
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "item",
+              "uid": "drupal-region",
+              "title": "Region",
+              "status": {
+                  "collapsed": true
+              },
+              "uuid": "ac656d50-4bd7-423e-8fc6-0e83e4268cf0",
+              "parentUid": "root",
+              "children": []
+          }
+      ],
+      "mapper": {
+          "ac656d50-4bd7-423e-8fc6-0e83e4268cf0": {}
+      },
+      "model": {
+          "ac656d50-4bd7-423e-8fc6-0e83e4268cf0": {
+              "settings": {
+                  "title": "Content region",
+                  "region": {
+                      "theme": "cohesion_theme",
+                      "type": "content"
+                  }
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "region"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "ac656d50-4bd7-423e-8fc6-0e83e4268cf0": {}
+      },
+      "variableFields": {
+          "ac656d50-4bd7-423e-8fc6-0e83e4268cf0": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0043
+locked: false
+modified: true
+selectable: true
+custom: null
+twig_template: page--cohesion--mstr-tpl-microsite
+default: false
