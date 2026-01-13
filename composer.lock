@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9aa00afaa671e6a036fff0cab0eabe50",
+    "content-hash": "2f390e7789251ab37e57ca71b3fbe4ff",
     "packages": [
         {
             "name": "acquia/acf",
@@ -2389,16 +2389,16 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "2.5.0",
+            "version": "2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "6108e0cd57d7ef125fb84696346a68860403a25d"
+                "reference": "171e68db4b9aca9dc1f5d49925762f3d53d248c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/6108e0cd57d7ef125fb84696346a68860403a25d",
-                "reference": "6108e0cd57d7ef125fb84696346a68860403a25d",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/171e68db4b9aca9dc1f5d49925762f3d53d248c5",
+                "reference": "171e68db4b9aca9dc1f5d49925762f3d53d248c5",
                 "shasum": ""
             },
             "require": {
@@ -2455,7 +2455,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/collections/issues",
-                "source": "https://github.com/doctrine/collections/tree/2.5.0"
+                "source": "https://github.com/doctrine/collections/tree/2.5.1"
             },
             "funding": [
                 {
@@ -2471,7 +2471,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-07T17:26:56+00:00"
+            "time": "2026-01-12T20:53:55+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -17607,27 +17607,27 @@
         },
         {
             "name": "drupal/views_flag_refresh",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_flag_refresh.git",
-                "reference": "1.0.2"
+                "reference": "1.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_flag_refresh-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "d73004d88c6df8b2450a0e96312b6023e48687d2"
+                "url": "https://ftp.drupal.org/files/projects/views_flag_refresh-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "606319b6eba0e256662a6f351a3fb09f0867887b"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10 || ^11",
-                "drupal/flag": "^4.0@beta"
+                "drupal/flag": "^4.0@beta || ^5.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1720426482",
+                    "version": "1.0.3",
+                    "datestamp": "1768241470",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -19403,16 +19403,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v4.33.3",
+            "version": "v4.33.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "281537d44d6c270606354e65bfa75a0969dbd629"
+                "reference": "22d28025cda0d223a2e48c2e16c5284ecc9f5402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/281537d44d6c270606354e65bfa75a0969dbd629",
-                "reference": "281537d44d6c270606354e65bfa75a0969dbd629",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/22d28025cda0d223a2e48c2e16c5284ecc9f5402",
+                "reference": "22d28025cda0d223a2e48c2e16c5284ecc9f5402",
                 "shasum": ""
             },
             "require": {
@@ -19441,9 +19441,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.3"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v4.33.4"
             },
-            "time": "2026-01-09T21:49:37+00:00"
+            "time": "2026-01-12T17:58:43+00:00"
         },
         {
             "name": "google/recaptcha",
@@ -22451,10 +22451,16 @@
         },
         {
             "name": "npm-asset/jsonview",
-            "version": "1.2.0",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yesmeck/jquery-jsonview.git",
+                "reference": "91fa8515ff3206009f7469840ca2f7f66d774a1f"
+            },
             "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/jsonview/-/jsonview-1.2.0.tgz"
+                "type": "zip",
+                "url": "https://api.github.com/repos/yesmeck/jquery-jsonview/zipball/91fa8515ff3206009f7469840ca2f7f66d774a1f",
+                "reference": "91fa8515ff3206009f7469840ca2f7f66d774a1f"
             },
             "type": "npm-asset",
             "license": [
