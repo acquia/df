@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.thumbnail
-    - field.field.node.product.body
+    - field.field.node.product.field_product_description
     - field.field.node.product.field_persona
     - field.field.node.product.field_product_brand
     - field.field.node.product.field_product_color
@@ -69,7 +69,7 @@ content:
     weight: 3
     region: content
 hidden:
-  body: true
+  field_product_description: true
   field_persona: true
   field_product_brand: true
   field_product_color: true

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
-    - field.field.node.product.body
+    - field.field.node.product.field_product_description
     - field.field.node.product.field_product_brand
     - field.field.node.product.field_product_color
     - field.field.node.product.field_product_image
@@ -31,13 +31,13 @@ targetEntityType: node
 bundle: product
 mode: card
 content:
-  body:
+  field_product_description:
     type: text_default
-    weight: 1
-    region: content
-    label: visually_hidden
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
   content_moderation_control:
     weight: -20
     region: content
