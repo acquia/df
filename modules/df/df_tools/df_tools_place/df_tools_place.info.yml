@@ -2,9 +2,12 @@ name: DF Tools Place
 type: module
 description: Extends Acquia CMS Place for Demo Framework.
 core_version_requirement: ^9 || ^10 || ^11
+container_rebuild_required: TRUE
 package: Demo Framework Tools
 dependencies:
+  - acquia_cms_common
   - acquia_cms_place
+  - acquia_cms_search
   - df_core
   - df_tools_media
   - flag

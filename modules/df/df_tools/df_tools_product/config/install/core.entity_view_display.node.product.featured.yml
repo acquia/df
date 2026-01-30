@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.featured
-    - field.field.node.product.body
+    - field.field.node.product.field_product_description
     - field.field.node.product.field_persona
     - field.field.node.product.field_product_brand
     - field.field.node.product.field_product_color
@@ -34,12 +34,12 @@ targetEntityType: node
 bundle: product
 mode: featured
 content:
-  body:
+  field_product_description:
     type: text_default
-    label: visually_hidden
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   content_moderation_control:
     settings: {  }

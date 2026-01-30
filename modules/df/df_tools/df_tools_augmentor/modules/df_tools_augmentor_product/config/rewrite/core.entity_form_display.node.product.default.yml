@@ -29,7 +29,7 @@ content:
     settings:
       targets:
         0:
-          target_field: body
+          target_field: field_product_description
           key: default
         actions:
           add_target: 'Add one more target'
@@ -47,7 +47,7 @@ content:
     region: content
     settings:
       source_fields:
-        - body
+        - field_product_description
       targets:
         0:
           target_field: field_tags
